@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nivel 1 · Fundamentos de AutoCAD — AutoCAD Guía</title>
+<meta name="description" content="Qué es AutoCAD, instalación y licencias, interfaz de usuario, sistema de coordenadas y configuración inicial. Nivel 1 de la guía completa de AutoCAD.">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<!-- Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<!-- Prism.js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar navbar-cad navbar-expand-lg">
+  <div class="container container-xl">
+    <a class="navbar-brand brand-cad" href="../index.html">
+      <span class="brand-mark"></span>
+      <span>AutoCAD<small class="d-block">Guía · Teoría &amp; Práctica</small></span>
+    </a>
+    <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
+      <i class="bi bi-list fs-4"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navCad">
+      <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../index.html">Inicio</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-cad dropdown-toggle active" href="#" data-bs-toggle="dropdown">Niveles</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item active" href="nivel-1-fundamentos.html">Nivel 1 · Fundamentos</a></li>
+            <li><a class="dropdown-item" href="nivel-2-dibujo-2d.html">Nivel 2 · Dibujo 2D</a></li>
+            <li><a class="dropdown-item" href="nivel-3-organizacion.html">Nivel 3 · Organización</a></li>
+            <li><a class="dropdown-item" href="nivel-4-modelado-3d.html">Nivel 4 · Modelado 3D</a></li>
+            <li><a class="dropdown-item" href="nivel-5-avanzado.html">Nivel 5 · Avanzado</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="comandos.html">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="recursos.html">Recursos gratis</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="faq.html">FAQ</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-2">
+        <span class="coord-readout d-none d-lg-inline-flex">X: <span id="coordX">000.00</span>&nbsp; Y: <span id="coordY">000.00</span></span>
+        <button class="icon-btn" id="searchToggle" title="Buscar"><i class="bi bi-search"></i></button>
+        <button class="icon-btn" id="themeToggle" title="Cambiar tema"><i class="bi bi-moon-stars"></i></button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== CABECERA ===================== -->
+<header class="page-header">
+  <div class="container container-xl">
+    <p class="crumb"><a href="../index.html">Inicio</a> / <a href="../index.html#niveles">Niveles</a> / Nivel 1</p>
+    <span class="eyebrow">Nivel 01 · Básico</span>
+    <h1>Fundamentos de AutoCAD</h1>
+    <p class="subtitle">Antes de dibujar una sola línea, entiende qué es el programa, cómo instalarlo, cómo está organizada su interfaz y cómo funciona su sistema de coordenadas. Esta base evita el 80% de los errores de un principiante.</p>
+    <div class="level-progress-bar"><div class="fill"></div></div>
+    <p class="level-progress-label">0 de 5 temas completados · 0%</p>
+  </div>
+</header>
+
+<!-- ===================== CONTENIDO ===================== -->
+<div class="content-layout">
+  <div class="container container-xl">
+    <div class="row">
+
+      <!-- Índice lateral -->
+      <aside class="col-lg-3 mb-5 mb-lg-0">
+        <div class="toc-sidebar">
+          <h6>En este nivel</h6>
+          <ul class="toc-list">
+            <li><a href="#que-es" data-toc="nivel1-que-es"><span class="toc-check"></span> Qué es AutoCAD</a></li>
+            <li><a href="#instalacion" data-toc="nivel1-instalacion"><span class="toc-check"></span> Instalación y licencias</a></li>
+            <li><a href="#interfaz" data-toc="nivel1-interfaz"><span class="toc-check"></span> Interfaz de usuario</a></li>
+            <li><a href="#coordenadas" data-toc="nivel1-coordenadas"><span class="toc-check"></span> Sistema de coordenadas</a></li>
+            <li><a href="#configuracion" data-toc="nivel1-configuracion"><span class="toc-check"></span> Configuración inicial</a></li>
+          </ul>
+          <hr style="border-color:var(--border-soft)" class="my-4">
+          <a href="nivel-2-dibujo-2d.html" class="btn-cad-outline w-100 text-center d-block">Siguiente nivel <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </aside>
+
+      <!-- Artículo -->
+      <div class="col-lg-9">
+        <article class="content-article">
+
+          <!-- 1. Qué es AutoCAD -->
+          <section id="que-es" data-topic="nivel1-que-es">
+            <h2><span class="sec-num">1</span> ¿Qué es AutoCAD y para qué se usa?</h2>
+            <p><strong>AutoCAD</strong> es un programa de diseño asistido por computadora (CAD, por sus siglas en inglés) desarrollado por Autodesk, usado para crear dibujos técnicos precisos en dos dimensiones (2D) y modelos en tres dimensiones (3D). A diferencia de un programa de dibujo artístico, AutoCAD trabaja con coordenadas exactas y unidades reales: un muro de 3 metros se dibuja midiendo exactamente 3 metros dentro del archivo.</p>
+
+            <p>Se utiliza principalmente en cuatro grandes áreas:</p>
+            <ul>
+              <li><strong>Arquitectura:</strong> planos de plantas, cortes, fachadas y detalles constructivos.</li>
+              <li><strong>Ingeniería civil y estructural:</strong> planos de cimentación, estructuras metálicas y de concreto.</li>
+              <li><strong>Ingeniería mecánica e industrial:</strong> piezas, ensambles y planos de fabricación.</li>
+              <li><strong>Diseño eléctrico y de instalaciones:</strong> diagramas unifilares, redes eléctricas, sanitarias y de gas.</li>
+            </ul>
+
+            <div class="callout">
+              <span class="callout-title">Idea clave</span>
+              Todo lo que dibujas en AutoCAD se hace a <strong>escala real 1:1</strong> en el "espacio modelo". La escala solo se aplica después, al momento de imprimir o presentar el plano.
+            </div>
+
+            <div class="img-placeholder">
+              <i class="bi bi-image"></i>
+              IMG: comparación de un plano arquitectónico 2D junto a su modelo 3D equivalente
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 2. Instalación y licencias -->
+          <section id="instalacion" data-topic="nivel1-instalacion">
+            <h2><span class="sec-num">2</span> Instalación, requisitos y tipos de licencia</h2>
+
+            <h3>Requisitos mínimos orientativos</h3>
+            <table class="table-cad">
+              <thead>
+                <tr><th>Componente</th><th>Requisito orientativo</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Sistema operativo</td><td>Windows 10/11 de 64 bits (versión Mac disponible con menos herramientas)</td></tr>
+                <tr><td>Procesador</td><td>2.5–3 GHz o superior</td></tr>
+                <tr><td>Memoria RAM</td><td>8 GB mínimo, 16 GB recomendado para 3D</td></tr>
+                <tr><td>Espacio en disco</td><td>10 GB libres para la instalación</td></tr>
+                <tr><td>Tarjeta gráfica</td><td>1 GB VRAM mínimo, dedicada recomendada para 3D</td></tr>
+              </tbody>
+            </table>
+            <p class="text-muted-custom small">Estos valores varían según la versión del programa; verifica siempre los requisitos oficiales antes de instalar.</p>
+
+            <h3>Tipos de licencia</h3>
+            <ul>
+              <li><strong>Suscripción comercial:</strong> pago mensual o anual, con acceso a todas las actualizaciones.</li>
+              <li><strong>Licencia educativa gratuita:</strong> Autodesk ofrece acceso gratuito de un año (renovable) a estudiantes y docentes verificados a través de su portal de educación.</li>
+              <li><strong>Versión de prueba (trial):</strong> acceso completo por tiempo limitado, útil para evaluar el programa.</li>
+              <li><strong>AutoCAD Web / móvil:</strong> versión reducida en navegador o app, útil para consultar y editar planos sin instalar el programa completo.</li>
+            </ul>
+
+            <div class="callout warn">
+              <span class="callout-title">Importante</span>
+              Verifica siempre la vigencia de precios, requisitos y condiciones de licencia directamente en el sitio oficial de Autodesk, ya que cambian con frecuencia.
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 3. Interfaz de usuario -->
+          <section id="interfaz" data-topic="nivel1-interfaz">
+            <h2><span class="sec-num">3</span> Interfaz de usuario</h2>
+            <p>La interfaz de AutoCAD está compuesta por varias zonas que conviene reconocer antes de dibujar:</p>
+
+            <table class="table-cad">
+              <thead><tr><th>Elemento</th><th>Función</th></tr></thead>
+              <tbody>
+                <tr><td>Cinta de opciones (Ribbon)</td><td>Barra superior con pestañas (Inicio, Insertar, Anotar, Vista…) que agrupan herramientas por categoría.</td></tr>
+                <tr><td>Línea de comandos</td><td>Franja de texto donde se escriben comandos y se leen las indicaciones del programa paso a paso.</td></tr>
+                <tr><td>Área de dibujo</td><td>Espacio central donde se crea el dibujo; representa el "espacio modelo".</td></tr>
+                <tr><td>Barra de estado</td><td>Franja inferior con accesos a coordenadas, capas, orto, referencia a objetos y escala.</td></tr>
+                <tr><td>Paleta de propiedades</td><td>Panel que muestra y permite editar las propiedades de un objeto seleccionado (capa, color, grosor).</td></tr>
+                <tr><td>Fichas Presentación/Modelo</td><td>Pestañas inferiores para alternar entre el espacio de dibujo real y las hojas de impresión.</td></tr>
+              </tbody>
+            </table>
+
+            <div class="img-placeholder">
+              <i class="bi bi-window"></i>
+              IMG: interfaz de AutoCAD con las zonas anteriores señaladas
+            </div>
+
+            <h3>Formas de ejecutar un comando</h3>
+            <ul>
+              <li>Escribiendo el nombre o el alias en la línea de comandos, por ejemplo <span class="cmd-inline">LINE</span> o su atajo <span class="key-inline">L</span>.</li>
+              <li>Haciendo clic en el ícono correspondiente dentro de la cinta de opciones.</li>
+              <li>Usando el menú contextual (clic derecho) sobre un objeto seleccionado.</li>
+            </ul>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 4. Sistema de coordenadas -->
+          <section id="coordenadas" data-topic="nivel1-coordenadas">
+            <h2><span class="sec-num">4</span> Sistema de coordenadas</h2>
+            <p>AutoCAD ubica cada punto del dibujo mediante coordenadas. Entender los cuatro tipos siguientes es esencial para dibujar con precisión sin depender solo del mouse.</p>
+
+            <table class="table-cad">
+              <thead><tr><th>Tipo</th><th>Formato</th><th>Cuándo usarla</th></tr></thead>
+              <tbody>
+                <tr><td>Cartesianas absolutas</td><td><span class="cmd-inline">X,Y</span> ej. 10,15</td><td>Cuando conoces la posición exacta respecto al origen (0,0).</td></tr>
+                <tr><td>Cartesianas relativas</td><td><span class="cmd-inline">@X,Y</span> ej. @5,0</td><td>Cuando conoces el desplazamiento respecto al último punto.</td></tr>
+                <tr><td>Polares relativas</td><td><span class="cmd-inline">@distancia&lt;ángulo</span> ej. @10&lt;90</td><td>La más usada: define distancia y dirección desde el último punto.</td></tr>
+                <tr><td>Polares absolutas</td><td><span class="cmd-inline">distancia&lt;ángulo</span></td><td>Poco frecuente; mide desde el origen del dibujo.</td></tr>
+              </tbody>
+            </table>
+
+            <div class="callout">
+              <span class="callout-title">En la práctica</span>
+              La combinación más usada por dibujantes profesionales es <strong>coordenadas polares relativas</strong> junto con el modo <strong>ORTO</strong> (<span class="key-inline">F8</span>): se indica la distancia y AutoCAD asume la dirección horizontal o vertical del cursor.
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 5. Configuración inicial -->
+          <section id="configuracion" data-topic="nivel1-configuracion">
+            <h2><span class="sec-num">5</span> Configuración inicial de un dibujo</h2>
+            <p>Antes de empezar cualquier proyecto real, define estos parámetros para evitar tener que corregir todo el dibujo después:</p>
+
+            <h3>Unidades de dibujo</h3>
+            <p>Se configuran con el comando <span class="cmd-inline">UNITS</span> (o <span class="cmd-inline">UNIDADES</span>). Define la unidad de longitud (milímetros, centímetros, metros o pulgadas) y la precisión decimal. En arquitectura e ingeniería civil en países de habla hispana, lo más común es trabajar en <strong>milímetros o centímetros</strong> a escala real.</p>
+
+            <h3>Formato de dibujo y plantilla</h3>
+            <p>Una plantilla (archivo <strong>.DWT</strong>) guarda de antemano las capas, estilos de texto, de cota y de tabla que usarás en todos tus proyectos, para no configurarlos cada vez desde cero.</p>
+
+            <h3>Capas base recomendadas para empezar</h3>
+            <table class="table-cad">
+              <thead><tr><th>Capa</th><th>Color sugerido</th><th>Uso</th></tr></thead>
+              <tbody>
+                <tr><td>0-Ejes</td><td><span style="color:var(--layer-red)">■</span> Rojo</td><td>Ejes estructurales o de referencia</td></tr>
+                <tr><td>1-Muros</td><td><span style="color:var(--layer-yellow)">■</span> Amarillo</td><td>Muros y elementos constructivos</td></tr>
+                <tr><td>2-Cotas</td><td><span style="color:var(--layer-green)">■</span> Verde</td><td>Acotaciones y anotaciones</td></tr>
+                <tr><td>3-Textos</td><td><span style="color:var(--layer-cyan)">■</span> Cian</td><td>Textos generales y etiquetas</td></tr>
+                <tr><td>4-Auxiliar</td><td><span style="color:var(--layer-magenta)">■</span> Magenta</td><td>Líneas de construcción temporales</td></tr>
+              </tbody>
+            </table>
+
+            <p>En el <strong>Nivel 2</strong> verás en detalle cómo crear y administrar estas capas dentro del panel correspondiente.</p>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+        </article>
+
+        <!-- Navegación anterior / siguiente -->
+        <nav class="level-nav">
+          <span></span>
+          <a href="nivel-2-dibujo-2d.html" class="nav-next">
+            <span class="nav-label">Siguiente</span>
+            <span class="nav-title">Nivel 2 · Dibujo 2D <i class="bi bi-arrow-right"></i></span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="container container-xl">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <div class="brand-cad mb-2"><span class="brand-mark"></span><span>AutoCAD Guía</span></div>
+        <p>Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3">Niveles</h6>
+        <ul class="list-unstyled">
+          <li><a href="nivel-1-fundamentos.html">Fundamentos</a></li>
+          <li><a href="nivel-2-dibujo-2d.html">Dibujo 2D</a></li>
+          <li><a href="nivel-4-modelado-3d.html">Modelado 3D</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3">Guía</h6>
+        <ul class="list-unstyled">
+          <li><a href="comandos.html">Comandos</a></li>
+          <li><a href="recursos.html">Recursos</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3">Síguenos</h6>
+        <div class="d-flex gap-2">
+          <a href="#" class="icon-btn"><i class="bi bi-youtube"></i></a>
+          <a href="#" class="icon-btn"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="icon-btn"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-5 mb-4" style="border-color:var(--border-soft)">
+    <p class="mb-0 small">© 2026 AutoCAD Guía. Proyecto educativo de aprendizaje libre.</p>
+  </div>
+</footer>
+
+<div class="command-line-bar" id="cmdBar">
+  <div class="command-line-inner">
+    <span class="prompt-sign">Comando:</span>
+    <span id="cmd-typed"></span><span class="cursor-blink"></span>
+    <button class="cl-close" id="cmdClose" title="Ocultar"><i class="bi bi-x-lg"></i></button>
+  </div>
+</div>
+
+<!-- ===================== BUSCADOR GLOBAL ===================== -->
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Buscar en la guía">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="bi bi-search"></i>
+      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar">
+      <kbd class="search-kbd">ESC</kbd>
+    </div>
+    <div class="search-results" id="globalSearchResults">
+      <div class="search-empty">Escribe al menos 2 caracteres para buscar...</div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

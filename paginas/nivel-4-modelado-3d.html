@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nivel 4 · Modelado 3D — AutoCAD Guía</title>
+<meta name="description" content="Navegación 3D, sólidos básicos, operaciones booleanas, extrusión, revolución, barrido, solevación, edición de sólidos y render básico en AutoCAD. Nivel 4 de la guía.">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<!-- Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<!-- Prism.js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar navbar-cad navbar-expand-lg">
+  <div class="container container-xl">
+    <a class="navbar-brand brand-cad" href="../index.html">
+      <span class="brand-mark"></span>
+      <span>AutoCAD<small class="d-block">Guía · Teoría &amp; Práctica</small></span>
+    </a>
+    <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
+      <i class="bi bi-list fs-4"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navCad">
+      <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../index.html">Inicio</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-cad dropdown-toggle active" href="#" data-bs-toggle="dropdown">Niveles</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="nivel-1-fundamentos.html">Nivel 1 · Fundamentos</a></li>
+            <li><a class="dropdown-item" href="nivel-2-dibujo-2d.html">Nivel 2 · Dibujo 2D</a></li>
+            <li><a class="dropdown-item" href="nivel-3-organizacion.html">Nivel 3 · Organización</a></li>
+            <li><a class="dropdown-item active" href="nivel-4-modelado-3d.html">Nivel 4 · Modelado 3D</a></li>
+            <li><a class="dropdown-item" href="nivel-5-avanzado.html">Nivel 5 · Avanzado</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="comandos.html">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="recursos.html">Recursos gratis</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="faq.html">FAQ</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-2">
+        <span class="coord-readout d-none d-lg-inline-flex">X: <span id="coordX">000.00</span>&nbsp; Y: <span id="coordY">000.00</span></span>
+        <button class="icon-btn" id="searchToggle" title="Buscar"><i class="bi bi-search"></i></button>
+        <button class="icon-btn" id="themeToggle" title="Cambiar tema"><i class="bi bi-moon-stars"></i></button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== CABECERA ===================== -->
+<header class="page-header">
+  <div class="container container-xl">
+    <p class="crumb"><a href="../index.html">Inicio</a> / <a href="../index.html#niveles">Niveles</a> / Nivel 4</p>
+    <span class="eyebrow">Nivel 04 · Avanzado</span>
+    <h1>Modelado 3D</h1>
+    <p class="subtitle">Del plano a la maqueta virtual: navegación tridimensional, sólidos primitivos, operaciones booleanas, herramientas de creación avanzada y un primer acercamiento al render.</p>
+    <div class="level-progress-bar"><div class="fill"></div></div>
+    <p class="level-progress-label">0 de 6 temas completados · 0%</p>
+  </div>
+</header>
+
+<!-- ===================== CONTENIDO ===================== -->
+<div class="content-layout">
+  <div class="container container-xl">
+    <div class="row">
+
+      <!-- Índice lateral -->
+      <aside class="col-lg-3 mb-5 mb-lg-0">
+        <div class="toc-sidebar">
+          <h6>En este nivel</h6>
+          <ul class="toc-list">
+            <li><a href="#navegacion" data-toc="nivel4-navegacion"><span class="toc-check"></span> Espacio y navegación 3D</a></li>
+            <li><a href="#solidos" data-toc="nivel4-solidos"><span class="toc-check"></span> Sólidos básicos</a></li>
+            <li><a href="#booleanas" data-toc="nivel4-booleanas"><span class="toc-check"></span> Operaciones booleanas</a></li>
+            <li><a href="#creacion" data-toc="nivel4-creacion"><span class="toc-check"></span> Extrusión, revolución, barrido y loft</a></li>
+            <li><a href="#edicion" data-toc="nivel4-edicion"><span class="toc-check"></span> Edición de sólidos</a></li>
+            <li><a href="#render" data-toc="nivel4-render"><span class="toc-check"></span> Render básico</a></li>
+          </ul>
+          <hr style="border-color:var(--border-soft)" class="my-4">
+          <a href="nivel-5-avanzado.html" class="btn-cad-outline w-100 text-center d-block">Siguiente nivel <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </aside>
+
+      <!-- Artículo -->
+      <div class="col-lg-9">
+        <article class="content-article">
+
+          <!-- 1. Navegación 3D -->
+          <section id="navegacion" data-topic="nivel4-navegacion">
+            <h2><span class="sec-num">1</span> Espacio de trabajo 3D y navegación</h2>
+            <p>El espacio de trabajo <strong>"Modelado 3D"</strong> reorganiza la cinta de opciones con las herramientas de sólidos, superficies y malla. Moverse en tres dimensiones requiere nuevos comandos de navegación:</p>
+
+            <table class="table-cad">
+              <thead><tr><th>Acción</th><th>Comando / control</th></tr></thead>
+              <tbody>
+                <tr><td>Órbita libre</td><td class="cmd-inline">3DORBIT</td></tr>
+                <tr><td>Encuadre (pan)</td><td class="cmd-inline">PAN</td></tr>
+                <tr><td>Zoom</td><td class="cmd-inline">ZOOM</td> (rueda del mouse)</tr>
+                <tr><td>Vistas predefinidas</td><td>Cubo de navegación (ViewCube): superior, frontal, isométrica, etc.</td></tr>
+                <tr><td>Estilo visual</td><td class="cmd-inline">VSCURRENT</td> — alambre, oculto, conceptual, realista</td></tr>
+              </tbody>
+            </table>
+
+            <div class="img-placeholder">
+              <i class="bi bi-badge-3d"></i>
+              IMG: espacio de trabajo 3D con el ViewCube y la barra de navegación visibles
+            </div>
+
+            <div class="callout">
+              <span class="callout-title">Idea clave</span>
+              El <strong>eje Z</strong> se suma a X e Y para definir altura. Una coordenada 3D absoluta se escribe como <span class="cmd-inline">X,Y,Z</span>, por ejemplo <span class="cmd-inline">10,15,3</span>.
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 2. Sólidos básicos -->
+          <section id="solidos" data-topic="nivel4-solidos">
+            <h2><span class="sec-num">2</span> Sólidos básicos (primitivas)</h2>
+            <p>Son formas 3D predefinidas que se crean indicando dimensiones, sin necesidad de dibujar un perfil 2D previo.</p>
+
+            <table class="table-cad">
+              <thead><tr><th>Sólido</th><th>Comando</th><th>Parámetros típicos</th></tr></thead>
+              <tbody>
+                <tr><td>Caja</td><td class="cmd-inline">BOX</td><td>Largo, ancho, alto</td></tr>
+                <tr><td>Cilindro</td><td class="cmd-inline">CYLINDER</td><td>Radio de la base, altura</td></tr>
+                <tr><td>Esfera</td><td class="cmd-inline">SPHERE</td><td>Radio</td></tr>
+                <tr><td>Cono</td><td class="cmd-inline">CONE</td><td>Radio de la base, altura</td></tr>
+                <tr><td>Cuña</td><td class="cmd-inline">WEDGE</td><td>Largo, ancho, alto</td></tr>
+                <tr><td>Pirámide</td><td class="cmd-inline">PYRAMID</td><td>Número de lados, radio de la base, altura</td></tr>
+                <tr><td>Toroide</td><td class="cmd-inline">TORUS</td><td>Radio del toro, radio del tubo</td></tr>
+              </tbody>
+            </table>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 3. Booleanas -->
+          <section id="booleanas" data-topic="nivel4-booleanas">
+            <h2><span class="sec-num">3</span> Operaciones booleanas</h2>
+            <p>Combinan dos o más sólidos para crear formas complejas a partir de piezas simples.</p>
+
+            <table class="table-cad">
+              <thead><tr><th>Operación</th><th>Comando</th><th>Resultado</th></tr></thead>
+              <tbody>
+                <tr><td>Unión</td><td class="cmd-inline">UNION</td><td>Fusiona varios sólidos en uno solo.</td></tr>
+                <tr><td>Resta</td><td class="cmd-inline">SUBTRACT</td><td>Elimina el volumen de un sólido que se superpone a otro (por ejemplo, perforar un agujero).</td></tr>
+                <tr><td>Intersección</td><td class="cmd-inline">INTERSECT</td><td>Conserva únicamente el volumen común entre los sólidos seleccionados.</td></tr>
+              </tbody>
+            </table>
+
+            <div class="img-placeholder">
+              <i class="bi bi-subtract"></i>
+              IMG: secuencia caja + cilindro → resta → pieza con orificio cilíndrico
+            </div>
+
+            <div class="callout">
+              <span class="callout-title">Ejemplo típico</span>
+              Para modelar una arandela: crea un cilindro grande, crea un cilindro pequeño concéntrico y aplica <strong>SUBTRACT</strong> (grande menos pequeño).
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 4. Extrusión, revolución, barrido, loft -->
+          <section id="creacion" data-topic="nivel4-creacion">
+            <h2><span class="sec-num">4</span> Extrusión, revolución, barrido y solevación</h2>
+            <p>Estas herramientas convierten un perfil 2D cerrado (o abierto, para superficies) en un sólido tridimensional, y permiten formas que las primitivas básicas no pueden lograr.</p>
+
+            <table class="table-cad">
+              <thead><tr><th>Herramienta</th><th>Comando</th><th>Cómo funciona</th></tr></thead>
+              <tbody>
+                <tr><td>Extrusión</td><td class="cmd-inline">EXTRUDE</td><td>"Empuja" un perfil 2D en línea recta a lo largo de una altura o una trayectoria.</td></tr>
+                <tr><td>Revolución</td><td class="cmd-inline">REVOLVE</td><td>Gira un perfil 2D alrededor de un eje, generando una forma simétrica (florero, tornillo).</td></tr>
+                <tr><td>Barrido</td><td class="cmd-inline">SWEEP</td><td>Desplaza un perfil a lo largo de una trayectoria curva (tubería, moldura).</td></tr>
+                <tr><td>Solevación (Loft)</td><td class="cmd-inline">LOFT</td><td>Genera una forma suave que conecta dos o más perfiles distintos entre sí.</td></tr>
+              </tbody>
+            </table>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 5. Edición de sólidos -->
+          <section id="edicion" data-topic="nivel4-edicion">
+            <h2><span class="sec-num">5</span> Edición de sólidos y superficies</h2>
+
+            <table class="table-cad">
+              <thead><tr><th>Acción</th><th>Comando</th></tr></thead>
+              <tbody>
+                <tr><td>Redondear aristas</td><td class="cmd-inline">FILLETEDGE</td></tr>
+                <tr><td>Achaflanar aristas</td><td class="cmd-inline">CHAMFEREDGE</td></tr>
+                <tr><td>Vaciar un sólido (dejarlo hueco)</td><td class="cmd-inline">SOLIDEDIT</td> (opción Vaciar)</td></tr>
+                <tr><td>Seccionar un sólido con un plano</td><td class="cmd-inline">SECTIONPLANE</td></tr>
+                <tr><td>Convertir superficie en sólido</td><td class="cmd-inline">THICKEN</td></tr>
+              </tbody>
+            </table>
+
+            <p>Estas herramientas permiten pasar de una forma booleana básica a un modelo con detalles realistas: bordes redondeados, paredes de espesor definido y cortes de sección para mostrar el interior de una pieza.</p>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 6. Render -->
+          <section id="render" data-topic="nivel4-render">
+            <h2><span class="sec-num">6</span> Renderizado básico</h2>
+            <p>El render convierte el modelo 3D en una imagen realista aplicando materiales, iluminación y una cámara.</p>
+
+            <ul>
+              <li><strong>Materiales:</strong> se asignan desde el Explorador de materiales, definiendo textura, color y acabado (mate, brillante, metálico).</li>
+              <li><strong>Luces:</strong> se agregan luces puntuales, focales o distantes con comandos como <span class="cmd-inline">POINTLIGHT</span> o <span class="cmd-inline">SUNPROPERTIES</span> para simular luz solar.</li>
+              <li><strong>Cámaras:</strong> el comando <span class="cmd-inline">CAMERA</span> fija un punto de vista específico para generar siempre la misma toma.</li>
+              <li><strong>Render final:</strong> el comando <span class="cmd-inline">RENDER</span> genera la imagen procesada, cuya calidad y tiempo dependen de la configuración elegida.</li>
+            </ul>
+
+            <div class="img-placeholder">
+              <i class="bi bi-camera"></i>
+              IMG: comparación de un modelo 3D en estilo alambre vs. su versión renderizada con materiales
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+        </article>
+
+        <!-- Navegación anterior / siguiente -->
+        <nav class="level-nav">
+          <a href="nivel-3-organizacion.html">
+            <span class="nav-label">Anterior</span>
+            <span class="nav-title"><i class="bi bi-arrow-left"></i> Nivel 3 · Organización</span>
+          </a>
+          <a href="nivel-5-avanzado.html" class="nav-next">
+            <span class="nav-label">Siguiente</span>
+            <span class="nav-title">Nivel 5 · Avanzado <i class="bi bi-arrow-right"></i></span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="container container-xl">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <div class="brand-cad mb-2"><span class="brand-mark"></span><span>AutoCAD Guía</span></div>
+        <p>Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3">Niveles</h6>
+        <ul class="list-unstyled">
+          <li><a href="nivel-1-fundamentos.html">Fundamentos</a></li>
+          <li><a href="nivel-2-dibujo-2d.html">Dibujo 2D</a></li>
+          <li><a href="nivel-4-modelado-3d.html">Modelado 3D</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3">Guía</h6>
+        <ul class="list-unstyled">
+          <li><a href="comandos.html">Comandos</a></li>
+          <li><a href="recursos.html">Recursos</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3">Síguenos</h6>
+        <div class="d-flex gap-2">
+          <a href="#" class="icon-btn"><i class="bi bi-youtube"></i></a>
+          <a href="#" class="icon-btn"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="icon-btn"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-5 mb-4" style="border-color:var(--border-soft)">
+    <p class="mb-0 small">© 2026 AutoCAD Guía. Proyecto educativo de aprendizaje libre.</p>
+  </div>
+</footer>
+
+<div class="command-line-bar" id="cmdBar">
+  <div class="command-line-inner">
+    <span class="prompt-sign">Comando:</span>
+    <span id="cmd-typed"></span><span class="cursor-blink"></span>
+    <button class="cl-close" id="cmdClose" title="Ocultar"><i class="bi bi-x-lg"></i></button>
+  </div>
+</div>
+
+<!-- ===================== BUSCADOR GLOBAL ===================== -->
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Buscar en la guía">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="bi bi-search"></i>
+      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar">
+      <kbd class="search-kbd">ESC</kbd>
+    </div>
+    <div class="search-results" id="globalSearchResults">
+      <div class="search-empty">Escribe al menos 2 caracteres para buscar...</div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

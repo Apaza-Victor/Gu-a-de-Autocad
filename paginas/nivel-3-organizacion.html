@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nivel 3 · Organización y productividad — AutoCAD Guía</title>
+<meta name="description" content="Espacio modelo vs presentación, ventanas gráficas y escalas, plantillas, impresión y exportación, Xref y atajos de teclado en AutoCAD. Nivel 3 de la guía.">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<!-- Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<!-- Prism.js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar navbar-cad navbar-expand-lg">
+  <div class="container container-xl">
+    <a class="navbar-brand brand-cad" href="../index.html">
+      <span class="brand-mark"></span>
+      <span>AutoCAD<small class="d-block">Guía · Teoría &amp; Práctica</small></span>
+    </a>
+    <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
+      <i class="bi bi-list fs-4"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navCad">
+      <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../index.html">Inicio</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-cad dropdown-toggle active" href="#" data-bs-toggle="dropdown">Niveles</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="nivel-1-fundamentos.html">Nivel 1 · Fundamentos</a></li>
+            <li><a class="dropdown-item" href="nivel-2-dibujo-2d.html">Nivel 2 · Dibujo 2D</a></li>
+            <li><a class="dropdown-item active" href="nivel-3-organizacion.html">Nivel 3 · Organización</a></li>
+            <li><a class="dropdown-item" href="nivel-4-modelado-3d.html">Nivel 4 · Modelado 3D</a></li>
+            <li><a class="dropdown-item" href="nivel-5-avanzado.html">Nivel 5 · Avanzado</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="comandos.html">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="recursos.html">Recursos gratis</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="faq.html">FAQ</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-2">
+        <span class="coord-readout d-none d-lg-inline-flex">X: <span id="coordX">000.00</span>&nbsp; Y: <span id="coordY">000.00</span></span>
+        <button class="icon-btn" id="searchToggle" title="Buscar"><i class="bi bi-search"></i></button>
+        <button class="icon-btn" id="themeToggle" title="Cambiar tema"><i class="bi bi-moon-stars"></i></button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== CABECERA ===================== -->
+<header class="page-header">
+  <div class="container container-xl">
+    <p class="crumb"><a href="../index.html">Inicio</a> / <a href="../index.html#niveles">Niveles</a> / Nivel 3</p>
+    <span class="eyebrow">Nivel 03 · Intermedio</span>
+    <h1>Organización y productividad</h1>
+    <p class="subtitle">Cómo preparar un dibujo para imprimirlo o compartirlo correctamente: presentaciones, escalas, plantillas, exportación, archivos externos y los atajos que aceleran todo el flujo de trabajo.</p>
+    <div class="level-progress-bar"><div class="fill"></div></div>
+    <p class="level-progress-label">0 de 6 temas completados · 0%</p>
+  </div>
+</header>
+
+<!-- ===================== CONTENIDO ===================== -->
+<div class="content-layout">
+  <div class="container container-xl">
+    <div class="row">
+
+      <!-- Índice lateral -->
+      <aside class="col-lg-3 mb-5 mb-lg-0">
+        <div class="toc-sidebar">
+          <h6>En este nivel</h6>
+          <ul class="toc-list">
+            <li><a href="#espacios" data-toc="nivel3-espacios"><span class="toc-check"></span> Espacio modelo vs presentación</a></li>
+            <li><a href="#viewports" data-toc="nivel3-viewports"><span class="toc-check"></span> Ventanas gráficas y escalas</a></li>
+            <li><a href="#plantillas" data-toc="nivel3-plantillas"><span class="toc-check"></span> Plantillas y estándares</a></li>
+            <li><a href="#impresion" data-toc="nivel3-impresion"><span class="toc-check"></span> Impresión y exportación</a></li>
+            <li><a href="#xref" data-toc="nivel3-xref"><span class="toc-check"></span> Archivos externos (Xref)</a></li>
+            <li><a href="#atajos" data-toc="nivel3-atajos"><span class="toc-check"></span> Atajos de teclado</a></li>
+          </ul>
+          <hr style="border-color:var(--border-soft)" class="my-4">
+          <a href="nivel-4-modelado-3d.html" class="btn-cad-outline w-100 text-center d-block">Siguiente nivel <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </aside>
+
+      <!-- Artículo -->
+      <div class="col-lg-9">
+        <article class="content-article">
+
+          <!-- 1. Espacio modelo vs presentación -->
+          <section id="espacios" data-topic="nivel3-espacios">
+            <h2><span class="sec-num">1</span> Espacio modelo vs. espacio papel (Layouts)</h2>
+            <p>AutoCAD trabaja con dos entornos distintos, visibles como pestañas en la parte inferior de la pantalla:</p>
+
+            <table class="table-cad">
+              <thead><tr><th>Espacio</th><th>Qué es</th><th>Para qué se usa</th></tr></thead>
+              <tbody>
+                <tr><td>Modelo</td><td>El área donde se dibuja todo a escala real 1:1.</td><td>Diseñar y construir la geometría del proyecto.</td></tr>
+                <tr><td>Presentación (Layout)</td><td>Una "hoja de papel" virtual con el tamaño real de impresión (A4, A3, A1…).</td><td>Componer planos: agregar cajetín, escalas, notas y preparar la impresión final.</td></tr>
+              </tbody>
+            </table>
+
+            <div class="callout">
+              <span class="callout-title">Idea clave</span>
+              Dibuja siempre en <strong>Modelo</strong> a tamaño real. La reducción a escala para que quepa en una hoja se resuelve en <strong>Presentación</strong>, nunca dibujando el modelo más pequeño.
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 2. Viewports -->
+          <section id="viewports" data-topic="nivel3-viewports">
+            <h2><span class="sec-num">2</span> Ventanas gráficas (Viewports) y escalas</h2>
+            <p>Dentro de una presentación, una <strong>ventana gráfica</strong> es como una "cámara" que muestra una porción del espacio modelo a una escala determinada. Se crea y edita con el comando <span class="cmd-inline">MVIEW</span>, y su escala se controla desde la barra de estado inferior (ícono de escala de la ventana gráfica) o escribiendo el factor directamente, por ejemplo <span class="cmd-inline">1:50</span>.</p>
+
+            <ul>
+              <li>Un mismo layout puede tener <strong>varias ventanas gráficas</strong>, cada una con su propia escala (por ejemplo, una planta general a 1:100 y un detalle a 1:20).</li>
+              <li>Las capas se pueden congelar de forma independiente en cada ventana gráfica sin afectar a las demás.</li>
+              <li>La escala debe coincidir con la anotada en el plano; si no, las cotas y textos se verán desproporcionados.</li>
+            </ul>
+
+            <div class="img-placeholder">
+              <i class="bi bi-aspect-ratio"></i>
+              IMG: layout con dos ventanas gráficas mostrando la misma planta a distintas escalas
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 3. Plantillas -->
+          <section id="plantillas" data-topic="nivel3-plantillas">
+            <h2><span class="sec-num">3</span> Plantillas (.DWT) y estándares de dibujo</h2>
+            <p>Una plantilla es un archivo base (<strong>.DWT</strong>) que guarda de antemano capas, estilos de cota, de texto, formatos de layout y cajetines, para no reconfigurar cada proyecto desde cero.</p>
+
+            <h3>Qué conviene guardar en una plantilla propia</h3>
+            <ul>
+              <li>Capas estándar con sus colores y tipos de línea.</li>
+              <li>Estilos de texto y de cota ya calibrados a las escalas que usas normalmente.</li>
+              <li>Un layout con cajetín (título, escala, fecha, autor) ya diseñado.</li>
+              <li>Unidades y límites de dibujo preconfigurados.</li>
+            </ul>
+
+            <p>Muchos estudios y empresas usan además un <strong>estándar CAD</strong> (archivo .DWS) que verifica que todos los dibujos del equipo respeten la misma nomenclatura de capas, para mantener consistencia entre distintos dibujantes.</p>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 4. Impresión y exportación -->
+          <section id="impresion" data-topic="nivel3-impresion">
+            <h2><span class="sec-num">4</span> Impresión y exportación</h2>
+
+            <table class="table-cad">
+              <thead><tr><th>Formato</th><th>Comando</th><th>Cuándo usarlo</th></tr></thead>
+              <tbody>
+                <tr><td>Impresión / PDF</td><td class="cmd-inline">PLOT</td><td>Genera el plano final impreso o como archivo PDF, respetando la escala del layout.</td></tr>
+                <tr><td>DWF</td><td class="cmd-inline">EXPORTDWF</td><td>Formato ligero de Autodesk para compartir y revisar sin editar.</td></tr>
+                <tr><td>DXF</td><td class="cmd-inline">SAVEAS (tipo DXF)</td><td>Formato de intercambio compatible con otros programas CAD que no leen .DWG.</td></tr>
+                <tr><td>Publicar por lotes</td><td class="cmd-inline">PUBLISH</td><td>Imprime o exporta varios layouts o archivos a la vez.</td></tr>
+              </tbody>
+            </table>
+
+            <div class="callout warn">
+              <span class="callout-title">Antes de imprimir</span>
+              Verifica siempre: la escala de cada ventana gráfica, el estilo de trazado (colores/grosores), el tamaño de papel y el área de impresión (ventana o extensión del layout).
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 5. Xref -->
+          <section id="xref" data-topic="nivel3-xref">
+            <h2><span class="sec-num">5</span> Gestión de archivos externos (Xref)</h2>
+            <p>Una <strong>referencia externa (Xref)</strong> vincula otro archivo .DWG dentro del dibujo actual sin fusionarlo permanentemente: si el archivo original cambia, el vínculo se actualiza automáticamente.</p>
+
+            <table class="table-cad">
+              <thead><tr><th>Acción</th><th>Comando</th></tr></thead>
+              <tbody>
+                <tr><td>Adjuntar una referencia externa</td><td class="cmd-inline">XATTACH</td></tr>
+                <tr><td>Administrar referencias vinculadas</td><td class="cmd-inline">XREF</td></tr>
+                <tr><td>Recortar la parte visible de una Xref</td><td class="cmd-inline">XCLIP</td></tr>
+                <tr><td>Enlazar (fusionar) una Xref al dibujo actual</td><td class="cmd-inline">BIND</td></tr>
+              </tbody>
+            </table>
+
+            <p>Es la técnica habitual en proyectos colaborativos: por ejemplo, el plano de <em>instalaciones eléctricas</em> puede referenciar el plano de <em>arquitectura</em> como Xref, para dibujar siempre sobre la planta más actualizada sin duplicar información.</p>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 6. Atajos -->
+          <section id="atajos" data-topic="nivel3-atajos">
+            <h2><span class="sec-num">6</span> Atajos de teclado y comandos rápidos</h2>
+            <p>Memorizar estos atajos es lo que más acelera el trabajo diario en AutoCAD:</p>
+
+            <table class="table-cad">
+              <thead><tr><th>Acción</th><th>Atajo</th></tr></thead>
+              <tbody>
+                <tr><td>Deshacer / Rehacer</td><td class="key-inline">Ctrl+Z</td> / <td class="key-inline">Ctrl+Y</td></tr>
+                <tr><td>Guardar</td><td class="key-inline">Ctrl+S</td></tr>
+                <tr><td>Copiar / Pegar</td><td class="key-inline">Ctrl+C</td> / <td class="key-inline">Ctrl+V</td></tr>
+                <tr><td>Repetir el último comando</td><td class="key-inline">Enter</td> o <td class="key-inline">Barra espaciadora</td></tr>
+                <tr><td>Cancelar comando activo</td><td class="key-inline">Esc</td></tr>
+                <tr><td>Panel de propiedades</td><td class="key-inline">Ctrl+1</td></tr>
+                <tr><td>Calculadora rápida</td><td class="key-inline">Ctrl+8</td></tr>
+                <tr><td>Zoom extendido (ver todo el dibujo)</td><td class="cmd-inline">ZOOM</td> + <td class="key-inline">E</td></tr>
+                <tr><td>Medir distancia</td><td class="cmd-inline">DIST</td></tr>
+                <tr><td>Lista de propiedades de un objeto</td><td class="cmd-inline">LIST</td></tr>
+              </tbody>
+            </table>
+
+            <div class="callout">
+              <span class="callout-title">Consejo</span>
+              Consulta el <a href="comandos.html">diccionario de comandos</a> completo cuando necesites buscar un atajo puntual: incluye buscador y filtros por categoría.
+            </div>
+
+            <h3>Tabla completa de atajos (descargable)</h3>
+            <p>Copia la tabla completa o guárdala como referencia rápida:</p>
+
+            <div class="shortcuts-download-bar">
+              <p><i class="bi bi-download me-1"></i> Descarga esta tabla en formato de texto plano</p>
+              <button class="btn-cad-outline" onclick="downloadShortcuts()"><i class="bi bi-file-earmark-text me-1"></i> Descargar .TXT</button>
+            </div>
+
+            <table class="table-cad" id="shortcutsTable">
+              <thead><tr><th>Categoría</th><th>Comando</th><th>Atajo</th><th>Descripción</th></tr></thead>
+              <tbody>
+                <tr><td>General</td><td class="cmd-inline">DESHACER</td><td class="key-inline">Ctrl+Z</td><td>Deshacer la última acción</td></tr>
+                <tr><td>General</td><td class="cmd-inline">REHACER</td><td class="key-inline">Ctrl+Y</td><td>Rehacer la acción deshecha</td></tr>
+                <tr><td>General</td><td class="cmd-inline">GUARDAR</td><td class="key-inline">Ctrl+S</td><td>Guarda el archivo actual</td></tr>
+                <tr><td>General</td><td class="cmd-inline">COPIAR</td><td class="key-inline">Ctrl+C</td><td>Copia objetos al portapapeles</td></tr>
+                <tr><td>General</td><td class="cmd-inline">PEGAR</td><td class="key-inline">Ctrl+V</td><td>Pega objetos del portapapeles</td></tr>
+                <tr><td>General</td><td class="cmd-inline">CANCELAR</td><td class="key-inline">Esc</td><td>Cancela el comando activo</td></tr>
+                <tr><td>General</td><td class="cmd-inline">REPETIR</td><td class="key-inline">Enter / Espacio</td><td>Repite el último comando</td></tr>
+                <tr><td>Dibujo</td><td class="cmd-inline">LINE</td><td class="key-inline">L</td><td>Dibuja una línea recta</td></tr>
+                <tr><td>Dibujo</td><td class="cmd-inline">PLINE</td><td class="key-inline">PL</td><td>Dibuja una polilínea</td></tr>
+                <tr><td>Dibujo</td><td class="cmd-inline">CIRCLE</td><td class="key-inline">C</td><td>Dibuja un círculo</td></tr>
+                <tr><td>Dibujo</td><td class="cmd-inline">ARC</td><td class="key-inline">A</td><td>Dibuja un arco</td></tr>
+                <tr><td>Dibujo</td><td class="cmd-inline">RECTANG</td><td class="key-inline">REC</td><td>Dibuja un rectángulo</td></tr>
+                <tr><td>Dibujo</td><td class="cmd-inline">POLYGON</td><td class="key-inline">POL</td><td>Dibuja un polígono regular</td></tr>
+                <tr><td>Dibujo</td><td class="cmd-inline">ELLIPSE</td><td class="key-inline">EL</td><td>Dibuja una elipse</td></tr>
+                <tr><td>Modificación</td><td class="cmd-inline">MOVE</td><td class="key-inline">M</td><td>Mueve objetos</td></tr>
+                <tr><td>Modificación</td><td class="cmd-inline">COPY</td><td class="key-inline">CO</td><td>Copia objetos</td></tr>
+                <tr><td>Modificación</td><td class="cmd-inline">ROTATE</td><td class="key-inline">RO</td><td>Rota objetos</td></tr>
+                <tr><td>Modificación</td><td class="cmd-inline">SCALE</td><td class="key-inline">SC</td><td>Escala objetos</td></tr>
+                <tr><td>Modificación</td><td class="cmd-inline">TRIM</td><td class="key-inline">TR</td><td>Recorta objetos</td></tr>
+                <tr><td>Modificación</td><td class="cmd-inline">EXTEND</td><td class="key-inline">EX</td><td>Extiende objetos</td></tr>
+                <tr><td>Modificación</td><td class="cmd-inline">OFFSET</td><td class="key-inline">O</td><td>Crea copia paralela</td></tr>
+                <tr><td>Modificación</td><td class="cmd-inline">MIRROR</td><td class="key-inline">MI</td><td>Crea simetría</td></tr>
+                <tr><td>Modificación</td><td class="cmd-inline">ARRAY</td><td class="key-inline">AR</td><td>Crea matriz de objetos</td></tr>
+                <tr><td>Modificación</td><td class="cmd-inline">FILLET</td><td class="key-inline">F</td><td>Empalma (une con arco)</td></tr>
+                <tr><td>Modificación</td><td class="cmd-inline">CHAMFER</td><td class="key-inline">CHA</td><td>Chaflán (corte recto)</td></tr>
+                <tr><td>Modificación</td><td class="cmd-inline">STRETCH</td><td class="key-inline">S</td><td>Estira objetos</td></tr>
+                <tr><td>Modificación</td><td class="cmd-inline">JOIN</td><td class="key-inline">J</td><td>Une segmentos</td></tr>
+                <tr><td>Modificación</td><td class="cmd-inline">BREAK</td><td class="key-inline">BR</td><td>Rompe un objeto</td></tr>
+                <tr><td>Modificación</td><td class="cmd-inline">MATCHPROP</td><td class="key-inline">MA</td><td>Copia propiedades</td></tr>
+                <tr><td>Edición</td><td class="cmd-inline">EXPLODE</td><td class="key-inline">X</td><td>Descompone bloques/polilíneas</td></tr>
+                <tr><td>Edición</td><td class="cmd-inline">HATCH</td><td class="key-inline">H</td><td>Rellena con sombreado</td></tr>
+                <tr><td>Edición</td><td class="cmd-inline">PEDIT</td><td class="key-inline">PE</td><td>Edita polilíneas</td></tr>
+                <tr><td>Edición</td><td class="cmd-inline">MTEXT</td><td class="key-inline">T</td><td>Texto multilínea</td></tr>
+                <tr><td>Edición</td><td class="cmd-inline">TEXT</td><td class="key-inline">DT</td><td>Texto de una línea</td></tr>
+                <tr><td>Capas</td><td class="cmd-inline">LAYER</td><td class="key-inline">LA</td><td>Administra capas</td></tr>
+                <tr><td>Capas</td><td class="cmd-inline">LAYISO</td><td class="key-inline">—</td><td>Aísla una capa</td></tr>
+                <tr><td>Capas</td><td class="cmd-inline">LAYUNISO</td><td class="key-inline">—</td><td>Restaura visibilidad</td></tr>
+                <tr><td>Bloques</td><td class="cmd-inline">BLOCK</td><td class="key-inline">—</td><td>Crea un bloque</td></tr>
+                <tr><td>Bloques</td><td class="cmd-inline">INSERT</td><td class="key-inline">I</td><td>Inserta un bloque</td></tr>
+                <tr><td>Bloques</td><td class="cmd-inline">BEDIT</td><td class="key-inline">—</td><td>Edita un bloque</td></tr>
+                <tr><td>Acotación</td><td class="cmd-inline">DIM</td><td class="key-inline">DIM</td><td>Cota inteligente</td></tr>
+                <tr><td>Acotación</td><td class="cmd-inline">DIMSTYLE</td><td class="key-inline">D</td><td>Estilos de cota</td></tr>
+                <tr><td>Consulta</td><td class="cmd-inline">DIST</td><td class="key-inline">DI</td><td>Mide distancia</td></tr>
+                <tr><td>Consulta</td><td class="cmd-inline">AREA</td><td class="key-inline">AA</td><td>Calcula área</td></tr>
+                <tr><td>Consulta</td><td class="cmd-inline">LIST</td><td class="key-inline">LI</td><td>Lista propiedades</td></tr>
+                <tr><td>Consulta</td><td class="cmd-inline">ZOOM</td><td class="key-inline">Z</td><td>Amplía/reduce vista</td></tr>
+                <tr><td>Consulta</td><td class="cmd-inline">PURGE</td><td class="key-inline">PU</td><td>Elimina elementos no usados</td></tr>
+                <tr><td>Consulta</td><td class="cmd-inline">AUDIT</td><td class="key-inline">—</td><td>Corrige errores del archivo</td></tr>
+                <tr><td>3D</td><td class="cmd-inline">EXTRUDE</td><td class="key-inline">EXT</td><td>Extrude un perfil 2D</td></tr>
+                <tr><td>3D</td><td class="cmd-inline">REVOLVE</td><td class="key-inline">REV</td><td>Revoluciona un perfil 2D</td></tr>
+                <tr><td>3D</td><td class="cmd-inline">UNION</td><td class="key-inline">—</td><td>Unión booleana</td></tr>
+                <tr><td>3D</td><td class="cmd-inline">SUBTRACT</td><td class="key-inline">SU</td><td>Resta booleana</td></tr>
+                <tr><td>3D</td><td class="cmd-inline">INTERSECT</td><td class="key-inline">IN</td><td>Intersección booleana</td></tr>
+                <tr><td>3D</td><td class="cmd-inline">3DORBIT</td><td class="key-inline">—</td><td>Órbita 3D libre</td></tr>
+                <tr><td>3D</td><td class="cmd-inline">RENDER</td><td class="key-inline">RR</td><td>Renderiza el modelo</td></tr>
+                <tr><td>Pantalla</td><td class="cmd-inline">ORTO</td><td class="key-inline">F8</td><td>Modo ortogonal</td></tr>
+                <tr><td>Pantalla</td><td class="cmd-inline">OSNAP</td><td class="key-inline">F3</td><td>Referencia a objetos</td></tr>
+                <tr><td>Pantalla</td><td class="cmd-inline">GRID</td><td class="key-inline">F7</td><td>Cuadrícula visual</td></tr>
+                <tr><td>Pantalla</td><td class="cmd-inline">SNAP</td><td class="key-inline">F9</td><td>Ajuste a cuadrícula</td></tr>
+                <tr><td>Pantalla</td><td class="cmd-inline">POLAR</td><td class="key-inline">F10</td><td>Rastreo polar</td></tr>
+                <tr><td>Pantalla</td><td class="cmd-inline">PROPERTIES</td><td class="key-inline">Ctrl+1</td><td>Paleta de propiedades</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+        </article>
+
+        <!-- Navegación anterior / siguiente -->
+        <nav class="level-nav">
+          <a href="nivel-2-dibujo-2d.html">
+            <span class="nav-label">Anterior</span>
+            <span class="nav-title"><i class="bi bi-arrow-left"></i> Nivel 2 · Dibujo 2D</span>
+          </a>
+          <a href="nivel-4-modelado-3d.html" class="nav-next">
+            <span class="nav-label">Siguiente</span>
+            <span class="nav-title">Nivel 4 · Modelado 3D <i class="bi bi-arrow-right"></i></span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="container container-xl">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <div class="brand-cad mb-2"><span class="brand-mark"></span><span>AutoCAD Guía</span></div>
+        <p>Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3">Niveles</h6>
+        <ul class="list-unstyled">
+          <li><a href="nivel-1-fundamentos.html">Fundamentos</a></li>
+          <li><a href="nivel-2-dibujo-2d.html">Dibujo 2D</a></li>
+          <li><a href="nivel-4-modelado-3d.html">Modelado 3D</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3">Guía</h6>
+        <ul class="list-unstyled">
+          <li><a href="comandos.html">Comandos</a></li>
+          <li><a href="recursos.html">Recursos</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3">Síguenos</h6>
+        <div class="d-flex gap-2">
+          <a href="#" class="icon-btn"><i class="bi bi-youtube"></i></a>
+          <a href="#" class="icon-btn"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="icon-btn"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-5 mb-4" style="border-color:var(--border-soft)">
+    <p class="mb-0 small">© 2026 AutoCAD Guía. Proyecto educativo de aprendizaje libre.</p>
+  </div>
+</footer>
+
+<div class="command-line-bar" id="cmdBar">
+  <div class="command-line-inner">
+    <span class="prompt-sign">Comando:</span>
+    <span id="cmd-typed"></span><span class="cursor-blink"></span>
+    <button class="cl-close" id="cmdClose" title="Ocultar"><i class="bi bi-x-lg"></i></button>
+  </div>
+</div>
+
+<!-- ===================== BUSCADOR GLOBAL ===================== -->
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Buscar en la guía">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="bi bi-search"></i>
+      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar">
+      <kbd class="search-kbd">ESC</kbd>
+    </div>
+    <div class="search-results" id="globalSearchResults">
+      <div class="search-empty">Escribe al menos 2 caracteres para buscar...</div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nivel 5 · Nivel experto — AutoCAD Guía</title>
+<meta name="description" content="Personalización de AutoCAD, AutoLISP, estándares CAD profesionales, buenas prácticas e integración con otros programas. Nivel 5 de la guía.">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<!-- Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<!-- Prism.js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar navbar-cad navbar-expand-lg">
+  <div class="container container-xl">
+    <a class="navbar-brand brand-cad" href="../index.html">
+      <span class="brand-mark"></span>
+      <span>AutoCAD<small class="d-block">Guía · Teoría &amp; Práctica</small></span>
+    </a>
+    <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
+      <i class="bi bi-list fs-4"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navCad">
+      <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../index.html">Inicio</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-cad dropdown-toggle active" href="#" data-bs-toggle="dropdown">Niveles</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="nivel-1-fundamentos.html">Nivel 1 · Fundamentos</a></li>
+            <li><a class="dropdown-item" href="nivel-2-dibujo-2d.html">Nivel 2 · Dibujo 2D</a></li>
+            <li><a class="dropdown-item" href="nivel-3-organizacion.html">Nivel 3 · Organización</a></li>
+            <li><a class="dropdown-item" href="nivel-4-modelado-3d.html">Nivel 4 · Modelado 3D</a></li>
+            <li><a class="dropdown-item active" href="nivel-5-avanzado.html">Nivel 5 · Avanzado</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="comandos.html">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="recursos.html">Recursos gratis</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="faq.html">FAQ</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-2">
+        <span class="coord-readout d-none d-lg-inline-flex">X: <span id="coordX">000.00</span>&nbsp; Y: <span id="coordY">000.00</span></span>
+        <button class="icon-btn" id="searchToggle" title="Buscar"><i class="bi bi-search"></i></button>
+        <button class="icon-btn" id="themeToggle" title="Cambiar tema"><i class="bi bi-moon-stars"></i></button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== CABECERA ===================== -->
+<header class="page-header">
+  <div class="container container-xl">
+    <p class="crumb"><a href="../index.html">Inicio</a> / <a href="../index.html#niveles">Niveles</a> / Nivel 5</p>
+    <span class="eyebrow">Nivel 05 · Experto</span>
+    <h1>Nivel experto</h1>
+    <p class="subtitle">Personaliza AutoCAD a tu medida, automatiza tareas con scripts, aplica estándares profesionales y integra el programa con otros flujos de trabajo del mundo real.</p>
+    <div class="level-progress-bar"><div class="fill"></div></div>
+    <p class="level-progress-label">0 de 6 temas completados · 0%</p>
+  </div>
+</header>
+
+<!-- ===================== CONTENIDO ===================== -->
+<div class="content-layout">
+  <div class="container container-xl">
+    <div class="row">
+
+      <!-- Índice lateral -->
+      <aside class="col-lg-3 mb-5 mb-lg-0">
+        <div class="toc-sidebar">
+          <h6>En este nivel</h6>
+          <ul class="toc-list">
+            <li><a href="#personalizacion" data-toc="nivel5-personalizacion"><span class="toc-check"></span> Personalización de la interfaz</a></li>
+            <li><a href="#autolisp" data-toc="nivel5-autolisp"><span class="toc-check"></span> AutoLISP y scripts</a></li>
+            <li><a href="#estandares" data-toc="nivel5-estandares"><span class="toc-check"></span> Estándares CAD profesionales</a></li>
+            <li><a href="#buenas-practicas" data-toc="nivel5-buenas-practicas"><span class="toc-check"></span> Buenas prácticas</a></li>
+            <li><a href="#integracion" data-toc="nivel5-integracion"><span class="toc-check"></span> Integración con otros programas</a></li>
+            <li><a href="#optimizacion" data-toc="nivel5-optimizacion"><span class="toc-check"></span> Optimización y solución de errores</a></li>
+          </ul>
+          <hr style="border-color:var(--border-soft)" class="my-4">
+          <a href="comandos.html" class="btn-cad-outline w-100 text-center d-block">Diccionario de comandos <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </aside>
+
+      <!-- Artículo -->
+      <div class="col-lg-9">
+        <article class="content-article">
+
+          <!-- 1. Personalización -->
+          <section id="personalizacion" data-topic="nivel5-personalizacion">
+            <h2><span class="sec-num">1</span> Personalización de la interfaz (CUI)</h2>
+            <p>El comando <span class="cmd-inline">CUI</span> (Customize User Interface) abre un diálogo donde puedes modificar casi todo el entorno visual de AutoCAD: barras de herramientas, menús, teclas de acceso rápido y cintas de opciones.</p>
+
+            <h3>Qué puedes personalizar</h3>
+            <ul>
+              <li><strong>Pestañas y paneles de la cinta:</strong> crear tu propia pestaña con los comandos que más usas.</li>
+              <li><strong>Barras de herramientas rápidas:</strong> agregar iconos de uso frecuente en la parte superior.</li>
+              <li><strong>Atajos de teclado:</strong> asignar combinaciones personalizadas (por ejemplo, <span class="key-inline">Ctrl+Shift+M</span> para MATRIZ).</li>
+              <li><strong>Menús contextual:</strong> agregar opciones al clic derecho según el tipo de objeto.</li>
+            </ul>
+
+            <div class="callout">
+              <span class="callout-title">Consejo</span>
+              Antes de modificar la interfaz, exporta una copia de tu configuración actual desde el propio diálogo CUI, por si necesitas restaurar algo después.
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 2. AutoLISP -->
+          <section id="autolisp" data-topic="nivel5-autolisp">
+            <h2><span class="sec-num">2</span> AutoLISP y scripts básicos</h2>
+            <p><strong>AutoLISP</strong> es un lenguaje de programación integrado en AutoCAD que permite automatizar tareas repetitivas, crear comandos personalizados y extender las capacidades del programa.</p>
+
+            <table class="table-cad">
+              <thead><tr><th>Concepto</th><th>Ejemplo</th></tr></thead>
+              <tbody>
+                <tr><td>Cargar un archivo LISP</td><td>Escribir <span class="cmd-inline">APPLOAD</span> en la línea de comandos</td></tr>
+                <tr><td>Función básica</td><td><span class="cmd-inline">(command "LINE" pt1 pt2 "")</span></td></tr>
+                <tr><td>Obtener un punto del usuario</td><td><span class="cmd-inline">(setq pt (getpoint "Selecciona punto:"))</span></td></tr>
+                <tr><td>Obtener un valor numérico</td><td><span class="cmd-inline">(setq d (getdist "Distancia:"))</span></td></tr>
+              </tbody>
+            </table>
+
+            <p>También existen los <strong>scripts</strong> simples (archivos <span class="cmd-inline">.SCR</span>) que son secuencias de comandos escritos línea por línea, útiles para ejecutar rutinas de dibujo o configuración sin programar.</p>
+
+            <h3>Ejemplo de script AutoLISP</h3>
+            <p>Este script dibuja un rectángulo de dimensiones variables que el usuario define:</p>
+            <div class="code-block">
+              <span class="code-label">AutoLISP</span>
+              <button class="copy-btn">Copiar</button>
+              <pre><code class="language-bash">;; Dibuja un rectángulo con dimensiones del usuario
+(defun c:RECTMI ()
+  (setq pt (getpoint "Punto base: "))
+  (setq w (getdist pt "Ancho: "))
+  (setq h (getdist pt "Alto: "))
+  (command "RECTANG" pt
+    (list (+ (car pt) w) (+ (cadr pt) h))
+  )
+  (princ)
+)</code></pre>
+            </div>
+
+            <div class="callout">
+              <span class="callout-title">Para probarlo</span>
+              Copia el código en un archivo <span class="cmd-inline">rectmi.lisp</span>, carga con <span class="cmd-inline">APPLOAD</span> y escribe <span class="cmd-inline">RECTMI</span> en la línea de comandos.
+            </div>
+
+            <div class="img-placeholder">
+              <i class="bi bi-code-slash"></i>
+              IMG: editor de AutoLISP dentro de Visual Studio Code con el plugin AutoCAD extension
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 3. Estándares CAD -->
+          <section id="estandares" data-topic="nivel5-estandares">
+            <h2><span class="sec-num">3</span> Estándares CAD profesionales</h2>
+            <p>En equipos de trabajo profesional, todos los dibujantes deben seguir las mismas reglas para que los archivos sean consistentes y interoperables. Los más conocidos son:</p>
+
+            <table class="table-cad">
+              <thead><tr><th>Estándar</th><th>Uso típico</th><th>Países</th></tr></thead>
+              <tbody>
+                <tr><td><strong>ISO</strong> (Organización Internacional de Normalización)</td><td>Planos arquitectónicos, mecánicos e industriales</td><td>Mundial (especialmente Europa y Latinoamérica)</td></tr>
+                <tr><td><strong>ANSI</strong> (Instituto Nacional Estadounidense)</td><td>Ingeniería mecánica y estructural</td><td>Estados Unidos</td></tr>
+                <tr><td><strong>DIN</strong> (Instituto Alemán de Normalización)</td><td>Arquitectura, ingeniería civil, mobiliario</td><td>Alemania, Europa central</td></tr>
+                <tr><td><strong>ABNT</strong> (Asociación Brasileña de Normas)</td><td>Arquitectura e ingeniería civil</td><td>Brasil</td></tr>
+              </tbody>
+            </table>
+
+            <p>Un archivo de <strong>estándar CAD</strong> (<span class="cmd-inline">.DWS</span>) verifica automáticamente que tu dibujo cumpla con la nomenclatura de capas, estilos de texto y de cota requeridos por el proyecto.</p>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 4. Buenas prácticas -->
+          <section id="buenas-practicas" data-topic="nivel5-buenas-practicas">
+            <h2><span class="sec-num">4</span> Buenas prácticas de dibujo profesional</h2>
+            <ul>
+              <li><strong>Nomenclatura de capas:</strong> usa un sistema consistente, por ejemplo <em>ARQ-Muros</em>, <em>EST-Columnas</em>, <em>INST-Tuberia</em>, donde el prefijo indica el disciplina.</li>
+              <li><strong>Dibuja a escala 1:1</strong> siempre en el espacio modelo; la escala se aplica solo en el layout.</li>
+              <li><strong>Usa bloques</strong> para elementos repetidos (mobiliario, símbolos, accesorios).</li>
+              <li><strong>No dibujes en la capa 0</strong> para elementos finales; úsala solo para crear bloques.</li>
+              <li><strong>Verifica ortogonalidad</strong> con ORTO y OSNAP antes de imprimir.</li>
+              <li><strong>Guarda con frecuencia</strong> y usa versiones (<span class="cmd-inline">SAVEAS</span>) en hitos importantes del proyecto.</li>
+              <li><strong>Externaliza referencias</strong> (Xref) en proyectos colaborativos para evitar duplicación.</li>
+            </ul>
+
+            <div class="callout warn">
+              <span class="callout-title">Error común</span>
+              No uses colores directamente sobre objetos para "diferenciar" elementos. Siempre trabaja desde la capa: el color, tipo de línea y grosor deben definirse en la capa, no en el objeto.
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 5. Integración -->
+          <section id="integracion" data-topic="nivel5-integracion">
+            <h2><span class="sec-num">5</span> Integración con otros programas</h2>
+
+            <table class="table-cad">
+              <thead><tr><th>Programa</th><th>Tipo de integración</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Revit</strong></td><td>Modelo BIM se exporta a AutoCAD para planos de detalle y fabricación.</td></tr>
+                <tr><td><strong>SketchUp</strong></td><td>Modelos 3D se importan como bloques o sólidos para referencia.</td></tr>
+                <tr><td><strong>Civil 3D</strong></td><td>Extensión de AutoCAD para ingeniería civil: topografía, redes y pavimentos.</td></tr>
+                <tr><td><strong>3ds Max</strong></td><td>Modelos 3D de AutoCAD se importan para renderizado fotorealista.</td></tr>
+                <tr><td><strong>Navisworks</strong></td><td>Coordination: combina modelos de varias disciplinas para detectar choques.</td></tr>
+                <tr><td><strong>Excel / hojas de cálculo</strong></td><td>Tablas y listas de áreas se extraen con <span class="cmd-inline">DATAEXTRACTION</span>.</td></tr>
+              </tbody>
+            </table>
+
+            <p>Los formatos de intercambio más usados son <strong>.DWG</strong> (nativo), <strong>.DXF</strong> (intercambio entre CADs), <strong>.IFC</strong> (BIM) y <strong>.SAT</strong> (ACIS sólidos).</p>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 6. Optimización -->
+          <section id="optimizacion" data-topic="nivel5-optimizacion">
+            <h2><span class="sec-num">6</span> Optimización de archivos y solución de errores</h2>
+
+            <h3>Reducir el tamaño del archivo</h3>
+            <ul>
+              <li><span class="cmd-inline">PURGE</span>: elimina capas, bloques, estilos y tipos de línea no utilizados.</li>
+              <li><span class="cmd-inline">AUDIT</span>: detecta y corrige errores internos del archivo.</li>
+              <li><span class="cmd-inline">SCALELISTEDIT</span>: elimina escalas de lista no usadas (causa común de aumento de tamaño).</li>
+              <li><span class="cmd-inline">DELTA</span>: elimina datos de versiones anteriores guardadas en el archivo.</li>
+            </ul>
+
+            <h3>Errores comunes y soluciones</h3>
+            <table class="table-cad">
+              <thead><tr><th>Problema</th><th>Solución</th></tr></thead>
+              <tbody>
+                <tr><td>El archivo pesa demasiado</td><td><span class="cmd-inline">PURGE</span> + <span class="cmd-inline">AUDIT</span> + <span class="cmd-inline">WBLOCK</span> (exportar todo a un archivo limpio)</td></tr>
+                <tr><td>Las cotas se ven desproporcionadas</td><td>Verificar que la escala de la ventana gráfica coincida con la escala de anotación</td></tr>
+                <tr><td>El hatch no se aplica</td><td>El contorno no está cerrado; usar <span class="cmd-inline">BOUNDARY</span> para detectar fugas</td></tr>
+                <tr><td>Los textos no se imprimen</td><td>Verificar que la capa de textos no esté en "No imprimir"</td></tr>
+                <tr><td>La Xref no se actualiza</td><td>Usar <span class="cmd-inline">XREF</span> → pestaña "Lista" → clic derecho → "Recargar"</td></tr>
+              </tbody>
+            </table>
+
+            <div class="callout">
+              <span class="callout-title">Flujo de limpieza recomendado</span>
+              Antes de entregar un plano: <strong>AUDIT</strong> → <strong>PURGE</strong> → <strong>SAVEAS</strong> a un archivo nuevo → verificar impresión en vista previa.
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+        </article>
+
+        <!-- Navegación anterior / siguiente -->
+        <nav class="level-nav">
+          <a href="nivel-4-modelado-3d.html">
+            <span class="nav-label">Anterior</span>
+            <span class="nav-title"><i class="bi bi-arrow-left"></i> Nivel 4 · Modelado 3D</span>
+          </a>
+          <a href="comandos.html" class="nav-next">
+            <span class="nav-label">Siguiente</span>
+            <span class="nav-title">Diccionario de comandos <i class="bi bi-arrow-right"></i></span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="container container-xl">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <div class="brand-cad mb-2"><span class="brand-mark"></span><span>AutoCAD Guía</span></div>
+        <p>Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3">Niveles</h6>
+        <ul class="list-unstyled">
+          <li><a href="nivel-1-fundamentos.html">Fundamentos</a></li>
+          <li><a href="nivel-2-dibujo-2d.html">Dibujo 2D</a></li>
+          <li><a href="nivel-4-modelado-3d.html">Modelado 3D</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3">Guía</h6>
+        <ul class="list-unstyled">
+          <li><a href="comandos.html">Comandos</a></li>
+          <li><a href="recursos.html">Recursos</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3">Síguenos</h6>
+        <div class="d-flex gap-2">
+          <a href="#" class="icon-btn"><i class="bi bi-youtube"></i></a>
+          <a href="#" class="icon-btn"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="icon-btn"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-5 mb-4" style="border-color:var(--border-soft)">
+    <p class="mb-0 small">© 2026 AutoCAD Guía. Proyecto educativo de aprendizaje libre.</p>
+  </div>
+</footer>
+
+<div class="command-line-bar" id="cmdBar">
+  <div class="command-line-inner">
+    <span class="prompt-sign">Comando:</span>
+    <span id="cmd-typed"></span><span class="cursor-blink"></span>
+    <button class="cl-close" id="cmdClose" title="Ocultar"><i class="bi bi-x-lg"></i></button>
+  </div>
+</div>
+
+<!-- ===================== BUSCADOR GLOBAL ===================== -->
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Buscar en la guía">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="bi bi-search"></i>
+      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar">
+      <kbd class="search-kbd">ESC</kbd>
+    </div>
+    <div class="search-results" id="globalSearchResults">
+      <div class="search-empty">Escribe al menos 2 caracteres para buscar...</div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

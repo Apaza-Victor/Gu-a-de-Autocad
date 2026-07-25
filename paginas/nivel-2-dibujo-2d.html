@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nivel 2 · Dibujo 2D — AutoCAD Guía</title>
+<meta name="description" content="Herramientas de dibujo y modificación, precisión con OSNAP, capas, bloques, acotación, texto y sombreado en AutoCAD. Nivel 2 de la guía completa.">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<!-- Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<!-- Prism.js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar navbar-cad navbar-expand-lg">
+  <div class="container container-xl">
+    <a class="navbar-brand brand-cad" href="../index.html">
+      <span class="brand-mark"></span>
+      <span>AutoCAD<small class="d-block">Guía · Teoría &amp; Práctica</small></span>
+    </a>
+    <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
+      <i class="bi bi-list fs-4"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navCad">
+      <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../index.html">Inicio</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-cad dropdown-toggle active" href="#" data-bs-toggle="dropdown">Niveles</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="nivel-1-fundamentos.html">Nivel 1 · Fundamentos</a></li>
+            <li><a class="dropdown-item active" href="nivel-2-dibujo-2d.html">Nivel 2 · Dibujo 2D</a></li>
+            <li><a class="dropdown-item" href="nivel-3-organizacion.html">Nivel 3 · Organización</a></li>
+            <li><a class="dropdown-item" href="nivel-4-modelado-3d.html">Nivel 4 · Modelado 3D</a></li>
+            <li><a class="dropdown-item" href="nivel-5-avanzado.html">Nivel 5 · Avanzado</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="comandos.html">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="recursos.html">Recursos gratis</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="faq.html">FAQ</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-2">
+        <span class="coord-readout d-none d-lg-inline-flex">X: <span id="coordX">000.00</span>&nbsp; Y: <span id="coordY">000.00</span></span>
+        <button class="icon-btn" id="searchToggle" title="Buscar"><i class="bi bi-search"></i></button>
+        <button class="icon-btn" id="themeToggle" title="Cambiar tema"><i class="bi bi-moon-stars"></i></button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== CABECERA ===================== -->
+<header class="page-header">
+  <div class="container container-xl">
+    <p class="crumb"><a href="../index.html">Inicio</a> / <a href="../index.html#niveles">Niveles</a> / Nivel 2</p>
+    <span class="eyebrow">Nivel 02 · Básico–Intermedio</span>
+    <h1>Dibujo 2D</h1>
+    <p class="subtitle">El corazón de AutoCAD: cómo crear geometría, modificarla con precisión, organizarla en capas, reutilizarla con bloques y documentarla con cotas, texto y sombreados.</p>
+    <div class="level-progress-bar"><div class="fill"></div></div>
+    <p class="level-progress-label">0 de 8 temas completados · 0%</p>
+  </div>
+</header>
+
+<!-- ===================== CONTENIDO ===================== -->
+<div class="content-layout">
+  <div class="container container-xl">
+    <div class="row">
+
+      <!-- Índice lateral -->
+      <aside class="col-lg-3 mb-5 mb-lg-0">
+        <div class="toc-sidebar">
+          <h6>En este nivel</h6>
+          <ul class="toc-list">
+            <li><a href="#dibujo" data-toc="nivel2-dibujo"><span class="toc-check"></span> Herramientas de dibujo</a></li>
+            <li><a href="#modificacion" data-toc="nivel2-modificacion"><span class="toc-check"></span> Herramientas de modificación</a></li>
+            <li><a href="#precision" data-toc="nivel2-precision"><span class="toc-check"></span> Precisión y referencias</a></li>
+            <li><a href="#capas" data-toc="nivel2-capas"><span class="toc-check"></span> Capas</a></li>
+            <li><a href="#bloques" data-toc="nivel2-bloques"><span class="toc-check"></span> Bloques y atributos</a></li>
+            <li><a href="#acotacion" data-toc="nivel2-acotacion"><span class="toc-check"></span> Acotación</a></li>
+            <li><a href="#texto" data-toc="nivel2-texto"><span class="toc-check"></span> Texto y tablas</a></li>
+            <li><a href="#hatch" data-toc="nivel2-hatch"><span class="toc-check"></span> Sombreado y rellenos</a></li>
+          </ul>
+          <hr style="border-color:var(--border-soft)" class="my-4">
+          <a href="nivel-3-organizacion.html" class="btn-cad-outline w-100 text-center d-block">Siguiente nivel <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </aside>
+
+      <!-- Artículo -->
+      <div class="col-lg-9">
+        <article class="content-article">
+
+          <!-- 1. Herramientas de dibujo -->
+          <section id="dibujo" data-topic="nivel2-dibujo">
+            <h2><span class="sec-num">1</span> Herramientas de dibujo</h2>
+            <p>Son los comandos que crean geometría nueva. Todos aceptan coordenadas exactas (ver Nivel 1) además de clics con el mouse.</p>
+
+            <table class="table-cad">
+              <thead><tr><th>Herramienta</th><th>Comando</th><th>Atajo</th><th>Uso</th></tr></thead>
+              <tbody>
+                <tr><td>Línea</td><td class="cmd-inline">LINE</td><td class="key-inline">L</td><td>Segmentos rectos entre puntos.</td></tr>
+                <tr><td>Polilínea</td><td class="cmd-inline">PLINE</td><td class="key-inline">PL</td><td>Serie de segmentos y arcos unidos como un solo objeto.</td></tr>
+                <tr><td>Círculo</td><td class="cmd-inline">CIRCLE</td><td class="key-inline">C</td><td>Por centro-radio, dos o tres puntos, entre otras opciones.</td></tr>
+                <tr><td>Arco</td><td class="cmd-inline">ARC</td><td class="key-inline">A</td><td>Tramo curvo definido por 3 puntos, centro-inicio-fin, entre otras.</td></tr>
+                <tr><td>Rectángulo</td><td class="cmd-inline">RECTANG</td><td class="key-inline">REC</td><td>Rectángulo a partir de dos esquinas opuestas.</td></tr>
+                <tr><td>Polígono</td><td class="cmd-inline">POLYGON</td><td class="key-inline">POL</td><td>Polígono regular inscrito o circunscrito en un círculo.</td></tr>
+                <tr><td>Elipse</td><td class="cmd-inline">ELLIPSE</td><td class="key-inline">EL</td><td>Curva elíptica por eje mayor/menor o por centro.</td></tr>
+                <tr><td>Spline</td><td class="cmd-inline">SPLINE</td><td class="key-inline">SPL</td><td>Curva suave que pasa por una serie de puntos de control.</td></tr>
+              </tbody>
+            </table>
+
+            <div class="img-placeholder">
+              <i class="bi bi-vector-pen"></i>
+              IMG: cuadrícula comparativa de las 8 herramientas de dibujo básicas
+            </div>
+
+            <!-- Carrusel de ejemplos de herramientas -->
+            <div class="swiper-carousel">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="img-placeholder" style="margin:0;border:0;border-radius:0;height:160px">
+                    <i class="bi bi-dash-lg"></i>
+                    <span>LINE — Líneas rectas entre puntos</span>
+                  </div>
+                  <div class="swiper-slide-caption">
+                    <h5>Línea (LINE)</h5>
+                    <p>Dibuja segmentos rectos. Usa ORTO para líneas perfectamente horizontales o verticales.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="img-placeholder" style="margin:0;border:0;border-radius:0;height:160px">
+                    <i class="bi bi-bezier2"></i>
+                    <span>PLINE — Polilíneas combinadas</span>
+                  </div>
+                  <div class="swiper-slide-caption">
+                    <h5>Polilínea (PLINE)</h5>
+                    <p>Segmentos rectos y curvos en un solo objeto. Ideal para contornos cerrados.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="img-placeholder" style="margin:0;border:0;border-radius:0;height:160px">
+                    <i class="bi bi-circle"></i>
+                    <span>CIRCLE — Círculos por centro-radio</span>
+                  </div>
+                  <div class="swiper-slide-caption">
+                    <h5>Círculo (CIRCLE)</h5>
+                    <p>Crear círculos por centro y radio, dos puntos o tres puntos.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="img-placeholder" style="margin:0;border:0;border-radius:0;height:160px">
+                    <i class="bi bi-square"></i>
+                    <span>RECTANG — Rectángulos rápidos</span>
+                  </div>
+                  <div class="swiper-slide-caption">
+                    <h5>Rectángulo (RECTANG)</h5>
+                    <p>Define dos esquinas opuestas para crear el rectángulo.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="img-placeholder" style="margin:0;border:0;border-radius:0;height:160px">
+                    <i class="bi bi-layers"></i>
+                    <span>OFFSET — Copias paralelas</span>
+                  </div>
+                  <div class="swiper-slide-caption">
+                    <h5>Desfase (OFFSET)</h5>
+                    <p>Crea copias paralelas a distancia exacta. Fundamental para muros.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="img-placeholder" style="margin:0;border:0;border-radius:0;height:160px">
+                    <i class="bi bi-scissors"></i>
+                    <span>TRIM — Recorte preciso</span>
+                  </div>
+                  <div class="swiper-slide-caption">
+                    <h5>Recortar (TRIM)</h5>
+                    <p>Elimina la parte de un objeto que sobrepasa un límite de referencia.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="callout">
+              <span class="callout-title">Buena práctica</span>
+              Prefiere <strong>PLINE</strong> sobre <strong>LINE</strong> cuando dibujes un contorno cerrado (como un muro o una pieza): al ser un solo objeto, es más fácil de seleccionar, editar y aplicarle sombreado después.
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 2. Herramientas de modificación -->
+          <section id="modificacion" data-topic="nivel2-modificacion">
+            <h2><span class="sec-num">2</span> Herramientas de modificación</h2>
+            <p>Permiten transformar objetos ya dibujados sin volver a trazarlos desde cero.</p>
+
+            <table class="table-cad">
+              <thead><tr><th>Herramienta</th><th>Comando</th><th>Atajo</th><th>Uso</th></tr></thead>
+              <tbody>
+                <tr><td>Mover</td><td class="cmd-inline">MOVE</td><td class="key-inline">M</td><td>Traslada objetos de un punto base a un punto destino.</td></tr>
+                <tr><td>Copiar</td><td class="cmd-inline">COPY</td><td class="key-inline">CO</td><td>Igual que mover, pero conserva el original.</td></tr>
+                <tr><td>Rotar</td><td class="cmd-inline">ROTATE</td><td class="key-inline">RO</td><td>Gira objetos un ángulo respecto a un punto base.</td></tr>
+                <tr><td>Escalar</td><td class="cmd-inline">SCALE</td><td class="key-inline">SC</td><td>Aumenta o reduce el tamaño respecto a un punto base.</td></tr>
+                <tr><td>Recortar</td><td class="cmd-inline">TRIM</td><td class="key-inline">TR</td><td>Elimina la parte de un objeto que sobrepasa un límite.</td></tr>
+                <tr><td>Alargar</td><td class="cmd-inline">EXTEND</td><td class="key-inline">EX</td><td>Extiende un objeto hasta tocar un límite de referencia.</td></tr>
+                <tr><td>Desfase</td><td class="cmd-inline">OFFSET</td><td class="key-inline">O</td><td>Copia paralela a una distancia exacta (ideal para muros).</td></tr>
+                <tr><td>Simetría</td><td class="cmd-inline">MIRROR</td><td class="key-inline">MI</td><td>Refleja objetos respecto a un eje.</td></tr>
+                <tr><td>Matriz</td><td class="cmd-inline">ARRAY</td><td class="key-inline">AR</td><td>Repite objetos en filas/columnas, en círculo o a lo largo de una ruta.</td></tr>
+                <tr><td>Empalme</td><td class="cmd-inline">FILLET</td><td class="key-inline">F</td><td>Une dos líneas con un arco de radio definido.</td></tr>
+                <tr><td>Chaflán</td><td class="cmd-inline">CHAMFER</td><td class="key-inline">CHA</td><td>Une dos líneas con un corte recto en la esquina.</td></tr>
+              </tbody>
+            </table>
+
+            <div class="callout">
+              <span class="callout-title">Flujo típico</span>
+              Un muro en planta suele dibujarse así: <strong>PLINE</strong> para el eje → <strong>OFFSET</strong> para dar el espesor → <strong>TRIM</strong> para limpiar las esquinas → <strong>FILLET</strong> con radio 0 para unir vértices sueltos.
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 3. Precisión -->
+          <section id="precision" data-topic="nivel2-precision">
+            <h2><span class="sec-num">3</span> Precisión: referencias, rastreo y cuadrícula</h2>
+            <p>AutoCAD ofrece ayudas de precisión que se activan/desactivan desde la barra de estado o con teclas de función, para hacer clic exactamente donde se necesita, sin calcular coordenadas a mano.</p>
+
+            <table class="table-cad">
+              <thead><tr><th>Ayuda</th><th>Tecla</th><th>Qué hace</th></tr></thead>
+              <tbody>
+                <tr><td>Referencia a objetos (OSNAP)</td><td class="key-inline">F3</td><td>Engancha el cursor a puntos exactos: extremo, medio, centro, intersección, etc.</td></tr>
+                <tr><td>Rastreo polar</td><td class="key-inline">F10</td><td>Muestra líneas guía en ángulos predefinidos (0°, 45°, 90°…).</td></tr>
+                <tr><td>Modo ORTO</td><td class="key-inline">F8</td><td>Restringe el cursor a líneas perfectamente horizontales o verticales.</td></tr>
+                <tr><td>Cuadrícula / Grid</td><td class="key-inline">F7</td><td>Muestra una retícula visual de referencia en el área de dibujo.</td></tr>
+                <tr><td>Forzar cursor (SNAP)</td><td class="key-inline">F9</td><td>Obliga al cursor a "saltar" entre puntos de una cuadrícula fija.</td></tr>
+              </tbody>
+            </table>
+
+            <div class="img-placeholder">
+              <i class="bi bi-crosshair"></i>
+              IMG: barra de estado inferior mostrando los íconos de OSNAP, ORTO y rastreo polar activados
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 4. Capas -->
+          <section id="capas" data-topic="nivel2-capas">
+            <h2><span class="sec-num">4</span> Capas (Layers)</h2>
+            <p>Una capa es un "acetato" transparente donde se agrupan objetos con propiedades comunes. Se administran desde el <strong>Administrador de propiedades de capas</strong> (comando <span class="cmd-inline">LAYER</span> / <span class="key-inline">LA</span>).</p>
+
+            <h3>Propiedades que puede tener cada capa</h3>
+            <ul>
+              <li><strong>Color:</strong> identifica visualmente la capa y, si se imprime por color, puede controlar el grosor de línea.</li>
+              <li><strong>Tipo de línea:</strong> continua, discontinua, de eje, punteada, etc. (se cargan con el comando <span class="cmd-inline">LINETYPE</span>).</li>
+              <li><strong>Grosor de línea:</strong> define el espesor con que se imprime esa capa.</li>
+              <li><strong>Estado:</strong> activada/desactivada, inmovilizada, congelada, sin imprimir.</li>
+            </ul>
+
+            <div class="callout">
+              <span class="callout-title">Regla de oro</span>
+              Dibuja siempre en la capa correspondiente al elemento (muros en "Muros", cotas en "Cotas") y no cambies el color manualmente objeto por objeto. Así, si necesitas ocultar todas las cotas, basta con apagar una sola capa.
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 5. Bloques -->
+          <section id="bloques" data-topic="nivel2-bloques">
+            <h2><span class="sec-num">5</span> Bloques y atributos</h2>
+            <p>Un <strong>bloque</strong> es un conjunto de objetos agrupados bajo un solo nombre, reutilizable en el mismo dibujo o en otros (una puerta, una silla, un símbolo eléctrico).</p>
+
+            <table class="table-cad">
+              <thead><tr><th>Acción</th><th>Comando</th></tr></thead>
+              <tbody>
+                <tr><td>Crear un bloque a partir de objetos seleccionados</td><td class="cmd-inline">BLOCK</td></tr>
+                <tr><td>Insertar un bloque existente</td><td class="cmd-inline">INSERT</td></tr>
+                <tr><td>Editar el contenido de un bloque</td><td class="cmd-inline">BEDIT</td></tr>
+                <tr><td>Descomponer un bloque en objetos sueltos</td><td class="cmd-inline">EXPLODE</td></tr>
+              </tbody>
+            </table>
+
+            <p>Un bloque puede incluir <strong>atributos</strong>: campos de texto editables asociados al bloque, útiles para etiquetar (por ejemplo, el número de una habitación o el código de una pieza) y luego extraerlos en una tabla.</p>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 6. Acotación -->
+          <section id="acotacion" data-topic="nivel2-acotacion">
+            <h2><span class="sec-num">6</span> Acotación (dimensiones)</h2>
+            <p>Acotar es indicar medidas reales sobre el dibujo. AutoCAD calcula automáticamente la distancia entre los puntos que selecciones, siempre que el dibujo esté hecho a escala 1:1.</p>
+
+            <table class="table-cad">
+              <thead><tr><th>Tipo de cota</th><th>Comando</th><th>Uso</th></tr></thead>
+              <tbody>
+                <tr><td>Lineal</td><td class="cmd-inline">DIMLINEAR</td><td>Distancia horizontal o vertical entre dos puntos.</td></tr>
+                <tr><td>Alineada</td><td class="cmd-inline">DIMALIGNED</td><td>Distancia paralela a una línea inclinada.</td></tr>
+                <tr><td>Angular</td><td class="cmd-inline">DIMANGULAR</td><td>Mide el ángulo entre dos líneas.</td></tr>
+                <tr><td>Radio / Diámetro</td><td class="cmd-inline">DIMRADIUS</td><td>Mide arcos y círculos.</td></tr>
+                <tr><td>Cota rápida</td><td class="cmd-inline">DIM</td><td>Detecta automáticamente el tipo de cota según el objeto.</td></tr>
+              </tbody>
+            </table>
+
+            <p>Los <strong>estilos de cota</strong> (comando <span class="cmd-inline">DIMSTYLE</span>) controlan el tamaño de texto, flechas, unidades y precisión decimal de todas las cotas de ese estilo a la vez.</p>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 7. Texto y tablas -->
+          <section id="texto" data-topic="nivel2-texto">
+            <h2><span class="sec-num">7</span> Texto, estilos de texto y tablas</h2>
+
+            <table class="table-cad">
+              <thead><tr><th>Herramienta</th><th>Comando</th><th>Uso</th></tr></thead>
+              <tbody>
+                <tr><td>Texto de una línea</td><td class="cmd-inline">TEXT</td><td>Etiquetas cortas, títulos de una sola línea.</td></tr>
+                <tr><td>Texto multilínea</td><td class="cmd-inline">MTEXT</td><td>Párrafos con formato, dentro de un cuadro de ancho definido.</td></tr>
+                <tr><td>Estilo de texto</td><td class="cmd-inline">STYLE</td><td>Define fuente, altura y ancho por defecto para los textos.</td></tr>
+                <tr><td>Tabla</td><td class="cmd-inline">TABLE</td><td>Inserta cuadros de datos (ej. cuadro de acabados o de áreas).</td></tr>
+              </tbody>
+            </table>
+
+            <div class="callout warn">
+              <span class="callout-title">Cuidado</span>
+              Evita escribir el mismo texto varias veces si el valor puede cambiar (como un área o un total). Extráelo desde una tabla o un atributo de bloque para que se actualice automáticamente.
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 8. Sombreado -->
+          <section id="hatch" data-topic="nivel2-hatch">
+            <h2><span class="sec-num">8</span> Sombreado y rellenos (Hatch)</h2>
+            <p>El comando <span class="cmd-inline">HATCH</span> (<span class="key-inline">H</span>) rellena un área cerrada con un patrón: rayado de concreto, ladrillo, tierra, agua, etc. Requiere que el contorno esté completamente cerrado; si queda un espacio abierto, AutoCAD no podrá aplicar el relleno.</p>
+
+            <ul>
+              <li><strong>Patrón:</strong> selecciona el motivo (líneas, puntos, sólido, patrones prediseñados por material).</li>
+              <li><strong>Escala:</strong> ajusta el tamaño del patrón según la escala del plano.</li>
+              <li><strong>Ángulo:</strong> rota el patrón, útil para diferenciar materiales similares.</li>
+              <li><strong>Asociatividad:</strong> si el hatch es asociativo, se actualiza automáticamente al modificar el contorno.</li>
+            </ul>
+
+            <div class="img-placeholder">
+              <i class="bi bi-grid-3x3"></i>
+              IMG: corte arquitectónico con distintos patrones de sombreado (concreto, tierra, aislante)
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+        </article>
+
+        <!-- Navegación anterior / siguiente -->
+        <nav class="level-nav">
+          <a href="nivel-1-fundamentos.html">
+            <span class="nav-label">Anterior</span>
+            <span class="nav-title"><i class="bi bi-arrow-left"></i> Nivel 1 · Fundamentos</span>
+          </a>
+          <a href="nivel-3-organizacion.html" class="nav-next">
+            <span class="nav-label">Siguiente</span>
+            <span class="nav-title">Nivel 3 · Organización <i class="bi bi-arrow-right"></i></span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="container container-xl">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <div class="brand-cad mb-2"><span class="brand-mark"></span><span>AutoCAD Guía</span></div>
+        <p>Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3">Niveles</h6>
+        <ul class="list-unstyled">
+          <li><a href="nivel-1-fundamentos.html">Fundamentos</a></li>
+          <li><a href="nivel-2-dibujo-2d.html">Dibujo 2D</a></li>
+          <li><a href="nivel-4-modelado-3d.html">Modelado 3D</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3">Guía</h6>
+        <ul class="list-unstyled">
+          <li><a href="comandos.html">Comandos</a></li>
+          <li><a href="recursos.html">Recursos</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3">Síguenos</h6>
+        <div class="d-flex gap-2">
+          <a href="#" class="icon-btn"><i class="bi bi-youtube"></i></a>
+          <a href="#" class="icon-btn"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="icon-btn"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-5 mb-4" style="border-color:var(--border-soft)">
+    <p class="mb-0 small">© 2026 AutoCAD Guía. Proyecto educativo de aprendizaje libre.</p>
+  </div>
+</footer>
+
+<div class="command-line-bar" id="cmdBar">
+  <div class="command-line-inner">
+    <span class="prompt-sign">Comando:</span>
+    <span id="cmd-typed"></span><span class="cursor-blink"></span>
+    <button class="cl-close" id="cmdClose" title="Ocultar"><i class="bi bi-x-lg"></i></button>
+  </div>
+</div>
+
+<!-- ===================== BUSCADOR GLOBAL ===================== -->
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Buscar en la guía">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="bi bi-search"></i>
+      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar">
+      <kbd class="search-kbd">ESC</kbd>
+    </div>
+    <div class="search-results" id="globalSearchResults">
+      <div class="search-empty">Escribe al menos 2 caracteres para buscar...</div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preguntas frecuentes (FAQ) — AutoCAD Guía</title>
+<meta name="description" content="Resuelve tus dudas sobre AutoCAD: versiones, requisitos, licencias, diferencias con otros CAD y problemas comunes.">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<!-- Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<!-- Prism.js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar navbar-cad navbar-expand-lg">
+  <div class="container container-xl">
+    <a class="navbar-brand brand-cad" href="../index.html">
+      <span class="brand-mark"></span>
+      <span>AutoCAD<small class="d-block">Guía · Teoría &amp; Práctica</small></span>
+    </a>
+    <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
+      <i class="bi bi-list fs-4"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navCad">
+      <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../index.html">Inicio</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-cad dropdown-toggle" href="#" data-bs-toggle="dropdown">Niveles</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="nivel-1-fundamentos.html">Nivel 1 · Fundamentos</a></li>
+            <li><a class="dropdown-item" href="nivel-2-dibujo-2d.html">Nivel 2 · Dibujo 2D</a></li>
+            <li><a class="dropdown-item" href="nivel-3-organizacion.html">Nivel 3 · Organización</a></li>
+            <li><a class="dropdown-item" href="nivel-4-modelado-3d.html">Nivel 4 · Modelado 3D</a></li>
+            <li><a class="dropdown-item" href="nivel-5-avanzado.html">Nivel 5 · Avanzado</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="comandos.html">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="recursos.html">Recursos gratis</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad active" href="faq.html">FAQ</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-2">
+        <span class="coord-readout d-none d-lg-inline-flex">X: <span id="coordX">000.00</span>&nbsp; Y: <span id="coordY">000.00</span></span>
+        <button class="icon-btn" id="searchToggle" title="Buscar"><i class="bi bi-search"></i></button>
+        <button class="icon-btn" id="themeToggle" title="Cambiar tema"><i class="bi bi-moon-stars"></i></button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== CABECERA ===================== -->
+<header class="faq-hero">
+  <div class="container container-xl position-relative" style="text-align:center">
+    <p class="eyebrow justify-content-center">Preguntas frecuentes</p>
+    <h1 style="font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.1;margin-bottom:.8rem">Dudas comunes sobre AutoCAD</h1>
+    <p style="color:var(--text-muted);font-size:1.05rem;max-width:520px;margin:0 auto">Respuestas a las preguntas más frecuentes de quienes empiezan o quieren profundizar en AutoCAD.</p>
+  </div>
+</header>
+
+<!-- ===================== FAQ LIST ===================== -->
+<div class="faq-list">
+
+  <div class="faq-item" data-aos="fade-up">
+    <button class="faq-question">
+      ¿Qué es AutoCAD y para qué sirve?
+      <i class="bi bi-chevron-down"></i>
+    </button>
+    <div class="faq-answer">
+      <p>AutoCAD es un software de diseño asistido por computadora (CAD) desarrollado por Autodesk. Se usa para crear dibujos técnicos precisos en 2D (planos arquitectónicos, planos mecánicos, diagramas eléctricos) y modelos en 3D. Es el estándar de la industria en arquitectura, ingeniería civil, ingeniería mecánica e industrial.</p>
+    </div>
+  </div>
+
+  <div class="faq-item" data-aos="fade-up">
+    <button class="faq-question">
+      ¿Cuáles son las diferencias entre AutoCAD y otros programas CAD?
+      <i class="bi bi-chevron-down"></i>
+    </button>
+    <div class="faq-answer">
+      <p><strong>AutoCAD vs SolidWorks:</strong> SolidWorks está especializado en diseño mecánico 3D paramétrico, mientras AutoCAD es más versátil para 2D y 3D general.</p>
+      <p><strong>AutoCAD vs SketchUp:</strong> SketchUp es más intuitivo para modelado 3D rápido (especialmente arquitectónico), pero AutoCAD tiene más precisión técnica y herramientas de documentación.</p>
+      <p><strong>AutoCAD vs Revit:</strong> Revit es un software BIM (Building Information Modeling) para proyectos de edificación completa; AutoCAD es mejor para planos 2D y detalles.</p>
+      <p><strong>AutoCAD vs MicroStation:</strong> MicroStation es la alternativa de Bentley Systems, muy usado en ingeniería civil e infraestructura.</p>
+    </div>
+  </div>
+
+  <div class="faq-item" data-aos="fade-up">
+    <button class="faq-question">
+      ¿Cuánto cuesta AutoCAD? ¿Hay versión gratuita?
+      <i class="bi bi-chevron-down"></i>
+    </button>
+    <div class="faq-answer">
+      <p>AutoCAD se comercializa por suscripción. Sin embargo, Autodesk ofrece:</p>
+      <p><strong>Licencia educativa gratuita:</strong> para estudiantes y docentes verificados (1 año renovable) a través del portal de educación de Autodesk.</p>
+      <p><strong>Versión de prueba:</strong> 30 días de acceso completo gratis.</p>
+      <p><strong>AutoCAD Web App:</strong> versión reducida gratuita en navegador con funciones básicas.</p>
+      <p><strong>AutoCAD Mobile:</strong> app gratuita para dispositivos móviles con funciones limitadas.</p>
+    </div>
+  </div>
+
+  <div class="faq-item" data-aos="fade-up">
+    <button class="faq-question">
+      ¿AutoCAD funciona en Mac?
+      <i class="bi bi-chevron-down"></i>
+    </button>
+    <div class="faq-answer">
+      <p>Sí, AutoCAD tiene versión para macOS desde 2010. Sin embargo, la versión de Mac tiene algunas diferencias: no incluye todas las herramientas de la versión de Windows (por ejemplo, algunas funciones de automatización yadd-ins no están disponibles). La mayoría de los usuarios profesionales prefieren la versión de Windows por compatibilidad completa.</p>
+    </div>
+  </div>
+
+  <div class="faq-item" data-aos="fade-up">
+    <button class="faq-question">
+      ¿Cuáles son los requisitos mínimos del sistema?
+      <i class="bi bi-chevron-down"></i>
+    </button>
+    <div class="faq-answer">
+      <p><strong>Sistema operativo:</strong> Windows 10/11 de 64 bits.</p>
+      <p><strong>Procesador:</strong> 2.5-3 GHz mínimo (recomendado superior para 3D).</p>
+      <p><strong>RAM:</strong> 8 GB mínimo, 16 GB recomendado para modelado 3D.</p>
+      <p><strong>Espacio en disco:</strong> 10 GB para instalación.</p>
+      <p><strong>Tarjeta gráfica:</strong> 1 GB VRAM mínimo, dedicada recomendada para 3D.</p>
+      <p><strong>Resolución:</strong> 1920x1080 o superior.</p>
+      <p class="text-muted-custom small">Estos valores varían según la versión; verifica siempre los requisitos oficiales en el sitio de Autodesk antes de instalar.</p>
+    </div>
+  </div>
+
+  <div class="faq-item" data-aos="fade-up">
+    <button class="faq-question">
+      ¿Qué es el espacio modelo y el espacio papel?
+      <i class="bi bi-chevron-down"></i>
+    </button>
+    <div class="faq-answer">
+      <p><strong>Espacio modelo:</strong> el área infinita donde dibujas todo a escala real 1:1. Es donde construyes la geometría del proyecto.</p>
+      <p><strong>Espacio papel (Layout):</strong> una representación virtual de la hoja de impresión (A4, A3, A1...) donde organizas cómo se verá el plano al imprimir: agregas cajetín, defines escalas con ventanas gráficas y preparas la salida final.</p>
+      <p>La regla de oro: <strong>nunca dibujes más pequeño para que "quepa" en una hoja</strong>. Dibuja a tamaño real en Modelo y reduce la escala en Presentación.</p>
+    </div>
+  </div>
+
+  <div class="faq-item" data-aos="fade-up">
+    <button class="faq-question">
+      ¿Cómo cambio la escala de un dibujo en AutoCAD?
+      <i class="bi bi-chevron-down"></i>
+    </button>
+    <div class="faq-answer">
+      <p>La escala se aplica en el espacio Presentación (Layout), no en el espacio Modelo:</p>
+      <p>1. Abre un layout existente o crea uno nuevo.</p>
+      <p>2. Crea una ventana gráfica con el comando <strong>MVIEW</strong>.</p>
+      <p>3. Haz doble clic dentro de la ventana para activarla.</p>
+      <p>4. Usa la barra de estado inferior para seleccionar la escala deseada (1:50, 1:100, etc.) o escríbela directamente.</p>
+      <p>La escala se puede ajustar también desde la propiedad de la ventana gráfica.</p>
+    </div>
+  </div>
+
+  <div class="faq-item" data-aos="fade-up">
+    <button class="faq-question">
+      ¿Qué son los bloques y por qué son importantes?
+      <i class="bi bi-chevron-down"></i>
+    </button>
+    <div class="faq-answer">
+      <p>Un bloque es un conjunto de objetos agrupados bajo un nombre, reutilizable en el mismo dibujo o en otros archivos. Ejemplos: una puerta, una silla, un símbolo eléctrico.</p>
+      <p><strong>Por qué son importantes:</strong></p>
+      <p>• <strong>Ahorran tiempo:</strong> dibujas algo una vez y lo insertas cuantas veces necesites.</p>
+      <p>• <strong>Mantenimiento:</strong> si editas el bloque original, todas las instancias se actualizan.</p>
+      <p>• <strong>Tamaño de archivo:</strong> un bloque insertado muchas veces ocupa menos espacio que los objetos individuales.</p>
+      <p>• <strong>Consistencia:</strong> todos los miembros del equipo usan los mismos símbolos.</p>
+    </div>
+  </div>
+
+  <div class="faq-item" data-aos="fade-up">
+    <button class="faq-question">
+      ¿Cómo reduzco el tamaño de un archivo DWG?
+      <i class="bi bi-chevron-down"></i>
+    </button>
+    <div class="faq-answer">
+      <p>Los archivos DWG pueden crecer demasiado por bloques no usados, capas vacías, escalas innecesarias o historial de versiones. Pasos para limpiar:</p>
+      <p>1. <strong>AUDIT:</strong> detecta y corrige errores internos.</p>
+      <p>2. <strong>PURGE:</strong> elimina capas, bloques, estilos y tipos de línea no utilizados.</p>
+      <p>3. <strong>SCALELISTEDIT:</strong> elimina escalas de la lista que no se usan.</p>
+      <p>4. <strong>WBLOCK:</strong> exporta todo a un archivo nuevo limpio (copia selectiva).</p>
+      <p>5. <strong>SAVEAS:</strong> guarda como archivo nuevo para eliminar datos residuales.</p>
+    </div>
+  </div>
+
+  <div class="faq-item" data-aos="fade-up">
+    <button class="faq-question">
+      ¿Cuáles son las teclas de función más importantes?
+      <i class="bi bi-chevron-down"></i>
+    </button>
+    <div class="faq-answer">
+      <p><strong>F1:</strong> Ayuda de AutoCAD.</p>
+      <p><strong>F2:</strong> Ventana de texto (historial de comandos).</p>
+      <p><strong>F3:</strong> Activa/desactiva OSNAP (referencia a objetos).</p>
+      <p><strong>F5:</strong> Alterna entre isométricos (plano isométrico).</p>
+      <p><strong>F7:</strong> Activa/desactiva cuadrícula (grid).</p>
+      <p><strong>F8:</strong> Activa/desactiva modo ORTO (líneas rectas).</p>
+      <p><strong>F9:</strong> Activa/desactiva SNAP (ajuste a cuadrícula).</p>
+      <p><strong>F10:</strong> Activa/desactiva rastreo polar.</p>
+      <p><strong>F11:</strong> Activa/desactiva rastreo de objeto (ODSnap tracking).</p>
+    </div>
+  </div>
+
+  <div class="faq-item" data-aos="fade-up">
+    <button class="faq-question">
+      ¿Qué es un archivo .DWT y cuándo usarlo?
+      <li class="bi bi-chevron-down"></li>
+    </button>
+    <button class="faq-question">
+      ¿Qué es un archivo .DWT y cuándo usarlo?
+      <i class="bi bi-chevron-down"></i>
+    </button>
+    <div class="faq-answer">
+      <p>Un archivo <strong>.DWT</strong> (Drawing Template) es una plantilla que guarda configuración predefinida: capas, estilos de texto, estilos de cota, formatos de layout y cajetines.</p>
+      <p><strong>Cuándo usarlo:</strong> siempre que inicies un proyecto nuevo. En lugar de configurar todo desde cero cada vez, seleccionas tu plantilla y el dibujo ya viene con todo listo.</p>
+      <p>Los archivos normales se guardan como .DWG; los .DWT son exclusivamente plantillas que se cargan al crear un nuevo dibujo.</p>
+    </div>
+  </div>
+
+  <div class="faq-item" data-aos="fade-up">
+    <button class="faq-question">
+      ¿Cómo imprimo mi plano correctamente?
+      <i class="bi bi-chevron-down"></i>
+    </button>
+    <div class="faq-answer">
+      <p>El comando principal es <strong>PLOT</strong> (Ctrl+P). Pasos:</p>
+      <p>1. Ve al espacio Presentación (Layout) que quieres imprimir.</p>
+      <p>2. Abre PLOT y selecciona impresora o "DWG to PDF" para exportar.</p>
+      <p>3. Verifica el tamaño de papel (A4, A3, etc.).</p>
+      <p>4. Selecciona "Ventana" como área de impresión y dibuja alrededor de lo que quieres imprimir.</p>
+      <p>5. Activa "Escalado ajustado al papel" o define la escala manualmente.</p>
+      <p>6. Usa "Vista previa" para verificar antes de imprimir.</p>
+      <p>7. Si usas colores en pantalla pero quieres blanco y negro, aplica un estilo de trazado (plot style).</p>
+    </div>
+  </div>
+
+  <div class="faq-item" data-aos="fade-up">
+    <button class="faq-question">
+      ¿AutoCAD puede abrir archivos de otros programas CAD?
+      <i class="bi bi-chevron-down"></i>
+    </button>
+    <div class="faq-answer">
+      <p><strong>DXF:</strong> AutoCAD puede abrir y guardar archivos DXF (Drawing Exchange Format), el estándar de intercambio entre diferentes programas CAD.</p>
+      <p><strong>STL:</strong> Se puede importar para modelado 3D e impresión 3D.</p>
+      <p><strong>DWF:</strong> Se puede ver con Autodesk Design Review (solo lectura).</p>
+      <p><strong>IFC:</strong> Para interoperabilidad BIM, AutoCAD puede importar archivos IFC con la extensión adecuada.</p>
+      <p><strong>PDF:</strong> AutoCAD puede importar geometría de PDFs como objetos editables.</p>
+    </div>
+  </div>
+
+  <div class="faq-item" data-aos="fade-up">
+    <button class="faq-question">
+      ¿Qué diferencia hay entre AutoCAD y AutoCAD LT?
+      <i class="bi bi-chevron-down"></i>
+    </button>
+    <div class="faq-answer">
+      <p><strong>AutoCAD LT</strong> es una versión reducida y más económica que solo incluye funciones 2D. No puede modelar en 3D, no tiene AutoLISP ni algunas herramientas de automatización.</p>
+      <p><strong>AutoCAD completo</strong> incluye todo: 2D, 3D, renderizado, AutoLISP, personalización de interfaz, administración de referencias externas y todas las herramientas de productividad.</p>
+      <p>Para la mayoría de arquitectos e ingenieros que solo hacen planos 2D, AutoCAD LT puede ser suficiente y más económico.</p>
+    </div>
+  </div>
+
+  <div class="faq-item" data-aos="fade-up">
+    <button class="faq-question">
+      ¿Cómo aprendo AutoCAD más rápido?
+      <i class="bi bi-chevron-down"></i>
+    </button>
+    <div class="faq-answer">
+      <p><strong>1. Sigue una ruta ordenada:</strong> empieza por fundamentos (interfaz, coordenadas), luego 2D básico, y gradualmente avanza a temas más complejos.</p>
+      <p><strong>2. Practica con proyectos reales:</strong> dibuja planos de tu casa, una planta industrial o una pieza mecánica. La práctica constante es clave.</p>
+      <p><strong>3. Memoriza los atajos:</strong> los 20 atajos más usados te ahorrarán cientos de horas al año.</p>
+      <p><strong>4. Usa un diccionario de comandos:</strong> cuando tengas una duda puntual, búscala en vez de leer todo el temario.</p>
+      <p><strong>5. Aprende de otros:</strong> únete a foros, mira tutoriales en YouTube y analiza planos de otros dibujantes.</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- ===================== CTA FINAL ===================== -->
+<section class="cta-final" data-aos="fade-up">
+  <div class="container container-xl">
+    <p class="eyebrow justify-content-center">¿Tienes más dudas?</p>
+    <h2 style="font-size:clamp(1.4rem,2.5vw,2rem)">Revisa los niveles o el diccionario de comandos</h2>
+    <p class="text-muted-custom mb-4">Si tu pregunta no está aquí, probablemente encuentres la respuesta en nuestro contenido o buscando el comando específico.</p>
+    <div class="d-flex flex-wrap gap-3 justify-content-center">
+      <a href="comandos.html" class="btn-cad-primary"><i class="bi bi-terminal me-1"></i> Ver comandos</a>
+      <a href="nivel-1-fundamentos.html" class="btn-cad-outline"><i class="bi bi-play-fill me-1"></i> Empezar desde cero</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="container container-xl">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <div class="brand-cad mb-2"><span class="brand-mark"></span><span>AutoCAD Guía</span></div>
+        <p>Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3">Niveles</h6>
+        <ul class="list-unstyled">
+          <li><a href="nivel-1-fundamentos.html">Fundamentos</a></li>
+          <li><a href="nivel-2-dibujo-2d.html">Dibujo 2D</a></li>
+          <li><a href="nivel-4-modelado-3d.html">Modelado 3D</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3">Guía</h6>
+        <ul class="list-unstyled">
+          <li><a href="comandos.html">Comandos</a></li>
+          <li><a href="recursos.html">Recursos</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3">Síguenos</h6>
+        <div class="d-flex gap-2">
+          <a href="#" class="icon-btn"><i class="bi bi-youtube"></i></a>
+          <a href="#" class="icon-btn"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="icon-btn"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-5 mb-4" style="border-color:var(--border-soft)">
+    <p class="mb-0 small">© 2026 AutoCAD Guía. Proyecto educativo de aprendizaje libre.</p>
+  </div>
+</footer>
+
+<div class="command-line-bar" id="cmdBar">
+  <div class="command-line-inner">
+    <span class="prompt-sign">Comando:</span>
+    <span id="cmd-typed"></span><span class="cursor-blink"></span>
+    <button class="cl-close" id="cmdClose" title="Ocultar"><i class="bi bi-x-lg"></i></button>
+  </div>
+</div>
+
+<!-- ===================== BUSCADOR GLOBAL ===================== -->
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Buscar en la guía">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="bi bi-search"></i>
+      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar">
+      <kbd class="search-kbd">ESC</kbd>
+    </div>
+    <div class="search-results" id="globalSearchResults">
+      <div class="search-empty">Escribe al menos 2 caracteres para buscar...</div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

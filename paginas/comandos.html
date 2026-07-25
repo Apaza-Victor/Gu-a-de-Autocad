@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diccionario de comandos — AutoCAD Guía</title>
+<meta name="description" content="Busca cualquier comando de AutoCAD, su atajo de teclado, categoría y nivel. Diccionario completo con buscador y filtros.">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<!-- Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<!-- Prism.js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar navbar-cad navbar-expand-lg">
+  <div class="container container-xl">
+    <a class="navbar-brand brand-cad" href="../index.html">
+      <span class="brand-mark"></span>
+      <span>AutoCAD<small class="d-block">Guía · Teoría &amp; Práctica</small></span>
+    </a>
+    <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
+      <i class="bi bi-list fs-4"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navCad">
+      <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../index.html">Inicio</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-cad dropdown-toggle" href="#" data-bs-toggle="dropdown">Niveles</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="nivel-1-fundamentos.html">Nivel 1 · Fundamentos</a></li>
+            <li><a class="dropdown-item" href="nivel-2-dibujo-2d.html">Nivel 2 · Dibujo 2D</a></li>
+            <li><a class="dropdown-item" href="nivel-3-organizacion.html">Nivel 3 · Organización</a></li>
+            <li><a class="dropdown-item" href="nivel-4-modelado-3d.html">Nivel 4 · Modelado 3D</a></li>
+            <li><a class="dropdown-item" href="nivel-5-avanzado.html">Nivel 5 · Avanzado</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link nav-link-cad active" href="comandos.html">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="recursos.html">Recursos gratis</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="faq.html">FAQ</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-2">
+        <span class="coord-readout d-none d-lg-inline-flex">X: <span id="coordX">000.00</span>&nbsp; Y: <span id="coordY">000.00</span></span>
+        <button class="icon-btn" id="searchToggle" title="Buscar"><i class="bi bi-search"></i></button>
+        <button class="icon-btn" id="themeToggle" title="Cambiar tema"><i class="bi bi-moon-stars"></i></button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== CABECERA ===================== -->
+<header class="commands-hero">
+  <div class="container container-xl position-relative">
+    <p class="eyebrow">Diccionario de comandos</p>
+    <h1 style="font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.1;margin-bottom:.8rem">Busca cualquier comando</h1>
+    <p style="color:var(--text-muted);font-size:1.05rem;max-width:540px;margin-bottom:2rem">Escribe el nombre o el atajo de un comando y encuentra al instante su uso, categoría y nivel.</p>
+
+    <div class="search-cad" id="buscador">
+      <i class="bi bi-search"></i>
+      <input type="text" id="cmdSearchInput" placeholder="Escribe un comando o atajo (LINE, OFFSET, TRIM...)" autocomplete="off">
+    </div>
+
+    <div class="cmd-filters" id="cmdFilters">
+      <button class="cmd-filter-btn active" data-filter="todos">Todos</button>
+      <button class="cmd-filter-btn" data-filter="dibujo">Dibujo</button>
+      <button class="cmd-filter-btn" data-filter="modificacion">Modificación</button>
+      <button class="cmd-filter-btn" data-filter="precision">Precisión</button>
+      <button class="cmd-filter-btn" data-filter="capas">Capas</button>
+      <button class="cmd-filter-btn" data-filter="acotacion">Acotación</button>
+      <button class="cmd-filter-btn" data-filter="texto">Texto</button>
+      <button class="cmd-filter-btn" data-filter="bloques">Bloques</button>
+      <button class="cmd-filter-btn" data-filter="3d">3D</button>
+      <button class="cmd-filter-btn" data-filter="edicion">Edición</button>
+      <button class="cmd-filter-btn" data-filter="consulta">Consulta</button>
+    </div>
+
+    <p class="mono small text-muted-custom" id="cmdCount">Mostrando 40 comandos</p>
+  </div>
+</header>
+
+<!-- ===================== LISTA DE COMANDOS ===================== -->
+<section style="padding:3rem 0 5rem">
+  <div class="container container-xl">
+    <div class="cmd-grid" id="cmdGrid">
+      <!-- DIBUJO -->
+      <div class="cmd-full-card" data-cmd="line" data-cat="dibujo" data-level="basico" data-keys="l">
+        <div class="cmd-icon"><i class="bi bi-dash-lg"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">LINE</span>
+            <span class="cmd-key">L</span>
+            <span class="cmd-cat">Dibujo</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Dibuja segmentos de línea recta entre puntos definidos por coordenadas o clics.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="pline" data-cat="dibujo" data-level="basico" data-keys="pl">
+        <div class="cmd-icon"><i class="bi bi-bezier2"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">PLINE</span>
+            <span class="cmd-key">PL</span>
+            <span class="cmd-cat">Dibujo</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Serie de segmentos rectos y curvos unidos como un solo objeto polilínea.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="circle" data-cat="dibujo" data-level="basico" data-keys="c">
+        <div class="cmd-icon"><i class="bi bi-circle"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">CIRCLE</span>
+            <span class="cmd-key">C</span>
+            <span class="cmd-cat">Dibujo</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Dibuja un círculo por centro-radio, dos puntos, tres puntos u otras opciones.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="arc" data-cat="dibujo" data-level="basico" data-keys="a">
+        <div class="cmd-icon"><i class="bi bi-arrow-repeat"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">ARC</span>
+            <span class="cmd-key">A</span>
+            <span class="cmd-cat">Dibujo</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Tramo curvo definido por 3 puntos, centro-inicio-fin, u otras combinaciones.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="rectang" data-cat="dibujo" data-level="basico" data-keys="rec">
+        <div class="cmd-icon"><i class="bi bi-square"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">RECTANG</span>
+            <span class="cmd-key">REC</span>
+            <span class="cmd-cat">Dibujo</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Dibuja un rectángulo a partir de dos esquinas opuestas.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="polygon" data-cat="dibujo" data-level="basico" data-keys="pol">
+        <div class="cmd-icon"><i class="bi bi-hexagon"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">POLYGON</span>
+            <span class="cmd-key">POL</span>
+            <span class="cmd-cat">Dibujo</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Polígono regular inscrito o circunscrito en un círculo.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="ellipse" data-cat="dibujo" data-level="basico" data-keys="el">
+        <div class="cmd-icon"><i class="bi bi-record-circle"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">ELLIPSE</span>
+            <span class="cmd-key">EL</span>
+            <span class="cmd-cat">Dibujo</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Curva elíptica definida por eje mayor/menor o por centro.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="spline" data-cat="dibujo" data-level="intermedio" data-keys="spl">
+        <div class="cmd-icon"><i class="bi bi-bezier"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">SPLINE</span>
+            <span class="cmd-key">SPL</span>
+            <span class="cmd-cat">Dibujo</span>
+            <span class="res-lang en">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Curva suave que pasa por una serie de puntos de control.</p>
+        </div>
+      </div>
+
+      <!-- MODIFICACION -->
+      <div class="cmd-full-card" data-cmd="move" data-cat="modificacion" data-level="basico" data-keys="m">
+        <div class="cmd-icon"><i class="bi bi-arrows-move"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">MOVE</span>
+            <span class="cmd-key">M</span>
+            <span class="cmd-cat">Modificación</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Traslada objetos de un punto base a un punto destino.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="copy" data-cat="modificacion" data-level="basico" data-keys="co">
+        <div class="cmd-icon"><i class="bi bi-clipboard"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">COPY</span>
+            <span class="cmd-key">CO</span>
+            <span class="cmd-cat">Modificación</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Crea copias de objetos sin eliminar el original.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="rotate" data-cat="modificacion" data-level="basico" data-keys="ro">
+        <div class="cmd-icon"><i class="bi bi-arrow-clockwise"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">ROTATE</span>
+            <span class="cmd-key">RO</span>
+            <span class="cmd-cat">Modificación</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Gira objetos un ángulo respecto a un punto base.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="scale" data-cat="modificacion" data-level="basico" data-keys="sc">
+        <div class="cmd-icon"><i class="bi bi-expand"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">SCALE</span>
+            <span class="cmd-key">SC</span>
+            <span class="cmd-cat">Modificación</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Aumenta o reduce el tamaño de objetos respecto a un punto base.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="trim" data-cat="modificacion" data-level="basico" data-keys="tr">
+        <div class="cmd-icon"><i class="bi bi-scissors"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">TRIM</span>
+            <span class="cmd-key">TR</span>
+            <span class="cmd-cat">Modificación</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Recorta objetos hasta el límite de otro objeto de referencia.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="extend" data-cat="modificacion" data-level="basico" data-keys="ex">
+        <div class="cmd-icon"><i class="bi bi-arrows-expand"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">EXTEND</span>
+            <span class="cmd-key">EX</span>
+            <span class="cmd-cat">Modificación</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Extiende un objeto hasta tocar un límite de referencia.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="offset" data-cat="modificacion" data-level="basico" data-keys="o">
+        <div class="cmd-icon"><i class="bi bi-layers"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">OFFSET</span>
+            <span class="cmd-key">O</span>
+            <span class="cmd-cat">Modificación</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Crea una copia paralela de un objeto a una distancia exacta.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="mirror" data-cat="modificacion" data-level="basico" data-keys="mi">
+        <div class="cmd-icon"><i class="bi bi-mirror"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">MIRROR</span>
+            <span class="cmd-key">MI</span>
+            <span class="cmd-cat">Modificación</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Refleja objetos respecto a un eje simétrico definido por dos puntos.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="array" data-cat="modificacion" data-level="intermedio" data-keys="ar">
+        <div class="cmd-icon"><i class="bi bi-grid-3x3-gap"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">ARRAY</span>
+            <span class="cmd-key">AR</span>
+            <span class="cmd-cat">Modificación</span>
+            <span class="res-lang en">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Repite objetos en filas/columnas, en círculo o a lo largo de una ruta.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="fillet" data-cat="modificacion" data-level="basico" data-keys="f">
+        <div class="cmd-icon"><i class="bi bi-bezier2"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">FILLET</span>
+            <span class="cmd-key">F</span>
+            <span class="cmd-cat">Modificación</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Une dos líneas con un arco de radio definido (empalme).</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="chamfer" data-cat="modificacion" data-level="basico" data-keys="cha">
+        <div class="cmd-icon"><i class="bi bi-triangle"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">CHAMFER</span>
+            <span class="cmd-key">CHA</span>
+            <span class="cmd-cat">Modificación</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Une dos líneas con un corte recto en la esquina (chaflán).</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="stretch" data-cat="modificacion" data-level="intermedio" data-keys="s">
+        <div class="cmd-icon"><i class="bi bi-arrows-angle-expand"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">STRETCH</span>
+            <span class="cmd-key">S</span>
+            <span class="cmd-cat">Modificación</span>
+            <span class="res-lang en">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Estira o comprime objetos moviendo vértices dentro de una selección cruzada.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="explode" data-cat="edicion" data-level="basico" data-keys="x">
+        <div class="cmd-icon"><i class="bi bi-x-octagon"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">EXPLODE</span>
+            <span class="cmd-key">X</span>
+            <span class="cmd-cat">Edición</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Descompone un bloque, polilínea o array en sus objetos individuales.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="join" data-cat="modificacion" data-level="intermedio" data-keys="j">
+        <div class="cmd-icon"><i class="bi bi-link-45deg"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">JOIN</span>
+            <span class="cmd-key">J</span>
+            <span class="cmd-cat">Modificación</span>
+            <span class="res-lang en">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Une líneas o arcos contiguos en un solo objeto (lo opuesto a EXPLODE).</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="break" data-cat="modificacion" data-level="intermedio" data-keys="br">
+        <div class="cmd-icon"><i class="bi bi-record2"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">BREAK</span>
+            <span class="cmd-key">BR</span>
+            <span class="cmd-cat">Modificación</span>
+            <span class="res-lang en">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Rompe un objeto en dos partes o elimina un segmento entre dos puntos.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="matchprop" data-cat="modificacion" data-level="intermedio" data-keys="ma">
+        <div class="cmd-icon"><i class="bi bi-paint-bucket"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">MATCHPROP</span>
+            <span class="cmd-key">MA</span>
+            <span class="cmd-cat">Modificación</span>
+            <span class="res-lang en">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Copia propiedades (capa, color, tipo de línea) de un objeto a otro.</p>
+        </div>
+      </div>
+
+      <!-- PRECISION -->
+      <div class="cmd-full-card" data-cmd="osnap" data-cat="precision" data-level="basico" data-keys="f3">
+        <div class="cmd-icon"><i class="bi bi-crosshair"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">OSNAP</span>
+            <span class="cmd-key">F3</span>
+            <span class="cmd-cat">Precisión</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Alterna las referencias a objetos: extremo, medio, centro, intersección, etc.</p>
+        </div>
+      </div>
+
+      <!-- CAPAS -->
+      <div class="cmd-full-card" data-cmd="layer" data-cat="capas" data-level="basico" data-keys="la">
+        <div class="cmd-icon"><i class="bi bi-layers-half"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">LAYER</span>
+            <span class="cmd-key">LA</span>
+            <span class="cmd-cat">Capas</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Abre el Administrador de capas para crear, editar y gestionar capas.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="layiso" data-cat="capas" data-level="intermedio" data-keys="">
+        <div class="cmd-icon"><i class="bi bi-eye"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">LAYISO</span>
+            <span class="cmd-cat">Capas</span>
+            <span class="res-lang en">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Aísla la capa de un objeto seleccionado, ocultando todas las demás.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="layuniso" data-cat="capas" data-level="intermedio" data-keys="">
+        <div class="cmd-icon"><i class="bi bi-eye-slash"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">LAYUNISO</span>
+            <span class="cmd-cat">Capas</span>
+            <span class="res-lang en">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Restaura el estado de visibilidad de capas anterior a LAYISO.</p>
+        </div>
+      </div>
+
+      <!-- BLOQUES -->
+      <div class="cmd-full-card" data-cmd="block" data-cat="bloques" data-level="basico" data-keys="">
+        <div class="cmd-icon"><i class="bi bi-box"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">BLOCK</span>
+            <span class="cmd-cat">Bloques</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Crea un bloque a partir de objetos seleccionados, definiendo nombre y punto base.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="insert" data-cat="bloques" data-level="basico" data-keys="i">
+        <div class="cmd-icon"><i class="bi bi-box-arrow-in-down"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">INSERT</span>
+            <span class="cmd-key">I</span>
+            <span class="cmd-cat">Bloques</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Inserta un bloque existente en el dibujo actual.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="bedit" data-cat="bloques" data-level="intermedio" data-keys="">
+        <div class="cmd-icon"><i class="bi bi-pencil-square"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">BEDIT</span>
+            <span class="cmd-cat">Bloques</span>
+            <span class="res-lang en">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Abre el editor de bloques para modificar el contenido de un bloque definido.</p>
+        </div>
+      </div>
+
+      <!-- ACOTACION -->
+      <div class="cmd-full-card" data-cmd="dimlinear" data-cat="acotacion" data-level="basico" data-keys="">
+        <div class="cmd-icon"><i class="bi bi-rulers"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">DIMLINEAR</span>
+            <span class="cmd-cat">Acotación</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Crea una cota lineal horizontal o vertical entre dos puntos.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="dimaligned" data-cat="acotacion" data-level="basico" data-keys="">
+        <div class="cmd-icon"><i class="bi bi-rulers"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">DIMALIGNED</span>
+            <span class="cmd-cat">Acotación</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Cota paralela a una línea inclinada.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="dim" data-cat="acotacion" data-level="intermedio" data-keys="dim">
+        <div class="cmd-icon"><i class="bi bi-rulers"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">DIM</span>
+            <span class="cmd-key">DIM</span>
+            <span class="cmd-cat">Acotación</span>
+            <span class="res-lang en">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Cota inteligente que detecta automáticamente el tipo según el objeto seleccionado.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="dimstyle" data-cat="acotacion" data-level="intermedio" data-keys="d">
+        <div class="cmd-icon"><i class="bi bi-sliders"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">DIMSTYLE</span>
+            <span class="cmd-key">D</span>
+            <span class="cmd-cat">Acotación</span>
+            <span class="res-lang en">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Administra estilos de cota: tamaño de texto, flechas, unidades y precisión.</p>
+        </div>
+      </div>
+
+      <!-- TEXTO -->
+      <div class="cmd-full-card" data-cmd="text" data-cat="texto" data-level="basico" data-keys="dt">
+        <div class="cmd-icon"><i class="bi bi-fonts"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">TEXT</span>
+            <span class="cmd-key">DT</span>
+            <span class="cmd-cat">Texto</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Texto de una sola línea, útil para etiquetas cortas y títulos.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="mtext" data-cat="texto" data-level="basico" data-keys="t mt">
+        <div class="cmd-icon"><i class="bi bi-text-paragraph"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">MTEXT</span>
+            <span class="cmd-key">T</span>
+            <span class="cmd-cat">Texto</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Texto multilínea con formato rich text dentro de un cuadro definido.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="style" data-cat="texto" data-level="intermedio" data-keys="st">
+        <div class="cmd-icon"><i class="bi bi-type"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">STYLE</span>
+            <span class="cmd-key">ST</span>
+            <span class="cmd-cat">Texto</span>
+            <span class="res-lang en">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Define fuente, altura y estilo por defecto para los textos del dibujo.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="table" data-cat="texto" data-level="intermedio" data-keys="tb">
+        <div class="cmd-icon"><i class="bi bi-table"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">TABLE</span>
+            <span class="cmd-key">TB</span>
+            <span class="cmd-cat">Texto</span>
+            <span class="res-lang en">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Inserta tablas de datos con filas y columnas (cuadro de acabados, áreas, etc.).</p>
+        </div>
+      </div>
+
+      <!-- EDICION -->
+      <div class="cmd-full-card" data-cmd="hatch" data-cat="edicion" data-level="basico" data-keys="h">
+        <div class="cmd-icon"><i class="bi bi-grid-3x3"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">HATCH</span>
+            <span class="cmd-key">H</span>
+            <span class="cmd-cat">Edición</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Rellena un área cerrada con un patrón de sombreado (rayado, sólido, material).</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="pedit" data-cat="edicion" data-level="intermedio" data-keys="pe">
+        <div class="cmd-icon"><i class="bi bi-bezier2"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">PEDIT</span>
+            <span class="cmd-key">PE</span>
+            <span class="cmd-cat">Edición</span>
+            <span class="res-lang en">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Edita polilíneas: unir segmentos, abrir/cerrar, suavizar o asignar ancho.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="properties" data-cat="edicion" data-level="basico" data-keys="ctrl+1">
+        <div class="cmd-icon"><i class="bi bi-list-check"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">PROPERTIES</span>
+            <span class="cmd-key">Ctrl+1</span>
+            <span class="cmd-cat">Edición</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Abre la paleta de propiedades para ver y editar atributos de objetos seleccionados.</p>
+        </div>
+      </div>
+
+      <!-- 3D -->
+      <div class="cmd-full-card" data-cmd="box" data-cat="3d" data-level="avanzado" data-keys="">
+        <div class="cmd-icon"><i class="bi bi-box-seam"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">BOX</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang en" style="color:var(--layer-magenta);background:rgba(227,107,255,.14)">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Crea un sólido rectangular definido por largo, ancho y alto.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="cylinder" data-cat="3d" data-level="avanzado" data-keys="">
+        <div class="cmd-icon"><i class="bi bi-badge-3d"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">CYLINDER</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang en" style="color:var(--layer-magenta);background:rgba(227,107,255,.14)">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Crea un sólido cilíndrico por radio de base y altura.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="extrude" data-cat="3d" data-level="avanzado" data-keys="ext">
+        <div class="cmd-icon"><i class="bi bi-arrow-up-circle"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">EXTRUDE</span>
+            <span class="cmd-key">EXT</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang en" style="color:var(--layer-magenta);background:rgba(227,107,255,.14)">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Empuja un perfil 2D cerrado en línea recta para crear un sólido.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="revolve" data-cat="3d" data-level="avanzado" data-keys="rev">
+        <div class="cmd-icon"><i class="bi bi-arrow-repeat"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">REVOLVE</span>
+            <span class="cmd-key">REV</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang en" style="color:var(--layer-magenta);background:rgba(227,107,255,.14)">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Gira un perfil 2D alrededor de un eje para generar un sólido de revolución.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="sweep" data-cat="3d" data-level="avanzado" data-keys="">
+        <div class="cmd-icon"><i class="bi bi-signpost-2"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">SWEEP</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang en" style="color:var(--layer-magenta);background:rgba(227,107,255,.14)">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Desplaza un perfil a lo largo de una trayectoria curva (tubería, moldura).</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="loft" data-cat="3d" data-level="avanzado" data-keys="">
+        <div class="cmd-icon"><i class="bi bi-bezier"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">LOFT</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang en" style="color:var(--layer-magenta);background:rgba(227,107,255,.14)">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Genera una forma suave conectando dos o más perfiles entre sí (solevación).</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="union" data-cat="3d" data-level="avanzado" data-keys="">
+        <div class="cmd-icon"><i class="bi bi-plus-circle"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">UNION</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang en" style="color:var(--layer-magenta);background:rgba(227,107,255,.14)">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Fusiona dos o más sólidos en un solo objeto (unión booleana).</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="subtract" data-cat="3d" data-level="avanzado" data-keys="su">
+        <div class="cmd-icon"><i class="bi bi-dash-circle"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">SUBTRACT</span>
+            <span class="cmd-key">SU</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang en" style="color:var(--layer-magenta);background:rgba(227,107,255,.14)">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Resta el volumen de un sólido de otro (perforar, recortar volumen).</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="intercept" data-cat="3d" data-level="avanzado" data-keys="in">
+        <div class="cmd-icon"><i class="bi bi-intersect"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">INTERSECT</span>
+            <span class="cmd-key">IN</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang en" style="color:var(--layer-magenta);background:rgba(227,107,255,.14)">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Conserva únicamente el volumen común entre dos o más sólidos.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="3dorbit" data-cat="3d" data-level="avanzado" data-keys="">
+        <div class="cmd-icon"><i class="bi bi-globe"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">3DORBIT</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang en" style="color:var(--layer-magenta);background:rgba(227,107,255,.14)">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Órbita libre alrededor del modelo 3D para visualizar desde cualquier ángulo.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="render" data-cat="3d" data-level="avanzado" data-keys="rr">
+        <div class="cmd-icon"><i class="bi bi-camera"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">RENDER</span>
+            <span class="cmd-key">RR</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang en" style="color:var(--layer-magenta);background:rgba(227,107,255,.14)">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Genera una imagen renderizada del modelo 3D con materiales, luces y cámara.</p>
+        </div>
+      </div>
+
+      <!-- CONSULTA -->
+      <div class="cmd-full-card" data-cmd="dist" data-cat="consulta" data-level="basico" data-keys="di">
+        <div class="cmd-icon"><i class="bi bi-rulers"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">DIST</span>
+            <span class="cmd-key">DI</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Mide la distancia y ángulo entre dos puntos del dibujo.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="list" data-cat="consulta" data-level="basico" data-keys="li">
+        <div class="cmd-icon"><i class="bi bi-info-circle"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">LIST</span>
+            <span class="cmd-key">LI</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Muestra propiedades detalladas de un objeto seleccionado (capa, tipo, área, longitud).</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="area" data-cat="consulta" data-level="intermedio" data-keys="aa">
+        <div class="cmd-icon"><i class="bi bi-bounding-box"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">AREA</span>
+            <span class="cmd-key">AA</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang en">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Calcula el área y perímetro de un polígono o selección de puntos.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="measure" data-cat="consulta" data-level="intermedio" data-keys="me">
+        <div class="cmd-icon"><i class="bi bi-bookmark-plus"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">MEASURE</span>
+            <span class="cmd-key">ME</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang en">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Coloca puntos o bloques a lo largo de un objeto a intervalos iguales.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="zoom" data-cat="consulta" data-level="basico" data-keys="z">
+        <div class="cmd-icon"><i class="bi bi-zoom-in"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">ZOOM</span>
+            <span class="cmd-key">Z</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Amplía o reduce la vista del área de dibujo (opciones: E, W, P, All).</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="purge" data-cat="consulta" data-level="intermedio" data-keys="pu">
+        <div class="cmd-icon"><i class="bi bi-trash3"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">PURGE</span>
+            <span class="cmd-key">PU</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang en">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Elimina elementos no utilizados del archivo: capas, bloques, estilos, tipos de línea.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="audit" data-cat="consulta" data-level="intermedio" data-keys="">
+        <div class="cmd-icon"><i class="bi bi-shield-check"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">AUDIT</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang en">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Detecta y corrige errores internos del archivo DWG.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="wblock" data-cat="consulta" data-level="intermedio" data-keys="w">
+        <div class="cmd-icon"><i class="bi bi-file-earmark-arrow-up"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">WBLOCK</span>
+            <span class="cmd-key">W</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang en">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Exporta objetos o el dibujo completo a un archivo DWG separado.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="cmdEmpty" style="display:none;text-align:center;padding:3rem;color:var(--text-faint)">
+      <i class="bi bi-search" style="font-size:2rem;display:block;margin-bottom:.5rem;color:var(--cyan);opacity:.4"></i>
+      No se encontraron comandos con ese nombre o atajo.
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="container container-xl">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <div class="brand-cad mb-2"><span class="brand-mark"></span><span>AutoCAD Guía</span></div>
+        <p>Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3">Niveles</h6>
+        <ul class="list-unstyled">
+          <li><a href="nivel-1-fundamentos.html">Fundamentos</a></li>
+          <li><a href="nivel-2-dibujo-2d.html">Dibujo 2D</a></li>
+          <li><a href="nivel-4-modelado-3d.html">Modelado 3D</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3">Guía</h6>
+        <ul class="list-unstyled">
+          <li><a href="comandos.html">Comandos</a></li>
+          <li><a href="recursos.html">Recursos</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3">Síguenos</h6>
+        <div class="d-flex gap-2">
+          <a href="#" class="icon-btn"><i class="bi bi-youtube"></i></a>
+          <a href="#" class="icon-btn"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="icon-btn"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-5 mb-4" style="border-color:var(--border-soft)">
+    <p class="mb-0 small">© 2026 AutoCAD Guía. Proyecto educativo de aprendizaje libre.</p>
+  </div>
+</footer>
+
+<div class="command-line-bar" id="cmdBar">
+  <div class="command-line-inner">
+    <span class="prompt-sign">Comando:</span>
+    <span id="cmd-typed"></span><span class="cursor-blink"></span>
+    <button class="cl-close" id="cmdClose" title="Ocultar"><i class="bi bi-x-lg"></i></button>
+  </div>
+</div>
+
+<!-- ===================== BUSCADOR GLOBAL ===================== -->
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Buscar en la guía">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="bi bi-search"></i>
+      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar">
+      <kbd class="search-kbd">ESC</kbd>
+    </div>
+    <div class="search-results" id="globalSearchResults">
+      <div class="search-empty">Escribe al menos 2 caracteres para buscar...</div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recursos gratuitos — AutoCAD Guía</title>
+<meta name="description" content="Bloques DWG gratuitos, tutoriales, canales de YouTube, foros y plantillas descargables para AutoCAD. Recursos seleccionados y clasificados.">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<!-- Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<!-- Prism.js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar navbar-cad navbar-expand-lg">
+  <div class="container container-xl">
+    <a class="navbar-brand brand-cad" href="../index.html">
+      <span class="brand-mark"></span>
+      <span>AutoCAD<small class="d-block">Guía · Teoría &amp; Práctica</small></span>
+    </a>
+    <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
+      <i class="bi bi-list fs-4"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navCad">
+      <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../index.html">Inicio</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-cad dropdown-toggle" href="#" data-bs-toggle="dropdown">Niveles</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="nivel-1-fundamentos.html">Nivel 1 · Fundamentos</a></li>
+            <li><a class="dropdown-item" href="nivel-2-dibujo-2d.html">Nivel 2 · Dibujo 2D</a></li>
+            <li><a class="dropdown-item" href="nivel-3-organizacion.html">Nivel 3 · Organización</a></li>
+            <li><a class="dropdown-item" href="nivel-4-modelado-3d.html">Nivel 4 · Modelado 3D</a></li>
+            <li><a class="dropdown-item" href="nivel-5-avanzado.html">Nivel 5 · Avanzado</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="comandos.html">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad active" href="recursos.html">Recursos gratis</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="faq.html">FAQ</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-2">
+        <span class="coord-readout d-none d-lg-inline-flex">X: <span id="coordX">000.00</span>&nbsp; Y: <span id="coordY">000.00</span></span>
+        <button class="icon-btn" id="searchToggle" title="Buscar"><i class="bi bi-search"></i></button>
+        <button class="icon-btn" id="themeToggle" title="Cambiar tema"><i class="bi bi-moon-stars"></i></button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== CABECERA ===================== -->
+<header class="resources-hero">
+  <div class="container container-xl position-relative">
+    <p class="eyebrow">Recursos gratuitos</p>
+    <h1 style="font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.1;margin-bottom:.8rem">Bloques, cursos y plantillas sin costo</h1>
+    <p style="color:var(--text-muted);font-size:1.05rem;max-width:580px;margin-bottom:2rem">Selección de bibliotecas de bloques, canales de YouTube, foros y herramientas gratuitas para potenciar tu trabajo en AutoCAD.</p>
+
+    <div class="res-filters" id="resFilters">
+      <button class="res-filter-btn active" data-filter="todos">Todos</button>
+      <button class="res-filter-btn" data-filter="bloques">Bloques DWG</button>
+      <button class="res-filter-btn" data-filter="cursos">Cursos y tutoriales</button>
+      <button class="res-filter-btn" data-filter="comunidades">Comunidades y foros</button>
+      <button class="res-filter-btn" data-filter="plantillas">Plantillas</button>
+      <button class="res-filter-btn" data-filter="youtube">Canales YouTube</button>
+      <button class="res-filter-btn" data-filter="herramientas">Herramientas</button>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== LISTA DE RECURSOS ===================== -->
+<section style="padding:3rem 0 5rem">
+  <div class="container container-xl">
+    <div class="res-grid" id="resGrid">
+
+      <!-- BLOQUES -->
+      <div class="res-full-card" data-cat="bloques">
+        <div class="res-head">
+          <span class="badge-cat">Bloques DWG</span>
+          <span class="res-lang es">ES</span>
+        </div>
+        <h4>CADBlocksFree.com</h4>
+        <p>Miles de bloques gratuitos organizados por categorías: arquitectura, electricidad, mobiliario, símbolos mecánicos y más. Descarga directa en formato DWG.</p>
+        <a href="https://www.cadblocksfree.com" target="_blank" rel="noopener" class="res-link">Visitar sitio <i class="bi bi-box-arrow-up-right"></i></a>
+      </div>
+
+      <div class="res-full-card" data-cat="bloques">
+        <div class="res-head">
+          <span class="badge-cat">Bloques DWG</span>
+          <span class="res-lang es">ES</span>
+        </div>
+        <h4>Biblioteca de bloques AutoCAD (Autodesk)</h4>
+        <p>Biblioteca oficial de Autodesk con bloques gratuitos certificados: mobiliario, personas, vehículos, símbolos arquitectónicos y más.</p>
+        <a href="https://www.autodesk.com/collections/autocad/content/blocks" target="_blank" rel="noopener" class="res-link">Visitar sitio <i class="bi bi-box-arrow-up-right"></i></a>
+      </div>
+
+      <div class="res-full-card" data-cat="bloques">
+        <div class="res-head">
+          <span class="badge-cat">Bloques DWG</span>
+          <span class="res-lang en">EN</span>
+        </div>
+        <h4>Bibliocad</h4>
+        <p>Plataforma con más de 100,000 bloques DWG gratuitos y premium. Se puede filtrar por categoría, tipo y formato. Ideal para planos arquitectónicos.</p>
+        <a href="https://www.bibliocad.com" target="_blank" rel="noopener" class="res-link">Visitar sitio <i class="bi bi-box-arrow-up-right"></i></a>
+      </div>
+
+      <div class="res-full-card" data-cat="bloques">
+        <div class="res-head">
+          <span class="badge-cat">Bloques DWG</span>
+          <span class="res-lang es">ES</span>
+        </div>
+        <h4>Arquinube</h4>
+        <p>Plataforma en español con planos arquitectónicos, modelos 3D, bloques DWG y recursos gratuitos para arquitectura e ingeniería. Gran variedad de proyectos residenciales y comerciales.</p>
+        <a href="https://arquinube.com/" target="_blank" rel="noopener" class="res-link">Visitar sitio <i class="bi bi-box-arrow-up-right"></i></a>
+      </div>
+
+      <!-- CURSOS -->
+      <div class="res-full-card" data-cat="cursos">
+        <div class="res-head">
+          <span class="badge-cat">Cursos</span>
+          <span class="res-lang es">ES</span>
+        </div>
+        <h4>AutoCAD para principiantes — Curso completo (YouTube)</h4>
+        <p>Curso gratuito en español que cubre desde la instalación hasta planos completos. Ideal para empezar desde cero con buena estructura.</p>
+        <a href="https://www.youtube.com/results?search_query=autoCAD+curso+completo+principiantes" target="_blank" rel="noopener" class="res-link">Buscar en YouTube <i class="bi bi-box-arrow-up-right"></i></a>
+      </div>
+
+      <div class="res-full-card" data-cat="cursos">
+        <div class="res-head">
+          <span class="badge-cat">Cursos</span>
+          <span class="res-lang en">EN</span>
+        </div>
+        <h4>Autodesk Education — Cursos oficiales</h4>
+        <p>Cursos gratuitos de Autodesk con certificado: AutoCAD Essentials, Advanced Drafting y más. Accesibles con cuenta educativa.</p>
+        <a href="https://www.autodesk.com/education/edu-software/autocad" target="_blank" rel="noopener" class="res-link">Visitar sitio <i class="bi bi-box-arrow-up-right"></i></a>
+      </div>
+
+      <div class="res-full-card" data-cat="cursos">
+        <div class="res-head">
+          <span class="badge-cat">Cursos</span>
+          <span class="res-lang es">ES</span>
+        </div>
+        <h4>CAD Web — Tutoriales en español</h4>
+        <p>Tutoriales escritos y en video sobre AutoCAD en español, organizados por nivel. Cubre 2D, 3D y automatización con AutoLISP.</p>
+        <a href="https://www.cadweb.es" target="_blank" rel="noopener" class="res-link">Visitar sitio <i class="bi bi-box-arrow-up-right"></i></a>
+      </div>
+
+      <!-- COMUNIDADES -->
+      <div class="res-full-card" data-cat="comunidades">
+        <div class="res-head">
+          <span class="badge-cat">Comunidad</span>
+          <span class="res-lang es">ES</span>
+        </div>
+        <h4>Foros Autodesk (comunidad hispana)</h4>
+        <p>Foro oficial de Autodesk en español para resolver dudas técnicas, compartir soluciones y conectar con otros usuarios de AutoCAD.</p>
+        <a href="https://forums.autodesk.com/t5/forums/searchpage/tab/message?advanced=false&allow_signing=false&q=autoCAD&sort_by=-topicPostDate&collapse_discussion=true" target="_blank" rel="noopener" class="res-link">Visitar foro <i class="bi bi-box-arrow-up-right"></i></a>
+      </div>
+
+      <div class="res-full-card" data-cat="comunidades">
+        <div class="res-head">
+          <span class="badge-cat">Comunidad</span>
+          <span class="res-lang en">EN</span>
+        </div>
+        <h4>Reddit r/AutoCAD</h4>
+        <p>Comunidad activa en Reddit con más de 100k miembros: dudas, consejos, proyectos y recursos compartidos por usuarios de todo el mundo.</p>
+        <a href="https://www.reddit.com/r/AutoCAD/" target="_blank" rel="noopener" class="res-link">Visitar subreddit <i class="bi bi-box-arrow-up-right"></i></a>
+      </div>
+
+      <div class="res-full-card" data-cat="comunidades">
+        <div class="res-head">
+          <span class="badge-cat">Comunidad</span>
+          <span class="res-lang en">EN</span>
+        </div>
+        <h4>AutoCAD Forum (Autodesk)</h4>
+        <p>Foro oficial en inglés con secciones dedicadas a 2D drafting, 3D modeling, AutoLISP y administración CAD.</p>
+        <a href="https://forums.autodesk.com/t5/autocad-forum/bd-p/autocad" target="_blank" rel="noopener" class="res-link">Visitar foro <i class="bi bi-box-arrow-up-right"></i></a>
+      </div>
+
+      <!-- PLANTILLAS -->
+      <div class="res-full-card" data-cat="plantillas">
+        <div class="res-head">
+          <span class="badge-cat">Plantillas</span>
+          <span class="res-lang es">ES</span>
+        </div>
+        <h4>Plantillas de plano arquitectónico</h4>
+        <p>Plantillas .DWT con capas predefinidas, estilos de cota, cajetín y formatos de impresión en A4, A3, A2 y A1 para arquitectura.</p>
+        <a href="https://www.cadblocksfree.com/search?q=template" target="_blank" rel="noopener" class="res-link">Descargar <i class="bi bi-box-arrow-up-right"></i></a>
+      </div>
+
+      <div class="res-full-card" data-cat="plantillas">
+        <div class="res-head">
+          <span class="badge-cat">Plantillas</span>
+          <span class="res-lang en">EN</span>
+        </div>
+        <h4>AutoCAD sample files (Autodesk)</h4>
+        <p>Archivos de ejemplo oficiales de Autodesk: plantillas por disciplina, archivos de demostración y estándares CAD de referencia.</p>
+        <a href="https://knowledge.autodesk.com/support/autocad/learn-explore/caas/sfdcarticles/sfdcarticles/Sample-files-for-AutoCAD.html" target="_blank" rel="noopener" class="res-link">Descargar <i class="bi bi-box-arrow-up-right"></i></a>
+      </div>
+
+      <!-- YOUTUBE -->
+      <div class="res-full-card" data-cat="youtube">
+        <div class="res-head">
+          <span class="badge-cat">YouTube</span>
+          <span class="res-lang es">ES</span>
+        </div>
+        <h4>Julián Díaz — AutoCAD en español</h4>
+        <p>Canal con tutoriales claros y bien estructurados de AutoCAD 2D y 3D. Ideal para aprender paso a paso con ejercicios prácticos.</p>
+        <a href="https://www.youtube.com/@juliandiaz" target="_blank" rel="noopener" class="res-link">Visitar canal <i class="bi bi-box-arrow-up-right"></i></a>
+      </div>
+
+      <div class="res-full-card" data-cat="youtube">
+        <div class="res-head">
+          <span class="badge-cat">YouTube</span>
+          <span class="res-lang es">ES</span>
+        </div>
+        <h4>CADudio</h4>
+        <p>Canal en español con clases de AutoCAD, SketchUp y Revit. Explicaciones pausadas y ejemplos de planos reales.</p>
+        <a href="https://www.youtube.com/@CADudio" target="_blank" rel="noopener" class="res-link">Visitar canal <i class="bi bi-box-arrow-up-right"></i></a>
+      </div>
+
+      <div class="res-full-card" data-cat="youtube">
+        <div class="res-head">
+          <span class="badge-cat">YouTube</span>
+          <span class="res-lang en">EN</span>
+        </div>
+        <h4>SourceCAD</h4>
+        <p>Canal en inglés con tutoriales avanzados de AutoCAD, tips de productividad y comparativas de herramientas. Muy completo para nivel intermedio-avanzado.</p>
+        <a href="https://www.youtube.com/@sourceCAD" target="_blank" rel="noopener" class="res-link">Visitar canal <i class="bi bi-box-arrow-up-right"></i></a>
+      </div>
+
+      <!-- HERRAMIENTAS -->
+      <div class="res-full-card" data-cat="herramientas">
+        <div class="res-head">
+          <span class="badge-cat">Herramienta</span>
+          <span class="res-lang en">EN</span>
+        </div>
+        <h4>AutoCAD Web App</h4>
+        <p>Versión de AutoCAD en navegador para ver, editar y compartir archivos DWG sin instalar el programa. Gratis con suscripción educativa.</p>
+        <a href="https://web.autodesk.com" target="_blank" rel="noopener" class="res-link">Visitar sitio <i class="bi bi-box-arrow-up-right"></i></a>
+      </div>
+
+      <div class="res-full-card" data-cat="herramientas">
+        <div class="res-head">
+          <span class="badge-cat">Herramienta</span>
+          <span class="res-lang en">EN</span>
+        </div>
+        <h4>Autodesk Viewer</h4>
+        <p>Visor en línea de archivos DWG, PDF y otros formatos CAD. Permite medir, anotar y compartir planos sin software adicional.</p>
+        <a href="https://viewer.autodesk.com" target="_blank" rel="noopener" class="res-link">Visitar sitio <i class="bi bi-box-arrow-up-right"></i></a>
+      </div>
+
+      <div class="res-full-card" data-cat="herramientas">
+        <div class="res-head">
+          <span class="badge-cat">Herramienta</span>
+          <span class="res-lang en">EN</span>
+        </div>
+        <h4>AutoCAD Shortcut Guide</h4>
+        <p>Guía descargable con todos los atajos de teclado de AutoCAD organizados por categoría. Ideal para imprimir y tener de referencia.</p>
+        <a href="https://www.autodesk.com/shortcuts/autocad" target="_blank" rel="noopener" class="res-link">Descargar <i class="bi bi-box-arrow-up-right"></i></a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="container container-xl">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <div class="brand-cad mb-2"><span class="brand-mark"></span><span>AutoCAD Guía</span></div>
+        <p>Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3">Niveles</h6>
+        <ul class="list-unstyled">
+          <li><a href="nivel-1-fundamentos.html">Fundamentos</a></li>
+          <li><a href="nivel-2-dibujo-2d.html">Dibujo 2D</a></li>
+          <li><a href="nivel-4-modelado-3d.html">Modelado 3D</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3">Guía</h6>
+        <ul class="list-unstyled">
+          <li><a href="comandos.html">Comandos</a></li>
+          <li><a href="recursos.html">Recursos</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3">Síguenos</h6>
+        <div class="d-flex gap-2">
+          <a href="#" class="icon-btn"><i class="bi bi-youtube"></i></a>
+          <a href="#" class="icon-btn"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="icon-btn"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-5 mb-4" style="border-color:var(--border-soft)">
+    <p class="mb-0 small">© 2026 AutoCAD Guía. Proyecto educativo de aprendizaje libre.</p>
+  </div>
+</footer>
+
+<div class="command-line-bar" id="cmdBar">
+  <div class="command-line-inner">
+    <span class="prompt-sign">Comando:</span>
+    <span id="cmd-typed"></span><span class="cursor-blink"></span>
+    <button class="cl-close" id="cmdClose" title="Ocultar"><i class="bi bi-x-lg"></i></button>
+  </div>
+</div>
+
+<!-- ===================== BUSCADOR GLOBAL ===================== -->
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Buscar en la guía">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="bi bi-search"></i>
+      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar">
+      <kbd class="search-kbd">ESC</kbd>
+    </div>
+    <div class="search-results" id="globalSearchResults">
+      <div class="search-empty">Escribe al menos 2 caracteres para buscar...</div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

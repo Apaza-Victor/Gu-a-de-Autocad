@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AutoCAD Guía — De cero a experto</title>
+<meta name="description" content="Guía teórica completa de AutoCAD: fundamentos, dibujo 2D, modelado 3D, comandos y recursos gratuitos. Aprende o repasa a tu ritmo.">
+
+<!-- Bootstrap 5 -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<!-- Tipografías -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- AOS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<!-- Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<!-- Prism.js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar navbar-cad navbar-expand-lg">
+  <div class="container container-xl">
+    <a class="navbar-brand brand-cad" href="index.html">
+      <span class="brand-mark"></span>
+      <span>AutoCAD<small class="d-block">Guía · Teoría &amp; Práctica</small></span>
+    </a>
+
+    <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
+      <i class="bi bi-list fs-4"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navCad">
+      <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
+        <li class="nav-item"><a class="nav-link nav-link-cad active" href="index.html">Inicio</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-cad dropdown-toggle" href="#" data-bs-toggle="dropdown">Niveles</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="paginas/nivel-1-fundamentos.html">Nivel 1 · Fundamentos</a></li>
+            <li><a class="dropdown-item" href="paginas/nivel-2-dibujo-2d.html">Nivel 2 · Dibujo 2D</a></li>
+            <li><a class="dropdown-item" href="paginas/nivel-3-organizacion.html">Nivel 3 · Organización</a></li>
+            <li><a class="dropdown-item" href="paginas/nivel-4-modelado-3d.html">Nivel 4 · Modelado 3D</a></li>
+            <li><a class="dropdown-item" href="paginas/nivel-5-avanzado.html">Nivel 5 · Avanzado</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="paginas/comandos.html">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="paginas/recursos.html">Recursos gratis</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="paginas/faq.html">FAQ</a></li>
+      </ul>
+
+      <div class="d-flex align-items-center gap-2">
+        <span class="coord-readout d-none d-lg-inline-flex">X: <span id="coordX">000.00</span>&nbsp; Y: <span id="coordY">000.00</span></span>
+        <button class="icon-btn" id="searchToggle" title="Buscar"><i class="bi bi-search"></i></button>
+        <button class="icon-btn" id="themeToggle" title="Cambiar tema"><i class="bi bi-moon-stars"></i></button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero">
+  <div class="crosshair-deco" style="width:520px;height:520px;top:-160px;right:-140px;"></div>
+  <div class="crosshair-deco" style="width:280px;height:280px;bottom:-100px;left:8%;"></div>
+
+  <div class="container container-xl position-relative">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-6" data-aos="fade-up">
+        <p class="eyebrow">Guía completa · Nivel 1 a Nivel 5</p>
+        <h1>Domina AutoCAD desde <em>la primera línea</em> hasta el plano maestro.</h1>
+        <p class="lead-cad">Teoría clara, comandos explicados y una ruta de aprendizaje ordenada para dibujar en 2D, modelar en 3D y trabajar como un profesional del CAD. Ideal para aprender desde cero o repasar un tema puntual.</p>
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a href="paginas/nivel-1-fundamentos.html" class="btn-cad-primary"><i class="bi bi-play-fill me-1"></i> Empezar desde cero</a>
+          <a href="paginas/comandos.html" class="btn-cad-outline"><i class="bi bi-terminal me-1"></i> Ir a comandos</a>
+        </div>
+        <div class="layer-legend">
+          <span class="layer-chip"><span class="layer-dot" style="background:var(--layer-red)"></span>2D</span>
+          <span class="layer-chip"><span class="layer-dot" style="background:var(--layer-yellow)"></span>Acotación</span>
+          <span class="layer-chip"><span class="layer-dot" style="background:var(--layer-green)"></span>Capas</span>
+          <span class="layer-chip"><span class="layer-dot" style="background:var(--layer-cyan)"></span>3D</span>
+          <span class="layer-chip"><span class="layer-dot" style="background:var(--layer-magenta)"></span>Render</span>
+        </div>
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+        <div class="drawing-sheet">
+          <div class="sheet-head">
+            <span class="sheet-dots"><span style="background:var(--layer-red)"></span><span style="background:var(--layer-yellow)"></span><span style="background:var(--layer-green)"></span></span>
+            <span>PLANO-01.DWG</span>
+            <span>ESCALA 1:50</span>
+          </div>
+          <div class="ratio ratio-4x3 d-flex align-items-center justify-content-center" style="border:1px dashed var(--border); border-radius:6px;">
+            <span class="text-muted-custom mono small text-center px-3">
+              <i class="bi bi-bounding-box-circles fs-1 d-block mb-2" style="color:var(--cyan)"></i>
+              Espacio de vista previa<br>del dibujo (placeholder)
+            </span>
+          </div>
+          <div class="d-flex justify-content-between mono small text-muted-custom mt-3">
+            <span>CAPA: Muros</span>
+            <span>UNIDADES: mm</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== ROADMAP DE NIVELES ===================== -->
+<section class="roadmap" id="niveles">
+  <div class="container container-xl">
+    <div class="row mb-5">
+      <div class="col-lg-7" data-aos="fade-up">
+        <p class="eyebrow">Ruta de aprendizaje</p>
+        <h2 class="mb-2" style="font-size:clamp(1.6rem,3vw,2.2rem)">Cinco niveles, un mismo dibujo cada vez más preciso</h2>
+        <p class="text-muted-custom mb-2">Sigue el orden si empiezas desde cero, o salta directo al nivel que necesitas repasar.</p>
+        <div class="home-progress-wrap">
+          <div class="home-progress-bar"><div class="fill" id="homeProgressFill"></div></div>
+          <span class="home-progress-label mono" id="homeProgressLabel">0 de 31 temas completados · 0%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4" data-aos="fade-up">
+        <a href="paginas/nivel-1-fundamentos.html" class="text-decoration-none">
+          <div class="level-card">
+            <div class="level-index">01</div>
+            <span class="level-tag">Básico</span>
+            <h3>Fundamentos</h3>
+            <p>Interfaz, instalación, coordenadas y configuración inicial del programa.</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+        <a href="paginas/nivel-2-dibujo-2d.html" class="text-decoration-none">
+          <div class="level-card">
+            <div class="level-index">02</div>
+            <span class="level-tag">Básico–Intermedio</span>
+            <h3>Dibujo 2D</h3>
+            <p>Herramientas de dibujo, modificación, precisión, capas, cotas y texto.</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+        <a href="paginas/nivel-3-organizacion.html" class="text-decoration-none">
+          <div class="level-card">
+            <div class="level-index">03</div>
+            <span class="level-tag">Intermedio</span>
+            <h3>Organización y productividad</h3>
+            <p>Presentaciones, ventanas gráficas, plantillas, impresión y Xref.</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up">
+        <a href="paginas/nivel-4-modelado-3d.html" class="text-decoration-none">
+          <div class="level-card">
+            <div class="level-index">04</div>
+            <span class="level-tag">Avanzado</span>
+            <h3>Modelado 3D</h3>
+            <p>Sólidos, operaciones booleanas, extrusión, superficies y render básico.</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+        <a href="paginas/nivel-5-avanzado.html" class="text-decoration-none">
+          <div class="level-card">
+            <div class="level-index">05</div>
+            <span class="level-tag">Experto</span>
+            <h3>Nivel experto</h3>
+            <p>Personalización, AutoLISP, estándares CAD y flujo con otros programas.</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+        <a href="paginas/comandos.html" class="text-decoration-none">
+          <div class="level-card">
+            <div class="level-index"><i class="bi bi-terminal"></i></div>
+            <span class="level-tag">Consulta</span>
+            <h3>Diccionario de comandos</h3>
+            <p>Busca cualquier comando, su atajo y su uso en segundos.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== POR QUÉ ESTA GUÍA ===================== -->
+<section class="features">
+  <div class="container container-xl">
+    <div class="row mb-4">
+      <div class="col-lg-7" data-aos="fade-up">
+        <p class="eyebrow">Por qué esta guía</p>
+        <h2 style="font-size:clamp(1.6rem,3vw,2.2rem)">Pensada tanto para aprender como para consultar</h2>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4 feature-item" data-aos="fade-up">
+        <div class="feature-icon"><i class="bi bi-signpost-split"></i></div>
+        <h4>Ruta ordenada</h4>
+        <p>Contenido dividido en niveles progresivos, sin saltos ni supuestos previos.</p>
+      </div>
+      <div class="col-md-4 feature-item" data-aos="fade-up" data-aos-delay="80">
+        <div class="feature-icon"><i class="bi bi-search"></i></div>
+        <h4>Búsqueda rápida</h4>
+        <p>Encuentra un comando o un concepto puntual sin leer todo el temario.</p>
+      </div>
+      <div class="col-md-4 feature-item" data-aos="fade-up" data-aos-delay="160">
+        <div class="feature-icon"><i class="bi bi-gift"></i></div>
+        <h4>Recursos gratuitos</h4>
+        <p>Bloques, plantillas y cursos gratuitos seleccionados y clasificados.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PREVIEW COMANDOS ===================== -->
+<section class="commands-preview">
+  <div class="container container-xl">
+    <div class="row mb-4">
+      <div class="col-lg-7" data-aos="fade-up">
+        <p class="eyebrow">Diccionario de comandos</p>
+        <h2 style="font-size:clamp(1.6rem,3vw,2.2rem)">Los comandos más usados, a un clic</h2>
+      </div>
+    </div>
+
+    <div class="row g-3">
+      <div class="col-sm-6 col-lg-3" data-aos="fade-up">
+        <div class="cmd-card">
+          <div class="d-flex justify-content-between align-items-start">
+            <span class="cmd-name">LINE</span>
+            <span class="cmd-key">L</span>
+          </div>
+          <p>Dibuja segmentos de línea recta entre puntos definidos.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="60">
+        <div class="cmd-card">
+          <div class="d-flex justify-content-between align-items-start">
+            <span class="cmd-name">OFFSET</span>
+            <span class="cmd-key">O</span>
+          </div>
+          <p>Crea una copia paralela de un objeto a una distancia definida.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="120">
+        <div class="cmd-card">
+          <div class="d-flex justify-content-between align-items-start">
+            <span class="cmd-name">TRIM</span>
+            <span class="cmd-key">TR</span>
+          </div>
+          <p>Recorta objetos hasta el límite de otro objeto de referencia.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="180">
+        <div class="cmd-card">
+          <div class="d-flex justify-content-between align-items-start">
+            <span class="cmd-name">FILLET</span>
+            <span class="cmd-key">F</span>
+          </div>
+          <p>Une dos líneas con un arco de radio definido (empalme).</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-4" data-aos="fade-up">
+      <a href="paginas/comandos.html" class="btn-cad-outline">Ver todos los comandos <i class="bi bi-arrow-right ms-1"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RECURSOS GRATUITOS ===================== -->
+<section class="resources">
+  <div class="container container-xl">
+    <div class="row mb-4">
+      <div class="col-lg-7" data-aos="fade-up">
+        <p class="eyebrow">Recursos gratuitos</p>
+        <h2 style="font-size:clamp(1.6rem,3vw,2.2rem)">Bloques, plantillas y cursos sin costo</h2>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="resource-card">
+          <span class="badge-cat">Bloques DWG</span>
+          <h4>Bibliotecas de bloques gratuitos</h4>
+          <p>Mobiliario, símbolos eléctricos y elementos arquitectónicos listos para insertar.</p>
+          <a href="paginas/recursos.html" class="resource-link">Ver bibliotecas →</a>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="80">
+        <div class="resource-card">
+          <span class="badge-cat">Cursos</span>
+          <h4>Tutoriales y canales recomendados</h4>
+          <p>Selección de canales y cursos gratuitos en español para reforzar cada nivel.</p>
+          <a href="paginas/recursos.html" class="resource-link">Ver cursos →</a>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="160">
+        <div class="resource-card">
+          <span class="badge-cat">Comunidad</span>
+          <h4>Foros y comunidades activas</h4>
+          <p>Espacios para resolver dudas puntuales y compartir tus propios planos.</p>
+          <a href="paginas/recursos.html" class="resource-link">Ver comunidades →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA FINAL ===================== -->
+<section class="cta-final" data-aos="fade-up">
+  <div class="container container-xl">
+    <p class="eyebrow justify-content-center">Empieza ahora</p>
+    <h2>Tu primer plano puede empezar hoy mismo</h2>
+    <p class="text-muted-custom mb-4">Sin cuentas, sin costos. Solo abre el Nivel 1 y comienza.</p>
+    <a href="paginas/nivel-1-fundamentos.html" class="btn-cad-primary">Ir al Nivel 1 <i class="bi bi-arrow-right ms-1"></i></a>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="container container-xl">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <div class="brand-cad mb-2"><span class="brand-mark"></span><span>AutoCAD Guía</span></div>
+        <p>Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3">Niveles</h6>
+        <ul class="list-unstyled">
+          <li><a href="paginas/nivel-1-fundamentos.html">Fundamentos</a></li>
+          <li><a href="paginas/nivel-2-dibujo-2d.html">Dibujo 2D</a></li>
+          <li><a href="paginas/nivel-4-modelado-3d.html">Modelado 3D</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3">Guía</h6>
+        <ul class="list-unstyled">
+          <li><a href="paginas/comandos.html">Comandos</a></li>
+          <li><a href="paginas/recursos.html">Recursos</a></li>
+          <li><a href="paginas/faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3">Síguenos</h6>
+        <div class="d-flex gap-2">
+          <a href="#" class="icon-btn"><i class="bi bi-youtube"></i></a>
+          <a href="#" class="icon-btn"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="icon-btn"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-5 mb-4" style="border-color:var(--border-soft)">
+    <p class="mb-0 small">© 2026 AutoCAD Guía. Proyecto educativo de aprendizaje libre.</p>
+  </div>
+</footer>
+
+<!-- ===================== BARRA DE LÍNEA DE COMANDOS ===================== -->
+<div class="command-line-bar" id="cmdBar">
+  <div class="command-line-inner">
+    <span class="prompt-sign">Comando:</span>
+    <span id="cmd-typed"></span><span class="cursor-blink"></span>
+    <button class="cl-close" id="cmdClose" title="Ocultar"><i class="bi bi-x-lg"></i></button>
+  </div>
+</div>
+
+<!-- ===================== BUSCADOR GLOBAL ===================== -->
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Buscar en la guía">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="bi bi-search"></i>
+      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar">
+      <kbd class="search-kbd">ESC</kbd>
+    </div>
+    <div class="search-results" id="globalSearchResults">
+      <div class="search-empty">Escribe al menos 2 caracteres para buscar...</div>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
