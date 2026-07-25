@@ -43,6 +43,7 @@
           </ul>
         </li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="comandos.html" data-i18n="nav.commands">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="ejemplos-visuales.html" data-i18n="nav.visual">Ejemplos visuales</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="recursos.html" data-i18n="nav.resources">Recursos gratis</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="faq.html" data-i18n="nav.faq">FAQ</a></li>
       </ul>
@@ -67,7 +68,7 @@
     <h1 data-i18n="lvl5.title">Nivel experto</h1>
     <p class="subtitle" data-i18n="lvl5.subtitle">Personaliza AutoCAD a tu medida, automatiza tareas con scripts, aplica estándares profesionales y integra el programa con otros flujos de trabajo del mundo real.</p>
     <div class="level-progress-bar"><div class="fill"></div></div>
-    <p class="level-progress-label">0 de 6 temas completados · 0%</p>
+    <p class="level-progress-label">0 de 10 temas completados · 0%</p>
   </div>
 </header>
 
@@ -87,6 +88,10 @@
             <li><a href="#buenas-practicas" data-toc="nivel5-buenas-practicas"><span class="toc-check"></span> Buenas prácticas</a></li>
             <li><a href="#integracion" data-toc="nivel5-integracion"><span class="toc-check"></span> Integración con otros programas</a></li>
             <li><a href="#optimizacion" data-toc="nivel5-optimizacion"><span class="toc-check"></span> Optimización y solución de errores</a></li>
+            <li><a href="#dynamo" data-toc="nivel5-dynamo"><span class="toc-check"></span> Dynamo para AutoCAD</a></li>
+            <li><a href="#python" data-toc="nivel5-python"><span class="toc-check"></span> Automatización con Python</a></li>
+            <li><a href="#bim" data-toc="nivel5-bim"><span class="toc-check"></span> AutoCAD y BIM</a></li>
+            <li><a href="#interoperabilidad" data-toc="nivel5-interoperabilidad"><span class="toc-check"></span> Interoperabilidad CAD-BIM</a></li>
           </ul>
           <hr style="border-color:var(--border-soft)" class="my-4">
           <a href="comandos.html" class="btn-cad-outline w-100 text-center d-block">Diccionario de comandos <i class="bi bi-arrow-right"></i></a>
@@ -259,6 +264,282 @@
             <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
           </section>
 
+          <!-- 7. Dynamo para AutoCAD -->
+          <section id="dynamo" data-topic="nivel5-dynamo">
+            <h2><span class="sec-num">7</span> Dynamo para AutoCAD</h2>
+            <p>Dynamo es un entorno de programación visual que se ejecuta dentro de AutoCAD. Permite crear flujos de trabajo repetitivos arrastrando nodos en un lienzo gráfico, sin escribir código.</p>
+
+            <h3>¿Para qué sirve Dynamo en AutoCAD?</h3>
+            <ul>
+              <li><strong>Generar geometría paramétrica:</strong> crear múltiples variaciones de un diseño cambiando parámetros de entrada.</li>
+              <li><strong>Procesamiento por lotes:</strong> renombrar capas, exportar bloques, modificar propiedades de cientos de objetos a la vez.</li>
+              <li><strong>Automatización de planos:</strong> generar vistas de planta, fachada y corte a partir de un modelo 3D.</li>
+              <li><strong>Diseño generativo:</strong> explorar cientos de soluciones que cumplen restricciones específicas.</li>
+            </ul>
+
+            <h3>Cómo acceder</h3>
+            <ol>
+              <li>Escribe <span class="cmd-inline">DYNAMO</span> para abrir el editor visual.</li>
+              <li>En el panel de librerías, busca nodos de AutoCAD (como <em>Curve.PointAtParameter</em>, <em>Solid.ByRevolution</em>, etc.).</li>
+              <li>Conecta nodos con cables para definir el flujo de datos.</li>
+              <li>Ejecuta con <span class="key-inline">Ctrl+Enter</span> o el botón Run.</li>
+            </ol>
+
+            <div class="callout">
+              <span class="callout-title">Aprendizaje</span>
+              Dynamo tiene una comunidad activa con scripts compartidos en <strong>dynpackage.com</strong>. Empieza descargando paquetes como <em>Clockwork</em> o <em>Bakery</em> que amplían mucho las capacidades nativas.
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 8. Automatización con Python -->
+          <section id="python" data-topic="nivel5-python">
+            <h2><span class="sec-num">8</span> Automatización con Python (pyautocad)</h2>
+            <p>Si prefieres código textual en lugar de nodos visuales, Python es una alternativa moderna a AutoLISP para automatizar AutoCAD.</p>
+
+            <h3>La librería pyautocad</h3>
+            <p><strong>pyautocad</strong> es una librería de Python que se conecta a AutoCAD mediante COM. Permite crear, leer y modificar dibujos programáticamente.</p>
+
+            <div class="code-block">
+              <span class="code-label">Python</span>
+              <button class="copy-btn" data-i18n="ui.copy">Copiar</button>
+              <pre><code class="language-python">from pyautocad import Autocad
+
+acad = Autocad()  # Conecta a AutoCAD abierto
+
+# Crear una línea desde (0,0,0) hasta (100,50,0)
+p1 = acad.Point3D(0, 0, 0)
+p2 = acad.Point3D(100, 50, 0)
+line = acad.model.AddLine(p1, p2)
+
+# Crear un círculo
+center = acad.Point3D(50, 25, 0)
+circle = acad.model.AddCircle(center, 25)
+
+print(f"Línea creada: {line}")
+print(f"Círculo creado: {circle}")</code></pre>
+            </div>
+
+            <h3>Cuándo usar Python vs. AutoLISP</h3>
+            <table class="table-cad">
+              <thead><tr><th>Criterio</th><th>AutoLISP</th><th>Python (pyautocad)</th></tr></thead>
+              <tbody>
+                <tr><td>Curva de aprendizaje</td><td>Más empírico, sintaxis antigua</td><td>Sintaxis moderna, más recursos de aprendizaje</td></tr>
+                <tr><td>Bibliotecas</td><td>Solo las nativas de AutoCAD</td><td>Todas las librerías de Python (numpy, pandas, etc.)</td></tr>
+                <tr><td>Uso en la industria</td><td>Muy extendido en empresas CAD</td><td>Creciente, más común en entornos BIM y data-driven</td></tr>
+                <tr><td>Compatibilidad</td><td>Solo AutoCAD</td><td>AutoCAD + Revit + Civil 3D</td></tr>
+              </tbody>
+            </table>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 9. AutoCAD y BIM -->
+          <section id="bim" data-topic="nivel5-bim">
+            <h2><span class="sec-num">9</span> AutoCAD y BIM</h2>
+            <p>BIM (Building Information Modeling) es el flujo de trabajo que conecta arquitectura, ingeniería y construcción en un modelo digital compartido. AutoCAD no es un software BIM nativo, pero se integra con el ecosistema BIM de Autodesk.</p>
+
+            <h3>Módulos verticales de AutoCAD con BIM</h3>
+            <table class="table-cad">
+              <thead><tr><th>Módulo</th><th>Uso</th></tr></thead>
+              <tbody>
+                <tr><td><strong>AutoCAD Architecture</strong></td><td>Dibujo arquitectónico con objetos inteligentes (muros, puertas, ventanas) que generan datos BIM.</td></tr>
+                <tr><td><strong>AutoCAD MEP</strong></td><td>Diseño de instalaciones mecánicas, eléctricas y sanitarias con componentes paramétricos.</td></tr>
+                <tr><td><strong>AutoCAD Civil 3D</strong></td><td>Ingeniería civil: terreno, alineamientos, perfiles, cunetas y redes.</td></tr>
+                <tr><td><strong>AutoCAD Plant 3D</strong></td><td>Diseño de plantas industriales y tuberías isométricas.</td></tr>
+              </tbody>
+            </table>
+
+            <div class="callout">
+              <span class="callout-title">Tendencia</span>
+              La industria está migrando de AutoCAD 2D puro a Revit y Civil 3D para proyectos nuevos. AutoCAD sigue siendo esencial para proyectos existentes, planos legados y trabajos donde el modelo BIM no es obligatorio.
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 10. Interoperabilidad CAD-BIM -->
+          <section id="interoperabilidad" data-topic="nivel5-interoperabilidad">
+            <h2><span class="sec-num">10</span> Interoperabilidad CAD-BIM</h2>
+            <p>En un proyecto real, no todo el mundo usa el mismo programa. AutoCAD debe comunicarse con Revit, SketchUp, Civil 3D, softwares de cálculo y más.</p>
+
+            <h3>Formatos de intercambio</h3>
+            <table class="table-cad">
+              <thead><tr><th>Formato</th><th>Uso principal</th><th>Limitaciones</th></tr></thead>
+              <tbody>
+                <tr><td><span class="cmd-inline">.DWG</span></td><td>Formato nativo Autodesk. Compatible entre AutoCAD, Revit, Civil 3D.</td><td>No es universal; algunos softwares no lo leen.</td></tr>
+                <tr><td><span class="cmd-inline">.DXF</span></td><td>Formato de texto plano para intercambio CAD universal.</td><td>Puede perder algunas propiedades específicas de AutoCAD.</td></tr>
+                <tr><td><span class="cmd-inline">.IFC</span></td><td>Formato abierto BIM. Estándar para compartir modelos entre Revit, ArchiCAD, Tekla.</td><td>No preserva todas las configuraciones de cada software.</td></tr>
+                <tr><td><span class="cmd-inline">.SAT</span></td><td>Intercambio de sólidos 3D ACIS entre programas CAD.</td><td>Solo geometría sólida, sin capas ni estilos.</td></tr>
+                <tr><td><span class="cmd-inline">.STEP / .STP</span></td><td>Estándar de la industria para piezas mecánicas y CAD 3D.</td><td>Pesado, pierde información de dibujo 2D.</td></tr>
+                <tr><td><span class="cmd-inline">.IGES</span></td><td>Intercambio de superficies y curvas NURBS entre CAD y CAM.</td><td>En desuso gradual a favor de STEP.</td></tr>
+                <tr><td><span class="cmd-inline">.PDF</span></td><td>Revisión y distribución sin capacidad de edición.</td><td>No es editable en CAD (salvo importación de geometría).</td></tr>
+              </tbody>
+            </table>
+
+            <h3>Herramientas de conversión</h3>
+            <ul>
+              <li><span class="cmd-inline">IMPORT</span> / <span class="cmd-inline">EXPORT</span>: comandos nativos de AutoCAD para convertir entre formatos.</li>
+              <li><strong>Navisworks:</strong> integra modelos de Revit, AutoCAD y SketchUp para revisión de coordinación.</li>
+              <li><strong>Autodesk Viewer:</strong> visor en línea que abre DWG, RVT, IFC y otros formatos sin instalar nada.</li>
+            </ul>
+
+            <div class="callout">
+              <span class="callout-title">Consejo profesional</span>
+              Cuando compartas un plano con alguien que usa un software diferente, ofrece siempre dos versiones: una en <strong>.DWG</strong> (si el receptor puede leerlo) y otra en <strong>.DXF</strong> o <strong>.PDF</strong> como respaldo universal.
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- Ejemplos visuales inline -->
+          <section class="inline-visual-examples" style="margin-top:2rem">
+            <div class="visual-examples">
+              <h3 style="font-size:1.3rem;margin-bottom:1.2rem" data-i18n="vis.levelTitle">Ejemplos visuales del nivel</h3>
+              <div class="diagram-grid cols-2">
+
+                <div class="diagram-card" data-aos="fade-up">
+                  <div class="diagram-card-head"><h4><span class="cmd-badge">Automatización</span> Flujo AutoLISP</h4></div>
+                  <div class="diagram-card-body">
+                    <p data-i18n="vis.cui.desc">Modifica barras de herramientas, menús, teclas rápidas y paneles arrastrando comandos.</p>
+                    <div class="diagram-canvas">
+                      <svg viewBox="0 0 280 110">
+                        <rect x="5" y="15" width="65" height="70" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="3"/>
+                        <text class="cad-label-cmd" x="12" y="32" style="font-size:8px">Usuario</text>
+                        <text class="cad-label-cmd" x="12" y="45" style="font-size:8px">escribe:</text>
+                        <rect x="10" y="50" width="55" height="16" fill="var(--bg-surface)" stroke="var(--layer-amber)" rx="2"/>
+                        <text class="cad-label-cmd" x="15" y="62" style="font-size:7px;fill:var(--amber)">MI-PLANTA</text>
+                        <polygon class="cad-arrow" points="73,50 88,50" style="fill:var(--amber)"/>
+                        <rect x="92" y="15" width="80" height="70" fill="var(--bg-elevated)" stroke="var(--layer-cyan)" rx="3"/>
+                        <text class="cad-label-cmd" x="100" y="30" style="font-size:8px">AutoLISP</text>
+                        <text class="cad-label-cmd" x="100" y="42" style="font-size:7px">1. Crea capas</text>
+                        <text class="cad-label-cmd" x="100" y="52" style="font-size:7px">2. Dibuja ejes</text>
+                        <text class="cad-label-cmd" x="100" y="62" style="font-size:7px">3. Añade cotas</text>
+                        <text class="cad-label-cmd" x="100" y="72" style="font-size:7px">4. Inserta title</text>
+                        <polygon class="cad-arrow" points="175,50 190,50" style="fill:var(--amber)"/>
+                        <rect x="195" y="15" width="80" height="70" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="3"/>
+                        <text class="cad-label-cmd" x="203" y="30" style="font-size:8px">AutoCAD</text>
+                        <text class="cad-label-cmd" x="203" y="42" style="font-size:7px">ejecuta cada</text>
+                        <text class="cad-label-cmd" x="203" y="52" style="font-size:7px">paso en</text>
+                        <text class="cad-label-cmd" x="203" y="62" style="font-size:7px">segundos</text>
+                        <text class="cad-label" x="140" y="100" style="font-size:8px">Un comando personalizado ejecuta 20 pasos automáticos</text>
+                      </svg>
+                    </div>
+                    <div class="callout" style="margin-top:.8rem">
+                      <span class="callout-title">Poder real</span>
+                      <span>Con AutoLISP puedes crear comandos personalizados que ejecuten secuencias complejas con un solo atajo.</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="diagram-card" data-aos="fade-up" data-aos-delay="60">
+                  <div class="diagram-card-head"><h4><span class="cmd-badge">Interfaz</span> Personalización CUI</h4><span class="key-inline">CUI</span></div>
+                  <div class="diagram-card-body">
+                    <div class="diagram-canvas">
+                      <svg viewBox="0 0 280 110">
+                        <text class="cad-label-cmd" x="5" y="14" style="font-size:8px">Editor de personalización:</text>
+                        <rect x="5" y="20" width="130" height="75" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="3"/>
+                        <text class="cad-label-cmd" x="12" y="34" style="font-size:7px">Árbol de comandos:</text>
+                        <text class="cad-label" x="16" y="48" style="font-size:7px">▸ Mi grupo</text>
+                        <text class="cad-label" x="22" y="58" style="font-size:7px">  ▸ Dibujar muro</text>
+                        <text class="cad-label" x="22" y="68" style="font-size:7px">  ▸ Insertar cota</text>
+                        <text class="cad-label" x="22" y="78" style="font-size:7px">  ▸ Exportar plancha</text>
+                        <text class="cad-label" x="16" y="88" style="font-size:7px">▸ Atajos de teclado</text>
+                        <polygon class="cad-arrow" points="138,57 152,57" style="fill:var(--amber)"/>
+                        <rect x="155" y="20" width="120" height="75" fill="var(--bg-elevated)" stroke="var(--layer-cyan)" rx="3"/>
+                        <text class="cad-label-cmd" x="162" y="34" style="font-size:7px">Barra personalizada:</text>
+                        <rect x="162" y="40" width="28" height="22" fill="var(--bg-surface)" stroke="var(--layer-cyan)" rx="2"/>
+                        <text class="cad-label" x="166" y="54" style="font-size:6px">Muro</text>
+                        <rect x="195" y="40" width="28" height="22" fill="var(--bg-surface)" stroke="var(--layer-cyan)" rx="2"/>
+                        <text class="cad-label" x="199" y="54" style="font-size:6px">Cota</text>
+                        <rect x="228" y="40" width="28" height="22" fill="var(--bg-surface)" stroke="var(--layer-cyan)" rx="2"/>
+                        <text class="cad-label" x="232" y="54" style="font-size:6px">Plan</text>
+                        <text class="cad-label-cmd" x="162" y="80" style="font-size:7px">Arrastra comandos</text>
+                        <text class="cad-label-cmd" x="162" y="90" style="font-size:7px">para crear tu barra</text>
+                      </svg>
+                    </div>
+                    <div class="callout" style="margin-top:.8rem">
+                      <span class="callout-title">Tip</span>
+                      <span>Escribe CUI para abrir el editor. Crea un grupo de comandos personalizados para tu flujo de trabajo diario.</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="diagram-card" data-aos="fade-up">
+                  <div class="diagram-card-head"><h4><span class="cmd-badge">Mantenimiento</span> PURGE y AUDIT</h4></div>
+                  <div class="diagram-card-body">
+                    <p data-i18n="vis.purge.desc">PURGE elimina capas, bloques y estilos no usados. AUDIT corrige errores internos del DWG.</p>
+                    <div class="diagram-canvas">
+                      <svg viewBox="0 0 280 90">
+                        <text class="cad-label-cmd" x="5" y="14" style="font-size:8px">PURGE — limpieza de elementos no usados:</text>
+                        <rect x="5" y="20" width="80" height="60" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="2"/>
+                        <text class="cad-label-cmd" x="12" y="34" style="font-size:7px">Antes: 15MB</text>
+                        <text class="cad-label" x="12" y="46" style="font-size:7px">Capas: 25</text>
+                        <text class="cad-label" x="12" y="56" style="font-size:7px">Bloques: 40</text>
+                        <text class="cad-label" x="12" y="66" style="font-size:7px">Estilos: 18</text>
+                        <text class="cad-label" x="12" y="76" style="font-size:7px;fill:var(--layer-red)">muchos sin usar</text>
+                        <text class="cad-label-cmd" x="100" y="50" style="font-size:16px;fill:var(--amber)">PURGE</text>
+                        <rect x="135" y="20" width="80" height="60" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+                        <text class="cad-label-cmd" x="142" y="34" style="font-size:7px">Después: 8MB</text>
+                        <text class="cad-label" x="142" y="46" style="font-size:7px">Capas: 6</text>
+                        <text class="cad-label" x="142" y="56" style="font-size:7px">Bloques: 12</text>
+                        <text class="cad-label" x="142" y="66" style="font-size:7px">Estilos: 3</text>
+                        <text class="cad-label" x="142" y="76" style="font-size:7px;fill:var(--layer-green)">solo los activos</text>
+                        <rect x="225" y="20" width="55" height="60" fill="var(--bg-elevated)" stroke="var(--layer-cyan)" rx="2"/>
+                        <text class="cad-label-cmd" x="232" y="34" style="font-size:7px">AUDIT</text>
+                        <text class="cad-label" x="232" y="48" style="font-size:6px">Detecta:</text>
+                        <text class="cad-label" x="232" y="58" style="font-size:6px">• Errores</text>
+                        <text class="cad-label" x="232" y="68" style="font-size:6px">• Corromp.</text>
+                        <text class="cad-label" x="232" y="78" style="font-size:6px;fill:var(--layer-green)">→ Repara</text>
+                      </svg>
+                    </div>
+                    <div class="callout" style="margin-top:.8rem">
+                      <span class="callout-title">Tip</span>
+                      <span>Ejecuta PURGE periódicamente para reducir tamaño. AUDIT después de un cierre inesperado o si el archivo falla.</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="diagram-card" data-aos="fade-up" data-aos-delay="60">
+                  <div class="diagram-card-head"><h4><span class="cmd-badge">CAD-BIM</span> Flujo interoperabilidad</h4></div>
+                  <div class="diagram-card-body">
+                    <p data-i18n="vis.xref.desc">Vincula archivos DWG externos como referencias. Se actualizan automáticamente cuando el original cambia.</p>
+                    <div class="diagram-canvas">
+                      <svg viewBox="0 0 280 100">
+                        <text class="cad-label-cmd" x="5" y="14" style="font-size:8px">Del plano CAD al modelo BIM:</text>
+                        <rect x="5" y="20" width="55" height="55" fill="var(--bg-elevated)" stroke="var(--layer-cyan)" rx="3"/>
+                        <text class="cad-label-cmd" x="12" y="38" style="font-size:8px">AutoCAD</text>
+                        <text class="cad-label-cmd" x="12" y="50" style="font-size:7px">.DWG</text>
+                        <text class="cad-label" x="12" y="68" style="font-size:7px;fill:var(--layer-cyan)">2D/3D</text>
+                        <polygon class="cad-arrow" points="63,47 78,47" style="fill:var(--amber)"/>
+                        <rect x="82" y="20" width="50" height="55" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="3"/>
+                        <text class="cad-label-cmd" x="88" y="38" style="font-size:7px">IFC /</text>
+                        <text class="cad-label-cmd" x="88" y="50" style="font-size:7px">RVT</text>
+                        <text class="cad-label-cmd" x="88" y="62" style="font-size:7px">XDWG</text>
+                        <polygon class="cad-arrow" points="135,47 150,47" style="fill:var(--amber)"/>
+                        <rect x="155" y="20" width="60" height="55" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="3"/>
+                        <text class="cad-label-cmd" x="162" y="38" style="font-size:7px">Revit /</text>
+                        <text class="cad-label-cmd" x="162" y="50" style="font-size:7px">Navisworks</text>
+                        <text class="cad-label-cmd" x="162" y="62" style="font-size:7px">.IFC</text>
+                        <polygon class="cad-arrow" points="218,47 233,47" style="fill:var(--amber)"/>
+                        <rect x="238" y="20" width="40" height="55" fill="var(--bg-elevated)" stroke="var(--layer-yellow)" rx="3"/>
+                        <text class="cad-label-cmd" x="243" y="38" style="font-size:7px">BIM</text>
+                        <text class="cad-label-cmd" x="243" y="50" style="font-size:7px">Model</text>
+                        <text class="cad-label" x="5" y="92" style="font-size:8px">AutoCAD → formato intermedio → software BIM → modelo integrado</text>
+                      </svg>
+                    </div>
+                    <div class="callout" style="margin-top:.8rem">
+                      <span class="callout-title">Tendencia</span>
+                      <span>El futuro del CAD profesional pasa por la integración BIM. AutoCAD sigue siendo el punto de partida sólido.</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
         </article>
 
         <!-- Navegación anterior / siguiente -->
@@ -290,7 +571,9 @@
         <ul class="list-unstyled">
           <li><a href="nivel-1-fundamentos.html">Fundamentos</a></li>
           <li><a href="nivel-2-dibujo-2d.html">Dibujo 2D</a></li>
+          <li><a href="nivel-3-organizacion.html">Organización</a></li>
           <li><a href="nivel-4-modelado-3d.html">Modelado 3D</a></li>
+          <li><a href="nivel-5-avanzado.html">Nivel experto</a></li>
         </ul>
       </div>
       <div class="col-6 col-lg-2">

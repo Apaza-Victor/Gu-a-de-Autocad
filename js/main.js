@@ -621,7 +621,7 @@ function initHomeProgress(){
   if (!fill || !label) return;
 
   const allTopics = document.querySelectorAll('[data-topic]');
-  const total = allTopics.length || 31; // fallback al total conocido
+  const total = allTopics.length || 51; // fallback al total conocido
   let done = 0;
 
   allTopics.forEach(s => {

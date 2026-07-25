@@ -43,6 +43,7 @@
           </ul>
         </li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="comandos.html" data-i18n="nav.commands">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="ejemplos-visuales.html" data-i18n="nav.visual">Ejemplos visuales</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="recursos.html" data-i18n="nav.resources">Recursos gratis</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="faq.html" data-i18n="nav.faq">FAQ</a></li>
       </ul>
@@ -67,7 +68,7 @@
     <h1 data-i18n="lvl4.title">Modelado 3D</h1>
     <p class="subtitle" data-i18n="lvl4.subtitle">Del plano a la maqueta virtual: navegación tridimensional, sólidos primitivos, operaciones booleanas, herramientas de creación avanzada y un primer acercamiento al render.</p>
     <div class="level-progress-bar"><div class="fill"></div></div>
-    <p class="level-progress-label">0 de 6 temas completados · 0%</p>
+    <p class="level-progress-label">0 de 12 temas completados · 0%</p>
   </div>
 </header>
 
@@ -87,6 +88,12 @@
             <li><a href="#creacion" data-toc="nivel4-creacion"><span class="toc-check"></span> Extrusión, revolución, barrido y loft</a></li>
             <li><a href="#edicion" data-toc="nivel4-edicion"><span class="toc-check"></span> Edición de sólidos</a></li>
             <li><a href="#render" data-toc="nivel4-render"><span class="toc-check"></span> Render básico</a></li>
+            <li><a href="#nav-3d-detalle" data-toc="nivel4-nav-3d-detalle"><span class="toc-check"></span> Navegación 3D avanzada</a></li>
+            <li><a href="#mallas" data-toc="nivel4-mallas"><span class="toc-check"></span> Mallas (Mesh)</a></li>
+            <li><a href="#superficies" data-toc="nivel4-superficies"><span class="toc-check"></span> Superficies y NURBS</a></li>
+            <li><a href="#seccion" data-toc="nivel4-seccion"><span class="toc-check"></span> Secciones sólidas</a></li>
+            <li><a href="#interferencia" data-toc="nivel4-interferencia"><span class="toc-check"></span> Interferencia y análisis</a></li>
+            <li><a href="#cotado3d" data-toc="nivel4-cotado3d"><span class="toc-check"></span> Cotado 3D</a></li>
           </ul>
           <hr style="border-color:var(--border-soft)" class="my-4">
           <a href="nivel-5-avanzado.html" class="btn-cad-outline w-100 text-center d-block">Siguiente nivel <i class="bi bi-arrow-right"></i></a>
@@ -232,6 +239,315 @@
             <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
           </section>
 
+          <!-- 7. Navegación 3D avanzada -->
+          <section id="nav-3d-detalle" data-topic="nivel4-nav-3d-detalle">
+            <h2><span class="sec-num">7</span> Navegación 3D avanzada</h2>
+            <p>Más allá del 3DORBIT básico, AutoCAD ofrece herramientas para orientarte y presentar el modelo desde cualquier ángulo.</p>
+
+            <table class="table-cad">
+              <thead><tr><th>Herramienta</th><th>Atajo / Comando</th><th>Qué hace</th></tr></thead>
+              <tbody>
+                <tr><td>ViewCube</td><td>Esquina superior derecha</td><td>Cubo interactivo: haz clic en una cara, arista o esquina para cambiar la vista instantáneamente.</td></tr>
+                <tr><td>SteeringWheels</td><td><span class="cmd-inline">NAVSWHEEL</span></td><td>Rueda de navegación con acceso rápido a Zoom, Orbit, Pan y Rewind.</td></tr>
+                <tr><td>Vistas predefinidas</td><td><span class="cmd-inline">-VIEW</span></td><td>Vistas estándar: Superior, Inferior, Frontal, Derecha, Isométrica SW/SE/NE/NW.</td></tr>
+                <tr><td>Orbita deslizante</td><td><span class="key-inline">Shift + Rueda</span></td><td>Modo órbita libre manteniendo Shift pulsado.</td></tr>
+                <tr><td>Cámara</td><td><span class="cmd-inline">CAMERA</span></td><td>Crea una cámara con posición, dirección y campo de visión configurables.</td></tr>
+                <tr><td>Paralelo vs Perspectiva</td><td><span class="cmd-inline">PERSPECTIVE</span></td><td>Alterna entre vista ortográfica (técnica) y perspectiva (realista).</td></tr>
+              </tbody>
+            </table>
+
+            <div class="callout">
+              <span class="callout-title">Consejo</span>
+              Para presentar un modelo a un cliente, usa <strong>perspectiva</strong> con una cámara ligeramente elevada (como si miraras desde una persona de pie). Para revisión técnica, mantén la vista <strong>paralela</strong>.
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 8. Mallas -->
+          <section id="mallas" data-topic="nivel4-mallas">
+            <h2><span class="sec-num">8</span> Mallas (Mesh)</h2>
+            <p>Las mallas son un tipo de geometría 3D diferente a los sólidos: representan superficies como una red de caras triangulares o cuadrangulares. Son ideales para formas orgánicas y suavizadas.</p>
+
+            <h3>Primitivas de malla</h3>
+            <table class="table-cad">
+              <thead><tr><th>Comando</th><th>Crea</th></tr></thead>
+              <tbody>
+                <tr><td><span class="cmd-inline">MESH</span></td><td>Caja, cono, cilindro, esfera, cuña, pirámide, toroide y nodo de malla.</td></tr>
+                <tr><td><span class="cmd-inline">MESHCLOSE</span></td><td>Cierra una malla abierta.</td></tr>
+              </tbody>
+            </table>
+
+            <h3>Edición de mallas</h3>
+            <p>Las mallas se editan de forma diferente a los sólidos. Las caras, aristas y vértices individuales se pueden manipular con:</p>
+            <ul>
+              <li><span class="cmd-inline">MESHEXTRACT</span>: extrae caras de la malla como objetos separados.</li>
+              <li><span class="cmd-inline">MESHREFINE</span>: subdivide caras para aumentar el detalle.</li>
+              <li><span class="cmd-inline">SMOOTHMESH</span>: suaviza la malla aplicando alisado (subdivisión de Catmull-Clark).</li>
+            </ul>
+
+            <div class="callout">
+              <span class="callout-title">Sólidos vs. Mallas</span>
+              Los sólidos son precisos y se usan para piezas mecánicas y arquitectura. Las mallas son más flexibles视觉上 pero no mantienen propiedades volumétricas exactas. Puedes convertir entre ambos con <span class="cmd-inline">CONVTOSOLID</span> y <span class="cmd-inline">CONVTOMESH</span>.
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 9. Superficies y NURBS -->
+          <section id="superficies" data-topic="nivel4-superficies">
+            <h2><span class="sec-num">9</span> Superficies y NURBS</h2>
+            <p>Las superficies 3D representan caras sin volumen. Son necesarias para formas libres que no se pueden modelar con sólidos (carrocerías, mobiliario curvo, carcasas de productos).</p>
+
+            <h3>Comandos de creación</h3>
+            <table class="table-cad">
+              <thead><tr><th>Comando</th><th>Qué crea</th></tr></thead>
+              <tbody>
+                <tr><td><span class="cmd-inline">SURFACE</span></td><td>Superficie plana a partir de bordes cerrados.</td></tr>
+                <tr><td><span class="cmd-inline">NETWORKSURF</span></td><td>Superficie que interpola entre dos o más curvas directoras.</td></tr>
+                <tr><td><span class="cmd-inline">EDGESURF</span></td><td>Superficie de borde definida por 4 curvas contiguas.</td></tr>
+                <tr><td><span class="cmd-inline">RULEDSURF</span></td><td>Superficie recta entre dos curvas opuestas.</td></tr>
+                <tr><td><span class="cmd-inline">REVOLVESURF</span></td><td>Superficie de revolución a partir de una curva y un eje.</td></tr>
+                <tr><td><span class="cmd-inline">PLANESURF</span></td><td>Superficie plana rectangular o por curvas cerradas.</td></tr>
+              </tbody>
+            </table>
+
+            <h3>Curvas NURBS</h3>
+            <p>NURBS (Non-Uniform Rational B-Splines) son curvas matemáticamente precisas que controlan la forma de las superficies. Se crean con <span class="cmd-inline">SPLINE</span> y se editan arrastrando los puntos de control o ajustando los pesos.</p>
+
+            <div class="callout">
+              <span class="callout-title">Aplicación</span>
+              En diseño industrial, las superficies NURBS se usan para modelar carcasas de productos electrónicos, carrocerías de autos y mobiliario de diseño. AutoCAD puede exportarlas a formatos como .IGES o .STEP para uso en otros programas.
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 10. Secciones sólidas -->
+          <section id="seccion" data-topic="nivel4-seccion">
+            <h2><span class="sec-num">10</span> Secciones sólidas</h2>
+            <p>El plano de sección permite generar cortes 2D a partir de un modelo 3D. Es la forma de producir planos de corte sin duplicar geometría.</p>
+
+            <table class="table-cad">
+              <thead><tr><th>Comando</th><th>Qué hace</th></tr></thead>
+              <tbody>
+                <tr><td><span class="cmd-inline">SECTIONPLANE</span></td><td>Crea un plano de sección interactivo que recorta visualmente el modelo 3D.</td></tr>
+                <tr><td><span class="cmd-inline">SECTION</span></td><td>Genera un objeto 2D (región o polilínea) en la intersección del plano con el sólido.</td></tr>
+                <tr><td><span class="cmd-inline">FLATSHOT</span></td><td>Crea una vista 2D plana de un modelo 3D visto desde una dirección específica.</td></tr>
+              </tbody>
+            </table>
+
+            <h3>Generar un corte 2D listo para imprimir</h3>
+            <ol>
+              <li>Crea el plano de sección con <span class="cmd-inline">SECTIONPLANE</span> y colócalo en la posición deseada.</li>
+              <li>Clic derecho sobre el plano → <strong>Generar sección</strong>.</li>
+              <li>Selecciona el sólido, elige el destino (nuevo dibujo o bloque) y acepta.</li>
+              <li>AutoCAD genera automáticamente las líneas de corte y las líneas de fondo visibles.</li>
+            </ol>
+
+            <div class="callout">
+              <span class="callout-title">Consejo</span>
+              Para planos de arquitectura, genera la sección 2D, muévela al Layout y asígnale la escala adecuada. Así obtienes cortes constructivos directamente del modelo 3D.
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 11. Interferencia y análisis -->
+          <section id="interferencia" data-topic="nivel4-interferencia">
+            <h2><span class="sec-num">11</span> Interferencia y análisis</h2>
+            <p>En proyectos con múltiples componentes, es fundamental detectar choques entre piezas antes de fabricar o construir.</p>
+
+            <table class="table-cad">
+              <thead><tr><th>Comando</th><th>Qué hace</th></tr></thead>
+              <tbody>
+                <tr><td><span class="cmd-inline">INTERFERE</span></td><td>Compara dos o más sólidos y muestra las zonas donde se superponen (interferencias).</td></tr>
+                <tr><td><span class="cmd-inline">MASSPROP</span></td><td>Calcula propiedades físicas de un sólido: volumen, área superficial, centro de masa, momentos de inercia.</td></tr>
+                <tr><td><span class="cmd-inline">AREA</span></td><td>Mide el área y perímetro de la cara de un sólido o de una sección 2D.</td></tr>
+                <tr><td><span class="cmd-inline">DIST</span></td><td>Mide la distancia y ángulo entre dos puntos en el espacio 3D.</td></tr>
+              </tbody>
+            </table>
+
+            <div class="callout">
+              <span class="callout-title">Uso práctico</span>
+              En ingeniería mecánica, <span class="cmd-inline">INTERFERE</span> detecta si dos piezas de un ensamble chocan. En arquitectura, verifica si conductos de HVAC atraviesan vigas estructurales.
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 12. Cotado 3D -->
+          <section id="cotado3d" data-topic="nivel4-cotado3d">
+            <h2><span class="sec-num">12</span> Cotado 3D y anotaciones</h2>
+            <p>AutoCAD permite colocar cotas directamente en el espacio 3D, aunque lo más habitual es generar vistas 2D (con SECTION o FLATSHOT) y acotarlas después.</p>
+
+            <h3>Cotas 3D disponibles</h3>
+            <table class="table-cad">
+              <thead><tr><th>Comando</th><th>Qué mide</th></tr></thead>
+              <tbody>
+                <tr><td><span class="cmd-inline">DIMALIGNED</span></td><td>Distancia real entre dos puntos en el espacio 3D (no proyectada).</td></tr>
+                <tr><td><span class="cmd-inline">DIMLINEAR</span></td><td>Distancia proyectada en el plano del usuario (UCS actual).</td></tr>
+                <tr><td><span class="cmd-inline">DIM3D</span> (no nativo, se simula con DIMALIGNED)</td><td>Cota alineada a un eje 3D específico.</td></tr>
+                <tr><td><span class="cmd-inline">LEADER</span></td><td>Línea de llamada con texto, útil para anotar caras y vértices.</td></tr>
+              </tbody>
+            </table>
+
+            <div class="callout warn">
+              <span class="callout-title">Atención</span>
+              Las cotas 3D pueden no verse correctas si el plano de la cota (dimplane) no coincide con la orientación del objeto. Siempre verifica la orientación del UCS antes de acotar en 3D.
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- Ejemplos visuales inline -->
+          <section class="inline-visual-examples" style="margin-top:2rem">
+            <div class="visual-examples">
+              <h3 style="font-size:1.3rem;margin-bottom:1.2rem" data-i18n="vis.levelTitle">Ejemplos visuales del nivel</h3>
+              <div class="diagram-grid cols-2">
+
+                <div class="diagram-card" data-aos="fade-up">
+                  <div class="diagram-card-head"><h4><span class="cmd-badge">3D</span> Primitivas básicas</h4></div>
+                  <div class="diagram-card-body">
+                    <div class="diagram-canvas">
+                      <svg viewBox="0 0 280 110">
+                        <text class="cad-label-cmd" x="5" y="14" style="font-size:8px">Sólidos primitivos más usados:</text>
+                        <rect class="cad-fill" x="10" y="30" width="55" height="35" rx="2"/>
+                        <polygon points="10,30 25,18 80,18 65,30" style="fill:rgba(53,214,203,.25);stroke:var(--layer-cyan);stroke-width:1.2"/>
+                        <polygon points="65,30 80,18 80,53 65,65" style="fill:rgba(53,214,203,.15);stroke:var(--layer-cyan);stroke-width:1.2"/>
+                        <text class="cad-label-cmd" x="20" y="82" style="font-size:8px">BOX</text>
+                        <ellipse class="cad-fill" cx="140" cy="55" rx="35" ry="10"/>
+                        <rect class="cad-fill" x="105" y="30" width="70" height="25" rx="1"/>
+                        <ellipse cx="140" cy="30" rx="35" ry="10" style="fill:rgba(53,214,203,.3);stroke:var(--layer-cyan);stroke-width:1.2"/>
+                        <text class="cad-label-cmd" x="122" y="82" style="font-size:8px">CYLINDER</text>
+                        <rect class="cad-fill" x="210" y="30" width="55" height="35" rx="17"/>
+                        <ellipse cx="237" cy="30" rx="27" ry="10" style="fill:rgba(53,214,203,.3);stroke:var(--layer-cyan);stroke-width:1.2"/>
+                        <text class="cad-label-cmd" x="218" y="82" style="font-size:8px">SPHERE</text>
+                        <text class="cad-label" x="5" y="100" style="font-size:8px">Cada primitiva se crea con un clic y dimensiones: BOX → largo×ancho×alto</text>
+                      </svg>
+                    </div>
+                    <div class="callout" style="margin-top:.8rem">
+                      <span class="callout-title">Tip</span>
+                      <span>Las primitivas son la base. Úsalas con UNION/SUBTRACT para crear formas complejas sin dibujar perfiles.</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="diagram-card" data-aos="fade-up" data-aos-delay="60">
+                  <div class="diagram-card-head"><h4><span class="cmd-badge">3D</span> EXTRUDE</h4><span class="key-inline">EXT</span></div>
+                  <div class="diagram-card-body">
+                    <p data-i18n="vis.extrude.desc">Empuja un perfil 2D cerrado en línea recta para crear un sólido tridimensional.</p>
+                    <div class="diagram-steps">
+                      <div class="diagram-step">
+                        <span class="diagram-step-label" data-i18n="vis.step.perfil">Perfil 2D</span>
+                        <svg viewBox="0 0 170 80">
+                          <rect class="cad-fill" x="25" y="15" width="120" height="50" rx="3"/>
+                          <text class="cad-label" x="55" y="45" data-i18n="vis.extrude.rect">rectángulo</text>
+                        </svg>
+                      </div>
+                      <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+                      <div class="diagram-step">
+                        <span class="diagram-step-label" data-i18n="vis.step.solid3d">Sólido 3D</span>
+                        <svg viewBox="0 0 170 100">
+                          <rect class="cad-fill" x="20" y="50" width="70" height="35" rx="2"/>
+                          <polygon class="cad-fill" points="20,50 42,25 112,25 90,50" style="fill:rgba(53,214,203,.25);stroke:var(--layer-cyan);stroke-width:1.5"/>
+                          <polygon class="cad-fill" points="90,50 112,25 112,60 90,85" style="fill:rgba(53,214,203,.15);stroke:var(--layer-cyan);stroke-width:1.5"/>
+                          <line class="cad-dim" x1="125" y1="75" x2="125" y2="30" stroke="var(--amber)"/>
+                          <polygon class="cad-arrow" points="121,35 125,22 129,35"/>
+                          <text class="cad-dim-text" x="131" y="55" style="fill:var(--amber);font-size:9px">altura</text>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="callout" style="margin-top:.8rem">
+                      <span class="callout-title">Requisito</span>
+                      <span>El perfil debe ser polilínea cerrada o region. Usa JOIN para unir líneas sueltas antes de extruir.</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="diagram-card" data-aos="fade-up">
+                  <div class="diagram-card-head"><h4><span class="cmd-badge">3D</span> UNION / SUBTRACT</h4><span class="key-inline">UNI / SU</span></div>
+                  <div class="diagram-card-body">
+                    <p data-i18n="vis.boolean.desc">Operaciones booleanas: fusionar (UNION) o restar (SUBTRACT) volúmenes de sólidos.</p>
+                    <div class="diagram-steps">
+                      <div class="diagram-step">
+                        <span class="diagram-step-label">Dos sólidos</span>
+                        <svg viewBox="0 0 180 60">
+                          <rect class="cad-fill" x="5" y="12" width="70" height="36" rx="2"/>
+                          <circle class="cad-fill" cx="115" cy="30" r="20"/>
+                          <text class="cad-label" x="25" y="35">A</text>
+                          <text class="cad-label" x="110" y="35">B</text>
+                        </svg>
+                      </div>
+                      <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+                      <div class="diagram-step">
+                        <span class="diagram-step-label">UNION</span>
+                        <svg viewBox="0 0 180 60">
+                          <path class="cad-fill-new" d="M5,12 H75 V48 H5 Z M77,10 A20,20 0 1,1 77,50 A20,20 0 1,1 77,10 Z" fill-rule="evenodd"/>
+                          <text class="cad-label" x="30" y="35" style="font-size:9px" data-i18n="vis.boolean.fused">un solo sólido</text>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="diagram-steps" style="margin-top:.4rem">
+                      <div class="diagram-step">
+                        <span class="diagram-step-label">Mismos sólidos</span>
+                        <svg viewBox="0 0 180 60">
+                          <rect class="cad-fill" x="5" y="12" width="70" height="36" rx="2"/>
+                          <circle class="cad-fill" cx="115" cy="30" r="20"/>
+                        </svg>
+                      </div>
+                      <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+                      <div class="diagram-step">
+                        <span class="diagram-step-label">SUBTRACT A-B</span>
+                        <svg viewBox="0 0 180 60">
+                          <path class="cad-fill" d="M5,12 H75 V48 H5 Z M115,30 m-20,0 a20,20 0 1,0 40,0 a20,20 0 1,0 -40,0" fill-rule="evenodd"/>
+                          <text class="cad-label" x="18" y="35" style="font-size:9px" data-i18n="vis.boolean.hole">A con hueco de B</text>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="callout" style="margin-top:.8rem">
+                      <span class="callout-title">Tip</span>
+                      <span>SUBTRACT es el más usado: taladros, vanos de puertas, recortes de material. Selecciona primero A, luego B.</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="diagram-card" data-aos="fade-up" data-aos-delay="60">
+                  <div class="diagram-card-head"><h4><span class="cmd-badge">3D</span> SWEEP</h4><span class="key-inline">SWEEP</span></div>
+                  <div class="diagram-card-body">
+                    <p data-i18n="vis.sweep.desc">Desplaza un perfil 2D a lo largo de una trayectoria curva para crear un sólido.</p>
+                    <div class="diagram-steps">
+                      <div class="diagram-step">
+                        <span class="diagram-step-label">Perfil + Trayectoria</span>
+                        <svg viewBox="0 0 180 80">
+                          <circle class="cad-fill" cx="15" cy="60" r="8"/>
+                          <path d="M15,60 Q60,60 80,30 T150,25" fill="none" stroke="var(--layer-cyan)" stroke-dasharray="4,3" stroke-width="1.5"/>
+                          <text class="cad-label" x="3" y="78" style="font-size:7px">perfil</text>
+                          <text class="cad-label" x="85" y="15" style="font-size:7px;fill:var(--layer-cyan)">trayectoria</text>
+                        </svg>
+                      </div>
+                      <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+                      <div class="diagram-step">
+                        <span class="diagram-step-label">Sólido 3D</span>
+                        <svg viewBox="0 0 180 80">
+                          <path d="M8,55 Q55,55 75,28 T148,22" fill="none" stroke="var(--layer-cyan)" stroke-width="12" stroke-linecap="round" opacity="0.4"/>
+                          <path d="M8,55 Q55,55 75,28 T148,22" fill="none" stroke="var(--layer-cyan)" stroke-width="1.5"/>
+                          <ellipse cx="8" cy="55" rx="6" ry="4" style="fill:rgba(53,214,203,.3);stroke:var(--layer-cyan);stroke-width:1"/>
+                          <text class="cad-label" x="40" y="75" style="font-size:8px">tubería / tubo</text>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="callout" style="margin-top:.8rem">
+                      <span class="callout-title">Tip</span>
+                      <span>Ideal para tuberías, molduras, rieles y cualquier forma con sección constante a lo largo de una curva.</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
         </article>
 
         <!-- Navegación anterior / siguiente -->
@@ -263,7 +579,9 @@
         <ul class="list-unstyled">
           <li><a href="nivel-1-fundamentos.html">Fundamentos</a></li>
           <li><a href="nivel-2-dibujo-2d.html">Dibujo 2D</a></li>
+          <li><a href="nivel-3-organizacion.html">Organización</a></li>
           <li><a href="nivel-4-modelado-3d.html">Modelado 3D</a></li>
+          <li><a href="nivel-5-avanzado.html">Nivel experto</a></li>
         </ul>
       </div>
       <div class="col-6 col-lg-2">

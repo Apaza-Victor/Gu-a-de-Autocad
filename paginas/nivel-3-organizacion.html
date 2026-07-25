@@ -43,6 +43,7 @@
           </ul>
         </li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="comandos.html" data-i18n="nav.commands">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="ejemplos-visuales.html" data-i18n="nav.visual">Ejemplos visuales</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="recursos.html" data-i18n="nav.resources">Recursos gratis</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="faq.html" data-i18n="nav.faq">FAQ</a></li>
       </ul>
@@ -67,7 +68,7 @@
     <h1 data-i18n="lvl3.title">Organización y productividad</h1>
     <p class="subtitle" data-i18n="lvl3.subtitle">Cómo preparar un dibujo para imprimirlo o compartirlo correctamente: presentaciones, escalas, plantillas, exportación, archivos externos y los atajos que aceleran todo el flujo de trabajo.</p>
     <div class="level-progress-bar"><div class="fill"></div></div>
-    <p class="level-progress-label">0 de 6 temas completados · 0%</p>
+    <p class="level-progress-label">0 de 9 temas completados · 0%</p>
   </div>
 </header>
 
@@ -87,6 +88,9 @@
             <li><a href="#impresion" data-toc="nivel3-impresion"><span class="toc-check"></span> Impresión y exportación</a></li>
             <li><a href="#xref" data-toc="nivel3-xref"><span class="toc-check"></span> Archivos externos (Xref)</a></li>
             <li><a href="#atajos" data-toc="nivel3-atajos"><span class="toc-check"></span> Atajos de teclado</a></li>
+            <li><a href="#plotstyles" data-toc="nivel3-plotstyles"><span class="toc-check"></span> Estilos de trazado</a></li>
+            <li><a href="#campos" data-toc="nivel3-campos"><span class="toc-check"></span> Campos (Fields)</a></li>
+            <li><a href="#xref-avanzado" data-toc="nivel3-xref-avanzado"><span class="toc-check"></span> Xref avanzado</a></li>
           </ul>
           <hr style="border-color:var(--border-soft)" class="my-4">
           <a href="nivel-4-modelado-3d.html" class="btn-cad-outline w-100 text-center d-block">Siguiente nivel <i class="bi bi-arrow-right"></i></a>
@@ -299,6 +303,252 @@
             </table>
           </section>
 
+          <!-- 7. Estilos de trazado -->
+          <section id="plotstyles" data-topic="nivel3-plotstyles">
+            <h2><span class="sec-num">7</span> Estilos de trazado (Plot Styles)</h2>
+            <p>Un estilo de trazado controla cómo se traducen los colores de pantalla a grosores de línea, tonos de gris o negro puro al imprimir. Sin esto, tu plano puede salir todo con el mismo grosor o con colores no deseados.</p>
+
+            <h3>Tipos de estilos de trazado</h3>
+            <table class="table-cad">
+              <thead><tr><th>Tipo</th><th>Extensión</th><th>Cómo funciona</th></tr></thead>
+              <tbody>
+                <tr><td>Por color</td><td><span class="cmd-inline">.CTB</span></td><td>Cada color de AutoCAD (1–255) se mapea a un grosor, color de impresión y efecto específico.</td></tr>
+                <tr><td>Nombreado</td><td><span class="cmd-inline">.STB</span></td><td>Asigna estilos directamente a objetos o capas, sin depender del color.</td></tr>
+              </tbody>
+            </table>
+
+            <p>El estilo más común es el <strong>.CTB</strong>. El más usado se llama <strong>monochrome.ctb</strong>: imprime todo en negro puro usando grosores variables según el color de la capa.</p>
+
+            <h3>Configurar un estilo de trazado</h3>
+            <ol>
+              <li>Escribe <span class="cmd-inline">STYLESMANAGER</span> o ve a Archivo → Estilos de trazado.</li>
+              <li>Haz doble clic sobre el estilo que quieres modificar (o crea uno nuevo).</li>
+              <li>Para cada color (1–255), define: color de salida (negro, gris, etc.), grosor de línea, y si se aplica screening (atenuación).</li>
+            </ol>
+
+            <div class="callout warn">
+              <span class="callout-title">Antes de imprimir</span>
+              Siempre verifica que el estilo de trazado seleccionado en el diálogo PLOT sea el correcto. Un error común es imprimir sin estilo asignado y obtener un plano con colores y grosores uniformes.
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 8. Campos (Fields) -->
+          <section id="campos" data-topic="nivel3-campos">
+            <h2><span class="sec-num">8</span> Campos (Fields)</h2>
+            <p>Un <strong>campo</strong> es un texto que se actualiza automáticamente con información del dibujo: fecha de modificación, nombre de archivo, área de un polígono, autor, etc. Son esenciales para cajetines y tablas dinámicas.</p>
+
+            <h3>Campo más usados</h3>
+            <table class="table-cad">
+              <thead><tr><th>Campo</th><th>Categoría</th><th>Qué muestra</th></tr></thead>
+              <tbody>
+                <tr><td>Nombre de archivo</td><td>Documento</td><td>El nombre del archivo .DWG actual.</td></tr>
+                <tr><td>Fecha de creación</td><td>Documento</td><td>La fecha y hora de creación del archivo.</td></tr>
+                <tr><td>Fecha de modificación</td><td>Documento</td><td>Cuando se guardó por última vez.</td></tr>
+                <tr><td>Autor</td><td>Documento</td><td>El nombre configurado en las preferencias.</td></tr>
+                <tr><td>Área de un objeto</td><td>Objeto</td><td>El área calculada de una polilínea, círculo o región cerrada.</td></tr>
+                <tr><td>Longitud</td><td>Objeto</td><td>La longitud de una polilínea o línea.</td></tr>
+              </tbody>
+            </table>
+
+            <h3>Insertar un campo</h3>
+            <ol>
+              <li>Escribe un texto con <span class="cmd-inline">MTEXT</span> y haz clic derecho → <strong>Insertar campo</strong>.</li>
+              <li>Selecciona la categoría y el campo específico.</li>
+              <li>Configura el formato (fecha, decimales) y acepta.</li>
+              <li>Para actualizar todos los campos del dibujo, escribe <span class="cmd-inline">UPDATEFIELD</span>.</li>
+            </ol>
+
+            <div class="callout">
+              <span class="callout-title">Uso práctico</span>
+              En el cajetín de un plano, el campo de "Fecha" se actualiza solo cada vez que guardas. Nunca tendrás que escribir la fecha manualmente en cada impresión.
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 9. Xref avanzado -->
+          <section id="xref-avanzado" data-topic="nivel3-xref-avanzado">
+            <h2><span class="sec-num">9</span> Gestión avanzada de referencias externas (Xref)</h2>
+            <p>Ya viste en el tema 5 qué es una Xref. Aquí profundizamos en las opciones más avanzadas que necesitas en proyectos colaborativos reales.</p>
+
+            <h3>Adjuntar vs. Enlazar</h3>
+            <table class="table-cad">
+              <thead><tr><th>Opción</th><th>Comportamiento</th><th>Cuándo usarla</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Adjuntar (Attach)</strong></td><td>La Xref se referencia pero no se fusiona. Se actualiza cuando el archivo original cambia.</td><td>Proyectos colaborativos donde otros dibujantes modifican el archivo referenciado.</td></tr>
+                <tr><td><strong>Enlazar (Bind)</strong></td><td>Fusiona la Xref al dibujo actual como bloques. Pierde la referencia dinámica.</td><td>Cuando necesitas enviar el archivo final sin referencias externas.</td></tr>
+              </tbody>
+            </table>
+
+            <h3>Overlay vs. Attach en Xrefs encadenadas</h3>
+            <p>Si tu dibujo A referencia a B, y B referencia a C, puedes elegir si la referencia de B a C se hereda cuando alguien abre A:</p>
+            <ul>
+              <li><strong>Overlay:</strong> la referencia NO se hereda. A ve B, pero no ve la C que referencia B.</li>
+              <li><strong>Attach:</strong> la referencia SÍ se hereda. A ve B y también ve la C que referencia B.</li>
+            </ul>
+
+            <div class="callout">
+              <span class="callout-title">Recomendación</span>
+              Usa <strong>Overlay</strong> por defecto para evitar que se creen cadenas de referencias infinitas. Solo usa <strong>Attach</strong> cuando realmente necesites que la referencia se propague.
+            </div>
+
+            <h3>Recortar una Xref</h3>
+            <p>El comando <span class="cmd-inline">XCLIP</span> te permite definir una región rectangular o poligonal de la Xref que se mostrará, ocultando el resto. Es útil cuando solo necesitas una porción del plano referenciado.</p>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- Ejemplos visuales inline -->
+          <section class="inline-visual-examples" style="margin-top:2rem">
+            <div class="visual-examples">
+              <h3 style="font-size:1.3rem;margin-bottom:1.2rem" data-i18n="vis.levelTitle">Ejemplos visuales del nivel</h3>
+              <div class="diagram-grid cols-2">
+
+                <div class="diagram-card" data-aos="fade-up">
+                  <div class="diagram-card-head"><h4><span class="cmd-badge">Capas</span> Concepto de capas</h4><span class="key-inline">LA</span></div>
+                  <div class="diagram-card-body">
+                    <div class="diagram-canvas">
+                      <svg viewBox="0 0 280 140">
+                        <text class="cad-label-cmd" x="5" y="14" style="font-size:9px">Capas = acetatos transparentes apilados</text>
+                        <rect x="15" y="20" width="80" height="65" fill="none" stroke="var(--layer-red)" stroke-dasharray="4,3" rx="2"/>
+                        <text class="cad-label" x="22" y="35" style="fill:var(--layer-red);font-size:9px">Ejes</text>
+                        <line x1="15" y1="52" x2="95" y2="52" stroke="var(--layer-red)" stroke-dasharray="6,3" stroke-width="1.5"/>
+                        <line x1="55" y1="20" x2="55" y2="85" stroke="var(--layer-red)" stroke-dasharray="6,3" stroke-width="1.5"/>
+                        <rect x="55" y="20" width="80" height="65" fill="none" stroke="var(--layer-yellow)" stroke-width="2" rx="2"/>
+                        <text class="cad-label" x="62" y="35" style="fill:var(--layer-yellow);font-size:9px">Muros</text>
+                        <rect x="63" y="38" width="22" height="14" fill="none" stroke="var(--layer-yellow)" stroke-width="2" rx="1"/>
+                        <rect x="95" y="38" width="22" height="14" fill="none" stroke="var(--layer-yellow)" stroke-width="2" rx="1"/>
+                        <rect x="95" y="20" width="80" height="65" fill="none" stroke="var(--layer-green)" rx="2"/>
+                        <text class="cad-label" x="105" y="35" style="fill:var(--layer-green);font-size:9px">Cotas</text>
+                        <line class="cad-dim" x1="103" y1="78" x2="167" y2="78" stroke="var(--layer-green)"/>
+                        <text class="cad-dim-text" x="120" y="92" style="fill:var(--layer-green);font-size:9px">8.00 m</text>
+                        <rect x="135" y="20" width="80" height="65" fill="none" stroke="var(--layer-cyan)" stroke-dasharray="2,2" rx="2"/>
+                        <text class="cad-label" x="142" y="35" style="fill:var(--layer-cyan);font-size:9px">Texto</text>
+                        <text class="cad-label" x="145" y="60" style="font-size:9px">PLANTA 1</text>
+                        <rect x="175" y="20" width="80" height="65" fill="none" stroke="var(--amber)" stroke-dasharray="1,3" rx="2"/>
+                        <text class="cad-label" x="180" y="35" style="fill:var(--amber);font-size:9px">Simbolos</text>
+                        <circle cx="200" cy="55" r="6" fill="none" stroke="var(--amber)" stroke-width="1.5"/>
+                        <text class="cad-label" x="5" y="108" style="font-size:8px;fill:var(--layer-red)">■ Ejes</text>
+                        <text class="cad-label" x="55" y="108" style="font-size:8px;fill:var(--layer-yellow)">■ Muros</text>
+                        <text class="cad-label" x="110" y="108" style="font-size:8px;fill:var(--layer-green)">■ Cotas</text>
+                        <text class="cad-label" x="165" y="108" style="font-size:8px;fill:var(--layer-cyan)">■ Texto</text>
+                        <text class="cad-label" x="215" y="108" style="font-size:8px;fill:var(--amber)">■ Símbolos</text>
+                        <text class="cad-label" x="5" y="125" style="font-size:8px">Cada categoría → su propia capa → su color/grosor</text>
+                      </svg>
+                    </div>
+                    <div class="callout" style="margin-top:.8rem">
+                      <span class="callout-title">Regla de oro</span>
+                      <span>Cada categoría (ejes, muros, cotas) va en su capa propia con color único. Nunca pongas todo en la capa 0.</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="diagram-card" data-aos="fade-up" data-aos-delay="60">
+                  <div class="diagram-card-head"><h4>Espacio modelo vs. papel</h4></div>
+                  <div class="diagram-card-body">
+                    <div class="diagram-canvas">
+                      <svg viewBox="0 0 280 130">
+                        <rect x="5" y="5" width="115" height="105" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="3"/>
+                        <text class="cad-label-cmd" x="12" y="18" style="font-size:8px">Model (1:1)</text>
+                        <rect class="cad-fill" x="12" y="24" width="98" height="78" rx="2"/>
+                        <text class="cad-label" x="28" y="50" style="font-size:9px">Tu dibujo aquí</text>
+                        <text class="cad-label" x="22" y="68" style="font-size:8px">escala REAL</text>
+                        <text class="cad-label" x="22" y="90" style="font-size:8px;fill:var(--layer-cyan)">1 metro = 1 unidad</text>
+                        <text class="cad-label-cmd" x="132" y="18" style="font-size:8px">Paper / Layout</text>
+                        <rect x="130" y="5" width="145" height="105" fill="var(--bg-surface)" stroke="var(--border-soft)" rx="3"/>
+                        <rect x="138" y="12" width="65" height="50" fill="none" stroke="var(--layer-cyan)" stroke-dasharray="3,2" rx="1"/>
+                        <text class="cad-label" x="144" y="36" style="font-size:7px">VP 1:50</text>
+                        <rect x="138" y="12" width="65" height="50" fill="var(--cad-fill)" fill-opacity="0.08" rx="1"/>
+                        <rect x="210" y="12" width="55" height="35" fill="none" stroke="var(--layer-cyan)" stroke-dasharray="3,2" rx="1"/>
+                        <text class="cad-label" x="218" y="30" style="font-size:7px">VP 1:100</text>
+                        <rect x="138" y="68" width="127" height="35" fill="none" stroke="var(--layer-green)" rx="1"/>
+                        <text class="cad-label" x="172" y="90" style="font-size:8px">Title block + Info</text>
+                        <polygon class="cad-arrow" points="118,55 128,55" style="fill:var(--amber)"/>
+                        <text class="cad-label" x="118" y="48" style="font-size:7px;fill:var(--amber)">referencia</text>
+                      </svg>
+                    </div>
+                    <div class="callout" style="margin-top:.8rem">
+                      <span class="callout-title">Flujo correcto</span>
+                      <span>Dibuja a 1:1 en modelo → crea Layout → añade Viewports con escala → configura Title Block → imprime.</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="diagram-card" data-aos="fade-up">
+                  <div class="diagram-card-head"><h4><span class="cmd-badge">Organización</span> Plot Styles</h4></div>
+                  <div class="diagram-card-body">
+                    <p data-i18n="vis.plotstyle.desc">Controlan cómo se imprime cada capa: grosor de línea, color de impresión y trama.</p>
+                    <div class="diagram-canvas">
+                      <svg viewBox="0 0 280 90">
+                        <text class="cad-label-cmd" x="5" y="14" style="font-size:8px">Pantalla vs. Impresión:</text>
+                        <rect x="5" y="20" width="65" height="55" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="2"/>
+                        <text class="cad-label-cmd" x="12" y="32" style="font-size:7px">Pantalla</text>
+                        <line x1="12" y1="55" x2="58" y2="55" stroke="var(--layer-red)" stroke-width="1"/>
+                        <line x1="12" y1="65" x2="58" y2="65" stroke="var(--layer-yellow)" stroke-width="1"/>
+                        <text class="cad-label" x="10" y="78" style="font-size:7px;fill:var(--layer-red)">rojo = eje</text>
+                        <text class="cad-label" x="10" y="88" style="font-size:7px;fill:var(--layer-yellow)">amarillo = muro</text>
+                        <text class="cad-label-cmd" x="90" y="45" style="font-size:14px;fill:var(--amber)">→</text>
+                        <text class="cad-label-cmd" x="80" y="58" style="font-size:7px">.CTB</text>
+                        <rect x="110" y="20" width="65" height="55" fill="white" stroke="var(--border-soft)" rx="2"/>
+                        <text class="cad-label-cmd" x="117" y="32" style="font-size:7px;fill:black">Impresión</text>
+                        <line x1="117" y1="55" x2="163" y2="55" stroke="black" stroke-width="0.5"/>
+                        <line x1="117" y1="65" x2="163" y2="65" stroke="black" stroke-width="2.5"/>
+                        <text class="cad-label" x="115" y="78" style="font-size:7px;fill:black">negro = fino</text>
+                        <text class="cad-label" x="115" y="88" style="font-size:7px;fill:black">negro = grueso</text>
+                        <rect x="190" y="20" width="85" height="55" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="2"/>
+                        <text class="cad-label-cmd" x="197" y="32" style="font-size:7px">Regla simple:</text>
+                        <text class="cad-label" x="197" y="48" style="font-size:7px">Color rojo → 0.1mm</text>
+                        <text class="cad-label" x="197" y="60" style="font-size:7px">Color amarillo → 0.5mm</text>
+                        <text class="cad-label" x="197" y="72" style="font-size:7px">Todo → negro</text>
+                      </svg>
+                    </div>
+                    <div class="callout" style="margin-top:.8rem">
+                      <span class="callout-title">Tip</span>
+                      <span>Usa .CTB (por color) para proyectos simples o .STB (por estilo) para control avanzado. Configura en Page Setup.</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="diagram-card" data-aos="fade-up" data-aos-delay="60">
+                  <div class="diagram-card-head"><h4><span class="cmd-badge">Organización</span> Referencias externas (Xref)</h4></div>
+                  <div class="diagram-card-body">
+                    <p data-i18n="vis.xref.desc">Vincula archivos DWG externos como referencias. Se actualizan automáticamente cuando el original cambia.</p>
+                    <div class="diagram-canvas">
+                      <svg viewBox="0 0 280 100">
+                        <text class="cad-label-cmd" x="5" y="14" style="font-size:8px">Trabajo en equipo con Xref:</text>
+                        <rect x="5" y="20" width="60" height="50" fill="var(--bg-elevated)" stroke="var(--layer-cyan)" rx="2"/>
+                        <text class="cad-label-cmd" x="12" y="35" style="font-size:7px">Arquitecto</text>
+                        <text class="cad-label-cmd" x="12" y="48" style="font-size:7px">planta.dwg</text>
+                        <rect x="5" y="72" width="60" height="22" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+                        <text class="cad-label-cmd" x="10" y="87" style="font-size:7px">Estructural</text>
+                        <polygon class="cad-arrow" points="68,45 82,45" style="fill:var(--amber)"/>
+                        <polygon class="cad-arrow" points="68,83 82,83" style="fill:var(--amber)"/>
+                        <rect x="85" y="20" width="110" height="74" fill="var(--bg-elevated)" stroke="var(--layer-yellow)" stroke-width="2" rx="3"/>
+                        <text class="cad-label-cmd" x="92" y="35" style="font-size:8px">Plano colectivo</text>
+                        <text class="cad-label-cmd" x="92" y="48" style="font-size:7px">colectivo.dwg</text>
+                        <rect x="92" y="55" width="95" height="12" fill="none" stroke="var(--layer-cyan)" stroke-dasharray="2,2" rx="1"/>
+                        <text class="cad-label" x="96" y="64" style="font-size:7px">Xref: planta.dwg</text>
+                        <rect x="92" y="72" width="95" height="12" fill="none" stroke="var(--layer-green)" stroke-dasharray="2,2" rx="1"/>
+                        <text class="cad-label" x="96" y="81" style="font-size:7px">Xref: estructura.dwg</text>
+                        <rect x="210" y="30" width="65" height="55" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="2"/>
+                        <text class="cad-label-cmd" x="217" y="48" style="font-size:7px">Cada uno</text>
+                        <text class="cad-label-cmd" x="217" y="60" style="font-size:7px">edita su parte</text>
+                        <text class="cad-label" x="217" y="78" style="font-size:7px;fill:var(--layer-cyan)">auto-actualiza</text>
+                      </svg>
+                    </div>
+                    <div class="callout" style="margin-top:.8rem">
+                      <span class="callout-title">Tip</span>
+                      <span>Ideal para trabajo en equipo: cada profesional actualiza su archivo y el plano colectivo se refresca al abrirlo.</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
         </article>
 
         <!-- Navegación anterior / siguiente -->
@@ -330,7 +580,9 @@
         <ul class="list-unstyled">
           <li><a href="nivel-1-fundamentos.html">Fundamentos</a></li>
           <li><a href="nivel-2-dibujo-2d.html">Dibujo 2D</a></li>
+          <li><a href="nivel-3-organizacion.html">Organización</a></li>
           <li><a href="nivel-4-modelado-3d.html">Modelado 3D</a></li>
+          <li><a href="nivel-5-avanzado.html">Nivel experto</a></li>
         </ul>
       </div>
       <div class="col-6 col-lg-2">

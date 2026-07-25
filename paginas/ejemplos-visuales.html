@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejemplos visuales de comandos — AutoCAD Guía</title>
+<meta name="description" content="Diagramas visuales interactivos que muestran cómo funcionan los comandos más importantes de AutoCAD: LINE, OFFSET, TRIM, FILLET, MIRROR, ARRAY y más.">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-cad navbar-expand-lg">
+  <div class="container container-xl">
+    <a class="navbar-brand brand-cad" href="../index.html">
+      <span class="brand-mark"></span>
+      <span>AutoCAD<small class="d-block" data-i18n-html="brand.sub">Guía · Teoría &amp; Práctica</small></span>
+    </a>
+    <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
+      <i class="bi bi-list fs-4"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navCad">
+      <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../index.html" data-i18n="nav.home">Inicio</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-cad dropdown-toggle" href="#" data-bs-toggle="dropdown" data-i18n="nav.levels">Niveles</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="nivel-1-fundamentos.html">Nivel 1 · Fundamentos</a></li>
+            <li><a class="dropdown-item" href="nivel-2-dibujo-2d.html">Nivel 2 · Dibujo 2D</a></li>
+            <li><a class="dropdown-item" href="nivel-3-organizacion.html">Nivel 3 · Organización</a></li>
+            <li><a class="dropdown-item" href="nivel-4-modelado-3d.html">Nivel 4 · Modelado 3D</a></li>
+            <li><a class="dropdown-item" href="nivel-5-avanzado.html">Nivel 5 · Avanzado</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="comandos.html" data-i18n="nav.commands">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad active" href="ejemplos-visuales.html" data-i18n="nav.visual">Ejemplos visuales</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="recursos.html" data-i18n="nav.resources">Recursos gratis</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="faq.html" data-i18n="nav.faq">FAQ</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-2">
+        <span class="coord-readout d-none d-lg-inline-flex">X: <span id="coordX">000.00</span>&nbsp; Y: <span id="coordY">000.00</span></span>
+        <button class="lang-toggle" id="langToggle" title="Cambiar idioma" data-i18n-title="ui.lang">
+          <i class="bi bi-translate lang-toggle-flag"></i>
+          <span class="lang-toggle-text">EN</span>
+        </button>
+        <button class="icon-btn" id="searchToggle" title="Buscar" data-i18n-title="ui.search"><i class="bi bi-search"></i></button>
+        <button class="icon-btn" id="themeToggle" title="Cambiar tema" data-i18n-title="ui.theme"><i class="bi bi-moon-stars"></i></button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="visual-examples-hero">
+  <div class="container container-xl position-relative">
+    <p class="eyebrow" data-i18n="vis.eyebrow">Visual &amp; interactivo</p>
+    <h1 style="font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.1;margin-bottom:.8rem" data-i18n="vis.title">Ejemplos visuales de comandos</h1>
+    <p style="color:var(--text-muted);font-size:1.05rem;max-width:600px;margin-bottom:2rem" data-i18n="vis.desc">Diagramas paso a paso que muestran exactamente qué hace cada comando: antes, después y cómo llegar ahí.</p>
+
+    <div class="cmd-filters" id="visFilters">
+      <button class="cmd-filter-btn active" data-filter="todos" data-i18n="vis.filter.all">Todos</button>
+      <button class="cmd-filter-btn" data-filter="dibujo" data-i18n="vis.filter.dibujo">Dibujo</button>
+      <button class="cmd-filter-btn" data-filter="modificacion" data-i18n="vis.filter.mod">Modificación</button>
+      <button class="cmd-filter-btn" data-filter="precision" data-i18n="vis.filter.precision">Precisión</button>
+      <button class="cmd-filter-btn" data-filter="capas" data-i18n="vis.filter.capas">Capas</button>
+      <button class="cmd-filter-btn" data-filter="3d" data-i18n="vis.filter.3d">3D</button>
+    </div>
+  </div>
+</header>
+
+<!-- GRID DE DIAGRAMAS -->
+<section style="padding:3rem 0 5rem">
+  <div class="container container-xl">
+    <div class="diagram-grid cols-2" id="visGrid">
+
+      <!-- ====== LINE ====== -->
+      <div class="diagram-card" data-cat="dibujo" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Dibujo</span> LINE</h4>
+          <span class="key-inline">L</span>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="vis.line.desc">Dibuja segmentos de línea recta entre puntos. Cada clic define el siguiente vértice.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label" data-i18n="vis.step.before">Antes</span>
+              <svg viewBox="0 0 200 100">
+                <circle class="cad-point" cx="30" cy="70" r="4"/>
+                <circle class="cad-point" cx="100" cy="25" r="4"/>
+                <circle class="cad-point" cx="170" cy="60" r="4"/>
+                <text class="cad-label" x="25" y="90">A</text>
+                <text class="cad-label" x="95" y="18">B</text>
+                <text class="cad-label" x="165" y="80">C</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label" data-i18n="vis.step.after">Después</span>
+              <svg viewBox="0 0 200 100">
+                <line class="cad-line" x1="30" y1="70" x2="100" y2="25"/>
+                <line class="cad-line" x1="100" y1="25" x2="170" y2="60"/>
+                <circle class="cad-point" cx="30" cy="70" r="4"/>
+                <circle class="cad-point" cx="100" cy="25" r="4"/>
+                <circle class="cad-point" cx="170" cy="60" r="4"/>
+                <text class="cad-label" x="25" y="90">A</text>
+                <text class="cad-label" x="95" y="18">B</text>
+                <text class="cad-label" x="165" y="80">C</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="vis.tip">Tip</span>
+            <span data-i18n="vis.line.tip">Usa ORTO (F8) para que los segmentos salgan perfectamente horizontales o verticales.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== OFFSET ====== -->
+      <div class="diagram-card" data-cat="modificacion" data-aos="fade-up" data-aos-delay="60">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Modificación</span> OFFSET</h4>
+          <span class="key-inline">O</span>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="vis.offset.desc">Crea una copia paralela de un objeto a una distancia exacta. Fundamental para muros y estructuras.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label" data-i18n="vis.step.original">Original</span>
+              <svg viewBox="0 0 200 100">
+                <line class="cad-line" x1="20" y1="50" x2="180" y2="50"/>
+                <text class="cad-label" x="85" y="42">eje del muro</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label" data-i18n="vis.step.result">Resultado</span>
+              <svg viewBox="0 0 200 100">
+                <line class="cad-line-old" x1="20" y1="50" x2="180" y2="50"/>
+                <line class="cad-line-new" x1="20" y1="30" x2="180" y2="30"/>
+                <line class="cad-line-new" x1="20" y1="70" x2="180" y2="70"/>
+                <text class="cad-label" x="75" y="22" data-i18n="vis.offset.outer">pared exterior</text>
+                <text class="cad-label" x="75" y="88" data-i18n="vis.offset.inner">pared interior</text>
+                <line class="cad-dim" x1="185" y1="30" x2="185" y2="50"/>
+                <text class="cad-dim-text" x="188" y="42">10cm</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="vis.tip">Tip</span>
+            <span data-i18n="vis.offset.tip">Después de OFFSET, usa TRIM para limpiar las esquinas donde los muros se cruzan.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== TRIM ====== -->
+      <div class="diagram-card" data-cat="modificacion" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Modificación</span> TRIM</h4>
+          <span class="key-inline">TR</span>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="vis.trim.desc">Recorta la parte de un objeto que sobrepasa un límite de referencia.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label" data-i18n="vis.step.before">Antes</span>
+              <svg viewBox="0 0 200 100">
+                <line class="cad-line" x1="20" y1="50" x2="180" y2="50"/>
+                <line class="cad-line" x1="100" y1="10" x2="100" y2="90"/>
+                <rect class="cad-trim-zone" x="100" y="42" width="80" height="16" rx="2"/>
+                <text class="cad-label" x="125" y="38" style="fill:var(--layer-red)" data-i18n="vis.trim.cut">recortar</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label" data-i18n="vis.step.result">Resultado</span>
+              <svg viewBox="0 0 200 100">
+                <line class="cad-line" x1="20" y1="50" x2="100" y2="50"/>
+                <line class="cad-line" x1="100" y1="10" x2="100" y2="90"/>
+                <circle class="cad-point-cyan" cx="100" cy="50" r="3"/>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="vis.tip">Tip</span>
+            <span data-i18n="vis.trim.tip">En versiones recientes, presiona Enter después de TRIM y AutoCAD usa todos los objetos como límite automáticamente.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== FILLET ====== -->
+      <div class="diagram-card" data-cat="modificacion" data-aos="fade-up" data-aos-delay="60">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Modificación</span> FILLET</h4>
+          <span class="key-inline">F</span>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="vis.fillet.desc">Une dos líneas con un arco de radio definido. Con radio 0, une en esquina perfecta.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label" data-i18n="vis.step.before">Antes</span>
+              <svg viewBox="0 0 200 100">
+                <line class="cad-line" x1="20" y1="50" x2="120" y2="50"/>
+                <line class="cad-line" x1="120" y1="10" x2="120" y2="90"/>
+                <text class="cad-label" x="128" y="50" data-i18n="vis.fillet.gap">sin unir</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label" data-i18n="vis.step.result">Resultado</span>
+              <svg viewBox="0 0 200 100">
+                <line class="cad-line" x1="20" y1="50" x2="95" y2="50"/>
+                <path class="cad-arc" d="M 95,50 A 25,25 0 0,1 120,75"/>
+                <line class="cad-line" x1="120" y1="75" x2="120" y2="90"/>
+                <text class="cad-label" x="130" y="42" data-i18n="vis.fillet.r">R = 25</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="vis.tip">Tip</span>
+            <span data-i18n="vis.fillet.tip">Para unir dos líneas sueltas en una esquina exacta, pon FILLET con radio = 0 y selecciona ambas líneas.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== MIRROR ====== -->
+      <div class="diagram-card" data-cat="modificacion" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Modificación</span> MIRROR</h4>
+          <span class="key-inline">MI</span>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="vis.mirror.desc">Refleja objetos respecto a un eje simétrico definido por dos puntos.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label" data-i18n="vis.step.original">Original</span>
+              <svg viewBox="0 0 200 100">
+                <line class="cad-line" x1="30" y1="20" x2="30" y2="80"/>
+                <line class="cad-line" x1="30" y1="20" x2="80" y2="40"/>
+                <line class="cad-line" x1="30" y1="80" x2="80" y2="40"/>
+                <line class="cad-line-dim" x1="100" y1="5" x2="100" y2="95"/>
+                <text class="cad-label" x="105" y="50" data-i18n="vis.mirror.axis">eje</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label" data-i18n="vis.step.result">Resultado</span>
+              <svg viewBox="0 0 200 100">
+                <line class="cad-line" x1="30" y1="20" x2="30" y2="80"/>
+                <line class="cad-line" x1="30" y1="20" x2="80" y2="40"/>
+                <line class="cad-line" x1="30" y1="80" x2="80" y2="40"/>
+                <line class="cad-line-dim" x1="100" y1="5" x2="100" y2="95"/>
+                <line class="cad-line-new" x1="170" y1="20" x2="170" y2="80"/>
+                <line class="cad-line-new" x1="170" y1="20" x2="120" y2="40"/>
+                <line class="cad-line-new" x1="170" y1="80" x2="120" y2="40"/>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="vis.tip">Tip</span>
+            <span data-i18n="vis.mirror.tip">Útil para plantas simétricas: dibuja la mitad izquierda y refleja todo con MIRROR.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== ARRAY ====== -->
+      <div class="diagram-card" data-cat="modificacion" data-aos="fade-up" data-aos-delay="60">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Modificación</span> ARRAY</h4>
+          <span class="key-inline">AR</span>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="vis.array.desc">Repite objetos en filas y columnas, en círculo o a lo largo de una ruta.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label" data-i18n="vis.step.original">Original</span>
+              <svg viewBox="0 0 200 100">
+                <rect class="cad-fill" x="20" y="35" width="30" height="30" rx="3"/>
+                <text class="cad-label" x="25" y="55">1</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label">ARRAY 3×4</span>
+              <svg viewBox="0 0 200 100">
+                <rect class="cad-fill" x="10" y="10" width="22" height="22" rx="2"/>
+                <rect class="cad-fill" x="42" y="10" width="22" height="22" rx="2"/>
+                <rect class="cad-fill" x="74" y="10" width="22" height="22" rx="2"/>
+                <rect class="cad-fill" x="10" y="42" width="22" height="22" rx="2"/>
+                <rect class="cad-fill" x="42" y="42" width="22" height="22" rx="2"/>
+                <rect class="cad-fill" x="74" y="42" width="22" height="22" rx="2"/>
+                <rect class="cad-fill" x="10" y="74" width="22" height="22" rx="2"/>
+                <rect class="cad-fill" x="42" y="74" width="22" height="22" rx="2"/>
+                <rect class="cad-fill" x="74" y="74" width="22" height="22" rx="2"/>
+                <text class="cad-label" x="110" y="55" data-i18n="vis.array.repeat">×9 repeticiones</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="vis.tip">Tip</span>
+            <span data-i18n="vis.array.tip">ARRAY POLAR distribuye objetos en círculo: ideal para tornillos, columnas circulares o asientos.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== OSNAP ====== -->
+      <div class="diagram-card" data-cat="precision" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Precisión</span> OSNAP</h4>
+          <span class="key-inline">F3</span>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="vis.osnap.desc">Engancha el cursor a puntos exactos de los objetos: extremo, medio, centro, intersección.</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 300 140">
+              <!-- Línea base -->
+              <line class="cad-line" x1="20" y1="70" x2="280" y2="70"/>
+              <!-- Puntos de snap -->
+              <rect class="cad-point" x="16" y="66" width="8" height="8" rx="1"/>
+              <text class="cad-label-cmd" x="8" y="58">Extremo</text>
+              <rect class="cad-point-cyan" x="146" y="66" width="8" height="8" rx="1" transform="rotate(45,150,70)"/>
+              <text class="cad-label-cmd" x="130" y="58">Medio</text>
+              <rect class="cad-point" x="276" y="66" width="8" height="8" rx="1"/>
+              <text class="cad-label-cmd" x="262" y="58">Extremo</text>
+              <!-- Círculo con snap centro -->
+              <circle class="cad-circle" cx="220" cy="110" r="22"/>
+              <rect class="cad-point-cyan" x="217" y="107" width="6" height="6" rx="1"/>
+              <text class="cad-label-cmd" x="207" y="143">Centro</text>
+              <!-- Intersección -->
+              <line class="cad-line" x1="60" y1="30" x2="120" y2="100"/>
+              <rect class="cad-point" x="82" y="60" width="7" height="7" rx="1" transform="rotate(45,86,64)"/>
+              <text class="cad-label-cmd" x="90" y="68">Intersec.</text>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="vis.tip">Tip</span>
+            <span data-i18n="vis.osnap.tip">Mantén F3 activo siempre. Sin OSNAP es imposible dibujar con precisión real.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== LAYER ====== -->
+      <div class="diagram-card" data-cat="capas" data-aos="fade-up" data-aos-delay="60">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Capas</span> LAYERS</h4>
+          <span class="key-inline">LA</span>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="vis.layer.desc">Las capas son como acetatos transparentes: agrupan objetos por categoría y controlan color, visibilidad y grosor.</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 300 140">
+              <!-- Capa de ejes -->
+              <line class="cad-line-old" x1="30" y1="70" x2="270" y2="70" stroke="var(--layer-red)" stroke-dasharray="8,4"/>
+              <line class="cad-line-old" x1="150" y1="10" x2="150" y2="130" stroke="var(--layer-red)" stroke-dasharray="8,4"/>
+              <text class="cad-label" x="15" y="18" style="fill:var(--layer-red)">Ejes</text>
+              <!-- Capa de muros -->
+              <rect x="50" y="30" width="80" height="80" fill="none" stroke="var(--layer-yellow)" stroke-width="3" rx="2"/>
+              <rect x="170" y="30" width="80" height="80" fill="none" stroke="var(--layer-yellow)" stroke-width="3" rx="2"/>
+              <text class="cad-label" x="65" y="22" style="fill:var(--layer-yellow)">Muros</text>
+              <!-- Capa de cotas -->
+              <line class="cad-dim" x1="50" y1="120" x2="130" y2="120" stroke="var(--layer-green)"/>
+              <text class="cad-dim-text" x="75" y="135" style="fill:var(--layer-green)">8.00 m</text>
+              <line class="cad-dim" x1="170" y1="120" x2="250" y2="120" stroke="var(--layer-green)"/>
+              <text class="cad-dim-text" x="195" y="135" style="fill:var(--layer-green)">8.00 m</text>
+              <text class="cad-label" x="240" y="18" style="fill:var(--layer-green)">Cotas</text>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="vis.tip">Tip</span>
+            <span data-i18n="vis.layer.tip">Nunca cambies el color de un objeto individualmente: asigna la capa correcta y deja que la capa controle el color.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== EXTRUDE (3D) ====== -->
+      <div class="diagram-card" data-cat="3d" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">3D</span> EXTRUDE</h4>
+          <span class="key-inline">EXT</span>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="vis.extrude.desc">Empuja un perfil 2D cerrado en línea recta para crear un sólido tridimensional.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label" data-i18n="vis.step.perfil">Perfil 2D</span>
+              <svg viewBox="0 0 200 100">
+                <rect class="cad-fill" x="40" y="25" width="120" height="50" rx="3"/>
+                <text class="cad-label" x="75" y="55" data-i18n="vis.extrude.rect">rectángulo</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label" data-i18n="vis.step.solid3d">Sólido 3D</span>
+              <svg viewBox="0 0 200 120">
+                <!-- Cara frontal -->
+                <rect class="cad-fill" x="30" y="50" width="80" height="45" rx="2"/>
+                <!-- Cara superior (perspectiva) -->
+                <polygon class="cad-fill" points="30,50 55,20 135,20 110,50" style="fill:rgba(53,214,203,.25);stroke:var(--layer-cyan);stroke-width:1.5"/>
+                <!-- Cara lateral -->
+                <polygon class="cad-fill" points="110,50 135,20 135,65 110,95" style="fill:rgba(53,214,203,.15);stroke:var(--layer-cyan);stroke-width:1.5"/>
+                <!-- Flecha de extrusión -->
+                <line class="cad-dim" x1="150" y1="80" x2="150" y2="30" stroke="var(--amber)"/>
+                <polygon class="cad-arrow" points="145,35 150,22 155,35"/>
+                <text class="cad-dim-text" x="158" y="55" style="fill:var(--amber)">altura</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="vis.tip">Tip</span>
+            <span data-i18n="vis.extrude.tip">El perfil debe ser una polilínea cerrada o un region. Si usas LINE sueltas, primero usa JOIN para unirlas.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== UNION (3D) ====== -->
+      <div class="diagram-card" data-cat="3d" data-aos="fade-up" data-aos-delay="60">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">3D</span> UNION / SUBTRACT</h4>
+          <span class="key-inline">UNI / SU</span>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="vis.boolean.desc">Operaciones booleanas: fusionar (UNION) o restar (SUBTRACT) volúmenes de sólidos.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label" data-i18n="vis.step.original">Dos sólidos</span>
+              <svg viewBox="0 0 200 100">
+                <rect class="cad-fill" x="20" y="25" width="90" height="50" rx="2"/>
+                <circle class="cad-fill" cx="140" cy="50" r="28"/>
+                <text class="cad-label" x="35" y="55">A</text>
+                <text class="cad-label" x="133" y="55">B</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label">UNION</span>
+              <svg viewBox="0 0 200 100">
+                <path class="cad-fill-new" d="M20,25 H110 V75 H20 Z M112,22 A28,28 0 1,1 112,78 A28,28 0 1,1 112,22 Z" fill-rule="evenodd"/>
+                <text class="cad-label" x="65" y="55" data-i18n="vis.boolean.fused">un solo sólido</text>
+              </svg>
+            </div>
+          </div>
+          <div class="diagram-steps" style="margin-top:.5rem">
+            <div class="diagram-step">
+              <span class="diagram-step-label" data-i18n="vis.step.original">Mismos sólidos</span>
+              <svg viewBox="0 0 200 100">
+                <rect class="cad-fill" x="20" y="25" width="90" height="50" rx="2"/>
+                <circle class="cad-fill" cx="140" cy="50" r="28"/>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label">SUBTRACT A-B</span>
+              <svg viewBox="0 0 200 100">
+                <path class="cad-fill" d="M20,25 H110 V75 H20 Z M140,50 m-28,0 a28,28 0 1,0 56,0 a28,28 0 1,0 -56,0" fill-rule="evenodd"/>
+                <text class="cad-label" x="50" y="55" data-i18n="vis.boolean.hole">A con hueco de B</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="vis.tip">Tip</span>
+            <span data-i18n="vis.boolean.tip">SUBTRACT es el comando más usado para hacer perforaciones: taladros, vanos de puertas, recortes de material.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== CHAMFER ====== -->
+      <div class="diagram-card" data-cat="modificacion" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Modificación</span> CHAMFER</h4>
+          <span class="key-inline">CHA</span>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="vis.chamfer.desc">Corta las esquinas de dos líneas con un ángulo recto (chaflán). A diferencia de FILLET, no usa arco.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label" data-i18n="vis.step.before">Antes</span>
+              <svg viewBox="0 0 200 100">
+                <line class="cad-line" x1="20" y1="50" x2="100" y2="50"/>
+                <line class="cad-line" x1="100" y1="10" x2="100" y2="90"/>
+                <text class="cad-label" x="108" y="50">esquina recta</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label">Chaflán 15</span>
+              <svg viewBox="0 0 200 100">
+                <line class="cad-line" x1="20" y1="50" x2="85" y2="50"/>
+                <line class="cad-line" x1="100" y1="35" x2="100" y2="90"/>
+                <line class="cad-line" x1="85" y1="50" x2="100" y2="35" style="stroke:var(--amber);stroke-width:2.5"/>
+                <text class="cad-label" x="108" y="28" style="fill:var(--amber)">D=15</text>
+                <text class="cad-label" x="55" y="42" style="font-size:8px;fill:var(--layer-cyan)">corte recto</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="vis.tip">Tip</span>
+            <span data-i18n="vis.chamfer.tip">Útil en piezas mecánicas: define la distancia de chaflán en ambos lados o con ángulo y distancia.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== EXTEND ====== -->
+      <div class="diagram-card" data-cat="modificacion" data-aos="fade-up" data-aos-delay="60">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Modificación</span> EXTEND</h4>
+          <span class="key-inline">EX</span>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="vis.extend.desc">Extiende un objeto hasta tocar un límite de referencia. Es lo opuesto a TRIM.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label" data-i18n="vis.step.before">Antes</span>
+              <svg viewBox="0 0 200 100">
+                <line class="cad-line" x1="20" y1="50" x2="80" y2="50"/>
+                <line class="cad-line" x1="140" y1="10" x2="140" y2="90"/>
+                <text class="cad-label" x="25" y="42" style="font-size:8px;fill:var(--layer-red)">corto</text>
+                <text class="cad-label" x="148" y="50" style="font-size:8px">límite</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label" data-i18n="vis.step.result">Resultado</span>
+              <svg viewBox="0 0 200 100">
+                <line class="cad-line" x1="20" y1="50" x2="140" y2="50"/>
+                <line class="cad-line" x1="140" y1="10" x2="140" y2="90"/>
+                <circle class="cad-point-cyan" cx="140" cy="50" r="3"/>
+                <text class="cad-label" x="55" y="42" style="font-size:8px;fill:var(--layer-green)">extendido hasta el límite</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="vis.tip">Tip</span>
+            <span data-i18n="vis.extend.tip">Selecciona primero el límite (pared) y luego el objeto que quieres alargar.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== STRETCH ====== -->
+      <div class="diagram-card" data-cat="modificacion" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Modificación</span> STRETCH</h4>
+          <span class="key-inline">S</span>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="vis.stretch.desc">Estira o comprime objetos moviendo vértices dentro de una selección cruzada.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label">Selección cruzada</span>
+              <svg viewBox="0 0 200 100">
+                <rect class="cad-fill" x="20" y="25" width="100" height="50" rx="2"/>
+                <rect x="50" y="10" width="75" height="80" fill="var(--layer-red)" fill-opacity="0.12" stroke="var(--layer-red)" stroke-dasharray="4,3" rx="1"/>
+                <text class="cad-label" x="55" y="95" style="font-size:8px;fill:var(--layer-red)">dentro se mueve</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label" data-i18n="vis.step.result">Resultado</span>
+              <svg viewBox="0 0 200 100">
+                <rect class="cad-fill" x="20" y="25" width="160" height="50" rx="2"/>
+                <text class="cad-label" x="65" y="55" style="font-size:8px">estirado 60 unidades</text>
+                <rect x="20" y="25" width="100" height="50" fill="none" stroke="var(--border-soft)" stroke-dasharray="3,2" rx="2"/>
+                <text class="cad-label" x="25" y="20" style="font-size:7px;fill:var(--text-muted)">posición original</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="vis.tip">Tip</span>
+            <span data-i18n="vis.stretch.tip">La selección cruzada (de derecha a izquierda) es clave: solo los vértices dentro del recuadro se mueven.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== CIRCLE ====== -->
+      <div class="diagram-card" data-cat="dibujo" data-aos="fade-up" data-aos-delay="60">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Dibujo</span> CIRCLE</h4>
+          <span class="key-inline">C</span>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="vis.circle.desc">Dibuja un círculo por centro y radio, por diámetro, o por tres puntos.</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 300 120">
+              <text class="cad-label-cmd" x="5" y="16" style="font-size:9px">3 métodos principales:</text>
+              <circle class="cad-point" cx="50" cy="70" r="4"/>
+              <circle class="cad-circle" cx="50" cy="70" r="30"/>
+              <line class="cad-dim" x1="50" y1="70" x2="80" y2="70"/>
+              <text class="cad-dim-text" x="55" y="63" style="font-size:9px">R=30</text>
+              <text class="cad-label-cmd" x="20" y="115" style="font-size:8px">Centro+Radio</text>
+
+              <circle class="cad-point" cx="155" cy="70" r="4"/>
+              <circle class="cad-circle" cx="155" cy="70" r="28"/>
+              <line class="cad-dim" x1="127" y1="70" x2="183" y2="70"/>
+              <text class="cad-dim-text" x="132" y="63" style="font-size:9px">D=56</text>
+              <text class="cad-label-cmd" x="125" y="115" style="font-size:8px">Centro+Diámetro</text>
+
+              <circle class="cad-point" cx="235" cy="35" r="3"/>
+              <circle class="cad-point" cx="268" cy="70" r="3"/>
+              <circle class="cad-point" cx="240" cy="105" r="3"/>
+              <circle cx="252" cy="70" r="32" fill="none" stroke="var(--layer-cyan)" stroke-dasharray="4,3"/>
+              <text class="cad-label-cmd" x="220" y="115" style="font-size:8px">3 Puntos</text>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="vis.tip">Tip</span>
+            <span data-i18n="vis.circle.tip">C+D = círculo por diámetro. Útil cuando conoces el tamaño total, no el radio.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== RECTANGLE ====== -->
+      <div class="diagram-card" data-cat="dibujo" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Dibujo</span> RECTANGLE</h4>
+          <span class="key-inline">REC</span>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="vis.rect.desc">Dibuja un rectángulo a partir de dos esquinas opuestas. Opciones: esquina, centro, área.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label">Punto 1</span>
+              <svg viewBox="0 0 200 100">
+                <circle class="cad-point" cx="20" cy="70" r="4"/>
+                <text class="cad-label" x="8" y="90">esquina A</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label">Punto 2</span>
+              <svg viewBox="0 0 200 100">
+                <circle class="cad-point" cx="20" cy="70" r="4"/>
+                <rect class="cad-fill" x="20" y="20" width="160" height="50" rx="2"/>
+                <circle class="cad-point-cyan" cx="180" cy="20" r="4"/>
+                <text class="cad-label" x="60" y="50" style="font-size:9px">@120,50</text>
+                <text class="cad-label" x="125" y="15" style="font-size:8px;fill:var(--layer-cyan)">esquina B</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="vis.tip">Tip</span>
+            <span data-i18n="vis.rect.tip">Escribe @largo,ancho para dimensiones exactas. Ejemplo: @100,50 crea un rectángulo de 100×50.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== HATCH ====== -->
+      <div class="diagram-card" data-cat="dibujo" data-aos="fade-up" data-aos-delay="60">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Dibujo</span> HATCH</h4>
+          <span class="key-inline">H</span>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="vis.hatch.desc">Rellena un área cerrada con un patrón visual: sólido, rayado, puntos, materiales.</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 300 110">
+              <text class="cad-label-cmd" x="5" y="16" style="font-size:9px">Patrones comunes de sombreado:</text>
+              <rect x="5" y="24" width="60" height="50" fill="var(--layer-yellow)" fill-opacity="0.3" stroke="var(--layer-yellow)" rx="2"/>
+              <text class="cad-label" x="12" y="55" style="font-size:9px;fill:var(--layer-yellow)">SÓLIDO</text>
+              <rect x="75" y="24" width="60" height="50" fill="url(#egHatchDiag)" stroke="var(--border-soft)" rx="2"/>
+              <text class="cad-label" x="80" y="90" style="font-size:8px">ANSI31</text>
+              <rect x="145" y="24" width="60" height="50" fill="url(#egHatchBrick)" stroke="var(--border-soft)" rx="2"/>
+              <text class="cad-label" x="148" y="90" style="font-size:8px">LADRILLO</text>
+              <rect x="215" y="24" width="60" height="50" fill="url(#egHatchDot)" stroke="var(--border-soft)" rx="2"/>
+              <text class="cad-label" x="228" y="90" style="font-size:8px">PUNTOS</text>
+              <text class="cad-label" x="5" y="108" style="font-size:8px">Cada patrón indica un material: concreto, tierra, acero, aislamiento...</text>
+              <defs>
+                <pattern id="egHatchDiag" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                  <line x1="0" y1="0" x2="0" y2="8" stroke="var(--text-muted)" stroke-width="0.8"/>
+                </pattern>
+                <pattern id="egHatchBrick" width="16" height="10" patternUnits="userSpaceOnUse">
+                  <rect width="16" height="10" fill="var(--bg-elevated)"/>
+                  <line x1="0" y1="5" x2="16" y2="5" stroke="var(--text-muted)" stroke-width="0.6"/>
+                  <line x1="8" y1="0" x2="8" y2="5" stroke="var(--text-muted)" stroke-width="0.6"/>
+                  <line x1="0" y1="5" x2="0" y2="10" stroke="var(--text-muted)" stroke-width="0.6"/>
+                </pattern>
+                <pattern id="egHatchDot" width="8" height="8" patternUnits="userSpaceOnUse">
+                  <circle cx="4" cy="4" r="1.2" fill="var(--text-muted)"/>
+                </pattern>
+              </defs>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="vis.tip">Tip</span>
+            <span data-i18n="vis.hatch.tip">El área debe estar completamente cerrada. Si hay un hueco, el hatch se desborda fuera del área.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== MOVE / COPY ====== -->
+      <div class="diagram-card" data-cat="modificacion" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Modificación</span> MOVE / COPY</h4>
+          <span class="key-inline">M / CO</span>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="vis.move.desc">Traslada objetos de un punto base a un destino. COPY crea copias sin eliminar el original.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label">Original</span>
+              <svg viewBox="0 0 200 80">
+                <rect class="cad-fill" x="15" y="20" width="55" height="35" rx="2"/>
+                <circle class="cad-point" cx="15" cy="20" r="3"/>
+                <text class="cad-label" x="22" y="42" style="font-size:8px">base</text>
+                <line class="cad-dim" x1="70" y1="37" x2="120" y2="37" stroke="var(--amber)"/>
+                <polygon class="cad-arrow" points="115,34 125,37 115,40" style="fill:var(--amber)"/>
+                <circle class="cad-point-cyan" cx="120" cy="37" r="3"/>
+                <text class="cad-label" x="125" y="30" style="font-size:8px;fill:var(--layer-cyan)">destino</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label">Resultado</span>
+              <svg viewBox="0 0 200 80">
+                <rect class="cad-fill" x="120" y="20" width="55" height="35" rx="2"/>
+                <text class="cad-label" x="130" y="42" style="font-size:8px">movido</text>
+                <rect x="15" y="20" width="55" height="35" fill="none" stroke="var(--border-soft)" stroke-dasharray="3,2" rx="2"/>
+                <text class="cad-label" x="18" y="42" style="font-size:8px;fill:var(--text-muted)">antes</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="vis.tip">Tip</span>
+            <span data-i18n="vis.move.tip">Activa ORTO (F8) para mover solo en horizontal o vertical con precisión.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== ROTATE ====== -->
+      <div class="diagram-card" data-cat="modificacion" data-aos="fade-up" data-aos-delay="60">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Modificación</span> ROTATE</h4>
+          <span class="key-inline">RO</span>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="vis.rotate.desc">Gira objetos un ángulo definido respecto a un punto base.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label">Original</span>
+              <svg viewBox="0 0 200 100">
+                <rect class="cad-fill" x="20" y="30" width="80" height="40" rx="2"/>
+                <circle class="cad-point" cx="20" cy="70" r="4"/>
+                <text class="cad-label" x="5" y="90">punto base</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label">Rotar 30°</span>
+              <svg viewBox="0 0 200 100">
+                <rect x="20" y="30" width="80" height="40" fill="none" stroke="var(--border-soft)" stroke-dasharray="3,2" rx="2"/>
+                <rect class="cad-fill" x="20" y="30" width="80" height="40" rx="2" transform="rotate(-30,20,70)" style="opacity:0.85"/>
+                <circle class="cad-point" cx="20" cy="70" r="4"/>
+                <path d="M 50,70 A 30,30 0 0,0 46,43" fill="none" stroke="var(--amber)" stroke-width="1.5"/>
+                <text class="cad-label" x="55" y="50" style="font-size:9px;fill:var(--amber)">30°</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="vis.tip">Tip</span>
+            <span data-i18n="vis.rotate.tip">Escribe el ángulo en grados. Usa Reference para girar hasta un alineamiento específico.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-final" data-aos="fade-up">
+  <div class="container container-xl">
+    <p class="eyebrow justify-content-center" data-i18n="vis.cta.eyebrow">¿Listo para practicar?</p>
+    <h2 data-i18n="vis.cta.title">Pon en práctica lo que viste</h2>
+    <p class="text-muted-custom mb-4" data-i18n="vis.cta.desc">Abre cualquier nivel y busca los comandos que te interesan.</p>
+    <a href="nivel-1-fundamentos.html" class="btn-cad-primary"><span data-i18n="vis.cta.btn">Empezar desde cero</span> <i class="bi bi-arrow-right ms-1"></i></a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container container-xl">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <div class="brand-cad mb-2"><span class="brand-mark"></span><span>AutoCAD Guía</span></div>
+        <p data-i18n="footer.disclaimer">Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.levels">Niveles</h6>
+        <ul class="list-unstyled">
+          <li><a href="nivel-1-fundamentos.html">Fundamentos</a></li>
+          <li><a href="nivel-2-dibujo-2d.html">Dibujo 2D</a></li>
+          <li><a href="nivel-3-organizacion.html">Organización</a></li>
+          <li><a href="nivel-4-modelado-3d.html">Modelado 3D</a></li>
+          <li><a href="nivel-5-avanzado.html">Nivel experto</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.guide">Guía</h6>
+        <ul class="list-unstyled">
+          <li><a href="comandos.html">Comandos</a></li>
+          <li><a href="ejemplos-visuales.html">Ejemplos visuales</a></li>
+          <li><a href="recursos.html">Recursos</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.follow">Síguenos</h6>
+        <div class="d-flex gap-2">
+          <a href="#" class="icon-btn"><i class="bi bi-youtube"></i></a>
+          <a href="#" class="icon-btn"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="icon-btn"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-5 mb-4" style="border-color:var(--border-soft)">
+    <p class="mb-0 small" data-i18n="footer.copyright">© 2026 AutoCAD Guía. Proyecto educativo de aprendizaje libre.</p>
+  </div>
+</footer>
+
+<!-- COMMAND LINE BAR -->
+<div class="command-line-bar" id="cmdBar">
+  <div class="command-line-inner">
+    <span class="prompt-sign" data-i18n="ui.command">Comando:</span>
+    <span id="cmd-typed"></span><span class="cursor-blink"></span>
+    <button class="cl-close" id="cmdClose" title="Ocultar" data-i18n-title="ui.hide"><i class="bi bi-x-lg"></i></button>
+  </div>
+</div>
+
+<!-- SEARCH -->
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Buscar en la guía">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="bi bi-search"></i>
+      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar" data-i18n-placeholder="ui.searchPlaceholder">
+      <kbd class="search-kbd">ESC</kbd>
+    </div>
+    <div class="search-results" id="globalSearchResults">
+      <div class="search-empty" data-i18n="ui.typeToSearch">Escribe al menos 2 caracteres para buscar...</div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/main.js"></script>
+<script>
+/* Visual examples page filters */
+(function(){
+  var filters = document.getElementById('visFilters');
+  var grid = document.getElementById('visGrid');
+  if (!filters || !grid) return;
+
+  var buttons = filters.querySelectorAll('.cmd-filter-btn');
+  var cards = grid.querySelectorAll('.diagram-card');
+
+  buttons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      buttons.forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      var filter = btn.getAttribute('data-filter');
+      cards.forEach(function(card){
+        var cat = card.getAttribute('data-cat');
+        card.style.display = (filter === 'todos' || cat === filter) ? '' : 'none';
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>

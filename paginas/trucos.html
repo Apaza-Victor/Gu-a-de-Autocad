@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trucos para dominar AutoCAD — AutoCAD Guía</title>
+<meta name="description" content="Trucos, atajos, estrategias de aprendizaje y consejos prácticos para dominar AutoCAD desde cero hasta nivel experto.">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-cad navbar-expand-lg">
+  <div class="container container-xl">
+    <a class="navbar-brand brand-cad" href="../index.html">
+      <span class="brand-mark"></span>
+      <span>AutoCAD<small class="d-block" data-i18n-html="brand.sub">Guía · Teoría &amp; Práctica</small></span>
+    </a>
+    <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
+      <i class="bi bi-list fs-4"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navCad">
+      <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../index.html" data-i18n="nav.home">Inicio</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-cad dropdown-toggle" href="#" data-bs-toggle="dropdown" data-i18n="nav.levels">Niveles</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="nivel-1-fundamentos.html">Nivel 1 · Fundamentos</a></li>
+            <li><a class="dropdown-item" href="nivel-2-dibujo-2d.html">Nivel 2 · Dibujo 2D</a></li>
+            <li><a class="dropdown-item" href="nivel-3-organizacion.html">Nivel 3 · Organización</a></li>
+            <li><a class="dropdown-item" href="nivel-4-modelado-3d.html">Nivel 4 · Modelado 3D</a></li>
+            <li><a class="dropdown-item" href="nivel-5-avanzado.html">Nivel 5 · Avanzado</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="comandos.html" data-i18n="nav.commands">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="ejemplos-visuales.html" data-i18n="nav.visual">Ejemplos visuales</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad active" href="trucos.html" data-i18n="nav.tips">Trucos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="recursos.html" data-i18n="nav.resources">Recursos gratis</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="faq.html" data-i18n="nav.faq">FAQ</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-2">
+        <span class="coord-readout d-none d-lg-inline-flex">X: <span id="coordX">000.00</span>&nbsp; Y: <span id="coordY">000.00</span></span>
+        <button class="lang-toggle" id="langToggle" title="Cambiar idioma" data-i18n-title="ui.lang">
+          <i class="bi bi-translate lang-toggle-flag"></i>
+          <span class="lang-toggle-text">EN</span>
+        </button>
+        <button class="icon-btn" id="searchToggle" title="Buscar" data-i18n-title="ui.search"><i class="bi bi-search"></i></button>
+        <button class="icon-btn" id="themeToggle" title="Cambiar tema" data-i18n-title="ui.theme"><i class="bi bi-moon-stars"></i></button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="visual-examples-hero">
+  <div class="container container-xl position-relative">
+    <p class="eyebrow" data-i18n="tips.eyebrow">Aprende más rápido</p>
+    <h1 style="font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.1;margin-bottom:.8rem" data-i18n="tips.title">Trucos para dominar AutoCAD</h1>
+    <p style="color:var(--text-muted);font-size:1.05rem;max-width:650px;margin-bottom:2rem" data-i18n="tips.desc">Atajos, estrategias de aprendizaje, errores comunes y consejos prácticos que los profesionales usan todos los días.</p>
+
+    <div class="cmd-filters" id="tipsFilters">
+      <button class="cmd-filter-btn active" data-filter="todos" data-i18n="vis.filter.all">Todos</button>
+      <button class="cmd-filter-btn" data-filter="atajos" data-i18n="tips.filter.shortcuts">Atajos</button>
+      <button class="cmd-filter-btn" data-filter="aprendizaje" data-i18n="tips.filter.learn">Aprendizaje</button>
+      <button class="cmd-filter-btn" data-filter="errores" data-i18n="tips.filter.errors">Errores comunes</button>
+      <button class="cmd-filter-btn" data-filter="flujo" data-i18n="tips.filter.workflow">Flujo de trabajo</button>
+      <button class="cmd-filter-btn" data-filter="avanzado" data-i18n="tips.filter.advanced">Avanzado</button>
+    </div>
+  </div>
+</header>
+
+<!-- GRID DE TRUCOS -->
+<section style="padding:3rem 0 5rem">
+  <div class="container container-xl">
+    <div class="diagram-grid cols-2" id="tipsGrid">
+
+      <!-- ====== ATAJO: ESC ====== -->
+      <div class="diagram-card" data-cat="atajos" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Atajo esencial</span> ESC = tu mejor amigo</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.esc.desc">La tecla ESC cancela cualquier comando activo, deselecciona objetos y te devuelve al estado neutro. Úsala sin miedo.</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 280 80">
+              <rect x="5" y="10" width="80" height="55" fill="var(--bg-elevated)" stroke="var(--layer-red)" rx="3"/>
+              <text class="cad-label-cmd" x="15" y="30" style="font-size:8px;fill:var(--layer-red)">Comando activo</text>
+              <text class="cad-label-cmd" x="15" y="45" style="font-size:7px">OFFSET / TRIM /</text>
+              <text class="cad-label-cmd" x="15" y="55" style="font-size:7px">cualquier cosa...</text>
+              <text class="cad-label" x="20" y="72" style="font-size:7px;fill:var(--layer-red)">atascado</text>
+              <text class="cad-label-cmd" x="100" y="42" style="font-size:18px;fill:var(--amber)">ESC</text>
+              <rect x="130" y="10" width="80" height="55" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="3"/>
+              <text class="cad-label-cmd" x="142" y="30" style="font-size:8px;fill:var(--layer-green)">Estado neutro</text>
+              <text class="cad-label-cmd" x="142" y="45" style="font-size:7px">Listo para nuevo</text>
+              <text class="cad-label-cmd" x="142" y="55" style="font-size:7px">comando</text>
+              <text class="cad-label" x="148" y="72" style="font-size:7px;fill:var(--layer-green)">libre</text>
+              <rect x="220" y="10" width="55" height="55" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="3"/>
+              <text class="cad-label-cmd" x="228" y="30" style="font-size:7px">Otros usos:</text>
+              <text class="cad-label" x="228" y="42" style="font-size:6px">• Deseleccionar</text>
+              <text class="cad-label" x="228" y="52" style="font-size:6px">• Salir de menús</text>
+              <text class="cad-label" x="228" y="62" style="font-size:6px">• Cerrar diálogos</text>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Regla de oro</span>
+            <span>Si no sabes qué está pasando en AutoCAD, presiona ESC tres veces. Siempre funciona.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== ATAJO: F8 ORTO ====== -->
+      <div class="diagram-card" data-cat="atajos" data-aos="fade-up" data-aos-delay="60">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Atajo esencial</span> F8 ORTO on/off</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.orto.desc">ORTO restringe el cursor a movimientos perfectamente horizontales o verticales. Sin él, las líneas nunca son rectas de verdad.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label">ORTO OFF</span>
+              <svg viewBox="0 0 180 70">
+                <line class="cad-line" x1="15" y1="55" x2="165" y2="15"/>
+                <circle class="cad-point" cx="15" cy="55" r="3"/>
+                <circle class="cad-point-cyan" cx="165" cy="15" r="3"/>
+                <text class="cad-label" x="50" y="28" style="font-size:8px;fill:var(--layer-red)">cualquier ángulo</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label">ORTO ON (F8)</span>
+              <svg viewBox="0 0 180 70">
+                <line class="cad-line" x1="15" y1="55" x2="165" y2="55"/>
+                <circle class="cad-point" cx="15" cy="55" r="3"/>
+                <circle class="cad-point-cyan" cx="165" cy="55" r="3"/>
+                <text class="cad-label" x="50" y="68" style="font-size:8px;fill:var(--layer-green)">perfectamente recto</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Consejo</span>
+            <span>Actívalo siempre que dibujes planos arquitectónicos. Desactívalo solo para líneas inclinadas o detalles.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== ATAJO: F3 OSNAP ====== -->
+      <div class="diagram-card" data-cat="atajos" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Atajo esencial</span> F3 OSNAP siempre</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.osnap.desc">Sin OSNAP es imposible dibujar con precisión. Engancha el cursor a extremos, medios, centros e intersecciones reales.</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 280 80">
+              <line class="cad-line" x1="10" y1="40" x2="120" y2="40"/>
+              <rect class="cad-point" x="6" y="36" width="8" height="8" rx="1"/>
+              <text class="cad-label-cmd" x="5" y="60" style="font-size:7px">Extremo</text>
+              <rect class="cad-point-cyan" x="62" y="36" width="8" height="8" rx="1" transform="rotate(45,66,40)"/>
+              <text class="cad-label-cmd" x="50" y="60" style="font-size:7px">Medio</text>
+              <rect class="cad-point" x="116" y="36" width="8" height="8" rx="1"/>
+              <text class="cad-label-cmd" x="108" y="60" style="font-size:7px">Extremo</text>
+              <circle class="cad-circle" cx="200" cy="40" r="22"/>
+              <rect class="cad-point-cyan" x="197" y="37" width="6" height="6" rx="1"/>
+              <text class="cad-label-cmd" x="188" y="75" style="font-size:7px">Centro</text>
+              <text class="cad-label" x="140" y="15" style="font-size:8px;fill:var(--amber)">F3 = toggle on/off</text>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Consejo</span>
+            <span>Mantén F3 activo SIEMPRE. Haz clic derecho sobre el icono de OSNAP en la barra de estado para elegir qué puntos capturar.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== APRENDIZAJE: Practica diaria ====== -->
+      <div class="diagram-card" data-cat="aprendizaje" data-aos="fade-up" data-aos-delay="60">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Aprendizaje</span> La regla de 30 minutos</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.practice.desc">30 minutos diarios superan 4 horas un solo día. La constancia crea memoria muscular con los atajos y comandos.</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 280 90">
+              <text class="cad-label-cmd" x="5" y="14" style="font-size:9px">Rutina diaria recomendada (30 min):</text>
+              <rect x="5" y="22" width="60" height="50" fill="var(--bg-elevated)" stroke="var(--layer-cyan)" rx="2"/>
+              <text class="cad-label-cmd" x="12" y="36" style="font-size:7px;fill:var(--layer-cyan)">Min 1-10</text>
+              <text class="cad-label" x="12" y="50" style="font-size:7px">Repasa 3</text>
+              <text class="cad-label" x="12" y="60" style="font-size:7px">atajos nuevos</text>
+              <rect x="75" y="22" width="70" height="50" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+              <text class="cad-label-cmd" x="82" y="36" style="font-size:7px;fill:var(--layer-green)">Min 10-25</text>
+              <text class="cad-label" x="82" y="50" style="font-size:7px">Dibuja algo</text>
+              <text class="cad-label" x="82" y="60" style="font-size:7px">real (plano,</text>
+              <text class="cad-label" x="82" y="70" style="font-size:7px">pieza, logo)</text>
+              <rect x="155" y="22" width="65" height="50" fill="var(--bg-elevated)" stroke="var(--amber)" rx="2"/>
+              <text class="cad-label-cmd" x="162" y="36" style="font-size:7px;fill:var(--amber)">Min 25-30</text>
+              <text class="cad-label" x="162" y="50" style="font-size:7px">Prueba un</text>
+              <text class="cad-label" x="162" y="60" style="font-size:7px">comando nuevo</text>
+              <rect x="230" y="22" width="48" height="50" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+              <text class="cad-label-cmd" x="235" y="40" style="font-size:7px;fill:var(--layer-green)">+1</text>
+              <text class="cad-label" x="235" y="52" style="font-size:6px">nivel cada</text>
+              <text class="cad-label" x="235" y="62" style="font-size:6px">semana</text>
+              <text class="cad-label" x="5" y="86" style="font-size:8px">Después de 30 días dominarás más del 60% de AutoCAD</text>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Clave</span>
+            <span>No intentes aprender todo de golpe. Un nivel por semana es ritmo perfecto para principiantes.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== APRENDIZAJE: Teclado antes que ratón ====== -->
+      <div class="diagram-card" data-cat="aprendizaje" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Aprendizaje</span> Teclado antes que ratón</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.keyboard.desc">Los profesionales escriben comandos con el teclado, no buscan iconos. Es 3x más rápido una vez lo memorizas.</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 280 80">
+              <text class="cad-label-cmd" x="5" y="14" style="font-size:8px">Progresión de aprendizaje:</text>
+              <rect x="5" y="20" width="80" height="45" fill="var(--bg-elevated)" stroke="var(--layer-red)" rx="2"/>
+              <text class="cad-label-cmd" x="12" y="34" style="font-size:7px;fill:var(--layer-red)">Nivel 1: Ratón</text>
+              <text class="cad-label" x="12" y="48" style="font-size:7px">Click en iconos</text>
+              <text class="cad-label" x="12" y="58" style="font-size:7px">lento pero seguro</text>
+              <text class="cad-label-cmd" x="95" y="40" style="font-size:12px;fill:var(--amber)">→</text>
+              <rect x="110" y="20" width="80" height="45" fill="var(--bg-elevated)" stroke="var(--layer-yellow)" rx="2"/>
+              <text class="cad-label-cmd" x="117" y="34" style="font-size:7px;fill:var(--layer-yellow)">Nivel 2: Mix</text>
+              <text class="cad-label" x="117" y="48" style="font-size:7px">Atajos + ratón</text>
+              <text class="cad-label" x="117" y="58" style="font-size:7px">más rápido</text>
+              <text class="cad-label-cmd" x="195" y="40" style="font-size:12px;fill:var(--amber)">→</text>
+              <rect x="210" y="20" width="68" height="45" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+              <text class="cad-label-cmd" x="217" y="34" style="font-size:7px;fill:var(--layer-green)">Nivel 3: Pro</text>
+              <text class="cad-label" x="217" y="48" style="font-size:7px">Todo teclado</text>
+              <text class="cad-label" x="217" y="58" style="font-size:7px">velocidad max</text>
+              <text class="cad-label" x="5" y="76" style="font-size:8px">Empieza escribiendo L+Enter en vez de buscar el icono de LINE</text>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Primer paso</span>
+            <span>Memoriza estos 5: L=LINE, C=CIRCLE, O=OFFSET, M=MOVE, TR=TRIM. Con eso cubres el 70% del dibujo diario.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== ERRORES: Undo masivo ====== -->
+      <div class="diagram-card" data-cat="errores" data-aos="fade-up" data-aos-delay="60">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Error común</span> No guardas constantemente</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.save.desc">AutoCAD puede fallar. Si no guardas, pierdes horas de trabajo. Configura auto-guardado cada 5 minutos.</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 280 70">
+              <text class="cad-label-cmd" x="5" y="14" style="font-size:8px">Configura en: OPTIONS → Abre y guarda:</text>
+              <rect x="5" y="20" width="120" height="40" fill="var(--bg-elevated)" stroke="var(--layer-red)" rx="2"/>
+              <text class="cad-label-cmd" x="12" y="34" style="font-size:7px;fill:var(--layer-red)">Sin auto-guardado:</text>
+              <text class="cad-label" x="12" y="48" style="font-size:7px">Se cierra → pierdes todo</text>
+              <rect x="140" y="20" width="135" height="40" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+              <text class="cad-label-cmd" x="147" y="34" style="font-size:7px;fill:var(--layer-green)">Auto-guardado cada 5 min:</text>
+              <text class="cad-label" x="147" y="48" style="font-size:7px">Se cierra → pierdes max 5 min</text>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Regla de oro</span>
+            <span>Además del auto-guardado, pulsa Ctrl+S cada vez que completes un paso importante. Hazlo hábito.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== ERRORES: Capa 0 ====== -->
+      <div class="diagram-card" data-cat="errores" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Error común</span> Todo en la capa 0</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.layer0.desc">Poner todo en la capa 0 es el error #1 de principiantes. Después es un caos intentar separar ejes, muros y cotas.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label" style="color:var(--layer-red)">MAL</span>
+              <svg viewBox="0 0 160 80">
+                <rect x="5" y="5" width="150" height="70" fill="var(--bg-elevated)" stroke="var(--layer-red)" rx="2"/>
+                <text class="cad-label-cmd" x="15" y="20" style="font-size:7px;fill:var(--layer-red)">TODO en Capa 0</text>
+                <line x1="15" y1="40" x2="145" y2="40" stroke="var(--text-muted)" stroke-width="1"/>
+                <rect x="30" y="45" width="40" height="20" fill="none" stroke="var(--text-muted)" stroke-width="1" rx="1"/>
+                <text class="cad-label" x="85" y="58" style="font-size:7px;fill:var(--text-muted)">¿qué es qué?</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label" style="color:var(--layer-green)">BIEN</span>
+              <svg viewBox="0 0 160 80">
+                <line x1="10" y1="40" x2="150" y2="40" stroke="var(--layer-red)" stroke-dasharray="6,3" stroke-width="1.5"/>
+                <text class="cad-label" x="12" y="15" style="font-size:7px;fill:var(--layer-red)">Ejes</text>
+                <rect x="25" y="30" width="45" height="25" fill="none" stroke="var(--layer-yellow)" stroke-width="2" rx="1"/>
+                <rect x="85" y="30" width="45" height="25" fill="none" stroke="var(--layer-yellow)" stroke-width="2" rx="1"/>
+                <text class="cad-label" x="30" y="25" style="font-size:7px;fill:var(--layer-yellow)">Muros</text>
+                <line x1="25" y1="65" x2="130" y2="65" stroke="var(--layer-green)" stroke-width="1"/>
+                <text class="cad-label" x="60" y="75" style="font-size:7px;fill:var(--layer-green)">8.00 m</text>
+                <text class="cad-label" x="105" y="25" style="font-size:7px;fill:var(--layer-green)">Cotas</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Regla</span>
+            <span>Antes de dibujar, crea las capas que necesitas. Un buen setup de capas ahorra horas de edición después.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== FLUJO: Plantilla ====== -->
+      <div class="diagram-card" data-cat="flujo" data-aos="fade-up" data-aos-delay="60">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Flujo de trabajo</span> Crea tu plantilla .DWT</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.template.desc">No empiezes cada proyecto desde cero. Crea una plantilla con tus capas, estilos de texto, cotas y bloques base.</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 280 80">
+              <rect x="5" y="5" width="70" height="65" fill="var(--bg-elevated)" stroke="var(--layer-cyan)" rx="3"/>
+              <text class="cad-label-cmd" x="12" y="20" style="font-size:7px;fill:var(--layer-cyan)">MiPlantilla.DWT</text>
+              <text class="cad-label" x="12" y="32" style="font-size:6px">✓ 15 capas listas</text>
+              <text class="cad-label" x="12" y="42" style="font-size:6px">✓ Estilo de cota</text>
+              <text class="cad-label" x="12" y="52" style="font-size:6px">✓ Bloques base</text>
+              <text class="cad-label" x="12" y="62" style="font-size:6px">✓ Config. impresión</text>
+              <text class="cad-label-cmd" x="85" y="40" style="font-size:12px;fill:var(--amber)">→</text>
+              <rect x="100" y="5" width="80" height="65" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="3"/>
+              <text class="cad-label-cmd" x="107" y="20" style="font-size:7px;fill:var(--layer-green)">Proyecto.DWG</text>
+              <text class="cad-label" x="107" y="32" style="font-size:6px">Hereda todo de la</text>
+              <text class="cad-label" x="107" y="42" style="font-size:6px">plantilla. Solo</text>
+              <text class="cad-label" x="107" y="52" style="font-size:6px">empiezas a dibujar.</text>
+              <text class="cad-label" x="107" y="62" style="font-size:6px;fill:var(--layer-green)">Ahorras 30+ min</text>
+              <rect x="195" y="5" width="80" height="65" fill="var(--bg-elevated)" stroke="var(--amber)" rx="3"/>
+              <text class="cad-label-cmd" x="202" y="20" style="font-size:7px;fill:var(--amber)">Cómo crearla:</text>
+              <text class="cad-label" x="202" y="32" style="font-size:6px">1. Dibuja tu setup</text>
+              <text class="cad-label" x="202" y="42" style="font-size:6px">2. File → Save As</text>
+              <text class="cad-label" x="202" y="52" style="font-size:6px">3. Tipo: .DWT</text>
+              <text class="cad-label" x="202" y="62" style="font-size:6px">4. Nueva → listo</text>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Pro tip</span>
+            <span>Guarda tu plantilla en una red o Dropbox para usarla desde cualquier computadora.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== FLUJO: Ctrl+S ====== -->
+      <div class="diagram-card" data-cat="flujo" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Flujo de trabajo</span> Atajos que debes memorizar</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.essential.desc">Estos 10 atajos cubren el 90% del trabajo diario en AutoCAD. Memorízalos la primera semana.</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 280 120">
+              <text class="cad-label-cmd" x="5" y="14" style="font-size:9px">Los 10 atajos imprescindibles:</text>
+              <rect x="5" y="20" width="130" height="90" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="2"/>
+              <text class="cad-label-cmd" x="12" y="34" style="font-size:7px">L = LINE</text>
+              <text class="cad-label-cmd" x="12" y="44" style="font-size:7px">C = CIRCLE</text>
+              <text class="cad-label-cmd" x="12" y="54" style="font-size:7px">REC = RECTANGLE</text>
+              <text class="cad-label-cmd" x="12" y="64" style="font-size:7px">O = OFFSET</text>
+              <text class="cad-label-cmd" x="12" y="74" style="font-size:7px">TR = TRIM</text>
+              <text class="cad-label-cmd" x="12" y="84" style="font-size:7px">M = MOVE</text>
+              <text class="cad-label-cmd" x="12" y="94" style="font-size:7px">CO = COPY</text>
+              <rect x="145" y="20" width="130" height="90" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="2"/>
+              <text class="cad-label-cmd" x="152" y="34" style="font-size:7px">F = FILLET</text>
+              <text class="cad-label-cmd" x="152" y="44" style="font-size:7px">MI = MIRROR</text>
+              <text class="cad-label-cmd" x="152" y="54" style="font-size:7px">RO = ROTATE</text>
+              <text class="cad-label-cmd" x="152" y="70" style="font-size:8px;fill:var(--amber)">Atajos de vista:</text>
+              <text class="cad-label-cmd" x="152" y="82" style="font-size:7px">Z+E = Zoom Extents</text>
+              <text class="cad-label-cmd" x="152" y="92" style="font-size:7px">Z+W = Zoom Window</text>
+              <text class="cad-label-cmd" x="152" y="102" style="font-size:7px">Ctrl+Z = Undo</text>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Consejo</span>
+            <span>Escribe los atajos en un post-it pegado al monitor. En una semana los usarás sin pensar.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== FLUJO: Undo/Redo ====== -->
+      <div class="diagram-card" data-cat="flujo" data-aos="fade-up" data-aos-delay="60">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Flujo de trabajo</span> Undo y U</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.undo.desc">Ctrl+Z deshace el último paso. Pero U (sin Ctrl) es el comando UNDO de AutoCAD: puedes deshacer varios pasos de golpe.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label">Ctrl+Z</span>
+              <svg viewBox="0 0 160 60">
+                <rect x="5" y="5" width="40" height="30" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="2"/>
+                <text class="cad-label" x="10" y="25" style="font-size:6px">Paso 3</text>
+                <rect x="50" y="5" width="40" height="30" fill="var(--bg-elevated)" stroke="var(--layer-red)" rx="2"/>
+                <text class="cad-label" x="55" y="25" style="font-size:6px;fill:var(--layer-red)">Paso 2</text>
+                <rect x="95" y="5" width="40" height="30" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="2"/>
+                <text class="cad-label" x="100" y="25" style="font-size:6px">Paso 1</text>
+                <text class="cad-label" x="10" y="50" style="font-size:7px">1 paso atrás</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label">U + Enter × 3</span>
+              <svg viewBox="0 0 160 60">
+                <rect x="5" y="5" width="40" height="30" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="2"/>
+                <text class="cad-label" x="10" y="25" style="font-size:6px">Paso 3</text>
+                <rect x="50" y="5" width="40" height="30" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="2"/>
+                <text class="cad-label" x="55" y="25" style="font-size:6px">Paso 2</text>
+                <rect x="95" y="5" width="40" height="30" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+                <text class="cad-label" x="100" y="25" style="font-size:6px;fill:var(--layer-green)">Paso 1</text>
+                <text class="cad-label" x="10" y="50" style="font-size:7px">3 pasos atrás</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Consejo</span>
+            <span>U es más potente que Ctrl+Z en AutoCAD. También puedes escribir UNDO 10 para saltar 10 pasos.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== AVANZADO: Model space ====== -->
+      <div class="diagram-card" data-cat="avanzado" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Avanzado</span> Dibuja siempre a escala 1:1</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.scale.desc">En AutoCAD NUNCA cambies la escala al dibujar. Un muro de 3 metros mide 3 unidades reales. La escala solo se aplica al imprimir.</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 280 70">
+              <text class="cad-label-cmd" x="5" y="14" style="font-size:8px">Concepto clave del espacio modelo:</text>
+              <rect x="5" y="20" width="100" height="40" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+              <text class="cad-label-cmd" x="12" y="34" style="font-size:7px;fill:var(--layer-green)">Espacio Modelo</text>
+              <text class="cad-label" x="12" y="48" style="font-size:7px">Siempre 1:1 real</text>
+              <text class="cad-label-cmd" x="120" y="40" style="font-size:14px;fill:var(--amber)">→</text>
+              <rect x="140" y="20" width="135" height="40" fill="var(--bg-elevated)" stroke="var(--layer-cyan)" rx="2"/>
+              <text class="cad-label-cmd" x="147" y="34" style="font-size:7px;fill:var(--layer-cyan)">Layout / Paper</text>
+              <text class="cad-label" x="147" y="48" style="font-size:7px">Aquí aplicas escala: 1:50, 1:100...</text>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Error fatal</span>
+            <span>Si dibujas un muro de 3m como 0.03 unidades (porque "así cabe en la hoja"), tu archivo será un caos de cotas y referencias.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== AVANZADO: PURGE ====== -->
+      <div class="diagram-card" data-cat="avanzado" data-aos="fade-up" data-aos-delay="60">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Avanzado</span> PURGE antes de entregar</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.purge.desc">Antes de enviar un archivo, ejecuta PURGE para eliminar capas, bloques y estilos vacías. Reduce tamaño y evita errores.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label">Antes de PURGE</span>
+              <svg viewBox="0 0 160 60">
+                <rect x="5" y="5" width="150" height="50" fill="var(--bg-elevated)" stroke="var(--layer-red)" rx="2"/>
+                <text class="cad-label-cmd" x="12" y="18" style="font-size:7px;fill:var(--layer-red)">Archivo: 15 MB</text>
+                <text class="cad-label" x="12" y="30" style="font-size:6px">Capas: 45 (30 vacías)</text>
+                <text class="cad-label" x="12" y="40" style="font-size:6px">Bloques: 80 (60 sin usar)</text>
+                <text class="cad-label" x="12" y="50" style="font-size:6px">Estilos: 20 (15 vacíos)</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label">PURGE × 2</span>
+              <svg viewBox="0 0 160 60">
+                <rect x="5" y="5" width="150" height="50" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+                <text class="cad-label-cmd" x="12" y="18" style="font-size:7px;fill:var(--layer-green)">Archivo: 4 MB</text>
+                <text class="cad-label" x="12" y="30" style="font-size:6px">Capas: 15 (todas usadas)</text>
+                <text class="cad-label" x="12" y="40" style="font-size:6px">Bloques: 20 (todos activos)</text>
+                <text class="cad-label" x="12" y="50" style="font-size:6px">Estilos: 5 (todos usados)</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Consejo</span>
+            <span>Ejecuta PURGE dos veces seguidas: la primera elimina lo obvio, la segunda limpie dependencias anidadas.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== APRENDIZAJE: Copia planos reales ====== -->
+      <div class="diagram-card" data-cat="aprendizaje" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Aprendizaje</span> Copia planos reales</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.copyreal.desc">La mejor forma de aprender es copiar planos que ya existen. Busca planos de plantas arquitectónicas y recrealos en AutoCAD.</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 280 70">
+              <text class="cad-label-cmd" x="5" y="14" style="font-size:8px">Plan de aprendizaje por copia:</text>
+              <rect x="5" y="20" width="80" height="40" fill="var(--bg-elevated)" stroke="var(--layer-cyan)" rx="2"/>
+              <text class="cad-label-cmd" x="12" y="34" style="font-size:7px;fill:var(--layer-cyan)">Semana 1-2</text>
+              <text class="cad-label" x="12" y="48" style="font-size:7px">Copiar un logo</text>
+              <rect x="95" y="20" width="80" height="40" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+              <text class="cad-label-cmd" x="102" y="34" style="font-size:7px;fill:var(--layer-green)">Semana 3-4</text>
+              <text class="cad-label" x="102" y="48" style="font-size:7px">Plano de casa</text>
+              <rect x="185" y="20" width="90" height="40" fill="var(--bg-elevated)" stroke="var(--amber)" rx="2"/>
+              <text class="cad-label-cmd" x="192" y="34" style="font-size:7px;fill:var(--amber)">Semana 5+</text>
+              <text class="cad-label" x="192" y="48" style="font-size:7px">Plano completo</text>
+              <text class="cad-label" x="5" y="68" style="font-size:7px">Busca "free CAD drawings" en Google para planos de práctica gratuitos</text>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Consejo</span>
+            <span>No necesitas crear diseños propios al principio. Copiar enseña más rápido porque solo te concentras en las herramientas.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== ERRORES: Zoom extents perdido ====== -->
+      <div class="diagram-card" data-cat="errores" data-aos="fade-up" data-aos-delay="60">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Error común</span> "No veo mi dibujo"</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.zoomlost.desc">Si de repente no ves nada o el zoom se descontrola, Z+E (Zoom Extents) te muestra todo el contenido del archivo.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label">Pantalla vacía</span>
+              <svg viewBox="0 0 160 60">
+                <rect x="5" y="5" width="150" height="50" fill="var(--bg-elevated)" stroke="var(--layer-red)" rx="2"/>
+                <text class="cad-label" x="45" y="35" style="font-size:8px;fill:var(--layer-red)">¿dónde está?</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label">Z + E</span>
+              <svg viewBox="0 0 160 60">
+                <rect x="5" y="5" width="150" height="50" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+                <rect class="cad-fill" x="20" y="15" width="120" height="30" rx="2"/>
+                <text class="cad-label" x="50" y="35" style="font-size:8px">aquí está todo</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Solución</span>
+            <span>Z+Enter+E+Enter siempre te saca de problemas. También funciona Z+Enter+A+Enter (Zoom All).</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== AVANZADO: Xref para equipo ====== -->
+      <div class="diagram-card" data-cat="avanzado" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Avanzado</span> Xref para trabajo en equipo</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.xref.desc">Las referencias externas (Xref) permiten que varios profesores trabajen en el mismo proyecto sin pisarse.</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 280 80">
+              <text class="cad-label-cmd" x="5" y="14" style="font-size:8px">Flujo de trabajo en equipo:</text>
+              <rect x="5" y="20" width="55" height="50" fill="var(--bg-elevated)" stroke="var(--layer-cyan)" rx="2"/>
+              <text class="cad-label-cmd" x="10" y="35" style="font-size:7px">Arquitecto</text>
+              <text class="cad-label" x="10" y="48" style="font-size:6px">planta.dwg</text>
+              <rect x="5" y="72" width="55" height="8" fill="var(--layer-cyan)" rx="1" opacity="0.3"/>
+              <polygon class="cad-arrow" points="63,45 78,45" style="fill:var(--amber)"/>
+              <polygon class="cad-arrow" points="63,76 78,76" style="fill:var(--amber)"/>
+              <rect x="82" y="10" width="110" height="65" fill="var(--bg-elevated)" stroke="var(--layer-yellow)" stroke-width="2" rx="3"/>
+              <text class="cad-label-cmd" x="90" y="25" style="font-size:7px;fill:var(--layer-yellow)">Plano colectivo</text>
+              <rect x="90" y="32" width="95" height="10" fill="none" stroke="var(--layer-cyan)" stroke-dasharray="2,2" rx="1"/>
+              <text class="cad-label" x="93" y="40" style="font-size:6px">Xref: planta.dwg</text>
+              <rect x="90" y="48" width="95" height="10" fill="none" stroke="var(--layer-green)" stroke-dasharray="2,2" rx="1"/>
+              <text class="cad-label" x="93" y="56" style="font-size:6px">Xref: estructura.dwg</text>
+              <rect x="200" y="20" width="55" height="50" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+              <text class="cad-label-cmd" x="205" y="35" style="font-size:7px">Estructural</text>
+              <text class="cad-label" x="205" y="48" style="font-size:6px">estructura.dwg</text>
+              <rect x="200" y="72" width="55" height="8" fill="var(--layer-green)" rx="1" opacity="0.3"/>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Consejo</span>
+            <span>Cada profesional edita su archivo. Al abrir el plano colectivo, AutoCAD carga las versiones más recientes automáticamente.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-final" data-aos="fade-up">
+  <div class="container container-xl">
+    <p class="eyebrow justify-content-center" data-i18n="tips.cta.eyebrow">¿Listo para empezar?</p>
+    <h2 data-i18n="tips.cta.title">Pon estos trucos en práctica hoy</h2>
+    <p class="text-muted-custom mb-4" data-i18n="tips.cta.desc">Elige un nivel y comienza a aplicar lo que aprendiste. La práctica hace al maestro.</p>
+    <a href="nivel-1-fundamentos.html" class="btn-cad-primary"><span data-i18n="vis.cta.btn">Empezar desde cero</span> <i class="bi bi-arrow-right ms-1"></i></a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container container-xl">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <div class="brand-cad mb-2"><span class="brand-mark"></span><span>AutoCAD Guía</span></div>
+        <p data-i18n="footer.disclaimer">Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.levels">Niveles</h6>
+        <ul class="list-unstyled">
+          <li><a href="nivel-1-fundamentos.html">Fundamentos</a></li>
+          <li><a href="nivel-2-dibujo-2d.html">Dibujo 2D</a></li>
+          <li><a href="nivel-3-organizacion.html">Organización</a></li>
+          <li><a href="nivel-4-modelado-3d.html">Modelado 3D</a></li>
+          <li><a href="nivel-5-avanzado.html">Nivel experto</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.guide">Guía</h6>
+        <ul class="list-unstyled">
+          <li><a href="comandos.html">Comandos</a></li>
+          <li><a href="ejemplos-visuales.html">Ejemplos visuales</a></li>
+          <li><a href="trucos.html">Trucos</a></li>
+          <li><a href="recursos.html">Recursos</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.follow">Síguenos</h6>
+        <div class="d-flex gap-2">
+          <a href="#" class="icon-btn"><i class="bi bi-youtube"></i></a>
+          <a href="#" class="icon-btn"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="icon-btn"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-5 mb-4" style="border-color:var(--border-soft)">
+    <p class="mb-0 small" data-i18n="footer.copyright">© 2026 AutoCAD Guía. Proyecto educativo de aprendizaje libre.</p>
+  </div>
+</footer>
+
+<!-- COMMAND LINE BAR -->
+<div class="command-line-bar" id="cmdBar">
+  <div class="command-line-inner">
+    <span class="prompt-sign" data-i18n="ui.command">Comando:</span>
+    <span id="cmd-typed"></span><span class="cursor-blink"></span>
+    <button class="cl-close" id="cmdClose" title="Ocultar" data-i18n-title="ui.hide"><i class="bi bi-x-lg"></i></button>
+  </div>
+</div>
+
+<!-- SEARCH -->
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Buscar en la guía">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="bi bi-search"></i>
+      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar" data-i18n-placeholder="ui.searchPlaceholder">
+      <kbd class="search-kbd">ESC</kbd>
+    </div>
+    <div class="search-results" id="globalSearchResults">
+      <div class="search-empty" data-i18n="ui.typeToSearch">Escribe al menos 2 caracteres para buscar...</div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/main.js"></script>
+<script>
+/* Tips page filters */
+(function(){
+  var filters = document.getElementById('tipsFilters');
+  var grid = document.getElementById('tipsGrid');
+  if (!filters || !grid) return;
+
+  var buttons = filters.querySelectorAll('.cmd-filter-btn');
+  var cards = grid.querySelectorAll('.diagram-card');
+
+  buttons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      buttons.forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      var filter = btn.getAttribute('data-filter');
+      cards.forEach(function(card){
+        var cat = card.getAttribute('data-cat');
+        card.style.display = (filter === 'todos' || cat === filter) ? '' : 'none';
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -43,6 +43,7 @@
           </ul>
         </li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="comandos.html" data-i18n="nav.commands">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="ejemplos-visuales.html" data-i18n="nav.visual">Ejemplos visuales</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="recursos.html" data-i18n="nav.resources">Recursos gratis</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="faq.html" data-i18n="nav.faq">FAQ</a></li>
       </ul>
@@ -67,7 +68,7 @@
     <h1 data-i18n="lvl1.title">Fundamentos de AutoCAD</h1>
     <p class="subtitle" data-i18n="lvl1.subtitle">Antes de dibujar una sola línea, entiende qué es el programa, cómo instalarlo, cómo está organizada su interfaz y cómo funciona su sistema de coordenadas. Esta base evita el 80% de los errores de un principiante.</p>
     <div class="level-progress-bar"><div class="fill"></div></div>
-    <p class="level-progress-label">0 de 5 temas completados · 0%</p>
+    <p class="level-progress-label">0 de 8 temas completados · 0%</p>
   </div>
 </header>
 
@@ -86,6 +87,9 @@
             <li><a href="#interfaz" data-toc="nivel1-interfaz"><span class="toc-check"></span> Interfaz de usuario</a></li>
             <li><a href="#coordenadas" data-toc="nivel1-coordenadas"><span class="toc-check"></span> Sistema de coordenadas</a></li>
             <li><a href="#configuracion" data-toc="nivel1-configuracion"><span class="toc-check"></span> Configuración inicial</a></li>
+            <li><a href="#archivos" data-toc="nivel1-archivos"><span class="toc-check"></span> Gestión de archivos</a></li>
+            <li><a href="#tipos-archivo" data-toc="nivel1-tipos-archivo"><span class="toc-check"></span> Tipos de archivo</a></li>
+            <li><a href="#zoom" data-toc="nivel1-zoom"><span class="toc-check"></span> Zoom y navegación</a></li>
           </ul>
           <hr style="border-color:var(--border-soft)" class="my-4">
           <a href="nivel-2-dibujo-2d.html" class="btn-cad-outline w-100 text-center d-block">Siguiente nivel <i class="bi bi-arrow-right"></i></a>
@@ -240,6 +244,212 @@
             <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
           </section>
 
+          <!-- 6. Gestión de archivos DWG -->
+          <section id="archivos" data-topic="nivel1-archivos">
+            <h2><span class="sec-num">6</span> Gestión de archivos DWG</h2>
+            <p>AutoCAD guarda cada dibujo en un archivo <strong>.DWG</strong>. Saber cómo proteger, guardar y recuperar estos archivos evita perder horas de trabajo.</p>
+
+            <h3>Guardado y recuperación</h3>
+            <table class="table-cad">
+              <thead><tr><th>Comando / Atajo</th><th>Qué hace</th></tr></thead>
+              <tbody>
+                <tr><td><span class="cmd-inline">SAVE</span> / <span class="key-inline">Ctrl+S</span></td><td>Guarda el archivo actual. Si es la primera vez, abre "Guardar como".</td></tr>
+                <tr><td><span class="cmd-inline">SAVEAS</span></td><td>Guarda como un nombre o ubicación diferente; puedes elegir formato (.DWG o .DXF).</td></tr>
+                <tr><td><span class="cmd-inline">QSAVE</span></td><td>Guardado rápido sin abrir diálogo; sobrescribe el archivo actual.</td></tr>
+                <tr><td><span class="cmd-inline">OPEN</span></td><td>Abre un archivo .DWG existente.</td></tr>
+                <tr><td><span class="cmd-inline">CLOSE</span></td><td>Cierra el dibujo actual (no cierra AutoCAD).</td></tr>
+              </tbody>
+            </table>
+
+            <h3>Recuperación automática</h3>
+            <p>AutoCAD guarda una copia de seguridad periódicamente (cada 10 minutos por defecto). Si el programa se cierra inesperadamente, la próxima vez que lo abras te ofrecerá recuperar el archivo <strong>.SV$</strong> (backup temporal).</p>
+
+            <div class="callout">
+              <span class="callout-title">Consejo</span>
+              Activa el guardado automático con el comando <span class="cmd-inline">SAVETIME</span> y ponlo cada 5–10 minutos. También puedes configurar la carpeta de backup en las preferencias del programa.
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 7. Tipos de archivo -->
+          <section id="tipos-archivo" data-topic="nivel1-tipos-archivo">
+            <h2><span class="sec-num">7</span> Tipos de archivo</h2>
+            <p>AutoCAD maneja varios formatos. Conocer la diferencia te permite trabajar con clientes y programas externos sin problemas.</p>
+
+            <table class="table-cad">
+              <thead><tr><th>Extensión</th><th>Nombre</th><th>Uso principal</th></tr></thead>
+              <tbody>
+                <tr><td><span class="cmd-inline">.DWG</span></td><td>Drawing</td><td>Formato nativo de AutoCAD. Contiene la geometría, capas, bloques y todo el dibujo.</td></tr>
+                <tr><td><span class="cmd-inline">.DWT</span></td><td>Drawing Template</td><td>Plantilla con capas, estilos y layout predefinidos. Se usa al crear un dibujo nuevo.</td></tr>
+                <tr><td><span class="cmd-inline">.DXF</span></td><td>Drawing Exchange Format</td><td>Formato de intercambio universal para compartir con otros programas CAD que no leen .DWG.</td></tr>
+                <tr><td><span class="cmd-inline">.DWF</span></td><td>Drawing Web Format</td><td>Formato ligero para revisar y compartir planos sin poder editarlos.</td></tr>
+                <tr><td><span class="cmd-inline">.SV$</span></td><td>AutoSave</td><td>Copia temporal de recuperación automática. Se encuentra en la carpeta de backup configurada.</td></tr>
+                <tr><td><span class="cmd-inline">.BAK</span></td><td>Backup</td><td>Copia de seguridad que AutoCAD crea cada vez que guardas manualmente.</td></tr>
+              </tbody>
+            </table>
+
+            <div class="callout warn">
+              <span class="callout-title">Importante</span>
+              Si necesitas abrir un archivo en otro programa CAD y no lo reconoce, guárdalo como <strong>.DXF</strong> con el comando SAVEAS y selecciona "AutoCAD 2018 DXF" (o la versión que tu interlocutor necesite).
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 8. Zoom y navegación -->
+          <section id="zoom" data-topic="nivel1-zoom">
+            <h2><span class="sec-num">8</span> Zoom y navegación</h2>
+            <p>Moverte por el área de dibujo es algo que harás cientos de veces por sesión. Dominar el zoom y el pan te ahorra tiempo constante.</p>
+
+            <h3>Comandos de zoom</h3>
+            <table class="table-cad">
+              <thead><tr><th>Comando</th><th>Atajo</th><th>Qué hace</th></tr></thead>
+              <tbody>
+                <tr><td><span class="cmd-inline">ZOOM</span></td><td><span class="key-inline">Z</span></td><td>Activa el modo zoom; después elige una opción.</td></tr>
+                <tr><td><span class="cmd-inline">ZOOM Window</span></td><td><span class="key-inline">Z + W</span></td><td>Amplía un área rectangular que dibujas con el mouse.</td></tr>
+                <tr><td><span class="cmd-inline">ZOOM Extents</span></td><td><span class="key-inline">Z + E</span></td><td>Muestra todo el dibujo visible (lo más alejado posible sin perder contenido).</td></tr>
+                <tr><td><span class="cmd-inline">ZOOM Previous</span></td><td><span class="key-inline">Z + P</span></td><td>Vuelve a la vista anterior (puedes retroceder varias veces).</td></tr>
+                <tr><td><span class="cmd-inline">ZOOM All</span></td><td><span class="key-inline">Z + A</span></td><td>Muestra todo el área de dibujo definida por los límites (LIMITS).</td></tr>
+                <tr><td><span class="cmd-inline">ZOOM Realtime</span></td><td><span class="key-inline">Z + Enter</span></td><td>Modo interactivo: arraça arriba/abajo para acercar/alejar.</td></tr>
+              </tbody>
+            </table>
+
+            <h3>Pan (desplazamiento)</h3>
+            <p>El comando <span class="cmd-inline">PAN</span> (<span class="key-inline">P</span>) mueve la vista sin cambiar la posición de los objetos. También se activa manteniendo la <strong>rueda del mouse</strong> pulsada y arrastrando.</p>
+
+            <div class="callout">
+              <span class="callout-title">Atajo de oro</span>
+              La combinación más rápida es: <strong>rueda del mouse</strong> para zoom (hacia arriba = acercar, hacia abajo = alejar) y <strong>rueda pulsada</strong> para pan. Son las acciones más frecuentes de todo AutoCAD.
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- Ejemplos visuales inline -->
+          <section class="inline-visual-examples" style="margin-top:2rem">
+            <div class="visual-examples">
+              <h3 style="font-size:1.3rem;margin-bottom:1.2rem" data-i18n="vis.levelTitle">Ejemplos visuales del nivel</h3>
+              <div class="diagram-grid cols-2">
+
+                <div class="diagram-card" data-aos="fade-up">
+                  <div class="diagram-card-head"><h4>Sistema de coordenadas XY</h4></div>
+                  <div class="diagram-card-body">
+                    <div class="diagram-canvas">
+                      <svg viewBox="0 0 280 170">
+                        <line class="cad-line-dim" x1="40" y1="140" x2="260" y2="140"/>
+                        <line class="cad-line-dim" x1="40" y1="140" x2="40" y2="10"/>
+                        <polygon class="cad-arrow" points="255,137 268,140 255,143"/>
+                        <polygon class="cad-arrow" points="37,15 40,2 43,15"/>
+                        <text class="cad-label-cmd" x="262" y="158" style="font-size:11px">X</text>
+                        <text class="cad-label-cmd" x="18" y="14" style="font-size:11px">Y</text>
+                        <circle class="cad-point" cx="40" cy="140" r="5"/>
+                        <text class="cad-label" x="22" y="158" style="font-size:10px">O (0,0)</text>
+                        <line class="cad-line" x1="40" y1="90" x2="120" y2="90" stroke-dasharray="4,3"/>
+                        <line class="cad-line" x1="40" y1="140" x2="40" y2="90" stroke-dasharray="4,3"/>
+                        <line class="cad-line" x1="40" y1="90" x2="120" y2="90" stroke-dasharray="4,3"/>
+                        <line class="cad-line" x1="120" y1="90" x2="120" y2="140" stroke-dasharray="4,3"/>
+                        <rect class="cad-fill" x="120" y="55" width="80" height="35" rx="2"/>
+                        <text class="cad-label" x="128" y="78" style="font-size:9px">(120,85)</text>
+                        <circle class="cad-point" cx="120" cy="90" r="4"/>
+                        <text class="cad-label" x="60" y="85" style="font-size:9px;fill:var(--layer-cyan)">X=120</text>
+                        <text class="cad-label" x="42" y="120" style="font-size:9px;fill:var(--layer-cyan)">Y=85</text>
+                      </svg>
+                    </div>
+                    <div class="callout" style="margin-top:.8rem">
+                      <span class="callout-title">Concepto clave</span>
+                      <span>Todo punto se define por coordenadas (X,Y) desde el origen. En 3D se agrega Z (altura). Usa coma o punto decimal según tu configuración regional.</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="diagram-card" data-aos="fade-up" data-aos-delay="60">
+                  <div class="diagram-card-head"><h4><span class="cmd-badge">Configuración</span> ORTO y SNAP</h4><span class="key-inline">F8 / F9</span></div>
+                  <div class="diagram-card-body">
+                    <div class="diagram-steps">
+                      <div class="diagram-step">
+                        <span class="diagram-step-label">ORTO OFF</span>
+                        <svg viewBox="0 0 180 90">
+                          <line class="cad-line" x1="20" y1="70" x2="160" y2="20"/>
+                          <circle class="cad-point" cx="20" cy="70" r="4"/>
+                          <circle class="cad-point-cyan" cx="160" cy="20" r="4"/>
+                          <text class="cad-label" x="55" y="35" style="font-size:9px;fill:var(--layer-red)">libre, cualquier ángulo</text>
+                        </svg>
+                      </div>
+                      <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+                      <div class="diagram-step">
+                        <span class="diagram-step-label">ORTO ON</span>
+                        <svg viewBox="0 0 180 90">
+                          <line class="cad-line" x1="20" y1="70" x2="160" y2="70"/>
+                          <circle class="cad-point" cx="20" cy="70" r="4"/>
+                          <circle class="cad-point-cyan" cx="160" cy="70" r="4"/>
+                          <line class="cad-line" x1="20" y1="70" x2="20" y2="20" stroke-dasharray="3,2"/>
+                          <text class="cad-label" x="65" y="85" style="font-size:9px;fill:var(--layer-green)">solo horizontal o vertical</text>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="callout" style="margin-top:.8rem">
+                      <span class="callout-title">Diferencia clave</span>
+                      <span>GRID es solo visual (guía). SNAP es el que realmente mueve el cursor a los puntos de la cuadrícula. Configura ambos en Drafting Settings (DS).</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="diagram-card" data-aos="fade-up">
+                  <div class="diagram-card-head"><h4>Tipos de zoom</h4></div>
+                  <div class="diagram-card-body">
+                    <div class="diagram-canvas">
+                      <svg viewBox="0 0 280 110">
+                        <rect x="5" y="5" width="85" height="80" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="3"/>
+                        <text class="cad-label-cmd" x="15" y="18" style="font-size:8px">Zoom Extents (Z+E)</text>
+                        <rect class="cad-fill" x="12" y="25" width="65" height="48" rx="2"/>
+                        <text class="cad-label" x="22" y="55" style="font-size:8px">TODO el plano</text>
+                        <rect x="98" y="5" width="85" height="80" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="3"/>
+                        <text class="cad-label-cmd" x="108" y="18" style="font-size:8px">Zoom Window (Z+W)</text>
+                        <rect x="105" y="22" width="72" height="55" fill="none" stroke="var(--layer-cyan)" stroke-dasharray="4,3" rx="2"/>
+                        <rect class="cad-fill" x="112" y="30" width="55" height="35" rx="2"/>
+                        <text class="cad-label" x="118" y="52" style="font-size:8px">solo recuadro</text>
+                        <rect x="195" y="5" width="80" height="80" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="3"/>
+                        <text class="cad-label-cmd" x="205" y="18" style="font-size:8px">Zoom Realtime</text>
+                        <text class="cad-label-cmd" x="218" y="45" style="font-size:18px">🔍</text>
+                        <text class="cad-label" x="210" y="72" style="font-size:8px">rueda ↑↓</text>
+                      </svg>
+                    </div>
+                    <div class="callout" style="margin-top:.8rem">
+                      <span class="callout-title">Atajos esenciales</span>
+                      <span>Z+E todo visible, Z+W ventana, Z+P anterior, Z+Enter escala, rueta ratón = zoom rápido.</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="diagram-card" data-aos="fade-up" data-aos-delay="60">
+                  <div class="diagram-card-head"><h4>Entrada de coordenadas</h4></div>
+                  <div class="diagram-card-body">
+                    <div class="diagram-canvas">
+                      <svg viewBox="0 0 280 110">
+                        <text class="cad-label-cmd" x="5" y="16" style="font-size:9px">3 formas de definir un punto:</text>
+                        <rect x="5" y="22" width="270" height="25" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="2"/>
+                        <text class="cad-label-cmd" x="12" y="38" style="font-size:8px">1. Absoluta:</text>
+                        <text class="cad-label" x="80" y="38" style="font-size:9px">100,50 → punto fijo en (100,50)</text>
+                        <rect x="5" y="52" width="270" height="25" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="2"/>
+                        <text class="cad-label-cmd" x="12" y="68" style="font-size:8px">2. Relativa:</text>
+                        <text class="cad-label" x="80" y="68" style="font-size:9px">@80,0 → 80 a la derecha del último</text>
+                        <rect x="5" y="82" width="270" height="25" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="2"/>
+                        <text class="cad-label-cmd" x="12" y="98" style="font-size:8px">3. Polar:</text>
+                        <text class="cad-label" x="80" y="98" style="font-size:9px">@50&lt;45 → 50 a 45° del último</text>
+                      </svg>
+                    </div>
+                    <div class="callout" style="margin-top:.8rem">
+                      <span class="callout-title">La más usada</span>
+                      <span>La relativa con @ es la más común en dibujo técnico: "@largo,ancho" o "@distancia&lt;ángulo".</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
         </article>
 
         <!-- Navegación anterior / siguiente -->
@@ -268,7 +478,9 @@
         <ul class="list-unstyled">
           <li><a href="nivel-1-fundamentos.html">Fundamentos</a></li>
           <li><a href="nivel-2-dibujo-2d.html">Dibujo 2D</a></li>
+          <li><a href="nivel-3-organizacion.html">Organización</a></li>
           <li><a href="nivel-4-modelado-3d.html">Modelado 3D</a></li>
+          <li><a href="nivel-5-avanzado.html">Nivel experto</a></li>
         </ul>
       </div>
       <div class="col-6 col-lg-2">
