@@ -15,8 +15,8 @@
       'nav.home': 'Inicio',
       'nav.levels': 'Niveles',
       'nav.commands': 'Comandos',
-      'nav.visual': 'Ejemplos visuales',
-      'nav.resources': 'Recursos gratis',
+      'nav.visual': 'Ejemplos',
+      'nav.resources': 'Recursos',
       'nav.faq': 'FAQ',
       'nav.lang': 'EN',
 
@@ -477,8 +477,8 @@
       'nav.home': 'Home',
       'nav.levels': 'Levels',
       'nav.commands': 'Commands',
-      'nav.visual': 'Visual examples',
-      'nav.resources': 'Free Resources',
+      'nav.visual': 'Examples',
+      'nav.resources': 'Resources',
       'nav.faq': 'FAQ',
       'nav.lang': 'ES',
 
