@@ -24,16 +24,16 @@
   <div class="container container-xl">
     <a class="navbar-brand brand-cad" href="../index.html">
       <span class="brand-mark"></span>
-      <span>AutoCAD<small class="d-block">Guía · Teoría &amp; Práctica</small></span>
+      <span>AutoCAD<small class="d-block" data-i18n-html="brand.sub">Guía · Teoría &amp; Práctica</small></span>
     </a>
     <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
       <i class="bi bi-list fs-4"></i>
     </button>
     <div class="collapse navbar-collapse" id="navCad">
       <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
-        <li class="nav-item"><a class="nav-link nav-link-cad" href="../index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../index.html" data-i18n="nav.home">Inicio</a></li>
         <li class="nav-item dropdown">
-          <a class="nav-link nav-link-cad dropdown-toggle" href="#" data-bs-toggle="dropdown">Niveles</a>
+          <a class="nav-link nav-link-cad dropdown-toggle" href="#" data-bs-toggle="dropdown" data-i18n="nav.levels">Niveles</a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="nivel-1-fundamentos.html">Nivel 1 · Fundamentos</a></li>
             <li><a class="dropdown-item" href="nivel-2-dibujo-2d.html">Nivel 2 · Dibujo 2D</a></li>
@@ -42,14 +42,18 @@
             <li><a class="dropdown-item" href="nivel-5-avanzado.html">Nivel 5 · Avanzado</a></li>
           </ul>
         </li>
-        <li class="nav-item"><a class="nav-link nav-link-cad active" href="comandos.html">Comandos</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-cad" href="recursos.html">Recursos gratis</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-cad" href="faq.html">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad active" href="comandos.html" data-i18n="nav.commands">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="recursos.html" data-i18n="nav.resources">Recursos gratis</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="faq.html" data-i18n="nav.faq">FAQ</a></li>
       </ul>
       <div class="d-flex align-items-center gap-2">
         <span class="coord-readout d-none d-lg-inline-flex">X: <span id="coordX">000.00</span>&nbsp; Y: <span id="coordY">000.00</span></span>
-        <button class="icon-btn" id="searchToggle" title="Buscar"><i class="bi bi-search"></i></button>
-        <button class="icon-btn" id="themeToggle" title="Cambiar tema"><i class="bi bi-moon-stars"></i></button>
+        <button class="lang-toggle" id="langToggle" title="Cambiar idioma" data-i18n-title="ui.lang">
+          <i class="bi bi-translate lang-toggle-flag"></i>
+          <span class="lang-toggle-text">EN</span>
+        </button>
+        <button class="icon-btn" id="searchToggle" title="Buscar" data-i18n-title="ui.search"><i class="bi bi-search"></i></button>
+        <button class="icon-btn" id="themeToggle" title="Cambiar tema" data-i18n-title="ui.theme"><i class="bi bi-moon-stars"></i></button>
       </div>
     </div>
   </div>
@@ -58,13 +62,13 @@
 <!-- ===================== CABECERA ===================== -->
 <header class="commands-hero">
   <div class="container container-xl position-relative">
-    <p class="eyebrow">Diccionario de comandos</p>
-    <h1 style="font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.1;margin-bottom:.8rem">Busca cualquier comando</h1>
-    <p style="color:var(--text-muted);font-size:1.05rem;max-width:540px;margin-bottom:2rem">Escribe el nombre o el atajo de un comando y encuentra al instante su uso, categoría y nivel.</p>
+    <p class="eyebrow" data-i18n="cmd.eyebrow">Diccionario de comandos</p>
+    <h1 style="font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.1;margin-bottom:.8rem" data-i18n="cmd.hero.title">Busca cualquier comando</h1>
+    <p style="color:var(--text-muted);font-size:1.05rem;max-width:540px;margin-bottom:2rem" data-i18n="cmd.hero.desc">Escribe el nombre o el atajo de un comando y encuentra al instante su uso, categoría y nivel.</p>
 
     <div class="search-cad" id="buscador">
       <i class="bi bi-search"></i>
-      <input type="text" id="cmdSearchInput" placeholder="Escribe un comando o atajo (LINE, OFFSET, TRIM...)" autocomplete="off">
+      <input type="text" id="cmdSearchInput" placeholder="Escribe un comando o atajo (LINE, OFFSET, TRIM...)" autocomplete="off" data-i18n-placeholder="ui.cmdPlaceholder">
     </div>
 
     <div class="cmd-filters" id="cmdFilters">
@@ -883,7 +887,7 @@
 
     <div id="cmdEmpty" style="display:none;text-align:center;padding:3rem;color:var(--text-faint)">
       <i class="bi bi-search" style="font-size:2rem;display:block;margin-bottom:.5rem;color:var(--cyan);opacity:.4"></i>
-      No se encontraron comandos con ese nombre o atajo.
+      <span data-i18n="ui.noCommands">No se encontraron comandos con ese nombre o atajo.</span>
     </div>
 
   </div>
@@ -895,10 +899,10 @@
     <div class="row gy-4">
       <div class="col-lg-4">
         <div class="brand-cad mb-2"><span class="brand-mark"></span><span>AutoCAD Guía</span></div>
-        <p>Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
+        <p data-i18n="footer.disclaimer">Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
       </div>
       <div class="col-6 col-lg-2">
-        <h6 class="mono text-uppercase small text-muted-custom mb-3">Niveles</h6>
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.levels">Niveles</h6>
         <ul class="list-unstyled">
           <li><a href="nivel-1-fundamentos.html">Fundamentos</a></li>
           <li><a href="nivel-2-dibujo-2d.html">Dibujo 2D</a></li>
@@ -906,7 +910,7 @@
         </ul>
       </div>
       <div class="col-6 col-lg-2">
-        <h6 class="mono text-uppercase small text-muted-custom mb-3">Guía</h6>
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.guide">Guía</h6>
         <ul class="list-unstyled">
           <li><a href="comandos.html">Comandos</a></li>
           <li><a href="recursos.html">Recursos</a></li>
@@ -914,7 +918,7 @@
         </ul>
       </div>
       <div class="col-lg-4">
-        <h6 class="mono text-uppercase small text-muted-custom mb-3">Síguenos</h6>
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.follow">Síguenos</h6>
         <div class="d-flex gap-2">
           <a href="#" class="icon-btn"><i class="bi bi-youtube"></i></a>
           <a href="#" class="icon-btn"><i class="bi bi-instagram"></i></a>
@@ -923,15 +927,15 @@
       </div>
     </div>
     <hr class="mt-5 mb-4" style="border-color:var(--border-soft)">
-    <p class="mb-0 small">© 2026 AutoCAD Guía. Proyecto educativo de aprendizaje libre.</p>
+    <p class="mb-0 small" data-i18n="footer.copyright">© 2026 AutoCAD Guía. Proyecto educativo de aprendizaje libre.</p>
   </div>
 </footer>
 
 <div class="command-line-bar" id="cmdBar">
   <div class="command-line-inner">
-    <span class="prompt-sign">Comando:</span>
+    <span class="prompt-sign" data-i18n="ui.command">Comando:</span>
     <span id="cmd-typed"></span><span class="cursor-blink"></span>
-    <button class="cl-close" id="cmdClose" title="Ocultar"><i class="bi bi-x-lg"></i></button>
+    <button class="cl-close" id="cmdClose" title="Ocultar" data-i18n-title="ui.hide"><i class="bi bi-x-lg"></i></button>
   </div>
 </div>
 
@@ -940,11 +944,11 @@
   <div class="search-box">
     <div class="search-input-wrap">
       <i class="bi bi-search"></i>
-      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar">
+      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar" data-i18n-placeholder="ui.searchPlaceholder">
       <kbd class="search-kbd">ESC</kbd>
     </div>
     <div class="search-results" id="globalSearchResults">
-      <div class="search-empty">Escribe al menos 2 caracteres para buscar...</div>
+      <div class="search-empty" data-i18n="ui.typeToSearch">Escribe al menos 2 caracteres para buscar...</div>
     </div>
   </div>
 </div>
@@ -955,6 +959,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="../js/i18n.js"></script>
 <script src="../js/main.js"></script>
 </body>
 </html>

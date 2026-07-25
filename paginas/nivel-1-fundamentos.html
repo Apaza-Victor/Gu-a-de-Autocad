@@ -24,16 +24,16 @@
   <div class="container container-xl">
     <a class="navbar-brand brand-cad" href="../index.html">
       <span class="brand-mark"></span>
-      <span>AutoCAD<small class="d-block">Guía · Teoría &amp; Práctica</small></span>
+      <span>AutoCAD<small class="d-block" data-i18n-html="brand.sub">Guía · Teoría &amp; Práctica</small></span>
     </a>
     <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
       <i class="bi bi-list fs-4"></i>
     </button>
     <div class="collapse navbar-collapse" id="navCad">
       <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
-        <li class="nav-item"><a class="nav-link nav-link-cad" href="../index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../index.html" data-i18n="nav.home">Inicio</a></li>
         <li class="nav-item dropdown">
-          <a class="nav-link nav-link-cad dropdown-toggle active" href="#" data-bs-toggle="dropdown">Niveles</a>
+          <a class="nav-link nav-link-cad dropdown-toggle active" href="#" data-bs-toggle="dropdown" data-i18n="nav.levels">Niveles</a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item active" href="nivel-1-fundamentos.html">Nivel 1 · Fundamentos</a></li>
             <li><a class="dropdown-item" href="nivel-2-dibujo-2d.html">Nivel 2 · Dibujo 2D</a></li>
@@ -42,14 +42,18 @@
             <li><a class="dropdown-item" href="nivel-5-avanzado.html">Nivel 5 · Avanzado</a></li>
           </ul>
         </li>
-        <li class="nav-item"><a class="nav-link nav-link-cad" href="comandos.html">Comandos</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-cad" href="recursos.html">Recursos gratis</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-cad" href="faq.html">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="comandos.html" data-i18n="nav.commands">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="recursos.html" data-i18n="nav.resources">Recursos gratis</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="faq.html" data-i18n="nav.faq">FAQ</a></li>
       </ul>
       <div class="d-flex align-items-center gap-2">
         <span class="coord-readout d-none d-lg-inline-flex">X: <span id="coordX">000.00</span>&nbsp; Y: <span id="coordY">000.00</span></span>
-        <button class="icon-btn" id="searchToggle" title="Buscar"><i class="bi bi-search"></i></button>
-        <button class="icon-btn" id="themeToggle" title="Cambiar tema"><i class="bi bi-moon-stars"></i></button>
+        <button class="lang-toggle" id="langToggle" title="Cambiar idioma" data-i18n-title="ui.lang">
+          <i class="bi bi-translate lang-toggle-flag"></i>
+          <span class="lang-toggle-text">EN</span>
+        </button>
+        <button class="icon-btn" id="searchToggle" title="Buscar" data-i18n-title="ui.search"><i class="bi bi-search"></i></button>
+        <button class="icon-btn" id="themeToggle" title="Cambiar tema" data-i18n-title="ui.theme"><i class="bi bi-moon-stars"></i></button>
       </div>
     </div>
   </div>
@@ -58,10 +62,10 @@
 <!-- ===================== CABECERA ===================== -->
 <header class="page-header">
   <div class="container container-xl">
-    <p class="crumb"><a href="../index.html">Inicio</a> / <a href="../index.html#niveles">Niveles</a> / Nivel 1</p>
-    <span class="eyebrow">Nivel 01 · Básico</span>
-    <h1>Fundamentos de AutoCAD</h1>
-    <p class="subtitle">Antes de dibujar una sola línea, entiende qué es el programa, cómo instalarlo, cómo está organizada su interfaz y cómo funciona su sistema de coordenadas. Esta base evita el 80% de los errores de un principiante.</p>
+    <p class="crumb"><a href="../index.html" data-i18n="lvl1.breadcrumb">Inicio</a> / <a href="../index.html#niveles">Niveles</a> / Nivel 1</p>
+    <span class="eyebrow" data-i18n="lvl1.eyebrow">Nivel 01 · Básico</span>
+    <h1 data-i18n="lvl1.title">Fundamentos de AutoCAD</h1>
+    <p class="subtitle" data-i18n="lvl1.subtitle">Antes de dibujar una sola línea, entiende qué es el programa, cómo instalarlo, cómo está organizada su interfaz y cómo funciona su sistema de coordenadas. Esta base evita el 80% de los errores de un principiante.</p>
     <div class="level-progress-bar"><div class="fill"></div></div>
     <p class="level-progress-label">0 de 5 temas completados · 0%</p>
   </div>
@@ -94,20 +98,20 @@
 
           <!-- 1. Qué es AutoCAD -->
           <section id="que-es" data-topic="nivel1-que-es">
-            <h2><span class="sec-num">1</span> ¿Qué es AutoCAD y para qué se usa?</h2>
-            <p><strong>AutoCAD</strong> es un programa de diseño asistido por computadora (CAD, por sus siglas en inglés) desarrollado por Autodesk, usado para crear dibujos técnicos precisos en dos dimensiones (2D) y modelos en tres dimensiones (3D). A diferencia de un programa de dibujo artístico, AutoCAD trabaja con coordenadas exactas y unidades reales: un muro de 3 metros se dibuja midiendo exactamente 3 metros dentro del archivo.</p>
+            <h2 data-i18n="lvl1.s1.title"><span class="sec-num">1</span> ¿Qué es AutoCAD y para qué se usa?</h2>
+            <p data-i18n-html="lvl1.s1.p1"><strong>AutoCAD</strong> es un programa de diseño asistido por computadora (CAD, por sus siglas en inglés) desarrollado por Autodesk, usado para crear dibujos técnicos precisos en dos dimensiones (2D) y modelos en tres dimensiones (3D). A diferencia de un programa de dibujo artístico, AutoCAD trabaja con coordenadas exactas y unidades reales: un muro de 3 metros se dibuja midiendo exactamente 3 metros dentro del archivo.</p>
 
-            <p>Se utiliza principalmente en cuatro grandes áreas:</p>
+            <p data-i18n="lvl1.s1.p2">Se utiliza principalmente en cuatro grandes áreas:</p>
             <ul>
-              <li><strong>Arquitectura:</strong> planos de plantas, cortes, fachadas y detalles constructivos.</li>
-              <li><strong>Ingeniería civil y estructural:</strong> planos de cimentación, estructuras metálicas y de concreto.</li>
-              <li><strong>Ingeniería mecánica e industrial:</strong> piezas, ensambles y planos de fabricación.</li>
-              <li><strong>Diseño eléctrico y de instalaciones:</strong> diagramas unifilares, redes eléctricas, sanitarias y de gas.</li>
+              <li data-i18n-html="lvl1.s1.li1"><strong>Arquitectura:</strong> planos de plantas, cortes, fachadas y detalles constructivos.</li>
+              <li data-i18n-html="lvl1.s1.li2"><strong>Ingeniería civil y estructural:</strong> planos de cimentación, estructuras metálicas y de concreto.</li>
+              <li data-i18n-html="lvl1.s1.li3"><strong>Ingeniería mecánica e industrial:</strong> piezas, ensambles y planos de fabricación.</li>
+              <li data-i18n-html="lvl1.s1.li4"><strong>Diseño eléctrico y de instalaciones:</strong> diagramas unifilares, redes eléctricas, sanitarias y de gas.</li>
             </ul>
 
             <div class="callout">
-              <span class="callout-title">Idea clave</span>
-              Todo lo que dibujas en AutoCAD se hace a <strong>escala real 1:1</strong> en el "espacio modelo". La escala solo se aplica después, al momento de imprimir o presentar el plano.
+              <span class="callout-title" data-i18n="lvl1.s1.callout.title">Idea clave</span>
+              <span data-i18n-html="lvl1.s1.callout.body">Todo lo que dibujas en AutoCAD se hace a <strong>escala real 1:1</strong> en el "espacio modelo". La escala solo se aplica después, al momento de imprimir o presentar el plano.</span>
             </div>
 
             <div class="img-placeholder">
@@ -120,7 +124,7 @@
 
           <!-- 2. Instalación y licencias -->
           <section id="instalacion" data-topic="nivel1-instalacion">
-            <h2><span class="sec-num">2</span> Instalación, requisitos y tipos de licencia</h2>
+            <h2 data-i18n="lvl1.s2.title"><span class="sec-num">2</span> Instalación, requisitos y tipos de licencia</h2>
 
             <h3>Requisitos mínimos orientativos</h3>
             <table class="table-cad">
@@ -155,7 +159,7 @@
 
           <!-- 3. Interfaz de usuario -->
           <section id="interfaz" data-topic="nivel1-interfaz">
-            <h2><span class="sec-num">3</span> Interfaz de usuario</h2>
+            <h2 data-i18n="lvl1.s3.title"><span class="sec-num">3</span> Interfaz de usuario</h2>
             <p>La interfaz de AutoCAD está compuesta por varias zonas que conviene reconocer antes de dibujar:</p>
 
             <table class="table-cad">
@@ -317,6 +321,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="../js/i18n.js"></script>
 <script src="../js/main.js"></script>
 </body>
 </html>

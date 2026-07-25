@@ -29,7 +29,7 @@
   <div class="container container-xl">
     <a class="navbar-brand brand-cad" href="index.html">
       <span class="brand-mark"></span>
-      <span>AutoCAD<small class="d-block">Guía · Teoría &amp; Práctica</small></span>
+      <span>AutoCAD<small class="d-block" data-i18n-html="brand.sub">Guía · Teoría &amp; Práctica</small></span>
     </a>
 
     <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
@@ -38,9 +38,9 @@
 
     <div class="collapse navbar-collapse" id="navCad">
       <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
-        <li class="nav-item"><a class="nav-link nav-link-cad active" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad active" href="index.html" data-i18n="nav.home">Inicio</a></li>
         <li class="nav-item dropdown">
-          <a class="nav-link nav-link-cad dropdown-toggle" href="#" data-bs-toggle="dropdown">Niveles</a>
+          <a class="nav-link nav-link-cad dropdown-toggle" href="#" data-bs-toggle="dropdown" data-i18n="nav.levels">Niveles</a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="paginas/nivel-1-fundamentos.html">Nivel 1 · Fundamentos</a></li>
             <li><a class="dropdown-item" href="paginas/nivel-2-dibujo-2d.html">Nivel 2 · Dibujo 2D</a></li>
@@ -49,15 +49,19 @@
             <li><a class="dropdown-item" href="paginas/nivel-5-avanzado.html">Nivel 5 · Avanzado</a></li>
           </ul>
         </li>
-        <li class="nav-item"><a class="nav-link nav-link-cad" href="paginas/comandos.html">Comandos</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-cad" href="paginas/recursos.html">Recursos gratis</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-cad" href="paginas/faq.html">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="paginas/comandos.html" data-i18n="nav.commands">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="paginas/recursos.html" data-i18n="nav.resources">Recursos gratis</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="paginas/faq.html" data-i18n="nav.faq">FAQ</a></li>
       </ul>
 
       <div class="d-flex align-items-center gap-2">
         <span class="coord-readout d-none d-lg-inline-flex">X: <span id="coordX">000.00</span>&nbsp; Y: <span id="coordY">000.00</span></span>
-        <button class="icon-btn" id="searchToggle" title="Buscar"><i class="bi bi-search"></i></button>
-        <button class="icon-btn" id="themeToggle" title="Cambiar tema"><i class="bi bi-moon-stars"></i></button>
+        <button class="lang-toggle" id="langToggle" title="Cambiar idioma" data-i18n-title="ui.lang">
+          <i class="bi bi-translate lang-toggle-flag"></i>
+          <span class="lang-toggle-text">EN</span>
+        </button>
+        <button class="icon-btn" id="searchToggle" title="Buscar" data-i18n-title="ui.search"><i class="bi bi-search"></i></button>
+        <button class="icon-btn" id="themeToggle" title="Cambiar tema" data-i18n-title="ui.theme"><i class="bi bi-moon-stars"></i></button>
       </div>
     </div>
   </div>
@@ -71,12 +75,12 @@
   <div class="container container-xl position-relative">
     <div class="row align-items-center gy-5">
       <div class="col-lg-6" data-aos="fade-up">
-        <p class="eyebrow">Guía completa · Nivel 1 a Nivel 5</p>
-        <h1>Domina AutoCAD desde <em>la primera línea</em> hasta el plano maestro.</h1>
-        <p class="lead-cad">Teoría clara, comandos explicados y una ruta de aprendizaje ordenada para dibujar en 2D, modelar en 3D y trabajar como un profesional del CAD. Ideal para aprender desde cero o repasar un tema puntual.</p>
+        <p class="eyebrow" data-i18n="home.hero.eyebrow">Guía completa · Nivel 1 a Nivel 5</p>
+        <h1 data-i18n-html="home.hero.title">Domina AutoCAD desde <em>la primera línea</em> hasta el plano maestro.</h1>
+        <p class="lead-cad" data-i18n="home.hero.desc">Teoría clara, comandos explicados y una ruta de aprendizaje ordenada para dibujar en 2D, modelar en 3D y trabajar como un profesional del CAD. Ideal para aprender desde cero o repasar un tema puntual.</p>
         <div class="d-flex flex-wrap gap-3 mt-4">
-          <a href="paginas/nivel-1-fundamentos.html" class="btn-cad-primary"><i class="bi bi-play-fill me-1"></i> Empezar desde cero</a>
-          <a href="paginas/comandos.html" class="btn-cad-outline"><i class="bi bi-terminal me-1"></i> Ir a comandos</a>
+          <a href="paginas/nivel-1-fundamentos.html" class="btn-cad-primary"><i class="bi bi-play-fill me-1"></i> <span data-i18n="home.hero.start">Empezar desde cero</span></a>
+          <a href="paginas/comandos.html" class="btn-cad-outline"><i class="bi bi-terminal me-1"></i> <span data-i18n="home.hero.goCmds">Ir a comandos</span></a>
         </div>
         <div class="layer-legend">
           <span class="layer-chip"><span class="layer-dot" style="background:var(--layer-red)"></span>2D</span>
@@ -115,9 +119,9 @@
   <div class="container container-xl">
     <div class="row mb-5">
       <div class="col-lg-7" data-aos="fade-up">
-        <p class="eyebrow">Ruta de aprendizaje</p>
-        <h2 class="mb-2" style="font-size:clamp(1.6rem,3vw,2.2rem)">Cinco niveles, un mismo dibujo cada vez más preciso</h2>
-        <p class="text-muted-custom mb-2">Sigue el orden si empiezas desde cero, o salta directo al nivel que necesitas repasar.</p>
+        <p class="eyebrow" data-i18n="home.roadmap.eyebrow">Ruta de aprendizaje</p>
+        <h2 class="mb-2" style="font-size:clamp(1.6rem,3vw,2.2rem)" data-i18n="home.roadmap.title">Cinco niveles, un mismo dibujo cada vez más preciso</h2>
+        <p class="text-muted-custom mb-2" data-i18n="home.roadmap.desc">Sigue el orden si empiezas desde cero, o salta directo al nivel que necesitas repasar.</p>
         <div class="home-progress-wrap">
           <div class="home-progress-bar"><div class="fill" id="homeProgressFill"></div></div>
           <span class="home-progress-label mono" id="homeProgressLabel">0 de 31 temas completados · 0%</span>
@@ -130,9 +134,9 @@
         <a href="paginas/nivel-1-fundamentos.html" class="text-decoration-none">
           <div class="level-card">
             <div class="level-index">01</div>
-            <span class="level-tag">Básico</span>
-            <h3>Fundamentos</h3>
-            <p>Interfaz, instalación, coordenadas y configuración inicial del programa.</p>
+            <span class="level-tag" data-i18n="lvl1.card.tag">Básico</span>
+            <h3 data-i18n="lvl1.card.title">Fundamentos</h3>
+            <p data-i18n="lvl1.card.desc">Interfaz, instalación, coordenadas y configuración inicial del programa.</p>
           </div>
         </a>
       </div>
@@ -140,9 +144,9 @@
         <a href="paginas/nivel-2-dibujo-2d.html" class="text-decoration-none">
           <div class="level-card">
             <div class="level-index">02</div>
-            <span class="level-tag">Básico–Intermedio</span>
-            <h3>Dibujo 2D</h3>
-            <p>Herramientas de dibujo, modificación, precisión, capas, cotas y texto.</p>
+            <span class="level-tag" data-i18n="lvl2.card.tag">Básico–Intermedio</span>
+            <h3 data-i18n="lvl2.card.title">Dibujo 2D</h3>
+            <p data-i18n="lvl2.card.desc">Herramientas de dibujo, modificación, precisión, capas, cotas y texto.</p>
           </div>
         </a>
       </div>
@@ -150,9 +154,9 @@
         <a href="paginas/nivel-3-organizacion.html" class="text-decoration-none">
           <div class="level-card">
             <div class="level-index">03</div>
-            <span class="level-tag">Intermedio</span>
-            <h3>Organización y productividad</h3>
-            <p>Presentaciones, ventanas gráficas, plantillas, impresión y Xref.</p>
+            <span class="level-tag" data-i18n="lvl3.card.tag">Intermedio</span>
+            <h3 data-i18n="lvl3.card.title">Organización y productividad</h3>
+            <p data-i18n="lvl3.card.desc">Presentaciones, ventanas gráficas, plantillas, impresión y Xref.</p>
           </div>
         </a>
       </div>
@@ -160,9 +164,9 @@
         <a href="paginas/nivel-4-modelado-3d.html" class="text-decoration-none">
           <div class="level-card">
             <div class="level-index">04</div>
-            <span class="level-tag">Avanzado</span>
-            <h3>Modelado 3D</h3>
-            <p>Sólidos, operaciones booleanas, extrusión, superficies y render básico.</p>
+            <span class="level-tag" data-i18n="lvl4.card.tag">Avanzado</span>
+            <h3 data-i18n="lvl4.card.title">Modelado 3D</h3>
+            <p data-i18n="lvl4.card.desc">Sólidos, operaciones booleanas, extrusión, superficies y render básico.</p>
           </div>
         </a>
       </div>
@@ -170,9 +174,9 @@
         <a href="paginas/nivel-5-avanzado.html" class="text-decoration-none">
           <div class="level-card">
             <div class="level-index">05</div>
-            <span class="level-tag">Experto</span>
-            <h3>Nivel experto</h3>
-            <p>Personalización, AutoLISP, estándares CAD y flujo con otros programas.</p>
+            <span class="level-tag" data-i18n="lvl5.card.tag">Experto</span>
+            <h3 data-i18n="lvl5.card.title">Nivel experto</h3>
+            <p data-i18n="lvl5.card.desc">Personalización, AutoLISP, estándares CAD y flujo con otros programas.</p>
           </div>
         </a>
       </div>
@@ -180,9 +184,9 @@
         <a href="paginas/comandos.html" class="text-decoration-none">
           <div class="level-card">
             <div class="level-index"><i class="bi bi-terminal"></i></div>
-            <span class="level-tag">Consulta</span>
-            <h3>Diccionario de comandos</h3>
-            <p>Busca cualquier comando, su atajo y su uso en segundos.</p>
+            <span class="level-tag" data-i18n="lvlCmd.card.tag">Consulta</span>
+            <h3 data-i18n="lvlCmd.card.title">Diccionario de comandos</h3>
+            <p data-i18n="lvlCmd.card.desc">Busca cualquier comando, su atajo y su uso en segundos.</p>
           </div>
         </a>
       </div>
@@ -195,25 +199,25 @@
   <div class="container container-xl">
     <div class="row mb-4">
       <div class="col-lg-7" data-aos="fade-up">
-        <p class="eyebrow">Por qué esta guía</p>
-        <h2 style="font-size:clamp(1.6rem,3vw,2.2rem)">Pensada tanto para aprender como para consultar</h2>
+        <p class="eyebrow" data-i18n="home.features.eyebrow">Por qué esta guía</p>
+        <h2 style="font-size:clamp(1.6rem,3vw,2.2rem)" data-i18n="home.features.title">Pensada tanto para aprender como para consultar</h2>
       </div>
     </div>
     <div class="row g-4">
       <div class="col-md-4 feature-item" data-aos="fade-up">
         <div class="feature-icon"><i class="bi bi-signpost-split"></i></div>
-        <h4>Ruta ordenada</h4>
-        <p>Contenido dividido en niveles progresivos, sin saltos ni supuestos previos.</p>
+        <h4 data-i18n="home.feature1.title">Ruta ordenada</h4>
+        <p data-i18n="home.feature1.desc">Contenido dividido en niveles progresivos, sin saltos ni supuestos previos.</p>
       </div>
       <div class="col-md-4 feature-item" data-aos="fade-up" data-aos-delay="80">
         <div class="feature-icon"><i class="bi bi-search"></i></div>
-        <h4>Búsqueda rápida</h4>
-        <p>Encuentra un comando o un concepto puntual sin leer todo el temario.</p>
+        <h4 data-i18n="home.feature2.title">Búsqueda rápida</h4>
+        <p data-i18n="home.feature2.desc">Encuentra un comando o un concepto puntual sin leer todo el temario.</p>
       </div>
       <div class="col-md-4 feature-item" data-aos="fade-up" data-aos-delay="160">
         <div class="feature-icon"><i class="bi bi-gift"></i></div>
-        <h4>Recursos gratuitos</h4>
-        <p>Bloques, plantillas y cursos gratuitos seleccionados y clasificados.</p>
+        <h4 data-i18n="home.feature3.title">Recursos gratuitos</h4>
+        <p data-i18n="home.feature3.desc">Bloques, plantillas y cursos gratuitos seleccionados y clasificados.</p>
       </div>
     </div>
   </div>
@@ -224,8 +228,8 @@
   <div class="container container-xl">
     <div class="row mb-4">
       <div class="col-lg-7" data-aos="fade-up">
-        <p class="eyebrow">Diccionario de comandos</p>
-        <h2 style="font-size:clamp(1.6rem,3vw,2.2rem)">Los comandos más usados, a un clic</h2>
+        <p class="eyebrow" data-i18n="home.preview.eyebrow">Diccionario de comandos</p>
+        <h2 style="font-size:clamp(1.6rem,3vw,2.2rem)" data-i18n="home.preview.title">Los comandos más usados, a un clic</h2>
       </div>
     </div>
 
@@ -268,7 +272,7 @@
       </div>
     </div>
     <div class="text-center mt-4" data-aos="fade-up">
-      <a href="paginas/comandos.html" class="btn-cad-outline">Ver todos los comandos <i class="bi bi-arrow-right ms-1"></i></a>
+      <a href="paginas/comandos.html" class="btn-cad-outline"><span data-i18n="home.preview.all">Ver todos los comandos</span> <i class="bi bi-arrow-right ms-1"></i></a>
     </div>
   </div>
 </section>
@@ -278,8 +282,8 @@
   <div class="container container-xl">
     <div class="row mb-4">
       <div class="col-lg-7" data-aos="fade-up">
-        <p class="eyebrow">Recursos gratuitos</p>
-        <h2 style="font-size:clamp(1.6rem,3vw,2.2rem)">Bloques, plantillas y cursos sin costo</h2>
+        <p class="eyebrow" data-i18n="home.res.eyebrow">Recursos gratuitos</p>
+        <h2 style="font-size:clamp(1.6rem,3vw,2.2rem)" data-i18n="home.res.title">Bloques, plantillas y cursos sin costo</h2>
       </div>
     </div>
 
@@ -315,10 +319,10 @@
 <!-- ===================== CTA FINAL ===================== -->
 <section class="cta-final" data-aos="fade-up">
   <div class="container container-xl">
-    <p class="eyebrow justify-content-center">Empieza ahora</p>
-    <h2>Tu primer plano puede empezar hoy mismo</h2>
-    <p class="text-muted-custom mb-4">Sin cuentas, sin costos. Solo abre el Nivel 1 y comienza.</p>
-    <a href="paginas/nivel-1-fundamentos.html" class="btn-cad-primary">Ir al Nivel 1 <i class="bi bi-arrow-right ms-1"></i></a>
+    <p class="eyebrow justify-content-center" data-i18n="home.cta.eyebrow">Empieza ahora</p>
+    <h2 data-i18n="home.cta.title">Tu primer plano puede empezar hoy mismo</h2>
+    <p class="text-muted-custom mb-4" data-i18n="home.cta.desc">Sin cuentas, sin costos. Solo abre el Nivel 1 y comienza.</p>
+    <a href="paginas/nivel-1-fundamentos.html" class="btn-cad-primary"><span data-i18n="home.cta.btn">Ir al Nivel 1</span> <i class="bi bi-arrow-right ms-1"></i></a>
   </div>
 </section>
 
@@ -328,10 +332,10 @@
     <div class="row gy-4">
       <div class="col-lg-4">
         <div class="brand-cad mb-2"><span class="brand-mark"></span><span>AutoCAD Guía</span></div>
-        <p>Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
+        <p data-i18n="footer.disclaimer">Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
       </div>
       <div class="col-6 col-lg-2">
-        <h6 class="mono text-uppercase small text-muted-custom mb-3">Niveles</h6>
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.levels">Niveles</h6>
         <ul class="list-unstyled">
           <li><a href="paginas/nivel-1-fundamentos.html">Fundamentos</a></li>
           <li><a href="paginas/nivel-2-dibujo-2d.html">Dibujo 2D</a></li>
@@ -339,7 +343,7 @@
         </ul>
       </div>
       <div class="col-6 col-lg-2">
-        <h6 class="mono text-uppercase small text-muted-custom mb-3">Guía</h6>
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.guide">Guía</h6>
         <ul class="list-unstyled">
           <li><a href="paginas/comandos.html">Comandos</a></li>
           <li><a href="paginas/recursos.html">Recursos</a></li>
@@ -347,7 +351,7 @@
         </ul>
       </div>
       <div class="col-lg-4">
-        <h6 class="mono text-uppercase small text-muted-custom mb-3">Síguenos</h6>
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.follow">Síguenos</h6>
         <div class="d-flex gap-2">
           <a href="#" class="icon-btn"><i class="bi bi-youtube"></i></a>
           <a href="#" class="icon-btn"><i class="bi bi-instagram"></i></a>
@@ -356,29 +360,29 @@
       </div>
     </div>
     <hr class="mt-5 mb-4" style="border-color:var(--border-soft)">
-    <p class="mb-0 small">© 2026 AutoCAD Guía. Proyecto educativo de aprendizaje libre.</p>
+    <p class="mb-0 small" data-i18n="footer.copyright">© 2026 AutoCAD Guía. Proyecto educativo de aprendizaje libre.</p>
   </div>
 </footer>
 
 <!-- ===================== BARRA DE LÍNEA DE COMANDOS ===================== -->
 <div class="command-line-bar" id="cmdBar">
   <div class="command-line-inner">
-    <span class="prompt-sign">Comando:</span>
+    <span class="prompt-sign" data-i18n="ui.cmdPrompt">Comando:</span>
     <span id="cmd-typed"></span><span class="cursor-blink"></span>
-    <button class="cl-close" id="cmdClose" title="Ocultar"><i class="bi bi-x-lg"></i></button>
+    <button class="cl-close" id="cmdClose" title="Ocultar" data-i18n-title="ui.hide"><i class="bi bi-x-lg"></i></button>
   </div>
 </div>
 
 <!-- ===================== BUSCADOR GLOBAL ===================== -->
-<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Buscar en la guía">
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Buscar en la guía" data-i18n-aria="ui.search">
   <div class="search-box">
     <div class="search-input-wrap">
       <i class="bi bi-search"></i>
-      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar">
+      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar" data-i18n-placeholder="ui.searchPlaceholder">
       <kbd class="search-kbd">ESC</kbd>
     </div>
     <div class="search-results" id="globalSearchResults">
-      <div class="search-empty">Escribe al menos 2 caracteres para buscar...</div>
+      <div class="search-empty" data-i18n="ui.searchEmpty">Escribe al menos 2 caracteres para buscar...</div>
     </div>
   </div>
 </div>
@@ -390,6 +394,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

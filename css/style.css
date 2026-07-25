@@ -1214,3 +1214,42 @@ code[class*="language-"]{
 @media (max-width: 575.98px){
   .command-line-inner{ font-size: .74rem; }
 }
+
+/* ---------- Language toggle ---------- */
+.lang-toggle{
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--cyan);
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .2s, border-color .2s, color .2s;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.lang-toggle:hover{
+  background: var(--cyan-dim);
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+.lang-toggle .lang-toggle-flag{
+  font-size: .85rem;
+}
+.lang-toggle .lang-toggle-text{
+  font-size: .72rem;
+}
+[data-theme="light"] .lang-toggle{
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  color: var(--cyan);
+}
+[data-theme="light"] .lang-toggle:hover{
+  background: var(--cyan-dim);
+}

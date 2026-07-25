@@ -79,15 +79,11 @@ function initCommandLine(){
   const closeBtn = document.getElementById('cmdClose');
   if (!bar || !typedEl) return;
 
+  function t(key){ return window.I18N_SYSTEM ? window.I18N_SYSTEM.t(key) : key; }
+
   const tips = [
-    'Consejo: pulsa la tecla ORTO (F8) para dibujar líneas perfectamente horizontales o verticales.',
-    'Consejo: usa OFFSET (O) para duplicar muros o líneas a una distancia exacta.',
-    'Consejo: activa las referencias a objetos (F3) para hacer clic con precisión sobre puntos existentes.',
-    'Consejo: guarda tus capas base en una plantilla .DWT para no repetir configuración en cada proyecto.',
-    'Consejo: el comando MATRIZ (AR) repite objetos en filas, columnas o de forma circular.',
-    'Consejo: revisa la sección de Comandos para buscar cualquier herramienta por nombre o atajo.',
-    'Consejo: usa LAYISO para aislar una capa y trabajar sin distracciones visuales.',
-    'Consejo: el comando PURGE elimina elementos no usados y reduce el tamaño del archivo.'
+    t('tip.1'), t('tip.2'), t('tip.3'), t('tip.4'),
+    t('tip.5'), t('tip.6'), t('tip.7'), t('tip.8')
   ];
 
   let tipIndex = 0;
@@ -142,7 +138,7 @@ function initSearchToggle(){
 function initBackToTop(){
   const btn = document.createElement('button');
   btn.innerHTML = '<i class="bi bi-arrow-up"></i>';
-  btn.setAttribute('aria-label', 'Volver arriba');
+  btn.setAttribute('aria-label', window.I18N_SYSTEM ? I18N_SYSTEM.t('ui.back') : 'Volver arriba');
   btn.style.cssText = `
     position:fixed; right:1.1rem; bottom:4.2rem; z-index:1035;
     width:40px; height:40px; border-radius:8px;
@@ -202,7 +198,7 @@ function initMarkDone(){
 
     if (isTopicComplete(topicId)) {
       btn.classList.add('completed');
-      btn.innerHTML = '<i class="bi bi-check-circle-fill"></i> Tema completado';
+      btn.innerHTML = '<i class="bi bi-check-circle-fill"></i> ' + (window.I18N_SYSTEM ? I18N_SYSTEM.t('ui.done') : 'Tema completado');
       const tocLink = document.querySelector('.toc-list a[data-toc="' + topicId + '"]');
       if (tocLink) tocLink.classList.add('done');
     }
@@ -211,13 +207,13 @@ function initMarkDone(){
       if (isTopicComplete(topicId)) {
         markTopicIncomplete(topicId);
         btn.classList.remove('completed');
-        btn.innerHTML = '<i class="bi bi-check-circle"></i> Marcar tema como visto';
+        btn.innerHTML = '<i class="bi bi-check-circle"></i> ' + (window.I18N_SYSTEM ? I18N_SYSTEM.t('ui.markDone') : 'Marcar tema como visto');
         const tocLink = document.querySelector('.toc-list a[data-toc="' + topicId + '"]');
         if (tocLink) tocLink.classList.remove('done');
       } else {
         markTopicComplete(topicId);
         btn.classList.add('completed');
-        btn.innerHTML = '<i class="bi bi-check-circle-fill"></i> Tema completado';
+        btn.innerHTML = '<i class="bi bi-check-circle-fill"></i> ' + (window.I18N_SYSTEM ? I18N_SYSTEM.t('ui.done') : 'Tema completado');
         const tocLink = document.querySelector('.toc-list a[data-toc="' + topicId + '"]');
         if (tocLink) tocLink.classList.add('done');
       }
@@ -245,7 +241,12 @@ function updateLevelProgress(){
 
   const pct = Math.round((done / total) * 100);
   fill.style.width = pct + '%';
-  label.textContent = done + ' de ' + total + ' temas completados · ' + pct + '%';
+  label.textContent = (function(){
+    if (window.I18N_SYSTEM){
+      return I18N_SYSTEM.t('progress.xOfY').replace('{done}', done).replace('{total}', total).replace('{pct}', pct);
+    }
+    return done + ' de ' + total + ' temas completados · ' + pct + '%';
+  })();
 }
 
 function markTopicComplete(id){
@@ -305,7 +306,7 @@ function initCommandFilters(){
         if (show) visible++;
       });
 
-      if (countEl) countEl.textContent = 'Mostrando ' + visible + ' comando' + (visible !== 1 ? 's' : '');
+      if (countEl) countEl.textContent = (window.I18N_SYSTEM ? I18N_SYSTEM.t('ui.showing') : 'Mostrando') + ' ' + visible + ' ' + (window.I18N_SYSTEM ? I18N_SYSTEM.t(visible !== 1 ? 'ui.commands' : 'ui.command_single') : 'comando' + (visible !== 1 ? 's' : ''));
       if (emptyEl) emptyEl.style.display = visible === 0 ? '' : 'none';
     });
   });
@@ -340,7 +341,7 @@ function initCommandSearch(){
       if (match) visible++;
     });
 
-    if (countEl) countEl.textContent = 'Mostrando ' + visible + ' comando' + (visible !== 1 ? 's' : '');
+    if (countEl) countEl.textContent = (window.I18N_SYSTEM ? I18N_SYSTEM.t('ui.showing') : 'Mostrando') + ' ' + visible + ' ' + (window.I18N_SYSTEM ? I18N_SYSTEM.t(visible !== 1 ? 'ui.commands' : 'ui.command_single') : 'comando' + (visible !== 1 ? 's' : ''));
     if (emptyEl) emptyEl.style.display = visible === 0 ? '' : 'none';
   });
 }
@@ -445,17 +446,17 @@ function initGlobalSearch(){
     debounceTimer = setTimeout(() => {
       const query = input.value.trim();
       if (query.length < 2) {
-        resultsContainer.innerHTML = '<div class="search-empty">Escribe al menos 2 caracteres para buscar...</div>';
+        resultsContainer.innerHTML = '<div class="search-empty">' + (window.I18N_SYSTEM ? I18N_SYSTEM.t('ui.typeToSearch') : 'Escribe al menos 2 caracteres para buscar...') + '</div>';
         return;
       }
       if (!fuse) {
-        resultsContainer.innerHTML = '<div class="search-empty">Buscador no disponible.</div>';
+        resultsContainer.innerHTML = '<div class="search-empty">' + (window.I18N_SYSTEM ? I18N_SYSTEM.t('ui.searchUnavailable') : 'Buscador no disponible.') + '</div>';
         return;
       }
 
       const results = fuse.search(query).slice(0, 12);
       if (results.length === 0) {
-        resultsContainer.innerHTML = '<div class="search-empty">No se encontraron resultados para "' + escapeHtml(query) + '"</div>';
+        resultsContainer.innerHTML = '<div class="search-empty">' + (window.I18N_SYSTEM ? I18N_SYSTEM.t('ui.noResults') : 'No se encontraron resultados para') + ' "' + escapeHtml(query) + '"</div>';
         return;
       }
 
@@ -634,7 +635,12 @@ function initHomeProgress(){
 
   const pct = Math.round((done / total) * 100);
   fill.style.width = pct + '%';
-  label.textContent = done + ' de ' + total + ' temas completados · ' + pct + '%';
+  label.textContent = (function(){
+    if (window.I18N_SYSTEM){
+      return I18N_SYSTEM.t('progress.xOfY').replace('{done}', done).replace('{total}', total).replace('{pct}', pct);
+    }
+    return done + ' de ' + total + ' temas completados · ' + pct + '%';
+  })();
 }
 
 /* ---------- Navegación por teclado ---------- */
@@ -695,7 +701,7 @@ function initCopyButtons(){
       if (!code) return;
       navigator.clipboard.writeText(code.textContent).then(() => {
         const original = btn.textContent;
-        btn.textContent = '¡Copiado!';
+        btn.textContent = window.I18N_SYSTEM ? I18N_SYSTEM.t('ui.copied') : '¡Copiado!';
         btn.style.color = 'var(--layer-green)';
         setTimeout(() => {
           btn.textContent = original;
