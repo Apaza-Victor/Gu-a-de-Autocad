@@ -36,7 +36,12 @@ function initThemeToggle(){
   const root = document.documentElement;
   const btn = document.getElementById('themeToggle');
   const saved = localStorage.getItem('autocad-guia-theme');
-  if (saved) root.setAttribute('data-theme', saved);
+
+  if (saved) {
+    root.setAttribute('data-theme', saved);
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    root.setAttribute('data-theme', 'light');
+  }
 
   updateThemeIcon();
 
@@ -146,6 +151,7 @@ function initBackToTop(){
     border:1px solid var(--border); display:none; place-items:center;
     cursor:pointer;
   `;
+  btn.className = 'back-to-top-btn';
   document.body.appendChild(btn);
 
   window.addEventListener('scroll', () => {

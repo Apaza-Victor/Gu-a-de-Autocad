@@ -24,6 +24,8 @@
 </head>
 <body>
 
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
 <!-- ===================== NAVBAR ===================== -->
 <nav class="navbar navbar-cad navbar-expand-lg">
   <div class="container container-xl">
@@ -50,7 +52,7 @@
           </ul>
         </li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="paginas/comandos.html" data-i18n="nav.commands">Comandos</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-cad" href="paginas/ejemplos-visuales.html" data-i18n="nav.visual">Ejemplos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="paginas/ejemplos-visuales.html" data-i18n="nav.visual">Visuales</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="paginas/trucos.html" data-i18n="nav.tips">Trucos</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="paginas/recursos.html" data-i18n="nav.resources">Recursos</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="paginas/faq.html" data-i18n="nav.faq">FAQ</a></li>
@@ -68,6 +70,8 @@
     </div>
   </div>
 </nav>
+
+<main id="main-content">
 
 <!-- ===================== HERO ===================== -->
 <header class="hero">
@@ -407,6 +411,8 @@
   </div>
 </section>
 
+</main>
+
 <!-- ===================== FOOTER ===================== -->
 <footer class="site-footer">
   <div class="container container-xl">
@@ -450,7 +456,7 @@
 <!-- ===================== BARRA DE LÍNEA DE COMANDOS ===================== -->
 <div class="command-line-bar" id="cmdBar">
   <div class="command-line-inner">
-    <span class="prompt-sign" data-i18n="ui.cmdPrompt">Comando:</span>
+    <span class="prompt-sign" data-i18n="ui.command">Comando:</span>
     <span id="cmd-typed"></span><span class="cursor-blink"></span>
     <button class="cl-close" id="cmdClose" title="Ocultar" data-i18n-title="ui.hide"><i class="bi bi-x-lg"></i></button>
   </div>
@@ -465,7 +471,7 @@
       <kbd class="search-kbd">ESC</kbd>
     </div>
     <div class="search-results" id="globalSearchResults">
-      <div class="search-empty" data-i18n="ui.searchEmpty">Escribe al menos 2 caracteres para buscar...</div>
+      <div class="search-empty" data-i18n="ui.typeToSearch">Escribe al menos 2 caracteres para buscar...</div>
     </div>
   </div>
 </div>

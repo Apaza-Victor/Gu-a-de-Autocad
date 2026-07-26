@@ -20,7 +20,7 @@
   /* Texto */
   --text:          #EAF0F9;
   --text-muted:    #8FA3C4;
-  --text-faint:    #5C6E8F;
+  --text-faint:    #8296B0;
 
   /* Acentos de instrumento */
   --cyan:          #35D6CB;
@@ -602,6 +602,9 @@ footer.site-footer a:hover{ color: var(--cyan); }
   border-collapse: collapse;
   margin-bottom: 1.5rem;
   font-size: .88rem;
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .table-cad th{
   font-family: var(--font-display);
@@ -1456,4 +1459,126 @@ code[class*="language-"]{
   .diagram-grid.cols-2{ grid-template-columns: 1fr; }
   .diagram-steps{ flex-direction: column; }
   .diagram-step-arrow{ width: auto; height: 30px; transform: rotate(90deg); }
+}
+
+/* =========================================================
+   Accessibility & polish improvements
+   ========================================================= */
+
+/* ---------- Skip to content link ---------- */
+.skip-link{
+  position: fixed;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  background: var(--cyan);
+  color: #06201E;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: .85rem;
+  padding: .6rem 1.2rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: top .2s ease;
+}
+.skip-link:focus{
+  top: 1rem;
+  color: #06201E;
+}
+
+/* ---------- Prefers reduced motion ---------- */
+@media (prefers-reduced-motion: reduce){
+  *, *::before, *::after{
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html{ scroll-behavior: auto; }
+  .command-line-inner .cursor-blink{ animation: none; opacity: 1; }
+}
+
+/* ---------- Table horizontal scroll wrapper ---------- */
+.table-scroll{
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1.5rem 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+/* ---------- Print styles ---------- */
+@media print{
+  .navbar-cad,
+  .command-line-bar,
+  .toc-sidebar,
+  .level-nav,
+  .mark-done-btn,
+  .search-overlay,
+  .back-to-top-btn,
+  #themeToggle,
+  #langToggle,
+  #searchToggle,
+  .coord-readout,
+  .btn-cad-primary,
+  .btn-cad-outline,
+  .shortcuts-download-bar,
+  footer.site-footer{ display: none !important; }
+
+  body{
+    background: #fff !important;
+    color: #000 !important;
+    background-image: none !important;
+    font-size: 12pt;
+  }
+  a{ color: #000 !important; text-decoration: underline; }
+  .page-header{ padding: 2rem 0 1rem; }
+  .content-layout{ padding: 1rem 0; }
+  .content-article section{ page-break-inside: avoid; }
+  .table-cad{ font-size: .8rem; }
+  .table-cad th,
+  .table-cad td{ padding: .4rem .6rem; }
+  .callout{ border-left-color: #999 !important; background: #f5f5f5 !important; }
+  pre[class*="language-"]{ white-space: pre-wrap; word-break: break-all; }
+}
+
+/* ---------- Focus styles for dynamic elements ---------- */
+.back-to-top-btn:focus-visible{
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+}
+.search-overlay .search-box:focus-within{
+  box-shadow: 0 0 0 2px var(--cyan);
+}
+.copy-btn:focus-visible{
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+}
+.swiper-button-next:focus-visible,
+.swiper-button-prev:focus-visible{
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+}
+.lang-toggle:focus-visible{
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+}
+.icon-btn:focus-visible{
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+}
+
+/* ---------- Light theme: text-faint WCAG AA ---------- */
+[data-theme="light"]{
+  --text-faint:    #6B7D9A;
+}
+
+/* ---------- Mobile responsive additions ---------- */
+@media (max-width: 575.98px){
+  .search-box{ width: 95%; }
+  .shortcuts-download-bar{ flex-wrap: wrap; }
+  .level-nav{ flex-direction: column; }
+  .level-nav a{text-align: center; }
+  footer.site-footer .col-6,
+  footer.site-footer .col-lg-2,
+  footer.site-footer .col-lg-4{ width: 100%; max-width: 100%; }
 }

@@ -19,6 +19,8 @@
 </head>
 <body>
 
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
 <!-- ===================== NAVBAR ===================== -->
 <nav class="navbar navbar-cad navbar-expand-lg">
   <div class="container container-xl">
@@ -43,7 +45,7 @@
           </ul>
         </li>
         <li class="nav-item"><a class="nav-link nav-link-cad active" href="comandos.html" data-i18n="nav.commands">Comandos</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-cad" href="ejemplos-visuales.html" data-i18n="nav.visual">Ejemplos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="ejemplos-visuales.html" data-i18n="nav.visual">Visuales</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="trucos.html" data-i18n="nav.tips">Trucos</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="recursos.html" data-i18n="nav.resources">Recursos</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="faq.html" data-i18n="nav.faq">FAQ</a></li>
@@ -62,7 +64,7 @@
 </nav>
 
 <!-- ===================== CABECERA ===================== -->
-<header class="commands-hero">
+<header class="commands-hero" id="main-content">
   <div class="container container-xl position-relative">
     <p class="eyebrow" data-i18n="cmd.eyebrow">Diccionario de comandos</p>
     <h1 style="font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.1;margin-bottom:.8rem" data-i18n="cmd.hero.title">Busca cualquier comando</h1>
@@ -87,7 +89,7 @@
       <button class="cmd-filter-btn" data-filter="consulta">Consulta</button>
     </div>
 
-    <p class="mono small text-muted-custom" id="cmdCount">Mostrando 40 comandos</p>
+    <p class="mono small text-muted-custom" id="cmdCount">Mostrando 95 comandos</p>
   </div>
 </header>
 
@@ -617,19 +619,6 @@
         </div>
       </div>
 
-      <div class="cmd-full-card" data-cmd="pedit" data-cat="edicion" data-level="intermedio" data-keys="pe">
-        <div class="cmd-icon"><i class="bi bi-bezier2"></i></div>
-        <div class="cmd-info">
-          <div class="cmd-head">
-            <span class="cmd-name">PEDIT</span>
-            <span class="cmd-key">PE</span>
-            <span class="cmd-cat">Edición</span>
-            <span class="res-lang en">Intermedio</span>
-          </div>
-          <p class="cmd-desc">Edita polilíneas: unir segmentos, abrir/cerrar, suavizar o asignar ancho.</p>
-        </div>
-      </div>
-
       <div class="cmd-full-card" data-cmd="properties" data-cat="edicion" data-level="basico" data-keys="ctrl+1">
         <div class="cmd-icon"><i class="bi bi-list-check"></i></div>
         <div class="cmd-info">
@@ -743,7 +732,7 @@
         </div>
       </div>
 
-      <div class="cmd-full-card" data-cmd="intercept" data-cat="3d" data-level="avanzado" data-keys="in">
+      <div class="cmd-full-card" data-cmd="intersect" data-cat="3d" data-level="avanzado" data-keys="in">
         <div class="cmd-icon"><i class="bi bi-intersect"></i></div>
         <div class="cmd-info">
           <div class="cmd-head">
@@ -882,6 +871,462 @@
             <span class="res-lang en">Intermedio</span>
           </div>
           <p class="cmd-desc">Exporta objetos o el dibujo completo a un archivo DWG separado.</p>
+        </div>
+      </div>
+
+      <!-- ====== NUEVOS COMANDOS ====== -->
+
+      <!-- DIBUJO -->
+      <div class="cmd-full-card" data-cmd="xline" data-cat="dibujo" data-level="intermedio" data-keys="xl">
+        <div class="cmd-icon"><i class="bi bi-arrows-expand"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">XLINE</span>
+            <span class="cmd-key">XL</span>
+            <span class="cmd-cat">Dibujo</span>
+            <span class="res-lang en">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Crea una línea infinita en ambas direcciones, ideal como geometría de referencia y alineación.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="ray" data-cat="dibujo" data-level="intermedio" data-keys="">
+        <div class="cmd-icon"><i class="bi bi-arrows-angle-up"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">RAY</span>
+            <span class="cmd-cat">Dibujo</span>
+            <span class="res-lang en">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Crea un rayo: una semilínea infinita que parte de un punto en una dirección definida.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="point" data-cat="dibujo" data-level="basico" data-keys="po">
+        <div class="cmd-icon"><i class="bi bi-dot"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">POINT</span>
+            <span class="cmd-key">PO</span>
+            <span class="cmd-cat">Dibujo</span>
+            <span class="res-lang en">Básico</span>
+          </div>
+          <p class="cmd-desc">Coloca un punto de referencia en el dibujo. Usa PTYPE para definir el estilo visual del punto.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="region" data-cat="dibujo" data-level="intermedio" data-keys="reg">
+        <div class="cmd-icon"><i class="bi bi-shape-polygon"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">REGION</span>
+            <span class="cmd-key">REG</span>
+            <span class="cmd-cat">Dibujo</span>
+            <span class="res-lang en">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Convierte un borde cerrado (polilínea, círculo) en una región sólida 2D para operaciones booleanas.</p>
+        </div>
+      </div>
+
+      <!-- MODIFICACIÓN -->
+      <div class="cmd-full-card" data-cmd="erase" data-cat="modificacion" data-level="basico" data-keys="e">
+        <div class="cmd-icon"><i class="bi bi-eraser"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">ERASE</span>
+            <span class="cmd-key">E</span>
+            <span class="cmd-cat">Modificación</span>
+            <span class="res-lang en">Básico</span>
+          </div>
+          <p class="cmd-desc">Elimina objetos seleccionados del dibujo. También se puede borrar seleccionando y pulsando Supr.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="align" data-cat="modificacion" data-level="intermedio" data-keys="al">
+        <div class="cmd-icon"><i class="bi bi-arrow-left-right"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">ALIGN</span>
+            <span class="cmd-key">AL</span>
+            <span class="cmd-cat">Modificación</span>
+            <span class="res-lang en">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Alinea objetos definiendo puntos de origen y destino. Puede mover, rotar y escalar simultáneamente.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="lengthen" data-cat="modificacion" data-level="intermedio" data-keys="len">
+        <div class="cmd-icon"><i class="bi bi-arrows-angle-expand"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">LENGTHEN</span>
+            <span class="cmd-key">LEN</span>
+            <span class="cmd-cat">Modificación</span>
+            <span class="res-lang en">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Alarga o acorta líneas, arcos y polilíneas. Opciones: total,增量, porcentaje o dinámico.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="breakatpoint" data-cat="modificacion" data-level="intermedio" data-keys="">
+        <div class="cmd-icon"><i class="bi bi scissors"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">BREAKATPOINT</span>
+            <span class="cmd-cat">Modificación</span>
+            <span class="res-lang en">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Rompe un objeto en dos partes exactamente en el punto seleccionado. Versión simplificada de BREAK.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="group" data-cat="modificacion" data-level="intermedio" data-keys="g">
+        <div class="cmd-icon"><i class="bi bi-object-group"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">GROUP</span>
+            <span class="cmd-key">G</span>
+            <span class="cmd-cat">Modificación</span>
+            <span class="res-lang en">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Agrupa objetos seleccionados para tratarlos como una unidad. A diferencia de BLOCK, es temporal y editable.</p>
+        </div>
+      </div>
+
+      <!-- PRECISIÓN -->
+      <div class="cmd-full-card" data-cmd="snap" data-cat="precision" data-level="basico" data-keys="sn">
+        <div class="cmd-icon"><i class="bi bi-grid-3x3"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">SNAP</span>
+            <span class="cmd-key">SN</span>
+            <span class="cmd-cat">Precisión</span>
+            <span class="res-lang en">Básico</span>
+          </div>
+          <p class="cmd-desc">Configura la adhesión del cursor a puntos de la cuadrícula. Controla el espaciado del snap.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="grid" data-cat="precision" data-level="basico" data-keys="g7">
+        <div class="cmd-icon"><i class="bi bi-grid"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">GRID</span>
+            <span class="cmd-key">F7</span>
+            <span class="cmd-cat">Precisión</span>
+            <span class="res-lang en">Básico</span>
+          </div>
+          <p class="cmd-desc">Muestra u oculta la cuadrícula visual de referencia. Es solo visual; no afecta el dibujo.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="dsettings" data-cat="precision" data-level="basico" data-keys="ds">
+        <div class="cmd-icon"><i class="bi bi-gear"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">DSETTINGS</span>
+            <span class="cmd-key">DS</span>
+            <span class="cmd-cat">Precisión</span>
+            <span class="res-lang en">Básico</span>
+          </div>
+          <p class="cmd-desc">Abre la configuración de dibujo: OSNAP, Polar, Grid, Snap y Dynamic Input en un solo diálogo.</p>
+        </div>
+      </div>
+
+      <!-- CAPAS -->
+      <div class="cmd-full-card" data-cmd="layerp" data-cat="capas" data-level="intermedio" data-keys="">
+        <div class="cmd-icon"><i class="bi bi-layers"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">LAYERP</span>
+            <span class="cmd-cat">Capas</span>
+            <span class="res-lang en">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Restaura el estado de capas anterior al último cambio. Como Undo pero solo para capas.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="laymatch" data-cat="capas" data-level="intermedio" data-keys="">
+        <div class="cmd-icon"><i class="bi bi-layers-half"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">LAYMATCH</span>
+            <span class="cmd-cat">Capas</span>
+            <span class="res-lang en">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Cambia la capa de un objeto para que coincida con la de otro objeto de destino.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="laywalk" data-cat="capas" data-level="avanzado" data-keys="">
+        <div class="cmd-icon"><i class="bi bi-eye"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">LAYWALK</span>
+            <span class="cmd-cat">Capas</span>
+            <span class="res-lang en">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Recorre las capas una por una, mostrando u ocultando su contenido para revisar la organización.</p>
+        </div>
+      </div>
+
+      <!-- ACOTACIÓN -->
+      <div class="cmd-full-card" data-cmd="dimradius" data-cat="acotacion" data-level="basico" data-keys="dra">
+        <div class="cmd-icon"><i class="bi bi-record-circle"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">DIMRADIUS</span>
+            <span class="cmd-key">DRA</span>
+            <span class="cmd-cat">Acotación</span>
+            <span class="res-lang en">Básico</span>
+          </div>
+          <p class="cmd-desc">Crea una cota de radio para un círculo o arco, mostrando el valor del radio.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="dimdiameter" data-cat="acotacion" data-level="basico" data-keys="ddi">
+        <div class="cmd-icon"><i class="bi bi-record-circle"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">DIMDIAMETER</span>
+            <span class="cmd-key">DDI</span>
+            <span class="cmd-cat">Acotación</span>
+            <span class="res-lang en">Básico</span>
+          </div>
+          <p class="cmd-desc">Crea una cota de diámetro para un círculo o arco, mostrando el símbolo Ø y el valor.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="dimangular" data-cat="acotacion" data-level="basico" data-keys="dan">
+        <div class="cmd-icon"><i class="bi bi-angle"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">DIMANGULAR</span>
+            <span class="cmd-key">DAN</span>
+            <span class="cmd-cat">Acotación</span>
+            <span class="res-lang en">Básico</span>
+          </div>
+          <p class="cmd-desc">Crea una cota angular que mide el ángulo entre dos líneas o definido por tres puntos.</p>
+        </div>
+      </div>
+
+      <!-- TEXTO -->
+      <div class="cmd-full-card" data-cmd="mleader" data-cat="texto" data-level="intermedio" data-keys="mld">
+        <div class="cmd-icon"><i class="bi bi-textarea-t"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">MLEADER</span>
+            <span class="cmd-key">MLD</span>
+            <span class="cmd-cat">Texto</span>
+            <span class="res-lang en">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Crea una nota con flecha líder y texto multilínea. Ideal para etiquetas y llamadas en planos.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="tablestyle" data-cat="texto" data-level="intermedio" data-keys="ts">
+        <div class="cmd-icon"><i class="bi bi-table"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">TABLESTYLE</span>
+            <span class="cmd-key">TS</span>
+            <span class="cmd-cat">Texto</span>
+            <span class="res-lang en">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Crea y administra estilos de tabla: apariencia de encabezados, datos y totales.</p>
+        </div>
+      </div>
+
+      <!-- EDICIÓN -->
+      <div class="cmd-full-card" data-cmd="pedit" data-cat="edicion" data-level="intermedio" data-keys="pe">
+        <div class="cmd-icon"><i class="bi bi-pencil-square"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">PEDIT</span>
+            <span class="cmd-key">PE</span>
+            <span class="cmd-cat">Edición</span>
+            <span class="res-lang en">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Edita polilíneas: unir segmentos, abrir/cerrar, suavizar, spline o asignar ancho constante.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="hatchedit" data-cat="edicion" data-level="intermedio" data-keys="he">
+        <div class="cmd-icon"><i class="bi bi-paint-bucket"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">HATCHEDIT</span>
+            <span class="cmd-key">HE</span>
+            <span class="cmd-cat">Edición</span>
+            <span class="res-lang en">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Modifica un hatch existente: cambiar patrón, escala, ángulo o boundaries sin recrearlo.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="splineedit" data-cat="edicion" data-level="avanzado" data-keys="spe">
+        <div class="cmd-icon"><i class="bi bi-bezier2"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">SPLINEDIT</span>
+            <span class="cmd-key">SPE</span>
+            <span class="cmd-cat">Edición</span>
+            <span class="res-lang en">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Edita splines existentes: mover puntos de control, ajustar tangencias o convertir a polilínea.</p>
+        </div>
+      </div>
+
+      <!-- 3D -->
+      <div class="cmd-full-card" data-cmd="sphere" data-cat="3d" data-level="avanzado" data-keys="">
+        <div class="cmd-icon"><i class="bi bi-circle"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">SPHERE</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang en">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Crea un sólido esférico definido por un centro y un radio. Primitiva 3D básica.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="cone" data-cat="3d" data-level="avanzado" data-keys="">
+        <div class="cmd-icon"><i class="bi bi-triangle"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">CONE</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang en">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Crea un cono sólido definido por radio de base y altura. Puede tener tapa elíptica.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="wedge" data-cat="3d" data-level="avanzado" data-keys="we">
+        <div class="cmd-icon"><i class="bi bi-box"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">WEDGE</span>
+            <span class="cmd-key">WE</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang en">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Crea un sólido cuña: un prisma triangular recto definido por largo, ancho y alto.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="slice" data-cat="3d" data-level="avanzado" data-keys="sl">
+        <div class="cmd-icon"><i class="bi bi-lightning"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">SLICE</span>
+            <span class="cmd-key">SL</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang en">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Corta un sólido 3D con un plano, dividiéndolo en dos o más partes independientes.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="presspull" data-cat="3d" data-level="avanzado" data-keys="">
+        <div class="cmd-icon"><i class="bi bi-arrow-up-square"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">PRESSPULL</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang en">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Empuja o jala una superficie cerrada para crear o modificar un sólido. Más intuitivo que EXTRUDE.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="solidedit" data-cat="3d" data-level="avanzado" data-keys="">
+        <div class="cmd-icon"><i class="bi bi-box-seam"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">SOLIDEDIT</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang en">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Edita caras, aristas y bodies de sólidos 3D: extruir caras, mover, rotar, aplicar cuña o bisel.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="section" data-cat="3d" data-level="avanzado" data-keys="sec">
+        <div class="cmd-icon"><i class="bi bi-clipboard-data"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">SECTION</span>
+            <span class="cmd-key">SEC</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang en">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Crea una región 2D a partir de la intersección de un plano con sólidos o superficies 3D.</p>
+        </div>
+      </div>
+
+      <!-- CONSULTA -->
+      <div class="cmd-full-card" data-cmd="pan" data-cat="consulta" data-level="basico" data-keys="p">
+        <div class="cmd-icon"><i class="bi bi-hand-index"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">PAN</span>
+            <span class="cmd-key">P</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang en">Básico</span>
+          </div>
+          <p class="cmd-desc">Desplaza la vista del dibujo sin cambiar el zoom. También se activa manteniendo la rueda del ratón.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="units" data-cat="consulta" data-level="basico" data-keys="un">
+        <div class="cmd-icon"><i class="bi bi-rulers"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">UNITS</span>
+            <span class="cmd-key">UN</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang en">Básico</span>
+          </div>
+          <p class="cmd-desc">Configura las unidades de dibujo (mm, m, pies) y la precisión de coordenadas y ángulos.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="regen" data-cat="consulta" data-level="basico" data-keys="re">
+        <div class="cmd-icon"><i class="bi bi-arrow-clockwise"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">REGEN</span>
+            <span class="cmd-key">RE</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang en">Básico</span>
+          </div>
+          <p class="cmd-desc">Regenera todo el dibujo desde la base de datos. Útil cuando los círculos se ven segmentados.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="limits" data-cat="consulta" data-level="basico" data-keys="">
+        <div class="cmd-icon"><i class="bi bi-bounding-box"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">LIMITS</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang en">Básico</span>
+          </div>
+          <p class="cmd-desc">Define los límites del área de dibujo. Controla el rango de coordenadas y el comportamiento de ZOOM All.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="qselect" data-cat="consulta" data-level="intermedio" data-keys="qs">
+        <div class="cmd-icon"><i class="bi bi-funnel"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">QSELECT</span>
+            <span class="cmd-key">QS</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang en">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Selecciona objetos por propiedades: capa, color, tipo, longitud. Selección rápida y masiva.</p>
         </div>
       </div>
 
