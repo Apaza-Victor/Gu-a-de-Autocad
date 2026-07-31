@@ -1140,6 +1140,23 @@ footer.site-footer a:hover{ color: var(--cyan); }
 .swiper-carousel .swiper-button-next,
 .swiper-carousel .swiper-button-prev{
   color: var(--cyan);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease;
+}
+.swiper-carousel:hover .swiper-button-next,
+.swiper-carousel:hover .swiper-button-prev,
+.swiper-carousel .swiper-button-next:focus-visible,
+.swiper-carousel .swiper-button-prev:focus-visible{
+  opacity: 1;
+  pointer-events: auto;
+}
+@media (hover: none){
+  .swiper-carousel .swiper-button-next,
+  .swiper-carousel .swiper-button-prev{
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
 .swiper-carousel .swiper-pagination-bullet{
   background: var(--text-faint);
