@@ -4,6 +4,8 @@
 
 **Ver en vivo:** [apaza-victor.github.io/Gu-a-de-Autocad](https://apaza-victor.github.io/Gu-a-de-Autocad/)
 
+**© 2026 Victor Apaza. Todos los derechos reservados.**
+
 ---
 
 ## Contenido
@@ -95,6 +97,10 @@ Para ejecutarlo localmente, simplemente abre `index.html` en tu navegador.
 
 ---
 
-## Autor
+## Autor y copyright
 
-**Victor Apaza** — [GitHub](https://github.com/Apaza-Victor)
+**Autor:** Victor Apaza — [GitHub](https://github.com/Apaza-Victor)
+
+**© 2026 Victor Apaza. Todos los derechos reservados.**
+
+Este sitio es contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.

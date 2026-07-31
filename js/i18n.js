@@ -66,7 +66,7 @@
       'footer.guide': 'Guía',
       'footer.follow': 'Síguenos',
       'footer.disclaimer': 'Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.',
-      'footer.copyright': '© 2026 AutoCAD Guía. Proyecto educativo de aprendizaje libre.',
+      'footer.copyright': '© 2026 Victor Apaza. Todos los derechos reservados.',
 
       /* ---- Home page ---- */
       'home.brand.sub': 'Guía · Teoría & Práctica',
@@ -645,7 +645,7 @@
       'footer.guide': 'Guide',
       'footer.follow': 'Follow us',
       'footer.disclaimer': 'Independent educational content. Not an official Autodesk® site; AutoCAD® is a registered trademark of Autodesk, Inc.',
-      'footer.copyright': '© 2026 AutoCAD Guide. Free learning educational project.',
+      'footer.copyright': '© 2026 Victor Apaza. All rights reserved.',
 
       /* ---- Home page ---- */
       'home.brand.sub': 'Guide · Theory & Practice',
