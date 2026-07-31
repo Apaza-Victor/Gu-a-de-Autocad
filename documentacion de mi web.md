@@ -35,7 +35,7 @@ Guia de Autocad/
 │   ├── comandos.html               # Diccionario de 95 comandos
 │   ├── ejemplos-visuales.html      # Diagramas paso a paso
 │   ├── trucos.html                 # Atajos, tips, errores comunes
-│   ├── recursos.html               # 18 recursos descargables
+│   ├── recursos.html               # 19 recursos descargables
 │   └── faq.html                    # 15 preguntas frecuentes
 └── README.md
 ```
@@ -131,7 +131,7 @@ Guia de Autocad/
 - **Prism.js** para bloques de codigo con syntax highlighting
 - **Boton copiar** en bloques de codigo
 - **FAQ acordeon** con navegacion por teclado (Enter/Espacio)
-- **Tabla de atajos** descargable a TXT
+- **Tabla de atajos** descargable a TXT y resumen bilingue de atajos en PDF
 - **Skip-to-content link** para accesibilidad
 
 ---
@@ -189,7 +189,7 @@ Guia de Autocad/
 - **Diccionario de comandos**: 95 comandos en 10 categorias
 - **Ejemplos visuales**: diagramas SVG paso a paso
 - **Trucos**: atajos, aprendizaje, errores comunes, flujo de trabajo, avanzado
-- **Recursos**: 18 recursos (bloques, cursos, comunidades, plantillas, YouTube, herramientas)
+- **Recursos**: 19 recursos (bloques, cursos, comunidades, plantillas, YouTube, herramientas y chuleta de atajos en PDF)
 - **FAQ**: 15 preguntas frecuentes
 
 ---

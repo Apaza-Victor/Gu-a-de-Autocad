@@ -25,7 +25,7 @@
 - **Diccionario de comandos** — 95 comandos con busqueda, filtros por categoria y teclas de acceso rapido
 - **Ejemplos visuales** — diagramas paso a paso que muestran antes/despues de cada comando
 - **Trucos y atajos** — tips de aprendizaje, atajos de teclado, errores comunes y flujo de trabajo
-- **Recursos** — 18 recursos descargables: bloques, cursos, comunidades, plantillas, canales de YouTube, herramientas
+- **Recursos** — 19 recursos descargables: bloques, cursos, comunidades, plantillas, canales de YouTube, herramientas y chuleta de atajos en PDF
 - **Preguntas frecuentes** — 15 respuestas sobre instalacion, rendimiento, compatibilidad, funciones y aprendizaje
 
 ---

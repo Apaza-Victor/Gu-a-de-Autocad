@@ -6,6 +6,8 @@
 <title>Nivel 3 · Organización y productividad — AutoCAD Guía</title>
 <meta name="description" content="Espacio modelo vs presentación, ventanas gráficas y escalas, plantillas, impresión y exportación, Xref y atajos de teclado en AutoCAD. Nivel 3 de la guía.">
 
+<link rel="icon" type="image/svg+xml" href="../img/autocad-2.svg">
+
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +27,7 @@
 <nav class="navbar navbar-cad navbar-expand-lg">
   <div class="container container-xl">
     <a class="navbar-brand brand-cad" href="../index.html">
-      <span class="brand-mark"></span>
+      <img class="brand-logo" src="../img/autocad-2.svg" alt="AutoCAD">
       <span>AutoCAD<small class="d-block" data-i18n-html="brand.sub">Guía · Teoría &amp; Práctica</small></span>
     </a>
     <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
@@ -234,20 +236,25 @@
             <p>Copia la tabla completa o guárdala como referencia rápida:</p>
 
             <div class="shortcuts-download-bar">
-              <p><i class="bi bi-download me-1"></i> Descarga esta tabla en formato de texto plano</p>
-              <button class="btn-cad-outline" onclick="downloadShortcuts()"><i class="bi bi-file-earmark-text me-1"></i> Descargar .TXT</button>
+              <p><i class="bi bi-download me-1"></i> Descarga la tabla en texto plano o el resumen bilingüe en PDF (ES/EN)</p>
+              <div class="d-flex gap-2 flex-wrap">
+                <button class="btn-cad-outline" onclick="downloadShortcuts()"><i class="bi bi-file-earmark-text me-1"></i> Descargar .TXT</button>
+                <a class="btn-cad-outline" href="../Atajos_AutoCAD_Espanol_Ingles.pdf" download><i class="bi bi-file-earmark-pdf me-1"></i> Descargar PDF</a>
+              </div>
             </div>
 
             <table class="table-cad" id="shortcutsTable">
               <thead><tr><th>Categoría</th><th>Comando</th><th>Atajo</th><th>Descripción</th></tr></thead>
               <tbody>
-                <tr><td>General</td><td class="cmd-inline">DESHACER</td><td class="key-inline">Ctrl+Z</td><td>Deshacer la última acción</td></tr>
+                <tr><td>General</td><td class="cmd-inline">DESHACER</td><td class="key-inline">Ctrl+Z / U</td><td>Deshacer la última acción</td></tr>
                 <tr><td>General</td><td class="cmd-inline">REHACER</td><td class="key-inline">Ctrl+Y</td><td>Rehacer la acción deshecha</td></tr>
                 <tr><td>General</td><td class="cmd-inline">GUARDAR</td><td class="key-inline">Ctrl+S</td><td>Guarda el archivo actual</td></tr>
                 <tr><td>General</td><td class="cmd-inline">COPIAR</td><td class="key-inline">Ctrl+C</td><td>Copia objetos al portapapeles</td></tr>
                 <tr><td>General</td><td class="cmd-inline">PEGAR</td><td class="key-inline">Ctrl+V</td><td>Pega objetos del portapapeles</td></tr>
                 <tr><td>General</td><td class="cmd-inline">CANCELAR</td><td class="key-inline">Esc</td><td>Cancela el comando activo</td></tr>
                 <tr><td>General</td><td class="cmd-inline">REPETIR</td><td class="key-inline">Enter / Espacio</td><td>Repite el último comando</td></tr>
+                <tr><td>General</td><td class="cmd-inline">LAYOUT</td><td class="key-inline">LA</td><td>Cambia a una presentación</td></tr>
+                <tr><td>General</td><td class="cmd-inline">PLOT</td><td class="key-inline">Ctrl+P</td><td>Imprime o traza el dibujo actual</td></tr>
                 <tr><td>Dibujo</td><td class="cmd-inline">LINE</td><td class="key-inline">L</td><td>Dibuja una línea recta</td></tr>
                 <tr><td>Dibujo</td><td class="cmd-inline">PLINE</td><td class="key-inline">PL</td><td>Dibuja una polilínea</td></tr>
                 <tr><td>Dibujo</td><td class="cmd-inline">CIRCLE</td><td class="key-inline">C</td><td>Dibuja un círculo</td></tr>
@@ -257,6 +264,7 @@
                 <tr><td>Dibujo</td><td class="cmd-inline">ELLIPSE</td><td class="key-inline">EL</td><td>Dibuja una elipse</td></tr>
                 <tr><td>Modificación</td><td class="cmd-inline">MOVE</td><td class="key-inline">M</td><td>Mueve objetos</td></tr>
                 <tr><td>Modificación</td><td class="cmd-inline">COPY</td><td class="key-inline">CO</td><td>Copia objetos</td></tr>
+                <tr><td>Modificación</td><td class="cmd-inline">ERASE</td><td class="key-inline">E</td><td>Elimina objetos seleccionados</td></tr>
                 <tr><td>Modificación</td><td class="cmd-inline">ROTATE</td><td class="key-inline">RO</td><td>Rota objetos</td></tr>
                 <tr><td>Modificación</td><td class="cmd-inline">SCALE</td><td class="key-inline">SC</td><td>Escala objetos</td></tr>
                 <tr><td>Modificación</td><td class="cmd-inline">TRIM</td><td class="key-inline">TR</td><td>Recorta objetos</td></tr>
@@ -278,7 +286,7 @@
                 <tr><td>Capas</td><td class="cmd-inline">LAYER</td><td class="key-inline">LA</td><td>Administra capas</td></tr>
                 <tr><td>Capas</td><td class="cmd-inline">LAYISO</td><td class="key-inline">—</td><td>Aísla una capa</td></tr>
                 <tr><td>Capas</td><td class="cmd-inline">LAYUNISO</td><td class="key-inline">—</td><td>Restaura visibilidad</td></tr>
-                <tr><td>Bloques</td><td class="cmd-inline">BLOCK</td><td class="key-inline">—</td><td>Crea un bloque</td></tr>
+                <tr><td>Bloques</td><td class="cmd-inline">BLOCK</td><td class="key-inline">B</td><td>Crea un bloque</td></tr>
                 <tr><td>Bloques</td><td class="cmd-inline">INSERT</td><td class="key-inline">I</td><td>Inserta un bloque</td></tr>
                 <tr><td>Bloques</td><td class="cmd-inline">BEDIT</td><td class="key-inline">—</td><td>Edita un bloque</td></tr>
                 <tr><td>Acotación</td><td class="cmd-inline">DIM</td><td class="key-inline">DIM</td><td>Cota inteligente</td></tr>
@@ -287,6 +295,7 @@
                 <tr><td>Consulta</td><td class="cmd-inline">AREA</td><td class="key-inline">AA</td><td>Calcula área</td></tr>
                 <tr><td>Consulta</td><td class="cmd-inline">LIST</td><td class="key-inline">LI</td><td>Lista propiedades</td></tr>
                 <tr><td>Consulta</td><td class="cmd-inline">ZOOM</td><td class="key-inline">Z</td><td>Amplía/reduce vista</td></tr>
+                <tr><td>Consulta</td><td class="cmd-inline">PAN</td><td class="key-inline">P</td><td>Mueve la vista del dibujo sin cambiar la ampliación</td></tr>
                 <tr><td>Consulta</td><td class="cmd-inline">PURGE</td><td class="key-inline">PU</td><td>Elimina elementos no usados</td></tr>
                 <tr><td>Consulta</td><td class="cmd-inline">AUDIT</td><td class="key-inline">—</td><td>Corrige errores del archivo</td></tr>
                 <tr><td>3D</td><td class="cmd-inline">EXTRUDE</td><td class="key-inline">EXT</td><td>Extrude un perfil 2D</td></tr>
@@ -301,7 +310,7 @@
                 <tr><td>Pantalla</td><td class="cmd-inline">GRID</td><td class="key-inline">F7</td><td>Cuadrícula visual</td></tr>
                 <tr><td>Pantalla</td><td class="cmd-inline">SNAP</td><td class="key-inline">F9</td><td>Ajuste a cuadrícula</td></tr>
                 <tr><td>Pantalla</td><td class="cmd-inline">POLAR</td><td class="key-inline">F10</td><td>Rastreo polar</td></tr>
-                <tr><td>Pantalla</td><td class="cmd-inline">PROPERTIES</td><td class="key-inline">Ctrl+1</td><td>Paleta de propiedades</td></tr>
+                <tr><td>Pantalla</td><td class="cmd-inline">PROPERTIES</td><td class="key-inline">Ctrl+1 / PR</td><td>Paleta de propiedades</td></tr>
               </tbody>
             </table>
 
@@ -577,7 +586,7 @@
   <div class="container container-xl">
     <div class="row gy-4">
       <div class="col-lg-4">
-        <div class="brand-cad mb-2"><span class="brand-mark"></span><span>AutoCAD Guía</span></div>
+        <div class="brand-cad mb-2"><img class="brand-logo" src="../img/autocad-2.svg" alt="AutoCAD"><span>AutoCAD Guía</span></div>
         <p data-i18n="footer.disclaimer">Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
       </div>
       <div class="col-6 col-lg-2">

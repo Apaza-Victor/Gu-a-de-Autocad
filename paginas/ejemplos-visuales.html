@@ -6,6 +6,8 @@
 <title>Ejemplos de comandos — AutoCAD Guía</title>
 <meta name="description" content="Diagramas visuales interactivos que muestran cómo funcionan los comandos más importantes de AutoCAD: LINE, OFFSET, TRIM, FILLET, MIRROR, ARRAY y más.">
 
+<link rel="icon" type="image/svg+xml" href="../img/autocad-2.svg">
+
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +25,7 @@
 <nav class="navbar navbar-cad navbar-expand-lg">
   <div class="container container-xl">
     <a class="navbar-brand brand-cad" href="../index.html">
-      <span class="brand-mark"></span>
+      <img class="brand-logo" src="../img/autocad-2.svg" alt="AutoCAD">
       <span>AutoCAD<small class="d-block" data-i18n-html="brand.sub">Guía · Teoría &amp; Práctica</small></span>
     </a>
     <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
@@ -83,6 +85,103 @@
 <section style="padding:3rem 0 5rem">
   <div class="container container-xl">
     <div class="diagram-grid cols-2" id="visGrid">
+
+      <!-- ====== PLANO COMPLETO (destacado) ====== -->
+      <div class="diagram-card featured" data-cat="todos" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">2D</span> <span data-i18n="vis.plan.title">Plano completo</span></h4>
+          <span class="key-inline">ESC 1:50</span>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="vis.plan.desc">Un mismo dibujo reúne lo visto en la guía: muros por OFFSET, esquinas y puertas con FILLET, recortes con TRIM, muebles con RECTANGLE y ARRAY, y cotas en su propia capa.</p>
+          <div class="plan-sheet">
+            <svg viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Plano de planta que combina los comandos de la guía">
+              <defs>
+                <pattern id="planGridVis" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <path d="M20 0H0V20" fill="none" stroke="var(--border)" stroke-width="0.4"/>
+                </pattern>
+              </defs>
+              <rect width="640" height="300" fill="url(#planGridVis)"/>
+
+              <g stroke="var(--layer-green)" stroke-width="0.8">
+                <line x1="40" y1="36" x2="300" y2="36"/>
+                <line x1="40" y1="28" x2="40" y2="44"/>
+                <line x1="300" y1="28" x2="300" y2="44"/>
+              </g>
+              <text x="170" y="32" fill="var(--layer-green)" font-family="'JetBrains Mono',monospace" font-size="9" text-anchor="middle">6500</text>
+
+              <g stroke="var(--layer-green)" stroke-width="0.8">
+                <line x1="300" y1="36" x2="600" y2="36"/>
+                <line x1="300" y1="28" x2="300" y2="44"/>
+                <line x1="600" y1="28" x2="600" y2="44"/>
+              </g>
+              <text x="450" y="32" fill="var(--layer-green)" font-family="'JetBrains Mono',monospace" font-size="9" text-anchor="middle">7500</text>
+
+              <rect x="40" y="50" width="560" height="210" fill="var(--amber-dim)" stroke="var(--amber)" stroke-width="6"/>
+              <line x1="300" y1="50" x2="300" y2="170" stroke="var(--layer-red)" stroke-width="3"/>
+
+              <text x="170" y="90" fill="var(--text-faint)" font-family="'JetBrains Mono',monospace" font-size="10" letter-spacing="2" text-anchor="middle">ZONA 1</text>
+              <text x="450" y="90" fill="var(--text-faint)" font-family="'JetBrains Mono',monospace" font-size="10" letter-spacing="2" text-anchor="middle">ZONA 2</text>
+
+              <g stroke="var(--layer-blue)" stroke-width="1">
+                <line x1="140" y1="140" x2="152" y2="140"/>
+                <line x1="188" y1="140" x2="200" y2="140"/>
+                <line x1="170" y1="122" x2="170" y2="134"/>
+                <line x1="170" y1="146" x2="170" y2="158"/>
+              </g>
+
+              <line x1="110" y1="44" x2="190" y2="44" stroke="var(--layer-green)" stroke-width="1.5"/>
+              <line x1="110" y1="56" x2="190" y2="56" stroke="var(--layer-green)" stroke-width="1.5"/>
+              <line x1="150" y1="252" x2="210" y2="252" stroke="var(--layer-green)" stroke-width="1.5"/>
+              <line x1="150" y1="268" x2="210" y2="268" stroke="var(--layer-green)" stroke-width="1.5"/>
+              <line x1="592" y1="80" x2="592" y2="150" stroke="var(--layer-green)" stroke-width="1.5"/>
+              <line x1="608" y1="80" x2="608" y2="150" stroke="var(--layer-green)" stroke-width="1.5"/>
+
+              <circle cx="556" cy="88" r="10" fill="none" stroke="var(--layer-green)" stroke-width="1"/>
+              <text x="556" y="92" fill="var(--layer-green)" font-family="'JetBrains Mono',monospace" font-size="10" text-anchor="middle">N</text>
+
+              <line x1="40" y1="180" x2="40" y2="220" stroke="var(--bg-panel)" stroke-width="9"/>
+              <line x1="40" y1="220" x2="78" y2="220" stroke="var(--layer-cyan)" stroke-width="1.5"/>
+              <path d="M 78 220 A 38 38 0 0 0 40 182" fill="none" stroke="var(--layer-cyan)" stroke-width="1.5"/>
+
+              <line x1="300" y1="100" x2="300" y2="150" stroke="var(--bg-panel)" stroke-width="6"/>
+              <line x1="300" y1="150" x2="336" y2="150" stroke="var(--layer-cyan)" stroke-width="1.5"/>
+              <path d="M 336 150 A 36 36 0 0 0 300 114" fill="none" stroke="var(--layer-cyan)" stroke-width="1.5"/>
+
+              <rect x="380" y="200" width="60" height="40" rx="3" fill="var(--layer-magenta)" opacity="0.22" stroke="var(--layer-magenta)" stroke-width="1.5"/>
+              <rect x="362" y="208" width="16" height="24" fill="var(--layer-magenta)" opacity="0.45"/>
+              <rect x="442" y="208" width="16" height="24" fill="var(--layer-magenta)" opacity="0.45"/>
+
+              <rect x="100" y="214" width="130" height="30" rx="3" fill="var(--layer-magenta)" opacity="0.22" stroke="var(--layer-magenta)" stroke-width="1.5"/>
+              <rect x="98" y="214" width="12" height="30" fill="var(--layer-magenta)" opacity="0.45"/>
+              <rect x="220" y="214" width="12" height="30" fill="var(--layer-magenta)" opacity="0.45"/>
+
+              <g stroke="var(--layer-green)" stroke-width="0.8">
+                <line x1="40" y1="278" x2="600" y2="278"/>
+                <line x1="40" y1="270" x2="40" y2="286"/>
+                <line x1="600" y1="270" x2="600" y2="286"/>
+              </g>
+              <text x="320" y="274" fill="var(--layer-green)" font-family="'JetBrains Mono',monospace" font-size="9" text-anchor="middle">14000</text>
+
+              <line class="plan-cursor" x1="470" y1="168" x2="470" y2="196" stroke="var(--amber)" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="d-flex justify-content-between mono small text-muted-custom">
+            <span>CAPA: Muros · Cotas · Puertas</span>
+            <span>UNIDADES: mm</span>
+          </div>
+          <div class="layer-legend">
+            <span class="layer-chip"><span class="layer-dot" style="background:var(--amber)"></span><span data-i18n="vis.plan.legWalls">Muros</span></span>
+            <span class="layer-chip"><span class="layer-dot" style="background:var(--layer-green)"></span><span data-i18n="vis.plan.legDims">Cotas</span></span>
+            <span class="layer-chip"><span class="layer-dot" style="background:var(--layer-cyan)"></span><span data-i18n="vis.plan.legDoors">Puertas</span></span>
+            <span class="layer-chip"><span class="layer-dot" style="background:var(--layer-magenta)"></span><span data-i18n="vis.plan.legFurn">Mobiliario</span></span>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="vis.tip">Tip</span>
+            <span data-i18n="vis.plan.tip">Este plano salió de LINE, OFFSET, TRIM, FILLET y ARRAY. Guarda cada tipo de objeto en su capa para poder congelar las cotas al imprimir.</span>
+          </div>
+        </div>
+      </div>
 
       <!-- ====== LINE ====== -->
       <div class="diagram-card" data-cat="dibujo" data-aos="fade-up">
@@ -789,7 +888,7 @@
   <div class="container container-xl">
     <div class="row gy-4">
       <div class="col-lg-4">
-        <div class="brand-cad mb-2"><span class="brand-mark"></span><span>AutoCAD Guía</span></div>
+        <div class="brand-cad mb-2"><img class="brand-logo" src="../img/autocad-2.svg" alt="AutoCAD"><span>AutoCAD Guía</span></div>
         <p data-i18n="footer.disclaimer">Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
       </div>
       <div class="col-6 col-lg-2">

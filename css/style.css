@@ -126,7 +126,7 @@ a:hover{ color: var(--amber); }
   top: 0;
   z-index: 1030;
 }
-[data-theme="light"] .navbar-cad{ background: rgba(243,246,251,0.86); }
+[data-theme="light"] .navbar-cad{ background: rgba(243,246,251,0.86); box-shadow: 0 2px 12px rgba(16, 27, 48, 0.10); }
 
 .brand-cad{
   display: flex; align-items: center; gap: .55rem;
@@ -151,7 +151,12 @@ a:hover{ color: var(--amber); }
 }
 .brand-cad .brand-mark::before{ width: 12px; height: 1px; top: 50%; left: 50%; transform: translate(-50%,-50%); }
 .brand-cad .brand-mark::after{ width: 1px; height: 12px; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+.brand-cad .brand-logo{
+  width: auto; height: 34px;
+  flex-shrink: 0;
+}
 .brand-cad small{ color: var(--text-muted); font-weight: 500; font-size: .68rem; }
+.brand-cad:hover{ color: #e51050 !important; transition: color .2s ease; }
 
 .nav-link-cad{
   color: var(--text-muted) !important;
@@ -354,7 +359,9 @@ a:hover{ color: var(--amber); }
   border-radius: var(--radius-md);
   padding: 1.1rem;
   height: 100%;
+  transition: border-color .2s ease, transform .2s ease;
 }
+.cmd-card:hover{ border-color: var(--cyan); transform: translateY(-3px); }
 .cmd-card .cmd-name{
   font-family: var(--font-display);
   font-weight: 700;
@@ -379,7 +386,9 @@ a:hover{ color: var(--amber); }
   border-radius: var(--radius-lg);
   padding: 1.4rem;
   height: 100%;
+  transition: border-color .2s ease, transform .2s ease;
 }
+.resource-card:hover{ border-color: var(--amber); transform: translateY(-3px); }
 .resource-card .badge-cat{
   font-family: var(--font-display);
   font-size: .65rem;
@@ -1207,6 +1216,46 @@ code[class*="language-"]{
   color: var(--text-muted);
 }
 
+/* ---------- Trucos rápidos (home) ---------- */
+.tip-card{
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.4rem;
+  height: 100%;
+  transition: border-color .2s ease, transform .2s ease;
+}
+.tip-card:hover{ border-color: var(--amber); transform: translateY(-3px); }
+.tip-card .tip-key{
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: .78rem;
+  font-weight: 700;
+  color: var(--amber);
+  background: var(--amber-dim);
+  border: 1px solid var(--amber);
+  border-radius: 6px;
+  padding: .25rem .6rem;
+  margin-bottom: .8rem;
+}
+.tip-card h4{ font-size: 1rem; margin-bottom: .4rem; }
+.tip-card p{ color: var(--text-muted); font-size: .88rem; margin-bottom: 0; }
+
+/* Cursor animado en el plano del hero */
+.plan-canvas svg .plan-cursor{ animation: blink 1.4s step-end infinite; }
+
+/* Hoja de plano (tarjeta destacada de Visuales) */
+.plan-sheet{
+  background: var(--bg-panel-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+.plan-sheet svg{ width: 100%; height: auto; display: block; }
+.plan-sheet svg .plan-cursor{ animation: blink 1.4s step-end infinite; }
+
 /* ---------- Utilidades responsivas ---------- */
 @media (max-width: 991.98px){
   .coord-readout{ display: none; }
@@ -1285,9 +1334,14 @@ code[class*="language-"]{
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  transition: border-color .2s ease;
+  transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
 }
-.diagram-card:hover{ border-color: var(--cyan); }
+.diagram-card:hover{
+  border-color: var(--cyan);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px -16px rgba(16, 27, 48, .55);
+}
+.diagram-grid.cols-2 .diagram-card.featured{ grid-column: 1 / -1; }
 .diagram-card-head{
   display: flex; align-items: center; justify-content: space-between;
   padding: 1rem 1.4rem;
@@ -1325,6 +1379,10 @@ code[class*="language-"]{
 }
 .diagram-canvas svg{
   width: 100%; height: auto; max-height: 220px;
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 20px 20px;
 }
 .diagram-canvas svg text{
   font-family: var(--font-display);
@@ -1370,7 +1428,13 @@ code[class*="language-"]{
   margin-bottom: .6rem;
   display: block;
 }
-.diagram-step svg{ width: 100%; height: auto; max-height: 120px; }
+.diagram-step svg{
+  width: 100%; height: auto; max-height: 120px;
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
 .diagram-step-arrow{
   width: 40px;
   display: grid; place-items: center;
