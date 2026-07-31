@@ -37,9 +37,18 @@
       <span>AutoCAD<small class="d-block" data-i18n-html="brand.sub">Guía · Teoría &amp; Práctica</small></span>
     </a>
 
-    <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
-      <i class="bi bi-list fs-4"></i>
-    </button>
+    <div class="d-flex align-items-center gap-2 order-lg-last">
+      <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
+        <i class="bi bi-list fs-4"></i>
+      </button>
+      <span class="coord-readout d-none d-lg-inline-flex">X: <span id="coordX">000.00</span>&nbsp; Y: <span id="coordY">000.00</span></span>
+      <button class="lang-toggle" id="langToggle" title="Cambiar idioma" data-i18n-title="ui.lang">
+        <i class="bi bi-translate lang-toggle-flag"></i>
+        <span class="lang-toggle-text">EN</span>
+      </button>
+      <button class="icon-btn" id="searchToggle" title="Buscar" data-i18n-title="ui.search"><i class="bi bi-search"></i></button>
+      <button class="icon-btn" id="themeToggle" title="Cambiar tema" data-i18n-title="ui.theme"><i class="bi bi-moon-stars"></i></button>
+    </div>
 
     <div class="collapse navbar-collapse" id="navCad">
       <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
@@ -61,15 +70,6 @@
         <li class="nav-item"><a class="nav-link nav-link-cad" href="paginas/faq.html" data-i18n="nav.faq">FAQ</a></li>
       </ul>
 
-      <div class="d-flex align-items-center gap-2">
-        <span class="coord-readout d-none d-lg-inline-flex">X: <span id="coordX">000.00</span>&nbsp; Y: <span id="coordY">000.00</span></span>
-        <button class="lang-toggle" id="langToggle" title="Cambiar idioma" data-i18n-title="ui.lang">
-          <i class="bi bi-translate lang-toggle-flag"></i>
-          <span class="lang-toggle-text">EN</span>
-        </button>
-        <button class="icon-btn" id="searchToggle" title="Buscar" data-i18n-title="ui.search"><i class="bi bi-search"></i></button>
-        <button class="icon-btn" id="themeToggle" title="Cambiar tema" data-i18n-title="ui.theme"><i class="bi bi-moon-stars"></i></button>
-      </div>
     </div>
   </div>
 </nav>

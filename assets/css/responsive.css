@@ -36,7 +36,15 @@
 
 /* ---------- Movil (max 575.98px) ---------- */
 @media (max-width: 575.98px){
-  .command-line-inner{ font-size: .74rem; gap: .4rem; }
+  .container,
+  .container-xl{ padding-inline: 1.25rem; }
+  .navbar-cad .container{ padding-inline: .75rem; }
+  .navbar-cad .brand-cad{ font-size: .95rem; }
+  .navbar-cad .brand-logo{ height: 30px; }
+  .navbar-cad .icon-btn{ width: 32px; height: 32px; }
+  .navbar-cad .lang-toggle{ padding: 4px 8px; font-size: .72rem; }
+  .navbar-cad .d-flex.order-lg-last{ gap: .4rem; }
+  .command-line-inner{ font-size: .74rem; gap: .4rem; padding-inline: 1.25rem; }
   .command-line-inner #cmd-typed{
     min-width: 0;
     overflow: hidden;
@@ -51,6 +59,9 @@
   .diagram-card-head{ flex-wrap: wrap; gap: .4rem .8rem; }
   .content-article h2{ flex-wrap: wrap; }
   .drawing-sheet{ padding: 1rem; }
+  .cmd-full-card{ gap: .8rem; }
+  .cmd-full-card .cmd-info{ min-width: 0; }
+  .cmd-full-card .cmd-head{ flex-wrap: wrap; gap: .3rem .6rem; }
   .hero h1{ font-size: clamp(1.9rem, 6vw, 2.6rem); }
   .page-header h1{ font-size: clamp(1.55rem, 6vw, 2.2rem); }
   .resources-hero{ padding: 4.5rem 0 2.5rem; }
