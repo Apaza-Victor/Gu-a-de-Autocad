@@ -1,0 +1,69 @@
+CHULETA DE COMANDOS ESENCIALES - AutoCAD Guía
+================================================
+
+DIBUJO
+  LINE      L    Línea recta entre dos puntos
+  PLINE     PL   Polilínea (segmentos unidos como un solo objeto)
+  CIRCLE    C    Círculo por centro-radio
+  ARC       A    Arco por 3 puntos
+  RECTANG   REC  Rectángulo por dos esquinas
+  POLYGON   POL  Polígono regular
+  ELLIPSE   EL   Elipse por ejes
+  SPLINE    SPL  Curva suave por puntos de control
+  HATCH     H    Relleno y sombreado
+  MTEXT     T    Texto multilínea
+  TEXT      DT   Texto de una línea
+
+MODIFICACIÓN
+  MOVE      M    Mueve objetos
+  COPY      CO   Copia objetos
+  ROTATE    RO   Rota objetos
+  SCALE     SC   Escala objetos
+  TRIM      TR   Recorta objetos contra bordes
+  EXTEND    EX   Extiende objetos hasta un borde
+  OFFSET    O    Duplica a una distancia exacta
+  FILLET    F    Empalma con radio
+  CHAMFER   CHA  Achaflana esquinas
+  MIRROR    MI   Refleja objetos
+  ARRAY     AR   Repite en filas, columnas o circular
+  EXPLODE   X    Descompone bloques y polilíneas
+  JOIN      J    Une objetos en uno solo
+  BREAK     BR   Rompe un objeto en dos
+  STRETCH   S    Estira con ventana
+  ERASE     E    Borra objetos seleccionados
+
+PRECISIÓN
+  OSNAP     F3   Referencias a objetos (extremo, medio, centro...)
+  ORTO      F8   Movimiento solo horizontal/vertical
+  GRID      F7   Cuadrícula visual
+  SNAP      F9   Cursor magnético a la cuadrícula
+  POLAR     F10  Rastreo polar
+  DSETTINGS DS   Configuración de dibujo
+
+CAPAS
+  LAYER     LA   Administrador de capas
+  LAYISO    Aísla la capa seleccionada
+  LAYOFF    Apaga la capa seleccionada
+
+ACOTACIÓN
+  DIM       DIM  Cota lineal (o lineal alineada)
+  DIMALIGNED  Cota alineada a la geometría
+  DIMCONTINUE  Cota continua encadenada
+  DIMSTYLE  D    Estilos de cota
+
+CONSULTA
+  DIST      DI   Distancia entre dos puntos
+  AREA      AA   Área de un objeto o región
+  ID        ID   Coordenadas de un punto
+  LIST      LI   Propiedades del objeto seleccionado
+
+3D
+  EXTRUDE   EXT  Extruye un 2D a sólido
+  BOX       BOX  Caja sólida
+  UNION     UNI  Une sólidos
+  SUBTRACT  SU   Resta sólidos
+  REVOLVE   REV  Revoluciona un perfil
+  SWEEP     SW   Barre un perfil a lo largo de un camino
+  LOFT      LOFT Une secciones para formar un sólido
+
+Fuente: AutoCAD Guía — https://apaza-victor.github.io/Gu-a-de-Autocad/

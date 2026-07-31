@@ -1,0 +1,44 @@
+ATAJOS DE TECLADO ESENCIALES - AutoCAD Guía
+============================================
+
+TECLAS DE FUNCIÓN
+  F1   Ayuda
+  F2   Historial de la línea de comandos
+  F3   OSNAP (referencias a objetos) on/off
+  F7   GRID (cuadrícula) on/off
+  F8   ORTO (solo horizontal/vertical) on/off
+  F9   SNAP (cursor magnético) on/off
+  F10  RASTREO POLAR on/off
+
+NAVEGACIÓN
+  Rueda del mouse   Zoom in/out
+  Rueda presionada  Pan (desplazar vista)
+  Z + E             Zoom extents (ver todo)
+  Z + W             Zoom ventana
+  Z + P             Zoom anterior
+  Doble clic en rueda  Zoom extents
+
+ACCIONES GENERALES
+  ESC               Cancela el comando actual / deselecciona
+  Espacio o Enter   Repite el último comando
+  Ctrl+S            Guardar
+  Ctrl+Shift+S      Guardar como
+  Ctrl+Z            Deshacer (U)
+  Ctrl+Y            Rehacer
+  Ctrl+C            Copiar al portapapeles
+  Ctrl+X            Cortar
+  Ctrl+V            Pegar
+  Ctrl+1            Paleta de propiedades
+  Ctrl+2            Centro de diseño
+  Ctrl+0            Pantalla limpia (borra paneles)
+  Ctrl+P            Imprimir / plotear
+  Ctrl+K            Buscar en esta guía
+
+SELECCIÓN (tips)
+  Clic              Selecciona un objeto
+  Clic de izquierda a derecha   Ventana (solo lo que está dentro)
+  Clic de derecha a izquierda   Captura (todo lo que toca)
+  Shift+clic        Quita objetos de la selección
+  Esc               Limpia la selección
+
+Fuente: AutoCAD Guía — https://apaza-victor.github.io/Gu-a-de-Autocad/

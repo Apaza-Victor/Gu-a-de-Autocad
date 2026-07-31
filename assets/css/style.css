@@ -1650,3 +1650,310 @@ code[class*="language-"]{
 [data-theme="light"]{
   --text-faint:    #6B7D9A;
 }
+
+/* =========================================================
+   Componentes nuevos: autoevaluación, mapa de interfaz,
+   filtro por nivel, copiar comando, recursos descargables.
+   ========================================================= */
+
+/* ---------- Autoevaluación (quiz) ---------- */
+.quiz-section{
+  margin-top: 3rem;
+  padding: 2rem 1.8rem;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+.quiz-section h2{ margin-top: 0; }
+.quiz-section .quiz-intro{
+  color: var(--text-muted);
+  font-size: .9rem;
+  margin-bottom: 1.5rem;
+}
+.quiz-q{
+  padding: 1.1rem 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--bg-panel-2);
+  margin-bottom: 1rem;
+}
+.quiz-q .quiz-question{
+  font-weight: 600;
+  font-size: .95rem;
+  margin-bottom: .8rem;
+}
+.quiz-opt{
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: var(--bg-elevated);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: .55rem .9rem;
+  margin-bottom: .45rem;
+  font-family: var(--font-body);
+  font-size: .88rem;
+  cursor: pointer;
+  transition: border-color .15s ease, background .15s ease;
+}
+.quiz-opt:hover:not(:disabled){ border-color: var(--cyan); }
+.quiz-opt.correct{
+  background: var(--cyan-dim);
+  border-color: var(--layer-green);
+  color: var(--layer-green);
+}
+.quiz-opt.wrong{
+  background: rgba(255,93,93,.1);
+  border-color: var(--layer-red);
+  color: var(--layer-red);
+}
+.quiz-opt:disabled{ cursor: default; opacity: .85; }
+.quiz-feedback{
+  display: none;
+  font-size: .85rem;
+  margin-top: .5rem;
+  color: var(--text-muted);
+}
+.quiz-feedback.show{ display: block; }
+.quiz-feedback.ok{ color: var(--layer-green); }
+.quiz-feedback.bad{ color: var(--layer-red); }
+.quiz-reset{
+  margin-top: .6rem;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-faint);
+  border-radius: var(--radius-sm);
+  padding: .4rem .9rem;
+  font-family: var(--font-display);
+  font-size: .72rem;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.quiz-reset:hover{ border-color: var(--cyan); color: var(--cyan); }
+.quiz-score{
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-soft);
+  font-family: var(--font-display);
+  font-size: .9rem;
+  color: var(--cyan);
+}
+.quiz-opt:focus-visible{ outline: 2px solid var(--cyan); outline-offset: 2px; }
+
+/* ---------- Mapa interactivo de la interfaz ---------- */
+.interface-map{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1.2rem 0 1.5rem;
+}
+@media (min-width: 992px){
+  .interface-map{ grid-template-columns: 1.4fr 1fr; }
+}
+.iface-window{
+  background: var(--bg-panel-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  font-family: var(--font-display);
+}
+.iface-titlebar{
+  display: flex; align-items: center; gap: .4rem;
+  padding: .45rem .8rem;
+  background: var(--bg-elevated);
+  border-bottom: 1px solid var(--border);
+  font-size: .7rem;
+  color: var(--text-faint);
+  letter-spacing: .04em;
+}
+.iface-titlebar i{ color: var(--amber); font-size: .6rem; }
+.iface-ribbon{
+  display: flex; gap: .25rem;
+  padding: .3rem .5rem;
+  background: var(--bg-elevated);
+  border-bottom: 1px solid var(--border);
+  font-size: .62rem;
+  color: var(--text-faint);
+}
+.iface-ribbon span{ padding: .15rem .45rem; border-radius: 3px; }
+.iface-ribbon span.active{ background: var(--cyan-dim); color: var(--cyan); }
+.iface-body{
+  position: relative;
+  min-height: 190px;
+}
+.iface-draw{
+  position: absolute;
+  inset: 0;
+  display: grid; place-items: center;
+  color: var(--text-faint);
+  font-size: .75rem;
+  letter-spacing: .12em;
+}
+.iface-draw svg{ width: 100%; height: 100%; max-height: 190px; }
+.iface-pin{
+  position: absolute;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--cyan);
+  color: #06201E;
+  font-family: var(--font-display);
+  font-size: .68rem;
+  font-weight: 700;
+  display: grid; place-items: center;
+  border: 2px solid var(--bg);
+  cursor: pointer;
+  box-shadow: 0 0 0 3px var(--cyan-dim);
+  transition: transform .15s ease, box-shadow .15s ease;
+  z-index: 2;
+}
+.iface-pin:hover{ transform: scale(1.15); }
+.iface-pin.active{
+  background: var(--amber);
+  box-shadow: 0 0 0 3px var(--amber-dim);
+}
+.iface-pin:focus-visible{ outline: 2px solid var(--amber); outline-offset: 2px; }
+.iface-statusbar{
+  display: flex; gap: .6rem;
+  padding: .4rem .8rem;
+  background: var(--bg-elevated);
+  border-top: 1px solid var(--border);
+  font-size: .6rem;
+  color: var(--text-faint);
+}
+.iface-statusbar .on{ color: var(--layer-green); }
+.iface-legend{ padding: 1rem; }
+.iface-zone{
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: .6rem .8rem;
+  margin-bottom: .45rem;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: .85rem;
+  cursor: pointer;
+  transition: border-color .15s ease, background .15s ease;
+}
+.iface-zone:hover{ border-color: var(--cyan); }
+.iface-zone.active{ background: var(--cyan-dim); border-color: var(--cyan); }
+.iface-zone .iface-zone-name{ font-weight: 700; display: block; }
+.iface-zone .iface-zone-desc{ color: var(--text-muted); font-size: .78rem; }
+.iface-zone:focus-visible{ outline: 2px solid var(--cyan); outline-offset: 2px; }
+
+/* ---------- Filtro por nivel en comandos ---------- */
+.cmd-level-filters{
+  display: flex; flex-wrap: wrap; gap: .5rem;
+  margin-top: .9rem;
+}
+.cmd-level-filters .cmd-filter-btn{ font-size: .78rem; }
+
+/* ---------- Acciones por comando: copiar + ver ejemplo ---------- */
+.cmd-head-actions{
+  margin-left: auto;
+  display: flex; align-items: center; gap: .35rem;
+  flex-shrink: 0;
+}
+.cmd-copy-btn, .cmd-visual-link{
+  display: inline-flex; align-items: center; gap: .3rem;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-faint);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-display);
+  font-size: .68rem;
+  padding: .22rem .5rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color .15s ease, border-color .15s ease, background .15s ease;
+}
+.cmd-copy-btn:hover{ color: var(--cyan); border-color: var(--cyan); }
+.cmd-visual-link{ color: var(--amber); }
+.cmd-visual-link:hover{ color: var(--amber); border-color: var(--amber); background: var(--amber-dim); }
+.cmd-copy-btn:focus-visible,
+.cmd-visual-link:focus-visible{ outline: 2px solid var(--cyan); outline-offset: 2px; }
+
+/* ---------- Tarjetas de descarga (recursos) ---------- */
+.dl-card{
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.4rem;
+  height: 100%;
+  display: flex; flex-direction: column;
+  gap: .6rem;
+  transition: border-color .2s ease, transform .2s ease;
+}
+.dl-card:hover{ border-color: var(--cyan); transform: translateY(-3px); }
+.dl-card .dl-icon{
+  width: 40px; height: 40px;
+  background: var(--cyan-dim);
+  border-radius: var(--radius-md);
+  display: grid; place-items: center;
+  color: var(--cyan); font-size: 1.1rem;
+}
+.dl-card h4{ font-size: .95rem; margin: 0; }
+.dl-card p{ color: var(--text-muted); font-size: .82rem; margin: 0; flex: 1; }
+.dl-card .dl-btn{
+  align-self: flex-start;
+  display: inline-flex; align-items: center; gap: .4rem;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--cyan);
+  border-radius: var(--radius-sm);
+  padding: .45rem 1rem;
+  font-family: var(--font-display);
+  font-size: .75rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color .15s ease, background .15s ease;
+}
+.dl-card .dl-btn:hover{ border-color: var(--cyan); background: var(--cyan-dim); }
+.dl-card .dl-btn:focus-visible{ outline: 2px solid var(--cyan); outline-offset: 2px; }
+
+/* ---------- Pasos de práctica guiada (primer dibujo) ---------- */
+.lesson-step{
+  display: flex; gap: 1rem;
+  padding: 1.1rem 1.2rem;
+  background: var(--bg-panel-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  margin-bottom: .9rem;
+}
+.lesson-step .lesson-num{
+  width: 34px; height: 34px;
+  flex-shrink: 0;
+  background: var(--cyan-dim);
+  color: var(--cyan);
+  border-radius: 50%;
+  display: grid; place-items: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: .85rem;
+}
+.lesson-step .lesson-body h4{ font-size: .95rem; margin: 0 0 .3rem; }
+.lesson-step .lesson-body p{ color: var(--text-muted); font-size: .85rem; margin: 0; }
+
+/* ---------- Checklist descargable (trucos) ---------- */
+.checklist-block{
+  margin-top: 2.5rem;
+  padding: 1.6rem 1.8rem;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+.checklist-block h3{ font-size: 1.1rem; margin-bottom: .4rem; }
+.checklist-block > p{ color: var(--text-muted); font-size: .85rem; }
+.checklist-block ul{ list-style: none; padding: 0; margin: 1rem 0; }
+.checklist-block li{
+  display: flex; align-items: flex-start; gap: .55rem;
+  padding: .35rem 0;
+  font-size: .88rem;
+  color: var(--text);
+}
+.checklist-block li i{ color: var(--layer-green); margin-top: .18rem; }
+.checklist-block .dl-btn{ margin-top: .4rem; }

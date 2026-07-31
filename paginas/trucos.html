@@ -4,6 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trucos para dominar AutoCAD — AutoCAD Guía</title>
+<link rel="canonical" href="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/trucos.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/trucos.html">
+<meta property="og:site_name" content="AutoCAD Guía">
+<meta property="og:title" content="Trucos para dominar AutoCAD — AutoCAD Guía">
+<meta property="og:description" content="Trucos, atajos, estrategias de aprendizaje y consejos prácticos para dominar AutoCAD desde cero hasta nivel experto.">
+<meta property="og:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Trucos para dominar AutoCAD — AutoCAD Guía">
+<meta name="twitter:description" content="Trucos, atajos, estrategias de aprendizaje y consejos prácticos para dominar AutoCAD desde cero hasta nivel experto.">
+<meta name="twitter:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
 <meta name="description" content="Trucos, atajos, estrategias de aprendizaje y consejos prácticos para dominar AutoCAD desde cero hasta nivel experto.">
 
 <link rel="icon" type="image/svg+xml" href="../assets/img/autocad-2.svg">
@@ -1165,6 +1176,188 @@
         </div>
       </div>
 
+      <!-- ====== AVANZADO: Dynamic blocks ====== -->
+      <div class="diagram-card" data-cat="avanzado" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Avanzado</span> Dynamic blocks: un bloque, mil variaciones</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p>Con un bloque dinámico defines parámetros y acciones (estirar, rotar, voltear, estados de visibilidad) y un solo bloque se convierte en puertas de cualquier ancho, ventanas configurables o anclas que giran.</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 280 92">
+              <text class="cad-label-cmd" x="5" y="14" style="font-size:9px">Bloque dinámico "PUERTA": un solo bloque, tres anchos</text>
+              <rect x="5" y="22" width="82" height="62" fill="var(--bg-elevated)" stroke="var(--layer-cyan)" rx="2"/>
+              <text class="cad-label-cmd" x="12" y="36" style="font-size:7px;fill:var(--layer-cyan)">Cómo empezar:</text>
+              <text class="cad-label" x="12" y="48" style="font-size:6px">1. BEDIT en el bloque</text>
+              <text class="cad-label" x="12" y="58" style="font-size:6px">2. Paleta Autoría de Bloques</text>
+              <text class="cad-label" x="12" y="68" style="font-size:6px">3. Parámetro + acción</text>
+              <text class="cad-label" x="12" y="78" style="font-size:6px">4. Guardar y cerrar</text>
+              <rect x="97" y="22" width="55" height="62" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+              <text class="cad-label-cmd" x="104" y="36" style="font-size:7px;fill:var(--layer-green)">0.80</text>
+              <line x1="108" y1="45" x2="108" y2="72" stroke="var(--layer-green)" stroke-width="1.5"/>
+              <line x1="108" y1="45" x2="126" y2="45" stroke="var(--layer-green)" stroke-width="1.5"/>
+              <path d="M 108 72 A 18 18 0 0 0 126 45" fill="none" stroke="var(--layer-green)" stroke-width="1"/>
+              <rect x="162" y="22" width="55" height="62" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+              <text class="cad-label-cmd" x="169" y="36" style="font-size:7px;fill:var(--layer-green)">0.90</text>
+              <line x1="173" y1="45" x2="173" y2="72" stroke="var(--layer-green)" stroke-width="1.5"/>
+              <line x1="173" y1="45" x2="193" y2="45" stroke="var(--layer-green)" stroke-width="1.5"/>
+              <path d="M 173 72 A 20 20 0 0 0 193 45" fill="none" stroke="var(--layer-green)" stroke-width="1"/>
+              <rect x="227" y="22" width="48" height="62" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+              <text class="cad-label-cmd" x="234" y="36" style="font-size:7px;fill:var(--layer-green)">1.00</text>
+              <line x1="238" y1="45" x2="238" y2="72" stroke="var(--layer-green)" stroke-width="1.5"/>
+              <line x1="238" y1="45" x2="260" y2="45" stroke="var(--layer-green)" stroke-width="1.5"/>
+              <path d="M 238 72 A 22 22 0 0 0 260 45" fill="none" stroke="var(--layer-green)" stroke-width="1"/>
+              <text class="cad-label" x="5" y="90" style="font-size:7px;fill:var(--amber)">Los grips estiran la puerta: una sola inserción sirve para todo el plano</text>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Pro tip</span>
+            <span>Los dynamic blocks reducen a la mitad la biblioteca de bloques de tu empresa: un bloque de puerta con estiramiento reemplaza a veinte bloques fijos.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== FLUJO: Archivos ligeros ====== -->
+      <div class="diagram-card" data-cat="flujo" data-aos="fade-up" data-aos-delay="60">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Flujo de trabajo</span> Archivos ligeros: purga y limpieza</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p>Los DWG engordan con bloques, estilos de cota y capas que ya no usas. Usa PURGE (todo en cascada), AUDIT para errores, OVERKILL para líneas duplicadas y revisa capas vacías.</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 280 80">
+              <text class="cad-label-cmd" x="5" y="14" style="font-size:9px">Limpieza antes de entregar:</text>
+              <rect x="5" y="22" width="60" height="40" fill="var(--bg-elevated)" stroke="var(--layer-red)" rx="2"/>
+              <text class="cad-label-cmd" x="12" y="36" style="font-size:7px;fill:var(--layer-red)">PURGE</text>
+              <text class="cad-label" x="12" y="48" style="font-size:6px">todo en cascada</text>
+              <text class="cad-label" x="12" y="57" style="font-size:6px">(repítelo ×2)</text>
+              <text class="cad-label-cmd" x="70" y="45" style="font-size:12px;fill:var(--amber)">→</text>
+              <rect x="80" y="22" width="60" height="40" fill="var(--bg-elevated)" stroke="var(--layer-yellow)" rx="2"/>
+              <text class="cad-label-cmd" x="87" y="36" style="font-size:7px;fill:var(--layer-yellow)">AUDIT</text>
+              <text class="cad-label" x="87" y="48" style="font-size:6px">repara errores</text>
+              <text class="cad-label" x="87" y="57" style="font-size:6px">del archivo</text>
+              <text class="cad-label-cmd" x="145" y="45" style="font-size:12px;fill:var(--amber)">→</text>
+              <rect x="155" y="22" width="60" height="40" fill="var(--bg-elevated)" stroke="var(--layer-cyan)" rx="2"/>
+              <text class="cad-label-cmd" x="162" y="36" style="font-size:7px;fill:var(--layer-cyan)">OVERKILL</text>
+              <text class="cad-label" x="162" y="48" style="font-size:6px">líneas</text>
+              <text class="cad-label" x="162" y="57" style="font-size:6px">duplicadas</text>
+              <text class="cad-label-cmd" x="220" y="45" style="font-size:12px;fill:var(--amber)">→</text>
+              <rect x="230" y="22" width="45" height="40" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+              <text class="cad-label-cmd" x="237" y="36" style="font-size:7px;fill:var(--layer-green)">Guardar</text>
+              <text class="cad-label" x="237" y="48" style="font-size:6px">DWG ligero</text>
+              <text class="cad-label" x="5" y="72" style="font-size:7px;fill:var(--amber)">Antes de purgar: guarda, revisa capas vacías y desactiva el visor de capas</text>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Consejo</span>
+            <span>Configura las copias de seguridad automáticas y guarda antes de cada purga: una limpieza con error no debe costarte el archivo.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== APRENDIZAJE: Modelado 3D ====== -->
+      <div class="diagram-card" data-cat="aprendizaje" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Aprendizaje</span> Modelado 3D: flujo por pasos</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p>No empieces dibujando 3D directamente. 1) dibuja el 2D exacto por capas, 2) convierte contornos en REGIONES, 3) aplica EXTRUDE, REVOLVE, SWEEP o LOFT, 4) combina con UNION/SUBTRACT/INTERSECT, 5) redondea con FILLET/CHAMFER 3D, 6) añade materiales y luces.</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 280 108">
+              <text class="cad-label-cmd" x="5" y="14" style="font-size:9px">Flujo de modelado 3D:</text>
+              <rect x="5" y="22" width="80" height="34" fill="var(--bg-elevated)" stroke="var(--layer-cyan)" rx="2"/>
+              <text class="cad-label" x="12" y="34" style="font-size:6px;fill:var(--layer-cyan)">1</text>
+              <text class="cad-label" x="22" y="34" style="font-size:6px">Dibuja el 2D exacto</text>
+              <text class="cad-label" x="22" y="44" style="font-size:6px">por capas</text>
+              <text class="cad-label-cmd" x="90" y="40" style="font-size:12px;fill:var(--amber)">→</text>
+              <rect x="100" y="22" width="80" height="34" fill="var(--bg-elevated)" stroke="var(--layer-cyan)" rx="2"/>
+              <text class="cad-label" x="107" y="34" style="font-size:6px;fill:var(--layer-cyan)">2</text>
+              <text class="cad-label" x="117" y="34" style="font-size:6px">Convierte en</text>
+              <text class="cad-label" x="117" y="44" style="font-size:6px">REGIONES</text>
+              <text class="cad-label-cmd" x="185" y="40" style="font-size:12px;fill:var(--amber)">→</text>
+              <rect x="195" y="22" width="80" height="34" fill="var(--bg-elevated)" stroke="var(--layer-cyan)" rx="2"/>
+              <text class="cad-label" x="202" y="34" style="font-size:6px;fill:var(--layer-cyan)">3</text>
+              <text class="cad-label" x="212" y="34" style="font-size:6px">EXTRUDE · REVOLVE</text>
+              <text class="cad-label" x="212" y="44" style="font-size:6px">SWEEP · LOFT</text>
+              <rect x="5" y="64" width="80" height="34" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+              <text class="cad-label" x="12" y="76" style="font-size:6px;fill:var(--layer-green)">4</text>
+              <text class="cad-label" x="22" y="76" style="font-size:6px">UNION · SUBTRACT</text>
+              <text class="cad-label" x="22" y="86" style="font-size:6px">· INTERSECT</text>
+              <text class="cad-label-cmd" x="90" y="82" style="font-size:12px;fill:var(--amber)">→</text>
+              <rect x="100" y="64" width="80" height="34" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+              <text class="cad-label" x="107" y="76" style="font-size:6px;fill:var(--layer-green)">5</text>
+              <text class="cad-label" x="117" y="76" style="font-size:6px">FILLET · CHAMFER</text>
+              <text class="cad-label" x="117" y="86" style="font-size:6px">redondea el 3D</text>
+              <text class="cad-label-cmd" x="185" y="82" style="font-size:12px;fill:var(--amber)">→</text>
+              <rect x="195" y="64" width="80" height="34" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+              <text class="cad-label" x="202" y="76" style="font-size:6px;fill:var(--layer-green)">6</text>
+              <text class="cad-label" x="212" y="76" style="font-size:6px">Materiales y</text>
+              <text class="cad-label" x="212" y="86" style="font-size:6px">luces</text>
+              <text class="cad-label" x="5" y="106" style="font-size:7px;fill:var(--amber)">Un sólido limpio se edita mejor que un "mazo" de primitivas unidas a la fuerza</text>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Clave</span>
+            <span>Un sólido limpio se edita mejor que un "mazo" de primitivas unidas a la fuerza: modela por operaciones, no por acumulación.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== FLUJO: Cota en el layout ====== -->
+      <div class="diagram-card" data-cat="flujo" data-aos="fade-up" data-aos-delay="60">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Flujo de trabajo</span> Cota en el layout, no en el modelo</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p>Acota en el espacio papel (layout) para que las cotas salgan siempre con la escala correcta al imprimir, o usa cotas anotativas en el modelo. La ventana de layout mantiene el modelo a 1:1 y las cotas a escala de impresión.</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 280 100">
+              <text class="cad-label-cmd" x="5" y="14" style="font-size:9px">Espacio papel: la cota vive fuera de la ventana</text>
+              <rect x="5" y="22" width="270" height="70" fill="var(--bg-elevated)" stroke="var(--layer-cyan)" rx="3"/>
+              <text class="cad-label-cmd" x="12" y="36" style="font-size:7px;fill:var(--layer-cyan)">Layout (espacio papel)</text>
+              <rect x="14" y="44" width="120" height="38" fill="var(--bg-elevated)" stroke="var(--layer-green)" stroke-width="1.5" rx="2"/>
+              <text class="cad-label" x="20" y="56" style="font-size:6px;fill:var(--layer-green)">Ventana gráfica</text>
+              <text class="cad-label" x="20" y="66" style="font-size:6px">modelo a 1:1</text>
+              <text class="cad-label" x="20" y="76" style="font-size:6px">(no acotes aquí)</text>
+              <line x1="160" y1="58" x2="230" y2="58" stroke="var(--layer-red)" stroke-width="1.5"/>
+              <line x1="160" y1="49" x2="160" y2="58" stroke="var(--layer-red)" stroke-width="1"/>
+              <line x1="230" y1="49" x2="230" y2="58" stroke="var(--layer-red)" stroke-width="1"/>
+              <line x1="160" y1="44" x2="230" y2="44" stroke="var(--layer-red)" stroke-width="1"/>
+              <text class="cad-label" x="180" y="39" style="font-size:7px;fill:var(--layer-red)">3.00</text>
+              <text class="cad-label" x="160" y="86" style="font-size:6px;fill:var(--layer-red)">cota en papel: escala de impresión correcta</text>
+              <text class="cad-label" x="5" y="98" style="font-size:7px;fill:var(--amber)">Alternativa: cotas anotativas dentro del modelo</text>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Consejo</span>
+            <span>Congela las capas de cota de fondo para que no salgan en otras ventanas: así cada ventana solo muestra sus propias cotas.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CHECKLIST DE ENTREGA ===== -->
+<section style="padding:0 0 5rem">
+  <div class="container container-xl">
+    <div class="checklist-block" id="checklistDeliver">
+      <h3>Checklist de entrega de planos</h3>
+      <p>Descarga esta lista y revísala antes de entregar o imprimir cualquier plano.</p>
+      <ul>
+        <li><i class="bi bi-check2"></i> Todos los objetos están en su capa correcta.</li>
+        <li><i class="bi bi-check2"></i> No quedan objetos en la capa 0 ni en Defpoints.</li>
+        <li><i class="bi bi-check2"></i> La escala de la ventana de layout está comprobada.</li>
+        <li><i class="bi bi-check2"></i> Las cotas tienen estilo y escala correctos y no se duplican.</li>
+        <li><i class="bi bi-check2"></i> Los textos están revisados (ortografía y tamaño legible).</li>
+        <li><i class="bi bi-check2"></i> El cajetín está completo: nombre, escala, fecha y número de plano.</li>
+        <li><i class="bi bi-check2"></i> No hay sombreados ni bloques superpuestos.</li>
+        <li><i class="bi bi-check2"></i> Se ejecutó PURGE y se eliminaron objetos duplicados.</li>
+        <li><i class="bi bi-check2"></i> AUDIT terminó sin errores.</li>
+        <li><i class="bi bi-check2"></i> Se imprimió un PDF de prueba y se revisó en pantalla.</li>
+      </ul>
+      <button class="dl-btn" data-checklist="checklistDeliver" data-filename="checklist-entrega.txt" data-title="CHECKLIST ENTREGA DE PLANOS"><i class="bi bi-download me-1"></i> Descargar checklist</button>
     </div>
   </div>
 </section>

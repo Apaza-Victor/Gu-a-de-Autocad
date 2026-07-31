@@ -1,0 +1,34 @@
+CHECKLIST ANTES DE ENTREGAR UN PLANO - AutoCAD Guía
+====================================================
+
+ANTES DE EMPEZAR
+  [ ] Definir unidades (UNITS): mm, cm o m.
+  [ ] Crear o abrir la plantilla .DWT correcta.
+  [ ] Configurar capas y estilos de cota/texto.
+  [ ] Trabajar a escala real 1:1 en el espacio modelo.
+
+MIENTRAS DIBUJAS
+  [ ] Guardar cada 10 minutos (Ctrl+S) y activar guardado automático.
+  [ ] Cada geometría en su capa (nada en la capa 0).
+  [ ] Colores y grosores ByLayer.
+  [ ] Cotar todo elemento que deba fabricarse o construirse.
+  [ ] No dejar líneas flotantes ni geometría duplicada.
+
+ANTES DE IMPRIMIR O ENVIAR
+  [ ] ZOOM E para revisar todo el dibujo.
+  [ ] AUDIT para corregir errores internos.
+  [ ] PURGE (regenera) para eliminar capas, bloques y estilos no usados.
+  [ ] SCALELISTEDIT para limpiar escalas innecesarias.
+  [ ] Revisar en el Layout: escala correcta, cajetín completo y datos
+      del proyecto (proyecto, autor, fecha, escala, revisión).
+  [ ] Comprobar que ninguna cota quede cortada o montada.
+  [ ] Congelar capas de referencias que no deben verse en impresión.
+  [ ] Vista previa de impresión (Ctrl+P → Vista previa).
+
+AL EXPORTAR
+  [ ] Guardar como la versión de DWG compatible con el cliente.
+  [ ] Exportar PDF con el cajetín y la escala correcta.
+  [ ] Si compartes con otro programa CAD, exportar .DXF.
+  [ ] Adjuntar el PDF + DWG en la entrega final.
+
+Fuente: AutoCAD Guía — https://apaza-victor.github.io/Gu-a-de-Autocad/

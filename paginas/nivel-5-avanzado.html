@@ -4,6 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nivel 5 · Nivel experto — AutoCAD Guía</title>
+<link rel="canonical" href="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-5-avanzado.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-5-avanzado.html">
+<meta property="og:site_name" content="AutoCAD Guía">
+<meta property="og:title" content="Nivel 5 · Nivel experto — AutoCAD Guía">
+<meta property="og:description" content="Personalización de AutoCAD, AutoLISP, estándares CAD profesionales, buenas prácticas e integración con otros programas. Nivel 5 de la guía.">
+<meta property="og:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nivel 5 · Nivel experto — AutoCAD Guía">
+<meta name="twitter:description" content="Personalización de AutoCAD, AutoLISP, estándares CAD profesionales, buenas prácticas e integración con otros programas. Nivel 5 de la guía.">
+<meta name="twitter:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
 <meta name="description" content="Personalización de AutoCAD, AutoLISP, estándares CAD profesionales, buenas prácticas e integración con otros programas. Nivel 5 de la guía.">
 
 <link rel="icon" type="image/svg+xml" href="../assets/img/autocad-2.svg">
@@ -19,6 +30,26 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Nivel · AutoCAD nivel experto",
+    "description": "CUI, AutoLISP, estándares CAD, integración, Dynamo, Python, BIM y optimización.",
+    "provider": {
+      "@type": "Organization",
+      "name": "AutoCAD Guía",
+      "sameAs": "https://apaza-victor.github.io/Gu-a-de-Autocad/"
+    },
+    "inLanguage": "es",
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "online",
+      "learningResourceType": "tutorial",
+      "inLanguage": "es"
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -78,7 +109,7 @@
     <h1 data-i18n="lvl5.title">Nivel experto</h1>
     <p class="subtitle" data-i18n="lvl5.subtitle">Personaliza AutoCAD a tu medida, automatiza tareas con scripts, aplica estándares profesionales y integra el programa con otros flujos de trabajo del mundo real.</p>
     <div class="level-progress-bar"><div class="fill"></div></div>
-    <p class="level-progress-label">0 de 10 temas completados · 0%</p>
+    <p class="level-progress-label">0 de 14 temas completados · 0%</p>
   </div>
 </header>
 
@@ -102,6 +133,11 @@
             <li><a href="#python" data-toc="nivel5-python"><span class="toc-check"></span> Automatización con Python</a></li>
             <li><a href="#bim" data-toc="nivel5-bim"><span class="toc-check"></span> AutoCAD y BIM</a></li>
             <li><a href="#interoperabilidad" data-toc="nivel5-interoperabilidad"><span class="toc-check"></span> Interoperabilidad CAD-BIM</a></li>
+            <li><a href="#dynamic-blocks" data-toc="nivel5-dynamic-blocks"><span class="toc-check"></span> Bloques dinámicos</a></li>
+            <li><a href="#diseno-parametrico" data-toc="nivel5-diseno-parametrico"><span class="toc-check"></span> Diseño paramétrico</a></li>
+            <li><a href="#cad-standards" data-toc="nivel5-cad-standards"><span class="toc-check"></span> Verificador de estándares</a></li>
+            <li><a href="#publish" data-toc="nivel5-publish"><span class="toc-check"></span> Publicación por lotes</a></li>
+            <li><a href="#autoevaluacion"><span class="toc-check"></span> Autoevaluación</a></li>
           </ul>
           <hr style="border-color:var(--border-soft)" class="my-4">
           <a href="comandos.html" class="btn-cad-outline w-100 text-center d-block">Diccionario de comandos <i class="bi bi-arrow-right"></i></a>
@@ -403,6 +439,225 @@ print(f"Círculo creado: {circle}")</code></pre>
             <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
           </section>
 
+          <!-- 11. Bloques dinámicos -->
+          <section id="dynamic-blocks" data-topic="nivel5-dynamic-blocks">
+            <h2><span class="sec-num">11</span>Bloques dinámicos (Dynamic Blocks)</h2>
+            <p>Un <strong>bloque dinámico</strong> es un bloque normal al que se le añaden <strong>parámetros</strong> y <strong>acciones</strong> para que pueda cambiar de forma, tamaño o visibilidad mediante <em>grips</em> (pinzamientos), sin necesidad de crear muchas variantes separadas.</p>
+            <p>En lugar de tener diez bloques distintos para una silla de 80, 90 o 100 cm, defines <strong>uno solo</strong> con un grip de estiramiento y el usuario ajusta el ancho arrastrando el pinzamiento.</p>
+
+            <h3>Parámetros y acciones</h3>
+            <ul>
+              <li><strong>Estiramiento (Stretch):</strong> el parámetro de distancia crea un grip; la acción STRETCH estira la geometría que elijas hasta donde arrastres el grip.</li>
+              <li><strong>Estados de visibilidad:</strong> el mismo bloque muestra variantes (abierto, cerrado, con mesa, sin mesa) alternando con un grip de visibilidad.</li>
+              <li><strong>Array / repetición:</strong> repite un elemento un número de veces ajustable con el grip (ej. rejillas o listones).</li>
+              <li><strong>Volteo (Flip):</strong> invierte el bloque horizontal o verticalmente con un solo clic en el grip.</li>
+              <li><strong>Rotación:</strong> un parámetro de rotación permite girar la referencia del bloque con el grip de arco.</li>
+            </ul>
+
+            <h3>El Editor de bloques (BEDIT)</h3>
+            <ol>
+              <li>Selecciona el bloque y escribe <span class="cmd-inline">BEDIT</span>, o haz clic derecho → "Editor de bloques".</li>
+              <li>En la paleta de <strong>Definición de bloques</strong>, elige el parámetro (Lineal, Rotación, Visibilidad, Alineación...).</li>
+              <li>Añade la <strong>acción</strong> correspondiente (Estirar, Mover, Girar, Voltear, Matriz...).</li>
+              <li>Guarda con <span class="cmd-inline">BSAVE</span> y cierra con <span class="cmd-inline">BCLOSE</span>.</li>
+            </ol>
+
+            <h3>Ejemplo práctico</h3>
+            <p>Una <strong>puerta</strong> con un parámetro lineal en su ancho: arrastras el grip derecho y la hoja se estira a 0.80, 0.90 o 2.40 m según el vano. O una <strong>mesa</strong> con estados de visibilidad: "de 4", "de 6" y "de 8" puestos en un solo bloque.</p>
+
+            <table class="table-cad">
+              <thead><tr><th>Comando</th><th>Función</th></tr></thead>
+              <tbody>
+                <tr><td><span class="cmd-inline">BEDIT</span></td><td>Abre el Editor de bloques para añadir parámetros y acciones.</td></tr>
+                <tr><td><span class="cmd-inline">BSAVE</span></td><td>Guarda la nueva definición del bloque dentro del editor.</td></tr>
+                <tr><td><span class="cmd-inline">BCLOSE</span></td><td>Cierra el editor y vuelve al dibujo.</td></tr>
+                <tr><td><span class="cmd-inline">BACTIONSET</span></td><td>Define el conjunto de objetos sobre los que actúa una acción.</td></tr>
+                <tr><td>Estirar / Visibilidad</td><td>Acciones más usadas: estirar geometría y alternar variantes.</td></tr>
+              </tbody>
+            </table>
+
+            <div class="callout">
+              <span class="callout-title">¿Cuándo vale la pena?</span>
+              Vale la pena crear bloques dinámicos cuando una <strong>pieza reutilizada varía</strong> en tamaño o configuración: puertas, ventanas, mesas, estantes, válvulas o equipos. Si la pieza solo aparece una vez o siempre idéntica, un bloque normal basta.
+            </div>
+
+            <div class="diagram-canvas">
+              <svg viewBox="0 0 280 170">
+                <text class="cad-label-cmd" x="5" y="14" style="font-size:8px">ANTES · bloque fijo</text>
+                <rect x="15" y="30" width="105" height="95" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="2"/>
+                <rect class="cad-fill" x="20" y="35" width="55" height="85" rx="2"/>
+                <line class="cad-line" x1="75" y1="35" x2="75" y2="120"/>
+                <circle class="cad-point" cx="52" cy="80" r="4"/>
+                <text class="cad-label" x="20" y="140" style="font-size:7px">Un solo ancho (0.90 m).</text>
+                <text class="cad-label" x="20" y="151" style="font-size:7px">Para otro ancho hay que</text>
+                <text class="cad-label" x="20" y="162" style="font-size:7px">crear otro bloque.</text>
+                <line class="cad-dim" x1="20" y1="128" x2="75" y2="128"/>
+                <line class="cad-dim" x1="20" y1="124" x2="20" y2="132"/>
+                <line class="cad-dim" x1="75" y1="124" x2="75" y2="132"/>
+                <text class="cad-dim-text" x="35" y="122">0.90</text>
+
+                <text class="cad-label-cmd" x="150" y="14" style="font-size:8px">DESPUÉS · bloque dinámico</text>
+                <rect x="145" y="30" width="130" height="95" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+                <rect class="cad-fill" x="150" y="35" width="85" height="85" rx="2"/>
+                <line class="cad-line" x1="235" y1="35" x2="235" y2="120"/>
+                <circle class="cad-point" cx="192" cy="80" r="4"/>
+                <rect class="cad-point" x="146" y="76" width="8" height="8"/>
+                <rect class="cad-point" x="231" y="76" width="8" height="8"/>
+                <line class="cad-dim" x1="150" y1="128" x2="235" y2="128"/>
+                <line class="cad-dim" x1="150" y1="124" x2="150" y2="132"/>
+                <line class="cad-dim" x1="235" y1="124" x2="235" y2="132"/>
+                <polygon class="cad-arrow" points="150,128 136,128"/>
+                <polygon class="cad-arrow" points="235,128 249,128"/>
+                <text class="cad-dim-text" x="172" y="122">0.60 – 2.40</text>
+                <text class="cad-label" x="150" y="147" style="font-size:7px;fill:var(--layer-green)">Grips de estiramiento en ambos extremos</text>
+                <text class="cad-label" x="150" y="158" style="font-size:7px">Una definición sirve para todos los anchos</text>
+              </svg>
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 12. Diseño paramétrico -->
+          <section id="diseno-parametrico" data-topic="nivel5-diseno-parametrico">
+            <h2><span class="sec-num">12</span>Diseño paramétrico y restricciones</h2>
+            <p>El <strong>diseño paramétrico</strong> permite que la geometría se adapte automáticamente cuando cambian sus dimensiones o sus relaciones. Se apoya en <strong>restricciones</strong>: reglas geométricas y matemáticas que se aplican a los objetos.</p>
+
+            <h3>Restricciones geométricas (GEOMCONSTRAINT)</h3>
+            <p>Controlan <strong>cómo se relacionan</strong> los objetos entre sí. Se aplican con <span class="cmd-inline">GEOMCONSTRAINT</span> o desde el panel PARAMETRIC.</p>
+            <ul>
+              <li><strong>Coincidencia:</strong> une puntos de dos objetos (extremos, centros).</li>
+              <li><strong>Paralelo:</strong> mantiene dos líneas siempre paralelas.</li>
+              <li><strong>Perpendicular:</strong> mantiene un ángulo de 90° entre líneas.</li>
+              <li><strong>Tangente:</strong> mantiene el contacto entre curvas.</li>
+              <li><strong>Horizontal / Vertical:</strong> fija la orientación respecto al sistema de coordenadas.</li>
+              <li><strong>Simetría:</strong> refleja objetos respecto a una línea de simetría.</li>
+            </ul>
+
+            <h3>Restricciones de cota (DIMCONSTRAINT)</h3>
+            <p>Con <span class="cmd-inline">DIMCONSTRAINT</span> las cotas dejan de ser solo texto: <strong>controlan la medida</strong>. Al cambiar una cota, la geometría se redibuja sola. Pueden ser cotas dinámicas (lineales, de radio, angulares...) o referenciadas a una tabla de variables.</p>
+            <p>El panel <strong>PARAMETRIC</strong> permite mostrar u ocultar las restricciones aplicadas (<span class="cmd-inline">CONSTRAINTBAR</span>) y eliminarlas con <span class="cmd-inline">DELCONSTRAINT</span> si sobra alguna.</p>
+
+            <h3>Variables y ecuaciones (PARAMETERS)</h3>
+            <p>Con el <strong>Administrador de parámetros</strong> (<span class="cmd-inline">PARAMETERS</span>) defines variables y fórmulas. Por ejemplo, si escribes <span class="cmd-inline">ancho = alto*2</span>, al cambiar <em>alto</em> el <em>ancho</em> se actualiza automáticamente. Es la base de las familias paramétricas y de los bloques con lógica de tamaño.</p>
+
+            <table class="table-cad">
+              <thead><tr><th>Comando</th><th>Función</th></tr></thead>
+              <tbody>
+                <tr><td><span class="cmd-inline">GEOMCONSTRAINT</span></td><td>Aplica restricciones geométricas (paralelo, tangente, simetría...).</td></tr>
+                <tr><td><span class="cmd-inline">DIMCONSTRAINT</span></td><td>Convierte cotas en restricciones que controlan la geometría.</td></tr>
+                <tr><td><span class="cmd-inline">DELCONSTRAINT</span></td><td>Elimina las restricciones seleccionadas del dibujo.</td></tr>
+                <tr><td><span class="cmd-inline">PARAMETERS</span></td><td>Abre el Administrador de parámetros: variables y ecuaciones.</td></tr>
+                <tr><td><span class="cmd-inline">CONSTRAINTBAR</span></td><td>Muestra u oculta la barra con las restricciones aplicadas.</td></tr>
+              </tbody>
+            </table>
+
+            <div class="callout">
+              <span class="callout-title">Uso real</span>
+              El diseño paramétrico brilla en piezas que cambian según un catálogo: una misma familia de estantes, vigas o mobiliario donde cambias una variable (el alto) y todo lo demás se recalcula solo.
+            </div>
+
+            <div class="diagram-canvas">
+              <svg viewBox="0 0 280 170">
+                <text class="cad-label-cmd" x="5" y="14" style="font-size:8px">Rectángulo controlado por variables</text>
+                <rect class="cad-fill" x="60" y="35" width="120" height="60" rx="2"/>
+                <text class="cad-label" x="118" y="47" style="font-size:8px;fill:var(--layer-cyan)">H</text>
+                <text class="cad-label" x="63" y="80" style="font-size:8px;fill:var(--layer-cyan)">∥</text>
+                <text class="cad-label" x="170" y="80" style="font-size:8px;fill:var(--layer-cyan)">∥</text>
+                <line class="cad-dim" x1="60" y1="28" x2="180" y2="28"/>
+                <line class="cad-dim" x1="60" y1="24" x2="60" y2="32"/>
+                <line class="cad-dim" x1="180" y1="24" x2="180" y2="32"/>
+                <polygon class="cad-arrow" points="60,28 48,28"/>
+                <polygon class="cad-arrow" points="180,28 192,28"/>
+                <text class="cad-dim-text" x="92" y="20">ancho = f(alto)</text>
+                <line class="cad-dim" x1="187" y1="35" x2="187" y2="95"/>
+                <line class="cad-dim" x1="183" y1="35" x2="191" y2="35"/>
+                <line class="cad-dim" x1="183" y1="95" x2="191" y2="95"/>
+                <polygon class="cad-arrow" points="187,35 187,25"/>
+                <polygon class="cad-arrow" points="187,95 187,105"/>
+                <text class="cad-dim-text" x="194" y="68">alto</text>
+                <text class="cad-label" x="60" y="112" style="font-size:7px;fill:var(--amber)">◉ cota controlada por variable</text>
+                <rect x="25" y="122" width="112" height="42" fill="var(--bg-elevated)" stroke="var(--layer-amber)" rx="3"/>
+                <text class="cad-label-cmd" x="31" y="136" style="font-size:7px">PARAMETERS</text>
+                <text class="cad-label" x="31" y="149" style="font-size:7px">alto = 300 (variable)</text>
+                <text class="cad-label" x="31" y="160" style="font-size:7px">ancho = alto * 2</text>
+                <rect x="150" y="122" width="105" height="42" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="3"/>
+                <text class="cad-label-cmd" x="156" y="136" style="font-size:7px">Resultado</text>
+                <text class="cad-label" x="156" y="149" style="font-size:7px">alto 300 → ancho 600</text>
+                <text class="cad-label" x="156" y="160" style="font-size:7px">alto 350 → ancho 700</text>
+              </svg>
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 13. Verificador de estándares CAD -->
+          <section id="cad-standards" data-topic="nivel5-cad-standards">
+            <h2><span class="sec-num">13</span>Verificador de estándares CAD</h2>
+            <p>Los <strong>estándares CAD</strong> son reglas que una oficina define para que todos los dibujos compartan la misma nomenclatura de <strong>capas</strong>, <strong>estilos de texto</strong> y <strong>estilos de cota</strong>. AutoCAD puede revisar automáticamente que un dibujo cumpla esas reglas.</p>
+            <p>El archivo de estándares es un dibujo normal guardado con extensión <span class="cmd-inline">.DWS</span>. Contiene únicamente las definiciones "oficiales" de capas, textos y cotas del proyecto; no necesita geometría.</p>
+
+            <h3>Cómo se usa</h3>
+            <ol>
+              <li><strong>Crear el estándar:</strong> abre un dibujo limpio, define las capas y estilos aprobados y guárdalo como <span class="cmd-inline">.DWS</span> (tipo de archivo: estándares de dibujo).</li>
+              <li><strong>Asociarlo:</strong> escribe <span class="cmd-inline">STANDARDS</span> y añade los archivos <span class="cmd-inline">.DWS</span> que aplican a tu dibujo.</li>
+              <li><strong>Revisar:</strong> ejecuta <span class="cmd-inline">CHECKSTANDARDS</span>. AutoCAD lista las infracciones (p. ej. una capa llamada "Muros" cuando el estándar dice "ARQ-Muros").</li>
+              <li><strong>Corregir:</strong> elige la regla del estándar y pulsa "Corregir" para renombrar o reemplazar automáticamente.</li>
+            </ol>
+            <p>Si el estándar se <strong>asocia a la plantilla</strong> (<span class="cmd-inline">.DWT</span>), cada dibujo nuevo ya lo trae configurado y AutoCAD puede avisar al abrir si detecta una violación.</p>
+
+            <table class="table-cad">
+              <thead><tr><th>Comando / archivo</th><th>Función</th></tr></thead>
+              <tbody>
+                <tr><td><span class="cmd-inline">.DWS</span></td><td>Archivo de estándares: capas, textos y cotas oficiales de la oficina.</td></tr>
+                <tr><td><span class="cmd-inline">STANDARDS</span></td><td>Asocia archivos de estándar al dibujo actual.</td></tr>
+                <tr><td><span class="cmd-inline">CHECKSTANDARDS</span></td><td>Compara el dibujo contra el estándar y lista las infracciones.</td></tr>
+                <tr><td><span class="cmd-inline">DWT</span></td><td>Plantilla; al asociar el estándar aquí, cada dibujo nuevo lo hereda.</td></tr>
+              </tbody>
+            </table>
+
+            <div class="callout">
+              <span class="callout-title">Flujo en la oficina</span>
+              Plantilla con el estándar asociado → todo el equipo dibuja sobre la misma base → revisión con CHECKSTANDARDS antes de cada entrega → corrección de infracciones → un único formato para archivar y compartir con clientes y consultores.
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 14. Publicación por lotes -->
+          <section id="publish" data-topic="nivel5-publish">
+            <h2><span class="sec-num">14</span>Publicación y lotes de impresión (PUBLISH)</h2>
+            <p><span class="cmd-inline">PUBLISH</span> (Publicar) imprime o exporta <strong>varios planos a la vez</strong>, en una sola operación, hacia una plotter o a un archivo <strong>PDF</strong>. Es el comando que usas cuando tienes 15 layouts y no quieres abrirlos uno por uno con PLOT.</p>
+
+            <h3>Cómo armar el lote</h3>
+            <ol>
+              <li>Escribe <span class="cmd-inline">PUBLISH</span>. Se abre la <strong>lista de planos</strong> con las hojas del dibujo (espacio modelo + layouts).</li>
+              <li>Agrega o quita hojas, reordena con las flechas y comprueba la posición de cada lámina.</li>
+              <li>Elige el <strong>formato de salida</strong>: PDF, plotter (según los ploteadores configurados) o DWF.</li>
+              <li>Define las <strong>opciones de PDF</strong>: calidad, vector o ráster, incluir capas y carpeta de destino.</li>
+              <li>Pulsa Publicar. AutoCAD genera los planos uno tras otro sin intervención.</li>
+            </ol>
+
+            <h3>PUBLISH vs. PLOT</h3>
+            <p><span class="cmd-inline">PLOT</span> imprime un solo dibujo o layout con su configuración actual. <span class="cmd-inline">PUBLISH</span> maneja <strong>muchas hojas</strong> con sus propias configuraciones (tablas de estilos, escalas y tamaños) dentro del mismo lote.</p>
+
+            <h3>Relación con los conjuntos de planos</h3>
+            <p>Si trabajas con <strong>Sheet Sets</strong> (<span class="cmd-inline">SHEETSET</span>), puedes publicar todo el conjunto —decenas de hojas, incluso de varios archivos DWG— con datos de rótulo, numeración y nombres automáticos, sin armar la lista a mano.</p>
+
+            <h3>Tip: DWG a PDF con calidad</h3>
+            <ul>
+              <li>En las opciones de PDF activa <strong>"incluir capas"</strong>: el PDF resultante tendrá capas navegables.</li>
+              <li>Usa nombres de archivo automáticos (nº de hoja + nombre del layout) para identificar el lote sin abrir cada PDF.</li>
+              <li>Define una tabla de estilos de trazado consistente para que los grosores se vean iguales en pantalla y en papel.</li>
+            </ul>
+
+            <div class="callout">
+              <span class="callout-title">Consejo</span>
+              Antes de publicar el lote completo, genera una <strong>vista previa</strong> de cada lámina. Un texto cortado o una ventana gráfica desplazada se repite en las 40 hojas: revisar una vez ahorra volver a imprimir todo.
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
           <!-- Ejemplos inline -->
           <section class="inline-visual-examples" style="margin-top:2rem">
             <div class="visual-examples">
@@ -550,6 +805,54 @@ print(f"Círculo creado: {circle}")</code></pre>
             </div>
           </section>
 
+          <!-- Autoevaluación -->
+          <section class="quiz-section" id="autoevaluacion">
+            <h2>Autoevaluación del nivel</h2>
+            <p class="quiz-intro">Responde las 5 preguntas para comprobar lo aprendido. Pulsa la opción correcta y aparecerá la explicación con tu puntuación.</p>
+
+            <div class="quiz" data-quiz="nivel5">
+              <div class="quiz-q" data-answer="B">
+                <p class="quiz-question">1. ¿Qué necesita un bloque para tener un grip de estiramiento?</p>
+                <button class="quiz-opt" data-key="A">A) Solo cambiar la escala con SCALE</button>
+                <button class="quiz-opt" data-key="B">B) Un parámetro de distancia y una acción de estiramiento (Stretch)</button>
+                <button class="quiz-opt" data-key="C">C) Añadir un estado de visibilidad</button>
+                <p class="quiz-feedback">El estiramiento combina un parámetro (que genera el grip) y una acción que aplica ese cambio a la geometría seleccionada.</p>
+              </div>
+
+              <div class="quiz-q" data-answer="A">
+                <p class="quiz-question">2. ¿Qué diferencia hay entre restricciones geométricas y de cota?</p>
+                <button class="quiz-opt" data-key="A">A) Las geométricas fijan relaciones (paralelo, tangente); las de cota fijan medidas con valores</button>
+                <button class="quiz-opt" data-key="B">B) Solo las de cota modifican el dibujo</button>
+                <button class="quiz-opt" data-key="C">C) Son lo mismo y se pueden usar indistintamente</button>
+                <p class="quiz-feedback">GEOMCONSTRAINT controla la forma y la posición relativa; DIMCONSTRAINT controla tamaños y distancias numéricas.</p>
+              </div>
+
+              <div class="quiz-q" data-answer="C">
+                <p class="quiz-question">3. ¿Para qué sirve un archivo de estándares .DWS?</p>
+                <button class="quiz-opt" data-key="A">A) Guarda una copia de seguridad del dibujo</button>
+                <button class="quiz-opt" data-key="B">B) Almacena los layouts de las plantillas</button>
+                <button class="quiz-opt" data-key="C">C) Define capas y estilos aprobados para comparar y corregir el dibujo</button>
+                <p class="quiz-feedback">El .DWS contiene las definiciones oficiales; CHECKSTANDARDS compara tu dibujo contra él y corrige las infracciones.</p>
+              </div>
+
+              <div class="quiz-q" data-answer="B">
+                <p class="quiz-question">4. ¿Qué hace PUBLISH?</p>
+                <button class="quiz-opt" data-key="A">A) Imprime solo el layout activo</button>
+                <button class="quiz-opt" data-key="B">B) Imprime o exporta un lote de planos a PDF o plotter en una sola operación</button>
+                <button class="quiz-opt" data-key="C">C) Convierte el DWG a formato IFC</button>
+                <p class="quiz-feedback">PUBLISH procesa una lista de hojas en lote; PLOT imprime un solo dibujo a la vez.</p>
+              </div>
+
+              <div class="quiz-q" data-answer="C">
+                <p class="quiz-question">5. En el Editor de bloques (BEDIT), ¿qué pasos crean un bloque dinámico?</p>
+                <button class="quiz-opt" data-key="A">A) Insertar el bloque y aplicar TRIM</button>
+                <button class="quiz-opt" data-key="B">B) Guardar con SAVE y cerrar el archivo</button>
+                <button class="quiz-opt" data-key="C">C) Crear un parámetro, añadir una acción y guardar con BSAVE antes de cerrar</button>
+                <p class="quiz-feedback">BEDIT abre el editor: se define el parámetro, se le asigna una acción (estirar, girar, visibilidad) y se guarda con BSAVE.</p>
+              </div>
+            </div>
+          </section>
+
         </article>
 
         <!-- Navegación anterior / siguiente -->
@@ -642,6 +945,7 @@ print(f"Círculo creado: {circle}")</code></pre>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
 <script src="../assets/js/i18n.js"></script>
 <script src="../assets/js/search-index.js"></script>
+<script src="../assets/js/quiz.js"></script>
 <script src="../assets/js/main.js"></script>
 
 </body>

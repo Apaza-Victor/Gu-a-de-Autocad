@@ -4,6 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nivel 1 · Fundamentos de AutoCAD — AutoCAD Guía</title>
+<link rel="canonical" href="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos.html">
+<meta property="og:site_name" content="AutoCAD Guía">
+<meta property="og:title" content="Nivel 1 · Fundamentos de AutoCAD — AutoCAD Guía">
+<meta property="og:description" content="Qué es AutoCAD, instalación y licencias, interfaz de usuario, sistema de coordenadas y configuración inicial. Nivel 1 de la guía completa de AutoCAD.">
+<meta property="og:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nivel 1 · Fundamentos de AutoCAD — AutoCAD Guía">
+<meta name="twitter:description" content="Qué es AutoCAD, instalación y licencias, interfaz de usuario, sistema de coordenadas y configuración inicial. Nivel 1 de la guía completa de AutoCAD.">
+<meta name="twitter:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
 <meta name="description" content="Qué es AutoCAD, instalación y licencias, interfaz de usuario, sistema de coordenadas y configuración inicial. Nivel 1 de la guía completa de AutoCAD.">
 
 <link rel="icon" type="image/svg+xml" href="../assets/img/autocad-2.svg">
@@ -19,6 +30,26 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Nivel · Fundamentos de AutoCAD",
+    "description": "Qué es AutoCAD, instalación y licencias, interfaz, sistema de coordenadas y configuración inicial.",
+    "provider": {
+      "@type": "Organization",
+      "name": "AutoCAD Guía",
+      "sameAs": "https://apaza-victor.github.io/Gu-a-de-Autocad/"
+    },
+    "inLanguage": "es",
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "online",
+      "learningResourceType": "tutorial",
+      "inLanguage": "es"
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -78,7 +109,7 @@
     <h1 data-i18n="lvl1.title">Fundamentos de AutoCAD</h1>
     <p class="subtitle" data-i18n="lvl1.subtitle">Antes de dibujar una sola línea, entiende qué es el programa, cómo instalarlo, cómo está organizada su interfaz y cómo funciona su sistema de coordenadas. Esta base evita el 80% de los errores de un principiante.</p>
     <div class="level-progress-bar"><div class="fill"></div></div>
-    <p class="level-progress-label">0 de 8 temas completados · 0%</p>
+    <p class="level-progress-label">0 de 9 temas completados · 0%</p>
   </div>
 </header>
 
@@ -100,6 +131,8 @@
             <li><a href="#archivos" data-toc="nivel1-archivos"><span class="toc-check"></span> Gestión de archivos</a></li>
             <li><a href="#tipos-archivo" data-toc="nivel1-tipos-archivo"><span class="toc-check"></span> Tipos de archivo</a></li>
             <li><a href="#zoom" data-toc="nivel1-zoom"><span class="toc-check"></span> Zoom y navegación</a></li>
+            <li><a href="#primer-dibujo" data-toc="nivel1-primer-dibujo"><span class="toc-check"></span> Primer dibujo guiado</a></li>
+            <li><a href="#autoevaluacion"><span class="toc-check"></span> Autoevaluación</a></li>
           </ul>
           <hr style="border-color:var(--border-soft)" class="my-4">
           <a href="nivel-2-dibujo-2d.html" class="btn-cad-outline w-100 text-center d-block">Siguiente nivel <i class="bi bi-arrow-right"></i></a>
@@ -188,9 +221,53 @@
               </tbody>
             </table>
 
-            <div class="img-placeholder">
-              <i class="bi bi-window"></i>
-              IMG: interfaz de AutoCAD con las zonas anteriores señaladas
+            <div class="interface-map" id="interfaceMap">
+              <div class="iface-window">
+                <div class="iface-titlebar">
+                  <i class="bi bi-circle"></i><i class="bi bi-circle"></i><i class="bi bi-circle"></i>
+                  Drawing1.dwg — AutoCAD 2026
+                </div>
+                <div class="iface-ribbon">
+                  <span class="active">Inicio</span>
+                  <span>Insertar</span>
+                  <span>Anotar</span>
+                  <span>Vista</span>
+                  <span>Salida</span>
+                </div>
+                <div class="iface-body">
+                  <div class="iface-draw">
+                    <svg viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <line x1="30" y1="225" x2="375" y2="225" stroke="var(--layer-magenta)" stroke-dasharray="6,4"/>
+                      <line x1="30" y1="225" x2="30" y2="40" stroke="var(--layer-magenta)" stroke-dasharray="6,4"/>
+                      <rect x="55" y="165" width="175" height="52" fill="none" stroke="var(--layer-yellow)" stroke-width="2"/>
+                      <line x1="55" y1="140" x2="285" y2="140" stroke="var(--layer-cyan)" stroke-width="2"/>
+                      <line x1="285" y1="140" x2="285" y2="55" stroke="var(--layer-green)" stroke-width="2"/>
+                      <line x1="285" y1="55" x2="125" y2="55" stroke="var(--layer-red)" stroke-width="2"/>
+                    </svg>
+                  </div>
+                  <button class="iface-pin" data-zone="ribbon" style="top:6%;left:40%" aria-label="Cinta de opciones">1</button>
+                  <button class="iface-pin" data-zone="tools" style="top:30%;left:2%" aria-label="Paleta de herramientas">2</button>
+                  <button class="iface-pin" data-zone="draw" style="top:45%;left:55%" aria-label="Área de dibujo">3</button>
+                  <button class="iface-pin" data-zone="props" style="top:25%;left:95%" aria-label="Paleta de propiedades">4</button>
+                  <button class="iface-pin" data-zone="cmdline" style="bottom:18%;left:8%" aria-label="Línea de comandos">5</button>
+                  <button class="iface-pin" data-zone="status" style="bottom:2%;left:35%" aria-label="Barra de estado">6</button>
+                </div>
+                <div class="iface-statusbar">
+                  <span class="on">MODELO</span>
+                  <span>GRID</span>
+                  <span>SNAP</span>
+                  <span>ORTO</span>
+                  <span>OSNAP</span>
+                </div>
+              </div>
+              <div class="iface-legend">
+                <button class="iface-zone" data-zone="ribbon"><span class="iface-zone-name">1. Cinta de opciones</span><span class="iface-zone-desc">Barra superior con pestañas (Inicio, Insertar, Anotar, Vista…) que agrupan herramientas por categoría.</span></button>
+                <button class="iface-zone" data-zone="tools"><span class="iface-zone-name">2. Paleta de herramientas</span><span class="iface-zone-desc">Panel lateral con las herramientas de dibujo y edición a mano para acceder rápido.</span></button>
+                <button class="iface-zone" data-zone="draw"><span class="iface-zone-name">3. Área de dibujo</span><span class="iface-zone-desc">Espacio central donde se crea el dibujo; representa el "espacio modelo".</span></button>
+                <button class="iface-zone" data-zone="props"><span class="iface-zone-name">4. Paleta de propiedades</span><span class="iface-zone-desc">Panel que muestra y permite editar las propiedades de un objeto seleccionado (capa, color, grosor).</span></button>
+                <button class="iface-zone" data-zone="cmdline"><span class="iface-zone-name">5. Línea de comandos</span><span class="iface-zone-desc">Franja de texto donde se escriben comandos y se leen las indicaciones del programa paso a paso.</span></button>
+                <button class="iface-zone" data-zone="status"><span class="iface-zone-name">6. Barra de estado</span><span class="iface-zone-desc">Franja inferior con accesos a coordenadas, capas, orto, referencia a objetos y escala.</span></button>
+              </div>
             </div>
 
             <h3>Formas de ejecutar un comando</h3>
@@ -336,6 +413,83 @@
             <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
           </section>
 
+          <!-- 9. Tu primer dibujo: práctica guiada -->
+          <section id="primer-dibujo" data-topic="nivel1-primer-dibujo">
+            <h2><span class="sec-num">9</span>Tu primer dibujo: práctica guiada</h2>
+            <p>Reúne todo lo aprendido en este nivel dibujando la planta de un cuarto pequeño de <strong>3&nbsp;×&nbsp;2 metros</strong>. Sigue cada paso en el orden indicado; no importa la velocidad, importa hacerlo con precisión.</p>
+
+            <div class="lesson-step">
+              <span class="lesson-num">1</span>
+              <div class="lesson-body">
+                <h4>Configura UNITS en milímetros</h4>
+                <p>Escribe <span class="cmd-inline">UNITS</span> (o <span class="cmd-inline">UNIDADES</span>) y deja la longitud en milímetros con 0 decimales. Así un muro de 150 mm se dibuja a escala real.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">2</span>
+              <div class="lesson-body">
+                <h4>Activa ORTO <span class="key-inline">F8</span> y OSNAP <span class="key-inline">F3</span></h4>
+                <p>Pulsa <span class="key-inline">F8</span> para limitar el cursor a horizontal/vertical y <span class="key-inline">F3</span> para que los puntos de referencia (esquinas, medios) se "enganchen" solos.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">3</span>
+              <div class="lesson-body">
+                <h4>Dibuja el rectángulo exterior</h4>
+                <p>Ejecuta <span class="cmd-inline">REC</span> (rectángulo). Pide el primer punto en <span class="cmd-inline">0,0</span> y el opuesto con coordenada relativa <span class="cmd-inline">@3000,2000</span>: un cuarto de 3000&nbsp;×&nbsp;2000 mm.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">4</span>
+              <div class="lesson-body">
+                <h4>Crea un muro interior con OFFSET</h4>
+                <p>Usa <span class="cmd-inline">OFFSET</span> (<span class="key-inline">O</span>), distancia <span class="cmd-inline">150</span>, y haz clic dentro del rectángulo para generar un muro de 15 cm de espesor.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">5</span>
+              <div class="lesson-body">
+                <h4>Coloca una puerta con TRIM</h4>
+                <p>Dibuja dos líneas que crucen el muro a modo de vano y recorta el resto con <span class="cmd-inline">TRIM</span> (<span class="key-inline">TR</span>): seleccionas los bordes y luego los tramos que sobran.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">6</span>
+              <div class="lesson-body">
+                <h4>Acota con DIM</h4>
+                <p>Inicia <span class="cmd-inline">DIM</span> (cota lineal) y haz clic en los extremos de las medidas principales: ancho, largo y vano de la puerta.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">7</span>
+              <div class="lesson-body">
+                <h4>Crea la capa "Muros"</h4>
+                <p>Abre el administrador de capas, crea una capa <em>Muros</em>, selecciona la geometría y asígnala con <span class="cmd-inline">MA</span> (matchprop) o desde la paleta de propiedades.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">8</span>
+              <div class="lesson-body">
+                <h4>Guarda y vuelve a abrir</h4>
+                <p>Guarda con <span class="cmd-inline">Ctrl+S</span> (archivo .DWG), cierra y reabre el archivo. Si todo se mantiene en su sitio, ¡tu primer plano está listo!</p>
+              </div>
+            </div>
+
+            <div class="callout">
+              <span class="callout-title">Consejo final</span>
+              La regla del 30%: el primer 30% del tiempo de cada práctica debe ir en preparar la configuración (unidades, capas, modos de dibujo) y el resto en dibujar. Un archivo bien configurado se dibuja el doble de rápido.
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
           <!-- Ejemplos inline -->
           <section class="inline-visual-examples" style="margin-top:2rem">
             <div class="visual-examples">
@@ -460,6 +614,56 @@
             </div>
           </section>
 
+          <!-- Autoevaluación -->
+          <section class="quiz-section" id="autoevaluacion">
+            <h2>Autoevaluación del nivel</h2>
+            <p class="quiz-intro">Responde las 5 preguntas para repasar. Pulsa en la respuesta y verás la corrección al instante.</p>
+
+            <div class="quiz" data-quiz="nivel1">
+
+              <div class="quiz-q" data-answer="A">
+                <p class="quiz-question">¿Con qué comando se configura la unidad de medida (por ejemplo, milímetros) de un dibujo?</p>
+                <button class="quiz-opt" data-key="A">A) UNITS</button>
+                <button class="quiz-opt" data-key="B">B) CONFIG</button>
+                <button class="quiz-opt" data-key="C">C) SAVE</button>
+                <p class="quiz-feedback">UNITS (o UNIDADES) define la unidad de longitud y la precisión decimal. En arquitectura lo habitual es milímetros.</p>
+              </div>
+
+              <div class="quiz-q" data-answer="C">
+                <p class="quiz-question">¿Qué significa la coordenada @10&lt;90?</p>
+                <button class="quiz-opt" data-key="A">A) 10 unidades a la derecha del último punto</button>
+                <button class="quiz-opt" data-key="B">B) 10 unidades arriba y 90 a la derecha</button>
+                <button class="quiz-opt" data-key="C">C) 10 unidades desde el último punto formando 90°</button>
+                <p class="quiz-feedback">Es una coordenada polar relativa: distancia @10 y ángulo &lt;90 respecto al último punto, es decir, 10 unidades hacia arriba.</p>
+              </div>
+
+              <div class="quiz-q" data-answer="A">
+                <p class="quiz-question">¿Qué hace la tecla <span class="key-inline">F8</span> (ORTO)?</p>
+                <button class="quiz-opt" data-key="A">A) Limita el cursor a líneas horizontales y verticales</button>
+                <button class="quiz-opt" data-key="B">B) Muestra la cuadrícula (GRID)</button>
+                <button class="quiz-opt" data-key="C">C) Activa la referencia a objetos (OSNAP)</button>
+                <p class="quiz-feedback">ORTO (F8) restringe el movimiento del cursor a 0° y 90°, ideal para dibujar muros y líneas rectas.</p>
+              </div>
+
+              <div class="quiz-q" data-answer="B">
+                <p class="quiz-question">¿Cuál es el formato nativo de dibujo de AutoCAD?</p>
+                <button class="quiz-opt" data-key="A">A) .DWT</button>
+                <button class="quiz-opt" data-key="B">B) .DWG</button>
+                <button class="quiz-opt" data-key="C">C) .DXF</button>
+                <p class="quiz-feedback">.DWG es el formato nativo. .DWT es la plantilla y .DXF el formato de intercambio con otros programas CAD.</p>
+              </div>
+
+              <div class="quiz-q" data-answer="A">
+                <p class="quiz-question">Si AutoCAD se cierra sin guardar, ¿qué archivo te permite recuperar el trabajo?</p>
+                <button class="quiz-opt" data-key="A">A) .SV$ (AutoSave)</button>
+                <button class="quiz-opt" data-key="B">B) .DXF</button>
+                <button class="quiz-opt" data-key="C">C) .DWF</button>
+                <p class="quiz-feedback">AutoCAD guarda copias .SV$ de recuperación automática (por defecto cada 10 minutos) y te las ofrece al reabrir el programa.</p>
+              </div>
+
+            </div>
+          </section>
+
         </article>
 
         <!-- Navegación anterior / siguiente -->
@@ -547,6 +751,7 @@
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
 <script src="../assets/js/i18n.js"></script>
 <script src="../assets/js/search-index.js"></script>
+<script src="../assets/js/quiz.js"></script>
 <script src="../assets/js/main.js"></script>
 
 </body>

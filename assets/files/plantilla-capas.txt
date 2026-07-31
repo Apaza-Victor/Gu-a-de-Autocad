@@ -1,0 +1,42 @@
+PLANTILLA DE CAPAS RECOMENDADA - AutoCAD Guía
+==============================================
+
+Estructura sugerida: NOMBRE-DESCRIPCION (estándar tipo ISO / recomendado en habla hispana)
+
+CAPAS BASE PARA ARQUITECTURA
+  0-Ejes            Rojo        Ejes estructurales y de referencia
+  1-Muros           Amarillo    Muros y elementos constructivos
+  2-Puertas         Magenta     Puertas y hojas
+  3-Ventanas        Cian        Ventanas y vanos
+  4-Mobiliario      Verde       Muebles y equipamiento
+  5-Cotas           Verde       Acotaciones
+  6-Textos          Cian        Textos y etiquetas
+  7-Texto-Anotac    Cian        Texto general de anotaciones
+  8-Hatches         Amarillo    Sombreados y rellenos
+  9-Auxiliar        Magenta     Líneas de construcción temporales
+  10-Estructural    Rojo        Elementos estructurales
+  11-Instalaciones  Azul        Redes eléctricas, sanitarias, gas
+  12-Electricidad   Azul        Circuitos y símbolos eléctricos
+  13-Niveles        Rojo        Líneas de nivel y cotas de nivel
+  14-Cubierta       Amarillo    Cubiertas y techos
+  15-Topografia     Verde       Líneas de terreno
+
+COLORES POR USO (convención estándar)
+  Rojo       = líneas de ejes y elementos principales
+  Amarillo   = construcción (muros, estructura)
+  Verde      = cotas, anotaciones
+  Cian       = textos, referencias
+  Magenta    = auxiliar, temporal
+  Blanco     = detalles y geometría general
+
+REGLAS DE ORO
+  1. Dibuja SIEMPRE dentro de una capa con nombre, nunca en la capa 0
+     (la capa 0 solo sirve para bloques heredados).
+  2. Asigna color POR CAPA (Color: ByLayer) para poder cambiar el estilo
+     de todo el plano de un solo golpe.
+  3. El grosor de línea también va por capa (ByLayer).
+  4. Nunca apagues una capa para "esconder" líneas sueltas; usa LAYISO o
+     congela capas por ventana (VPFreeze).
+  5. Nombra las capas corto pero descriptivo: evita Capa1, Capa2...
+
+Fuente: AutoCAD Guía — https://apaza-victor.github.io/Gu-a-de-Autocad/

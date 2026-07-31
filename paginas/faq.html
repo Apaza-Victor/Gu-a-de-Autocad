@@ -4,6 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Preguntas frecuentes (FAQ) — AutoCAD Guía</title>
+<link rel="canonical" href="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/faq.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/faq.html">
+<meta property="og:site_name" content="AutoCAD Guía">
+<meta property="og:title" content="Preguntas frecuentes (FAQ) — AutoCAD Guía">
+<meta property="og:description" content="Resuelve tus dudas sobre AutoCAD: versiones, requisitos, licencias, diferencias con otros CAD y problemas comunes.">
+<meta property="og:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Preguntas frecuentes (FAQ) — AutoCAD Guía">
+<meta name="twitter:description" content="Resuelve tus dudas sobre AutoCAD: versiones, requisitos, licencias, diferencias con otros CAD y problemas comunes.">
+<meta name="twitter:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
 <meta name="description" content="Resuelve tus dudas sobre AutoCAD: versiones, requisitos, licencias, diferencias con otros CAD y problemas comunes.">
 
 <link rel="icon" type="image/svg+xml" href="../assets/img/autocad-2.svg">
@@ -19,6 +30,174 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es AutoCAD y para qué sirve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AutoCAD es un software de diseño asistido por computadora (CAD) desarrollado por Autodesk. Se usa para crear dibujos técnicos precisos en 2D (planos arquitectónicos, planos mecánicos, diagramas eléctricos) y modelos en 3D. Es el estándar de la industria en arquitectura, ingeniería civil, ingeniería mecánica e industrial."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuáles son las diferencias entre AutoCAD y otros programas CAD?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AutoCAD vs SolidWorks: SolidWorks está especializado en diseño mecánico 3D paramétrico, mientras AutoCAD es más versátil para 2D y 3D general. AutoCAD vs SketchUp: SketchUp es más intuitivo para modelado 3D rápido (especialmente arquitectónico), pero AutoCAD tiene más precisión técnica y herramientas de documentación. AutoCAD vs Revit: Revit es un software BIM (Building Information Modeling) para proyectos de edificación completa; AutoCAD es mejor para planos 2D y detalles. AutoCAD vs MicroStation: MicroStation es la alternativa de Bentley Systems, muy usado en ingeniería civil e infraestructura."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta AutoCAD? ¿Hay versión gratuita?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AutoCAD se comercializa por suscripción. Sin embargo, Autodesk ofrece: Licencia educativa gratuita: para estudiantes y docentes verificados (1 año renovable) a través del portal de educación de Autodesk. Versión de prueba: 30 días de acceso completo gratis. AutoCAD Web App: versión reducida gratuita en navegador con funciones básicas. AutoCAD Mobile: app gratuita para dispositivos móviles con funciones limitadas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿AutoCAD funciona en Mac?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, AutoCAD tiene versión para macOS desde 2010. Sin embargo, la versión de Mac tiene algunas diferencias: no incluye todas las herramientas de la versión de Windows (por ejemplo, algunas funciones de automatización y add-ins no están disponibles). La mayoría de los usuarios profesionales prefieren la versión de Windows por compatibilidad completa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuáles son los requisitos mínimos del sistema?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sistema operativo: Windows 10/11 de 64 bits. Procesador: 2.5-3 GHz mínimo (recomendado superior para 3D). RAM: 8 GB mínimo, 16 GB recomendado para modelado 3D. Espacio en disco: 10 GB para instalación. Tarjeta gráfica: 1 GB VRAM mínimo, dedicada recomendada para 3D. Resolución: 1920x1080 o superior. Estos valores varían según la versión; verifica siempre los requisitos oficiales en el sitio de Autodesk antes de instalar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué es el espacio modelo y el espacio papel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Espacio modelo: el área infinita donde dibujas todo a escala real 1:1. Es donde construyes la geometría del proyecto. Espacio papel (Layout): una representación virtual de la hoja de impresión (A4, A3, A1...) donde organizas cómo se verá el plano al imprimir: agregas cajetín, defines escalas con ventanas gráficas y preparas la salida final. La regla de oro: nunca dibujes más pequeño para que \"quepa\" en una hoja . Dibuja a tamaño real en Modelo y reduce la escala en Presentación."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo cambio la escala de un dibujo en AutoCAD?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La escala se aplica en el espacio Presentación (Layout), no en el espacio Modelo: 1. Abre un layout existente o crea uno nuevo. 2. Crea una ventana gráfica con el comando MVIEW . 3. Haz doble clic dentro de la ventana para activarla. 4. Usa la barra de estado inferior para seleccionar la escala deseada (1:50, 1:100, etc.) o escríbela directamente. La escala se puede ajustar también desde la propiedad de la ventana gráfica."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué son los bloques y por qué son importantes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un bloque es un conjunto de objetos agrupados bajo un nombre, reutilizable en el mismo dibujo o en otros archivos. Ejemplos: una puerta, una silla, un símbolo eléctrico. Por qué son importantes: • Ahorran tiempo: dibujas algo una vez y lo insertas cuantas veces necesites. • Mantenimiento: si editas el bloque original, todas las instancias se actualizan. • Tamaño de archivo: un bloque insertado muchas veces ocupa menos espacio que los objetos individuales. • Consistencia: todos los miembros del equipo usan los mismos símbolos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo reduzco el tamaño de un archivo DWG?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los archivos DWG pueden crecer demasiado por bloques no usados, capas vacías, escalas innecesarias o historial de versiones. Pasos para limpiar: 1. AUDIT: detecta y corrige errores internos. 2. PURGE: elimina capas, bloques, estilos y tipos de línea no utilizados. 3. SCALELISTEDIT: elimina escalas de la lista que no se usan. 4. WBLOCK: exporta todo a un archivo nuevo limpio (copia selectiva). 5. SAVEAS: guarda como archivo nuevo para eliminar datos residuales."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuáles son las teclas de función más importantes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "F1: Ayuda de AutoCAD. F2: Ventana de texto (historial de comandos). F3: Activa/desactiva OSNAP (referencia a objetos). F5: Alterna entre isométricos (plano isométrico). F7: Activa/desactiva cuadrícula (grid). F8: Activa/desactiva modo ORTO (líneas rectas). F9: Activa/desactiva SNAP (ajuste a cuadrícula). F10: Activa/desactiva rastreo polar. F11: Activa/desactiva rastreo de objeto (ODSnap tracking)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué es un archivo .DWT y cuándo usarlo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un archivo .DWT (Drawing Template) es una plantilla que guarda configuración predefinida: capas, estilos de texto, estilos de cota, formatos de layout y cajetines. Cuándo usarlo: siempre que inicies un proyecto nuevo. En lugar de configurar todo desde cero cada vez, seleccionas tu plantilla y el dibujo ya viene con todo listo. Los archivos normales se guardan como .DWG; los .DWT son exclusivamente plantillas que se cargan al crear un nuevo dibujo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo imprimo mi plano correctamente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El comando principal es PLOT (Ctrl+P). Pasos: 1. Ve al espacio Presentación (Layout) que quieres imprimir. 2. Abre PLOT y selecciona impresora o \"DWG to PDF\" para exportar. 3. Verifica el tamaño de papel (A4, A3, etc.). 4. Selecciona \"Ventana\" como área de impresión y dibuja alrededor de lo que quieres imprimir. 5. Activa \"Escalado ajustado al papel\" o define la escala manualmente. 6. Usa \"Vista previa\" para verificar antes de imprimir. 7. Si usas colores en pantalla pero quieres blanco y negro, aplica un estilo de trazado (plot style)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿AutoCAD puede abrir archivos de otros programas CAD?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "DXF: AutoCAD puede abrir y guardar archivos DXF (Drawing Exchange Format), el estándar de intercambio entre diferentes programas CAD. STL: Se puede importar para modelado 3D e impresión 3D. DWF: Se puede ver con Autodesk Design Review (solo lectura). IFC: Para interoperabilidad BIM, AutoCAD puede importar archivos IFC con la extensión adecuada. PDF: AutoCAD puede importar geometría de PDFs como objetos editables."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué diferencia hay entre AutoCAD y AutoCAD LT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AutoCAD LT es una versión reducida y más económica que solo incluye funciones 2D. No puede modelar en 3D, no tiene AutoLISP ni algunas herramientas de automatización. AutoCAD completo incluye todo: 2D, 3D, renderizado, AutoLISP, personalización de interfaz, administración de referencias externas y todas las herramientas de productividad. Para la mayoría de arquitectos e ingenieros que solo hacen planos 2D, AutoCAD LT puede ser suficiente y más económico."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo aprendo AutoCAD más rápido?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1. Sigue una ruta ordenada: empieza por fundamentos (interfaz, coordenadas), luego 2D básico, y gradualmente avanza a temas más complejos. 2. Practica con proyectos reales: dibuja planos de tu casa, una planta industrial o una pieza mecánica. La práctica constante es clave. 3. Memoriza los atajos: los 20 atajos más usados te ahorrarán cientos de horas al año. 4. Usa un diccionario de comandos: cuando tengas una duda puntual, búscala en vez de leer todo el temario. 5. Aprende de otros: únete a foros, mira tutoriales en YouTube y analiza planos de otros dibujantes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuál es la diferencia entre DWG y DXF?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "DWG es el formato nativo y binario de AutoCAD; DXF es un formato de intercambio de texto (o binario) que otras aplicaciones leen fácilmente. Usa DXF para compartir dibujos con programas que no soportan DWG; usa DWG para trabajar normalmente. DXF se usa también para automatizar: muchos scripts y programas generan dibujos escribiendo archivos DXF."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo recupero un archivo DWG dañado o corrupto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1. Abre con RECOVER: el comando RECOVER (o \"Abrir y reparar\") intenta arreglar el archivo dañado. 2. Busca el .BAK: AutoCAD guarda una copia de seguridad .bak en la misma carpeta; cambia su extensión a .dwg y ábrelo. 3. Revisa los .dwl: si el archivo quedó bloqueado por un cierre brusco, borra los archivos .dwl y .dwl2 cuando nadie lo esté usando. 4. AUDIT: con el archivo abierto, ejecuta AUDIT y responde \"Sí\" a corregir los errores detectados. 5. Activa los guardados automáticos: configura un autoguardado cada 10 minutos para minimizar pérdidas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué certificaciones de AutoCAD existen y valen la pena?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Autodesk Certified User (ACU): nivel de entrada, demuestra que dominas lo básico de AutoCAD. Autodesk Certified Professional (ACP): nivel avanzado, para profesionales con experiencia real en proyectos. En resumen: sí valen la pena si estás empezando (te diferencian en el CV) y pesan más si las acompañas con un portafolio de planos reales."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por qué no puedo abrir un DWG más reciente que mi versión de AutoCAD?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AutoCAD guarda los DWG en el formato de la versión en la que trabajas, y una versión anterior no puede abrir un formato más nuevo. Solo puedes abrir DWG de tu misma versión o de versiones anteriores. Si te envían un archivo más reciente: pide que lo guarden en una versión anterior (por ejemplo \"Guardar como → AutoCAD 2013\"), o usa DWG TrueView para convertirlo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto tiempo se necesita para aprender AutoCAD y cómo practicar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lo básico (dibujar y acotar un plano 2D) se aprende en 2 o 3 semanas con práctica diaria de 30-60 minutos. Nivel intermedio (capas, bloques, referencias externas, layouts) en 2-3 meses. Nivel avanzado (3D, dynamic blocks, parametrización) depende de los proyectos que abordes. La clave es la práctica: redibuja un plano real (tu casa, un local, una pieza mecánica), mide todo con cotas y compáralo con el original."
+      }
+    }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -286,6 +465,67 @@
       <p><strong>3. Memoriza los atajos:</strong> los 20 atajos más usados te ahorrarán cientos de horas al año.</p>
       <p><strong>4. Usa un diccionario de comandos:</strong> cuando tengas una duda puntual, búscala en vez de leer todo el temario.</p>
       <p><strong>5. Aprende de otros:</strong> únete a foros, mira tutoriales en YouTube y analiza planos de otros dibujantes.</p>
+    </div>
+  </div>
+
+  <div class="faq-item" data-aos="fade-up">
+    <button class="faq-question">
+      ¿Cuál es la diferencia entre DWG y DXF?
+      <i class="bi bi-chevron-down"></i>
+    </button>
+    <div class="faq-answer">
+      <p><strong>DWG</strong> es el formato nativo y binario de AutoCAD; <strong>DXF</strong> es un formato de intercambio de texto (o binario) que otras aplicaciones leen fácilmente. Usa DXF para compartir dibujos con programas que no soportan DWG; usa DWG para trabajar normalmente.</p>
+      <p>DXF se usa también para automatizar: muchos scripts y programas generan dibujos escribiendo archivos DXF.</p>
+    </div>
+  </div>
+
+  <div class="faq-item" data-aos="fade-up">
+    <button class="faq-question">
+      ¿Cómo recupero un archivo DWG dañado o corrupto?
+      <i class="bi bi-chevron-down"></i>
+    </button>
+    <div class="faq-answer">
+      <p><strong>1. Abre con RECOVER:</strong> el comando RECOVER (o "Abrir y reparar") intenta arreglar el archivo dañado.</p>
+      <p><strong>2. Busca el .BAK:</strong> AutoCAD guarda una copia de seguridad .bak en la misma carpeta; cambia su extensión a .dwg y ábrelo.</p>
+      <p><strong>3. Revisa los .dwl:</strong> si el archivo quedó "bloqueado" por un cierre brusco, borra los archivos .dwl y .dwl2 cuando nadie lo esté usando.</p>
+      <p><strong>4. AUDIT:</strong> con el archivo abierto, ejecuta AUDIT y responde "Sí" a corregir los errores detectados.</p>
+      <p><strong>5. Activa los guardados automáticos:</strong> configura un autoguardado cada 10 minutos para minimizar pérdidas.</p>
+    </div>
+  </div>
+
+  <div class="faq-item" data-aos="fade-up">
+    <button class="faq-question">
+      ¿Qué certificaciones de AutoCAD existen y valen la pena?
+      <i class="bi bi-chevron-down"></i>
+    </button>
+    <div class="faq-answer">
+      <p><strong>Autodesk Certified User (ACU):</strong> nivel de entrada, demuestra que dominas lo básico de AutoCAD.</p>
+      <p><strong>Autodesk Certified Professional (ACP):</strong> nivel avanzado, para profesionales con experiencia real en proyectos.</p>
+      <p>En resumen: sí valen la pena si estás empezando (te diferencian en el CV) y pesan más si las acompañas con un portafolio de planos reales.</p>
+    </div>
+  </div>
+
+  <div class="faq-item" data-aos="fade-up">
+    <button class="faq-question">
+      ¿Por qué no puedo abrir un DWG más reciente que mi versión de AutoCAD?
+      <i class="bi bi-chevron-down"></i>
+    </button>
+    <div class="faq-answer">
+      <p>AutoCAD guarda los DWG en el formato de la versión en la que trabajas, y una versión anterior <strong>no puede abrir</strong> un formato más nuevo. Solo puedes abrir DWG de tu misma versión o de versiones anteriores.</p>
+      <p>Si te envían un archivo más reciente: pide que lo guarden en una versión anterior (por ejemplo "Guardar como → AutoCAD 2013"), o usa DWG TrueView para convertirlo.</p>
+    </div>
+  </div>
+
+  <div class="faq-item" data-aos="fade-up">
+    <button class="faq-question">
+      ¿Cuánto tiempo se necesita para aprender AutoCAD y cómo practicar?
+      <i class="bi bi-chevron-down"></i>
+    </button>
+    <div class="faq-answer">
+      <p><strong>Lo básico</strong> (dibujar y acotar un plano 2D) se aprende en 2 o 3 semanas con práctica diaria de 30-60 minutos.</p>
+      <p><strong>Nivel intermedio</strong> (capas, bloques, referencias externas, layouts) en 2-3 meses.</p>
+      <p><strong>Nivel avanzado</strong> (3D, dynamic blocks, parametrización) depende de los proyectos que abordes.</p>
+      <p>La clave es la práctica: redibuja un plano real (tu casa, un local, una pieza mecánica), mide todo con cotas y compáralo con el original.</p>
     </div>
   </div>
 

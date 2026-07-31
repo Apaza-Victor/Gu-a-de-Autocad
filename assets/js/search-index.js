@@ -1,5 +1,5 @@
 /* =========================================================
-   AutoCAD Guía — search-index.js
+   AutoCAD Guía - search-index.js
    Índice global de búsqueda generado a partir del contenido real del sitio.
    Si cambias contenido en las páginas, regenera este archivo.
    ========================================================= */
@@ -285,6 +285,15 @@ window.SEARCH_INDEX = [
   },
   {
     "type": "command",
+    "title": "SHEETSET",
+    "shortcut": "SSM",
+    "description": "Abre el administrador de conjuntos de planos para organizar las láminas del proyecto.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
     "title": "DIMLINEAR",
     "shortcut": "",
     "description": "Crea una cota lineal horizontal o vertical entre dos puntos.",
@@ -367,7 +376,7 @@ window.SEARCH_INDEX = [
   {
     "type": "command",
     "title": "PROPERTIES",
-    "shortcut": "CTRL+1",
+    "shortcut": "Ctrl+1",
     "description": "Abre la paleta de propiedades para ver y editar atributos de objetos seleccionados.",
     "file": "comandos.html",
     "anchor": "",
@@ -582,6 +591,24 @@ window.SEARCH_INDEX = [
   },
   {
     "type": "command",
+    "title": "REVCLOUD",
+    "shortcut": "REVC",
+    "description": "Dibuja una nube de revisión con arcos para marcar cambios en el plano.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "WIPEOUT",
+    "shortcut": "WI",
+    "description": "Cubre parte del dibujo con una máscara que oculta lo que está debajo.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
     "title": "ERASE",
     "shortcut": "E",
     "description": "Elimina objetos seleccionados del dibujo. También se puede borrar seleccionando y pulsando Supr.",
@@ -744,7 +771,7 @@ window.SEARCH_INDEX = [
   },
   {
     "type": "command",
-    "title": "SPLINEEDIT",
+    "title": "SPLINEDIT",
     "shortcut": "SPE",
     "description": "Edita splines existentes: mover puntos de control, ajustar tangencias o convertir a polilínea.",
     "file": "comandos.html",
@@ -860,6 +887,1302 @@ window.SEARCH_INDEX = [
     "path": "Comandos"
   },
   {
+    "type": "command",
+    "title": "ID",
+    "shortcut": "ID",
+    "description": "Muestra las coordenadas X,Y,Z de un punto cualquiera del dibujo.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "PUBLISH",
+    "shortcut": "PUB",
+    "description": "Imprime o exporta a PDF varios planos (layouts) de una sola vez.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "BOUNDARY",
+    "shortcut": "BO",
+    "description": "Crea una región o polilínea a partir de un área cerrada sin tener que dibujarla de nuevo.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "DONUT",
+    "shortcut": "DO",
+    "description": "Dibuja un anillo o círculo relleno definido por diámetros interior y exterior.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "MLINE",
+    "shortcut": "ML",
+    "description": "Dibuja varias líneas paralelas (entre 1 y 16) como un solo objeto.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "SOLID",
+    "shortcut": "SO",
+    "description": "Crea triángulos y cuadriláteros sólidos rellenos.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "GRADIENT",
+    "shortcut": "GD",
+    "description": "Rellena un área cerrada o objetos con un degradado de color.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "DIVIDE",
+    "shortcut": "DIV",
+    "description": "Coloca puntos o bloques a intervalos iguales a lo largo de un objeto.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "POLYSOLID",
+    "shortcut": "PSOLID",
+    "description": "Crea un polisólido con forma de pared 3D a partir de una polilínea o línea.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "PYRAMID",
+    "shortcut": "PYR",
+    "description": "Crea un sólido 3D en forma de pirámide con base poligonal.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "TORUS",
+    "shortcut": "TOR",
+    "description": "Crea un sólido 3D con forma de dona o toroide.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "DRAWORDER",
+    "shortcut": "DR",
+    "description": "Cambia el orden de dibujo de los objetos: delante, detrás, sobre o bajo otros.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "MLEADERALIGN",
+    "shortcut": "MLA",
+    "description": "Alinea y distribuye varias directrices múltiples seleccionadas.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "MLEADERCOLLECT",
+    "shortcut": "MLC",
+    "description": "Organiza directrices con bloques en filas o columnas con una sola directriz.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "MLEADEREDIT",
+    "shortcut": "MLE",
+    "description": "Añade o elimina líneas de directriz de un objeto de directriz múltiple.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "IMAGECLIP",
+    "shortcut": "ICL",
+    "description": "Recorta la visualización de una imagen dentro de un contorno especificado.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "XCLIP",
+    "shortcut": "XC",
+    "description": "Recorta la visualización de una referencia externa o bloque a un contorno.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "PASTESPEC",
+    "shortcut": "PA",
+    "description": "Pega objetos del portapapeles controlando el formato de los datos.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "FILTER",
+    "shortcut": "FI",
+    "description": "Crea una lista de requisitos que un objeto debe cumplir para ser seleccionado.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "FSMODE",
+    "shortcut": "FS",
+    "description": "Crea un conjunto de selección con todos los objetos que tocan el objeto elegido.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "RENAME",
+    "shortcut": "REN",
+    "description": "Cambia los nombres de capas, estilos, bloques y otros elementos con nombre.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "TEXTEDIT",
+    "shortcut": "TEDIT",
+    "description": "Edita una cota, texto u objeto de restricción dimensional.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "DDEDIT",
+    "shortcut": "ED",
+    "description": "Edita texto de una línea, cotas, atributos y marcos de control.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "TEXTALIGN",
+    "shortcut": "TA",
+    "description": "Alinea varios objetos de texto vertical, horizontal u oblicuamente.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "SPELL",
+    "shortcut": "SP",
+    "description": "Comprueba la ortografía de los textos del dibujo.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "MEASUREGEOM",
+    "shortcut": "MEA",
+    "description": "Mide distancia, radio, ángulo, área y volumen de objetos o puntos.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "CONSTRAINTBAR",
+    "shortcut": "CBAR",
+    "description": "Muestra u oculta las barras de restricciones geométricas de los objetos.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "GEOCONSTRAINT",
+    "shortcut": "GCON",
+    "description": "Aplica o mantiene relaciones geométricas entre objetos o puntos.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "LAYERSTATE",
+    "shortcut": "LAS",
+    "description": "Guarda, restaura y administra estados de capa guardados.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "LINETYPE",
+    "shortcut": "LT",
+    "description": "Carga, define y modifica los tipos de línea del dibujo.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "LTSCALE",
+    "shortcut": "LTS",
+    "description": "Cambia la escala de los tipos de línea en todo el dibujo.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "LWEIGHT",
+    "shortcut": "LW",
+    "description": "Define el grosor de línea actual y sus opciones de visualización.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "ATTDEF",
+    "shortcut": "ATT",
+    "description": "Crea una definición de atributo para usar dentro de un bloque.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "ATTEDIT",
+    "shortcut": "ATE",
+    "description": "Cambia la información de atributos de un bloque.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "ATTIPEDIT",
+    "shortcut": "ATI",
+    "description": "Edita el texto de un atributo directamente dentro del bloque.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "BCLOSE",
+    "shortcut": "BC",
+    "description": "Cierra el editor de bloques y vuelve al dibujo.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "BSAVE",
+    "shortcut": "BS",
+    "description": "Guarda la definición de bloque actual en el editor de bloques.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "BVSTATE",
+    "shortcut": "BVS",
+    "description": "Crea, define o elimina estados de visibilidad en un bloque dinámico.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "BPARAMETER",
+    "shortcut": "PARAM",
+    "description": "Añade un parámetro con pinzamientos a una definición de bloque dinámico.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "XATTACH",
+    "shortcut": "XA",
+    "description": "Inserta un archivo DWG como referencia externa (xref).",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "XBIND",
+    "shortcut": "XB",
+    "description": "Vincula una o más definiciones de un xref al dibujo actual.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "XREF",
+    "shortcut": "XR",
+    "description": "Abre la paleta de referencias externas para gestionar xrefs.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "EXTERNALREFERENCES",
+    "shortcut": "ER",
+    "description": "Abre el administrador de referencias externas del dibujo.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "IMAGEATTACH",
+    "shortcut": "IAT",
+    "description": "Inserta una referencia a un archivo de imagen en el dibujo.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "IMAGEADJUST",
+    "shortcut": "IAD",
+    "description": "Controla brillo, contraste y desvanecido de las imágenes.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "IMAGE",
+    "shortcut": "IM",
+    "description": "Inserta una imagen o abre el administrador de referencias externas.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "INSERTOBJ",
+    "shortcut": "IO",
+    "description": "Inserta un objeto vinculado o incrustado (OLE) de otra aplicación.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "DIMARC",
+    "shortcut": "DAR",
+    "description": "Crea una cota de longitud de arco.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "DIMBASELINE",
+    "shortcut": "DBA",
+    "description": "Crea cotas lineales, angulares u ordenadas a partir de una línea base común.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "DIMCENTER",
+    "shortcut": "DCE",
+    "description": "Crea la marca de centro o líneas de centro de círculos y arcos.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "DIMCONTINUE",
+    "shortcut": "DCO",
+    "description": "Crea una cota que parte de la línea de extensión de la anterior.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "DIMCONSTRAINT",
+    "shortcut": "DCON",
+    "description": "Aplica restricciones dimensionales a objetos o puntos.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "DIMDISASSOCIATE",
+    "shortcut": "DDA",
+    "description": "Elimina la asociatividad de las cotas seleccionadas.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "DIMEDIT",
+    "shortcut": "DED",
+    "description": "Edita el texto y las líneas de extensión de las cotas.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "DIMJOGLINE",
+    "shortcut": "DJL",
+    "description": "Añade o elimina una línea de interrupción en una cota lineal o alineada.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "DIMJOGGED",
+    "shortcut": "DJO",
+    "description": "Crea cotas con interrupción para círculos y arcos.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "DIMORDINATE",
+    "shortcut": "DOR",
+    "description": "Crea cotas de coordenadas (ordenadas) X o Y.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "DIMOVERRIDE",
+    "shortcut": "DOV",
+    "description": "Anula variables de sistema de cotas seleccionadas.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "DIMREASSOCIATE",
+    "shortcut": "DRE",
+    "description": "Asocia o reasocia cotas seleccionadas a objetos.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "QLEADER",
+    "shortcut": "LE",
+    "description": "Crea una directriz con texto o cota de anotación.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "TOLERANCE",
+    "shortcut": "TOL",
+    "description": "Crea tolerancias geométricas en un marco de control de características.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "MLEADERSTYLE",
+    "shortcut": "MLS",
+    "description": "Crea y modifica los estilos de directriz múltiple.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "CTABLESTYLE",
+    "shortcut": "CT",
+    "description": "Define el nombre del estilo de tabla actual.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "CAMERA",
+    "shortcut": "CAM",
+    "description": "Crea una cámara y su objetivo para guardar una vista 3D en perspectiva.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "NAVVCUBE",
+    "shortcut": "CUBE",
+    "description": "Controla la visibilidad y propiedades del ViewCube.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "HIDE",
+    "shortcut": "HI",
+    "description": "Regenera el modelo 3D ocultando las aristas traseras.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "FLATSHOT",
+    "shortcut": "FSHOT",
+    "description": "Crea una representación 2D de todos los objetos 3D de la vista actual.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "INTERFERE",
+    "shortcut": "INF",
+    "description": "Crea un sólido temporal a partir de las interferencias entre sólidos.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "MESHSMOOTHLESS",
+    "shortcut": "LESS",
+    "description": "Reduce un nivel la suavidad de los objetos de malla.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "MESHSMOOTHMORE",
+    "shortcut": "MORE",
+    "description": "Aumenta un nivel la suavidad de los objetos de malla.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "MESHSPLIT",
+    "shortcut": "SPLIT",
+    "description": "Divide una cara de malla en dos caras.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "SURFPATCH",
+    "shortcut": "PATCH",
+    "description": "Crea una superficie tapando un borde de superficie que forma un bucle cerrado.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "SECTIONPLANE",
+    "shortcut": "SPLANE",
+    "description": "Crea un objeto de sección que actúa como plano de corte en objetos 3D.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "DDVPOINT",
+    "shortcut": "VP",
+    "description": "Define la dirección de vista 3D mediante ángulos.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "VSCURRENT",
+    "shortcut": "VS",
+    "description": "Define el estilo visual de la ventana gráfica actual.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "SHADEMODE",
+    "shortcut": "SHA",
+    "description": "Cambia el estilo visual de la ventana actual (coniciso de VSCURRENT).",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "VISUALSTYLES",
+    "shortcut": "VSM",
+    "description": "Crea y modifica estilos visuales y los aplica a la ventana.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "NAVSWHEEL",
+    "shortcut": "WHEEL",
+    "description": "Muestra una rueda con herramientas de navegación de vista.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "ANALYSISZEBRA",
+    "shortcut": "ZEBRA",
+    "description": "Proyecta bandas sobre un modelo 3D para analizar la continuidad de superficies.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "RENDERCROP",
+    "shortcut": "RC",
+    "description": "Renderiza un área rectangular dentro de la ventana gráfica.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "RENDERPRESETS",
+    "shortcut": "RP",
+    "description": "Especifica ajustes de renderizado reutilizables (preajustes).",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "RPREF",
+    "shortcut": "RPR",
+    "description": "Muestra u oculta la paleta de ajustes avanzados de renderizado.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "RENDERWIN",
+    "shortcut": "RW",
+    "description": "Muestra la ventana Render sin iniciar un renderizado.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "MATERIALS",
+    "shortcut": "MAT",
+    "description": "Muestra u oculta la ventana de Materiales.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "THICKNESS",
+    "shortcut": "TH",
+    "description": "Define el grosor 3D por defecto de los objetos 2D nuevos.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "DVIEW",
+    "shortcut": "DV",
+    "description": "Define vistas de proyección paralela o perspectiva con cámara y objetivo.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "POINTCLOUD",
+    "shortcut": "PC",
+    "description": "Crea y adjunta archivos de nube de puntos.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "POINTCLOUDATTACH",
+    "shortcut": "PCATTACH",
+    "description": "Inserta un archivo de nube de puntos indexado en el dibujo.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "POINTCLOUDINDEX",
+    "shortcut": "PCINDEX",
+    "description": "Crea un archivo de nube de puntos indexado desde un escaneo.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "ADCENTER",
+    "shortcut": "ADC",
+    "description": "Abre el DesignCenter para reutilizar bloques, capas y estilos.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "APPLOAD",
+    "shortcut": "AP",
+    "description": "Carga y descarga aplicaciones (LISP, ARX, VBA).",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "ACTRECORD",
+    "shortcut": "ARR",
+    "description": "Inicia el grabador de acciones para crear una macro.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "ACTUSERMESSAGE",
+    "shortcut": "ARM",
+    "description": "Inserta un mensaje de usuario en una macro de acción.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "ACTUSERINPUT",
+    "shortcut": "ARU",
+    "description": "Pausa una macro grabada para que el usuario introduzca datos.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "ACTSTOP",
+    "shortcut": "ARS",
+    "description": "Detiene el grabador de acciones y ofrece guardar la macro.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "CHECKSTANDARDS",
+    "shortcut": "CHK",
+    "description": "Comprueba el dibujo actual contra los archivos de normas.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "COMMANDLINE",
+    "shortcut": "CLI",
+    "description": "Muestra u oculta la ventana de línea de comandos.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "COLOR",
+    "shortcut": "COL",
+    "description": "Define el color de los objetos nuevos.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "DATAEXTRACTION",
+    "shortcut": "DX",
+    "description": "Extrae datos del dibujo a una tabla o archivo externo.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "DATALINK",
+    "shortcut": "DL",
+    "description": "Muestra el cuadro de diálogo de vínculo de datos.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "DATALINKUPDATE",
+    "shortcut": "DLU",
+    "description": "Actualiza datos desde o hacia un vínculo de datos externo.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "DBCONNECT",
+    "shortcut": "DBC",
+    "description": "Proporciona una interfaz para tablas de bases de datos externas.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "DRAWINGRECOVERY",
+    "shortcut": "DRM",
+    "description": "Muestra la lista de dibujos que se pueden recuperar tras un fallo.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "EXPORT",
+    "shortcut": "EXP",
+    "description": "Guarda los objetos del dibujo en otro formato de archivo.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "EXPORTPDF",
+    "shortcut": "EPDF",
+    "description": "Exporta el dibujo o presentación a un archivo PDF.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "GEOGRAPHICLOCATION",
+    "shortcut": "GEO",
+    "description": "Especifica la ubicación geográfica del dibujo.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "HIDEPALETTES",
+    "shortcut": "POFF",
+    "description": "Oculta las paletas visibles, incluida la línea de comandos.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "SHOWPALETTES",
+    "shortcut": "PON",
+    "description": "Restaura las paletas ocultas.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "IMPORT",
+    "shortcut": "IMP",
+    "description": "Importa archivos de distintos formatos al dibujo actual.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "LAYOUT",
+    "shortcut": "LO",
+    "description": "Crea y modifica pestañas de presentación (layout).",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "MSPACE",
+    "shortcut": "MS",
+    "description": "Cambia del espacio papel al espacio modelo en una ventana.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "PSPACE",
+    "shortcut": "PS",
+    "description": "Cambia del espacio modelo al espacio papel.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "MVIEW",
+    "shortcut": "MV",
+    "description": "Crea y controla ventanas gráficas de presentación.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "MARKUP",
+    "shortcut": "MSM",
+    "description": "Abre el administrador de conjuntos de marcas.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "NEWSHOT",
+    "shortcut": "NSHOT",
+    "description": "Crea una vista con nombre con movimiento para ShowMotion.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "NEWVIEW",
+    "shortcut": "NVIEW",
+    "description": "Crea una vista con nombre sin movimiento.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "OPTIONS",
+    "shortcut": "OP",
+    "description": "Personaliza la configuración del programa.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "PARAMETERS",
+    "shortcut": "PAR",
+    "description": "Controla los parámetros asociativos del dibujo.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "PLOT",
+    "shortcut": "PRINT",
+    "description": "Imprime el dibujo en un trazador, impresora o archivo.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "PREVIEW",
+    "shortcut": "PRE",
+    "description": "Muestra el dibujo tal y como se imprimirá.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "QUICKCALC",
+    "shortcut": "QC",
+    "description": "Abre la calculadora QuickCalc.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "QUICKCUI",
+    "shortcut": "QCUI",
+    "description": "Muestra el editor de personalización de la interfaz.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "QUICKPROPERTIES",
+    "shortcut": "QP",
+    "description": "Muestra la paleta de propiedades rápidas del objeto.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "QSAVE",
+    "shortcut": "QSAVE",
+    "description": "Guarda el dibujo actual sin pedir nombre si ya está guardado.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "QVDRAWING",
+    "shortcut": "QVD",
+    "description": "Muestra imágenes en miniatura de los dibujos abiertos.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "QVDRAWINGCLOSE",
+    "shortcut": "QVDC",
+    "description": "Cierra las imágenes en miniatura de los dibujos abiertos.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "QVLAYOUT",
+    "shortcut": "QVL",
+    "description": "Muestra imágenes en miniatura de espacio modelo y presentaciones.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "QVLAYOUTCLOSE",
+    "shortcut": "QVLC",
+    "description": "Cierra las imágenes en miniatura de espacio modelo y presentaciones.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "REDRAW",
+    "shortcut": "R",
+    "description": "Refresca la vista de la ventana gráfica actual.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "REDRAWALL",
+    "shortcut": "RA",
+    "description": "Refresca la vista de todas las ventanas gráficas.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "REGENALL",
+    "shortcut": "REA",
+    "description": "Regenera el dibujo y refresca todas las ventanas gráficas.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "SCRIPT",
+    "shortcut": "SCR",
+    "description": "Ejecuta una secuencia de comandos desde un archivo de script.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "SETVAR",
+    "shortcut": "SET",
+    "description": "Lista o cambia los valores de las variables de sistema.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "STANDARDS",
+    "shortcut": "STA",
+    "description": "Gestiona los archivos de normas asociados a los dibujos.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "TILEMODE",
+    "shortcut": "TI",
+    "description": "Controla si se puede acceder al espacio papel.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "TOOLBAR",
+    "shortcut": "TO",
+    "description": "Muestra, oculta y personaliza barras de herramientas.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "TOOLPALETTES",
+    "shortcut": "TP",
+    "description": "Abre la ventana de paletas de herramientas.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "UCSMAN",
+    "shortcut": "UC",
+    "description": "Gestiona los sistemas de coordenadas definidos por el usuario.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "VIEW",
+    "shortcut": "V",
+    "description": "Guarda y restaura vistas con nombre o predefinidas.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "VIEWGO",
+    "shortcut": "VGO",
+    "description": "Restaura una vista con nombre.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "VIEWPLAY",
+    "shortcut": "VPLAY",
+    "description": "Reproduce la animación asociada a una vista con nombre.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "SEQUENCEPLAY",
+    "shortcut": "SPLAY",
+    "description": "Reproduce las vistas con nombre de una categoría.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "ETRANSMIT",
+    "shortcut": "ZIP",
+    "description": "Crea un paquete comprimido con el dibujo y sus archivos relacionados.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
+    "type": "command",
+    "title": "QUIT",
+    "shortcut": "EXIT",
+    "description": "Sale del programa AutoCAD.",
+    "file": "comandos.html",
+    "anchor": "",
+    "path": "Comandos"
+  },
+  {
     "type": "topic",
     "title": "¿Qué es AutoCAD y para qué se usa?",
     "description": "AutoCAD es un programa de diseño asistido por computadora (CAD, por sus siglas en inglés) desarrollado por Autodesk, usado para crear dibujos técnicos precisos ",
@@ -902,7 +2225,7 @@ window.SEARCH_INDEX = [
   {
     "type": "topic",
     "title": "Gestión de archivos DWG",
-    "description": "AutoCAD guarda cada dibujo en un archivo .DWG. Saber cómo proteger, guardar y recuperar estos archivos evita perder horas de trabajo.",
+    "description": "AutoCAD guarda cada dibujo en un archivo .DWG . Saber cómo proteger, guardar y recuperar estos archivos evita perder horas de trabajo.",
     "file": "nivel-1-fundamentos.html",
     "anchor": "archivos",
     "path": "Nivel 1 · Fundamentos"
@@ -921,6 +2244,14 @@ window.SEARCH_INDEX = [
     "description": "Moverte por el área de dibujo es algo que harás cientos de veces por sesión. Dominar el zoom y el pan te ahorra tiempo constante.",
     "file": "nivel-1-fundamentos.html",
     "anchor": "zoom",
+    "path": "Nivel 1 · Fundamentos"
+  },
+  {
+    "type": "topic",
+    "title": "Tu primer dibujo: práctica guiada",
+    "description": "Reúne todo lo aprendido en este nivel dibujando la planta de un cuarto pequeño de 3 × 2 metros . Sigue cada paso en el orden indicado; no importa la velocidad, ",
+    "file": "nivel-1-fundamentos.html",
+    "anchor": "primer-dibujo",
     "path": "Nivel 1 · Fundamentos"
   },
   {
@@ -982,7 +2313,7 @@ window.SEARCH_INDEX = [
   {
     "type": "topic",
     "title": "Sombreado y rellenos (Hatch)",
-    "description": "El comando HATCH (H) rellena un área cerrada con un patrón: rayado de concreto, ladrillo, tierra, agua, etc. Requiere que el contorno esté completamente cerrado",
+    "description": "El comando HATCH ( H ) rellena un área cerrada con un patrón: rayado de concreto, ladrillo, tierra, agua, etc. Requiere que el contorno esté completamente cerra",
     "file": "nivel-2-dibujo-2d.html",
     "anchor": "hatch",
     "path": "Nivel 2 · Dibujo 2D"
@@ -1021,6 +2352,30 @@ window.SEARCH_INDEX = [
   },
   {
     "type": "topic",
+    "title": "Propiedades de objeto",
+    "description": "Todo objeto de AutoCAD guarda propiedades: capa, color, tipo de línea, grosor de línea y escala de tipo de línea. Aprender a controlarlas es lo que separa un pl",
+    "file": "nivel-2-dibujo-2d.html",
+    "anchor": "propiedades",
+    "path": "Nivel 2 · Dibujo 2D"
+  },
+  {
+    "type": "topic",
+    "title": "Edición de polilíneas (PEDIT)",
+    "description": "Una polilínea es una serie de segmentos y arcos conectados que forman un solo objeto . PEDIT ( PE ) permite editarla: unir segmentos, cerrarla, mover vértices, ",
+    "file": "nivel-2-dibujo-2d.html",
+    "anchor": "pedit",
+    "path": "Nivel 2 · Dibujo 2D"
+  },
+  {
+    "type": "topic",
+    "title": "Splines y curvas",
+    "description": "Una spline es una curva suave que se define a partir de puntos de control. A diferencia del arco, no tiene un radio constante: se adapta libremente a la forma q",
+    "file": "nivel-2-dibujo-2d.html",
+    "anchor": "splines",
+    "path": "Nivel 2 · Dibujo 2D"
+  },
+  {
+    "type": "topic",
     "title": "Espacio modelo vs. espacio papel (Layouts)",
     "description": "AutoCAD trabaja con dos entornos distintos, visibles como pestañas en la parte inferior de la pantalla:",
     "file": "nivel-3-organizacion.html",
@@ -1038,7 +2393,7 @@ window.SEARCH_INDEX = [
   {
     "type": "topic",
     "title": "Plantillas (.DWT) y estándares de dibujo",
-    "description": "Una plantilla es un archivo base (.DWT) que guarda de antemano capas, estilos de cota, de texto, formatos de layout y cajetines, para no reconfigurar cada proye",
+    "description": "Una plantilla es un archivo base ( .DWT ) que guarda de antemano capas, estilos de cota, de texto, formatos de layout y cajetines, para no reconfigurar cada pro",
     "file": "nivel-3-organizacion.html",
     "anchor": "plantillas",
     "path": "Nivel 3 · Organización"
@@ -1089,6 +2444,38 @@ window.SEARCH_INDEX = [
     "description": "Ya viste en el tema 5 qué es una Xref. Aquí profundizamos en las opciones más avanzadas que necesitas en proyectos colaborativos reales.",
     "file": "nivel-3-organizacion.html",
     "anchor": "xref-avanzado",
+    "path": "Nivel 3 · Organización"
+  },
+  {
+    "type": "topic",
+    "title": "Cajetines y bloques de título",
+    "description": "El cajetín (o title block ) es el recuadro que se dibuja en la esquina de la lámina y que identifica el plano: nombre del proyecto, autor, fecha, escala, revisi",
+    "file": "nivel-3-organizacion.html",
+    "anchor": "cajetines",
+    "path": "Nivel 3 · Organización"
+  },
+  {
+    "type": "topic",
+    "title": "Escala anotativa (Annotative)",
+    "description": "La propiedad Annotative hace que un texto, una cota, un sombreado o un bloque se muestren a su tamaño de papel correcto en cada escala, automáticamente. Sin ell",
+    "file": "nivel-3-organizacion.html",
+    "anchor": "escala-anotativa",
+    "path": "Nivel 3 · Organización"
+  },
+  {
+    "type": "topic",
+    "title": "Estándares de capas (ISO/AIA)",
+    "description": "Un nombre de capa como A-Muros o 0-Ejes no es casualidad: sigue una convención que cualquiera del equipo puede interpretar al instante. Nombrar capas de forma c",
+    "file": "nivel-3-organizacion.html",
+    "anchor": "estandares-capas",
+    "path": "Nivel 3 · Organización"
+  },
+  {
+    "type": "topic",
+    "title": "Conjuntos de planos (Sheet Sets)",
+    "description": "Un Sheet Set (conjunto de planos) organiza todas las láminas de un proyecto en un solo panel. En lugar de abrir archivo por archivo, tienes una vista con la lis",
+    "file": "nivel-3-organizacion.html",
+    "anchor": "sheet-sets",
     "path": "Nivel 3 · Organización"
   },
   {
@@ -1189,6 +2576,38 @@ window.SEARCH_INDEX = [
   },
   {
     "type": "topic",
+    "title": "Materiales, texturas y mapeado",
+    "description": "Un material define cómo se ve la superficie de un objeto en el render: su color, brillo, transparencia y textura. Se gestionan desde el Editor de materiales (co",
+    "file": "nivel-4-modelado-3d.html",
+    "anchor": "materiales",
+    "path": "Nivel 4 · Modelado 3D"
+  },
+  {
+    "type": "topic",
+    "title": "Iluminación y escenas",
+    "description": "La luz es lo que hace que un modelo 3D se vea realista. AutoCAD ofrece varios tipos de luz, cada uno con un propósito distinto:",
+    "file": "nivel-4-modelado-3d.html",
+    "anchor": "iluminacion",
+    "path": "Nivel 4 · Modelado 3D"
+  },
+  {
+    "type": "topic",
+    "title": "Extracción de vistas 2D desde el modelo 3D",
+    "description": "La documentación de entrega (planos constructivos, planos de fabricación) suele requerir vistas 2D acotadas aunque el modelo exista en 3D. Convertir el 3D en 2D",
+    "file": "nivel-4-modelado-3d.html",
+    "anchor": "vistas-2d",
+    "path": "Nivel 4 · Modelado 3D"
+  },
+  {
+    "type": "topic",
+    "title": "Análisis de masa y volumen (MASSPROP)",
+    "description": "El comando MASSPROP calcula propiedades físicas de un sólido 3D: volumen , área superficial , centro de masa y momentos de inercia . Se usa para verificar pieza",
+    "file": "nivel-4-modelado-3d.html",
+    "anchor": "massprop",
+    "path": "Nivel 4 · Modelado 3D"
+  },
+  {
+    "type": "topic",
     "title": "Personalización de la interfaz (CUI)",
     "description": "El comando CUI (Customize User Interface) abre un diálogo donde puedes modificar casi todo el entorno visual de AutoCAD: barras de herramientas, menús, teclas d",
     "file": "nivel-5-avanzado.html",
@@ -1266,6 +2685,318 @@ window.SEARCH_INDEX = [
     "file": "nivel-5-avanzado.html",
     "anchor": "interoperabilidad",
     "path": "Nivel 5 · Avanzado"
+  },
+  {
+    "type": "topic",
+    "title": "Bloques dinámicos (Dynamic Blocks)",
+    "description": "Un bloque dinámico es un bloque normal al que se le añaden parámetros y acciones para que pueda cambiar de forma, tamaño o visibilidad mediante grips (pinzamien",
+    "file": "nivel-5-avanzado.html",
+    "anchor": "dynamic-blocks",
+    "path": "Nivel 5 · Avanzado"
+  },
+  {
+    "type": "topic",
+    "title": "Diseño paramétrico y restricciones",
+    "description": "El diseño paramétrico permite que la geometría se adapte automáticamente cuando cambian sus dimensiones o sus relaciones. Se apoya en restricciones : reglas geo",
+    "file": "nivel-5-avanzado.html",
+    "anchor": "diseno-parametrico",
+    "path": "Nivel 5 · Avanzado"
+  },
+  {
+    "type": "topic",
+    "title": "Verificador de estándares CAD",
+    "description": "Los estándares CAD son reglas que una oficina define para que todos los dibujos compartan la misma nomenclatura de capas , estilos de texto y estilos de cota . ",
+    "file": "nivel-5-avanzado.html",
+    "anchor": "cad-standards",
+    "path": "Nivel 5 · Avanzado"
+  },
+  {
+    "type": "topic",
+    "title": "Publicación y lotes de impresión (PUBLISH)",
+    "description": "PUBLISH (Publicar) imprime o exporta varios planos a la vez , en una sola operación, hacia una plotter o a un archivo PDF . Es el comando que usas cuando tienes",
+    "file": "nivel-5-avanzado.html",
+    "anchor": "publish",
+    "path": "Nivel 5 · Avanzado"
+  },
+  {
+    "type": "tip",
+    "title": "Atajo esencial ESC = tu mejor amigo",
+    "description": "La tecla ESC cancela cualquier comando activo, deselecciona objetos y te devuelve al estado neutro. Úsala sin miedo.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Atajo esencial F8 ORTO on/off",
+    "description": "ORTO restringe el cursor a movimientos perfectamente horizontales o verticales. Sin él, las líneas nunca son rectas de verdad.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Atajo esencial F3 OSNAP siempre",
+    "description": "Sin OSNAP es imposible dibujar con precisión. Engancha el cursor a extremos, medios, centros e intersecciones reales.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Aprendizaje La regla de 30 minutos",
+    "description": "30 minutos diarios superan 4 horas un solo día. La constancia crea memoria muscular con los atajos y comandos.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Aprendizaje Teclado antes que ratón",
+    "description": "Los profesionales escriben comandos con el teclado, no buscan iconos. Es 3x más rápido una vez lo memorizas.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Error común No guardas constantemente",
+    "description": "AutoCAD puede fallar. Si no guardas, pierdes horas de trabajo. Configura auto-guardado cada 5 minutos.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Error común Todo en la capa 0",
+    "description": "Poner todo en la capa 0 es el error #1 de principiantes. Después es un caos intentar separar ejes, muros y cotas.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Flujo de trabajo Crea tu plantilla .DWT",
+    "description": "No empieces cada proyecto desde cero. Crea una plantilla con tus capas, estilos de texto, cotas y bloques base.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Flujo de trabajo Atajos que debes memorizar",
+    "description": "Estos 10 atajos cubren el 90% del trabajo diario en AutoCAD. Memorízalos la primera semana.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Flujo de trabajo Undo y U",
+    "description": "Ctrl+Z deshace el último paso. Pero U (sin Ctrl) es el comando UNDO de AutoCAD: puedes deshacer varios pasos de golpe.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Avanzado Dibuja siempre a escala 1:1",
+    "description": "En AutoCAD NUNCA cambies la escala al dibujar. Un muro de 3 metros mide 3 unidades reales. La escala solo se aplica al imprimir.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Avanzado PURGE antes de entregar",
+    "description": "Antes de enviar un archivo, ejecuta PURGE para eliminar capas, bloques y estilos vacías. Reduce tamaño y evita errores.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Aprendizaje Copia planos reales",
+    "description": "La mejor forma de aprender es copiar planos que ya existen. Busca planos de plantas arquitectónicas y recrealos en AutoCAD.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Error común \"No veo mi dibujo\"",
+    "description": "Si de repente no ves nada o el zoom se descontrola, Z+E (Zoom Extents) te muestra todo el contenido del archivo.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Avanzado Xref para trabajo en equipo",
+    "description": "Las referencias externas (Xref) permiten que varios profesionales trabajen en el mismo proyecto sin pisarse.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Atajo esencial ESPACIO = Enter",
+    "description": "La barra espaciadora hace de Enter: confirma comandos y, con un solo toque, repite el último comando usado.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Atajo esencial El poder del doble clic",
+    "description": "El doble clic abre el editor de cada objeto: texto, cotas, bloques, hatch… sin escribir un solo comando.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Atajo esencial MA copia el formato en 1 clic",
+    "description": "MA (Match Properties) copia capa, color, tipo de línea y formato de un objeto a otro en un solo clic.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Error común Líneas que no se tocan",
+    "description": "Dos líneas pueden verse unidas pero no tocarse de verdad: al hacer zoom aparece el hueco. Es un problema de precisión de snap.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Error común UNITS antes de dibujar",
+    "description": "Dibujar con las unidades equivocadas (mm vs cm vs m) arruina el proyecto entero: cotas, bloques y escalas fallan.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Flujo de trabajo LAYISO aísla capas",
+    "description": "LAYISO aísla la capa de un objeto: apaga o congela todas las demás para trabajar sin distracciones.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Flujo de trabajo QSELECT selección en masa",
+    "description": "QSELECT selecciona en masa por propiedad: por ejemplo, todos los círculos de radio 50 o todos los textos de la capa Cotas.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Avanzado Crea tus propios alias",
+    "description": "Puedes crear tus propios atajos de comando editando el archivo de alias (acad.pgp) o desde el editor CUI.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Avanzado Grips: edita sin comandos",
+    "description": "Los grips (cuadraditos azules) permiten estirar, mover, rotar, escalar y copiar objetos sin escribir ningún comando.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Flujo de trabajo Acotar rápido con DIM",
+    "description": "La orden DIM acota casi sola: selecciona la línea, el arco o el círculo y coloca la cota. AutoCAD elige el tipo (lineal, radial, diámetro…).",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Flujo de trabajo Cada geometría con su cota",
+    "description": "Usa el tipo de cota correcto: DIMLINEAR para líneas horizontales o verticales, DIMALIGNED para inclinadas, DIMANGULAR para ángulos y DIMRADIUS/DIMDIAMETER para círculos.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Flujo de trabajo Un solo estilo de cota",
+    "description": "Crea UN solo estilo de cota con DIMSTYLE y aplícalo a todo el plano: flechas, altura de texto, unidades y precisión quedan uniformes.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Error común Cotas que no se actualizan",
+    "description": "Si estiras o escalas un objeto y sus cotas se quedan con el valor viejo, DIMASSOC está en 0. Con valor 2 las cotas son asociativas y se actualizan solas.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Avanzado Escala por referencia: no pierdes medidas",
+    "description": "Para escalar un plano sin equivocarte usa SCALE con referencia: base + R + clic en dos puntos del dibujo + longitud real. El resto lo calcula AutoCAD y las cotas asociativas lo reflejan al instante.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Avanzado Cambia de unidades sin redibujar",
+    "description": "¿Tu dibujo está en milímetros y lo necesitas en metros? No redibujes: SCALE con base 0,0,0 y factor 0.001 (mm a m) o 1000 (m a mm).",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Flujo de trabajo Escala de impresión en el Layout",
+    "description": "Para imprimir a escala usa una pestaña Layout: crea una ventana gráfica y fija la escala (1:50, 1:100…). El modelo sigue a 1:1, solo cambia la vista.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Avanzado Dynamic blocks: un bloque, mil variaciones",
+    "description": "Con un bloque dinámico defines parámetros y acciones (estirar, rotar, voltear, estados de visibilidad) y un solo bloque se convierte en puertas de cualquier ancho, ventanas configurables o anclas que giran.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Flujo de trabajo Archivos ligeros: purga y limpieza",
+    "description": "Los DWG engordan con bloques, estilos de cota y capas que ya no usas. Usa PURGE (todo en cascada), AUDIT para errores, OVERKILL para líneas duplicadas y revisa capas vacías.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Aprendizaje Modelado 3D: flujo por pasos",
+    "description": "No empieces dibujando 3D directamente. 1) dibuja el 2D exacto por capas, 2) convierte contornos en REGIONES, 3) aplica EXTRUDE, REVOLVE, SWEEP o LOFT, 4) combina con UNION/SUBTRACT/INTERSECT, 5) redondea con FILLET/CHAMFER 3D, 6) añade materiales y luces.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Flujo de trabajo Cota en el layout, no en el modelo",
+    "description": "Acota en el espacio papel (layout) para que las cotas salgan siempre con la escala correcta al imprimir, o usa cotas anotativas en el modelo. La ventana de layout mantiene el modelo a 1:1 y las cotas a escala de impresión.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
   },
   {
     "type": "resource",
@@ -1420,6 +3151,38 @@ window.SEARCH_INDEX = [
     "path": "Recursos"
   },
   {
+    "type": "resource",
+    "title": "Chuleta de comandos",
+    "description": "Los comandos esenciales de dibujo, modificación, precisión, capas, acotación y 3D en una sola página de texto.",
+    "file": "recursos.html",
+    "anchor": "",
+    "path": "Recursos"
+  },
+  {
+    "type": "resource",
+    "title": "Plantilla de capas",
+    "description": "Estructura de capas recomendada con colores y reglas de oro para mantener el plano ordenado y estándar.",
+    "file": "recursos.html",
+    "anchor": "",
+    "path": "Recursos"
+  },
+  {
+    "type": "resource",
+    "title": "Checklist de entrega",
+    "description": "Lista de verificación antes de entregar un plano: limpieza, escalas, cajetín y exportación.",
+    "file": "recursos.html",
+    "anchor": "",
+    "path": "Recursos"
+  },
+  {
+    "type": "resource",
+    "title": "Atajos esenciales",
+    "description": "Teclas de función, navegación, acciones generales y trucos de selección en un archivo de texto.",
+    "file": "recursos.html",
+    "anchor": "",
+    "path": "Recursos"
+  },
+  {
     "type": "faq",
     "title": "¿Qué es AutoCAD y para qué sirve?",
     "description": "",
@@ -1540,9 +3303,57 @@ window.SEARCH_INDEX = [
     "path": "FAQ"
   },
   {
+    "type": "faq",
+    "title": "¿Cuál es la diferencia entre DWG y DXF?",
+    "description": "",
+    "file": "faq.html",
+    "anchor": "",
+    "path": "FAQ"
+  },
+  {
+    "type": "faq",
+    "title": "¿Cómo recupero un archivo DWG dañado o corrupto?",
+    "description": "",
+    "file": "faq.html",
+    "anchor": "",
+    "path": "FAQ"
+  },
+  {
+    "type": "faq",
+    "title": "¿Qué certificaciones de AutoCAD existen y valen la pena?",
+    "description": "",
+    "file": "faq.html",
+    "anchor": "",
+    "path": "FAQ"
+  },
+  {
+    "type": "faq",
+    "title": "¿Por qué no puedo abrir un DWG más reciente que mi versión de AutoCAD?",
+    "description": "",
+    "file": "faq.html",
+    "anchor": "",
+    "path": "FAQ"
+  },
+  {
+    "type": "faq",
+    "title": "¿Cuánto tiempo se necesita para aprender AutoCAD y cómo practicar?",
+    "description": "",
+    "file": "faq.html",
+    "anchor": "",
+    "path": "FAQ"
+  },
+  {
     "type": "visual",
     "title": "Plano completo",
     "description": "Un mismo dibujo reúne lo visto en la guía: muros por OFFSET, esquinas y puertas con FILLET, recortes con TRIM, muebles con RECTANGLE y ARRAY, y cotas en su propia capa.",
+    "file": "ejemplos-visuales.html",
+    "anchor": "",
+    "path": "Visuales"
+  },
+  {
+    "type": "visual",
+    "title": "Atajos de teclado de AutoCAD",
+    "description": "Mapa completo de atajos de teclado de AutoCAD en una sola imagen: teclas de función (F1 a F12), navegación y los comandos de un solo toque (L para LINE, C para CIRCLE, O para OFFSET...). Imprímelo y tenlo junto al teclado mientras practicas.",
     "file": "ejemplos-visuales.html",
     "anchor": "",
     "path": "Visuales"
@@ -1876,251 +3687,43 @@ window.SEARCH_INDEX = [
     "path": "Visuales"
   },
   {
-    "type": "tip",
-    "title": "Atajo esencial ESC = tu mejor amigo",
-    "description": "La tecla ESC cancela cualquier comando activo, deselecciona objetos y te devuelve al estado neutro. Úsala sin miedo.",
-    "file": "trucos.html",
+    "type": "visual",
+    "title": "TEXT",
+    "description": "Crea un texto de una sola línea definiendo el punto de inserción, la altura y la rotación.",
+    "file": "ejemplos-visuales.html",
     "anchor": "",
-    "path": "Trucos"
+    "path": "Visuales"
   },
   {
-    "type": "tip",
-    "title": "Atajo esencial F8 ORTO on/off",
-    "description": "ORTO restringe el cursor a movimientos perfectamente horizontales o verticales. Sin él, las líneas nunca son rectas de verdad.",
-    "file": "trucos.html",
+    "type": "visual",
+    "title": "AREA",
+    "description": "Calcula el área y el perímetro de un recinto definido por puntos o de un objeto cerrado.",
+    "file": "ejemplos-visuales.html",
     "anchor": "",
-    "path": "Trucos"
+    "path": "Visuales"
   },
   {
-    "type": "tip",
-    "title": "Atajo esencial F3 OSNAP siempre",
-    "description": "Sin OSNAP es imposible dibujar con precisión. Engancha el cursor a extremos, medios, centros e intersecciones reales.",
-    "file": "trucos.html",
+    "type": "visual",
+    "title": "DIST",
+    "description": "Mide la distancia y el ángulo entre dos puntos seleccionados del dibujo.",
+    "file": "ejemplos-visuales.html",
     "anchor": "",
-    "path": "Trucos"
+    "path": "Visuales"
   },
   {
-    "type": "tip",
-    "title": "Aprendizaje La regla de 30 minutos",
-    "description": "30 minutos diarios superan 4 horas un solo día. La constancia crea memoria muscular con los atajos y comandos.",
-    "file": "trucos.html",
+    "type": "visual",
+    "title": "LAYERISO",
+    "description": "Aísla una capa: el resto se apaga o se atenúa para trabajar sin distracciones.",
+    "file": "ejemplos-visuales.html",
     "anchor": "",
-    "path": "Trucos"
+    "path": "Visuales"
   },
   {
-    "type": "tip",
-    "title": "Aprendizaje Teclado antes que ratón",
-    "description": "Los profesionales escriben comandos con el teclado, no buscan iconos. Es 3x más rápido una vez lo memorizas.",
-    "file": "trucos.html",
+    "type": "visual",
+    "title": "DIMCONTINUE",
+    "description": "Continúa una serie de cotas lineales encadenadas a partir de la última cota creada.",
+    "file": "ejemplos-visuales.html",
     "anchor": "",
-    "path": "Trucos"
-  },
-  {
-    "type": "tip",
-    "title": "Error común No guardas constantemente",
-    "description": "AutoCAD puede fallar. Si no guardas, pierdes horas de trabajo. Configura auto-guardado cada 5 minutos.",
-    "file": "trucos.html",
-    "anchor": "",
-    "path": "Trucos"
-  },
-  {
-    "type": "tip",
-    "title": "Error común Todo en la capa 0",
-    "description": "Poner todo en la capa 0 es el error #1 de principiantes. Después es un caos intentar separar ejes, muros y cotas.",
-    "file": "trucos.html",
-    "anchor": "",
-    "path": "Trucos"
-  },
-  {
-    "type": "tip",
-    "title": "Flujo de trabajo Crea tu plantilla .DWT",
-    "description": "No empieces cada proyecto desde cero. Crea una plantilla con tus capas, estilos de texto, cotas y bloques base.",
-    "file": "trucos.html",
-    "anchor": "",
-    "path": "Trucos"
-  },
-  {
-    "type": "tip",
-    "title": "Flujo de trabajo Atajos que debes memorizar",
-    "description": "Estos 10 atajos cubren el 90% del trabajo diario en AutoCAD. Memorízalos la primera semana.",
-    "file": "trucos.html",
-    "anchor": "",
-    "path": "Trucos"
-  },
-  {
-    "type": "tip",
-    "title": "Flujo de trabajo Undo y U",
-    "description": "Ctrl+Z deshace el último paso. Pero U (sin Ctrl) es el comando UNDO de AutoCAD: puedes deshacer varios pasos de golpe.",
-    "file": "trucos.html",
-    "anchor": "",
-    "path": "Trucos"
-  },
-  {
-    "type": "tip",
-    "title": "Avanzado Dibuja siempre a escala 1:1",
-    "description": "En AutoCAD NUNCA cambies la escala al dibujar. Un muro de 3 metros mide 3 unidades reales. La escala solo se aplica al imprimir.",
-    "file": "trucos.html",
-    "anchor": "",
-    "path": "Trucos"
-  },
-  {
-    "type": "tip",
-    "title": "Avanzado PURGE antes de entregar",
-    "description": "Antes de enviar un archivo, ejecuta PURGE para eliminar capas, bloques y estilos vacías. Reduce tamaño y evita errores.",
-    "file": "trucos.html",
-    "anchor": "",
-    "path": "Trucos"
-  },
-  {
-    "type": "tip",
-    "title": "Aprendizaje Copia planos reales",
-    "description": "La mejor forma de aprender es copiar planos que ya existen. Busca planos de plantas arquitectónicas y recrealos en AutoCAD.",
-    "file": "trucos.html",
-    "anchor": "",
-    "path": "Trucos"
-  },
-  {
-    "type": "tip",
-    "title": "Error común \"No veo mi dibujo\"",
-    "description": "Si de repente no ves nada o el zoom se descontrola, Z+E (Zoom Extents) te muestra todo el contenido del archivo.",
-    "file": "trucos.html",
-    "anchor": "",
-    "path": "Trucos"
-  },
-  {
-    "type": "tip",
-    "title": "Avanzado Xref para trabajo en equipo",
-    "description": "Las referencias externas (Xref) permiten que varios profesionales trabajen en el mismo proyecto sin pisarse.",
-    "file": "trucos.html",
-    "anchor": "",
-    "path": "Trucos"
-  },
-  {
-    "type": "tip",
-    "title": "Atajo esencial ESPACIO = Enter",
-    "description": "La barra espaciadora hace de Enter: confirma comandos y, con un solo toque, repite el último comando usado.",
-    "file": "trucos.html",
-    "anchor": "",
-    "path": "Trucos"
-  },
-  {
-    "type": "tip",
-    "title": "Atajo esencial El poder del doble clic",
-    "description": "El doble clic abre el editor de cada objeto: texto, cotas, bloques, hatch… sin escribir un solo comando.",
-    "file": "trucos.html",
-    "anchor": "",
-    "path": "Trucos"
-  },
-  {
-    "type": "tip",
-    "title": "Atajo esencial MA copia el formato en 1 clic",
-    "description": "MA (Match Properties) copia capa, color, tipo de línea y formato de un objeto a otro en un solo clic.",
-    "file": "trucos.html",
-    "anchor": "",
-    "path": "Trucos"
-  },
-  {
-    "type": "tip",
-    "title": "Error común Líneas que no se tocan",
-    "description": "Dos líneas pueden verse unidas pero no tocarse de verdad: al hacer zoom aparece el hueco. Es un problema de precisión de snap.",
-    "file": "trucos.html",
-    "anchor": "",
-    "path": "Trucos"
-  },
-  {
-    "type": "tip",
-    "title": "Error común UNITS antes de dibujar",
-    "description": "Dibujar con las unidades equivocadas (mm vs cm vs m) arruina el proyecto entero: cotas, bloques y escalas fallan.",
-    "file": "trucos.html",
-    "anchor": "",
-    "path": "Trucos"
-  },
-  {
-    "type": "tip",
-    "title": "Flujo de trabajo LAYISO aísla capas",
-    "description": "LAYISO aísla la capa de un objeto: apaga o congela todas las demás para trabajar sin distracciones.",
-    "file": "trucos.html",
-    "anchor": "",
-    "path": "Trucos"
-  },
-  {
-    "type": "tip",
-    "title": "Flujo de trabajo QSELECT selección en masa",
-    "description": "QSELECT selecciona en masa por propiedad: por ejemplo, todos los círculos de radio 50 o todos los textos de la capa Cotas.",
-    "file": "trucos.html",
-    "anchor": "",
-    "path": "Trucos"
-  },
-  {
-    "type": "tip",
-    "title": "Avanzado Crea tus propios alias",
-    "description": "Puedes crear tus propios atajos de comando editando el archivo de alias (acad.pgp) o desde el editor CUI.",
-    "file": "trucos.html",
-    "anchor": "",
-    "path": "Trucos"
-  },
-  {
-    "type": "tip",
-    "title": "Avanzado Grips: edita sin comandos",
-    "description": "Los grips (cuadraditos azules) permiten estirar, mover, rotar, escalar y copiar objetos sin escribir ningún comando.",
-    "file": "trucos.html",
-    "anchor": "",
-    "path": "Trucos"
-  },
-  {
-    "type": "tip",
-    "title": "Flujo de trabajo Acotar rápido con DIM",
-    "description": "La orden DIM acota casi sola: selecciona la línea, el arco o el círculo y coloca la cota. AutoCAD elige el tipo (lineal, radial, diámetro…).",
-    "file": "trucos.html",
-    "anchor": "",
-    "path": "Trucos"
-  },
-  {
-    "type": "tip",
-    "title": "Flujo de trabajo Cada geometría con su cota",
-    "description": "Usa el tipo de cota correcto: DIMLINEAR para líneas horizontales o verticales, DIMALIGNED para inclinadas, DIMANGULAR para ángulos y DIMRADIUS/DIMDIAMETER para círculos.",
-    "file": "trucos.html",
-    "anchor": "",
-    "path": "Trucos"
-  },
-  {
-    "type": "tip",
-    "title": "Flujo de trabajo Un solo estilo de cota",
-    "description": "Crea UN solo estilo de cota con DIMSTYLE y aplícalo a todo el plano: flechas, altura de texto, unidades y precisión quedan uniformes.",
-    "file": "trucos.html",
-    "anchor": "",
-    "path": "Trucos"
-  },
-  {
-    "type": "tip",
-    "title": "Error común Cotas que no se actualizan",
-    "description": "Si estiras o escalas un objeto y sus cotas se quedan con el valor viejo, DIMASSOC está en 0. Con valor 2 las cotas son asociativas y se actualizan solas.",
-    "file": "trucos.html",
-    "anchor": "",
-    "path": "Trucos"
-  },
-  {
-    "type": "tip",
-    "title": "Avanzado Escala por referencia: no pierdes medidas",
-    "description": "Para escalar un plano sin equivocarte usa SCALE con referencia: base + R + clic en dos puntos del dibujo + longitud real. El resto lo calcula AutoCAD y las cotas asociativas lo reflejan al instante.",
-    "file": "trucos.html",
-    "anchor": "",
-    "path": "Trucos"
-  },
-  {
-    "type": "tip",
-    "title": "Avanzado Cambia de unidades sin redibujar",
-    "description": "¿Tu dibujo está en milímetros y lo necesitas en metros? No redibujes: SCALE con base 0,0,0 y factor 0.001 (mm a m) o 1000 (m a mm).",
-    "file": "trucos.html",
-    "anchor": "",
-    "path": "Trucos"
-  },
-  {
-    "type": "tip",
-    "title": "Flujo de trabajo Escala de impresión en el Layout",
-    "description": "Para imprimir a escala usa una pestaña Layout: crea una ventana gráfica y fija la escala (1:50, 1:100…). El modelo sigue a 1:1, solo cambia la vista.",
-    "file": "trucos.html",
-    "anchor": "",
-    "path": "Trucos"
+    "path": "Visuales"
   }
 ];

@@ -4,6 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nivel 4 · Modelado 3D — AutoCAD Guía</title>
+<link rel="canonical" href="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-4-modelado-3d.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-4-modelado-3d.html">
+<meta property="og:site_name" content="AutoCAD Guía">
+<meta property="og:title" content="Nivel 4 · Modelado 3D — AutoCAD Guía">
+<meta property="og:description" content="Navegación 3D, sólidos básicos, operaciones booleanas, extrusión, revolución, barrido, solevación, edición de sólidos y render básico en AutoCAD. Nivel 4 de la guía.">
+<meta property="og:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nivel 4 · Modelado 3D — AutoCAD Guía">
+<meta name="twitter:description" content="Navegación 3D, sólidos básicos, operaciones booleanas, extrusión, revolución, barrido, solevación, edición de sólidos y render básico en AutoCAD. Nivel 4 de la guía.">
+<meta name="twitter:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
 <meta name="description" content="Navegación 3D, sólidos básicos, operaciones booleanas, extrusión, revolución, barrido, solevación, edición de sólidos y render básico en AutoCAD. Nivel 4 de la guía.">
 
 <link rel="icon" type="image/svg+xml" href="../assets/img/autocad-2.svg">
@@ -19,6 +30,26 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Nivel · Modelado 3D en AutoCAD",
+    "description": "Sólidos, booleanos, extrusión, mallas, superficies NURBS, renderizado y análisis.",
+    "provider": {
+      "@type": "Organization",
+      "name": "AutoCAD Guía",
+      "sameAs": "https://apaza-victor.github.io/Gu-a-de-Autocad/"
+    },
+    "inLanguage": "es",
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "online",
+      "learningResourceType": "tutorial",
+      "inLanguage": "es"
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -78,7 +109,7 @@
     <h1 data-i18n="lvl4.title">Modelado 3D</h1>
     <p class="subtitle" data-i18n="lvl4.subtitle">Del plano a la maqueta virtual: navegación tridimensional, sólidos primitivos, operaciones booleanas, herramientas de creación avanzada y un primer acercamiento al render.</p>
     <div class="level-progress-bar"><div class="fill"></div></div>
-    <p class="level-progress-label">0 de 12 temas completados · 0%</p>
+    <p class="level-progress-label">0 de 16 temas completados · 0%</p>
   </div>
 </header>
 
@@ -104,6 +135,11 @@
             <li><a href="#seccion" data-toc="nivel4-seccion"><span class="toc-check"></span> Secciones sólidas</a></li>
             <li><a href="#interferencia" data-toc="nivel4-interferencia"><span class="toc-check"></span> Interferencia y análisis</a></li>
             <li><a href="#cotado3d" data-toc="nivel4-cotado3d"><span class="toc-check"></span> Cotado 3D</a></li>
+            <li><a href="#materiales" data-toc="nivel4-materiales"><span class="toc-check"></span> Materiales y texturas</a></li>
+            <li><a href="#iluminacion" data-toc="nivel4-iluminacion"><span class="toc-check"></span> Iluminación y escenas</a></li>
+            <li><a href="#vistas-2d" data-toc="nivel4-vistas-2d"><span class="toc-check"></span> Vistas 2D desde 3D</a></li>
+            <li><a href="#massprop" data-toc="nivel4-massprop"><span class="toc-check"></span> Análisis de masa</a></li>
+            <li><a href="#autoevaluacion"><span class="toc-check"></span> Autoevaluación</a></li>
           </ul>
           <hr style="border-color:var(--border-soft)" class="my-4">
           <a href="nivel-5-avanzado.html" class="btn-cad-outline w-100 text-center d-block">Siguiente nivel <i class="bi bi-arrow-right"></i></a>
@@ -410,6 +446,174 @@
             <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
           </section>
 
+          <!-- 13. Materiales, texturas y mapeado -->
+          <section id="materiales" data-topic="nivel4-materiales">
+            <h2><span class="sec-num">13</span>Materiales, texturas y mapeado</h2>
+            <p>Un material define cómo se ve la superficie de un objeto en el render: su color, brillo, transparencia y textura. Se gestionan desde el <strong>Editor de materiales</strong> (comando <span class="cmd-inline">MAT</span>), que incluye una biblioteca básica de materiales listos para usar y permite crear materiales personalizados.</p>
+
+            <h3>Biblioteca básica y materiales personalizados</h3>
+            <p>La paleta de materiales ofrece acabados por defecto (metal, vidrio, concreto, madera...). Para crear un material personalizado, duplica uno existente o crea uno nuevo y ajusta sus propiedades hasta conseguir el aspecto deseado.</p>
+
+            <h3>Propiedades clave</h3>
+            <ul>
+              <li><strong>Color difuso:</strong> el color base de la superficie.</li>
+              <li><strong>Brillo / especular:</strong> controla los reflejos y el aspecto pulido o mate.</li>
+              <li><strong>Reflexión:</strong> qué tanto refleja el entorno (cromo, vidrio espejado).</li>
+              <li><strong>Transparencia:</strong> permite ver a través del material (vidrio, plástico translúcido).</li>
+            </ul>
+
+            <h3>Mapeado UV</h3>
+            <p>La textura se ajusta sobre la superficie con el mapeado UV mediante <span class="cmd-inline">MATERIALMAP</span> o <span class="cmd-inline">3DMAP</span>. El tipo de proyección define cómo se "estira" la textura:</p>
+            <ul>
+              <li><strong>Planar:</strong> proyecta la textura como si cayera perpendicular sobre una cara.</li>
+              <li><strong>Caja (box):</strong> envuelve el objeto por sus 6 caras; ideal para piezas rectangulares.</li>
+              <li><strong>Cilíndrico:</strong> envuelve la textura alrededor de un eje; ideal para botellas y tubos.</li>
+              <li><strong>Esférico:</strong> proyecta la textura sobre una esfera; útil para esferas y globos.</li>
+            </ul>
+
+            <p>Puedes asignar un material a objetos completos o a caras individuales (mantén pulsada la tecla <span class="key-inline">Ctrl</span> al seleccionar un sólido). Para copiar el material ya asignado a otro objeto, usa <span class="cmd-inline">MATCHMATERIAL</span>.</p>
+
+            <table class="table-cad">
+              <thead><tr><th>Comando</th><th>Qué hace</th></tr></thead>
+              <tbody>
+                <tr><td><span class="cmd-inline">MAT</span></td><td>Abre el Editor de materiales: crea, edita y asigna materiales desde la biblioteca.</td></tr>
+                <tr><td><span class="cmd-inline">MATERIALMAP</span> / <span class="cmd-inline">3DMAP</span></td><td>Mapeado UV: ajusta cómo se proyecta la textura (planar, caja, cilíndrico, esférico).</td></tr>
+                <tr><td><span class="cmd-inline">MATCHMATERIAL</span></td><td>Copia el material de un objeto de origen a otro objeto de destino.</td></tr>
+              </tbody>
+            </table>
+
+            <div class="callout">
+              <span class="callout-title">Flujo sugerido</span>
+              Asigna el material (<span class="cmd-inline">MAT</span>) → ajusta el mapeado UV (<span class="cmd-inline">MATERIALMAP</span>) → comprueba el aspecto con una vista realista → renderiza. Si la textura se ve estirada o descolocada, el problema casi siempre está en el mapeado, no en el material.
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 14. Iluminación y escenas -->
+          <section id="iluminacion" data-topic="nivel4-iluminacion">
+            <h2><span class="sec-num">14</span>Iluminación y escenas</h2>
+            <p>La luz es lo que hace que un modelo 3D se vea realista. AutoCAD ofrece varios tipos de luz, cada uno con un propósito distinto:</p>
+
+            <ul>
+              <li><strong>Luz puntual:</strong> emite luz en todas direcciones desde un punto (como una bombilla).</li>
+              <li><strong>Luz focal (spot):</strong> cono de luz direccional, ideal para destacar una zona (reflector, lámpara de escritorio).</li>
+              <li><strong>Luz lejana / direccional:</strong> rayos paralelos que iluminan todo el modelo por igual (sol artificial de estudio).</li>
+              <li><strong>Luz solar (SUN):</strong> simula el sol real con sombras según fecha, hora y ubicación geográfica.</li>
+            </ul>
+
+            <h3>Sol y ubicación geográfica</h3>
+            <p>Para sombras reales, activa la luz solar y define la ubicación del proyecto con <span class="cmd-inline">GEOGRAPHICLOCATION</span> (ciudad, latitud y longitud). Con <span class="cmd-inline">SUNPROPERTIES</span> ajustas la fecha y la hora del día, que determinan la dirección e inclinación de las sombras.</p>
+
+            <h3>Escenas</h3>
+            <p>Una <strong>escena</strong> guarda una combinación de vista, luces y parámetros para reutilizarla al renderizar. Se gestionan con el comando <span class="cmd-inline">VIEW</span> (pestaña de escenas): crea una escena "vista exterior diurna", otra "interior nocturna", etc.</p>
+
+            <h3>Parámetros de render</h3>
+            <p>Antes del render final configura el comando <span class="cmd-inline">RENDER</span>: calidad (borrador, baja, media, alta), tamaño de salida de la imagen y fondo o entorno que se ve detrás del modelo.</p>
+
+            <table class="table-cad">
+              <thead><tr><th>Comando</th><th>Qué hace</th></tr></thead>
+              <tbody>
+                <tr><td><span class="cmd-inline">LIGHT</span></td><td>Crea y administra luces puntuales, focales y direccionales.</td></tr>
+                <tr><td><span class="cmd-inline">SUN</span></td><td>Activa o desactiva la luz solar y muestra sus propiedades.</td></tr>
+                <tr><td><span class="cmd-inline">GEOGRAPHICLOCATION</span></td><td>Define la ubicación geográfica del modelo para posicionar el sol.</td></tr>
+                <tr><td><span class="cmd-inline">VIEW</span></td><td>Administra vistas y escenas guardadas (vista + iluminación).</td></tr>
+              </tbody>
+            </table>
+
+            <div class="callout">
+              <span class="callout-title">Consejo</span>
+              Haz siempre un render de prueba en calidad <strong>baja</strong> antes del render final: es mucho más rápido y te permite corregir materiales, luces y encuadres sin esperar minutos por cada intento.
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 15. Extracción de vistas 2D -->
+          <section id="vistas-2d" data-topic="nivel4-vistas-2d">
+            <h2><span class="sec-num">15</span>Extracción de vistas 2D desde el modelo 3D</h2>
+            <p>La documentación de entrega (planos constructivos, planos de fabricación) suele requerir vistas 2D acotadas aunque el modelo exista en 3D. Convertir el 3D en 2D evita redibujar y garantiza que los planos coincidan exactamente con la geometría modelada.</p>
+
+            <table class="table-cad">
+              <thead><tr><th>Método</th><th>Dónde se usa</th><th>Características</th></tr></thead>
+              <tbody>
+                <tr><td><span class="cmd-inline">FLATSHOT</span></td><td>Espacio modelo</td><td>Proyecta el modelo a una vista 2D plana de la orientación actual. Rápido y sencillo.</td></tr>
+                <tr><td><span class="cmd-inline">SOLVIEW</span> / <span class="cmd-inline">SOLDRAW</span></td><td>Layouts</td><td>Genera vistas ortográficas y secciones en el espacio papel, con líneas ocultas y sombreados.</td></tr>
+                <tr><td><span class="cmd-inline">VIEWBASE</span> / <span class="cmd-inline">VIEWPROJ</span></td><td>AutoCAD moderno</td><td>Vistas base y proyectadas desde un modelo 3D, asociativas (se actualizan al cambiar el sólido).</td></tr>
+              </tbody>
+            </table>
+
+            <div class="diagram-canvas">
+              <svg viewBox="0 0 280 170">
+                <text class="cad-label-cmd" x="5" y="14" style="font-size:8px">Modelo 3D → vistas ortogonales proyectadas</text>
+                <polygon class="cad-fill" points="20,42 42,28 72,42 50,56"/>
+                <polygon class="cad-fill" points="20,42 50,56 50,84 20,70"/>
+                <polygon class="cad-fill" points="50,56 72,42 72,70 50,84"/>
+                <text class="cad-label" x="34" y="66" style="font-size:8px">3D</text>
+                <line class="cad-line" x1="50" y1="56" x2="100" y2="34" stroke-dasharray="3,3"/>
+                <line class="cad-line" x1="20" y1="70" x2="100" y2="74" stroke-dasharray="3,3"/>
+                <line class="cad-line" x1="72" y1="56" x2="200" y2="56" stroke-dasharray="3,3"/>
+                <text class="cad-label-cmd" x="105" y="20" style="font-size:8px">Planta (superior)</text>
+                <rect class="cad-fill" x="105" y="26" width="52" height="30"/>
+                <text class="cad-label-cmd" x="105" y="60" style="font-size:8px">Alzado (frontal)</text>
+                <rect class="cad-fill" x="105" y="66" width="52" height="38"/>
+                <text class="cad-label-cmd" x="205" y="60" style="font-size:8px">Perfil</text>
+                <rect class="cad-fill" x="205" y="66" width="30" height="38"/>
+                <text class="cad-label" x="5" y="112" style="font-size:8px">Cada vista se extrae con FLATSHOT, SOLVIEW/SOLDRAW o VIEWBASE según el destino del plano.</text>
+              </svg>
+            </div>
+
+            <div class="callout">
+              <span class="callout-title">¿Cuándo usar cada método?</span>
+              Usa <strong>FLATSHOT</strong> para una vista rápida en el espacio modelo. Usa <strong>SOLVIEW/SOLDRAW</strong> si trabajas en AutoCAD clásico con layouts y necesitas secciones. Usa <strong>VIEWBASE</strong> en AutoCAD moderno cuando quieras vistas asociativas que se actualicen solas al modificar el modelo.
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 16. Análisis de masa y volumen -->
+          <section id="massprop" data-topic="nivel4-massprop">
+            <h2><span class="sec-num">16</span>Análisis de masa y volumen (MASSPROP)</h2>
+            <p>El comando <span class="cmd-inline">MASSPROP</span> calcula propiedades físicas de un sólido 3D: <strong>volumen</strong>, <strong>área superficial</strong>, <strong>centro de masa</strong> y <strong>momentos de inercia</strong>. Se usa para verificar piezas y para estimar cantidades de material.</p>
+
+            <h3>Cuándo sirve</h3>
+            <ul>
+              <li><strong>Cálculos de concreto:</strong> volumen de una losa, zapata o viga modelada en 3D.</li>
+              <li><strong>Verificación de piezas:</strong> comprobar que el volumen de una pieza coincide con el valor teórico.</li>
+              <li><strong>Centroides:</strong> localizar el centro de masa de piezas para cálculos de equilibrio o anclaje.</li>
+            </ul>
+
+            <h3>Cómo leer el resultado y exportarlo</h3>
+            <p>Al ejecutar <span class="cmd-inline">MASSPROP</span> y seleccionar el sólido, AutoCAD muestra una ventana con los valores calculados. Las unidades dependen del dibujo (por ejemplo, cm³ si trabajas en centímetros). Para guardar el informe, responde <span class="cmd-inline">Y</span> a la pregunta "Escribir análisis en un archivo" y exporta los datos a un archivo de texto, o copia los valores desde el historial con <span class="key-inline">F2</span>.</p>
+
+            <div class="diagram-canvas">
+              <svg viewBox="0 0 280 170">
+                <text class="cad-label-cmd" x="5" y="14" style="font-size:8px">MASSPROP — propiedades de una pieza</text>
+                <polygon class="cad-fill" points="25,110 95,110 95,70 70,70 70,85 25,85"/>
+                <polygon class="cad-fill" points="25,85 45,64 120,64 100,85"/>
+                <polygon class="cad-fill" points="95,110 100,104 100,59 95,70"/>
+                <circle class="cad-point" cx="72" cy="88" r="3"/>
+                <line class="cad-line" x1="72" y1="88" x2="140" y2="60" stroke-dasharray="3,3"/>
+                <polygon class="cad-arrow" points="135,63 143,56 148,66"/>
+                <text class="cad-label" x="135" y="42" style="font-size:8px">Centro de masa</text>
+                <line class="cad-line" x1="95" y1="90" x2="185" y2="120"/>
+                <polygon class="cad-arrow" points="180,117 190,124 178,127"/>
+                <text class="cad-label-cmd" x="150" y="140" style="font-size:8px">Volumen = 0,0024 m³</text>
+                <text class="cad-label" x="5" y="150" style="font-size:8px">Área superficial, volumen, centro de masa y momentos de inercia en una sola consulta.</text>
+              </svg>
+            </div>
+
+            <h3>Relación con REGION</h3>
+            <p>El mismo comando <span class="cmd-inline">MASSPROP</span> también trabaja con <strong>regiones 2D</strong> (creadas con <span class="cmd-inline">REGION</span>): en ese caso informa <strong>área</strong>, <strong>perímetro</strong> y <strong>centroide</strong>, útil para calcular áreas y ubicar el centro de gravedad de figuras planas.</p>
+
+            <div class="callout">
+              <span class="callout-title">En la práctica</span>
+              Modela el objeto, conviértelo en un único sólido con <strong>UNION</strong> si tiene varias partes, ejecuta <strong>MASSPROP</strong> y anota volumen y centro de masa. Si el resultado sale en unidades raras, revisa las unidades del dibujo con <span class="cmd-inline">UNITS</span> antes de confiar en los números.
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
           <!-- Ejemplos inline -->
           <section class="inline-visual-examples" style="margin-top:2rem">
             <div class="visual-examples">
@@ -558,6 +762,55 @@
             </div>
           </section>
 
+          <!-- Autoevaluación del nivel -->
+          <section class="quiz-section" id="autoevaluacion">
+            <h2>Autoevaluación del nivel</h2>
+            <p class="quiz-intro">Responde las 5 preguntas para comprobar lo aprendido en este nivel. Verás la explicación de cada respuesta al hacer clic en una opción.</p>
+            <div class="quiz" data-quiz="nivel4">
+
+              <div class="quiz-q" data-answer="B">
+                <p class="quiz-question">¿Qué tipo de mapeado UV es el más indicado para una botella o un tubo?</p>
+                <button class="quiz-opt" data-key="A">A) Mapeado planar</button>
+                <button class="quiz-opt" data-key="B">B) Mapeado cilíndrico</button>
+                <button class="quiz-opt" data-key="C">C) Mapeado esférico</button>
+                <p class="quiz-feedback">El mapeado cilíndrico envuelve la textura alrededor de un eje, justo lo que necesita una botella o un tubo. El planar proyecta sobre una cara y el esférico está pensado para esferas.</p>
+              </div>
+
+              <div class="quiz-q" data-answer="C">
+                <p class="quiz-question">¿Qué fuente de luz produce sombras reales según la fecha, la hora y la ubicación geográfica?</p>
+                <button class="quiz-opt" data-key="A">A) Luz puntual</button>
+                <button class="quiz-opt" data-key="B">B) Luz focal (spot)</button>
+                <button class="quiz-opt" data-key="C">C) Luz solar (SUN)</button>
+                <p class="quiz-feedback">La luz solar simula el sol real: su posición se calcula a partir de la ubicación geográfica (GEOGRAPHICLOCATION) y de la fecha y hora, generando sombras coherentes con el proyecto.</p>
+              </div>
+
+              <div class="quiz-q" data-answer="A">
+                <p class="quiz-question">Necesitas una vista 2D rápida del modelo directamente en el espacio modelo. ¿Qué comando usas?</p>
+                <button class="quiz-opt" data-key="A">A) FLATSHOT</button>
+                <button class="quiz-opt" data-key="B">B) SOLVIEW / SOLDRAW</button>
+                <button class="quiz-opt" data-key="C">C) VIEWBASE</button>
+                <p class="quiz-feedback">FLATSHOT proyecta el modelo a una vista 2D plana en el espacio modelo: rápido y sencillo. SOLVIEW/SOLDRAW trabajan en layouts y VIEWBASE crea vistas asociativas en AutoCAD moderno.</p>
+              </div>
+
+              <div class="quiz-q" data-answer="B">
+                <p class="quiz-question">¿Qué dato NO te entrega el comando MASSPROP sobre un sólido 3D?</p>
+                <button class="quiz-opt" data-key="A">A) Volumen</button>
+                <button class="quiz-opt" data-key="B">B) Costo del material</button>
+                <button class="quiz-opt" data-key="C">C) Centro de masa</button>
+                <p class="quiz-feedback">MASSPROP calcula volumen, área superficial, centro de masa y momentos de inercia, pero no conoce precios ni costos de material.</p>
+              </div>
+
+              <div class="quiz-q" data-answer="C">
+                <p class="quiz-question">¿Cuál es el orden de trabajo recomendado para obtener un render realista?</p>
+                <button class="quiz-opt" data-key="A">A) Render → luces → materiales</button>
+                <button class="quiz-opt" data-key="B">B) Luces → render → materiales</button>
+                <button class="quiz-opt" data-key="C">C) Materiales → luces → render</button>
+                <p class="quiz-feedback">Primero asigna los materiales, luego configura la iluminación (incluida la luz solar) y por último renderiza. Haz siempre un render de prueba en baja calidad antes del final.</p>
+              </div>
+
+            </div>
+          </section>
+
         </article>
 
         <!-- Navegación anterior / siguiente -->
@@ -648,6 +901,7 @@
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
 <script src="../assets/js/i18n.js"></script>
 <script src="../assets/js/search-index.js"></script>
+<script src="../assets/js/quiz.js"></script>
 <script src="../assets/js/main.js"></script>
 
 </body>

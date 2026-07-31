@@ -4,6 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nivel 2 · Dibujo 2D — AutoCAD Guía</title>
+<link rel="canonical" href="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-2-dibujo-2d.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-2-dibujo-2d.html">
+<meta property="og:site_name" content="AutoCAD Guía">
+<meta property="og:title" content="Nivel 2 · Dibujo 2D — AutoCAD Guía">
+<meta property="og:description" content="Herramientas de dibujo y modificación, precisión con OSNAP, capas, bloques, acotación, texto y sombreado en AutoCAD. Nivel 2 de la guía completa.">
+<meta property="og:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nivel 2 · Dibujo 2D — AutoCAD Guía">
+<meta name="twitter:description" content="Herramientas de dibujo y modificación, precisión con OSNAP, capas, bloques, acotación, texto y sombreado en AutoCAD. Nivel 2 de la guía completa.">
+<meta name="twitter:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
 <meta name="description" content="Herramientas de dibujo y modificación, precisión con OSNAP, capas, bloques, acotación, texto y sombreado en AutoCAD. Nivel 2 de la guía completa.">
 
 <link rel="icon" type="image/svg+xml" href="../assets/img/autocad-2.svg">
@@ -19,6 +30,26 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Nivel · Dibujo 2D en AutoCAD",
+    "description": "Herramientas de dibujo, modificación, precisión, capas, bloques, cotas, texto y hatch.",
+    "provider": {
+      "@type": "Organization",
+      "name": "AutoCAD Guía",
+      "sameAs": "https://apaza-victor.github.io/Gu-a-de-Autocad/"
+    },
+    "inLanguage": "es",
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "online",
+      "learningResourceType": "tutorial",
+      "inLanguage": "es"
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -78,7 +109,7 @@
     <h1 data-i18n="lvl2.title">Dibujo 2D</h1>
     <p class="subtitle" data-i18n="lvl2.subtitle">El corazón de AutoCAD: cómo crear geometría, modificarla con precisión, organizarla en capas, reutilizarla con bloques y documentarla con cotas, texto y sombreados.</p>
     <div class="level-progress-bar"><div class="fill"></div></div>
-    <p class="level-progress-label">0 de 12 temas completados · 0%</p>
+    <p class="level-progress-label">0 de 15 temas completados · 0%</p>
   </div>
 </header>
 
@@ -104,6 +135,10 @@
             <li><a href="#lineas" data-toc="nivel2-lineas"><span class="toc-check"></span> Tipos de línea</a></li>
             <li><a href="#puntos" data-toc="nivel2-puntos"><span class="toc-check"></span> Puntos y división</a></li>
             <li><a href="#auxiliares" data-toc="nivel2-auxiliares"><span class="toc-check"></span> Geometría auxiliar</a></li>
+            <li><a href="#propiedades" data-toc="nivel2-propiedades"><span class="toc-check"></span> Propiedades de objeto</a></li>
+            <li><a href="#pedit" data-toc="nivel2-pedit"><span class="toc-check"></span> Edición de polilíneas</a></li>
+            <li><a href="#splines" data-toc="nivel2-splines"><span class="toc-check"></span> Splines y curvas</a></li>
+            <li><a href="#autoevaluacion"><span class="toc-check"></span> Autoevaluación</a></li>
           </ul>
           <hr style="border-color:var(--border-soft)" class="my-4">
           <a href="nivel-3-organizacion.html" class="btn-cad-outline w-100 text-center d-block">Siguiente nivel <i class="bi bi-arrow-right"></i></a>
@@ -480,6 +515,178 @@
             <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
           </section>
 
+          <!-- 13. Propiedades de objeto -->
+          <section id="propiedades" data-topic="nivel2-propiedades">
+            <h2><span class="sec-num">13</span>Propiedades de objeto</h2>
+            <p>Todo objeto de AutoCAD guarda propiedades: capa, color, tipo de línea, grosor de línea y escala de tipo de línea. Aprender a controlarlas es lo que separa un plano limpio de un archivo imposible de ordenar.</p>
+
+            <h3>La paleta PROPIEDADES (<span class="key-inline">Ctrl+1</span>)</h3>
+            <p>Se abre con el comando <span class="cmd-inline">PROPERTIES</span> o el atajo <span class="key-inline">Ctrl+1</span>. Muestra los datos del objeto seleccionado: capa, color, tipo y grosor de línea, escala de tipo de línea y su geometría (longitud, área, radio…). Si seleccionas varios objetos, muestra las propiedades comunes y puedes editarlas en masa.</p>
+
+            <h3>Copiar formato con MATCHPROP (<span class="key-inline">MA</span>)</h3>
+            <p><span class="cmd-inline">MATCHPROP</span> (<span class="key-inline">MA</span>) es el "pincel de formato": copia las propiedades de un objeto de origen (capa, color, tipo de línea, grosor, estilo de texto, estilo de cota…) y las aplica a los objetos que elijas después. Útil para que las líneas nuevas queden con el formato correcto sin tocar la paleta.</p>
+
+            <h3>Seleccionar por propiedades</h3>
+            <ul>
+              <li><strong><span class="cmd-inline">SELECTSIMILAR</span>:</strong> selecciona automáticamente todos los objetos con las mismas propiedades que el que acabas de elegir (misma capa, tipo de línea, altura de texto, etc.).</li>
+              <li><strong><span class="cmd-inline">QSELECT</span>:</strong> abre un cuadro de filtros para seleccionar en masa: "todas las líneas de la capa Cotas", "todos los círculos con radio mayor que 10", etc.</li>
+            </ul>
+
+            <div class="callout">
+              <span class="callout-title">ByLayer vs ByBlock</span>
+              Lo correcto es dibujar con color y tipo de línea <strong>ByLayer</strong> para que el objeto herede las propiedades de su capa. Si lo fijas a un valor concreto, el objeto deja de obedecer a la capa y será difícil agruparlo después. <strong>ByBlock</strong> solo se usa dentro de bloques, para que el bloque herede el color de la capa donde se inserte.
+            </div>
+
+            <table class="table-cad">
+              <thead><tr><th>Comando</th><th>Atajo</th><th>Uso</th></tr></thead>
+              <tbody>
+                <tr><td><span class="cmd-inline">PROPERTIES</span></td><td><span class="key-inline">Ctrl+1</span></td><td>Abre la paleta para ver y cambiar las propiedades del objeto seleccionado.</td></tr>
+                <tr><td><span class="cmd-inline">MATCHPROP</span></td><td><span class="key-inline">MA</span></td><td>Copia el formato de un objeto de origen a otros.</td></tr>
+                <tr><td><span class="cmd-inline">SELECTSIMILAR</span></td><td>—</td><td>Selecciona objetos con las mismas propiedades que el elegido.</td></tr>
+                <tr><td><span class="cmd-inline">QSELECT</span></td><td>—</td><td>Selección masiva por filtros de propiedad (capa, color, tipo…).</td></tr>
+              </tbody>
+            </table>
+
+            <div class="diagram-canvas">
+              <svg viewBox="0 0 280 170">
+                <text class="cad-label-cmd" x="10" y="16" style="font-size:8px">ANTES · objeto sin formato</text>
+                <line class="cad-line-old" x1="20" y1="55" x2="115" y2="55"/>
+                <line class="cad-line-old" x1="20" y1="75" x2="115" y2="75"/>
+                <circle class="cad-circle" cx="68" cy="65" r="22"/>
+                <text class="cad-label" x="20" y="110" style="font-size:8px">capa 0 · color por defecto</text>
+                <line class="cad-dim" x1="130" y1="65" x2="148" y2="65"/>
+                <polygon class="cad-arrow" points="143,60 155,65 143,70"/>
+                <text class="cad-label-cmd" x="158" y="16" style="font-size:8px">DESPUÉS · con MA aplicado</text>
+                <line class="cad-line-new" x1="168" y1="55" x2="262" y2="55"/>
+                <line class="cad-line-new" x1="168" y1="75" x2="262" y2="75"/>
+                <circle class="cad-circle" cx="215" cy="65" r="22"/>
+                <text class="cad-label" x="168" y="110" style="font-size:8px">capa Muros · color de capa</text>
+              </svg>
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 14. Edición de polilíneas -->
+          <section id="pedit" data-topic="nivel2-pedit">
+            <h2><span class="sec-num">14</span>Edición de polilíneas (PEDIT)</h2>
+            <p>Una polilínea es una serie de segmentos y arcos conectados que forman <strong>un solo objeto</strong>. <span class="cmd-inline">PEDIT</span> (<span class="key-inline">PE</span>) permite editarla: unir segmentos, cerrarla, mover vértices, darle grosor o convertirla en curva suave.</p>
+
+            <h3>Opciones principales de PEDIT</h3>
+            <ul>
+              <li><strong>Join (J):</strong> une otras líneas, arcos o polilíneas al final de la polilínea seleccionada.</li>
+              <li><strong>Close (C):</strong> cierra el contorno uniendo el último vértice con el primero.</li>
+              <li><strong>Edit vertex (E):</strong> recorre y mueve los vértices uno por uno.</li>
+              <li><strong>Width (W):</strong> cambia el grosor de la polilínea completa.</li>
+              <li><strong>Spline / Decurve:</strong> convierte la polilínea en una curva suave que pasa cerca de sus vértices, o la vuelve a su forma de segmentos rectos.</li>
+            </ul>
+
+            <table class="table-cad">
+              <thead><tr><th>Comando</th><th>Atajo</th><th>Qué hace</th></tr></thead>
+              <tbody>
+                <tr><td><span class="cmd-inline">PEDIT</span></td><td><span class="key-inline">PE</span></td><td>Edita una polilínea: unir, cerrar, vértices, grosor, curva.</td></tr>
+                <tr><td><span class="cmd-inline">JOIN</span></td><td><span class="key-inline">J</span></td><td>Une segmentos sueltos en una sola polilínea sin entrar en el modo PEDIT.</td></tr>
+                <tr><td><span class="cmd-inline">EXPLODE</span></td><td><span class="key-inline">X</span></td><td>Descompone la polilínea en líneas y arcos independientes.</td></tr>
+              </tbody>
+            </table>
+
+            <div class="callout">
+              <span class="callout-title">Diferencia PEDIT vs JOIN</span>
+              <span class="cmd-inline">JOIN</span> es más directo para unir: seleccionas las entidades y quedan como una sola polilínea. <span class="cmd-inline">PEDIT</span> además permite editar la polilínea resultante. Para unir un solo trazo, usa <span class="cmd-inline">JOIN</span>; para contornos que luego vas a desfasar o rellenar, asegúrate de que queden cerrados.
+            </div>
+
+            <h3>Por qué importan las polilíneas</h3>
+            <p>Comandos como <span class="cmd-inline">OFFSET</span> y <span class="cmd-inline">HATCH</span> funcionan mejor sobre polilíneas: <strong>OFFSET</strong> desplaza la polilínea completa como una pieza (ideal para muros) y <strong>HATCH</strong> reconoce el contorno cerrado sin huecos. Con líneas sueltas, ambos comandos fallan o requieren seleccionar cada segmento.</p>
+
+            <h3>Ejemplo práctico paso a paso</h3>
+            <ol>
+              <li>Dibuja el contorno de un muro con <span class="cmd-inline">LINE</span>: tres o cuatro segmentos sueltos.</li>
+              <li>Escribe <span class="cmd-inline">PEDIT</span>, selecciona el primer segmento y responde <span class="key-inline">S</span> (Sí) cuando pregunte si convertirlo en polilínea.</li>
+              <li>Usa la opción <strong>Join (J)</strong> y selecciona los demás segmentos.</li>
+              <li>Pulsa <strong>Enter</strong> dos veces para terminar. Ahora tienes una sola polilínea.</li>
+              <li>Aplícale <span class="cmd-inline">OFFSET</span> para dar espesor o <span class="cmd-inline">HATCH</span> para rellenar.</li>
+            </ol>
+
+            <div class="callout">
+              <span class="callout-title">Truco</span>
+              Haz <strong>doble clic</strong> sobre una polilínea y se abrirá directamente <span class="cmd-inline">PEDIT</span> con las opciones de edición.
+            </div>
+
+            <div class="diagram-steps">
+              <div class="diagram-step">
+                <span class="diagram-step-label">Antes: 3 líneas separadas</span>
+                <svg viewBox="0 0 200 80">
+                  <line class="cad-line-old" x1="20" y1="60" x2="90" y2="60"/>
+                  <line class="cad-line-old" x1="90" y1="60" x2="130" y2="25"/>
+                  <line class="cad-line-old" x1="130" y1="25" x2="180" y2="45"/>
+                </svg>
+              </div>
+              <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+              <div class="diagram-step">
+                <span class="diagram-step-label">Después: 1 polilínea</span>
+                <svg viewBox="0 0 200 80">
+                  <polyline class="cad-line-new" points="20,60 90,60 130,25 180,45"/>
+                </svg>
+              </div>
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+          <!-- 15. Splines y curvas -->
+          <section id="splines" data-topic="nivel2-splines">
+            <h2><span class="sec-num">15</span>Splines y curvas</h2>
+            <p>Una <strong>spline</strong> es una curva suave que se define a partir de puntos de control. A diferencia del arco, no tiene un radio constante: se adapta libremente a la forma que quieras trazar. Se dibuja con <span class="cmd-inline">SPLINE</span> (<span class="key-inline">SPL</span>).</p>
+
+            <h3>¿Spline, arco o polilínea?</h3>
+            <table class="table-cad">
+              <thead><tr><th>Tipo</th><th>Comando</th><th>Úsalo cuando</th></tr></thead>
+              <tbody>
+                <tr><td>Arco</td><td><span class="cmd-inline">ARC</span></td><td>La curva tiene un radio constante (esquinas redondeadas, arcos de círculo).</td></tr>
+                <tr><td>Polilínea</td><td><span class="cmd-inline">PLINE</span></td><td>Necesitas segmentos rectos y arcos combinados, o editar con PEDIT.</td></tr>
+                <tr><td>Spline</td><td><span class="cmd-inline">SPLINE</span></td><td>La curva es libre y orgánica: topografía, viales, piezas de diseño.</td></tr>
+              </tbody>
+            </table>
+
+            <h3>Control de la curva</h3>
+            <p>Con la spline dibujada puedes editar sus <strong>puntos de control</strong> (o puntos de ajuste) para modelar la forma. La <strong>tolerancia</strong> define cuán cerca debe pasar la curva de los puntos: tolerancia 0 pasa exactamente por ellos; tolerancias mayores la suavizan más.</p>
+            <ul>
+              <li><span class="cmd-inline">SPLINEDIT</span>: edita la spline (mueve puntos de control, ajusta tolerancia, cierra o invierte la curva).</li>
+              <li><span class="cmd-inline">PEDIT</span> → <strong>Spline</strong>: convierte una polilínea en una curva spline suave.</li>
+              <li><strong>Flatten</strong> o <span class="cmd-inline">SPLINEDIT</span> → Decurve: convierte la spline de vuelta a segmentos rectos.</li>
+            </ul>
+
+            <h3>Uso real</h3>
+            <ul>
+              <li><strong>Topografía:</strong> curvas de nivel que siguen el terreno.</li>
+              <li><strong>Trazados viales:</strong> el eje de una carretera no es un arco de radio único.</li>
+              <li><strong>Piezas orgánicas:</strong> carcasas, interiores de vehículos y diseño industrial.</li>
+            </ul>
+
+            <div class="callout">
+              <span class="callout-title">No abuses</span>
+              Para curvas de <strong>radio constante</strong> (una esquina redondeada de 50 mm) usa <span class="cmd-inline">ARC</span> o <span class="cmd-inline">FILLET</span>. La spline está pensada para curvas libres; abusar de ella hace los planos difíciles de acotar y de reproducir.
+            </div>
+
+            <div class="diagram-canvas">
+              <svg viewBox="0 0 280 170">
+                <text class="cad-label-cmd" x="10" y="16" style="font-size:8px">SPLINE · curva por puntos de control</text>
+                <path class="cad-line" d="M 20,130 C 60,40 120,60 150,110 S 230,150 260,80"/>
+                <circle class="cad-point" cx="20" cy="130" r="4"/>
+                <circle class="cad-point-cyan" cx="60" cy="40" r="4"/>
+                <circle class="cad-point-cyan" cx="120" cy="60" r="4"/>
+                <circle class="cad-point-cyan" cx="150" cy="110" r="4"/>
+                <circle class="cad-point-cyan" cx="230" cy="150" r="4"/>
+                <circle class="cad-point" cx="260" cy="80" r="4"/>
+                <text class="cad-label" x="10" y="152" style="font-size:8px">inicio</text>
+                <text class="cad-label" x="240" y="72" style="font-size:8px">fin</text>
+                <text class="cad-label" x="135" y="140" style="font-size:8px">puntos de control →</text>
+              </svg>
+            </div>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
           <!-- Ejemplos inline -->
           <section class="inline-visual-examples" style="margin-top:2rem">
             <div class="visual-examples">
@@ -783,6 +990,54 @@
             </div>
           </section>
 
+          <section class="quiz-section" id="autoevaluacion">
+            <h2>Autoevaluación del nivel</h2>
+            <p class="quiz-intro">Responde las 5 preguntas y comprueba cuánto has retenido de este nivel. Cada respuesta muestra una explicación al instante.</p>
+            <div class="quiz" data-quiz="nivel2">
+
+              <div class="quiz-q" data-answer="B">
+                <p class="quiz-question">1) ¿Cuál es el atajo de MATCHPROP y qué hace?</p>
+                <button class="quiz-opt" data-key="A">A) MP: cambia la escala de todos los tipos de línea del dibujo.</button>
+                <button class="quiz-opt" data-key="B">B) MA: copia las propiedades de un objeto de origen a otros objetos.</button>
+                <button class="quiz-opt" data-key="C">C) M: mueve un objeto copiando su formato a la vez.</button>
+                <p class="quiz-feedback">MATCHPROP se escribe con el atajo MA y copia propiedades (capa, color, tipo de línea, texto…) entre objetos.</p>
+              </div>
+
+              <div class="quiz-q" data-answer="A">
+                <p class="quiz-question">2) ¿Cuál es la diferencia principal entre PEDIT y JOIN?</p>
+                <button class="quiz-opt" data-key="A">A) JOIN une segmentos en una polilínea; PEDIT además permite editarla (cerrar, vértices, grosor, spline).</button>
+                <button class="quiz-opt" data-key="B">B) Son dos nombres para el mismo comando; no hay diferencia.</button>
+                <button class="quiz-opt" data-key="C">C) JOIN convierte polilíneas en líneas; PEDIT hace lo contrario.</button>
+                <p class="quiz-feedback">JOIN es la vía rápida para unir; PEDIT edita la polilínea con opciones como Join, Close, Edit vertex, Width y Spline.</p>
+              </div>
+
+              <div class="quiz-q" data-answer="C">
+                <p class="quiz-question">3) ¿Cuándo conviene usar una spline en lugar de un arco?</p>
+                <button class="quiz-opt" data-key="A">A) Siempre, porque las splines son más precisas.</button>
+                <button class="quiz-opt" data-key="B">B) Cuando la curva tiene un radio constante y conocido.</button>
+                <button class="quiz-opt" data-key="C">C) Cuando la curva es libre y orgánica, como curvas de nivel o trazados viales.</button>
+                <p class="quiz-feedback">El arco (o FILLET) es para radio constante; la spline modela curvas libres que no siguen un radio único.</p>
+              </div>
+
+              <div class="quiz-q" data-answer="B">
+                <p class="quiz-question">4) ¿Qué hace el comando EXPLODE?</p>
+                <button class="quiz-opt" data-key="A">A) Cierra automáticamente todos los contornos abiertos del dibujo.</button>
+                <button class="quiz-opt" data-key="B">B) Descompone un objeto compuesto (bloque o polilínea) en entidades simples.</button>
+                <button class="quiz-opt" data-key="C">C) Copia un objeto con todas sus propiedades a otra capa.</button>
+                <p class="quiz-feedback">EXPLODE (X) rompe bloques y polilíneas en sus piezas sueltas. Úsalo con cuidado: no se puede "des-explosionar".</p>
+              </div>
+
+              <div class="quiz-q" data-answer="A">
+                <p class="quiz-question">5) ¿Por qué es correcto dibujar con color y tipo de línea ByLayer?</p>
+                <button class="quiz-opt" data-key="A">A) Porque el objeto hereda las propiedades de su capa y así se puede organizar y apagar todo a la vez.</button>
+                <button class="quiz-opt" data-key="B">B) Porque ByLayer hace que todos los objetos se dibujen en blanco y negro.</button>
+                <button class="quiz-opt" data-key="C">C) Porque es el único modo que permite imprimir con grosor.</button>
+                <p class="quiz-feedback">Con ByLayer el objeto obedece a su capa: cambias el color o el estado de la capa y se actualiza todo el dibujo a la vez.</p>
+              </div>
+
+            </div>
+          </section>
+
         </article>
 
         <!-- Navegación anterior / siguiente -->
@@ -873,6 +1128,7 @@
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
 <script src="../assets/js/i18n.js"></script>
 <script src="../assets/js/search-index.js"></script>
+<script src="../assets/js/quiz.js"></script>
 <script src="../assets/js/main.js"></script>
 
 </body>

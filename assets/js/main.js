@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMarkDone();
   initFaqAccordion();
   initCommandFilters();
+  initCommandLevelFilters();
   initCommandSearch();
   initResourceFilters();
   initGlobalSearch();
@@ -22,6 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initKeyboardAccessibility();
   initNavbarToggler();
   initCopyButtons();
+  initCmdCopy();
+  initCmdVisualLinks();
+  initInterfaceMap();
+  initChecklistDownload();
 });
 
 /* ---------- Animaciones al hacer scroll ---------- */
@@ -271,68 +276,83 @@ function initFaqAccordion(){
   });
 }
 
-/* ---------- Filtros de comandos ---------- */
+/* ---------- Filtros de comandos (categoría + nivel) ---------- */
 function initCommandFilters(){
   const filtersContainer = document.getElementById('cmdFilters');
-  const grid = document.getElementById('cmdGrid');
-  const countEl = document.getElementById('cmdCount');
-  const emptyEl = document.getElementById('cmdEmpty');
-  if (!filtersContainer || !grid) return;
+  if (!filtersContainer) return;
 
   const buttons = filtersContainer.querySelectorAll('.cmd-filter-btn');
-  const cards = grid.querySelectorAll('.cmd-full-card');
-
   buttons.forEach(btn => {
     btn.addEventListener('click', () => {
       buttons.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      const filter = btn.getAttribute('data-filter');
-      let visible = 0;
-
-      cards.forEach(card => {
-        const cat = card.getAttribute('data-cat');
-        const show = filter === 'todos' || cat === filter;
-        card.style.display = show ? '' : 'none';
-        if (show) visible++;
-      });
-
-      if (countEl) countEl.textContent = (window.I18N_SYSTEM ? I18N_SYSTEM.t('ui.showing') : 'Mostrando') + ' ' + visible + ' ' + (window.I18N_SYSTEM ? I18N_SYSTEM.t(visible !== 1 ? 'ui.commands' : 'ui.command_single') : 'comando' + (visible !== 1 ? 's' : ''));
-      if (emptyEl) emptyEl.style.display = visible === 0 ? '' : 'none';
+      applyCmdFilters();
     });
   });
+}
+
+function initCommandLevelFilters(){
+  const filtersContainer = document.getElementById('cmdLevelFilters');
+  if (!filtersContainer) return;
+
+  const buttons = filtersContainer.querySelectorAll('.cmd-filter-btn');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      applyCmdFilters();
+    });
+  });
+}
+
+function applyCmdFilters(){
+  const grid = document.getElementById('cmdGrid');
+  if (!grid) return;
+
+  const catFilter = (document.querySelector('#cmdFilters .cmd-filter-btn.active') || {}).getAttribute?.('data-filter') || 'todos';
+  const levelFilter = (document.querySelector('#cmdLevelFilters .cmd-filter-btn.active') || {}).getAttribute?.('data-filter') || 'todos';
+  const searchInput = document.getElementById('cmdSearchInput');
+  const q = (searchInput?.value || '').toLowerCase().trim();
+
+  const cards = grid.querySelectorAll('.cmd-full-card');
+  let visible = 0;
+
+  cards.forEach(card => {
+    const cat = card.getAttribute('data-cat');
+    const level = card.getAttribute('data-level');
+
+    const name = (card.getAttribute('data-cmd') || '').toLowerCase();
+    const keys = (card.getAttribute('data-keys') || '').toLowerCase();
+    const desc = (card.querySelector('.cmd-desc')?.textContent || '').toLowerCase();
+
+    const matchCat = catFilter === 'todos' || cat === catFilter;
+    const matchLevel = levelFilter === 'todos' || level === levelFilter;
+    const matchSearch = !q || name.includes(q) || keys.includes(q) || desc.includes(q) || cat.includes(q);
+
+    const show = matchCat && matchLevel && matchSearch;
+    card.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+
+  const countEl = document.getElementById('cmdCount');
+  if (countEl) countEl.textContent = (window.I18N_SYSTEM ? I18N_SYSTEM.t('ui.showing') : 'Mostrando') + ' ' + visible + ' ' + (window.I18N_SYSTEM ? I18N_SYSTEM.t(visible !== 1 ? 'ui.commands' : 'ui.command_single') : 'comando' + (visible !== 1 ? 's' : ''));
+  const emptyEl = document.getElementById('cmdEmpty');
+  if (emptyEl) emptyEl.style.display = visible === 0 ? '' : 'none';
 }
 
 /* ---------- Búsqueda de comandos ---------- */
 function initCommandSearch(){
   const input = document.getElementById('cmdSearchInput');
-  const grid = document.getElementById('cmdGrid');
-  const countEl = document.getElementById('cmdCount');
-  const emptyEl = document.getElementById('cmdEmpty');
-  if (!input || !grid) return;
+  if (!input) return;
 
-  const cards = grid.querySelectorAll('.cmd-full-card');
   const allFilters = document.querySelectorAll('#cmdFilters .cmd-filter-btn');
 
   input.addEventListener('input', () => {
-    const q = input.value.toLowerCase().trim();
-
+    // Al buscar, la categoría vuelve a "Todos" (el texto es el que filtra),
+    // pero el filtro por nivel se mantiene si el usuario lo eligió.
     allFilters.forEach(b => b.classList.remove('active'));
     allFilters[0].classList.add('active');
-
-    let visible = 0;
-    cards.forEach(card => {
-      const name = (card.getAttribute('data-cmd') || '').toLowerCase();
-      const keys = (card.getAttribute('data-keys') || '').toLowerCase();
-      const desc = (card.querySelector('.cmd-desc')?.textContent || '').toLowerCase();
-      const cat = (card.getAttribute('data-cat') || '').toLowerCase();
-
-      const match = !q || name.includes(q) || keys.includes(q) || desc.includes(q) || cat.includes(q);
-      card.style.display = match ? '' : 'none';
-      if (match) visible++;
-    });
-
-    if (countEl) countEl.textContent = (window.I18N_SYSTEM ? I18N_SYSTEM.t('ui.showing') : 'Mostrando') + ' ' + visible + ' ' + (window.I18N_SYSTEM ? I18N_SYSTEM.t(visible !== 1 ? 'ui.commands' : 'ui.command_single') : 'comando' + (visible !== 1 ? 's' : ''));
-    if (emptyEl) emptyEl.style.display = visible === 0 ? '' : 'none';
+    applyCmdFilters();
   });
 }
 
@@ -813,4 +833,137 @@ function downloadShortcuts(){
   a.click();
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
+}
+
+/* ---------- Copiar comando desde la tarjeta del diccionario ---------- */
+function initCmdCopy(){
+  document.querySelectorAll('.cmd-full-card .cmd-head').forEach(head => {
+    let actions = head.querySelector('.cmd-head-actions');
+    const cmdName = (head.querySelector('.cmd-name') || {}).textContent || '';
+    if (!cmdName) return;
+    if (!actions) {
+      actions = document.createElement('div');
+      actions.className = 'cmd-head-actions';
+      head.appendChild(actions);
+    }
+
+    const btn = document.createElement('button');
+    btn.className = 'cmd-copy-btn';
+    btn.type = 'button';
+    btn.setAttribute('aria-label', 'Copiar comando ' + cmdName);
+    btn.innerHTML = '<i class="bi bi-clipboard"></i> <span>Copiar</span>';
+
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(cmdName).then(() => {
+        btn.innerHTML = '<i class="bi bi-check-lg"></i> <span>¡Copiado!</span>';
+        btn.style.color = 'var(--layer-green)';
+        btn.style.borderColor = 'var(--layer-green)';
+        setTimeout(() => {
+          btn.innerHTML = '<i class="bi bi-clipboard"></i> <span>Copiar</span>';
+          btn.style.color = '';
+          btn.style.borderColor = '';
+        }, 1500);
+      });
+    });
+    actions.appendChild(btn);
+  });
+}
+
+/* ---------- Enlace a ejemplo visual desde el diccionario ---------- */
+const VISUAL_MAP = {
+  line: 'vis-line', pline: 'vis-line', offset: 'vis-offset', trim: 'vis-trim',
+  fillet: 'vis-fillet', mirror: 'vis-mirror', array: 'vis-array', osnap: 'vis-osnap',
+  layer: 'vis-layers', extrude: 'vis-extrude', union: 'vis-boolean', subtract: 'vis-boolean',
+  chamfer: 'vis-chamfer', extend: 'vis-extend', stretch: 'vis-stretch', circle: 'vis-circle',
+  rectang: 'vis-rectangle', hatch: 'vis-hatch', move: 'vis-movecopy', copy: 'vis-movecopy',
+  rotate: 'vis-rotate', dim: 'vis-dim', dimaligned: 'vis-dim', polygon: 'vis-polygon',
+  arc: 'vis-arc', scale: 'vis-scale', explode: 'vis-explode', join: 'vis-join',
+  box: 'vis-box', sweep: 'vis-sweep', orbit: 'vis-orbit', xref: 'vis-xref',
+  purge: 'vis-purge', audit: 'vis-purge', block: 'vis-block', insert: 'vis-block',
+  ellipse: 'vis-ellipse', spline: 'vis-spline', mtext: 'vis-mtext', text: 'vis-text',
+  break: 'vis-break', align: 'vis-align', divide: 'vis-divide', revolve: 'vis-revolve',
+  loft: 'vis-loft', area: 'vis-area', dist: 'vis-dist', layeriso: 'vis-layeriso'
+};
+
+function initCmdVisualLinks(){
+  document.querySelectorAll('.cmd-full-card[data-cmd]').forEach(card => {
+    const name = (card.getAttribute('data-cmd') || '').toLowerCase();
+    const target = VISUAL_MAP[name];
+    if (!target) return;
+    const actions = card.querySelector('.cmd-head-actions');
+    if (!actions) return;
+
+    const link = document.createElement('a');
+    link.className = 'cmd-visual-link';
+    link.href = 'ejemplos-visuales.html#' + target;
+    link.innerHTML = '<i class="bi bi-eye"></i> Ver ejemplo';
+    actions.appendChild(link);
+  });
+}
+
+/* ---------- Mapa interactivo de la interfaz (Nivel 1) ---------- */
+function initInterfaceMap(){
+  const map = document.getElementById('interfaceMap');
+  if (!map) return;
+
+  const pins = map.querySelectorAll('.iface-pin');
+  const zones = map.querySelectorAll('.iface-zone');
+  if (!pins.length || !zones.length) return;
+
+  function activate(name){
+    pins.forEach(p => p.classList.toggle('active', p.getAttribute('data-zone') === name));
+    zones.forEach(z => z.classList.toggle('active', z.getAttribute('data-zone') === name));
+  }
+
+  pins.forEach(pin => {
+    pin.addEventListener('click', () => activate(pin.getAttribute('data-zone')));
+    pin.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        activate(pin.getAttribute('data-zone'));
+      }
+    });
+  });
+  zones.forEach(zone => {
+    zone.addEventListener('click', () => activate(zone.getAttribute('data-zone')));
+    zone.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        activate(zone.getAttribute('data-zone'));
+      }
+    });
+  });
+
+  activate(zones[0].getAttribute('data-zone'));
+}
+
+/* ---------- Descarga de checklist (Trucos) ---------- */
+function initChecklistDownload(){
+  document.querySelectorAll('[data-checklist]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const containerId = btn.getAttribute('data-checklist');
+      const container = document.getElementById(containerId);
+      if (!container) return;
+      const filename = btn.getAttribute('data-filename') || 'checklist-autocad.txt';
+      const title = btn.getAttribute('data-title') || 'CHECKLIST AutoCAD Guía';
+
+      const items = container.querySelectorAll('li');
+      let text = title + '\n' + '='.repeat(50) + '\n\n';
+      items.forEach(li => {
+        text += '[ ] ' + li.textContent.replace(/\s+/g, ' ').trim() + '\n';
+      });
+      text += '\n' + '='.repeat(50) + '\n';
+      text += 'Fuente: AutoCAD Guía — https://apaza-victor.github.io/Gu-a-de-Autocad/\n';
+
+      const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    });
+  });
 }

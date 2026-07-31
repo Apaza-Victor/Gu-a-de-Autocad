@@ -4,6 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Diccionario de comandos — AutoCAD Guía</title>
+<link rel="canonical" href="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/comandos.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/comandos.html">
+<meta property="og:site_name" content="AutoCAD Guía">
+<meta property="og:title" content="Diccionario de comandos — AutoCAD Guía">
+<meta property="og:description" content="Busca cualquier comando de AutoCAD, su atajo de teclado, categoría y nivel. Diccionario completo con buscador y filtros.">
+<meta property="og:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Diccionario de comandos — AutoCAD Guía">
+<meta name="twitter:description" content="Busca cualquier comando de AutoCAD, su atajo de teclado, categoría y nivel. Diccionario completo con buscador y filtros.">
+<meta name="twitter:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
 <meta name="description" content="Busca cualquier comando de AutoCAD, su atajo de teclado, categoría y nivel. Diccionario completo con buscador y filtros.">
 
 <link rel="icon" type="image/svg+xml" href="../assets/img/autocad-2.svg">
@@ -96,13 +107,20 @@
     <button class="cmd-filter-btn" data-filter="consulta" data-i18n="cmd.filter.consulta">Consulta</button>
     </div>
 
-    <p class="mono small text-muted-custom" id="cmdCount">Mostrando 95 comandos</p>
+    <p class="mono small text-muted-custom" id="cmdCount">Mostrando 242 comandos</p>
   </div>
 </header>
 
 <!-- ===================== LISTA DE COMANDOS ===================== -->
 <section style="padding:3rem 0 5rem">
   <div class="container container-xl">
+    <p class="mono small text-muted-custom" style="margin-bottom:.5rem">Filtrar por nivel</p>
+    <div class="cmd-level-filters" id="cmdLevelFilters">
+      <button class="cmd-filter-btn active" data-filter="todos">Todos</button>
+      <button class="cmd-filter-btn" data-filter="basico">Básico</button>
+      <button class="cmd-filter-btn" data-filter="intermedio">Intermedio</button>
+      <button class="cmd-filter-btn" data-filter="avanzado">Avanzado</button>
+    </div>
     <div class="cmd-grid" id="cmdGrid">
       <!-- DIBUJO -->
       <div class="cmd-full-card" data-cmd="line" data-cat="dibujo" data-level="basico" data-keys="l">
@@ -505,6 +523,19 @@
             <span class="res-lang en">Intermedio</span>
           </div>
           <p class="cmd-desc">Abre el editor de bloques para modificar el contenido de un bloque definido.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="sheetset" data-cat="bloques" data-level="avanzado" data-keys="ssm">
+        <div class="cmd-icon"><i class="bi bi-collection"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">SHEETSET</span>
+            <span class="cmd-key">SSM</span>
+            <span class="cmd-cat">Bloques</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Abre el administrador de conjuntos de planos para organizar las láminas del proyecto.</p>
         </div>
       </div>
 
@@ -935,6 +966,32 @@
         </div>
       </div>
 
+      <div class="cmd-full-card" data-cmd="revcloud" data-cat="dibujo" data-level="intermedio" data-keys="revc">
+        <div class="cmd-icon"><i class="bi bi-cloud-download"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">REVCLOUD</span>
+            <span class="cmd-key">REVC</span>
+            <span class="cmd-cat">Dibujo</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Dibuja una nube de revisión con arcos para marcar cambios en el plano.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="wipeout" data-cat="dibujo" data-level="intermedio" data-keys="wi">
+        <div class="cmd-icon"><i class="bi bi-square-half"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">WIPEOUT</span>
+            <span class="cmd-key">WI</span>
+            <span class="cmd-cat">Dibujo</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Cubre parte del dibujo con una máscara que oculta lo que está debajo.</p>
+        </div>
+      </div>
+
       <!-- MODIFICACIÓN -->
       <div class="cmd-full-card" data-cmd="erase" data-cat="modificacion" data-level="basico" data-keys="e">
         <div class="cmd-icon"><i class="bi bi-eraser"></i></div>
@@ -1337,6 +1394,1737 @@
         </div>
       </div>
 
+      <div class="cmd-full-card" data-cmd="id" data-cat="consulta" data-level="basico" data-keys="id">
+        <div class="cmd-icon"><i class="bi bi-crosshair"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">ID</span>
+            <span class="cmd-key">ID</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Muestra las coordenadas X,Y,Z de un punto cualquiera del dibujo.</p>
+        </div>
+      </div>
+
+      <div class="cmd-full-card" data-cmd="publish" data-cat="consulta" data-level="avanzado" data-keys="pub">
+        <div class="cmd-icon"><i class="bi bi-printer"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">PUBLISH</span>
+            <span class="cmd-key">PUB</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Imprime o exporta a PDF varios planos (layouts) de una sola vez.</p>
+        </div>
+      </div>
+
+      <!-- NUEVOS: lista oficial de atajos (autodesk.com/shortcuts/autocad) -->
+      <div class="cmd-full-card" data-cmd="boundary" data-cat="dibujo" data-level="intermedio" data-keys="bo">
+        <div class="cmd-icon"><i class="bi bi-bounding-box-circles"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">BOUNDARY</span>
+            <span class="cmd-key">BO</span>
+            <span class="cmd-cat">Dibujo</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Crea una región o polilínea a partir de un área cerrada sin tener que dibujarla de nuevo.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="donut" data-cat="dibujo" data-level="intermedio" data-keys="do">
+        <div class="cmd-icon"><i class="bi bi-record-circle"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">DONUT</span>
+            <span class="cmd-key">DO</span>
+            <span class="cmd-cat">Dibujo</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Dibuja un anillo o círculo relleno definido por diámetros interior y exterior.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="mline" data-cat="dibujo" data-level="avanzado" data-keys="ml">
+        <div class="cmd-icon"><i class="bi bi-bezier"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">MLINE</span>
+            <span class="cmd-key">ML</span>
+            <span class="cmd-cat">Dibujo</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Dibuja varias líneas paralelas (entre 1 y 16) como un solo objeto.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="solid" data-cat="dibujo" data-level="intermedio" data-keys="so">
+        <div class="cmd-icon"><i class="bi bi-triangle-fill"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">SOLID</span>
+            <span class="cmd-key">SO</span>
+            <span class="cmd-cat">Dibujo</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Crea triángulos y cuadriláteros sólidos rellenos.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="gradient" data-cat="dibujo" data-level="intermedio" data-keys="gd">
+        <div class="cmd-icon"><i class="bi bi-brightness-high"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">GRADIENT</span>
+            <span class="cmd-key">GD</span>
+            <span class="cmd-cat">Dibujo</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Rellena un área cerrada o objetos con un degradado de color.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="divide" data-cat="dibujo" data-level="intermedio" data-keys="div">
+        <div class="cmd-icon"><i class="bi bi-signpost-split"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">DIVIDE</span>
+            <span class="cmd-key">DIV</span>
+            <span class="cmd-cat">Dibujo</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Coloca puntos o bloques a intervalos iguales a lo largo de un objeto.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="polysolid" data-cat="3d" data-level="avanzado" data-keys="psolid">
+        <div class="cmd-icon"><i class="bi bi-box"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">POLYSOLID</span>
+            <span class="cmd-key">PSOLID</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Crea un polisólido con forma de pared 3D a partir de una polilínea o línea.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="pyramid" data-cat="3d" data-level="intermedio" data-keys="pyr">
+        <div class="cmd-icon"><i class="bi bi-box"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">PYRAMID</span>
+            <span class="cmd-key">PYR</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Crea un sólido 3D en forma de pirámide con base poligonal.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="torus" data-cat="3d" data-level="intermedio" data-keys="tor">
+        <div class="cmd-icon"><i class="bi bi-radioactive"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">TORUS</span>
+            <span class="cmd-key">TOR</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Crea un sólido 3D con forma de dona o toroide.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="draworder" data-cat="modificacion" data-level="intermedio" data-keys="dr">
+        <div class="cmd-icon"><i class="bi bi-layers"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">DRAWORDER</span>
+            <span class="cmd-key">DR</span>
+            <span class="cmd-cat">Modificación</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Cambia el orden de dibujo de los objetos: delante, detrás, sobre o bajo otros.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="mleaderalign" data-cat="modificacion" data-level="avanzado" data-keys="mla">
+        <div class="cmd-icon"><i class="bi bi-text-indent-left"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">MLEADERALIGN</span>
+            <span class="cmd-key">MLA</span>
+            <span class="cmd-cat">Modificación</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Alinea y distribuye varias directrices múltiples seleccionadas.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="mleadercollect" data-cat="modificacion" data-level="avanzado" data-keys="mlc">
+        <div class="cmd-icon"><i class="bi bi-collection"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">MLEADERCOLLECT</span>
+            <span class="cmd-key">MLC</span>
+            <span class="cmd-cat">Modificación</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Organiza directrices con bloques en filas o columnas con una sola directriz.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="mleaderedit" data-cat="modificacion" data-level="avanzado" data-keys="mle">
+        <div class="cmd-icon"><i class="bi bi-pencil-square"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">MLEADEREDIT</span>
+            <span class="cmd-key">MLE</span>
+            <span class="cmd-cat">Modificación</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Añade o elimina líneas de directriz de un objeto de directriz múltiple.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="imageclip" data-cat="modificacion" data-level="intermedio" data-keys="icl">
+        <div class="cmd-icon"><i class="bi bi-crop"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">IMAGECLIP</span>
+            <span class="cmd-key">ICL</span>
+            <span class="cmd-cat">Modificación</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Recorta la visualización de una imagen dentro de un contorno especificado.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="xclip" data-cat="modificacion" data-level="avanzado" data-keys="xc">
+        <div class="cmd-icon"><i class="bi bi-bounding-box"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">XCLIP</span>
+            <span class="cmd-key">XC</span>
+            <span class="cmd-cat">Modificación</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Recorta la visualización de una referencia externa o bloque a un contorno.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="pastespec" data-cat="modificacion" data-level="intermedio" data-keys="pa">
+        <div class="cmd-icon"><i class="bi bi-clipboard-plus"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">PASTESPEC</span>
+            <span class="cmd-key">PA</span>
+            <span class="cmd-cat">Modificación</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Pega objetos del portapapeles controlando el formato de los datos.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="filter" data-cat="modificacion" data-level="avanzado" data-keys="fi">
+        <div class="cmd-icon"><i class="bi bi-funnel"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">FILTER</span>
+            <span class="cmd-key">FI</span>
+            <span class="cmd-cat">Modificación</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Crea una lista de requisitos que un objeto debe cumplir para ser seleccionado.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="fsmode" data-cat="modificacion" data-level="intermedio" data-keys="fs">
+        <div class="cmd-icon"><i class="bi bi-circle-half"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">FSMODE</span>
+            <span class="cmd-key">FS</span>
+            <span class="cmd-cat">Modificación</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Crea un conjunto de selección con todos los objetos que tocan el objeto elegido.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="rename" data-cat="modificacion" data-level="intermedio" data-keys="ren">
+        <div class="cmd-icon"><i class="bi bi-tag"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">RENAME</span>
+            <span class="cmd-key">REN</span>
+            <span class="cmd-cat">Modificación</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Cambia los nombres de capas, estilos, bloques y otros elementos con nombre.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="textedit" data-cat="edicion" data-level="intermedio" data-keys="tedit">
+        <div class="cmd-icon"><i class="bi bi-fonts"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">TEXTEDIT</span>
+            <span class="cmd-key">TEDIT</span>
+            <span class="cmd-cat">Edición</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Edita una cota, texto u objeto de restricción dimensional.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="ddedit" data-cat="edicion" data-level="intermedio" data-keys="ed">
+        <div class="cmd-icon"><i class="bi bi-input-cursor"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">DDEDIT</span>
+            <span class="cmd-key">ED</span>
+            <span class="cmd-cat">Edición</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Edita texto de una línea, cotas, atributos y marcos de control.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="textalign" data-cat="edicion" data-level="intermedio" data-keys="ta">
+        <div class="cmd-icon"><i class="bi bi-text-center"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">TEXTALIGN</span>
+            <span class="cmd-key">TA</span>
+            <span class="cmd-cat">Edición</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Alinea varios objetos de texto vertical, horizontal u oblicuamente.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="spell" data-cat="edicion" data-level="intermedio" data-keys="sp">
+        <div class="cmd-icon"><i class="bi bi-spellcheck"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">SPELL</span>
+            <span class="cmd-key">SP</span>
+            <span class="cmd-cat">Edición</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Comprueba la ortografía de los textos del dibujo.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="measuregeom" data-cat="precision" data-level="intermedio" data-keys="mea">
+        <div class="cmd-icon"><i class="bi bi-rulers"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">MEASUREGEOM</span>
+            <span class="cmd-key">MEA</span>
+            <span class="cmd-cat">Precisión</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Mide distancia, radio, ángulo, área y volumen de objetos o puntos.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="constraintbar" data-cat="precision" data-level="avanzado" data-keys="cbar">
+        <div class="cmd-icon"><i class="bi bi-grid"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">CONSTRAINTBAR</span>
+            <span class="cmd-key">CBAR</span>
+            <span class="cmd-cat">Precisión</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Muestra u oculta las barras de restricciones geométricas de los objetos.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="geoconstraint" data-cat="precision" data-level="avanzado" data-keys="gcon">
+        <div class="cmd-icon"><i class="bi bi-diagram-2"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">GEOCONSTRAINT</span>
+            <span class="cmd-key">GCON</span>
+            <span class="cmd-cat">Precisión</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Aplica o mantiene relaciones geométricas entre objetos o puntos.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="layerstate" data-cat="capas" data-level="avanzado" data-keys="las">
+        <div class="cmd-icon"><i class="bi bi-collection"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">LAYERSTATE</span>
+            <span class="cmd-key">LAS</span>
+            <span class="cmd-cat">Capas</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Guarda, restaura y administra estados de capa guardados.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="linetype" data-cat="capas" data-level="intermedio" data-keys="lt">
+        <div class="cmd-icon"><i class="bi bi-pentagon-half"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">LINETYPE</span>
+            <span class="cmd-key">LT</span>
+            <span class="cmd-cat">Capas</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Carga, define y modifica los tipos de línea del dibujo.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="ltscale" data-cat="capas" data-level="intermedio" data-keys="lts">
+        <div class="cmd-icon"><i class="bi bi-width"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">LTSCALE</span>
+            <span class="cmd-key">LTS</span>
+            <span class="cmd-cat">Capas</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Cambia la escala de los tipos de línea en todo el dibujo.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="lweight" data-cat="capas" data-level="intermedio" data-keys="lw">
+        <div class="cmd-icon"><i class="bi bi-hr"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">LWEIGHT</span>
+            <span class="cmd-key">LW</span>
+            <span class="cmd-cat">Capas</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Define el grosor de línea actual y sus opciones de visualización.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="attdef" data-cat="bloques" data-level="intermedio" data-keys="att">
+        <div class="cmd-icon"><i class="bi bi-tags"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">ATTDEF</span>
+            <span class="cmd-key">ATT</span>
+            <span class="cmd-cat">Bloques</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Crea una definición de atributo para usar dentro de un bloque.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="attedit" data-cat="bloques" data-level="intermedio" data-keys="ate">
+        <div class="cmd-icon"><i class="bi bi-pencil"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">ATTEDIT</span>
+            <span class="cmd-key">ATE</span>
+            <span class="cmd-cat">Bloques</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Cambia la información de atributos de un bloque.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="attipedit" data-cat="bloques" data-level="intermedio" data-keys="ati">
+        <div class="cmd-icon"><i class="bi bi-pencil-square"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">ATTIPEDIT</span>
+            <span class="cmd-key">ATI</span>
+            <span class="cmd-cat">Bloques</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Edita el texto de un atributo directamente dentro del bloque.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="bclose" data-cat="bloques" data-level="intermedio" data-keys="bc">
+        <div class="cmd-icon"><i class="bi bi-x-circle"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">BCLOSE</span>
+            <span class="cmd-key">BC</span>
+            <span class="cmd-cat">Bloques</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Cierra el editor de bloques y vuelve al dibujo.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="bsave" data-cat="bloques" data-level="intermedio" data-keys="bs">
+        <div class="cmd-icon"><i class="bi bi-save"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">BSAVE</span>
+            <span class="cmd-key">BS</span>
+            <span class="cmd-cat">Bloques</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Guarda la definición de bloque actual en el editor de bloques.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="bvstate" data-cat="bloques" data-level="avanzado" data-keys="bvs">
+        <div class="cmd-icon"><i class="bi bi-eye"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">BVSTATE</span>
+            <span class="cmd-key">BVS</span>
+            <span class="cmd-cat">Bloques</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Crea, define o elimina estados de visibilidad en un bloque dinámico.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="bparameter" data-cat="bloques" data-level="avanzado" data-keys="param">
+        <div class="cmd-icon"><i class="bi bi-sliders"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">BPARAMETER</span>
+            <span class="cmd-key">PARAM</span>
+            <span class="cmd-cat">Bloques</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Añade un parámetro con pinzamientos a una definición de bloque dinámico.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="xattach" data-cat="bloques" data-level="intermedio" data-keys="xa">
+        <div class="cmd-icon"><i class="bi bi-link-45deg"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">XATTACH</span>
+            <span class="cmd-key">XA</span>
+            <span class="cmd-cat">Bloques</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Inserta un archivo DWG como referencia externa (xref).</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="xbind" data-cat="bloques" data-level="avanzado" data-keys="xb">
+        <div class="cmd-icon"><i class="bi bi-link"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">XBIND</span>
+            <span class="cmd-key">XB</span>
+            <span class="cmd-cat">Bloques</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Vincula una o más definiciones de un xref al dibujo actual.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="xref" data-cat="bloques" data-level="intermedio" data-keys="xr">
+        <div class="cmd-icon"><i class="bi bi-diagram-3"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">XREF</span>
+            <span class="cmd-key">XR</span>
+            <span class="cmd-cat">Bloques</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Abre la paleta de referencias externas para gestionar xrefs.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="externalreferences" data-cat="bloques" data-level="intermedio" data-keys="er">
+        <div class="cmd-icon"><i class="bi bi-diagram-3"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">EXTERNALREFERENCES</span>
+            <span class="cmd-key">ER</span>
+            <span class="cmd-cat">Bloques</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Abre el administrador de referencias externas del dibujo.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="imageattach" data-cat="bloques" data-level="intermedio" data-keys="iat">
+        <div class="cmd-icon"><i class="bi bi-image"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">IMAGEATTACH</span>
+            <span class="cmd-key">IAT</span>
+            <span class="cmd-cat">Bloques</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Inserta una referencia a un archivo de imagen en el dibujo.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="imageadjust" data-cat="bloques" data-level="intermedio" data-keys="iad">
+        <div class="cmd-icon"><i class="bi bi-brightness-high"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">IMAGEADJUST</span>
+            <span class="cmd-key">IAD</span>
+            <span class="cmd-cat">Bloques</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Controla brillo, contraste y desvanecido de las imágenes.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="image" data-cat="bloques" data-level="intermedio" data-keys="im">
+        <div class="cmd-icon"><i class="bi bi-image"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">IMAGE</span>
+            <span class="cmd-key">IM</span>
+            <span class="cmd-cat">Bloques</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Inserta una imagen o abre el administrador de referencias externas.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="insertobj" data-cat="bloques" data-level="avanzado" data-keys="io">
+        <div class="cmd-icon"><i class="bi bi-box-arrow-in-down"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">INSERTOBJ</span>
+            <span class="cmd-key">IO</span>
+            <span class="cmd-cat">Bloques</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Inserta un objeto vinculado o incrustado (OLE) de otra aplicación.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="dimarc" data-cat="acotacion" data-level="avanzado" data-keys="dar">
+        <div class="cmd-icon"><i class="bi bi-arrow-left-right"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">DIMARC</span>
+            <span class="cmd-key">DAR</span>
+            <span class="cmd-cat">Acotación</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Crea una cota de longitud de arco.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="dimbaseline" data-cat="acotacion" data-level="intermedio" data-keys="dba">
+        <div class="cmd-icon"><i class="bi bi-arrow-down-up"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">DIMBASELINE</span>
+            <span class="cmd-key">DBA</span>
+            <span class="cmd-cat">Acotación</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Crea cotas lineales, angulares u ordenadas a partir de una línea base común.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="dimcenter" data-cat="acotacion" data-level="intermedio" data-keys="dce">
+        <div class="cmd-icon"><i class="bi bi-crosshair"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">DIMCENTER</span>
+            <span class="cmd-key">DCE</span>
+            <span class="cmd-cat">Acotación</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Crea la marca de centro o líneas de centro de círculos y arcos.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="dimcontinue" data-cat="acotacion" data-level="intermedio" data-keys="dco">
+        <div class="cmd-icon"><i class="bi bi-arrow-right"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">DIMCONTINUE</span>
+            <span class="cmd-key">DCO</span>
+            <span class="cmd-cat">Acotación</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Crea una cota que parte de la línea de extensión de la anterior.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="dimconstraint" data-cat="acotacion" data-level="avanzado" data-keys="dcon">
+        <div class="cmd-icon"><i class="bi bi-arrows-angle-expand"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">DIMCONSTRAINT</span>
+            <span class="cmd-key">DCON</span>
+            <span class="cmd-cat">Acotación</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Aplica restricciones dimensionales a objetos o puntos.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="dimdisassociate" data-cat="acotacion" data-level="avanzado" data-keys="dda">
+        <div class="cmd-icon"><i class="bi bi-unlink"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">DIMDISASSOCIATE</span>
+            <span class="cmd-key">DDA</span>
+            <span class="cmd-cat">Acotación</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Elimina la asociatividad de las cotas seleccionadas.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="dimedit" data-cat="acotacion" data-level="intermedio" data-keys="ded">
+        <div class="cmd-icon"><i class="bi bi-pencil-square"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">DIMEDIT</span>
+            <span class="cmd-key">DED</span>
+            <span class="cmd-cat">Acotación</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Edita el texto y las líneas de extensión de las cotas.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="dimjogline" data-cat="acotacion" data-level="avanzado" data-keys="djl">
+        <div class="cmd-icon"><i class="bi bi-signpost-split"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">DIMJOGLINE</span>
+            <span class="cmd-key">DJL</span>
+            <span class="cmd-cat">Acotación</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Añade o elimina una línea de interrupción en una cota lineal o alineada.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="dimjogged" data-cat="acotacion" data-level="avanzado" data-keys="djo jog">
+        <div class="cmd-icon"><i class="bi bi-slash"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">DIMJOGGED</span>
+            <span class="cmd-key">DJO</span>
+            <span class="cmd-cat">Acotación</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Crea cotas con interrupción para círculos y arcos.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="dimordinate" data-cat="acotacion" data-level="intermedio" data-keys="dor">
+        <div class="cmd-icon"><i class="bi bi-arrows-fullscreen"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">DIMORDINATE</span>
+            <span class="cmd-key">DOR</span>
+            <span class="cmd-cat">Acotación</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Crea cotas de coordenadas (ordenadas) X o Y.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="dimoverride" data-cat="acotacion" data-level="avanzado" data-keys="dov">
+        <div class="cmd-icon"><i class="bi bi-sliders"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">DIMOVERRIDE</span>
+            <span class="cmd-key">DOV</span>
+            <span class="cmd-cat">Acotación</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Anula variables de sistema de cotas seleccionadas.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="dimreassociate" data-cat="acotacion" data-level="avanzado" data-keys="dre">
+        <div class="cmd-icon"><i class="bi bi-link"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">DIMREASSOCIATE</span>
+            <span class="cmd-key">DRE</span>
+            <span class="cmd-cat">Acotación</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Asocia o reasocia cotas seleccionadas a objetos.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="qleader" data-cat="acotacion" data-level="intermedio" data-keys="le">
+        <div class="cmd-icon"><i class="bi bi-bezier"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">QLEADER</span>
+            <span class="cmd-key">LE</span>
+            <span class="cmd-cat">Acotación</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Crea una directriz con texto o cota de anotación.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="tolerance" data-cat="acotacion" data-level="avanzado" data-keys="tol">
+        <div class="cmd-icon"><i class="bi bi-bounding-box"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">TOLERANCE</span>
+            <span class="cmd-key">TOL</span>
+            <span class="cmd-cat">Acotación</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Crea tolerancias geométricas en un marco de control de características.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="mleaderstyle" data-cat="acotacion" data-level="avanzado" data-keys="mls">
+        <div class="cmd-icon"><i class="bi bi-text-indent-left"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">MLEADERSTYLE</span>
+            <span class="cmd-key">MLS</span>
+            <span class="cmd-cat">Acotación</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Crea y modifica los estilos de directriz múltiple.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="ctablestyle" data-cat="texto" data-level="intermedio" data-keys="ct">
+        <div class="cmd-icon"><i class="bi bi-table"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">CTABLESTYLE</span>
+            <span class="cmd-key">CT</span>
+            <span class="cmd-cat">Texto</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Define el nombre del estilo de tabla actual.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="camera" data-cat="3d" data-level="avanzado" data-keys="cam">
+        <div class="cmd-icon"><i class="bi bi-camera"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">CAMERA</span>
+            <span class="cmd-key">CAM</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Crea una cámara y su objetivo para guardar una vista 3D en perspectiva.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="navvcube" data-cat="3d" data-level="intermedio" data-keys="cube">
+        <div class="cmd-icon"><i class="bi bi-box"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">NAVVCUBE</span>
+            <span class="cmd-key">CUBE</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Controla la visibilidad y propiedades del ViewCube.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="hide" data-cat="3d" data-level="intermedio" data-keys="hi">
+        <div class="cmd-icon"><i class="bi bi-eye-slash"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">HIDE</span>
+            <span class="cmd-key">HI</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Regenera el modelo 3D ocultando las aristas traseras.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="flatshot" data-cat="3d" data-level="avanzado" data-keys="fshot">
+        <div class="cmd-icon"><i class="bi bi-image"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">FLATSHOT</span>
+            <span class="cmd-key">FSHOT</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Crea una representación 2D de todos los objetos 3D de la vista actual.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="interfere" data-cat="3d" data-level="avanzado" data-keys="inf">
+        <div class="cmd-icon"><i class="bi bi-union"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">INTERFERE</span>
+            <span class="cmd-key">INF</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Crea un sólido temporal a partir de las interferencias entre sólidos.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="meshsmoothless" data-cat="3d" data-level="avanzado" data-keys="less">
+        <div class="cmd-icon"><i class="bi bi-arrows-collapse"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">MESHSMOOTHLESS</span>
+            <span class="cmd-key">LESS</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Reduce un nivel la suavidad de los objetos de malla.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="meshsmoothmore" data-cat="3d" data-level="avanzado" data-keys="more">
+        <div class="cmd-icon"><i class="bi bi-arrows-expand"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">MESHSMOOTHMORE</span>
+            <span class="cmd-key">MORE</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Aumenta un nivel la suavidad de los objetos de malla.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="meshsplit" data-cat="3d" data-level="avanzado" data-keys="split">
+        <div class="cmd-icon"><i class="bi bi-scissors"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">MESHSPLIT</span>
+            <span class="cmd-key">SPLIT</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Divide una cara de malla en dos caras.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="surfpatch" data-cat="3d" data-level="avanzado" data-keys="patch">
+        <div class="cmd-icon"><i class="bi bi-bounding-box"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">SURFPATCH</span>
+            <span class="cmd-key">PATCH</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Crea una superficie tapando un borde de superficie que forma un bucle cerrado.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="sectionplane" data-cat="3d" data-level="avanzado" data-keys="splane">
+        <div class="cmd-icon"><i class="bi bi-clipboard-data"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">SECTIONPLANE</span>
+            <span class="cmd-key">SPLANE</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Crea un objeto de sección que actúa como plano de corte en objetos 3D.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="ddvpoint" data-cat="3d" data-level="intermedio" data-keys="vp">
+        <div class="cmd-icon"><i class="bi bi-arrows-move"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">DDVPOINT</span>
+            <span class="cmd-key">VP</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Define la dirección de vista 3D mediante ángulos.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="vscurrent" data-cat="3d" data-level="intermedio" data-keys="vs">
+        <div class="cmd-icon"><i class="bi bi-palette"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">VSCURRENT</span>
+            <span class="cmd-key">VS</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Define el estilo visual de la ventana gráfica actual.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="shademode" data-cat="3d" data-level="intermedio" data-keys="sha">
+        <div class="cmd-icon"><i class="bi bi-palette2"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">SHADEMODE</span>
+            <span class="cmd-key">SHA</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Cambia el estilo visual de la ventana actual (coniciso de VSCURRENT).</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="visualstyles" data-cat="3d" data-level="avanzado" data-keys="vsm">
+        <div class="cmd-icon"><i class="bi bi-palette2"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">VISUALSTYLES</span>
+            <span class="cmd-key">VSM</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Crea y modifica estilos visuales y los aplica a la ventana.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="navswheel" data-cat="3d" data-level="intermedio" data-keys="wheel">
+        <div class="cmd-icon"><i class="bi bi-circle"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">NAVSWHEEL</span>
+            <span class="cmd-key">WHEEL</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Muestra una rueda con herramientas de navegación de vista.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="analysiszebra" data-cat="3d" data-level="avanzado" data-keys="zebra">
+        <div class="cmd-icon"><i class="bi bi-bandaid"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">ANALYSISZEBRA</span>
+            <span class="cmd-key">ZEBRA</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Proyecta bandas sobre un modelo 3D para analizar la continuidad de superficies.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="rendercrop" data-cat="3d" data-level="avanzado" data-keys="rc">
+        <div class="cmd-icon"><i class="bi bi-crop"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">RENDERCROP</span>
+            <span class="cmd-key">RC</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Renderiza un área rectangular dentro de la ventana gráfica.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="renderpresets" data-cat="3d" data-level="avanzado" data-keys="rp">
+        <div class="cmd-icon"><i class="bi bi-sliders2"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">RENDERPRESETS</span>
+            <span class="cmd-key">RP</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Especifica ajustes de renderizado reutilizables (preajustes).</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="rpref" data-cat="3d" data-level="avanzado" data-keys="rpr">
+        <div class="cmd-icon"><i class="bi bi-gear"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">RPREF</span>
+            <span class="cmd-key">RPR</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Muestra u oculta la paleta de ajustes avanzados de renderizado.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="renderwin" data-cat="3d" data-level="avanzado" data-keys="rw">
+        <div class="cmd-icon"><i class="bi bi-window"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">RENDERWIN</span>
+            <span class="cmd-key">RW</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Muestra la ventana Render sin iniciar un renderizado.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="materials" data-cat="3d" data-level="intermedio" data-keys="mat">
+        <div class="cmd-icon"><i class="bi bi-palette"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">MATERIALS</span>
+            <span class="cmd-key">MAT</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Muestra u oculta la ventana de Materiales.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="thickness" data-cat="3d" data-level="intermedio" data-keys="th">
+        <div class="cmd-icon"><i class="bi bi-arrows-vertical"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">THICKNESS</span>
+            <span class="cmd-key">TH</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Define el grosor 3D por defecto de los objetos 2D nuevos.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="dview" data-cat="3d" data-level="avanzado" data-keys="dv">
+        <div class="cmd-icon"><i class="bi bi-camera-video"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">DVIEW</span>
+            <span class="cmd-key">DV</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Define vistas de proyección paralela o perspectiva con cámara y objetivo.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="pointcloud" data-cat="3d" data-level="avanzado" data-keys="pc">
+        <div class="cmd-icon"><i class="bi bi-cloud"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">POINTCLOUD</span>
+            <span class="cmd-key">PC</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Crea y adjunta archivos de nube de puntos.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="pointcloudattach" data-cat="3d" data-level="avanzado" data-keys="pcattach">
+        <div class="cmd-icon"><i class="bi bi-cloud-plus"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">POINTCLOUDATTACH</span>
+            <span class="cmd-key">PCATTACH</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Inserta un archivo de nube de puntos indexado en el dibujo.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="pointcloudindex" data-cat="3d" data-level="avanzado" data-keys="pcindex">
+        <div class="cmd-icon"><i class="bi bi-cloud-arrow-up"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">POINTCLOUDINDEX</span>
+            <span class="cmd-key">PCINDEX</span>
+            <span class="cmd-cat">3D</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Crea un archivo de nube de puntos indexado desde un escaneo.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="adcenter" data-cat="consulta" data-level="intermedio" data-keys="adc">
+        <div class="cmd-icon"><i class="bi bi-archive"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">ADCENTER</span>
+            <span class="cmd-key">ADC</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Abre el DesignCenter para reutilizar bloques, capas y estilos.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="appload" data-cat="consulta" data-level="intermedio" data-keys="ap">
+        <div class="cmd-icon"><i class="bi bi-box-seam"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">APPLOAD</span>
+            <span class="cmd-key">AP</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Carga y descarga aplicaciones (LISP, ARX, VBA).</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="actrecord" data-cat="consulta" data-level="avanzado" data-keys="arr">
+        <div class="cmd-icon"><i class="bi bi-record"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">ACTRECORD</span>
+            <span class="cmd-key">ARR</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Inicia el grabador de acciones para crear una macro.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="actusermessage" data-cat="consulta" data-level="avanzado" data-keys="arm">
+        <div class="cmd-icon"><i class="bi bi-chat-left-text"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">ACTUSERMESSAGE</span>
+            <span class="cmd-key">ARM</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Inserta un mensaje de usuario en una macro de acción.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="actuserinput" data-cat="consulta" data-level="avanzado" data-keys="aru">
+        <div class="cmd-icon"><i class="bi bi-keyboard"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">ACTUSERINPUT</span>
+            <span class="cmd-key">ARU</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Pausa una macro grabada para que el usuario introduzca datos.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="actstop" data-cat="consulta" data-level="avanzado" data-keys="ars">
+        <div class="cmd-icon"><i class="bi bi-stop"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">ACTSTOP</span>
+            <span class="cmd-key">ARS</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Detiene el grabador de acciones y ofrece guardar la macro.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="checkstandards" data-cat="consulta" data-level="avanzado" data-keys="chk">
+        <div class="cmd-icon"><i class="bi bi-shield-check"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">CHECKSTANDARDS</span>
+            <span class="cmd-key">CHK</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Comprueba el dibujo actual contra los archivos de normas.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="commandline" data-cat="consulta" data-level="basico" data-keys="cli">
+        <div class="cmd-icon"><i class="bi bi-terminal"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">COMMANDLINE</span>
+            <span class="cmd-key">CLI</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Muestra u oculta la ventana de línea de comandos.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="color" data-cat="consulta" data-level="basico" data-keys="col">
+        <div class="cmd-icon"><i class="bi bi-palette"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">COLOR</span>
+            <span class="cmd-key">COL</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Define el color de los objetos nuevos.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="dataextraction" data-cat="consulta" data-level="avanzado" data-keys="dx">
+        <div class="cmd-icon"><i class="bi bi-table"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">DATAEXTRACTION</span>
+            <span class="cmd-key">DX</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Extrae datos del dibujo a una tabla o archivo externo.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="datalink" data-cat="consulta" data-level="avanzado" data-keys="dl">
+        <div class="cmd-icon"><i class="bi bi-link-45deg"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">DATALINK</span>
+            <span class="cmd-key">DL</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Muestra el cuadro de diálogo de vínculo de datos.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="datalinkupdate" data-cat="consulta" data-level="avanzado" data-keys="dlu">
+        <div class="cmd-icon"><i class="bi bi-arrow-repeat"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">DATALINKUPDATE</span>
+            <span class="cmd-key">DLU</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Actualiza datos desde o hacia un vínculo de datos externo.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="dbconnect" data-cat="consulta" data-level="avanzado" data-keys="dbc">
+        <div class="cmd-icon"><i class="bi bi-database"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">DBCONNECT</span>
+            <span class="cmd-key">DBC</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Proporciona una interfaz para tablas de bases de datos externas.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="drawingrecovery" data-cat="consulta" data-level="intermedio" data-keys="drm">
+        <div class="cmd-icon"><i class="bi bi-hdd"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">DRAWINGRECOVERY</span>
+            <span class="cmd-key">DRM</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Muestra la lista de dibujos que se pueden recuperar tras un fallo.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="export" data-cat="consulta" data-level="intermedio" data-keys="exp">
+        <div class="cmd-icon"><i class="bi bi-box-arrow-up"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">EXPORT</span>
+            <span class="cmd-key">EXP</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Guarda los objetos del dibujo en otro formato de archivo.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="exportpdf" data-cat="consulta" data-level="intermedio" data-keys="epdf">
+        <div class="cmd-icon"><i class="bi bi-file-pdf"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">EXPORTPDF</span>
+            <span class="cmd-key">EPDF</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Exporta el dibujo o presentación a un archivo PDF.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="geographiclocation" data-cat="consulta" data-level="avanzado" data-keys="geo north">
+        <div class="cmd-icon"><i class="bi bi-geo-alt"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">GEOGRAPHICLOCATION</span>
+            <span class="cmd-key">GEO</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Especifica la ubicación geográfica del dibujo.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="hidepalettes" data-cat="consulta" data-level="intermedio" data-keys="poff">
+        <div class="cmd-icon"><i class="bi bi-eye-slash"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">HIDEPALETTES</span>
+            <span class="cmd-key">POFF</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Oculta las paletas visibles, incluida la línea de comandos.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="showpalettes" data-cat="consulta" data-level="intermedio" data-keys="pon">
+        <div class="cmd-icon"><i class="bi bi-eye"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">SHOWPALETTES</span>
+            <span class="cmd-key">PON</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Restaura las paletas ocultas.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="import" data-cat="consulta" data-level="intermedio" data-keys="imp">
+        <div class="cmd-icon"><i class="bi bi-box-arrow-in-down"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">IMPORT</span>
+            <span class="cmd-key">IMP</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Importa archivos de distintos formatos al dibujo actual.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="layout" data-cat="consulta" data-level="intermedio" data-keys="lo">
+        <div class="cmd-icon"><i class="bi bi-layout-sidebar"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">LAYOUT</span>
+            <span class="cmd-key">LO</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Crea y modifica pestañas de presentación (layout).</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="mspace" data-cat="consulta" data-level="intermedio" data-keys="ms">
+        <div class="cmd-icon"><i class="bi bi-box-arrow-in-right"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">MSPACE</span>
+            <span class="cmd-key">MS</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Cambia del espacio papel al espacio modelo en una ventana.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="pspace" data-cat="consulta" data-level="intermedio" data-keys="ps">
+        <div class="cmd-icon"><i class="bi bi-box-arrow-in-left"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">PSPACE</span>
+            <span class="cmd-key">PS</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Cambia del espacio modelo al espacio papel.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="mview" data-cat="consulta" data-level="avanzado" data-keys="mv">
+        <div class="cmd-icon"><i class="bi bi-window-stack"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">MVIEW</span>
+            <span class="cmd-key">MV</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Crea y controla ventanas gráficas de presentación.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="markup" data-cat="consulta" data-level="avanzado" data-keys="msm">
+        <div class="cmd-icon"><i class="bi bi-highlighter"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">MARKUP</span>
+            <span class="cmd-key">MSM</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Abre el administrador de conjuntos de marcas.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="newshot" data-cat="consulta" data-level="avanzado" data-keys="nshot">
+        <div class="cmd-icon"><i class="bi bi-camera-reels"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">NEWSHOT</span>
+            <span class="cmd-key">NSHOT</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Crea una vista con nombre con movimiento para ShowMotion.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="newview" data-cat="consulta" data-level="intermedio" data-keys="nview">
+        <div class="cmd-icon"><i class="bi bi-eye"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">NEWVIEW</span>
+            <span class="cmd-key">NVIEW</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Crea una vista con nombre sin movimiento.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="options" data-cat="consulta" data-level="intermedio" data-keys="op">
+        <div class="cmd-icon"><i class="bi bi-gear"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">OPTIONS</span>
+            <span class="cmd-key">OP</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Personaliza la configuración del programa.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="parameters" data-cat="consulta" data-level="avanzado" data-keys="par">
+        <div class="cmd-icon"><i class="bi bi-sliders"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">PARAMETERS</span>
+            <span class="cmd-key">PAR</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Controla los parámetros asociativos del dibujo.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="plot" data-cat="consulta" data-level="basico" data-keys="print">
+        <div class="cmd-icon"><i class="bi bi-printer"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">PLOT</span>
+            <span class="cmd-key">PRINT</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Imprime el dibujo en un trazador, impresora o archivo.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="preview" data-cat="consulta" data-level="intermedio" data-keys="pre">
+        <div class="cmd-icon"><i class="bi bi-eye"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">PREVIEW</span>
+            <span class="cmd-key">PRE</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Muestra el dibujo tal y como se imprimirá.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="quickcalc" data-cat="consulta" data-level="intermedio" data-keys="qc">
+        <div class="cmd-icon"><i class="bi bi-calculator"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">QUICKCALC</span>
+            <span class="cmd-key">QC</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Abre la calculadora QuickCalc.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="quickcui" data-cat="consulta" data-level="avanzado" data-keys="qcui">
+        <div class="cmd-icon"><i class="bi bi-tools"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">QUICKCUI</span>
+            <span class="cmd-key">QCUI</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Muestra el editor de personalización de la interfaz.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="quickproperties" data-cat="consulta" data-level="intermedio" data-keys="qp">
+        <div class="cmd-icon"><i class="bi bi-info-circle"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">QUICKPROPERTIES</span>
+            <span class="cmd-key">QP</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Muestra la paleta de propiedades rápidas del objeto.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="qsave" data-cat="consulta" data-level="basico" data-keys="qsave">
+        <div class="cmd-icon"><i class="bi bi-save"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">QSAVE</span>
+            <span class="cmd-key">QSAVE</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Guarda el dibujo actual sin pedir nombre si ya está guardado.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="qvdrawing" data-cat="consulta" data-level="avanzado" data-keys="qvd">
+        <div class="cmd-icon"><i class="bi bi-images"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">QVDRAWING</span>
+            <span class="cmd-key">QVD</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Muestra imágenes en miniatura de los dibujos abiertos.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="qvdrawingclose" data-cat="consulta" data-level="avanzado" data-keys="qvdc">
+        <div class="cmd-icon"><i class="bi bi-x-circle"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">QVDRAWINGCLOSE</span>
+            <span class="cmd-key">QVDC</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Cierra las imágenes en miniatura de los dibujos abiertos.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="qvlayout" data-cat="consulta" data-level="avanzado" data-keys="qvl">
+        <div class="cmd-icon"><i class="bi bi-layout-text-window"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">QVLAYOUT</span>
+            <span class="cmd-key">QVL</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Muestra imágenes en miniatura de espacio modelo y presentaciones.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="qvlayoutclose" data-cat="consulta" data-level="avanzado" data-keys="qvlc">
+        <div class="cmd-icon"><i class="bi bi-x-circle"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">QVLAYOUTCLOSE</span>
+            <span class="cmd-key">QVLC</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Cierra las imágenes en miniatura de espacio modelo y presentaciones.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="redraw" data-cat="consulta" data-level="basico" data-keys="r">
+        <div class="cmd-icon"><i class="bi bi-arrow-clockwise"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">REDRAW</span>
+            <span class="cmd-key">R</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Refresca la vista de la ventana gráfica actual.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="redrawall" data-cat="consulta" data-level="basico" data-keys="ra">
+        <div class="cmd-icon"><i class="bi bi-arrow-repeat"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">REDRAWALL</span>
+            <span class="cmd-key">RA</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Refresca la vista de todas las ventanas gráficas.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="regenall" data-cat="consulta" data-level="intermedio" data-keys="rea">
+        <div class="cmd-icon"><i class="bi bi-arrow-repeat"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">REGENALL</span>
+            <span class="cmd-key">REA</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Regenera el dibujo y refresca todas las ventanas gráficas.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="script" data-cat="consulta" data-level="avanzado" data-keys="scr">
+        <div class="cmd-icon"><i class="bi bi-file-earmark-code"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">SCRIPT</span>
+            <span class="cmd-key">SCR</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Ejecuta una secuencia de comandos desde un archivo de script.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="setvar" data-cat="consulta" data-level="avanzado" data-keys="set">
+        <div class="cmd-icon"><i class="bi bi-gear"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">SETVAR</span>
+            <span class="cmd-key">SET</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Lista o cambia los valores de las variables de sistema.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="standards" data-cat="consulta" data-level="avanzado" data-keys="sta">
+        <div class="cmd-icon"><i class="bi bi-shield-check"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">STANDARDS</span>
+            <span class="cmd-key">STA</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Gestiona los archivos de normas asociados a los dibujos.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="tilemode" data-cat="consulta" data-level="intermedio" data-keys="ti">
+        <div class="cmd-icon"><i class="bi bi-layout-split"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">TILEMODE</span>
+            <span class="cmd-key">TI</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Controla si se puede acceder al espacio papel.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="toolbar" data-cat="consulta" data-level="intermedio" data-keys="to">
+        <div class="cmd-icon"><i class="bi bi-grid-1x2"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">TOOLBAR</span>
+            <span class="cmd-key">TO</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Muestra, oculta y personaliza barras de herramientas.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="toolpalettes" data-cat="consulta" data-level="intermedio" data-keys="tp">
+        <div class="cmd-icon"><i class="bi bi-collection"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">TOOLPALETTES</span>
+            <span class="cmd-key">TP</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Abre la ventana de paletas de herramientas.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="ucsman" data-cat="consulta" data-level="avanzado" data-keys="uc">
+        <div class="cmd-icon"><i class="bi bi-compass"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">UCSMAN</span>
+            <span class="cmd-key">UC</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Gestiona los sistemas de coordenadas definidos por el usuario.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="view" data-cat="consulta" data-level="intermedio" data-keys="v">
+        <div class="cmd-icon"><i class="bi bi-eye"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">VIEW</span>
+            <span class="cmd-key">V</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Guarda y restaura vistas con nombre o predefinidas.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="viewgo" data-cat="consulta" data-level="intermedio" data-keys="vgo">
+        <div class="cmd-icon"><i class="bi bi-eye-fill"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">VIEWGO</span>
+            <span class="cmd-key">VGO</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Intermedio</span>
+          </div>
+          <p class="cmd-desc">Restaura una vista con nombre.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="viewplay" data-cat="consulta" data-level="avanzado" data-keys="vplay">
+        <div class="cmd-icon"><i class="bi bi-play-btn"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">VIEWPLAY</span>
+            <span class="cmd-key">VPLAY</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Reproduce la animación asociada a una vista con nombre.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="sequenceplay" data-cat="consulta" data-level="avanzado" data-keys="splay">
+        <div class="cmd-icon"><i class="bi bi-collection-play"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">SEQUENCEPLAY</span>
+            <span class="cmd-key">SPLAY</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Reproduce las vistas con nombre de una categoría.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="etransmit" data-cat="consulta" data-level="avanzado" data-keys="zip">
+        <div class="cmd-icon"><i class="bi bi-file-zip"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">ETRANSMIT</span>
+            <span class="cmd-key">ZIP</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Avanzado</span>
+          </div>
+          <p class="cmd-desc">Crea un paquete comprimido con el dibujo y sus archivos relacionados.</p>
+        </div>
+      </div>
+      <div class="cmd-full-card" data-cmd="quit" data-cat="consulta" data-level="basico" data-keys="exit">
+        <div class="cmd-icon"><i class="bi bi-door-closed"></i></div>
+        <div class="cmd-info">
+          <div class="cmd-head">
+            <span class="cmd-name">QUIT</span>
+            <span class="cmd-key">EXIT</span>
+            <span class="cmd-cat">Consulta</span>
+            <span class="res-lang es">Básico</span>
+          </div>
+          <p class="cmd-desc">Sale del programa AutoCAD.</p>
+        </div>
+      </div>
     </div>
 
     <div id="cmdEmpty" style="display:none;text-align:center;padding:3rem;color:var(--text-faint)">
