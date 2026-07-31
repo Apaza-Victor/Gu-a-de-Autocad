@@ -593,7 +593,12 @@ function initSwiperCarousel(){
   new Swiper('.swiper-carousel', {
     slidesPerView: 1,
     spaceBetween: 16,
-    loop: false,
+    loop: true,
+    autoplay: {
+      delay: 60000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true
+    },
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'

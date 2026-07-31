@@ -1139,10 +1139,20 @@ footer.site-footer a:hover{ color: var(--cyan); }
 }
 .swiper-carousel .swiper-button-next,
 .swiper-carousel .swiper-button-prev{
+  --swiper-navigation-size: 15px;
+  width: 34px;
+  height: 34px;
+  margin-top: -17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(8, 14, 28, .5);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .3);
   color: var(--cyan);
   opacity: 0;
   pointer-events: none;
-  transition: opacity .25s ease;
+  transition: opacity .25s ease, background .2s ease, transform .2s ease;
 }
 .swiper-carousel:hover .swiper-button-next,
 .swiper-carousel:hover .swiper-button-prev,
@@ -1150,6 +1160,11 @@ footer.site-footer a:hover{ color: var(--cyan); }
 .swiper-carousel .swiper-button-prev:focus-visible{
   opacity: 1;
   pointer-events: auto;
+}
+.swiper-carousel .swiper-button-next:hover,
+.swiper-carousel .swiper-button-prev:hover{
+  background: rgba(8, 14, 28, .75);
+  transform: scale(1.08);
 }
 @media (hover: none){
   .swiper-carousel .swiper-button-next,
