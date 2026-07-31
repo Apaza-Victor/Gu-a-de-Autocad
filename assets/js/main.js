@@ -360,14 +360,31 @@ function initResourceFilters(){
 }
 
 /* ---------- Buscador global con Fuse.js ---------- */
+function fixIndexEntry(item){
+  const isHome = !window.location.pathname.includes('/paginas/');
+  const prefix = isHome ? 'paginas/' : '';
+  return {
+    type: item.type || 'page',
+    title: item.title,
+    command: item.type === 'command' ? (item.title || '') : '',
+    shortcut: item.shortcut || '',
+    description: item.description || '',
+    url: prefix + (item.file || '') + (item.anchor ? '#' + item.anchor : ''),
+    path: item.path || ''
+  };
+}
+
 function initGlobalSearch(){
   const overlay = document.getElementById('searchOverlay');
   const input = document.getElementById('globalSearchInput');
   const resultsContainer = document.getElementById('globalSearchResults');
   if (!overlay || !input || !resultsContainer) return;
 
-  // Base de datos de búsqueda (se llena al cargar)
-  const searchData = buildSearchData();
+  // Base de datos de búsqueda. Se usa el índice estático global cuando está
+  // disponible; si no, se construye desde el DOM de la página actual.
+  let searchData = window.SEARCH_INDEX && window.SEARCH_INDEX.length
+    ? window.SEARCH_INDEX.map(fixIndexEntry)
+    : buildSearchData();
   let fuse = null;
 
   if (typeof Fuse !== 'undefined' && searchData.length) {
