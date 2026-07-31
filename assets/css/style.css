@@ -196,6 +196,22 @@ a:hover{ color: var(--amber); }
 }
 .icon-btn:hover{ color: var(--cyan); border-color: var(--cyan); }
 
+.navbar-toggler.icon-btn{ border: none; }
+.navbar-toggler.icon-btn:hover{
+  color: var(--cyan);
+  background: var(--cyan-dim);
+}
+.navbar-toggler.icon-btn:focus{ box-shadow: none; }
+.navbar-toggler.icon-btn:active{
+  color: #0B1220;
+  background: var(--cyan);
+  transform: scale(.92);
+}
+.navbar-toggler.icon-btn[aria-expanded="true"]{
+  color: var(--cyan);
+  background: var(--cyan-dim);
+}
+
 /* ---------- Hero ---------- */
 .hero{
   position: relative;
