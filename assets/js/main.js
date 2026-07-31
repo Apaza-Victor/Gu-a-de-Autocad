@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
   initCoordReadout();
   initCommandLine();
-  initSearchToggle();
   initBackToTop();
   initScrollSpy();
   initMarkDone();
@@ -122,22 +121,6 @@ function initCommandLine(){
   if (closeBtn){
     closeBtn.addEventListener('click', () => bar.classList.add('hidden'));
   }
-}
-
-/* ---------- Acceso rápido al buscador ---------- */
-function initSearchToggle(){
-  const btn = document.getElementById('searchToggle');
-  if (!btn) return;
-  btn.addEventListener('click', () => {
-    const input = document.getElementById('cmdSearchInput');
-    if (input) {
-      input.focus();
-      input.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    } else {
-      const base = window.location.pathname.includes('/paginas/') ? 'comandos.html' : 'paginas/comandos.html';
-      window.location.href = base + '#buscador';
-    }
-  });
 }
 
 /* ---------- Botón volver arriba ---------- */
@@ -418,13 +401,7 @@ function initGlobalSearch(){
     btn.removeEventListener('click', btn._searchHandler);
     btn._searchHandler = (e) => {
       e.preventDefault();
-      const searchInput = document.getElementById('cmdSearchInput');
-      if (searchInput) {
-        searchInput.focus();
-        searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      } else {
-        openSearch();
-      }
+      openSearch();
     };
     btn.addEventListener('click', btn._searchHandler);
   });
