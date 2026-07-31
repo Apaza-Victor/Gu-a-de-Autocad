@@ -1315,6 +1315,366 @@
         </div>
       </div>
 
+      <!-- ====== RASTREO POLAR (F10) ====== -->
+      <div class="diagram-card" data-cat="precision" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Precisión</span> <span data-i18n="vis.polar.title">Rastreo polar (F10)</span></h4>
+          <span class="key-inline">F10</span>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="vis.polar.desc">Muestra guías de ángulo exactas mientras dibujas (15°, 30°, 45°, 90°…) y el cursor se engancha a ellas.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label">Sin rastreo</span>
+              <svg viewBox="0 0 200 100">
+                <path class="cad-line-old" d="M30,75 L160,35"/>
+                <text class="cad-label" x="42" y="25" style="fill:var(--layer-red)">ángulo libre</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label">Rastreo 45°</span>
+              <svg viewBox="0 0 200 100">
+                <line class="cad-line-dim" x1="100" y1="90" x2="100" y2="10"/>
+                <line class="cad-line" x1="30" y1="80" x2="100" y2="25"/>
+                <circle class="cad-point-cyan" cx="100" cy="25" r="4"/>
+                <text class="cad-label" x="78" y="18" style="fill:var(--layer-green)">45°</text>
+                <text class="cad-label-cmd" x="72" y="85">F10</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="vis.tip">Tip</span>
+            <span data-i18n="vis.polar.tip">Combinado con ORTO es lo más cercano a la precisión total. Configura los ángulos en Drafting Settings.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== BLOCK / INSERT ====== -->
+      <div class="diagram-card" data-cat="capas" data-aos="fade-up" data-aos-delay="60">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Capas</span> <span data-i18n="vis.block.title">BLOCK e INSERT</span></h4>
+          <span class="key-inline">B / I</span>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="vis.block.desc">Agrupa objetos en un bloque reutilizable con un punto base. INSERT coloca copias con escala y rotación.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label">Objetos sueltos</span>
+              <svg viewBox="0 0 200 100">
+                <rect class="cad-fill" x="30" y="35" width="50" height="30" rx="2"/>
+                <circle class="cad-fill" cx="120" cy="50" r="14"/>
+                <text class="cad-label" x="52" y="78">2 objetos</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label">1 bloque</span>
+              <svg viewBox="0 0 200 100">
+                <rect x="25" y="28" width="105" height="45" fill="none" stroke="var(--layer-green)" stroke-dasharray="5,3" rx="2"/>
+                <rect class="cad-fill" x="30" y="35" width="50" height="30" rx="2"/>
+                <circle class="cad-fill" cx="120" cy="50" r="14"/>
+                <circle class="cad-point-cyan" cx="30" cy="65" r="4"/>
+                <text class="cad-label" x="40" y="92" style="fill:var(--layer-green)">punto base</text>
+                <text class="cad-label" x="130" y="18" style="font-size:8px">mesa.dwg</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="vis.tip">Tip</span>
+            <span data-i18n="vis.block.tip">Los bloques reducen el archivo: 100 mesas = 1 definición de bloque + 100 inserciones ligeras.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== ELLIPSE ====== -->
+      <div class="diagram-card" data-cat="dibujo" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Dibujo</span> ELLIPSE</h4>
+          <span class="key-inline">EL</span>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="vis.ellipse.desc">Dibuja elipses definiendo el eje mayor, el eje menor y el centro.</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 300 120">
+              <ellipse cx="110" cy="70" rx="70" ry="35" fill="none" stroke="var(--layer-cyan)" stroke-width="2"/>
+              <line class="cad-dim" x1="40" y1="70" x2="180" y2="70"/>
+              <polygon class="cad-arrow" points="180,70 172,65 172,75"/>
+              <text class="cad-dim-text" x="95" y="64">eje mayor 140</text>
+              <line class="cad-dim" x1="110" y1="70" x2="110" y2="35"/>
+              <text class="cad-dim-text" x="116" y="55">eje menor 35</text>
+              <circle class="cad-point-cyan" cx="110" cy="70" r="4"/>
+              <text class="cad-label" x="118" y="80">centro</text>
+              <text class="cad-label-cmd" x="230" y="20" style="font-size:9px">Métodos:</text>
+              <text class="cad-label" x="230" y="40" style="font-size:8px">• Ejes (A,B)</text>
+              <text class="cad-label" x="230" y="56" style="font-size:8px">• Centro + ejes</text>
+              <text class="cad-label" x="230" y="72" style="font-size:8px">• Arco de elipse</text>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="vis.tip">Tip</span>
+            <span data-i18n="vis.ellipse.tip">Escribe EL e indica los dos extremos del primer eje y la mitad del segundo. Útil para mesas y terrazas curvas.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== SPLINE ====== -->
+      <div class="diagram-card" data-cat="dibujo" data-aos="fade-up" data-aos-delay="60">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Dibujo</span> SPLINE</h4>
+          <span class="key-inline">SPL</span>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="vis.spline.desc">Dibuja curvas suaves que pasan por puntos de ajuste (fit points).</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label">Puntos de ajuste</span>
+              <svg viewBox="0 0 200 100">
+                <polyline class="cad-line-dim" points="25,80 70,40 120,70 175,25"/>
+                <circle class="cad-point" cx="25" cy="80" r="4"/>
+                <circle class="cad-point" cx="70" cy="40" r="4"/>
+                <circle class="cad-point" cx="120" cy="70" r="4"/>
+                <circle class="cad-point" cx="175" cy="25" r="4"/>
+                <text class="cad-label" x="20" y="96">A</text>
+                <text class="cad-label" x="74" y="32">B</text>
+                <text class="cad-label" x="124" y="88">C</text>
+                <text class="cad-label" x="178" y="18">D</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label">Curva suave</span>
+              <svg viewBox="0 0 200 100">
+                <path class="cad-line" d="M25,80 C55,45 85,20 120,70 C145,105 160,40 175,25"/>
+                <circle class="cad-point-cyan" cx="25" cy="80" r="4"/>
+                <circle class="cad-point-cyan" cx="175" cy="25" r="4"/>
+                <text class="cad-label" x="95" y="95" style="font-size:8px;fill:var(--layer-green)">curva continua</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="vis.tip">Tip</span>
+            <span data-i18n="vis.spline.tip">A diferencia de los arcos, la curva no es un tramo circular perfecto: se adapta con suavidad a los puntos.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== MTEXT ====== -->
+      <div class="diagram-card" data-cat="dibujo" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Dibujo</span> MTEXT</h4>
+          <span class="key-inline">T / MT</span>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="vis.mtext.desc">Crea texto multilínea con formato: negrita, alineación, columnas y justificación en un editor.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label">TEXT · 1 línea</span>
+              <svg viewBox="0 0 200 100">
+                <line x1="25" y1="50" x2="175" y2="50" stroke="var(--border-soft)" stroke-width="1" stroke-dasharray="4,3"/>
+                <text class="cad-label-cmd" x="30" y="45" style="font-size:9px">RÓTULO</text>
+                <text class="cad-label" x="25" y="75" style="font-size:7px;fill:var(--layer-red)">una sola línea</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label">MTEXT · párrafo</span>
+              <svg viewBox="0 0 200 100">
+                <rect x="25" y="20" width="150" height="62" fill="var(--bg-elevated)" stroke="var(--layer-cyan)" rx="2"/>
+                <text class="cad-label-cmd" x="32" y="38" style="font-size:8px;font-weight:700">Nota técnica</text>
+                <text class="cad-label" x="32" y="52" style="font-size:7px">Primera línea del párrafo</text>
+                <text class="cad-label" x="32" y="63" style="font-size:7px">justificado y con formato</text>
+                <text class="cad-label" x="32" y="74" style="font-size:7px">en un solo objeto</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="vis.tip">Tip</span>
+            <span data-i18n="vis.mtext.tip">Múltiples líneas dentro de un solo objeto MTEXT: ideal para rótulos, notas y cuadros de texto largos.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== BREAK ====== -->
+      <div class="diagram-card" data-cat="modificacion" data-aos="fade-up" data-aos-delay="60">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Modificación</span> BREAK</h4>
+          <span class="key-inline">BR</span>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="vis.break.desc">Rompe un objeto en dos partes eliminando el tramo entre dos puntos.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label">2 puntos</span>
+              <svg viewBox="0 0 200 100">
+                <line class="cad-line" x1="25" y1="55" x2="175" y2="55"/>
+                <circle class="cad-point" cx="70" cy="55" r="4"/>
+                <circle class="cad-point" cx="130" cy="55" r="4"/>
+                <text class="cad-label" x="60" y="45">1</text>
+                <text class="cad-label" x="122" y="45">2</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label">Resultado</span>
+              <svg viewBox="0 0 200 100">
+                <line class="cad-line" x1="25" y1="55" x2="68" y2="55"/>
+                <line class="cad-line" x1="132" y1="55" x2="175" y2="55"/>
+                <text class="cad-label" x="78" y="45" style="font-size:8px;fill:var(--layer-red)">hueco</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="vis.tip">Tip</span>
+            <span data-i18n="vis.break.tip">Para dividir sin dejar hueco, usa la opción @ del segundo punto: repite el primero y el objeto se parte en dos.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== ALIGN ====== -->
+      <div class="diagram-card" data-cat="modificacion" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Modificación</span> ALIGN</h4>
+          <span class="key-inline">AL</span>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="vis.align.desc">Alinea y rota objetos de una sola vez tomando pares de puntos origen-destino.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label">Origen → destino</span>
+              <svg viewBox="0 0 200 100">
+                <rect class="cad-fill" x="20" y="30" width="60" height="40" rx="2"/>
+                <circle class="cad-point" cx="20" cy="70" r="3"/>
+                <circle class="cad-point" cx="80" cy="30" r="3"/>
+                <line x1="130" y1="80" x2="180" y2="25" stroke="var(--layer-green)" stroke-width="1.5"/>
+                <circle class="cad-point-cyan" cx="130" cy="80" r="3"/>
+                <circle class="cad-point-cyan" cx="180" cy="25" r="3"/>
+                <text class="cad-label" x="120" y="94" style="font-size:8px;fill:var(--layer-green)">objetivo</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label">Alineado y rotado</span>
+              <svg viewBox="0 0 200 100">
+                <line x1="130" y1="80" x2="180" y2="25" stroke="var(--layer-green)" stroke-width="1.5"/>
+                <rect class="cad-fill" x="20" y="30" width="60" height="40" rx="2" transform="rotate(-38,20,70)" style="opacity:0.9"/>
+                <circle class="cad-point-cyan" cx="130" cy="80" r="3"/>
+                <circle class="cad-point-cyan" cx="180" cy="25" r="3"/>
+                <text class="cad-label" x="55" y="25" style="font-size:8px;fill:var(--layer-green)">encaja en la línea</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="vis.tip">Tip</span>
+            <span data-i18n="vis.align.tip">Con 3 pares de puntos también escala el objeto para ajustarlo, sin pasar por SCALE.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== DIVIDE ====== -->
+      <div class="diagram-card" data-cat="dibujo" data-aos="fade-up" data-aos-delay="60">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Dibujo</span> DIVIDE</h4>
+          <span class="key-inline">DIV</span>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="vis.divide.desc">Coloca puntos o bloques a intervalos iguales a lo largo de un objeto sin partirlo.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label">Línea</span>
+              <svg viewBox="0 0 200 100">
+                <line class="cad-line" x1="25" y1="55" x2="175" y2="55"/>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label">DIVIDE en 5</span>
+              <svg viewBox="0 0 200 100">
+                <line class="cad-line" x1="25" y1="55" x2="175" y2="55"/>
+                <circle class="cad-point-cyan" cx="55" cy="55" r="3"/>
+                <circle class="cad-point-cyan" cx="85" cy="55" r="3"/>
+                <circle class="cad-point-cyan" cx="115" cy="55" r="3"/>
+                <circle class="cad-point-cyan" cx="145" cy="55" r="3"/>
+                <text class="cad-label" x="55" y="42" style="font-size:8px">5 tramos iguales</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="vis.tip">Tip</span>
+            <span data-i18n="vis.divide.tip">DIVIDE usa puntos invisibles (PDMODE). Activa el estilo de punto visible para verlos antes de dibujar.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== REVOLVE (3D) ====== -->
+      <div class="diagram-card" data-cat="3d" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">3D</span> REVOLVE</h4>
+          <span class="key-inline">REV</span>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="vis.revolve.desc">Gira un perfil 2D alrededor de un eje para crear un sólido de revolución.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label">Perfil + eje</span>
+              <svg viewBox="0 0 200 100">
+                <polygon class="cad-fill" points="70,70 70,20 110,45 110,70"/>
+                <line class="cad-line-dim" x1="70" y1="10" x2="70" y2="92"/>
+                <text class="cad-label" x="55" y="16" style="font-size:8px;fill:var(--amber)">eje</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label">Sólido rotado</span>
+              <svg viewBox="0 0 200 120">
+                <path class="cad-fill" d="M55,15 C70,25 70,45 55,50 C40,55 40,80 55,92 C70,100 70,105 55,108 L55,15 Z"/>
+                <line class="cad-line-dim" x1="55" y1="8" x2="55" y2="112"/>
+                <text class="cad-label" x="60" y="120" style="font-size:8px;fill:var(--layer-green)">simétrico al eje</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="vis.tip">Tip</span>
+            <span data-i18n="vis.revolve.tip">REVOLVE genera vasos, columnas, tornos y todo lo que sea simétrico alrededor de un eje.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== LOFT (3D) ====== -->
+      <div class="diagram-card" data-cat="3d" data-aos="fade-up" data-aos-delay="60">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">3D</span> LOFT</h4>
+          <span class="key-inline">LOFT</span>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="vis.loft.desc">Crea un sólido que conecta dos o más secciones transversales con una transición suave.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label">Secciones</span>
+              <svg viewBox="0 0 200 100">
+                <circle class="cad-fill" cx="100" cy="20" r="12"/>
+                <rect class="cad-fill" x="70" y="60" width="60" height="26" rx="2"/>
+                <text class="cad-label" x="85" y="98" style="font-size:8px">2 perfiles distintos</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label">Transición suave</span>
+              <svg viewBox="0 0 200 100">
+                <path class="cad-fill" d="M92,8 A12,12 0 0,1 108,8 C108,30 128,45 132,58 L132,86 L68,86 L68,58 C72,45 92,30 92,8 Z"/>
+                <circle class="cad-fill" cx="100" cy="20" r="12" opacity="0.9"/>
+                <rect class="cad-fill" x="68" y="58" width="64" height="28" rx="2" opacity="0.9"/>
+                <text class="cad-label" x="62" y="98" style="font-size:8px;fill:var(--layer-green)">un solo sólido</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="vis.tip">Tip</span>
+            <span data-i18n="vis.loft.tip">LOFT con secciones de formas distintas produce transiciones orgánicas que EXTRUDE no puede lograr.</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>

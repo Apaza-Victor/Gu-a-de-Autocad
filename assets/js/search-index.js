@@ -1796,6 +1796,86 @@ window.SEARCH_INDEX = [
     "path": "Visuales"
   },
   {
+    "type": "visual",
+    "title": "Rastreo polar (F10)",
+    "description": "Muestra guías de ángulo exactas mientras dibujas (15°, 30°, 45°, 90°…) y el cursor se engancha a ellas.",
+    "file": "ejemplos-visuales.html",
+    "anchor": "",
+    "path": "Visuales"
+  },
+  {
+    "type": "visual",
+    "title": "BLOCK e INSERT",
+    "description": "Agrupa objetos en un bloque reutilizable con un punto base. INSERT coloca copias con escala y rotación.",
+    "file": "ejemplos-visuales.html",
+    "anchor": "",
+    "path": "Visuales"
+  },
+  {
+    "type": "visual",
+    "title": "ELLIPSE",
+    "description": "Dibuja elipses definiendo el eje mayor, el eje menor y el centro.",
+    "file": "ejemplos-visuales.html",
+    "anchor": "",
+    "path": "Visuales"
+  },
+  {
+    "type": "visual",
+    "title": "SPLINE",
+    "description": "Dibuja curvas suaves que pasan por puntos de ajuste (fit points).",
+    "file": "ejemplos-visuales.html",
+    "anchor": "",
+    "path": "Visuales"
+  },
+  {
+    "type": "visual",
+    "title": "MTEXT",
+    "description": "Crea texto multilínea con formato: negrita, alineación, columnas y justificación en un editor.",
+    "file": "ejemplos-visuales.html",
+    "anchor": "",
+    "path": "Visuales"
+  },
+  {
+    "type": "visual",
+    "title": "BREAK",
+    "description": "Rompe un objeto en dos partes eliminando el tramo entre dos puntos.",
+    "file": "ejemplos-visuales.html",
+    "anchor": "",
+    "path": "Visuales"
+  },
+  {
+    "type": "visual",
+    "title": "ALIGN",
+    "description": "Alinea y rota objetos de una sola vez tomando pares de puntos origen-destino.",
+    "file": "ejemplos-visuales.html",
+    "anchor": "",
+    "path": "Visuales"
+  },
+  {
+    "type": "visual",
+    "title": "DIVIDE",
+    "description": "Coloca puntos o bloques a intervalos iguales a lo largo de un objeto sin partirlo.",
+    "file": "ejemplos-visuales.html",
+    "anchor": "",
+    "path": "Visuales"
+  },
+  {
+    "type": "visual",
+    "title": "REVOLVE",
+    "description": "Gira un perfil 2D alrededor de un eje para crear un sólido de revolución.",
+    "file": "ejemplos-visuales.html",
+    "anchor": "",
+    "path": "Visuales"
+  },
+  {
+    "type": "visual",
+    "title": "LOFT",
+    "description": "Crea un sólido que conecta dos o más secciones transversales con una transición suave.",
+    "file": "ejemplos-visuales.html",
+    "anchor": "",
+    "path": "Visuales"
+  },
+  {
     "type": "tip",
     "title": "Atajo esencial ESC = tu mejor amigo",
     "description": "",
@@ -1910,6 +1990,78 @@ window.SEARCH_INDEX = [
   {
     "type": "tip",
     "title": "Avanzado Xref para trabajo en equipo",
+    "description": "",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Atajo esencial ESPACIO = Enter",
+    "description": "",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Atajo esencial El poder del doble clic",
+    "description": "",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Atajo esencial MA copia el formato en 1 clic",
+    "description": "",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Error común Líneas que no se tocan",
+    "description": "",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Error común UNITS antes de dibujar",
+    "description": "",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Flujo de trabajo LAYISO aísla capas",
+    "description": "",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Flujo de trabajo QSELECT selección en masa",
+    "description": "",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Avanzado Crea tus propios alias",
+    "description": "",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Avanzado Grips: edita sin comandos",
     "description": "",
     "file": "trucos.html",
     "anchor": "",

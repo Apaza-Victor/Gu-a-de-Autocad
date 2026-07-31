@@ -596,6 +596,313 @@
         </div>
       </div>
 
+      <!-- ====== ATAJO: Espacio = Enter ====== -->
+      <div class="diagram-card" data-cat="atajos" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Atajo esencial</span> ESPACIO = Enter</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.space.desc">La barra espaciadora hace de Enter: confirma comandos y, con un solo toque, repite el último comando usado.</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 280 80">
+              <rect x="5" y="10" width="80" height="45" fill="var(--bg-elevated)" stroke="var(--layer-cyan)" rx="3"/>
+              <text class="cad-label-cmd" x="20" y="38" style="font-size:12px;fill:var(--layer-cyan)">ENTER</text>
+              <text class="cad-label" x="12" y="68" style="font-size:7px">Confirma el comando</text>
+              <text class="cad-label-cmd" x="100" y="40" style="font-size:16px;fill:var(--amber)">=</text>
+              <rect x="115" y="10" width="110" height="45" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="3"/>
+              <text class="cad-label-cmd" x="132" y="35" style="font-size:11px;fill:var(--layer-green)">ESPACIO</text>
+              <text class="cad-label" x="118" y="54" style="font-size:6px">Confirma el comando</text>
+              <text class="cad-label" x="118" y="63" style="font-size:6px">+ repite el último usado</text>
+              <text class="cad-label" x="5" y="78" style="font-size:7px;fill:var(--amber)">Pulsa ESPACIO con el pulgar: tu mano nunca se mueve del teclado</text>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Consejo</span>
+            <span data-i18n="tips.space.tip">Acostúmbrate a confirmar con ESPACIO en vez de Enter: tu mano derecha nunca se mueve del teclado.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== ATAJO: Doble clic ====== -->
+      <div class="diagram-card" data-cat="atajos" data-aos="fade-up" data-aos-delay="60">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Atajo esencial</span> El poder del doble clic</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.doubleclick.desc">El doble clic abre el editor de cada objeto: texto, cotas, bloques, hatch… sin escribir un solo comando.</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 280 90">
+              <text class="cad-label-cmd" x="5" y="14" style="font-size:9px">Doble clic sobre un objeto abre su editor:</text>
+              <rect x="5" y="22" width="62" height="55" fill="var(--bg-elevated)" stroke="var(--layer-yellow)" rx="2"/>
+              <text class="cad-label" x="12" y="38" style="font-size:6px;fill:var(--layer-yellow)">Bloque</text>
+              <rect class="cad-fill" x="21" y="45" width="30" height="20" rx="2"/>
+              <text class="cad-label" x="11" y="72" style="font-size:6px">Editor de bloques</text>
+              <rect x="73" y="22" width="62" height="55" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+              <text class="cad-label" x="80" y="38" style="font-size:6px;fill:var(--layer-green)">Cota</text>
+              <line x1="79" y1="50" x2="101" y2="50" stroke="var(--layer-green)" stroke-width="1"/>
+              <line x1="87" y1="52" x2="87" y2="58" stroke="var(--layer-green)" stroke-width="1"/>
+              <line x1="93" y1="52" x2="93" y2="58" stroke="var(--layer-green)" stroke-width="1"/>
+              <text class="cad-label" x="77" y="72" style="font-size:6px">Texto de cota</text>
+              <rect x="141" y="22" width="62" height="55" fill="var(--bg-elevated)" stroke="var(--layer-cyan)" rx="2"/>
+              <text class="cad-label" x="148" y="38" style="font-size:6px;fill:var(--layer-cyan)">Texto</text>
+              <text class="cad-label" x="148" y="55" style="font-size:8px">Hola</text>
+              <text class="cad-label" x="145" y="72" style="font-size:6px">Editor de texto</text>
+              <rect x="209" y="22" width="62" height="55" fill="var(--bg-elevated)" stroke="var(--amber)" rx="2"/>
+              <text class="cad-label" x="216" y="38" style="font-size:6px;fill:var(--amber)">Hatch</text>
+              <line x1="215" y1="48" x2="263" y2="62" stroke="var(--amber)" stroke-width="1" stroke-dasharray="3,3"/>
+              <line x1="215" y1="62" x2="263" y2="48" stroke="var(--amber)" stroke-width="1" stroke-dasharray="3,3"/>
+              <text class="cad-label" x="213" y="72" style="font-size:6px">Editor de hatch</text>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Pro tip</span>
+            <span data-i18n="tips.doubleclick.tip">Doble clic en un bloque abre el editor de bloques directamente. En una cota abre sus propiedades de texto.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== ATAJO: MA Match Properties ====== -->
+      <div class="diagram-card" data-cat="atajos" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Atajo esencial</span> MA copia el formato en 1 clic</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.matchprop.desc">MA (Match Properties) copia capa, color, tipo de línea y formato de un objeto a otro en un solo clic.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label">Objeto modelo</span>
+              <svg viewBox="0 0 160 70">
+                <rect x="5" y="5" width="150" height="60" fill="var(--bg-elevated)" stroke="var(--layer-red)" rx="2"/>
+                <text class="cad-label-cmd" x="12" y="18" style="font-size:7px;fill:var(--layer-red)">MA → clic en el modelo</text>
+                <line x1="20" y1="45" x2="140" y2="45" stroke="var(--layer-red)" stroke-dasharray="6,3" stroke-width="2"/>
+                <circle class="cad-point-cyan" cx="30" cy="45" r="3"/>
+                <text class="cad-label" x="48" y="36" style="font-size:6px">Capa: Muros</text>
+                <text class="cad-label" x="48" y="52" style="font-size:6px">Rojo · discontinuo</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label">Objetos destino</span>
+              <svg viewBox="0 0 160 70">
+                <rect x="5" y="5" width="150" height="60" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+                <text class="cad-label-cmd" x="12" y="18" style="font-size:7px;fill:var(--layer-green)">MA → clic en los destinos</text>
+                <line x1="15" y1="40" x2="72" y2="40" stroke="var(--layer-red)" stroke-dasharray="6,3" stroke-width="2"/>
+                <line x1="85" y1="40" x2="150" y2="40" stroke="var(--layer-red)" stroke-dasharray="6,3" stroke-width="2"/>
+                <text class="cad-label" x="15" y="58" style="font-size:6px;fill:var(--layer-green)">heredan el formato ✓</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Consejo</span>
+            <span data-i18n="tips.matchprop.tip">Selecciona primero el objeto modelo y luego todos los que quieras "pintar". Doble clic en MA lo deja activo para muchos.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== ERRORES: Huecos falsos ====== -->
+      <div class="diagram-card" data-cat="errores" data-aos="fade-up" data-aos-delay="60">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Error común</span> Líneas que no se tocan</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.gap.desc">Dos líneas pueden verse unidas pero no tocarse de verdad: al hacer zoom aparece el hueco. Es un problema de precisión de snap.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label">Parece unida</span>
+              <svg viewBox="0 0 160 70">
+                <rect x="5" y="5" width="150" height="60" fill="var(--bg-elevated)" stroke="var(--layer-red)" rx="2"/>
+                <line x1="15" y1="45" x2="77" y2="45" stroke="var(--layer-yellow)" stroke-width="2"/>
+                <line x1="87" y1="45" x2="150" y2="45" stroke="var(--layer-yellow)" stroke-width="2"/>
+                <circle cx="82" cy="45" r="20" fill="none" stroke="var(--layer-red)" stroke-width="1.5" stroke-dasharray="3,2"/>
+                <text class="cad-label" x="62" y="24" style="font-size:6px;fill:var(--layer-red)">zoom: hay hueco</text>
+                <line x1="78" y1="45" x2="86" y2="45" stroke="var(--layer-red)" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label">JOIN · OSNAP F3</span>
+              <svg viewBox="0 0 160 70">
+                <rect x="5" y="5" width="150" height="60" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+                <line x1="15" y1="45" x2="150" y2="45" stroke="var(--layer-green)" stroke-width="2"/>
+                <text class="cad-label" x="40" y="30" style="font-size:6px;fill:var(--layer-green)">una sola entidad</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Solución</span>
+            <span data-i18n="tips.gap.tip">Usa JOIN para unirlas o, mejor, asegúrate de enganchar con OSNAP (F3) a extremos e intersecciones reales desde el inicio.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== ERRORES: UNITS ====== -->
+      <div class="diagram-card" data-cat="errores" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Error común</span> UNITS antes de dibujar</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.units.desc">Dibujar con las unidades equivocadas (mm vs cm vs m) arruina el proyecto entero: cotas, bloques y escalas fallan.</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 280 90">
+              <text class="cad-label-cmd" x="5" y="14" style="font-size:9px">Un muro de 3 m según las unidades del dibujo:</text>
+              <rect x="5" y="22" width="85" height="52" fill="var(--bg-elevated)" stroke="var(--layer-red)" rx="2"/>
+              <text class="cad-label-cmd" x="12" y="36" style="font-size:7px;fill:var(--layer-red)">Millímetros</text>
+              <text class="cad-label" x="12" y="54" style="font-size:14px">3000</text>
+              <text class="cad-label" x="12" y="68" style="font-size:6px">Lo normal en planos</text>
+              <rect x="100" y="22" width="85" height="52" fill="var(--bg-elevated)" stroke="var(--layer-yellow)" rx="2"/>
+              <text class="cad-label-cmd" x="107" y="36" style="font-size:7px;fill:var(--layer-yellow)">Centímetros</text>
+              <text class="cad-label" x="107" y="54" style="font-size:14px">300</text>
+              <text class="cad-label" x="107" y="68" style="font-size:6px">Dibujo de detalle</text>
+              <rect x="195" y="22" width="80" height="52" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+              <text class="cad-label-cmd" x="202" y="36" style="font-size:7px;fill:var(--layer-green)">Metros</text>
+              <text class="cad-label" x="202" y="54" style="font-size:14px">3</text>
+              <text class="cad-label" x="202" y="68" style="font-size:6px">Dibujo urbano</text>
+              <text class="cad-label" x="5" y="84" style="font-size:7px;fill:var(--amber)">Elige UNA unidad y no la cambies: ejecuta UNITS al empezar</text>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Regla de oro</span>
+            <span data-i18n="tips.units.tip">Ejecuta UNITS al empezar y define tipo y precisión. Un muro de 3 m debe medir 3000 si trabajas en milímetros.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== FLUJO: LAYISO ====== -->
+      <div class="diagram-card" data-cat="flujo" data-aos="fade-up" data-aos-delay="60">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Flujo de trabajo</span> LAYISO aísla capas</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.layiso.desc">LAYISO aísla la capa de un objeto: apaga o congela todas las demás para trabajar sin distracciones.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label">Todas las capas</span>
+              <svg viewBox="0 0 160 70">
+                <rect x="5" y="5" width="150" height="60" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="2"/>
+                <text class="cad-label" x="12" y="18" style="font-size:6px">mucho ruido visual</text>
+                <line x1="15" y1="35" x2="70" y2="35" stroke="var(--layer-red)" stroke-width="1.5"/>
+                <line x1="15" y1="52" x2="120" y2="52" stroke="var(--layer-green)" stroke-width="1.5"/>
+                <circle cx="110" cy="25" r="10" fill="none" stroke="var(--layer-yellow)" stroke-width="1.5"/>
+                <rect x="90" y="45" width="25" height="16" fill="none" stroke="var(--layer-cyan)" stroke-width="1.5" rx="1"/>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label">LAYISO (capa aislada)</span>
+              <svg viewBox="0 0 160 70">
+                <rect x="5" y="5" width="150" height="60" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+                <text class="cad-label" x="12" y="18" style="font-size:6px;fill:var(--layer-green)">solo lo que importa</text>
+                <line x1="15" y1="45" x2="120" y2="45" stroke="var(--layer-green)" stroke-width="2"/>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Consejo</span>
+            <span data-i18n="tips.layiso.tip">Al terminar, escribe LAYUNISO para restaurar todas las capas con un solo comando.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== FLUJO: QSELECT ====== -->
+      <div class="diagram-card" data-cat="flujo" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Flujo de trabajo</span> QSELECT selección en masa</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.qselect.desc">QSELECT selecciona en masa por propiedad: por ejemplo, todos los círculos de radio 50 o todos los textos de la capa Cotas.</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 280 90">
+              <rect x="5" y="5" width="120" height="80" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="3"/>
+              <text class="cad-label-cmd" x="12" y="18" style="font-size:7px">Filtro QSELECT</text>
+              <text class="cad-label" x="12" y="32" style="font-size:6px">Capa = COTAS</text>
+              <line x1="12" y1="36" x2="118" y2="36" stroke="var(--border-soft)" stroke-width="1"/>
+              <text class="cad-label" x="12" y="48" style="font-size:6px;fill:var(--amber)">✓ 25 objetos</text>
+              <text class="cad-label" x="12" y="60" style="font-size:6px">✓ todos los textos</text>
+              <text class="cad-label" x="12" y="72" style="font-size:6px">✓ lista de capas</text>
+              <text class="cad-label-cmd" x="138" y="45" style="font-size:16px;fill:var(--amber)">→</text>
+              <text class="cad-label-cmd" x="158" y="18" style="font-size:7px;fill:var(--layer-green)">Seleccionados:</text>
+              <circle cx="172" cy="34" r="11" fill="none" stroke="var(--layer-green)" stroke-width="1.5"/>
+              <circle cx="202" cy="34" r="11" fill="none" stroke="var(--layer-green)" stroke-width="1.5"/>
+              <circle cx="187" cy="56" r="11" fill="none" stroke="var(--layer-green)" stroke-width="1.5"/>
+              <circle cx="222" cy="58" r="11" fill="none" stroke="var(--layer-green)" stroke-width="1.5"/>
+              <circle cx="244" cy="36" r="11" fill="none" stroke="var(--layer-green)" stroke-width="1.5"/>
+              <text class="cad-label" x="158" y="78" style="font-size:6px">listos para borrar, mover o</text>
+              <text class="cad-label" x="158" y="86" style="font-size:6px">cambiar de capa en bloque</text>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Consejo</span>
+            <span data-i18n="tips.qselect.tip">Botón derecho → Selección rápida. Ideal para borrar, mover o cambiar de capa a cientos de objetos de golpe.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== AVANZADO: Alias ====== -->
+      <div class="diagram-card" data-cat="avanzado" data-aos="fade-up" data-aos-delay="60">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Avanzado</span> Crea tus propios alias</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.alias.desc">Puedes crear tus propios atajos de comando editando el archivo de alias (acad.pgp) o desde el editor CUI.</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 280 90">
+              <rect x="5" y="5" width="270" height="80" fill="var(--bg-elevated)" stroke="var(--layer-yellow)" rx="3"/>
+              <text class="cad-label-cmd" x="15" y="20" style="font-size:8px;fill:var(--layer-yellow)">acad.pgp — alias de comandos</text>
+              <text class="cad-label" x="15" y="34" style="font-size:7px">L,    *LINE</text>
+              <text class="cad-label" x="15" y="46" style="font-size:7px">C,    *CIRCLE</text>
+              <rect x="15" y="52" width="190" height="16" fill="none" stroke="var(--layer-green)" stroke-width="1.5" rx="1"/>
+              <text class="cad-label" x="22" y="63" style="font-size:7px;fill:var(--layer-green)">BX,   *BLOCK   ← alias nuevo</text>
+              <text class="cad-label" x="15" y="80" style="font-size:6px">Edítalo con CUI o cualquier editor de texto</text>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Pro tip</span>
+            <span data-i18n="tips.alias.tip">Asigna alias a los comandos que más usas. Ejemplo: BX = *BLOCK. Cuidado con no pisar alias existentes.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== AVANZADO: Grips ====== -->
+      <div class="diagram-card" data-cat="avanzado" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Avanzado</span> Grips: edita sin comandos</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.grips.desc">Los grips (cuadraditos azules) permiten estirar, mover, rotar, escalar y copiar objetos sin escribir ningún comando.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label">Grips de un rectángulo</span>
+              <svg viewBox="0 0 160 70">
+                <rect x="5" y="5" width="150" height="60" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="2"/>
+                <rect class="cad-fill" x="25" y="15" width="90" height="40" rx="2"/>
+                <circle cx="25" cy="15" r="3" class="cad-point-cyan"/>
+                <circle cx="70" cy="15" r="3" class="cad-point"/>
+                <circle cx="115" cy="15" r="3" class="cad-point"/>
+                <circle cx="25" cy="55" r="3" class="cad-point"/>
+                <circle cx="115" cy="55" r="3" class="cad-point"/>
+                <circle cx="70" cy="35" r="3" class="cad-point"/>
+                <text class="cad-label" x="25" y="70" style="font-size:6px;fill:var(--layer-cyan)">grip activo</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label">Enter = ciclo de modos</span>
+              <svg viewBox="0 0 160 70">
+                <rect x="5" y="5" width="150" height="60" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="2"/>
+                <text class="cad-label-cmd" x="15" y="24" style="font-size:7px">Estirar → Mover</text>
+                <text class="cad-label-cmd" x="15" y="36" style="font-size:7px">→ Rotar → Escalar</text>
+                <text class="cad-label-cmd" x="15" y="48" style="font-size:7px">→ Reflejar</text>
+                <text class="cad-label" x="15" y="62" style="font-size:6px;fill:var(--amber)">todo sin escribir nada</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Pro tip</span>
+            <span data-i18n="tips.grips.tip">Selecciona un objeto y pulsa sobre un grip: cada Enter cicla entre Estirar, Mover, Rotar, Escalar y Reflejar.</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
