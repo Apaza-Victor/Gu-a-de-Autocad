@@ -22,7 +22,7 @@ Sitio web estatico educativo que funciona como guia teorica y diccionario de com
 Guia de Autocad/
 ├── index.html                  # Pagina principal (hero, niveles, progreso)
 ├── css/
-│   └── style.css               # Estilos completos del sitio (~2800 lineas)
+│   └── style.css               # Estilos completos del sitio (~1500 lineas)
 ├ js/
 │   ├── main.js                 # Funcionalidad JS compartida (~755 lineas)
 │   └── i18n.js                 # Sistema de traduccion ES/EN (~1170 lineas)
@@ -45,10 +45,10 @@ Guia de Autocad/
 | Archivo | Funcion | Tamano aprox |
 |---------|---------|--------------|
 | `index.html` | Landing page con hero, cards de niveles, progreso | ~120 lineas |
-| `css/style.css` | Estilos completos, variables CSS, responsive, print, accesibilidad | ~2800 lineas |
+| `css/style.css` | Estilos completos, variables CSS, responsive, print, accesibilidad | ~1500 lineas |
 | `js/main.js` | Theme toggle, search, filters, scroll-spy, mark-done, FAQ, Swiper, Prism | ~755 lineas |
-| `js/i18n.js` | Diccionario de traducciones ES/EN para toda la interfaz | ~1170 lineas |
-| `paginas/comandos.html` | 95 tarjetas de comandos con data-cmd, data-cat, data-level, data-keys | ~1427 lineas |
+| `js/i18n.js` | Diccionario de traducciones ES/EN para toda la interfaz | ~1200 lineas |
+| `paginas/comandos.html` | 95 tarjetas de comandos con data-cmd, data-cat, data-level, data-keys | ~1414 lineas |
 
 ---
 
@@ -121,9 +121,9 @@ Guia de Autocad/
 ### 4.6 Progreso de aprendizaje
 
 - Botones "Marcar tema como visto" en cada seccion
-- Almacenamiento en `localStorage` key: `autocad-guia-progress`
+- Almacenamiento en `localStorage` key: `autocad-guia-progreso`
 - Barra de progreso en la pagina principal
-- Formato: `{ "nivel-1": [0,1,2], "nivel-2": [0,3] }` (indices de secciones completadas)
+- Formato: `["nivel1-que-es", "nivel2-capas", ...]` (array plano con los IDs `data-topic` de los temas completados)
 
 ### 4.7 Otros
 

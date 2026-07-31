@@ -106,7 +106,7 @@
 
           <!-- 1. Espacio modelo vs presentación -->
           <section id="espacios" data-topic="nivel3-espacios">
-            <h2><span class="sec-num">1</span> Espacio modelo vs. espacio papel (Layouts)</h2>
+            <h2><span class="sec-num">1</span><span data-i18n="lvl3.s1.title">Espacio modelo vs. espacio papel (Layouts)</span></h2>
             <p>AutoCAD trabaja con dos entornos distintos, visibles como pestañas en la parte inferior de la pantalla:</p>
 
             <table class="table-cad">
@@ -127,7 +127,7 @@
 
           <!-- 2. Viewports -->
           <section id="viewports" data-topic="nivel3-viewports">
-            <h2><span class="sec-num">2</span> Ventanas gráficas (Viewports) y escalas</h2>
+            <h2><span class="sec-num">2</span><span data-i18n="lvl3.s2.title">Ventanas gráficas (Viewports) y escalas</span></h2>
             <p>Dentro de una presentación, una <strong>ventana gráfica</strong> es como una "cámara" que muestra una porción del espacio modelo a una escala determinada. Se crea y edita con el comando <span class="cmd-inline">MVIEW</span>, y su escala se controla desde la barra de estado inferior (ícono de escala de la ventana gráfica) o escribiendo el factor directamente, por ejemplo <span class="cmd-inline">1:50</span>.</p>
 
             <ul>
@@ -146,7 +146,7 @@
 
           <!-- 3. Plantillas -->
           <section id="plantillas" data-topic="nivel3-plantillas">
-            <h2><span class="sec-num">3</span> Plantillas (.DWT) y estándares de dibujo</h2>
+            <h2><span class="sec-num">3</span><span data-i18n="lvl3.s3.title">Plantillas (.DWT) y estándares de dibujo</span></h2>
             <p>Una plantilla es un archivo base (<strong>.DWT</strong>) que guarda de antemano capas, estilos de cota, de texto, formatos de layout y cajetines, para no reconfigurar cada proyecto desde cero.</p>
 
             <h3>Qué conviene guardar en una plantilla propia</h3>
@@ -164,7 +164,7 @@
 
           <!-- 4. Impresión y exportación -->
           <section id="impresion" data-topic="nivel3-impresion">
-            <h2><span class="sec-num">4</span> Impresión y exportación</h2>
+            <h2><span class="sec-num">4</span><span data-i18n="lvl3.s4.title">Impresión y exportación</span></h2>
 
             <table class="table-cad">
               <thead><tr><th>Formato</th><th>Comando</th><th>Cuándo usarlo</th></tr></thead>
@@ -186,7 +186,7 @@
 
           <!-- 5. Xref -->
           <section id="xref" data-topic="nivel3-xref">
-            <h2><span class="sec-num">5</span> Gestión de archivos externos (Xref)</h2>
+            <h2><span class="sec-num">5</span><span data-i18n="lvl3.s5.title">Gestión de archivos externos (Xref)</span></h2>
             <p>Una <strong>referencia externa (Xref)</strong> vincula otro archivo .DWG dentro del dibujo actual sin fusionarlo permanentemente: si el archivo original cambia, el vínculo se actualiza automáticamente.</p>
 
             <table class="table-cad">
@@ -206,20 +206,20 @@
 
           <!-- 6. Atajos -->
           <section id="atajos" data-topic="nivel3-atajos">
-            <h2><span class="sec-num">6</span> Atajos de teclado y comandos rápidos</h2>
+            <h2><span class="sec-num">6</span><span data-i18n="lvl3.s6.title">Atajos de teclado y comandos rápidos</span></h2>
             <p>Memorizar estos atajos es lo que más acelera el trabajo diario en AutoCAD:</p>
 
             <table class="table-cad">
               <thead><tr><th>Acción</th><th>Atajo</th></tr></thead>
               <tbody>
-                <tr><td>Deshacer / Rehacer</td><td class="key-inline">Ctrl+Z</td> / <td class="key-inline">Ctrl+Y</td></tr>
+                <tr><td>Deshacer / Rehacer</td><td><span class="key-inline">Ctrl+Z</span> / <span class="key-inline">Ctrl+Y</span></td></tr>
                 <tr><td>Guardar</td><td class="key-inline">Ctrl+S</td></tr>
-                <tr><td>Copiar / Pegar</td><td class="key-inline">Ctrl+C</td> / <td class="key-inline">Ctrl+V</td></tr>
-                <tr><td>Repetir el último comando</td><td class="key-inline">Enter</td> o <td class="key-inline">Barra espaciadora</td></tr>
+                <tr><td>Copiar / Pegar</td><td><span class="key-inline">Ctrl+C</span> / <span class="key-inline">Ctrl+V</span></td></tr>
+                <tr><td>Repetir el último comando</td><td><span class="key-inline">Enter</span> o <span class="key-inline">Barra espaciadora</span></td></tr>
                 <tr><td>Cancelar comando activo</td><td class="key-inline">Esc</td></tr>
                 <tr><td>Panel de propiedades</td><td class="key-inline">Ctrl+1</td></tr>
                 <tr><td>Calculadora rápida</td><td class="key-inline">Ctrl+8</td></tr>
-                <tr><td>Zoom extendido (ver todo el dibujo)</td><td class="cmd-inline">ZOOM</td> + <td class="key-inline">E</td></tr>
+                <tr><td>Zoom extendido (ver todo el dibujo)</td><td><span class="cmd-inline">ZOOM</span> + <span class="key-inline">E</span></td></tr>
                 <tr><td>Medir distancia</td><td class="cmd-inline">DIST</td></tr>
                 <tr><td>Lista de propiedades de un objeto</td><td class="cmd-inline">LIST</td></tr>
               </tbody>
@@ -304,11 +304,13 @@
                 <tr><td>Pantalla</td><td class="cmd-inline">PROPERTIES</td><td class="key-inline">Ctrl+1</td><td>Paleta de propiedades</td></tr>
               </tbody>
             </table>
+
+            <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
           </section>
 
           <!-- 7. Estilos de trazado -->
           <section id="plotstyles" data-topic="nivel3-plotstyles">
-            <h2><span class="sec-num">7</span> Estilos de trazado (Plot Styles)</h2>
+            <h2><span class="sec-num">7</span><span data-i18n="lvl3.s7.title">Estilos de trazado (Plot Styles)</span></h2>
             <p>Un estilo de trazado controla cómo se traducen los colores de pantalla a grosores de línea, tonos de gris o negro puro al imprimir. Sin esto, tu plano puede salir todo con el mismo grosor o con colores no deseados.</p>
 
             <h3>Tipos de estilos de trazado</h3>
@@ -339,10 +341,10 @@
 
           <!-- 8. Campos (Fields) -->
           <section id="campos" data-topic="nivel3-campos">
-            <h2><span class="sec-num">8</span> Campos (Fields)</h2>
+            <h2><span class="sec-num">8</span><span data-i18n="lvl3.s8.title">Campos (Fields)</span></h2>
             <p>Un <strong>campo</strong> es un texto que se actualiza automáticamente con información del dibujo: fecha de modificación, nombre de archivo, área de un polígono, autor, etc. Son esenciales para cajetines y tablas dinámicas.</p>
 
-            <h3>Campo más usados</h3>
+            <h3>Campos más usados</h3>
             <table class="table-cad">
               <thead><tr><th>Campo</th><th>Categoría</th><th>Qué muestra</th></tr></thead>
               <tbody>
@@ -373,7 +375,7 @@
 
           <!-- 9. Xref avanzado -->
           <section id="xref-avanzado" data-topic="nivel3-xref-avanzado">
-            <h2><span class="sec-num">9</span> Gestión avanzada de referencias externas (Xref)</h2>
+            <h2><span class="sec-num">9</span><span data-i18n="lvl3.s9.title">Gestión avanzada de referencias externas (Xref)</span></h2>
             <p>Ya viste en el tema 5 qué es una Xref. Aquí profundizamos en las opciones más avanzadas que necesitas en proyectos colaborativos reales.</p>
 
             <h3>Adjuntar vs. Enlazar</h3>
@@ -592,6 +594,8 @@
         <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.guide">Guía</h6>
         <ul class="list-unstyled">
           <li><a href="comandos.html">Comandos</a></li>
+          <li><a href="ejemplos-visuales.html">Ejemplos</a></li>
+          <li><a href="trucos.html">Trucos</a></li>
           <li><a href="recursos.html">Recursos</a></li>
           <li><a href="faq.html">FAQ</a></li>
         </ul>
@@ -599,9 +603,9 @@
       <div class="col-lg-4">
         <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.follow">Síguenos</h6>
         <div class="d-flex gap-2">
-          <a href="#" class="icon-btn"><i class="bi bi-youtube"></i></a>
-          <a href="#" class="icon-btn"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="icon-btn"><i class="bi bi-github"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
         </div>
       </div>
     </div>

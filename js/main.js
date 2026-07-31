@@ -740,7 +740,7 @@ function downloadShortcuts(){
   });
 
   text += '\n' + '='.repeat(50) + '\n';
-  text += 'Fuente: AutoCAD Guía — guia-autocad.com\n';
+  text += 'Fuente: AutoCAD Guía — https://apaza-victor.github.io/Gu-a-de-Autocad/\n';
   text += 'Generado: ' + new Date().toLocaleDateString('es') + '\n';
 
   const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });

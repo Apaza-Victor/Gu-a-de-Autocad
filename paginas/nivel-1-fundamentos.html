@@ -83,7 +83,7 @@
       <!-- Índice lateral -->
       <aside class="col-lg-3 mb-5 mb-lg-0">
         <div class="toc-sidebar">
-          <h6>En este nivel</h6>
+          <h6 data-i18n="ui.inThisLevel">En este nivel</h6>
           <ul class="toc-list">
             <li><a href="#que-es" data-toc="nivel1-que-es"><span class="toc-check"></span> Qué es AutoCAD</a></li>
             <li><a href="#instalacion" data-toc="nivel1-instalacion"><span class="toc-check"></span> Instalación y licencias</a></li>
@@ -105,7 +105,7 @@
 
           <!-- 1. Qué es AutoCAD -->
           <section id="que-es" data-topic="nivel1-que-es">
-            <h2 data-i18n="lvl1.s1.title"><span class="sec-num">1</span> ¿Qué es AutoCAD y para qué se usa?</h2>
+            <h2><span class="sec-num">1</span><span data-i18n="lvl1.s1.title">¿Qué es AutoCAD y para qué se usa?</span></h2>
             <p data-i18n-html="lvl1.s1.p1"><strong>AutoCAD</strong> es un programa de diseño asistido por computadora (CAD, por sus siglas en inglés) desarrollado por Autodesk, usado para crear dibujos técnicos precisos en dos dimensiones (2D) y modelos en tres dimensiones (3D). A diferencia de un programa de dibujo artístico, AutoCAD trabaja con coordenadas exactas y unidades reales: un muro de 3 metros se dibuja midiendo exactamente 3 metros dentro del archivo.</p>
 
             <p data-i18n="lvl1.s1.p2">Se utiliza principalmente en cuatro grandes áreas:</p>
@@ -131,7 +131,7 @@
 
           <!-- 2. Instalación y licencias -->
           <section id="instalacion" data-topic="nivel1-instalacion">
-            <h2 data-i18n="lvl1.s2.title"><span class="sec-num">2</span> Instalación, requisitos y tipos de licencia</h2>
+            <h2><span class="sec-num">2</span><span data-i18n="lvl1.s2.title">Instalación, requisitos y tipos de licencia</span></h2>
 
             <h3>Requisitos mínimos orientativos</h3>
             <table class="table-cad">
@@ -166,7 +166,7 @@
 
           <!-- 3. Interfaz de usuario -->
           <section id="interfaz" data-topic="nivel1-interfaz">
-            <h2 data-i18n="lvl1.s3.title"><span class="sec-num">3</span> Interfaz de usuario</h2>
+            <h2><span class="sec-num">3</span><span data-i18n="lvl1.s3.title">Interfaz de usuario</span></h2>
             <p>La interfaz de AutoCAD está compuesta por varias zonas que conviene reconocer antes de dibujar:</p>
 
             <table class="table-cad">
@@ -198,7 +198,7 @@
 
           <!-- 4. Sistema de coordenadas -->
           <section id="coordenadas" data-topic="nivel1-coordenadas">
-            <h2><span class="sec-num">4</span> Sistema de coordenadas</h2>
+            <h2><span class="sec-num">4</span><span data-i18n="lvl1.s4.title">Sistema de coordenadas</span></h2>
             <p>AutoCAD ubica cada punto del dibujo mediante coordenadas. Entender los cuatro tipos siguientes es esencial para dibujar con precisión sin depender solo del mouse.</p>
 
             <table class="table-cad">
@@ -221,7 +221,7 @@
 
           <!-- 5. Configuración inicial -->
           <section id="configuracion" data-topic="nivel1-configuracion">
-            <h2><span class="sec-num">5</span> Configuración inicial de un dibujo</h2>
+            <h2><span class="sec-num">5</span><span data-i18n="lvl1.s5.title">Configuración inicial de un dibujo</span></h2>
             <p>Antes de empezar cualquier proyecto real, define estos parámetros para evitar tener que corregir todo el dibujo después:</p>
 
             <h3>Unidades de dibujo</h3>
@@ -249,7 +249,7 @@
 
           <!-- 6. Gestión de archivos DWG -->
           <section id="archivos" data-topic="nivel1-archivos">
-            <h2><span class="sec-num">6</span> Gestión de archivos DWG</h2>
+            <h2><span class="sec-num">6</span><span data-i18n="lvl1.s6.title">Gestión de archivos DWG</span></h2>
             <p>AutoCAD guarda cada dibujo en un archivo <strong>.DWG</strong>. Saber cómo proteger, guardar y recuperar estos archivos evita perder horas de trabajo.</p>
 
             <h3>Guardado y recuperación</h3>
@@ -277,7 +277,7 @@
 
           <!-- 7. Tipos de archivo -->
           <section id="tipos-archivo" data-topic="nivel1-tipos-archivo">
-            <h2><span class="sec-num">7</span> Tipos de archivo</h2>
+            <h2><span class="sec-num">7</span><span data-i18n="lvl1.s7.title">Tipos de archivo</span></h2>
             <p>AutoCAD maneja varios formatos. Conocer la diferencia te permite trabajar con clientes y programas externos sin problemas.</p>
 
             <table class="table-cad">
@@ -302,7 +302,7 @@
 
           <!-- 8. Zoom y navegación -->
           <section id="zoom" data-topic="nivel1-zoom">
-            <h2><span class="sec-num">8</span> Zoom y navegación</h2>
+            <h2><span class="sec-num">8</span><span data-i18n="lvl1.s8.title">Zoom y navegación</span></h2>
             <p>Moverte por el área de dibujo es algo que harás cientos de veces por sesión. Dominar el zoom y el pan te ahorra tiempo constante.</p>
 
             <h3>Comandos de zoom</h3>
@@ -314,7 +314,7 @@
                 <tr><td><span class="cmd-inline">ZOOM Extents</span></td><td><span class="key-inline">Z + E</span></td><td>Muestra todo el dibujo visible (lo más alejado posible sin perder contenido).</td></tr>
                 <tr><td><span class="cmd-inline">ZOOM Previous</span></td><td><span class="key-inline">Z + P</span></td><td>Vuelve a la vista anterior (puedes retroceder varias veces).</td></tr>
                 <tr><td><span class="cmd-inline">ZOOM All</span></td><td><span class="key-inline">Z + A</span></td><td>Muestra todo el área de dibujo definida por los límites (LIMITS).</td></tr>
-                <tr><td><span class="cmd-inline">ZOOM Realtime</span></td><td><span class="key-inline">Z + Enter</span></td><td>Modo interactivo: arraça arriba/abajo para acercar/alejar.</td></tr>
+                <tr><td><span class="cmd-inline">ZOOM Realtime</span></td><td><span class="key-inline">Z + Enter</span></td><td>Modo interactivo: arrastra arriba/abajo para acercar/alejar.</td></tr>
               </tbody>
             </table>
 
@@ -420,7 +420,7 @@
                     </div>
                     <div class="callout" style="margin-top:.8rem">
                       <span class="callout-title">Atajos esenciales</span>
-                      <span>Z+E todo visible, Z+W ventana, Z+P anterior, Z+Enter escala, rueta ratón = zoom rápido.</span>
+                      <span>Z+E todo visible, Z+W ventana, Z+P anterior, Z+Enter escala, rueda del ratón = zoom rápido.</span>
                     </div>
                   </div>
                 </div>
@@ -474,10 +474,10 @@
     <div class="row gy-4">
       <div class="col-lg-4">
         <div class="brand-cad mb-2"><span class="brand-mark"></span><span>AutoCAD Guía</span></div>
-        <p>Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
+        <p data-i18n="footer.disclaimer">Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
       </div>
       <div class="col-6 col-lg-2">
-        <h6 class="mono text-uppercase small text-muted-custom mb-3">Niveles</h6>
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.levels">Niveles</h6>
         <ul class="list-unstyled">
           <li><a href="nivel-1-fundamentos.html">Fundamentos</a></li>
           <li><a href="nivel-2-dibujo-2d.html">Dibujo 2D</a></li>
@@ -487,45 +487,47 @@
         </ul>
       </div>
       <div class="col-6 col-lg-2">
-        <h6 class="mono text-uppercase small text-muted-custom mb-3">Guía</h6>
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.guide">Guía</h6>
         <ul class="list-unstyled">
           <li><a href="comandos.html">Comandos</a></li>
+          <li><a href="ejemplos-visuales.html">Ejemplos</a></li>
+          <li><a href="trucos.html">Trucos</a></li>
           <li><a href="recursos.html">Recursos</a></li>
           <li><a href="faq.html">FAQ</a></li>
         </ul>
       </div>
       <div class="col-lg-4">
-        <h6 class="mono text-uppercase small text-muted-custom mb-3">Síguenos</h6>
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.follow">Síguenos</h6>
         <div class="d-flex gap-2">
-          <a href="#" class="icon-btn"><i class="bi bi-youtube"></i></a>
-          <a href="#" class="icon-btn"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="icon-btn"><i class="bi bi-github"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
         </div>
       </div>
     </div>
     <hr class="mt-5 mb-4" style="border-color:var(--border-soft)">
-    <p class="mb-0 small">© 2026 AutoCAD Guía. Proyecto educativo de aprendizaje libre.</p>
+    <p class="mb-0 small" data-i18n="footer.copyright">© 2026 AutoCAD Guía. Proyecto educativo de aprendizaje libre.</p>
   </div>
 </footer>
 
 <div class="command-line-bar" id="cmdBar">
   <div class="command-line-inner">
-    <span class="prompt-sign">Comando:</span>
+    <span class="prompt-sign" data-i18n="ui.command">Comando:</span>
     <span id="cmd-typed"></span><span class="cursor-blink"></span>
-    <button class="cl-close" id="cmdClose" title="Ocultar"><i class="bi bi-x-lg"></i></button>
+    <button class="cl-close" id="cmdClose" title="Ocultar" data-i18n-title="ui.hide"><i class="bi bi-x-lg"></i></button>
   </div>
 </div>
 
 <!-- ===================== BUSCADOR GLOBAL ===================== -->
-<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Buscar en la guía">
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Buscar en la guía" data-i18n-aria="ui.search">
   <div class="search-box">
     <div class="search-input-wrap">
       <i class="bi bi-search"></i>
-      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar">
+      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar" data-i18n-placeholder="ui.searchPlaceholder">
       <kbd class="search-kbd">ESC</kbd>
     </div>
     <div class="search-results" id="globalSearchResults">
-      <div class="search-empty">Escribe al menos 2 caracteres para buscar...</div>
+      <div class="search-empty" data-i18n="ui.typeToSearch">Escribe al menos 2 caracteres para buscar...</div>
     </div>
   </div>
 </div>

@@ -107,7 +107,7 @@
 
           <!-- 1. Personalización -->
           <section id="personalizacion" data-topic="nivel5-personalizacion">
-            <h2><span class="sec-num">1</span> Personalización de la interfaz (CUI)</h2>
+            <h2><span class="sec-num">1</span><span data-i18n="lvl5.s1.title">Personalización de la interfaz (CUI)</span></h2>
             <p>El comando <span class="cmd-inline">CUI</span> (Customize User Interface) abre un diálogo donde puedes modificar casi todo el entorno visual de AutoCAD: barras de herramientas, menús, teclas de acceso rápido y cintas de opciones.</p>
 
             <h3>Qué puedes personalizar</h3>
@@ -115,7 +115,7 @@
               <li><strong>Pestañas y paneles de la cinta:</strong> crear tu propia pestaña con los comandos que más usas.</li>
               <li><strong>Barras de herramientas rápidas:</strong> agregar iconos de uso frecuente en la parte superior.</li>
               <li><strong>Atajos de teclado:</strong> asignar combinaciones personalizadas (por ejemplo, <span class="key-inline">Ctrl+Shift+M</span> para MATRIZ).</li>
-              <li><strong>Menús contextual:</strong> agregar opciones al clic derecho según el tipo de objeto.</li>
+              <li><strong>Menús contextuales:</strong> agregar opciones al clic derecho según el tipo de objeto.</li>
             </ul>
 
             <div class="callout">
@@ -128,7 +128,7 @@
 
           <!-- 2. AutoLISP -->
           <section id="autolisp" data-topic="nivel5-autolisp">
-            <h2><span class="sec-num">2</span> AutoLISP y scripts básicos</h2>
+            <h2><span class="sec-num">2</span><span data-i18n="lvl5.s2.title">AutoLISP y scripts básicos</span></h2>
             <p><strong>AutoLISP</strong> es un lenguaje de programación integrado en AutoCAD que permite automatizar tareas repetitivas, crear comandos personalizados y extender las capacidades del programa.</p>
 
             <table class="table-cad">
@@ -147,8 +147,8 @@
             <p>Este script dibuja un rectángulo de dimensiones variables que el usuario define:</p>
             <div class="code-block">
               <span class="code-label">AutoLISP</span>
-              <button class="copy-btn">Copiar</button>
-              <pre><code class="language-bash">;; Dibuja un rectángulo con dimensiones del usuario
+              <button class="copy-btn" data-i18n="ui.copy">Copiar</button>
+              <pre><code class="language-lisp">;; Dibuja un rectángulo con dimensiones del usuario
 (defun c:RECTMI ()
   (setq pt (getpoint "Punto base: "))
   (setq w (getdist pt "Ancho: "))
@@ -175,7 +175,7 @@
 
           <!-- 3. Estándares CAD -->
           <section id="estandares" data-topic="nivel5-estandares">
-            <h2><span class="sec-num">3</span> Estándares CAD profesionales</h2>
+            <h2><span class="sec-num">3</span><span data-i18n="lvl5.s3.title">Estándares CAD profesionales</span></h2>
             <p>En equipos de trabajo profesional, todos los dibujantes deben seguir las mismas reglas para que los archivos sean consistentes y interoperables. Los más conocidos son:</p>
 
             <table class="table-cad">
@@ -195,7 +195,7 @@
 
           <!-- 4. Buenas prácticas -->
           <section id="buenas-practicas" data-topic="nivel5-buenas-practicas">
-            <h2><span class="sec-num">4</span> Buenas prácticas de dibujo profesional</h2>
+            <h2><span class="sec-num">4</span><span data-i18n="lvl5.s4.title">Buenas prácticas de dibujo profesional</span></h2>
             <ul>
               <li><strong>Nomenclatura de capas:</strong> usa un sistema consistente, por ejemplo <em>ARQ-Muros</em>, <em>EST-Columnas</em>, <em>INST-Tuberia</em>, donde el prefijo indica el disciplina.</li>
               <li><strong>Dibuja a escala 1:1</strong> siempre en el espacio modelo; la escala se aplica solo en el layout.</li>
@@ -216,7 +216,7 @@
 
           <!-- 5. Integración -->
           <section id="integracion" data-topic="nivel5-integracion">
-            <h2><span class="sec-num">5</span> Integración con otros programas</h2>
+            <h2><span class="sec-num">5</span><span data-i18n="lvl5.s5.title">Integración con otros programas</span></h2>
 
             <table class="table-cad">
               <thead><tr><th>Programa</th><th>Tipo de integración</th></tr></thead>
@@ -237,7 +237,7 @@
 
           <!-- 6. Optimización -->
           <section id="optimizacion" data-topic="nivel5-optimizacion">
-            <h2><span class="sec-num">6</span> Optimización de archivos y solución de errores</h2>
+            <h2><span class="sec-num">6</span><span data-i18n="lvl5.s6.title">Optimización de archivos y solución de errores</span></h2>
 
             <h3>Reducir el tamaño del archivo</h3>
             <ul>
@@ -269,7 +269,7 @@
 
           <!-- 7. Dynamo para AutoCAD -->
           <section id="dynamo" data-topic="nivel5-dynamo">
-            <h2><span class="sec-num">7</span> Dynamo para AutoCAD</h2>
+            <h2><span class="sec-num">7</span><span data-i18n="lvl5.s7.title">Dynamo para AutoCAD</span></h2>
             <p>Dynamo es un entorno de programación visual que se ejecuta dentro de AutoCAD. Permite crear flujos de trabajo repetitivos arrastrando nodos en un lienzo gráfico, sin escribir código.</p>
 
             <h3>¿Para qué sirve Dynamo en AutoCAD?</h3>
@@ -298,7 +298,7 @@
 
           <!-- 8. Automatización con Python -->
           <section id="python" data-topic="nivel5-python">
-            <h2><span class="sec-num">8</span> Automatización con Python (pyautocad)</h2>
+            <h2><span class="sec-num">8</span><span data-i18n="lvl5.s8.title">Automatización con Python (pyautocad)</span></h2>
             <p>Si prefieres código textual en lugar de nodos visuales, Python es una alternativa moderna a AutoLISP para automatizar AutoCAD.</p>
 
             <h3>La librería pyautocad</h3>
@@ -340,7 +340,7 @@ print(f"Círculo creado: {circle}")</code></pre>
 
           <!-- 9. AutoCAD y BIM -->
           <section id="bim" data-topic="nivel5-bim">
-            <h2><span class="sec-num">9</span> AutoCAD y BIM</h2>
+            <h2><span class="sec-num">9</span><span data-i18n="lvl5.s9.title">AutoCAD y BIM</span></h2>
             <p>BIM (Building Information Modeling) es el flujo de trabajo que conecta arquitectura, ingeniería y construcción en un modelo digital compartido. AutoCAD no es un software BIM nativo, pero se integra con el ecosistema BIM de Autodesk.</p>
 
             <h3>Módulos verticales de AutoCAD con BIM</h3>
@@ -364,7 +364,7 @@ print(f"Círculo creado: {circle}")</code></pre>
 
           <!-- 10. Interoperabilidad CAD-BIM -->
           <section id="interoperabilidad" data-topic="nivel5-interoperabilidad">
-            <h2><span class="sec-num">10</span> Interoperabilidad CAD-BIM</h2>
+            <h2><span class="sec-num">10</span><span data-i18n="lvl5.s10.title">Interoperabilidad CAD-BIM</span></h2>
             <p>En un proyecto real, no todo el mundo usa el mismo programa. AutoCAD debe comunicarse con Revit, SketchUp, Civil 3D, softwares de cálculo y más.</p>
 
             <h3>Formatos de intercambio</h3>
@@ -507,7 +507,7 @@ print(f"Círculo creado: {circle}")</code></pre>
                 <div class="diagram-card" data-aos="fade-up" data-aos-delay="60">
                   <div class="diagram-card-head"><h4><span class="cmd-badge">CAD-BIM</span> Flujo interoperabilidad</h4></div>
                   <div class="diagram-card-body">
-                    <p data-i18n="vis.xref.desc">Vincula archivos DWG externos como referencias. Se actualizan automáticamente cuando el original cambia.</p>
+                    <p>Lleva tu plano de AutoCAD a un flujo BIM: exporta a IFC o vincula el DWG como referencia en Revit para coordinar arquitectura, estructura e instalaciones.</p>
                     <div class="diagram-canvas">
                       <svg viewBox="0 0 280 100">
                         <text class="cad-label-cmd" x="5" y="14" style="font-size:8px">Del plano CAD al modelo BIM:</text>
@@ -583,6 +583,8 @@ print(f"Círculo creado: {circle}")</code></pre>
         <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.guide">Guía</h6>
         <ul class="list-unstyled">
           <li><a href="comandos.html">Comandos</a></li>
+          <li><a href="ejemplos-visuales.html">Ejemplos</a></li>
+          <li><a href="trucos.html">Trucos</a></li>
           <li><a href="recursos.html">Recursos</a></li>
           <li><a href="faq.html">FAQ</a></li>
         </ul>
@@ -590,9 +592,9 @@ print(f"Círculo creado: {circle}")</code></pre>
       <div class="col-lg-4">
         <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.follow">Síguenos</h6>
         <div class="d-flex gap-2">
-          <a href="#" class="icon-btn"><i class="bi bi-youtube"></i></a>
-          <a href="#" class="icon-btn"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="icon-btn"><i class="bi bi-github"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
         </div>
       </div>
     </div>
@@ -628,6 +630,8 @@ print(f"Círculo creado: {circle}")</code></pre>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-lisp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
 <script src="../js/i18n.js"></script>
 <script src="../js/main.js"></script>

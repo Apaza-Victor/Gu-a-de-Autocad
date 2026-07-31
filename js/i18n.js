@@ -229,6 +229,19 @@
       'cmd.filter.3d': '3D',
       'cmd.filter.edicion': 'Edición',
       'cmd.filter.consulta': 'Consulta',
+      'cmd.cat.dibujo': 'Dibujo',
+      'cmd.cat.modificacion': 'Modificación',
+      'cmd.cat.precision': 'Precisión',
+      'cmd.cat.capas': 'Capas',
+      'cmd.cat.acotacion': 'Acotación',
+      'cmd.cat.texto': 'Texto',
+      'cmd.cat.bloques': 'Bloques',
+      'cmd.cat.edicion': 'Edición',
+      'cmd.cat.3d': '3D',
+      'cmd.cat.consulta': 'Consulta',
+      'cmd.level.basico': 'Básico',
+      'cmd.level.intermedio': 'Intermedio',
+      'cmd.level.avanzado': 'Avanzado',
 
       /* ---- Command descriptions ---- */
       'cmd.line.desc': 'Dibuja segmentos de línea recta entre puntos definidos por coordenadas o clics.',
@@ -1108,6 +1121,24 @@
       var key = el.getAttribute('data-i18n-aria');
       var val = t(key);
       if (val) el.setAttribute('aria-label', val);
+    });
+
+    /* Tarjetas de comandos: descripción, categoría y nivel */
+    document.querySelectorAll('.cmd-full-card[data-cmd]').forEach(function(card) {
+      var key = 'cmd.' + card.getAttribute('data-cmd') + '.desc';
+      var val = t(key);
+      var desc = card.querySelector('.cmd-desc');
+      if (val && val !== key && desc) desc.textContent = val;
+
+      key = 'cmd.cat.' + card.getAttribute('data-cat');
+      val = t(key);
+      var cat = card.querySelector('.cmd-cat');
+      if (val && val !== key && cat) cat.textContent = val;
+
+      key = 'cmd.level.' + card.getAttribute('data-level');
+      val = t(key);
+      var lvl = card.querySelector('.res-lang');
+      if (val && val !== key && lvl) lvl.textContent = val;
     });
 
     /* html lang */
