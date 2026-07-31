@@ -1402,26 +1402,43 @@ code[class*="language-"]{
     linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
   background-size: 20px 20px;
 }
-.diagram-canvas svg text{
+.diagram-canvas svg text,
+.diagram-step svg text{
   font-family: var(--font-display);
   fill: var(--text-muted);
 }
-.diagram-canvas svg .cad-line{ stroke: var(--layer-cyan); stroke-width: 2; fill: none; }
-.diagram-canvas svg .cad-line-dim{ stroke: var(--layer-cyan); stroke-width: 1.5; fill: none; stroke-dasharray: 6,4; }
-.diagram-canvas svg .cad-line-new{ stroke: var(--layer-green); stroke-width: 2; fill: none; }
-.diagram-canvas svg .cad-line-old{ stroke: var(--text-faint); stroke-width: 1.5; fill: none; stroke-dasharray: 4,3; opacity: .5; }
-.diagram-canvas svg .cad-arc{ stroke: var(--layer-yellow); stroke-width: 2; fill: none; }
-.diagram-canvas svg .cad-circle{ stroke: var(--layer-magenta); stroke-width: 2; fill: none; }
-.diagram-canvas svg .cad-point{ fill: var(--amber); }
-.diagram-canvas svg .cad-point-cyan{ fill: var(--cyan); }
-.diagram-canvas svg .cad-fill{ fill: var(--cyan-dim); stroke: var(--layer-cyan); stroke-width: 1.5; }
-.diagram-canvas svg .cad-fill-new{ fill: rgba(123,216,127,.12); stroke: var(--layer-green); stroke-width: 1.5; }
-.diagram-canvas svg .cad-trim-zone{ fill: rgba(255,93,93,.08); stroke: var(--layer-red); stroke-width: 1; stroke-dasharray: 4,3; }
-.diagram-canvas svg .cad-label{ font-size: 11px; fill: var(--text-faint); }
-.diagram-canvas svg .cad-label-cmd{ font-size: 12px; fill: var(--cyan); font-weight: 700; }
-.diagram-canvas svg .cad-arrow{ fill: var(--amber); }
-.diagram-canvas svg .cad-dim{ stroke: var(--layer-yellow); stroke-width: 1; fill: none; }
-.diagram-canvas svg .cad-dim-text{ font-size: 10px; fill: var(--layer-yellow); }
+.diagram-canvas svg .cad-line,
+.diagram-step svg .cad-line{ stroke: var(--layer-cyan); stroke-width: 2; fill: none; }
+.diagram-canvas svg .cad-line-dim,
+.diagram-step svg .cad-line-dim{ stroke: var(--layer-cyan); stroke-width: 1.5; fill: none; stroke-dasharray: 6,4; }
+.diagram-canvas svg .cad-line-new,
+.diagram-step svg .cad-line-new{ stroke: var(--layer-green); stroke-width: 2; fill: none; }
+.diagram-canvas svg .cad-line-old,
+.diagram-step svg .cad-line-old{ stroke: var(--text-faint); stroke-width: 1.5; fill: none; stroke-dasharray: 4,3; opacity: .5; }
+.diagram-canvas svg .cad-arc,
+.diagram-step svg .cad-arc{ stroke: var(--layer-yellow); stroke-width: 2; fill: none; }
+.diagram-canvas svg .cad-circle,
+.diagram-step svg .cad-circle{ stroke: var(--layer-magenta); stroke-width: 2; fill: none; }
+.diagram-canvas svg .cad-point,
+.diagram-step svg .cad-point{ fill: var(--amber); }
+.diagram-canvas svg .cad-point-cyan,
+.diagram-step svg .cad-point-cyan{ fill: var(--cyan); }
+.diagram-canvas svg .cad-fill,
+.diagram-step svg .cad-fill{ fill: var(--cyan-dim); stroke: var(--layer-cyan); stroke-width: 1.5; }
+.diagram-canvas svg .cad-fill-new,
+.diagram-step svg .cad-fill-new{ fill: rgba(123,216,127,.12); stroke: var(--layer-green); stroke-width: 1.5; }
+.diagram-canvas svg .cad-trim-zone,
+.diagram-step svg .cad-trim-zone{ fill: rgba(255,93,93,.08); stroke: var(--layer-red); stroke-width: 1; stroke-dasharray: 4,3; }
+.diagram-canvas svg .cad-label,
+.diagram-step svg .cad-label{ font-size: 11px; fill: var(--text-faint); }
+.diagram-canvas svg .cad-label-cmd,
+.diagram-step svg .cad-label-cmd{ font-size: 12px; fill: var(--cyan); font-weight: 700; }
+.diagram-canvas svg .cad-arrow,
+.diagram-step svg .cad-arrow{ fill: var(--amber); }
+.diagram-canvas svg .cad-dim,
+.diagram-step svg .cad-dim{ stroke: var(--layer-yellow); stroke-width: 1; fill: none; }
+.diagram-canvas svg .cad-dim-text,
+.diagram-step svg .cad-dim-text{ font-size: 10px; fill: var(--layer-yellow); }
 
 /* Step sequence (before/after) */
 .diagram-steps{
