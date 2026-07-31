@@ -21,12 +21,16 @@ Sitio web estatico educativo que funciona como guia teorica y diccionario de com
 ```
 Guia de Autocad/
 ├── index.html                  # Pagina principal (hero, niveles, progreso)
-├── css/
-│   └── style.css               # Estilos completos del sitio (~1500 lineas)
-├ js/
-│   ├── main.js                 # Funcionalidad JS compartida (~755 lineas)
-│   └── i18n.js                 # Sistema de traduccion ES/EN (~1170 lineas)
-├ paginas/
+├── assets/
+│   ├── css/
+│   │   ├── style.css           # Estilos base del sitio (~1500 lineas)
+│   │   └── responsive.css      # Breakpoints, print y reduced-motion
+│   ├── js/
+│   │   ├── main.js             # Funcionalidad JS compartida (~755 lineas)
+│   │   └── i18n.js             # Sistema de traduccion ES/EN (~1170 lineas)
+│   └── img/
+│       └── autocad-2.svg       # Logo AutoCAD (navbar, footer, favicon)
+├── paginas/
 │   ├── nivel-1-fundamentos.html    # Nivel 1: Fundamentos
 │   ├── nivel-2-dibujo-2d.html      # Nivel 2: Dibujo 2D
 │   ├── nivel-3-organizacion.html   # Nivel 3: Organizacion y productividad
@@ -45,9 +49,10 @@ Guia de Autocad/
 | Archivo | Funcion | Tamano aprox |
 |---------|---------|--------------|
 | `index.html` | Landing page con hero, cards de niveles, progreso | ~120 lineas |
-| `css/style.css` | Estilos completos, variables CSS, responsive, print, accesibilidad | ~1500 lineas |
-| `js/main.js` | Theme toggle, search, filters, scroll-spy, mark-done, FAQ, Swiper, Prism | ~755 lineas |
-| `js/i18n.js` | Diccionario de traducciones ES/EN para toda la interfaz | ~1200 lineas |
+| `assets/css/style.css` | Estilos completos, variables CSS, accesibilidad, secciones | ~1400 lineas |
+| `assets/css/responsive.css` | Todos los @media: breakpoints, print, reduced-motion | ~110 lineas |
+| `assets/js/main.js` | Theme toggle, search, filters, scroll-spy, mark-done, FAQ, Swiper, Prism | ~755 lineas |
+| `assets/js/i18n.js` | Diccionario de traducciones ES/EN para toda la interfaz | ~1200 lineas |
 | `paginas/comandos.html` | 95 tarjetas de comandos con data-cmd, data-cat, data-level, data-keys | ~1414 lineas |
 
 ---
@@ -87,7 +92,7 @@ Guia de Autocad/
 
 ### 4.3 Sistema de internacionalizacion (i18n)
 
-- Diccionario en `js/i18n.js` con secciones `es` y `en`
+- Diccionario en `assets/js/i18n.js` con secciones `es` y `en`
 - Elementos traducidos via atributo `data-i18n="key"` (textContent)
 - Elementos traducidos via `data-i18n-html` (innerHTML)
 - Placeholders via `data-i18n-placeholder`

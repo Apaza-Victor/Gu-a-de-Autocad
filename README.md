@@ -68,11 +68,15 @@
 ```
 Guia de Autocad/
 ├── index.html                  # Pagina principal
-├── css/
-│   └── style.css               # Estilos completos del sitio
-├── js/
-│   ├── main.js                 # Funcionalidad JS compartida
-│   └── i18n.js                 # Sistema de traduccion ES/EN
+├── assets/
+│   ├── css/
+│   │   ├── style.css           # Estilos base del sitio
+│   │   └── responsive.css      # Breakpoints, print y reduced-motion
+│   ├── js/
+│   │   ├── main.js             # Funcionalidad JS compartida
+│   │   └── i18n.js             # Sistema de traduccion ES/EN
+│   └── img/
+│       └── autocad-2.svg       # Logo AutoCAD (navbar, footer, favicon)
 ├── paginas/
 │   ├── nivel-1-fundamentos.html
 │   ├── nivel-2-dibujo-2d.html

@@ -95,7 +95,13 @@ a:hover{ color: var(--amber); }
 
 .mono{ font-family: var(--font-display); }
 
-.container-xl{ max-width: 1200px; }
+.container-xl{ max-width: 1440px; }
+
+.content-article p,
+.content-article ul,
+.content-article ol{
+  max-width: 75ch;
+}
 
 /* ---------- Eyebrow / etiqueta técnica ---------- */
 .eyebrow{
@@ -192,7 +198,7 @@ a:hover{ color: var(--amber); }
 /* ---------- Hero ---------- */
 .hero{
   position: relative;
-  padding: 6.5rem 0 5rem;
+  padding: 3rem 0 5rem;
   overflow: hidden;
   border-bottom: 1px solid var(--border-soft);
 }
@@ -261,6 +267,8 @@ a:hover{ color: var(--amber); }
   box-shadow: var(--shadow-panel);
   padding: 1.4rem;
   position: relative;
+  max-width: 520px;
+  margin-inline: auto;
 }
 .drawing-sheet .sheet-head{
   display: flex; justify-content: space-between; align-items: center;
@@ -1256,17 +1264,6 @@ code[class*="language-"]{
 .plan-sheet svg{ width: 100%; height: auto; display: block; }
 .plan-sheet svg .plan-cursor{ animation: blink 1.4s step-end infinite; }
 
-/* ---------- Utilidades responsivas ---------- */
-@media (max-width: 991.98px){
-  .coord-readout{ display: none; }
-  .hero{ padding: 4rem 0 3rem; text-align: center; }
-  .hero p.lead-cad{ max-width: 100%; margin-inline: auto; }
-}
-
-@media (max-width: 575.98px){
-  .command-line-inner{ font-size: .74rem; }
-}
-
 /* ---------- Language toggle ---------- */
 .lang-toggle{
   display: inline-flex;
@@ -1519,12 +1516,6 @@ code[class*="language-"]{
 .visual-preview .preview-info h4{ font-size: .95rem; margin-bottom: .3rem; }
 .visual-preview .preview-info p{ color: var(--text-muted); font-size: .82rem; margin: 0; }
 
-@media (max-width: 767.98px){
-  .diagram-grid.cols-2{ grid-template-columns: 1fr; }
-  .diagram-steps{ flex-direction: column; }
-  .diagram-step-arrow{ width: auto; height: 30px; transform: rotate(90deg); }
-}
-
 /* =========================================================
    Accessibility & polish improvements
    ========================================================= */
@@ -1550,17 +1541,6 @@ code[class*="language-"]{
   color: #06201E;
 }
 
-/* ---------- Prefers reduced motion ---------- */
-@media (prefers-reduced-motion: reduce){
-  *, *::before, *::after{
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-  html{ scroll-behavior: auto; }
-  .command-line-inner .cursor-blink{ animation: none; opacity: 1; }
-}
-
 /* ---------- Table horizontal scroll wrapper ---------- */
 .table-scroll{
   overflow-x: auto;
@@ -1568,41 +1548,6 @@ code[class*="language-"]{
   margin: 1.5rem 0;
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-}
-
-/* ---------- Print styles ---------- */
-@media print{
-  .navbar-cad,
-  .command-line-bar,
-  .toc-sidebar,
-  .level-nav,
-  .mark-done-btn,
-  .search-overlay,
-  .back-to-top-btn,
-  #themeToggle,
-  #langToggle,
-  #searchToggle,
-  .coord-readout,
-  .btn-cad-primary,
-  .btn-cad-outline,
-  .shortcuts-download-bar,
-  footer.site-footer{ display: none !important; }
-
-  body{
-    background: #fff !important;
-    color: #000 !important;
-    background-image: none !important;
-    font-size: 12pt;
-  }
-  a{ color: #000 !important; text-decoration: underline; }
-  .page-header{ padding: 2rem 0 1rem; }
-  .content-layout{ padding: 1rem 0; }
-  .content-article section{ page-break-inside: avoid; }
-  .table-cad{ font-size: .8rem; }
-  .table-cad th,
-  .table-cad td{ padding: .4rem .6rem; }
-  .callout{ border-left-color: #999 !important; background: #f5f5f5 !important; }
-  pre[class*="language-"]{ white-space: pre-wrap; word-break: break-all; }
 }
 
 /* ---------- Focus styles for dynamic elements ---------- */
@@ -1634,15 +1579,4 @@ code[class*="language-"]{
 /* ---------- Light theme: text-faint WCAG AA ---------- */
 [data-theme="light"]{
   --text-faint:    #6B7D9A;
-}
-
-/* ---------- Mobile responsive additions ---------- */
-@media (max-width: 575.98px){
-  .search-box{ width: 95%; }
-  .shortcuts-download-bar{ flex-wrap: wrap; }
-  .level-nav{ flex-direction: column; }
-  .level-nav a{text-align: center; }
-  footer.site-footer .col-6,
-  footer.site-footer .col-lg-2,
-  footer.site-footer .col-lg-4{ width: 100%; max-width: 100%; }
 }
