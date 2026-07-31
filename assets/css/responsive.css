@@ -49,12 +49,14 @@
     padding: .8rem 1rem !important;
     border-radius: var(--radius-sm);
     border-bottom: 1px solid var(--border-soft);
+    transition: background .15s ease, color .15s ease;
   }
   .navbar-cad .nav-link-cad:hover{ background: var(--cyan-dim); }
   .navbar-cad .nav-link-cad.active{
     background: var(--cyan-dim);
     color: var(--cyan) !important;
   }
+  .navbar-cad .nav-link-cad.active:hover{ background: rgba(53, 214, 203, 0.22); }
   .navbar-cad .nav-item:last-child .nav-link-cad{ border-bottom: none; }
 
   /* Submenú de Niveles como acordeón */
@@ -73,6 +75,7 @@
     color: var(--text-muted);
     padding: .55rem .75rem;
     border-radius: var(--radius-sm);
+    transition: background .15s ease, color .15s ease;
   }
   .navbar-cad .dropdown-item:hover,
   .navbar-cad .dropdown-item:focus{ background: var(--cyan-dim); color: var(--cyan); }
