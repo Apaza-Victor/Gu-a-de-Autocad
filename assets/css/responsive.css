@@ -27,6 +27,8 @@
   .navbar-cad .nav-actions{ margin-left: auto; }
   .hero{ padding: 4rem 0 3rem; text-align: center; }
   .hero p.lead-cad{ max-width: 100%; margin-inline: auto; }
+  .hero .d-flex.flex-wrap,
+  .hero .layer-legend{ justify-content: center; }
 }
 
 /* ---------- Tablet vertical / movil grande (max 767.98px) ---------- */
