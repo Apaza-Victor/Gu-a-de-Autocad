@@ -690,8 +690,45 @@ function initNavbarToggler(){
     icon.classList.toggle('bi-x', open);
   };
 
+  const hide = () => {
+    if (typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
+      const inst = bootstrap.Collapse.getInstance(collapseEl);
+      if (inst) inst.hide();
+    } else {
+      collapseEl.classList.remove('show');
+      btn.classList.add('collapsed');
+      setIcon(false);
+    }
+  };
+
   collapseEl.addEventListener('show.bs.collapse', () => setIcon(true));
   collapseEl.addEventListener('hide.bs.collapse', () => setIcon(false));
+
+  // Cerrar al hacer clic fuera del menú (solo en móvil)
+  document.addEventListener('click', (e) => {
+    if (window.innerWidth >= 992) return;
+    if (!collapseEl.classList.contains('show')) return;
+    if (collapseEl.contains(e.target) || btn.contains(e.target)) return;
+    hide();
+  });
+
+  // Cerrar al seleccionar un enlace del menú
+  collapseEl.addEventListener('click', (e) => {
+    if (window.innerWidth >= 992) return;
+    const link = e.target.closest('a');
+    if (!link) return;
+    const href = link.getAttribute('href');
+    if (!href || href === '#') return;
+    hide();
+  });
+
+  // Cerrar con ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && window.innerWidth < 992 && collapseEl.classList.contains('show')) {
+      hide();
+      btn.focus();
+    }
+  });
 
   // Al volver a escritorio el menú queda expandido y visible: restaurar hamburguesa
   const mq = window.matchMedia('(min-width: 992px)');

@@ -29,6 +29,61 @@
   .hero p.lead-cad{ max-width: 100%; margin-inline: auto; }
   .hero .d-flex.flex-wrap,
   .hero .layer-legend{ justify-content: center; }
+
+  /* ---------- Menú móvil (hamburguesa) ---------- */
+  .navbar-cad .navbar-collapse{
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-panel);
+    margin-top: .6rem;
+    padding: .6rem;
+    max-height: calc(100vh - 110px);
+    overflow-y: auto;
+  }
+  .navbar-cad .navbar-nav{
+    margin-top: 0;
+    gap: .15rem;
+  }
+  .navbar-cad .nav-link-cad{
+    padding: .8rem 1rem !important;
+    border-radius: var(--radius-sm);
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .navbar-cad .nav-link-cad:hover{ background: var(--bg-elevated); }
+  .navbar-cad .nav-link-cad.active{
+    background: var(--cyan-dim);
+    color: var(--cyan) !important;
+  }
+  .navbar-cad .nav-item:last-child .nav-link-cad{ border-bottom: none; }
+
+  /* Submenú de Niveles como acordeón */
+  .navbar-cad .dropdown-menu{
+    position: static;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    border-left: 2px solid var(--cyan-dim);
+    margin: .15rem 0 .35rem .9rem;
+    padding: .15rem 0;
+    border-radius: 0;
+  }
+  .navbar-cad .dropdown-menu.show{ display: block; }
+  .navbar-cad .dropdown-item{
+    color: var(--text-muted);
+    padding: .55rem .75rem;
+    border-radius: var(--radius-sm);
+  }
+  .navbar-cad .dropdown-item:hover,
+  .navbar-cad .dropdown-item:focus{ background: var(--bg-elevated); color: var(--text); }
+
+  /* Pie del menú: idioma */
+  .navbar-cad .nav-actions-menu{
+    justify-content: flex-end;
+    margin-top: .5rem;
+    padding-top: .7rem;
+    border-top: 1px solid var(--border-soft);
+  }
 }
 
 /* ---------- Tablet vertical / movil grande (max 767.98px) ---------- */
