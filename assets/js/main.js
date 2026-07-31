@@ -396,6 +396,7 @@ function initGlobalSearch(){
         { name: 'description', weight: 0.1 }
       ],
       threshold: 0.4,
+      ignoreLocation: true,
       includeScore: true,
       minMatchCharLength: 2
     });

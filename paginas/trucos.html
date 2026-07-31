@@ -903,6 +903,268 @@
         </div>
       </div>
 
+      <!-- ====== FLUJO: Acotar rápido con DIM ====== -->
+      <div class="diagram-card" data-cat="flujo" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Flujo de trabajo</span> Acotar rápido con DIM</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.dim.desc">La orden DIM acota casi sola: selecciona la línea, el arco o el círculo y coloca la cota. AutoCAD elige el tipo (lineal, radial, diámetro…).</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label">Escribe DIM</span>
+              <svg viewBox="0 0 160 70">
+                <rect x="5" y="5" width="150" height="60" fill="var(--bg-elevated)" stroke="var(--layer-cyan)" rx="2"/>
+                <line x1="20" y1="45" x2="140" y2="45" stroke="var(--layer-yellow)" stroke-width="2" stroke-dasharray="5,3"/>
+                <circle class="cad-point-cyan" cx="95" cy="45" r="3"/>
+                <text class="cad-label" x="60" y="62" style="font-size:7px;fill:var(--layer-cyan)">DIM</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label">Cota colocada</span>
+              <svg viewBox="0 0 160 70">
+                <rect x="5" y="5" width="150" height="60" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+                <line x1="20" y1="48" x2="140" y2="48" stroke="var(--layer-green)" stroke-width="2"/>
+                <line x1="20" y1="38" x2="20" y2="48" stroke="var(--layer-green)" stroke-width="1"/>
+                <line x1="140" y1="38" x2="140" y2="48" stroke="var(--layer-green)" stroke-width="1"/>
+                <line x1="20" y1="33" x2="140" y2="33" stroke="var(--layer-green)" stroke-width="1"/>
+                <text class="cad-label" x="65" y="28" style="font-size:7px;fill:var(--layer-green)">4.50</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Consejo</span>
+            <span data-i18n="tips.dim.tip">Escribe DIM y pasa el cursor por encima de una entidad: aparece la cota lista para colocar con un solo clic.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== FLUJO: Tipos de cota ====== -->
+      <div class="diagram-card" data-cat="flujo" data-aos="fade-up" data-aos-delay="60">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Flujo de trabajo</span> Cada geometría con su cota</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.dimtypes.desc">Usa el tipo de cota correcto: DIMLINEAR para líneas horizontales o verticales, DIMALIGNED para inclinadas, DIMANGULAR para ángulos y DIMRADIUS/DIMDIAMETER para círculos.</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 280 112">
+              <rect x="5" y="5" width="132" height="50" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="2"/>
+              <text class="cad-label-cmd" x="12" y="18" style="font-size:6px;fill:var(--layer-cyan)">DIMLINEAR</text>
+              <line x1="15" y1="46" x2="90" y2="46" stroke="var(--layer-cyan)" stroke-width="1.5"/>
+              <line x1="15" y1="38" x2="15" y2="46" stroke="var(--layer-cyan)" stroke-width="1"/>
+              <line x1="90" y1="38" x2="90" y2="46" stroke="var(--layer-cyan)" stroke-width="1"/>
+              <text class="cad-label" x="38" y="33" style="font-size:6px;fill:var(--layer-cyan)">4.50</text>
+              <rect x="143" y="5" width="132" height="50" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="2"/>
+              <text class="cad-label-cmd" x="150" y="18" style="font-size:6px;fill:var(--layer-green)">DIMALIGNED</text>
+              <line x1="155" y1="46" x2="230" y2="22" stroke="var(--layer-green)" stroke-width="1.5"/>
+              <line x1="155" y1="46" x2="230" y2="22" stroke="var(--layer-green)" stroke-width="1"/>
+              <text class="cad-label" x="185" y="38" style="font-size:6px;fill:var(--layer-green)">3.20</text>
+              <rect x="5" y="61" width="132" height="46" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="2"/>
+              <text class="cad-label-cmd" x="12" y="74" style="font-size:6px;fill:var(--layer-yellow)">DIMANGULAR</text>
+              <line x1="18" y1="95" x2="70" y2="80" stroke="var(--layer-yellow)" stroke-width="1.5"/>
+              <line x1="70" y1="80" x2="92" y2="68" stroke="var(--layer-yellow)" stroke-width="1.5"/>
+              <path d="M 35 90 A 16 16 0 0 0 79 72" fill="none" stroke="var(--layer-yellow)" stroke-width="1"/>
+              <text class="cad-label" x="40" y="101" style="font-size:6px;fill:var(--layer-yellow)">45°</text>
+              <rect x="143" y="61" width="132" height="46" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="2"/>
+              <text class="cad-label-cmd" x="150" y="74" style="font-size:6px;fill:var(--layer-red)">DIMRADIUS</text>
+              <circle cx="190" cy="92" r="14" fill="none" stroke="var(--layer-red)" stroke-width="1.5"/>
+              <line x1="204" y1="92" x2="235" y2="80" stroke="var(--layer-red)" stroke-width="1"/>
+              <line x1="229" y1="80" x2="235" y2="80" stroke="var(--layer-red)" stroke-width="1"/>
+              <line x1="232" y1="77" x2="232" y2="83" stroke="var(--layer-red)" stroke-width="1"/>
+              <text class="cad-label" x="215" y="101" style="font-size:6px;fill:var(--layer-red)">R 0.70</text>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Consejo</span>
+            <span data-i18n="tips.dimtypes.tip">¿La cota no resbala bien sobre una línea inclinada? Usa alineada: DIMALIGNED (o DAL).</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== FLUJO: DIMSTYLE ====== -->
+      <div class="diagram-card" data-cat="flujo" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Flujo de trabajo</span> Un solo estilo de cota</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.dimstyle.desc">Crea UN solo estilo de cota con DIMSTYLE y aplícalo a todo el plano: flechas, altura de texto, unidades y precisión quedan uniformes.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label" style="color:var(--layer-red)">MAL</span>
+              <svg viewBox="0 0 160 80">
+                <rect x="5" y="5" width="150" height="70" fill="var(--bg-elevated)" stroke="var(--layer-red)" rx="2"/>
+                <line x1="15" y1="38" x2="80" y2="38" stroke="var(--text-muted)" stroke-width="1"/>
+                <line x1="15" y1="28" x2="15" y2="38" stroke="var(--text-muted)" stroke-width="1"/>
+                <line x1="80" y1="28" x2="80" y2="38" stroke="var(--text-muted)" stroke-width="1"/>
+                <text class="cad-label" x="30" y="23" style="font-size:7px">3.00</text>
+                <line x1="88" y1="62" x2="148" y2="62" stroke="var(--text-muted)" stroke-width="1"/>
+                <line x1="88" y1="52" x2="88" y2="62" stroke="var(--text-muted)" stroke-width="1"/>
+                <line x1="148" y1="52" x2="148" y2="62" stroke="var(--text-muted)" stroke-width="1"/>
+                <text class="cad-label" x="102" y="50" style="font-size:4px">1.50</text>
+                <text class="cad-label" x="14" y="72" style="font-size:6px;fill:var(--layer-red)">flechas, tamaños y textos distintos</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label" style="color:var(--layer-green)">BIEN</span>
+              <svg viewBox="0 0 160 80">
+                <rect x="5" y="5" width="150" height="70" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+                <line x1="15" y1="35" x2="80" y2="35" stroke="var(--text-muted)" stroke-width="1"/>
+                <line x1="15" y1="25" x2="15" y2="35" stroke="var(--text-muted)" stroke-width="1"/>
+                <line x1="80" y1="25" x2="80" y2="35" stroke="var(--text-muted)" stroke-width="1"/>
+                <text class="cad-label" x="30" y="20" style="font-size:7px">3.00</text>
+                <line x1="88" y1="35" x2="148" y2="35" stroke="var(--text-muted)" stroke-width="1"/>
+                <line x1="88" y1="25" x2="88" y2="35" stroke="var(--text-muted)" stroke-width="1"/>
+                <line x1="148" y1="25" x2="148" y2="35" stroke="var(--text-muted)" stroke-width="1"/>
+                <text class="cad-label" x="102" y="20" style="font-size:7px">1.50</text>
+                <text class="cad-label" x="14" y="72" style="font-size:6px;fill:var(--layer-green)">un solo estilo en todo el plano ✓</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Regla de oro</span>
+            <span data-i18n="tips.dimstyle.tip">Configura el estilo, pulsa con botón derecho y elige "Definir como actual" para que todas las cotas nuevas lo hereden.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== ERRORES: DIMASSOC ====== -->
+      <div class="diagram-card" data-cat="errores" data-aos="fade-up" data-aos-delay="60">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Error común</span> Cotas que no se actualizan</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.dimassoc.desc">Si estiras o escalas un objeto y sus cotas se quedan con el valor viejo, DIMASSOC está en 0. Con valor 2 las cotas son asociativas y se actualizan solas.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label" style="color:var(--layer-red)">DIMASSOC = 0</span>
+              <svg viewBox="0 0 160 70">
+                <rect x="5" y="5" width="150" height="60" fill="var(--bg-elevated)" stroke="var(--layer-red)" rx="2"/>
+                <line x1="20" y1="45" x2="90" y2="45" stroke="var(--layer-yellow)" stroke-width="2"/>
+                <line x1="20" y1="35" x2="20" y2="45" stroke="var(--layer-yellow)" stroke-width="1"/>
+                <line x1="90" y1="35" x2="90" y2="45" stroke="var(--layer-yellow)" stroke-width="1"/>
+                <line x1="20" y1="30" x2="90" y2="30" stroke="var(--layer-yellow)" stroke-width="1"/>
+                <text class="cad-label" x="44" y="25" style="font-size:7px;fill:var(--layer-red)">3.00</text>
+                <text class="cad-label" x="14" y="59" style="font-size:6px">estiras la pared y la cota no cambia ✗</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label" style="color:var(--layer-green)">DIMASSOC = 2</span>
+              <svg viewBox="0 0 160 70">
+                <rect x="5" y="5" width="150" height="60" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+                <line x1="20" y1="45" x2="140" y2="45" stroke="var(--layer-green)" stroke-width="2"/>
+                <line x1="20" y1="35" x2="20" y2="45" stroke="var(--layer-green)" stroke-width="1"/>
+                <line x1="140" y1="35" x2="140" y2="45" stroke="var(--layer-green)" stroke-width="1"/>
+                <line x1="20" y1="30" x2="140" y2="30" stroke="var(--layer-green)" stroke-width="1"/>
+                <text class="cad-label" x="72" y="25" style="font-size:7px;fill:var(--layer-green)">4.50</text>
+                <text class="cad-label" x="14" y="59" style="font-size:6px">la cota sigue a la pared ✓</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Solución</span>
+            <span data-i18n="tips.dimassoc.tip">Escribe DIMASSOC y pon el valor 2. Para cotas ya creadas, usa DIMREASSOCIATE para volver a enlazarlas.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== AVANZADO: Escala por referencia ====== -->
+      <div class="diagram-card" data-cat="avanzado" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Avanzado</span> Escala por referencia: no pierdes medidas</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.scaleref.desc">Para escalar un plano sin equivocarte usa SCALE con referencia: base + R + clic en dos puntos del dibujo + longitud real. El resto lo calcula AutoCAD y las cotas asociativas lo reflejan al instante.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label" style="color:var(--layer-red)">Dibujado así: mide 2.00</span>
+              <svg viewBox="0 0 160 70">
+                <rect x="5" y="5" width="150" height="60" fill="var(--bg-elevated)" stroke="var(--layer-red)" rx="2"/>
+                <line x1="20" y1="42" x2="80" y2="42" stroke="var(--layer-yellow)" stroke-width="2"/>
+                <text class="cad-label" x="35" y="30" style="font-size:7px;fill:var(--layer-red)">2.00</text>
+                <text class="cad-label" x="14" y="58" style="font-size:6px">el plano debe medir el doble</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label" style="color:var(--layer-green)">SCALE → R → 2.00 → 4.00</span>
+              <svg viewBox="0 0 160 70">
+                <rect x="5" y="5" width="150" height="60" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+                <line x1="20" y1="42" x2="140" y2="42" stroke="var(--layer-green)" stroke-width="2"/>
+                <line x1="20" y1="32" x2="140" y2="32" stroke="var(--layer-green)" stroke-width="1"/>
+                <text class="cad-label" x="68" y="27" style="font-size:7px;fill:var(--layer-green)">4.00</text>
+                <text class="cad-label" x="14" y="58" style="font-size:6px">las cotas asociativas se actualizan ✓</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Clave</span>
+            <span data-i18n="tips.scaleref.tip">Un muro dibujado de 2.00 debe medir 4.00: SCALE → base → R → clic en un extremo → clic en el otro → escribe 4.00. Todo el plano queda a escala.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== AVANZADO: Cambiar unidades ====== -->
+      <div class="diagram-card" data-cat="avanzado" data-aos="fade-up" data-aos-delay="60">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Avanzado</span> Cambia de unidades sin redibujar</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.chunits.desc">¿Tu dibujo está en milímetros y lo necesitas en metros? No redibujes: SCALE con base 0,0,0 y factor 0.001 (mm a m) o 1000 (m a mm).</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 280 90">
+              <text class="cad-label-cmd" x="5" y="14" style="font-size:9px">Conversión sin redibujar:</text>
+              <rect x="5" y="22" width="80" height="50" fill="var(--bg-elevated)" stroke="var(--layer-cyan)" rx="2"/>
+              <text class="cad-label-cmd" x="12" y="38" style="font-size:7px;fill:var(--layer-cyan)">Milímetros</text>
+              <text class="cad-label" x="28" y="60" style="font-size:12px">3000</text>
+              <text class="cad-label-cmd" x="95" y="50" style="font-size:12px;fill:var(--amber)">×0.001</text>
+              <rect x="140" y="22" width="80" height="50" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+              <text class="cad-label-cmd" x="147" y="38" style="font-size:7px;fill:var(--layer-green)">Metros</text>
+              <text class="cad-label" x="163" y="60" style="font-size:12px">3</text>
+              <text class="cad-label" x="5" y="84" style="font-size:7px;fill:var(--amber)">Inverso: ×1000 (m a mm). Base 0,0,0. Alternativa: orden -DWGUNITS</text>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Consejo</span>
+            <span data-i18n="tips.chunits.tip">Guarda una copia antes de convertir. Luego revisa la precisión en DIMSTYLE para que las cotas muestren 3.00 en vez de 3000.00.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== FLUJO: Escala de impresión en Layout ====== -->
+      <div class="diagram-card" data-cat="flujo" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge">Flujo de trabajo</span> Escala de impresión en el Layout</h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.printscale.desc">Para imprimir a escala usa una pestaña Layout: crea una ventana gráfica y fija la escala (1:50, 1:100…). El modelo sigue a 1:1, solo cambia la vista.</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 280 90">
+              <rect x="5" y="5" width="130" height="80" fill="var(--bg-elevated)" stroke="var(--layer-cyan)" rx="3"/>
+              <text class="cad-label-cmd" x="12" y="20" style="font-size:7px;fill:var(--layer-cyan)">Layout (papel)</text>
+              <rect x="15" y="28" width="105" height="48" fill="none" stroke="var(--layer-green)" stroke-width="1.5" rx="2"/>
+              <text class="cad-label" x="22" y="42" style="font-size:6px;fill:var(--layer-green)">Ventana gráfica</text>
+              <line x1="28" y1="62" x2="68" y2="62" stroke="var(--text-muted)" stroke-width="1.5"/>
+              <text class="cad-label" x="36" y="57" style="font-size:6px">3.00</text>
+              <text class="cad-label" x="22" y="71" style="font-size:6px">escala 1:50</text>
+              <text class="cad-label-cmd" x="145" y="52" style="font-size:16px;fill:var(--amber)">→</text>
+              <rect x="160" y="12" width="112" height="65" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+              <text class="cad-label-cmd" x="167" y="28" style="font-size:7px;fill:var(--layer-green)">Z + 1/50xp</text>
+              <text class="cad-label" x="167" y="42" style="font-size:6px">Ventana activa:</text>
+              <text class="cad-label" x="167" y="52" style="font-size:6px">escala desde la lista</text>
+              <text class="cad-label" x="167" y="62" style="font-size:6px">de la barra de estado</text>
+              <text class="cad-label" x="167" y="72" style="font-size:6px;fill:var(--layer-green)">el modelo sigue a 1:1 ✓</text>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title">Pro tip</span>
+            <span data-i18n="tips.printscale.tip">Con la ventana activa escribe Z + 1/50xp para escala 1:50, o elige la escala en la lista de la barra de estado.</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>

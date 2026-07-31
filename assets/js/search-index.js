@@ -1878,7 +1878,7 @@ window.SEARCH_INDEX = [
   {
     "type": "tip",
     "title": "Atajo esencial ESC = tu mejor amigo",
-    "description": "",
+    "description": "La tecla ESC cancela cualquier comando activo, deselecciona objetos y te devuelve al estado neutro. Úsala sin miedo.",
     "file": "trucos.html",
     "anchor": "",
     "path": "Trucos"
@@ -1886,7 +1886,7 @@ window.SEARCH_INDEX = [
   {
     "type": "tip",
     "title": "Atajo esencial F8 ORTO on/off",
-    "description": "",
+    "description": "ORTO restringe el cursor a movimientos perfectamente horizontales o verticales. Sin él, las líneas nunca son rectas de verdad.",
     "file": "trucos.html",
     "anchor": "",
     "path": "Trucos"
@@ -1894,7 +1894,7 @@ window.SEARCH_INDEX = [
   {
     "type": "tip",
     "title": "Atajo esencial F3 OSNAP siempre",
-    "description": "",
+    "description": "Sin OSNAP es imposible dibujar con precisión. Engancha el cursor a extremos, medios, centros e intersecciones reales.",
     "file": "trucos.html",
     "anchor": "",
     "path": "Trucos"
@@ -1902,7 +1902,7 @@ window.SEARCH_INDEX = [
   {
     "type": "tip",
     "title": "Aprendizaje La regla de 30 minutos",
-    "description": "",
+    "description": "30 minutos diarios superan 4 horas un solo día. La constancia crea memoria muscular con los atajos y comandos.",
     "file": "trucos.html",
     "anchor": "",
     "path": "Trucos"
@@ -1910,7 +1910,7 @@ window.SEARCH_INDEX = [
   {
     "type": "tip",
     "title": "Aprendizaje Teclado antes que ratón",
-    "description": "",
+    "description": "Los profesionales escriben comandos con el teclado, no buscan iconos. Es 3x más rápido una vez lo memorizas.",
     "file": "trucos.html",
     "anchor": "",
     "path": "Trucos"
@@ -1918,7 +1918,7 @@ window.SEARCH_INDEX = [
   {
     "type": "tip",
     "title": "Error común No guardas constantemente",
-    "description": "",
+    "description": "AutoCAD puede fallar. Si no guardas, pierdes horas de trabajo. Configura auto-guardado cada 5 minutos.",
     "file": "trucos.html",
     "anchor": "",
     "path": "Trucos"
@@ -1926,7 +1926,7 @@ window.SEARCH_INDEX = [
   {
     "type": "tip",
     "title": "Error común Todo en la capa 0",
-    "description": "",
+    "description": "Poner todo en la capa 0 es el error #1 de principiantes. Después es un caos intentar separar ejes, muros y cotas.",
     "file": "trucos.html",
     "anchor": "",
     "path": "Trucos"
@@ -1934,7 +1934,7 @@ window.SEARCH_INDEX = [
   {
     "type": "tip",
     "title": "Flujo de trabajo Crea tu plantilla .DWT",
-    "description": "",
+    "description": "No empieces cada proyecto desde cero. Crea una plantilla con tus capas, estilos de texto, cotas y bloques base.",
     "file": "trucos.html",
     "anchor": "",
     "path": "Trucos"
@@ -1942,7 +1942,7 @@ window.SEARCH_INDEX = [
   {
     "type": "tip",
     "title": "Flujo de trabajo Atajos que debes memorizar",
-    "description": "",
+    "description": "Estos 10 atajos cubren el 90% del trabajo diario en AutoCAD. Memorízalos la primera semana.",
     "file": "trucos.html",
     "anchor": "",
     "path": "Trucos"
@@ -1950,7 +1950,7 @@ window.SEARCH_INDEX = [
   {
     "type": "tip",
     "title": "Flujo de trabajo Undo y U",
-    "description": "",
+    "description": "Ctrl+Z deshace el último paso. Pero U (sin Ctrl) es el comando UNDO de AutoCAD: puedes deshacer varios pasos de golpe.",
     "file": "trucos.html",
     "anchor": "",
     "path": "Trucos"
@@ -1958,7 +1958,7 @@ window.SEARCH_INDEX = [
   {
     "type": "tip",
     "title": "Avanzado Dibuja siempre a escala 1:1",
-    "description": "",
+    "description": "En AutoCAD NUNCA cambies la escala al dibujar. Un muro de 3 metros mide 3 unidades reales. La escala solo se aplica al imprimir.",
     "file": "trucos.html",
     "anchor": "",
     "path": "Trucos"
@@ -1966,7 +1966,7 @@ window.SEARCH_INDEX = [
   {
     "type": "tip",
     "title": "Avanzado PURGE antes de entregar",
-    "description": "",
+    "description": "Antes de enviar un archivo, ejecuta PURGE para eliminar capas, bloques y estilos vacías. Reduce tamaño y evita errores.",
     "file": "trucos.html",
     "anchor": "",
     "path": "Trucos"
@@ -1974,7 +1974,7 @@ window.SEARCH_INDEX = [
   {
     "type": "tip",
     "title": "Aprendizaje Copia planos reales",
-    "description": "",
+    "description": "La mejor forma de aprender es copiar planos que ya existen. Busca planos de plantas arquitectónicas y recrealos en AutoCAD.",
     "file": "trucos.html",
     "anchor": "",
     "path": "Trucos"
@@ -1982,7 +1982,7 @@ window.SEARCH_INDEX = [
   {
     "type": "tip",
     "title": "Error común \"No veo mi dibujo\"",
-    "description": "",
+    "description": "Si de repente no ves nada o el zoom se descontrola, Z+E (Zoom Extents) te muestra todo el contenido del archivo.",
     "file": "trucos.html",
     "anchor": "",
     "path": "Trucos"
@@ -1990,7 +1990,7 @@ window.SEARCH_INDEX = [
   {
     "type": "tip",
     "title": "Avanzado Xref para trabajo en equipo",
-    "description": "",
+    "description": "Las referencias externas (Xref) permiten que varios profesionales trabajen en el mismo proyecto sin pisarse.",
     "file": "trucos.html",
     "anchor": "",
     "path": "Trucos"
@@ -1998,7 +1998,7 @@ window.SEARCH_INDEX = [
   {
     "type": "tip",
     "title": "Atajo esencial ESPACIO = Enter",
-    "description": "",
+    "description": "La barra espaciadora hace de Enter: confirma comandos y, con un solo toque, repite el último comando usado.",
     "file": "trucos.html",
     "anchor": "",
     "path": "Trucos"
@@ -2006,7 +2006,7 @@ window.SEARCH_INDEX = [
   {
     "type": "tip",
     "title": "Atajo esencial El poder del doble clic",
-    "description": "",
+    "description": "El doble clic abre el editor de cada objeto: texto, cotas, bloques, hatch… sin escribir un solo comando.",
     "file": "trucos.html",
     "anchor": "",
     "path": "Trucos"
@@ -2014,7 +2014,7 @@ window.SEARCH_INDEX = [
   {
     "type": "tip",
     "title": "Atajo esencial MA copia el formato en 1 clic",
-    "description": "",
+    "description": "MA (Match Properties) copia capa, color, tipo de línea y formato de un objeto a otro en un solo clic.",
     "file": "trucos.html",
     "anchor": "",
     "path": "Trucos"
@@ -2022,7 +2022,7 @@ window.SEARCH_INDEX = [
   {
     "type": "tip",
     "title": "Error común Líneas que no se tocan",
-    "description": "",
+    "description": "Dos líneas pueden verse unidas pero no tocarse de verdad: al hacer zoom aparece el hueco. Es un problema de precisión de snap.",
     "file": "trucos.html",
     "anchor": "",
     "path": "Trucos"
@@ -2030,7 +2030,7 @@ window.SEARCH_INDEX = [
   {
     "type": "tip",
     "title": "Error común UNITS antes de dibujar",
-    "description": "",
+    "description": "Dibujar con las unidades equivocadas (mm vs cm vs m) arruina el proyecto entero: cotas, bloques y escalas fallan.",
     "file": "trucos.html",
     "anchor": "",
     "path": "Trucos"
@@ -2038,7 +2038,7 @@ window.SEARCH_INDEX = [
   {
     "type": "tip",
     "title": "Flujo de trabajo LAYISO aísla capas",
-    "description": "",
+    "description": "LAYISO aísla la capa de un objeto: apaga o congela todas las demás para trabajar sin distracciones.",
     "file": "trucos.html",
     "anchor": "",
     "path": "Trucos"
@@ -2046,7 +2046,7 @@ window.SEARCH_INDEX = [
   {
     "type": "tip",
     "title": "Flujo de trabajo QSELECT selección en masa",
-    "description": "",
+    "description": "QSELECT selecciona en masa por propiedad: por ejemplo, todos los círculos de radio 50 o todos los textos de la capa Cotas.",
     "file": "trucos.html",
     "anchor": "",
     "path": "Trucos"
@@ -2054,7 +2054,7 @@ window.SEARCH_INDEX = [
   {
     "type": "tip",
     "title": "Avanzado Crea tus propios alias",
-    "description": "",
+    "description": "Puedes crear tus propios atajos de comando editando el archivo de alias (acad.pgp) o desde el editor CUI.",
     "file": "trucos.html",
     "anchor": "",
     "path": "Trucos"
@@ -2062,7 +2062,63 @@ window.SEARCH_INDEX = [
   {
     "type": "tip",
     "title": "Avanzado Grips: edita sin comandos",
-    "description": "",
+    "description": "Los grips (cuadraditos azules) permiten estirar, mover, rotar, escalar y copiar objetos sin escribir ningún comando.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Flujo de trabajo Acotar rápido con DIM",
+    "description": "La orden DIM acota casi sola: selecciona la línea, el arco o el círculo y coloca la cota. AutoCAD elige el tipo (lineal, radial, diámetro…).",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Flujo de trabajo Cada geometría con su cota",
+    "description": "Usa el tipo de cota correcto: DIMLINEAR para líneas horizontales o verticales, DIMALIGNED para inclinadas, DIMANGULAR para ángulos y DIMRADIUS/DIMDIAMETER para círculos.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Flujo de trabajo Un solo estilo de cota",
+    "description": "Crea UN solo estilo de cota con DIMSTYLE y aplícalo a todo el plano: flechas, altura de texto, unidades y precisión quedan uniformes.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Error común Cotas que no se actualizan",
+    "description": "Si estiras o escalas un objeto y sus cotas se quedan con el valor viejo, DIMASSOC está en 0. Con valor 2 las cotas son asociativas y se actualizan solas.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Avanzado Escala por referencia: no pierdes medidas",
+    "description": "Para escalar un plano sin equivocarte usa SCALE con referencia: base + R + clic en dos puntos del dibujo + longitud real. El resto lo calcula AutoCAD y las cotas asociativas lo reflejan al instante.",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Avanzado Cambia de unidades sin redibujar",
+    "description": "¿Tu dibujo está en milímetros y lo necesitas en metros? No redibujes: SCALE con base 0,0,0 y factor 0.001 (mm a m) o 1000 (m a mm).",
+    "file": "trucos.html",
+    "anchor": "",
+    "path": "Trucos"
+  },
+  {
+    "type": "tip",
+    "title": "Flujo de trabajo Escala de impresión en el Layout",
+    "description": "Para imprimir a escala usa una pestaña Layout: crea una ventana gráfica y fija la escala (1:50, 1:100…). El modelo sigue a 1:1, solo cambia la vista.",
     "file": "trucos.html",
     "anchor": "",
     "path": "Trucos"
