@@ -24,7 +24,7 @@
 @media (max-width: 991.98px){
   .coord-readout{ display: none; }
   .navbar-cad .container{ justify-content: flex-start; gap: .5rem; }
-  .navbar-cad .nav-actions{ margin-left: auto; margin-right: .5rem; }
+  .navbar-cad .nav-actions{ margin-left: auto; }
   .hero{ padding: 4rem 0 3rem; text-align: center; }
   .hero p.lead-cad{ max-width: 100%; margin-inline: auto; }
 }
@@ -45,7 +45,7 @@
   .navbar-cad .brand-logo{ height: 30px; }
   .navbar-cad .icon-btn{ width: 32px; height: 32px; }
   .navbar-cad .lang-toggle{ padding: 4px 8px; font-size: .72rem; }
-  .navbar-cad .nav-actions{ gap: .4rem; }
+  .navbar-cad .nav-actions{ gap: .3rem !important; }
   .command-line-inner{ font-size: .74rem; gap: .4rem; padding-inline: 1.25rem; }
   .command-line-inner #cmd-typed{
     min-width: 0;
