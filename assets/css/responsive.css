@@ -50,7 +50,7 @@
     border-radius: var(--radius-sm);
     border-bottom: 1px solid var(--border-soft);
   }
-  .navbar-cad .nav-link-cad:hover{ background: var(--bg-elevated); }
+  .navbar-cad .nav-link-cad:hover{ background: var(--cyan-dim); }
   .navbar-cad .nav-link-cad.active{
     background: var(--cyan-dim);
     color: var(--cyan) !important;
@@ -75,7 +75,7 @@
     border-radius: var(--radius-sm);
   }
   .navbar-cad .dropdown-item:hover,
-  .navbar-cad .dropdown-item:focus{ background: var(--bg-elevated); color: var(--text); }
+  .navbar-cad .dropdown-item:focus{ background: var(--cyan-dim); color: var(--cyan); }
 
   /* Pie del menú: idioma */
   .navbar-cad .nav-actions-menu{
