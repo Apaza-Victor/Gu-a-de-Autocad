@@ -190,6 +190,35 @@
 /* ---------- Escritorio (min 992px): iconos a la derecha ---------- */
 @media (min-width: 992px){
   .navbar-cad .nav-actions{ margin-left: .75rem; }
+
+  /* Hover y estado activo del menú en escritorio */
+  .navbar-cad .nav-link-cad{
+    border-radius: var(--radius-sm);
+    transition: background .15s ease, color .15s ease;
+  }
+  .navbar-cad .nav-link-cad:hover{ background: var(--cyan-dim); }
+  .navbar-cad .nav-link-cad.active{
+    background: var(--cyan-dim);
+    color: var(--cyan) !important;
+  }
+  .navbar-cad .nav-link-cad.active:hover{ background: rgba(53, 214, 203, 0.22); }
+
+  /* Submenú de Niveles con el tema del sitio */
+  .navbar-cad .dropdown-menu{
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-panel);
+    padding: .4rem;
+  }
+  .navbar-cad .dropdown-item{
+    color: var(--text-muted);
+    border-radius: var(--radius-sm);
+    padding: .55rem .75rem;
+    transition: background .15s ease, color .15s ease;
+  }
+  .navbar-cad .dropdown-item:hover,
+  .navbar-cad .dropdown-item:focus{ background: var(--cyan-dim); color: var(--cyan); }
 }
 
 /* ---------- Accesibilidad: reduce motion ---------- */
