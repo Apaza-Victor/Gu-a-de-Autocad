@@ -196,7 +196,7 @@ a:hover{ color: var(--amber); }
 }
 .icon-btn:hover{ color: var(--cyan); border-color: var(--cyan); }
 
-.navbar-toggler.icon-btn{ border: none; }
+.navbar-toggler.icon-btn{ border: none; padding: 0; }
 .navbar-toggler.icon-btn:hover{
   color: var(--cyan);
   background: var(--cyan-dim);

@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPrism();
   initHomeProgress();
   initKeyboardAccessibility();
+  initNavbarToggler();
   initCopyButtons();
 });
 
@@ -697,6 +698,29 @@ function initKeyboardAccessibility(){
       }
     });
   });
+}
+
+/* ---------- Botón hamburguesa: cambia de icono al abrir/cerrar ---------- */
+function initNavbarToggler(){
+  const collapseEl = document.getElementById('navCad');
+  const btn = document.querySelector('.navbar-toggler');
+  if (!collapseEl || !btn) return;
+  const icon = btn.querySelector('i');
+  if (!icon) return;
+
+  const setIcon = (open) => {
+    icon.classList.toggle('bi-list', !open);
+    icon.classList.toggle('bi-x', open);
+  };
+
+  collapseEl.addEventListener('show.bs.collapse', () => setIcon(true));
+  collapseEl.addEventListener('hide.bs.collapse', () => setIcon(false));
+
+  // Al volver a escritorio el menú queda expandido y visible: restaurar hamburguesa
+  const mq = window.matchMedia('(min-width: 992px)');
+  const onDesktop = () => { if (mq.matches) setIcon(false); };
+  if (mq.addEventListener) mq.addEventListener('change', onDesktop);
+  else if (mq.addListener) mq.addListener(onDesktop);
 }
 
 /* ---------- Botones copiar código ---------- */
