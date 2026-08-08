@@ -820,15 +820,20 @@ footer.site-footer a:hover{ color: var(--cyan); }
   background: var(--cyan);
   border-color: var(--cyan);
 }
-.cmd-grid{ display: grid; gap: 1rem; }
+.cmd-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
 .cmd-full-card{
   background: var(--bg-panel);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  padding: 1.2rem 1.4rem;
+  padding: 1.05rem 1.2rem;
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
+  gap: .9rem;
+  min-width: 0;
   transition: border-color .2s ease;
 }
 .cmd-full-card:hover{ border-color: var(--cyan); }
@@ -845,7 +850,9 @@ footer.site-footer a:hover{ color: var(--cyan); }
 .cmd-full-card .cmd-head{
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: .6rem;
+  row-gap: .35rem;
   margin-bottom: .3rem;
 }
 .cmd-full-card .cmd-cat{
@@ -862,6 +869,42 @@ footer.site-footer a:hover{ color: var(--cyan); }
   color: var(--text-muted);
   font-size: .85rem;
   margin: 0;
+}
+.cmd-full-card .cmd-name{
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--text);
+  font-size: .92rem;
+}
+.cmd-full-card .cmd-name-es{
+  display: none;
+  font-family: var(--font-display);
+  font-weight: 500;
+  color: var(--text-muted);
+  font-size: .72rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: .12rem .45rem;
+}
+.cmd-full-card .cmd-key{
+  font-family: var(--font-display);
+  font-size: .68rem;
+  font-weight: 700;
+  color: var(--cyan);
+  border: 1px solid var(--cyan);
+  border-radius: 4px;
+  padding: .12rem .45rem;
+}
+.cmd-full-card .cmd-key-es{
+  display: none;
+  font-family: var(--font-display);
+  font-size: .68rem;
+  font-weight: 700;
+  color: var(--cyan);
+  border: 1px solid var(--cyan);
+  border-radius: 4px;
+  padding: .12rem .45rem;
 }
 
 /* ---------- Resources page ---------- */
@@ -1062,6 +1105,17 @@ footer.site-footer a:hover{ color: var(--cyan); }
 .search-result-item .sr-path{
   font-size: .72rem;
   color: var(--text-faint);
+}
+.search-result-item .sr-key{
+  font-family: var(--font-display);
+  font-size: .62rem;
+  font-weight: 700;
+  color: var(--cyan);
+  border: 1px solid var(--cyan);
+  border-radius: 4px;
+  padding: .06rem .35rem;
+  margin-left: .4rem;
+  vertical-align: middle;
 }
 .search-empty{
   padding: 2rem;

@@ -130,6 +130,7 @@
   .content-article h2{ flex-wrap: wrap; }
   .drawing-sheet{ padding: 1rem; }
   .cmd-full-card{ gap: .8rem; }
+  .cmd-grid{ grid-template-columns: 1fr; }
   .cmd-full-card .cmd-info{ min-width: 0; }
   .cmd-full-card .cmd-head{ flex-wrap: wrap; gap: .3rem .6rem; }
   .hero h1{ font-size: clamp(1.9rem, 6vw, 2.6rem); }

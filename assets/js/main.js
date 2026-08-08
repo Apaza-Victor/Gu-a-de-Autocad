@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initCommandLevelFilters();
   initCommandSearch();
   initResourceFilters();
+  initCategoryFilters('visFilters', 'visGrid');
+  initCategoryFilters('tipsFilters', 'tipsGrid');
   initGlobalSearch();
   initSwiperCarousel();
   initPrism();
@@ -322,12 +324,14 @@ function applyCmdFilters(){
     const level = card.getAttribute('data-level');
 
     const name = (card.getAttribute('data-cmd') || '').toLowerCase();
+    const nameEs = (card.getAttribute('data-cmd-es') || '').toLowerCase();
     const keys = (card.getAttribute('data-keys') || '').toLowerCase();
+    const keysEs = (card.getAttribute('data-keys-es') || '').toLowerCase();
     const desc = (card.querySelector('.cmd-desc')?.textContent || '').toLowerCase();
 
     const matchCat = catFilter === 'todos' || cat === catFilter;
     const matchLevel = levelFilter === 'todos' || level === levelFilter;
-    const matchSearch = !q || name.includes(q) || keys.includes(q) || desc.includes(q) || cat.includes(q);
+    const matchSearch = !q || name.includes(q) || nameEs.includes(q) || keys.includes(q) || keysEs.includes(q) || desc.includes(q) || cat.includes(q);
 
     const show = matchCat && matchLevel && matchSearch;
     card.style.display = show ? '' : 'none';
@@ -379,6 +383,37 @@ function initResourceFilters(){
   });
 }
 
+/* ---------- Filtros por categoría (visuales y trucos) ---------- */
+function initCategoryFilters(containerId, gridId){
+  const filtersContainer = document.getElementById(containerId);
+  const grid = document.getElementById(gridId);
+  if (!filtersContainer || !grid) return;
+
+  const buttons = filtersContainer.querySelectorAll('.cmd-filter-btn');
+  const cards = grid.querySelectorAll('.diagram-card');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.getAttribute('data-filter');
+
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-cat');
+        const show = filter === 'todos' || cat === filter;
+        card.style.display = show ? '' : 'none';
+        if (show) {
+          card.classList.add('aos-animate');
+          card.style.opacity = '1';
+          card.style.transform = 'none';
+        }
+      });
+
+      if (window.AOS) AOS.refreshHard();
+    });
+  });
+}
+
 /* ---------- Buscador global con Fuse.js ---------- */
 function fixIndexEntry(item){
   const isHome = !window.location.pathname.includes('/paginas/');
@@ -387,7 +422,9 @@ function fixIndexEntry(item){
     type: item.type || 'page',
     title: item.title,
     command: item.type === 'command' ? (item.title || '') : '',
+    commandEs: item.commandEs || '',
     shortcut: item.shortcut || '',
+    shortcutEs: item.shortcutEs || '',
     description: item.description || '',
     url: prefix + (item.file || '') + (item.anchor ? '#' + item.anchor : ''),
     path: item.path || ''
@@ -412,7 +449,9 @@ function initGlobalSearch(){
       keys: [
         { name: 'title', weight: 0.4 },
         { name: 'command', weight: 0.3 },
+        { name: 'commandEs', weight: 0.3 },
         { name: 'shortcut', weight: 0.2 },
+        { name: 'shortcutEs', weight: 0.2 },
         { name: 'description', weight: 0.1 }
       ],
       threshold: 0.4,
@@ -485,10 +524,14 @@ function initGlobalSearch(){
       resultsContainer.innerHTML = results.map(r => {
         const d = r.item;
         const icon = d.type === 'command' ? 'bi-terminal' : d.type === 'resource' ? 'bi-gift' : 'bi-book';
+        const isEs = window.I18N_SYSTEM && window.I18N_SYSTEM.getLang() === 'es';
+        const shownTitle = d.type === 'command' && isEs && d.commandEs ? d.commandEs : d.title;
+        const shownKey = d.type === 'command' && isEs ? (d.shortcutEs || d.shortcut) : d.shortcut;
+        const keyBadge = d.type === 'command' && shownKey ? ' <span class="sr-key">' + escapeHtml(shownKey) + '</span>' : '';
         return '<a href="' + d.url + '" class="search-result-item">' +
           '<div class="sr-icon"><i class="bi ' + icon + '"></i></div>' +
           '<div class="sr-info">' +
-            '<div class="sr-title">' + highlightMatch(d.title, query) + '</div>' +
+            '<div class="sr-title">' + highlightMatch(shownTitle, query) + keyBadge + '</div>' +
             '<div class="sr-path">' + (d.path || '') + '</div>' +
           '</div>' +
         '</a>';
@@ -509,7 +552,9 @@ function buildSearchData(){
       type: 'command',
       title: card.getAttribute('data-cmd').toUpperCase(),
       command: card.getAttribute('data-cmd'),
+      commandEs: card.getAttribute('data-cmd-es') || '',
       shortcut: card.getAttribute('data-keys') || '',
+      shortcutEs: card.getAttribute('data-keys-es') || '',
       description: (card.querySelector('.cmd-desc') || {}).textContent || '',
       url: prefix + 'comandos.html',
       path: 'Comandos'

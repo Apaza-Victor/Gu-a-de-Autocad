@@ -22,7 +22,7 @@
 
 ### Secciones complementarias
 
-- **Diccionario de comandos** — 95 comandos con busqueda, filtros por categoria y teclas de acceso rapido
+- **Diccionario de comandos** — 979 comandos con busqueda, filtros por categoria y teclas de acceso rapido
 - **Ejemplos visuales** — diagramas paso a paso que muestran antes/despues de cada comando
 - **Trucos y atajos** — tips de aprendizaje, atajos de teclado, errores comunes y flujo de trabajo
 - **Recursos** — 19 recursos descargables: bloques, cursos, comunidades, plantillas, canales de YouTube, herramientas y chuleta de atajos en PDF
@@ -36,7 +36,7 @@
 - **Tema oscuro/claro** — toggle con persistencia en localStorage, deteccion automatica de preferencia del sistema (`prefers-color-scheme`)
 - **Progreso de aprendizaje** — cada tema se puede marcar como visto, con barra de progreso global
 - **Buscador global** — busqueda inteligente con fuzzy matching (Fuse.js), atajo `Ctrl+K`
-- **Filtros de comandos** — 10 categorias: Dibujo, Modificacion, Precision, Capas, Acotacion, Texto, Bloques, Edicion, 3D, Consulta
+- **Filtros de comandos** — 14 categorias: Dibujo, Modificacion, Precision, Capas, Acotacion, Texto, Bloques, Edicion, 3D, Consulta, Archivo, Vista, Utilidades, Render
 - **Carruseles** — galerias interactivas con Swiper.js
 - **Bloques de codigo** — con resaltado de sintaxis (Prism.js) y boton de copiar
 - **Navegacion por teclado** — FAQ accesible con Enter/Espacio, filtros con flechas
@@ -83,7 +83,7 @@ Guia de Autocad/
 │   ├── nivel-3-organizacion.html
 │   ├── nivel-4-modelado-3d.html
 │   ├── nivel-5-avanzado.html
-│   ├── comandos.html           # Diccionario de 95 comandos
+│   ├── comandos.html           # Diccionario de 979 comandos
 │   ├── ejemplos-visuales.html  # Diagramas paso a paso
 │   ├── trucos.html             # Atajos y tips
 │   ├── recursos.html           # Enlaces y plantillas

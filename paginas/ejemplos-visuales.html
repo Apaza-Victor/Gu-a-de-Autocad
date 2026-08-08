@@ -105,8 +105,8 @@
       <!-- ====== PLANO COMPLETO (destacado) ====== -->
       <div class="diagram-card featured" data-cat="todos" data-aos="fade-up">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">2D</span> <span data-i18n="vis.plan.title">Plano completo</span></h4>
-          <span class="key-inline">ESC 1:50</span>
+          <h4><span class="cmd-badge" data-i18n="vis.badge.2d">2D</span> <span data-i18n="vis.plan.title">Plano completo</span></h4>
+          <span class="key-inline" data-keys="ESC 1:50" data-keys-es="ESC 1:50">ESC 1:50</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.plan.desc">Un mismo dibujo reúne lo visto en la guía: muros por OFFSET, esquinas y puertas con FILLET, recortes con TRIM, muebles con RECTANGLE y ARRAY, y cotas en su propia capa.</p>
@@ -136,8 +136,8 @@
               <rect x="40" y="50" width="560" height="210" fill="var(--amber-dim)" stroke="var(--amber)" stroke-width="6"/>
               <line x1="300" y1="50" x2="300" y2="170" stroke="var(--layer-red)" stroke-width="3"/>
 
-              <text x="170" y="90" fill="var(--text-faint)" font-family="'JetBrains Mono',monospace" font-size="10" letter-spacing="2" text-anchor="middle">ZONA 1</text>
-              <text x="450" y="90" fill="var(--text-faint)" font-family="'JetBrains Mono',monospace" font-size="10" letter-spacing="2" text-anchor="middle">ZONA 2</text>
+              <text x="170" y="90" fill="var(--text-faint)" font-family="'JetBrains Mono',monospace" font-size="10" letter-spacing="2" text-anchor="middle" data-cmd="ZONE 1" data-cmd-es="ZONA 1">ZONA 1</text>
+              <text x="450" y="90" fill="var(--text-faint)" font-family="'JetBrains Mono',monospace" font-size="10" letter-spacing="2" text-anchor="middle" data-cmd="ZONE 2" data-cmd-es="ZONA 2">ZONA 2</text>
 
               <g stroke="var(--layer-blue)" stroke-width="1">
                 <line x1="140" y1="140" x2="152" y2="140"/>
@@ -202,8 +202,8 @@
                   <!-- ====== ATAJOS DE TECLADO (destacado) ====== -->
       <div class="diagram-card featured" data-cat="todos" data-aos="fade-up">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">ATAJOS</span> <span data-i18n="vis.kbd.title">Atajos de teclado de AutoCAD</span></h4>
-          <span class="key-inline">F1–F12</span>
+          <h4><span class="cmd-badge" data-i18n="vis.badge.atajos">ATAJOS</span> <span data-i18n="vis.kbd.title">Atajos de teclado de AutoCAD</span></h4>
+          <span class="key-inline" data-keys="F1–F12" data-keys-es="F1–F12">F1–F12</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.kbd.desc">Mapa completo de atajos de teclado de AutoCAD en una sola imagen: teclas de función (F1 a F12), navegación y los comandos de un solo toque (L para LINE, C para CIRCLE, O para OFFSET...). Imprímelo y tenlo junto al teclado mientras practicas.</p>
@@ -213,40 +213,43 @@
 <text x="176.0" y="53.0" fill="var(--text-faint)" font-family="'JetBrains Mono',monospace" font-size="14" text-anchor="middle">ESC</text>
 <rect x="210.0" y="22.0" width="60.0" height="52" rx="6" fill="var(--bg-elevated)" stroke="var(--border-soft)" stroke-width="1"/>
 <text x="240.0" y="41.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="15" font-weight="700" text-anchor="middle">F1</text>
-<text x="240.0" y="65.0" fill="var(--text-faint)" font-family="'JetBrains Mono',monospace" font-size="11" text-anchor="middle">HELP</text>
+<text x="240.0" y="65.0" fill="var(--text-faint)" font-family="'JetBrains Mono',monospace" font-size="11" text-anchor="middle" data-cmd="HELP" data-cmd-es="AYUDA">HELP</text>
 <rect x="274.0" y="22.0" width="60.0" height="52" rx="6" fill="var(--bg-elevated)" stroke="var(--border-soft)" stroke-width="1"/>
 <text x="304.0" y="41.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="15" font-weight="700" text-anchor="middle">F2</text>
-<text x="304.0" y="65.0" fill="var(--text-faint)" font-family="'JetBrains Mono',monospace" font-size="11" text-anchor="middle">TEXT WIN</text>
+<text x="304.0" y="65.0" fill="var(--text-faint)" font-family="'JetBrains Mono',monospace" font-size="11" text-anchor="middle" data-cmd="TEXT WIN" data-cmd-es="VENTANA DE TEXTO" data-cmd-fs="11" data-cmd-fs-es="6">TEXT WIN</text>
 <rect x="338.0" y="22.0" width="60.0" height="52" rx="6" fill="var(--bg-elevated)" stroke="var(--border-soft)" stroke-width="1"/>
 <text x="368.0" y="41.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="15" font-weight="700" text-anchor="middle">F3</text>
-<text x="368.0" y="65.0" fill="var(--text-faint)" font-family="'JetBrains Mono',monospace" font-size="11" text-anchor="middle">OSNAP</text>
+<text x="368.0" y="65.0" fill="var(--text-faint)" font-family="'JetBrains Mono',monospace" font-size="11" text-anchor="middle" data-cmd="OSNAP" data-cmd-es="REFENT">OSNAP</text>
 <rect x="402.0" y="22.0" width="60.0" height="52" rx="6" fill="var(--bg-elevated)" stroke="var(--border-soft)" stroke-width="1"/>
 <text x="432.0" y="41.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="15" font-weight="700" text-anchor="middle">F4</text>
-<text x="432.0" y="65.0" fill="var(--text-faint)" font-family="'JetBrains Mono',monospace" font-size="11" text-anchor="middle">3D SNAP</text>
+<text x="432.0" y="65.0" fill="var(--text-faint)" font-family="'JetBrains Mono',monospace" font-size="11" text-anchor="middle" data-cmd="3D SNAP" data-cmd-es="REFENT 3D">3D SNAP</text>
 <rect x="466.0" y="22.0" width="60.0" height="52" rx="6" fill="var(--bg-elevated)" stroke="var(--border-soft)" stroke-width="1"/>
 <text x="496.0" y="41.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="15" font-weight="700" text-anchor="middle">F5</text>
-<text x="496.0" y="65.0" fill="var(--text-faint)" font-family="'JetBrains Mono',monospace" font-size="11" text-anchor="middle">ISOPLANE</text>
+<text x="496.0" y="65.0" fill="var(--text-faint)" font-family="'JetBrains Mono',monospace" font-size="11" text-anchor="middle" data-cmd="ISOPLANE" data-cmd-es="ISOPLANO">ISOPLANE</text>
 <rect x="530.0" y="22.0" width="60.0" height="52" rx="6" fill="var(--bg-elevated)" stroke="var(--border-soft)" stroke-width="1"/>
 <text x="560.0" y="41.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="15" font-weight="700" text-anchor="middle">F6</text>
-<text x="560.0" y="65.0" fill="var(--text-faint)" font-family="'JetBrains Mono',monospace" font-size="11" text-anchor="middle">DUCS</text>
+<text x="560.0" y="65.0" fill="var(--text-faint)" font-family="'JetBrains Mono',monospace" font-size="11" text-anchor="middle" data-cmd="DUCS" data-cmd-es="SCPD">DUCS</text>
 <rect x="594.0" y="22.0" width="60.0" height="52" rx="6" fill="var(--bg-elevated)" stroke="var(--border-soft)" stroke-width="1"/>
 <text x="624.0" y="41.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="15" font-weight="700" text-anchor="middle">F7</text>
-<text x="624.0" y="65.0" fill="var(--text-faint)" font-family="'JetBrains Mono',monospace" font-size="11" text-anchor="middle">GRID</text>
+<text x="624.0" y="65.0" fill="var(--text-faint)" font-family="'JetBrains Mono',monospace" font-size="11" text-anchor="middle" data-cmd="GRID" data-cmd-es="CUADRÍCULA">GRID</text>
 <rect x="658.0" y="22.0" width="60.0" height="52" rx="6" fill="var(--bg-elevated)" stroke="var(--border-soft)" stroke-width="1"/>
 <text x="688.0" y="41.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="15" font-weight="700" text-anchor="middle">F8</text>
-<text x="688.0" y="65.0" fill="var(--text-faint)" font-family="'JetBrains Mono',monospace" font-size="11" text-anchor="middle">ORTHO</text>
+<text x="688.0" y="65.0" fill="var(--text-faint)" font-family="'JetBrains Mono',monospace" font-size="11" text-anchor="middle" data-cmd="ORTHO" data-cmd-es="ORTO">ORTHO</text>
 <rect x="722.0" y="22.0" width="60.0" height="52" rx="6" fill="var(--bg-elevated)" stroke="var(--border-soft)" stroke-width="1"/>
 <text x="752.0" y="41.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="15" font-weight="700" text-anchor="middle">F9</text>
-<text x="752.0" y="65.0" fill="var(--text-faint)" font-family="'JetBrains Mono',monospace" font-size="11" text-anchor="middle">SNAP</text>
+<text x="752.0" y="65.0" fill="var(--text-faint)" font-family="'JetBrains Mono',monospace" font-size="11" text-anchor="middle" data-cmd="SNAP" data-cmd-es="ADHESIÓN">SNAP</text>
 <rect x="786.0" y="22.0" width="60.0" height="52" rx="6" fill="var(--bg-elevated)" stroke="var(--border-soft)" stroke-width="1"/>
 <text x="816.0" y="41.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="15" font-weight="700" text-anchor="middle">F10</text>
-<text x="816.0" y="65.0" fill="var(--text-faint)" font-family="'JetBrains Mono',monospace" font-size="11" text-anchor="middle">POLAR</text>
+<text x="816.0" y="65.0" fill="var(--text-faint)" font-family="'JetBrains Mono',monospace" font-size="11" text-anchor="middle" data-cmd="POLAR" data-cmd-es="POLAR">POLAR</text>
 <rect x="850.0" y="22.0" width="60.0" height="52" rx="6" fill="var(--bg-elevated)" stroke="var(--border-soft)" stroke-width="1"/>
 <text x="880.0" y="41.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="15" font-weight="700" text-anchor="middle">F11</text>
-<text x="880.0" y="65.0" fill="var(--text-faint)" font-family="'JetBrains Mono',monospace" font-size="11" text-anchor="middle">OTRACK</text>
+<text x="880.0" y="65.0" fill="var(--text-faint)" font-family="'JetBrains Mono',monospace" font-size="11" text-anchor="middle" data-cmd="OTRACK" data-cmd-es="RASTREO">OTRACK</text>
 <rect x="914.0" y="22.0" width="60.0" height="52" rx="6" fill="var(--bg-elevated)" stroke="var(--border-soft)" stroke-width="1"/>
 <text x="944.0" y="41.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="15" font-weight="700" text-anchor="middle">F12</text>
-<text x="944.0" y="65.0" fill="var(--text-faint)" font-family="'JetBrains Mono',monospace" font-size="11" text-anchor="middle">DYN</text>
+<text x="944.0" y="65.0" fill="var(--text-faint)" font-family="'JetBrains Mono',monospace" font-size="11" text-anchor="middle" data-cmd="DYN" data-cmd-es="DIN">DYN</text>
+<rect x="978.0" y="22.0" width="60.0" height="52" rx="6" fill="var(--bg-elevated)" stroke="var(--border-soft)" stroke-width="1"/>
+<text x="1008.0" y="41.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="13" font-weight="700" text-anchor="middle" data-cmd="DEL" data-cmd-es="SUPR">SUPR</text>
+<text x="1008.0" y="65.0" fill="var(--text-faint)" font-family="'JetBrains Mono',monospace" font-size="11" text-anchor="middle" data-cmd="ERASE" data-cmd-es="BORRAR">BORRAR</text>
 <rect x="82.0" y="112.0" width="60.0" height="52" rx="6" fill="var(--bg-elevated)" stroke="var(--border-soft)" stroke-width="1"/>
 <text x="112.0" y="146.0" fill="var(--text)" font-family="'JetBrains Mono',monospace" font-size="22" font-weight="700" text-anchor="middle">`</text>
 <rect x="146.0" y="112.0" width="60.0" height="52" rx="6" fill="var(--bg-elevated)" stroke="var(--border-soft)" stroke-width="1"/>
@@ -281,30 +284,30 @@
 <text x="224.0" y="226.0" fill="var(--text)" font-family="'JetBrains Mono',monospace" font-size="22" font-weight="700" text-anchor="middle">Q</text>
 <rect x="258.0" y="192.0" width="60.0" height="52" rx="6" fill="var(--cyan-dim)" stroke="var(--cyan)" stroke-width="1"/>
 <text x="288.0" y="210.0" fill="var(--text)" font-family="'JetBrains Mono',monospace" font-size="24" font-weight="700" text-anchor="middle">W</text>
-<text x="288.0" y="236.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle">WBLOCK</text>
+<text x="288.0" y="236.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle" data-cmd="WBLOCK" data-cmd-es="BLOQUEDISC" data-cmd-fs="12" data-cmd-fs-es="9">WBLOCK</text>
 <rect x="322.0" y="192.0" width="60.0" height="52" rx="6" fill="var(--cyan-dim)" stroke="var(--cyan)" stroke-width="1"/>
 <text x="352.0" y="210.0" fill="var(--text)" font-family="'JetBrains Mono',monospace" font-size="24" font-weight="700" text-anchor="middle">E</text>
-<text x="352.0" y="236.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle">ERASE</text>
+<text x="352.0" y="236.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle" data-cmd="ERASE" data-cmd-es="BORRAR">ERASE</text>
 <rect x="386.0" y="192.0" width="60.0" height="52" rx="6" fill="var(--cyan-dim)" stroke="var(--cyan)" stroke-width="1"/>
 <text x="416.0" y="210.0" fill="var(--text)" font-family="'JetBrains Mono',monospace" font-size="24" font-weight="700" text-anchor="middle">R</text>
-<text x="416.0" y="236.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle">REDRAW</text>
+<text x="416.0" y="236.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle" data-cmd="REDRAW" data-cmd-es="REDIBUJA">REDRAW</text>
 <rect x="450.0" y="192.0" width="60.0" height="52" rx="6" fill="var(--cyan-dim)" stroke="var(--cyan)" stroke-width="1"/>
 <text x="480.0" y="210.0" fill="var(--text)" font-family="'JetBrains Mono',monospace" font-size="24" font-weight="700" text-anchor="middle">T</text>
-<text x="480.0" y="236.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle">TEXT</text>
+<text x="480.0" y="236.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle" data-cmd="TEXT" data-cmd-es="TEXTO">TEXT</text>
 <rect x="514.0" y="192.0" width="60.0" height="52" rx="6" fill="var(--bg-elevated)" stroke="var(--border-soft)" stroke-width="1"/>
 <text x="544.0" y="226.0" fill="var(--text)" font-family="'JetBrains Mono',monospace" font-size="22" font-weight="700" text-anchor="middle">Y</text>
 <rect x="578.0" y="192.0" width="60.0" height="52" rx="6" fill="var(--cyan-dim)" stroke="var(--cyan)" stroke-width="1"/>
 <text x="608.0" y="210.0" fill="var(--text)" font-family="'JetBrains Mono',monospace" font-size="24" font-weight="700" text-anchor="middle">U</text>
-<text x="608.0" y="236.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle">UNDO</text>
+<text x="608.0" y="236.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle" data-cmd="UNDO" data-cmd-es="DESHACER">UNDO</text>
 <rect x="642.0" y="192.0" width="60.0" height="52" rx="6" fill="var(--cyan-dim)" stroke="var(--cyan)" stroke-width="1"/>
 <text x="672.0" y="210.0" fill="var(--text)" font-family="'JetBrains Mono',monospace" font-size="24" font-weight="700" text-anchor="middle">I</text>
-<text x="672.0" y="236.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle">INSERT</text>
+<text x="672.0" y="236.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle" data-cmd="INSERT" data-cmd-es="INSERTAR">INSERT</text>
 <rect x="706.0" y="192.0" width="60.0" height="52" rx="6" fill="var(--cyan-dim)" stroke="var(--cyan)" stroke-width="1"/>
 <text x="736.0" y="210.0" fill="var(--text)" font-family="'JetBrains Mono',monospace" font-size="24" font-weight="700" text-anchor="middle">O</text>
-<text x="736.0" y="236.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle">OFFSET</text>
+<text x="736.0" y="236.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle" data-cmd="OFFSET" data-cmd-es="DESFASE">OFFSET</text>
 <rect x="770.0" y="192.0" width="60.0" height="52" rx="6" fill="var(--cyan-dim)" stroke="var(--cyan)" stroke-width="1"/>
 <text x="800.0" y="210.0" fill="var(--text)" font-family="'JetBrains Mono',monospace" font-size="24" font-weight="700" text-anchor="middle">P</text>
-<text x="800.0" y="236.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle">PAN</text>
+<text x="800.0" y="236.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle" data-cmd="PAN" data-cmd-es="DESPLAZAR">PAN</text>
 <rect x="834.0" y="192.0" width="60.0" height="52" rx="6" fill="var(--bg-elevated)" stroke="var(--border-soft)" stroke-width="1"/>
 <text x="864.0" y="226.0" fill="var(--text)" font-family="'JetBrains Mono',monospace" font-size="22" font-weight="700" text-anchor="middle">[</text>
 <rect x="898.0" y="192.0" width="60.0" height="52" rx="6" fill="var(--bg-elevated)" stroke="var(--border-soft)" stroke-width="1"/>
@@ -315,30 +318,30 @@
 <text x="136.0" y="303.0" fill="var(--text-faint)" font-family="'JetBrains Mono',monospace" font-size="14" text-anchor="middle">CAPS</text>
 <rect x="194.0" y="272.0" width="60.0" height="52" rx="6" fill="var(--cyan-dim)" stroke="var(--cyan)" stroke-width="1"/>
 <text x="224.0" y="290.0" fill="var(--text)" font-family="'JetBrains Mono',monospace" font-size="24" font-weight="700" text-anchor="middle">A</text>
-<text x="224.0" y="316.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle">ARC</text>
+<text x="224.0" y="316.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle" data-cmd="ARC" data-cmd-es="ARCO">ARC</text>
 <rect x="258.0" y="272.0" width="60.0" height="52" rx="6" fill="var(--cyan-dim)" stroke="var(--cyan)" stroke-width="1"/>
 <text x="288.0" y="290.0" fill="var(--text)" font-family="'JetBrains Mono',monospace" font-size="24" font-weight="700" text-anchor="middle">S</text>
-<text x="288.0" y="316.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle">STRETCH</text>
+<text x="288.0" y="316.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle" data-cmd="STRETCH" data-cmd-es="ESTIRAR">STRETCH</text>
 <rect x="322.0" y="272.0" width="60.0" height="52" rx="6" fill="var(--cyan-dim)" stroke="var(--cyan)" stroke-width="1"/>
 <text x="352.0" y="290.0" fill="var(--text)" font-family="'JetBrains Mono',monospace" font-size="24" font-weight="700" text-anchor="middle">D</text>
-<text x="352.0" y="316.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle">DIMSTYLE</text>
+<text x="352.0" y="316.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle" data-cmd="DIMSTYLE" data-cmd-es="ACOESTIL">DIMSTYLE</text>
 <rect x="386.0" y="272.0" width="60.0" height="52" rx="6" fill="var(--cyan-dim)" stroke="var(--cyan)" stroke-width="1"/>
 <text x="416.0" y="290.0" fill="var(--text)" font-family="'JetBrains Mono',monospace" font-size="24" font-weight="700" text-anchor="middle">F</text>
-<text x="416.0" y="316.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle">FILLET</text>
+<text x="416.0" y="316.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle" data-cmd="FILLET" data-cmd-es="EMPALME">FILLET</text>
 <rect x="450.0" y="272.0" width="60.0" height="52" rx="6" fill="var(--cyan-dim)" stroke="var(--cyan)" stroke-width="1"/>
 <text x="480.0" y="290.0" fill="var(--text)" font-family="'JetBrains Mono',monospace" font-size="24" font-weight="700" text-anchor="middle">G</text>
-<text x="480.0" y="316.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle">GROUP</text>
+<text x="480.0" y="316.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle" data-cmd="GROUP" data-cmd-es="GRUPO">GROUP</text>
 <rect x="514.0" y="272.0" width="60.0" height="52" rx="6" fill="var(--cyan-dim)" stroke="var(--cyan)" stroke-width="1"/>
 <text x="544.0" y="290.0" fill="var(--text)" font-family="'JetBrains Mono',monospace" font-size="24" font-weight="700" text-anchor="middle">H</text>
-<text x="544.0" y="316.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle">HATCH</text>
+<text x="544.0" y="316.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle" data-cmd="HATCH" data-cmd-es="SOMBREADO">HATCH</text>
 <rect x="578.0" y="272.0" width="60.0" height="52" rx="6" fill="var(--cyan-dim)" stroke="var(--cyan)" stroke-width="1"/>
 <text x="608.0" y="290.0" fill="var(--text)" font-family="'JetBrains Mono',monospace" font-size="24" font-weight="700" text-anchor="middle">J</text>
-<text x="608.0" y="316.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle">JOIN</text>
+<text x="608.0" y="316.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle" data-cmd="JOIN" data-cmd-es="UNIR">JOIN</text>
 <rect x="642.0" y="272.0" width="60.0" height="52" rx="6" fill="var(--bg-elevated)" stroke="var(--border-soft)" stroke-width="1"/>
 <text x="672.0" y="306.0" fill="var(--text)" font-family="'JetBrains Mono',monospace" font-size="22" font-weight="700" text-anchor="middle">K</text>
 <rect x="706.0" y="272.0" width="60.0" height="52" rx="6" fill="var(--cyan-dim)" stroke="var(--cyan)" stroke-width="1"/>
 <text x="736.0" y="290.0" fill="var(--text)" font-family="'JetBrains Mono',monospace" font-size="24" font-weight="700" text-anchor="middle">L</text>
-<text x="736.0" y="316.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle">LINE</text>
+<text x="736.0" y="316.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle" data-cmd="LINE" data-cmd-es="LÍNEA">LINE</text>
 <rect x="770.0" y="272.0" width="60.0" height="52" rx="6" fill="var(--bg-elevated)" stroke="var(--border-soft)" stroke-width="1"/>
 <text x="800.0" y="306.0" fill="var(--text)" font-family="'JetBrains Mono',monospace" font-size="22" font-weight="700" text-anchor="middle">;</text>
 <rect x="834.0" y="272.0" width="60.0" height="52" rx="6" fill="var(--bg-elevated)" stroke="var(--border-soft)" stroke-width="1"/>
@@ -349,23 +352,23 @@
 <text x="152.0" y="383.0" fill="var(--text-faint)" font-family="'JetBrains Mono',monospace" font-size="14" text-anchor="middle">SHIFT</text>
 <rect x="226.0" y="352.0" width="60.0" height="52" rx="6" fill="var(--cyan-dim)" stroke="var(--cyan)" stroke-width="1"/>
 <text x="256.0" y="370.0" fill="var(--text)" font-family="'JetBrains Mono',monospace" font-size="24" font-weight="700" text-anchor="middle">Z</text>
-<text x="256.0" y="396.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle">ZOOM</text>
+<text x="256.0" y="396.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle" data-cmd="ZOOM" data-cmd-es="ZOOM">ZOOM</text>
 <rect x="290.0" y="352.0" width="60.0" height="52" rx="6" fill="var(--cyan-dim)" stroke="var(--cyan)" stroke-width="1"/>
 <text x="320.0" y="370.0" fill="var(--text)" font-family="'JetBrains Mono',monospace" font-size="24" font-weight="700" text-anchor="middle">X</text>
-<text x="320.0" y="396.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle">EXPLODE</text>
+<text x="320.0" y="396.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle" data-cmd="EXPLODE" data-cmd-es="DESCOMPONER" data-cmd-fs="12" data-cmd-fs-es="8">EXPLODE</text>
 <rect x="354.0" y="352.0" width="60.0" height="52" rx="6" fill="var(--cyan-dim)" stroke="var(--cyan)" stroke-width="1"/>
 <text x="384.0" y="370.0" fill="var(--text)" font-family="'JetBrains Mono',monospace" font-size="24" font-weight="700" text-anchor="middle">C</text>
-<text x="384.0" y="396.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle">CIRCLE</text>
+<text x="384.0" y="396.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle" data-cmd="CIRCLE" data-cmd-es="CÍRCULO">CIRCLE</text>
 <rect x="418.0" y="352.0" width="60.0" height="52" rx="6" fill="var(--bg-elevated)" stroke="var(--border-soft)" stroke-width="1"/>
 <text x="448.0" y="386.0" fill="var(--text)" font-family="'JetBrains Mono',monospace" font-size="22" font-weight="700" text-anchor="middle">V</text>
 <rect x="482.0" y="352.0" width="60.0" height="52" rx="6" fill="var(--cyan-dim)" stroke="var(--cyan)" stroke-width="1"/>
 <text x="512.0" y="370.0" fill="var(--text)" font-family="'JetBrains Mono',monospace" font-size="24" font-weight="700" text-anchor="middle">B</text>
-<text x="512.0" y="396.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle">BLOCK</text>
+<text x="512.0" y="396.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle" data-cmd="BLOCK" data-cmd-es="BLOQUE">BLOCK</text>
 <rect x="546.0" y="352.0" width="60.0" height="52" rx="6" fill="var(--bg-elevated)" stroke="var(--border-soft)" stroke-width="1"/>
 <text x="576.0" y="386.0" fill="var(--text)" font-family="'JetBrains Mono',monospace" font-size="22" font-weight="700" text-anchor="middle">N</text>
 <rect x="610.0" y="352.0" width="60.0" height="52" rx="6" fill="var(--cyan-dim)" stroke="var(--cyan)" stroke-width="1"/>
 <text x="640.0" y="370.0" fill="var(--text)" font-family="'JetBrains Mono',monospace" font-size="24" font-weight="700" text-anchor="middle">M</text>
-<text x="640.0" y="396.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle">MOVE</text>
+<text x="640.0" y="396.0" fill="var(--cyan)" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle" data-cmd="MOVE" data-cmd-es="MOVER">MOVE</text>
 <rect x="674.0" y="352.0" width="60.0" height="52" rx="6" fill="var(--bg-elevated)" stroke="var(--border-soft)" stroke-width="1"/>
 <text x="704.0" y="386.0" fill="var(--text)" font-family="'JetBrains Mono',monospace" font-size="22" font-weight="700" text-anchor="middle">,</text>
 <rect x="738.0" y="352.0" width="60.0" height="52" rx="6" fill="var(--bg-elevated)" stroke="var(--border-soft)" stroke-width="1"/>
@@ -402,8 +405,8 @@
 <!-- ====== LINE ====== -->
       <div class="diagram-card" id="vis-line" data-cat="dibujo" data-aos="fade-up">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Dibujo</span> LINE</h4>
-          <span class="key-inline">L</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.dibujo">Dibujo</span> <span class="vis-cmd" data-cmd="LINE" data-cmd-es="LÍNEA">LINE</span></h4>
+          <span class="key-inline" data-keys="L" data-keys-es="L">L</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.line.desc">Dibuja segmentos de línea recta entre puntos. Cada clic define el siguiente vértice.</p>
@@ -444,8 +447,8 @@
       <!-- ====== OFFSET ====== -->
       <div class="diagram-card" id="vis-offset" data-cat="modificacion" data-aos="fade-up" data-aos-delay="60">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Modificación</span> OFFSET</h4>
-          <span class="key-inline">O</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.modificacion">Modificación</span> <span class="vis-cmd" data-cmd="OFFSET" data-cmd-es="DESFASE">OFFSET</span></h4>
+          <span class="key-inline" data-keys="O" data-keys-es="DF">O</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.offset.desc">Crea una copia paralela de un objeto a una distancia exacta. Fundamental para muros y estructuras.</p>
@@ -454,7 +457,7 @@
               <span class="diagram-step-label" data-i18n="vis.step.original">Original</span>
               <svg viewBox="0 0 200 100">
                 <line class="cad-line" x1="20" y1="50" x2="180" y2="50"/>
-                <text class="cad-label" x="85" y="42">eje del muro</text>
+                <text class="cad-label" x="85" y="42" data-i18n="vis.svg.1">eje del muro</text>
               </svg>
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
@@ -481,8 +484,8 @@
       <!-- ====== TRIM ====== -->
       <div class="diagram-card" id="vis-trim" data-cat="modificacion" data-aos="fade-up">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Modificación</span> TRIM</h4>
-          <span class="key-inline">TR</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.modificacion">Modificación</span> <span class="vis-cmd" data-cmd="TRIM" data-cmd-es="RECORTAR">TRIM</span></h4>
+          <span class="key-inline" data-keys="TR" data-keys-es="RC">TR</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.trim.desc">Recorta la parte de un objeto que sobrepasa un límite de referencia.</p>
@@ -516,8 +519,8 @@
       <!-- ====== FILLET ====== -->
       <div class="diagram-card" id="vis-fillet" data-cat="modificacion" data-aos="fade-up" data-aos-delay="60">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Modificación</span> FILLET</h4>
-          <span class="key-inline">F</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.modificacion">Modificación</span> <span class="vis-cmd" data-cmd="FILLET" data-cmd-es="EMPALME">FILLET</span></h4>
+          <span class="key-inline" data-keys="F" data-keys-es="EM">F</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.fillet.desc">Une dos líneas con un arco de radio definido. Con radio 0, une en esquina perfecta.</p>
@@ -551,8 +554,8 @@
       <!-- ====== MIRROR ====== -->
       <div class="diagram-card" id="vis-mirror" data-cat="modificacion" data-aos="fade-up">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Modificación</span> MIRROR</h4>
-          <span class="key-inline">MI</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.modificacion">Modificación</span> <span class="vis-cmd" data-cmd="MIRROR" data-cmd-es="ESPEJO">MIRROR</span></h4>
+          <span class="key-inline" data-keys="MI" data-keys-es="SI">MI</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.mirror.desc">Refleja objetos respecto a un eje simétrico definido por dos puntos.</p>
@@ -591,8 +594,8 @@
       <!-- ====== ARRAY ====== -->
       <div class="diagram-card" id="vis-array" data-cat="modificacion" data-aos="fade-up" data-aos-delay="60">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Modificación</span> ARRAY</h4>
-          <span class="key-inline">AR</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.modificacion">Modificación</span> <span class="vis-cmd" data-cmd="ARRAY" data-cmd-es="MATRIZ">ARRAY</span></h4>
+          <span class="key-inline" data-keys="AR" data-keys-es="MC">AR</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.array.desc">Repite objetos en filas y columnas, en círculo o a lo largo de una ruta.</p>
@@ -606,7 +609,7 @@
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
             <div class="diagram-step">
-              <span class="diagram-step-label">ARRAY 3×4</span>
+              <span class="diagram-step-label" data-cmd="ARRAY 3×4" data-cmd-es="MATRIZ 3×4">ARRAY 3×4</span>
               <svg viewBox="0 0 200 100">
                 <rect class="cad-fill" x="10" y="10" width="22" height="22" rx="2"/>
                 <rect class="cad-fill" x="42" y="10" width="22" height="22" rx="2"/>
@@ -631,8 +634,8 @@
       <!-- ====== OSNAP ====== -->
       <div class="diagram-card" id="vis-osnap" data-cat="precision" data-aos="fade-up">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Precisión</span> OSNAP</h4>
-          <span class="key-inline">F3</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.precision">Precisión</span> <span class="vis-cmd" data-cmd="OSNAP" data-cmd-es="REFERENCIA A OBJETOS">OSNAP</span></h4>
+          <span class="key-inline" data-keys="F3" data-keys-es="F3">F3</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.osnap.desc">Engancha el cursor a puntos exactos de los objetos: extremo, medio, centro, intersección.</p>
@@ -642,19 +645,19 @@
               <line class="cad-line" x1="20" y1="70" x2="280" y2="70"/>
               <!-- Puntos de snap -->
               <rect class="cad-point" x="16" y="66" width="8" height="8" rx="1"/>
-              <text class="cad-label-cmd" x="8" y="58">Extremo</text>
+              <text class="cad-label-cmd" x="8" y="58" data-i18n="vis.svg.2">Extremo</text>
               <rect class="cad-point-cyan" x="146" y="66" width="8" height="8" rx="1" transform="rotate(45,150,70)"/>
-              <text class="cad-label-cmd" x="130" y="58">Medio</text>
+              <text class="cad-label-cmd" x="130" y="58" data-i18n="vis.svg.3">Medio</text>
               <rect class="cad-point" x="276" y="66" width="8" height="8" rx="1"/>
-              <text class="cad-label-cmd" x="262" y="58">Extremo</text>
+              <text class="cad-label-cmd" x="262" y="58" data-i18n="vis.svg.2">Extremo</text>
               <!-- Círculo con snap centro -->
               <circle class="cad-circle" cx="220" cy="110" r="22"/>
               <rect class="cad-point-cyan" x="217" y="107" width="6" height="6" rx="1"/>
-              <text class="cad-label-cmd" x="207" y="143">Centro</text>
+              <text class="cad-label-cmd" x="207" y="143" data-i18n="vis.svg.4">Centro</text>
               <!-- Intersección -->
               <line class="cad-line" x1="60" y1="30" x2="120" y2="100"/>
               <rect class="cad-point" x="82" y="60" width="7" height="7" rx="1" transform="rotate(45,86,64)"/>
-              <text class="cad-label-cmd" x="90" y="68">Intersec.</text>
+              <text class="cad-label-cmd" x="90" y="68" data-i18n="vis.svg.5">Intersec.</text>
             </svg>
           </div>
           <div class="callout" style="margin-top:1rem">
@@ -667,8 +670,8 @@
       <!-- ====== LAYER ====== -->
       <div class="diagram-card" id="vis-layers" data-cat="capas" data-aos="fade-up" data-aos-delay="60">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Capas</span> LAYERS</h4>
-          <span class="key-inline">LA</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.capas">Capas</span> <span class="vis-cmd" data-cmd="LAYERS" data-cmd-es="CAPAS">LAYERS</span></h4>
+          <span class="key-inline" data-keys="LA" data-keys-es="CA">LA</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.layer.desc">Las capas son como acetatos transparentes: agrupan objetos por categoría y controlan color, visibilidad y grosor.</p>
@@ -677,17 +680,17 @@
               <!-- Capa de ejes -->
               <line class="cad-line-old" x1="30" y1="70" x2="270" y2="70" stroke="var(--layer-red)" stroke-dasharray="8,4"/>
               <line class="cad-line-old" x1="150" y1="10" x2="150" y2="130" stroke="var(--layer-red)" stroke-dasharray="8,4"/>
-              <text class="cad-label" x="15" y="18" style="fill:var(--layer-red)">Ejes</text>
+              <text class="cad-label" x="15" y="18" style="fill:var(--layer-red)" data-i18n="vis.svg.6">Ejes</text>
               <!-- Capa de muros -->
               <rect x="50" y="30" width="80" height="80" fill="none" stroke="var(--layer-yellow)" stroke-width="3" rx="2"/>
               <rect x="170" y="30" width="80" height="80" fill="none" stroke="var(--layer-yellow)" stroke-width="3" rx="2"/>
-              <text class="cad-label" x="65" y="22" style="fill:var(--layer-yellow)">Muros</text>
+              <text class="cad-label" x="65" y="22" style="fill:var(--layer-yellow)" data-i18n="vis.svg.7">Muros</text>
               <!-- Capa de cotas -->
               <line class="cad-dim" x1="50" y1="120" x2="130" y2="120" stroke="var(--layer-green)"/>
               <text class="cad-dim-text" x="75" y="135" style="fill:var(--layer-green)">8.00 m</text>
               <line class="cad-dim" x1="170" y1="120" x2="250" y2="120" stroke="var(--layer-green)"/>
               <text class="cad-dim-text" x="195" y="135" style="fill:var(--layer-green)">8.00 m</text>
-              <text class="cad-label" x="240" y="18" style="fill:var(--layer-green)">Cotas</text>
+              <text class="cad-label" x="240" y="18" style="fill:var(--layer-green)" data-i18n="vis.svg.8">Cotas</text>
             </svg>
           </div>
           <div class="callout" style="margin-top:1rem">
@@ -700,8 +703,8 @@
       <!-- ====== EXTRUDE (3D) ====== -->
       <div class="diagram-card" id="vis-extrude" data-cat="3d" data-aos="fade-up">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">3D</span> EXTRUDE</h4>
-          <span class="key-inline">EXT</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.3d">3D</span> <span class="vis-cmd" data-cmd="EXTRUDE" data-cmd-es="EXTRUIR">EXTRUDE</span></h4>
+          <span class="key-inline" data-keys="EXT" data-keys-es="EXT">EXT</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.extrude.desc">Empuja un perfil 2D cerrado en línea recta para crear un sólido tridimensional.</p>
@@ -726,7 +729,7 @@
                 <!-- Flecha de extrusión -->
                 <line class="cad-dim" x1="150" y1="80" x2="150" y2="30" stroke="var(--amber)"/>
                 <polygon class="cad-arrow" points="145,35 150,22 155,35"/>
-                <text class="cad-dim-text" x="158" y="55" style="fill:var(--amber)">altura</text>
+                <text class="cad-dim-text" x="158" y="55" style="fill:var(--amber)" data-i18n="vis.svg.9">altura</text>
               </svg>
             </div>
           </div>
@@ -740,8 +743,8 @@
       <!-- ====== UNION (3D) ====== -->
       <div class="diagram-card" id="vis-boolean" data-cat="3d" data-aos="fade-up" data-aos-delay="60">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">3D</span> UNION / SUBTRACT</h4>
-          <span class="key-inline">UNI / SU</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.3d">3D</span> <span class="vis-cmd" data-cmd="UNION / SUBTRACT" data-cmd-es="UNIÓN / RESTA">UNION / SUBTRACT</span></h4>
+          <span class="key-inline" data-keys="UNI / SU" data-keys-es="UNI / SU">UNI / SU</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.boolean.desc">Operaciones booleanas: fusionar (UNION) o restar (SUBTRACT) volúmenes de sólidos.</p>
@@ -757,7 +760,7 @@
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
             <div class="diagram-step">
-              <span class="diagram-step-label">UNION</span>
+              <span class="diagram-step-label" data-cmd="UNION" data-cmd-es="UNIÓN">UNION</span>
               <svg viewBox="0 0 200 100">
                 <path class="cad-fill-new" d="M20,25 H110 V75 H20 Z M112,22 A28,28 0 1,1 112,78 A28,28 0 1,1 112,22 Z" fill-rule="evenodd"/>
                 <text class="cad-label" x="65" y="55" data-i18n="vis.boolean.fused">un solo sólido</text>
@@ -774,7 +777,7 @@
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
             <div class="diagram-step">
-              <span class="diagram-step-label">SUBTRACT A-B</span>
+              <span class="diagram-step-label" data-cmd="SUBTRACT A-B" data-cmd-es="RESTA A-B">SUBTRACT A-B</span>
               <svg viewBox="0 0 200 100">
                 <path class="cad-fill" d="M20,25 H110 V75 H20 Z M140,50 m-28,0 a28,28 0 1,0 56,0 a28,28 0 1,0 -56,0" fill-rule="evenodd"/>
                 <text class="cad-label" x="50" y="55" data-i18n="vis.boolean.hole">A con hueco de B</text>
@@ -791,8 +794,8 @@
       <!-- ====== CHAMFER ====== -->
       <div class="diagram-card" id="vis-chamfer" data-cat="modificacion" data-aos="fade-up">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Modificación</span> CHAMFER</h4>
-          <span class="key-inline">CHA</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.modificacion">Modificación</span> <span class="vis-cmd" data-cmd="CHAMFER" data-cmd-es="CHAFLETE">CHAMFER</span></h4>
+          <span class="key-inline" data-keys="CHA" data-keys-es="CHA">CHA</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.chamfer.desc">Corta las esquinas de dos líneas con un ángulo recto (chaflán). A diferencia de FILLET, no usa arco.</p>
@@ -802,18 +805,18 @@
               <svg viewBox="0 0 200 100">
                 <line class="cad-line" x1="20" y1="50" x2="100" y2="50"/>
                 <line class="cad-line" x1="100" y1="10" x2="100" y2="90"/>
-                <text class="cad-label" x="108" y="50">esquina recta</text>
+                <text class="cad-label" x="108" y="50" data-i18n="vis.svg.10">esquina recta</text>
               </svg>
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
             <div class="diagram-step">
-              <span class="diagram-step-label">Chaflán 15</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.11">Chaflán 15</span>
               <svg viewBox="0 0 200 100">
                 <line class="cad-line" x1="20" y1="50" x2="85" y2="50"/>
                 <line class="cad-line" x1="100" y1="35" x2="100" y2="90"/>
                 <line class="cad-line" x1="85" y1="50" x2="100" y2="35" style="stroke:var(--amber);stroke-width:2.5"/>
                 <text class="cad-label" x="108" y="28" style="fill:var(--amber)">D=15</text>
-                <text class="cad-label" x="55" y="42" style="font-size:8px;fill:var(--layer-cyan)">corte recto</text>
+                <text class="cad-label" x="55" y="42" style="font-size:8px;fill:var(--layer-cyan)" data-i18n="vis.svg.12">corte recto</text>
               </svg>
             </div>
           </div>
@@ -827,8 +830,8 @@
       <!-- ====== EXTEND ====== -->
       <div class="diagram-card" id="vis-extend" data-cat="modificacion" data-aos="fade-up" data-aos-delay="60">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Modificación</span> EXTEND</h4>
-          <span class="key-inline">EX</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.modificacion">Modificación</span> <span class="vis-cmd" data-cmd="EXTEND" data-cmd-es="EXTENDER">EXTEND</span></h4>
+          <span class="key-inline" data-keys="EX" data-keys-es="AL">EX</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.extend.desc">Extiende un objeto hasta tocar un límite de referencia. Es lo opuesto a TRIM.</p>
@@ -838,8 +841,8 @@
               <svg viewBox="0 0 200 100">
                 <line class="cad-line" x1="20" y1="50" x2="80" y2="50"/>
                 <line class="cad-line" x1="140" y1="10" x2="140" y2="90"/>
-                <text class="cad-label" x="25" y="42" style="font-size:8px;fill:var(--layer-red)">corto</text>
-                <text class="cad-label" x="148" y="50" style="font-size:8px">límite</text>
+                <text class="cad-label" x="25" y="42" style="font-size:8px;fill:var(--layer-red)" data-i18n="vis.svg.13">corto</text>
+                <text class="cad-label" x="148" y="50" style="font-size:8px" data-i18n="vis.svg.14">límite</text>
               </svg>
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
@@ -849,7 +852,7 @@
                 <line class="cad-line" x1="20" y1="50" x2="140" y2="50"/>
                 <line class="cad-line" x1="140" y1="10" x2="140" y2="90"/>
                 <circle class="cad-point-cyan" cx="140" cy="50" r="3"/>
-                <text class="cad-label" x="55" y="42" style="font-size:8px;fill:var(--layer-green)">extendido hasta el límite</text>
+                <text class="cad-label" x="55" y="42" style="font-size:8px;fill:var(--layer-green)" data-i18n="vis.svg.15">extendido hasta el límite</text>
               </svg>
             </div>
           </div>
@@ -863,18 +866,18 @@
       <!-- ====== STRETCH ====== -->
       <div class="diagram-card" id="vis-stretch" data-cat="modificacion" data-aos="fade-up">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Modificación</span> STRETCH</h4>
-          <span class="key-inline">S</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.modificacion">Modificación</span> <span class="vis-cmd" data-cmd="STRETCH" data-cmd-es="ESTIRAR">STRETCH</span></h4>
+          <span class="key-inline" data-keys="S" data-keys-es="EI">S</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.stretch.desc">Estira o comprime objetos moviendo vértices dentro de una selección cruzada.</p>
           <div class="diagram-steps">
             <div class="diagram-step">
-              <span class="diagram-step-label">Selección cruzada</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.16">Selección cruzada</span>
               <svg viewBox="0 0 200 100">
                 <rect class="cad-fill" x="20" y="25" width="100" height="50" rx="2"/>
                 <rect x="50" y="10" width="75" height="80" fill="var(--layer-red)" fill-opacity="0.12" stroke="var(--layer-red)" stroke-dasharray="4,3" rx="1"/>
-                <text class="cad-label" x="55" y="95" style="font-size:8px;fill:var(--layer-red)">dentro se mueve</text>
+                <text class="cad-label" x="55" y="95" style="font-size:8px;fill:var(--layer-red)" data-i18n="vis.svg.17">dentro se mueve</text>
               </svg>
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
@@ -882,9 +885,9 @@
               <span class="diagram-step-label" data-i18n="vis.step.result">Resultado</span>
               <svg viewBox="0 0 200 100">
                 <rect class="cad-fill" x="20" y="25" width="160" height="50" rx="2"/>
-                <text class="cad-label" x="65" y="55" style="font-size:8px">estirado 60 unidades</text>
+                <text class="cad-label" x="65" y="55" style="font-size:8px" data-i18n="vis.svg.18">estirado 60 unidades</text>
                 <rect x="20" y="25" width="100" height="50" fill="none" stroke="var(--border-soft)" stroke-dasharray="3,2" rx="2"/>
-                <text class="cad-label" x="25" y="20" style="font-size:7px;fill:var(--text-muted)">posición original</text>
+                <text class="cad-label" x="25" y="20" style="font-size:7px;fill:var(--text-muted)" data-i18n="vis.svg.19">posición original</text>
               </svg>
             </div>
           </div>
@@ -898,31 +901,31 @@
       <!-- ====== CIRCLE ====== -->
       <div class="diagram-card" id="vis-circle" data-cat="dibujo" data-aos="fade-up" data-aos-delay="60">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Dibujo</span> CIRCLE</h4>
-          <span class="key-inline">C</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.dibujo">Dibujo</span> <span class="vis-cmd" data-cmd="CIRCLE" data-cmd-es="CÍRCULO">CIRCLE</span></h4>
+          <span class="key-inline" data-keys="C" data-keys-es="C">C</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.circle.desc">Dibuja un círculo por centro y radio, por diámetro, o por tres puntos.</p>
           <div class="diagram-canvas">
             <svg viewBox="0 0 300 120">
-              <text class="cad-label-cmd" x="5" y="16" style="font-size:9px">3 métodos principales:</text>
+              <text class="cad-label-cmd" x="5" y="16" style="font-size:9px" data-i18n="vis.svg.20">3 métodos principales:</text>
               <circle class="cad-point" cx="50" cy="70" r="4"/>
               <circle class="cad-circle" cx="50" cy="70" r="30"/>
               <line class="cad-dim" x1="50" y1="70" x2="80" y2="70"/>
               <text class="cad-dim-text" x="55" y="63" style="font-size:9px">R=30</text>
-              <text class="cad-label-cmd" x="20" y="115" style="font-size:8px">Centro+Radio</text>
+              <text class="cad-label-cmd" x="20" y="115" style="font-size:8px" data-i18n="vis.svg.21">Centro+Radio</text>
 
               <circle class="cad-point" cx="155" cy="70" r="4"/>
               <circle class="cad-circle" cx="155" cy="70" r="28"/>
               <line class="cad-dim" x1="127" y1="70" x2="183" y2="70"/>
               <text class="cad-dim-text" x="132" y="63" style="font-size:9px">D=56</text>
-              <text class="cad-label-cmd" x="125" y="115" style="font-size:8px">Centro+Diámetro</text>
+              <text class="cad-label-cmd" x="125" y="115" style="font-size:8px" data-i18n="vis.svg.22">Centro+Diámetro</text>
 
               <circle class="cad-point" cx="235" cy="35" r="3"/>
               <circle class="cad-point" cx="268" cy="70" r="3"/>
               <circle class="cad-point" cx="240" cy="105" r="3"/>
               <circle cx="252" cy="70" r="32" fill="none" stroke="var(--layer-cyan)" stroke-dasharray="4,3"/>
-              <text class="cad-label-cmd" x="220" y="115" style="font-size:8px">3 Puntos</text>
+              <text class="cad-label-cmd" x="220" y="115" style="font-size:8px" data-i18n="vis.svg.23">3 Puntos</text>
             </svg>
           </div>
           <div class="callout" style="margin-top:1rem">
@@ -935,28 +938,28 @@
       <!-- ====== RECTANGLE ====== -->
       <div class="diagram-card" id="vis-rectangle" data-cat="dibujo" data-aos="fade-up">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Dibujo</span> RECTANGLE</h4>
-          <span class="key-inline">REC</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.dibujo">Dibujo</span> <span class="vis-cmd" data-cmd="RECTANGLE" data-cmd-es="RECTÁNGULO">RECTANGLE</span></h4>
+          <span class="key-inline" data-keys="REC" data-keys-es="REC">REC</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.rect.desc">Dibuja un rectángulo a partir de dos esquinas opuestas. Opciones: esquina, centro, área.</p>
           <div class="diagram-steps">
             <div class="diagram-step">
-              <span class="diagram-step-label">Punto 1</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.24">Punto 1</span>
               <svg viewBox="0 0 200 100">
                 <circle class="cad-point" cx="20" cy="70" r="4"/>
-                <text class="cad-label" x="8" y="90">esquina A</text>
+                <text class="cad-label" x="8" y="90" data-i18n="vis.svg.25">esquina A</text>
               </svg>
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
             <div class="diagram-step">
-              <span class="diagram-step-label">Punto 2</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.26">Punto 2</span>
               <svg viewBox="0 0 200 100">
                 <circle class="cad-point" cx="20" cy="70" r="4"/>
                 <rect class="cad-fill" x="20" y="20" width="160" height="50" rx="2"/>
                 <circle class="cad-point-cyan" cx="180" cy="20" r="4"/>
                 <text class="cad-label" x="60" y="50" style="font-size:9px">@120,50</text>
-                <text class="cad-label" x="125" y="15" style="font-size:8px;fill:var(--layer-cyan)">esquina B</text>
+                <text class="cad-label" x="125" y="15" style="font-size:8px;fill:var(--layer-cyan)" data-i18n="vis.svg.27">esquina B</text>
               </svg>
             </div>
           </div>
@@ -970,23 +973,23 @@
       <!-- ====== HATCH ====== -->
       <div class="diagram-card" id="vis-hatch" data-cat="dibujo" data-aos="fade-up" data-aos-delay="60">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Dibujo</span> HATCH</h4>
-          <span class="key-inline">H</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.dibujo">Dibujo</span> <span class="vis-cmd" data-cmd="HATCH" data-cmd-es="SOMBREADO">HATCH</span></h4>
+          <span class="key-inline" data-keys="H" data-keys-es="SB">H</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.hatch.desc">Rellena un área cerrada con un patrón visual: sólido, rayado, puntos, materiales.</p>
           <div class="diagram-canvas">
             <svg viewBox="0 0 300 110">
-              <text class="cad-label-cmd" x="5" y="16" style="font-size:9px">Patrones comunes de sombreado:</text>
+              <text class="cad-label-cmd" x="5" y="16" style="font-size:9px" data-i18n="vis.svg.28">Patrones comunes de sombreado:</text>
               <rect x="5" y="24" width="60" height="50" fill="var(--layer-yellow)" fill-opacity="0.3" stroke="var(--layer-yellow)" rx="2"/>
-              <text class="cad-label" x="12" y="55" style="font-size:9px;fill:var(--layer-yellow)">SÓLIDO</text>
+              <text class="cad-label" x="12" y="55" style="font-size:9px;fill:var(--layer-yellow)" data-i18n="vis.svg.29">SÓLIDO</text>
               <rect x="75" y="24" width="60" height="50" fill="url(#egHatchDiag)" stroke="var(--border-soft)" rx="2"/>
               <text class="cad-label" x="80" y="90" style="font-size:8px">ANSI31</text>
               <rect x="145" y="24" width="60" height="50" fill="url(#egHatchBrick)" stroke="var(--border-soft)" rx="2"/>
-              <text class="cad-label" x="148" y="90" style="font-size:8px">LADRILLO</text>
+              <text class="cad-label" x="148" y="90" style="font-size:8px" data-i18n="vis.svg.30">LADRILLO</text>
               <rect x="215" y="24" width="60" height="50" fill="url(#egHatchDot)" stroke="var(--border-soft)" rx="2"/>
-              <text class="cad-label" x="228" y="90" style="font-size:8px">PUNTOS</text>
-              <text class="cad-label" x="5" y="108" style="font-size:8px">Cada patrón indica un material: concreto, tierra, acero, aislamiento...</text>
+              <text class="cad-label" x="228" y="90" style="font-size:8px" data-i18n="vis.svg.31">PUNTOS</text>
+              <text class="cad-label" x="5" y="108" style="font-size:8px" data-i18n="vis.svg.32">Cada patrón indica un material: concreto, tierra, acero, aislamiento...</text>
               <defs>
                 <pattern id="egHatchDiag" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
                   <line x1="0" y1="0" x2="0" y2="8" stroke="var(--text-muted)" stroke-width="0.8"/>
@@ -1013,32 +1016,32 @@
       <!-- ====== MOVE / COPY ====== -->
       <div class="diagram-card" id="vis-movecopy" data-cat="modificacion" data-aos="fade-up">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Modificación</span> MOVE / COPY</h4>
-          <span class="key-inline">M / CO</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.modificacion">Modificación</span> <span class="vis-cmd" data-cmd="MOVE / COPY" data-cmd-es="DESPLAZAR / COPIAR">MOVE / COPY</span></h4>
+          <span class="key-inline" data-keys="M / CO" data-keys-es="D / CP">M / CO</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.move.desc">Traslada objetos de un punto base a un destino. COPY crea copias sin eliminar el original.</p>
           <div class="diagram-steps">
             <div class="diagram-step">
-              <span class="diagram-step-label">Original</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.33">Original</span>
               <svg viewBox="0 0 200 80">
                 <rect class="cad-fill" x="15" y="20" width="55" height="35" rx="2"/>
                 <circle class="cad-point" cx="15" cy="20" r="3"/>
-                <text class="cad-label" x="22" y="42" style="font-size:8px">base</text>
+                <text class="cad-label" x="22" y="42" style="font-size:8px" data-i18n="vis.svg.34">base</text>
                 <line class="cad-dim" x1="70" y1="37" x2="120" y2="37" stroke="var(--amber)"/>
                 <polygon class="cad-arrow" points="115,34 125,37 115,40" style="fill:var(--amber)"/>
                 <circle class="cad-point-cyan" cx="120" cy="37" r="3"/>
-                <text class="cad-label" x="125" y="30" style="font-size:8px;fill:var(--layer-cyan)">destino</text>
+                <text class="cad-label" x="125" y="30" style="font-size:8px;fill:var(--layer-cyan)" data-i18n="vis.svg.35">destino</text>
               </svg>
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
             <div class="diagram-step">
-              <span class="diagram-step-label">Resultado</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.36">Resultado</span>
               <svg viewBox="0 0 200 80">
                 <rect class="cad-fill" x="120" y="20" width="55" height="35" rx="2"/>
-                <text class="cad-label" x="130" y="42" style="font-size:8px">movido</text>
+                <text class="cad-label" x="130" y="42" style="font-size:8px" data-i18n="vis.svg.37">movido</text>
                 <rect x="15" y="20" width="55" height="35" fill="none" stroke="var(--border-soft)" stroke-dasharray="3,2" rx="2"/>
-                <text class="cad-label" x="18" y="42" style="font-size:8px;fill:var(--text-muted)">antes</text>
+                <text class="cad-label" x="18" y="42" style="font-size:8px;fill:var(--text-muted)" data-i18n="vis.svg.38">antes</text>
               </svg>
             </div>
           </div>
@@ -1052,23 +1055,23 @@
       <!-- ====== ROTATE ====== -->
       <div class="diagram-card" id="vis-rotate" data-cat="modificacion" data-aos="fade-up" data-aos-delay="60">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Modificación</span> ROTATE</h4>
-          <span class="key-inline">RO</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.modificacion">Modificación</span> <span class="vis-cmd" data-cmd="ROTATE" data-cmd-es="ROTAR">ROTATE</span></h4>
+          <span class="key-inline" data-keys="RO" data-keys-es="GI">RO</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.rotate.desc">Gira objetos un ángulo definido respecto a un punto base.</p>
           <div class="diagram-steps">
             <div class="diagram-step">
-              <span class="diagram-step-label">Original</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.33">Original</span>
               <svg viewBox="0 0 200 100">
                 <rect class="cad-fill" x="20" y="30" width="80" height="40" rx="2"/>
                 <circle class="cad-point" cx="20" cy="70" r="4"/>
-                <text class="cad-label" x="5" y="90">punto base</text>
+                <text class="cad-label" x="5" y="90" data-i18n="vis.svg.39">punto base</text>
               </svg>
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
             <div class="diagram-step">
-              <span class="diagram-step-label">Rotar 30°</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.40">Rotar 30°</span>
               <svg viewBox="0 0 200 100">
                 <rect x="20" y="30" width="80" height="40" fill="none" stroke="var(--border-soft)" stroke-dasharray="3,2" rx="2"/>
                 <rect class="cad-fill" x="20" y="30" width="80" height="40" rx="2" transform="rotate(-30,20,70)" style="opacity:0.85"/>
@@ -1088,30 +1091,30 @@
       <!-- ====== ORTO (F8) ====== -->
       <div class="diagram-card" data-cat="precision" data-aos="fade-up">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Precisión</span> <span data-i18n="vis.orto.title">Modo ORTO (F8)</span></h4>
-          <span class="key-inline">F8</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.precision">Precisión</span> <span data-i18n="vis.orto.title">Modo ORTO (F8)</span></h4>
+          <span class="key-inline" data-keys="F8" data-keys-es="F8">F8</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.orto.desc">Restringe el cursor a movimientos perfectamente horizontales o verticales.</p>
           <div class="diagram-steps">
             <div class="diagram-step">
-              <span class="diagram-step-label">Sin ORTO</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.41">Sin ORTO</span>
               <svg viewBox="0 0 200 100">
                 <path d="M25,70 L90,40" class="cad-line-old"/>
                 <path d="M25,70 L120,55" class="cad-line-old"/>
                 <path d="M25,70 L150,80" class="cad-line-old"/>
-                <text class="cad-label" x="18" y="90">líneas torcidas</text>
+                <text class="cad-label" x="18" y="90" data-i18n="vis.svg.42">líneas torcidas</text>
               </svg>
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
             <div class="diagram-step">
-              <span class="diagram-step-label">Con ORTO</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.43">Con ORTO</span>
               <svg viewBox="0 0 200 100">
                 <line class="cad-line" x1="20" y1="70" x2="120" y2="70"/>
                 <line class="cad-line" x1="120" y1="70" x2="120" y2="25"/>
                 <line class="cad-line" x1="120" y1="70" x2="180" y2="70"/>
                 <circle class="cad-point-cyan" cx="120" cy="70" r="4"/>
-                <text class="cad-label" x="22" y="92">ángulos de 90° exactos</text>
+                <text class="cad-label" x="22" y="92" data-i18n="vis.svg.44">ángulos de 90° exactos</text>
               </svg>
             </div>
           </div>
@@ -1125,8 +1128,8 @@
       <!-- ====== GRID / SNAP ====== -->
       <div class="diagram-card" data-cat="precision" data-aos="fade-up" data-aos-delay="60">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Precisión</span> <span data-i18n="vis.snap.title">Cuadrícula y SNAP</span></h4>
-          <span class="key-inline">F7 / F9</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.precision">Precisión</span> <span data-i18n="vis.snap.title">Cuadrícula y SNAP</span></h4>
+          <span class="key-inline" data-keys="F7 / F9" data-keys-es="F7 / F9">F7 / F9</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.snap.desc">La cuadrícula visual ayuda a orientar el dibujo. SNAP engancha el cursor a los puntos de la cuadrícula.</p>
@@ -1140,9 +1143,9 @@
               <rect width="300" height="140" fill="url(#visGridSnapPat)"/>
               <path d="M60,42 L60,32 M60,82 L60,92 M42,60 L32,60 M82,60 L92,60" stroke="var(--cyan)" stroke-width="1.2"/>
               <circle class="cad-point-cyan" cx="60" cy="60" r="5"/>
-              <text class="cad-label-cmd" x="45" y="112">SNAP: salta a la intersección</text>
+              <text class="cad-label-cmd" x="45" y="112" data-i18n="vis.svg.45">SNAP: salta a la intersección</text>
               <circle class="cad-point" cx="180" cy="60" r="4" opacity="0.35"/>
-              <text class="cad-label" x="140" y="52" style="font-size:8px">cursor libre (GRID)</text>
+              <text class="cad-label" x="140" y="52" style="font-size:8px" data-i18n="vis.svg.46">cursor libre (GRID)</text>
             </svg>
           </div>
           <div class="callout" style="margin-top:1rem">
@@ -1155,8 +1158,8 @@
       <!-- ====== DIM (Acotación) ====== -->
       <div class="diagram-card" id="vis-dim" data-cat="precision" data-aos="fade-up">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Precisión</span> DIM</h4>
-          <span class="key-inline">DIM</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.precision">Precisión</span> <span class="vis-cmd" data-cmd="DIM" data-cmd-es="ACOTA">DIM</span></h4>
+          <span class="key-inline" data-keys="DIM" data-keys-es="DIM">DIM</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.dim.desc">Crea cotas que miden y documentan distancias, ángulos y radios en el plano.</p>
@@ -1186,14 +1189,14 @@
       <!-- ====== POLYGON ====== -->
       <div class="diagram-card" id="vis-polygon" data-cat="dibujo" data-aos="fade-up" data-aos-delay="60">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Dibujo</span> POLYGON</h4>
-          <span class="key-inline">POL</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.dibujo">Dibujo</span> <span class="vis-cmd" data-cmd="POLYGON" data-cmd-es="POLÍGONO">POLYGON</span></h4>
+          <span class="key-inline" data-keys="POL" data-keys-es="POL">POL</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.polygon.desc">Dibuja un polígono regular inscrito o circunscrito a un círculo.</p>
           <div class="diagram-steps">
             <div class="diagram-step">
-              <span class="diagram-step-label">Círculo guía</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.47">Círculo guía</span>
               <svg viewBox="0 0 200 100">
                 <circle cx="100" cy="55" r="42" fill="none" stroke="var(--layer-blue)" stroke-width="1.5" stroke-dasharray="5,3"/>
                 <line class="cad-dim" x1="100" y1="55" x2="142" y2="55"/>
@@ -1203,11 +1206,11 @@
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
             <div class="diagram-step">
-              <span class="diagram-step-label">Hexágono inscrito</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.48">Hexágono inscrito</span>
               <svg viewBox="0 0 200 100">
                 <circle cx="100" cy="55" r="42" fill="none" stroke="var(--layer-blue)" stroke-width="1" stroke-dasharray="5,3" opacity="0.35"/>
                 <polygon class="cad-fill-new" points="100,13 136.4,34 136.4,76 100,97 63.6,76 63.6,34"/>
-                <text class="cad-label" x="82" y="82">6 lados</text>
+                <text class="cad-label" x="82" y="82" data-i18n="vis.svg.49">6 lados</text>
               </svg>
             </div>
           </div>
@@ -1221,14 +1224,14 @@
       <!-- ====== ARC ====== -->
       <div class="diagram-card" id="vis-arc" data-cat="dibujo" data-aos="fade-up">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Dibujo</span> ARC</h4>
-          <span class="key-inline">A</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.dibujo">Dibujo</span> <span class="vis-cmd" data-cmd="ARC" data-cmd-es="ARCO">ARC</span></h4>
+          <span class="key-inline" data-keys="A" data-keys-es="A">A</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.arc.desc">Dibuja un arco por 3 puntos, por centro-inicio-fin o por radio.</p>
           <div class="diagram-steps">
             <div class="diagram-step">
-              <span class="diagram-step-label">3 puntos</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.50">3 puntos</span>
               <svg viewBox="0 0 200 100">
                 <circle class="cad-point" cx="30" cy="80" r="4"/>
                 <circle class="cad-point" cx="100" cy="28" r="4"/>
@@ -1240,7 +1243,7 @@
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
             <div class="diagram-step">
-              <span class="diagram-step-label">Resultado</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.36">Resultado</span>
               <svg viewBox="0 0 200 100">
                 <path class="cad-arc" d="M30,80 Q65,28 100,28 Q135,28 170,70"/>
                 <circle class="cad-point" cx="30" cy="80" r="4"/>
@@ -1261,23 +1264,23 @@
       <!-- ====== SCALE ====== -->
       <div class="diagram-card" id="vis-scale" data-cat="modificacion" data-aos="fade-up" data-aos-delay="60">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Modificación</span> SCALE</h4>
-          <span class="key-inline">SC</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.modificacion">Modificación</span> <span class="vis-cmd" data-cmd="SCALE" data-cmd-es="ESCALAR">SCALE</span></h4>
+          <span class="key-inline" data-keys="SC" data-keys-es="ESC">SC</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.scale.desc">Aumenta o reduce objetos respecto a un punto base sin cambiar su forma.</p>
           <div class="diagram-steps">
             <div class="diagram-step">
-              <span class="diagram-step-label">Original</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.33">Original</span>
               <svg viewBox="0 0 200 100">
                 <rect class="cad-fill" x="40" y="30" width="40" height="40" rx="2"/>
                 <circle class="cad-point" cx="40" cy="70" r="4"/>
-                <text class="cad-label" x="28" y="90">base</text>
+                <text class="cad-label" x="28" y="90" data-i18n="vis.svg.34">base</text>
               </svg>
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
             <div class="diagram-step">
-              <span class="diagram-step-label">Escala ×2</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.51">Escala ×2</span>
               <svg viewBox="0 0 200 100">
                 <rect class="cad-fill" x="40" y="10" width="80" height="80" rx="2" opacity="0.85"/>
                 <rect x="40" y="30" width="40" height="40" fill="none" stroke="var(--border-soft)" stroke-dasharray="3,2" rx="2"/>
@@ -1296,28 +1299,28 @@
       <!-- ====== EXPLODE ====== -->
       <div class="diagram-card" id="vis-explode" data-cat="modificacion" data-aos="fade-up">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Modificación</span> EXPLODE</h4>
-          <span class="key-inline">X</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.modificacion">Modificación</span> <span class="vis-cmd" data-cmd="EXPLODE" data-cmd-es="DESCOMPONER">EXPLODE</span></h4>
+          <span class="key-inline" data-keys="X" data-keys-es="DP">X</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.explode.desc">Descompone bloques, polilíneas o arrays en sus objetos individuales.</p>
           <div class="diagram-steps">
             <div class="diagram-step">
-              <span class="diagram-step-label">Bloque</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.52">Bloque</span>
               <svg viewBox="0 0 200 100">
                 <rect class="cad-fill" x="40" y="30" width="55" height="40" rx="2"/>
                 <circle class="cad-fill" cx="110" cy="50" r="13"/>
-                <text class="cad-label" x="55" y="90">1 bloque</text>
+                <text class="cad-label" x="55" y="90" data-i18n="vis.svg.53">1 bloque</text>
               </svg>
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
             <div class="diagram-step">
-              <span class="diagram-step-label">Descompuesto</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.54">Descompuesto</span>
               <svg viewBox="0 0 200 100">
                 <rect x="25" y="20" width="40" height="26" fill="none" stroke="var(--layer-cyan)" stroke-width="1.5"/>
                 <rect x="78" y="45" width="40" height="26" fill="none" stroke="var(--layer-cyan)" stroke-width="1.5"/>
                 <circle cx="135" cy="28" r="12" fill="none" stroke="var(--layer-cyan)" stroke-width="1.5"/>
-                <text class="cad-label" x="115" y="85" style="font-size:8px;fill:var(--layer-green)">3 objetos sueltos</text>
+                <text class="cad-label" x="115" y="85" style="font-size:8px;fill:var(--layer-green)" data-i18n="vis.svg.55">3 objetos sueltos</text>
               </svg>
             </div>
           </div>
@@ -1331,28 +1334,28 @@
       <!-- ====== JOIN ====== -->
       <div class="diagram-card" id="vis-join" data-cat="modificacion" data-aos="fade-up" data-aos-delay="60">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Modificación</span> JOIN</h4>
-          <span class="key-inline">J</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.modificacion">Modificación</span> <span class="vis-cmd" data-cmd="JOIN" data-cmd-es="UNIR">JOIN</span></h4>
+          <span class="key-inline" data-keys="J" data-keys-es="J">J</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.join.desc">Une líneas, arcos o polilíneas contiguos en un solo objeto.</p>
           <div class="diagram-steps">
             <div class="diagram-step">
-              <span class="diagram-step-label">Dos líneas</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.56">Dos líneas</span>
               <svg viewBox="0 0 200 100">
                 <line class="cad-line" x1="25" y1="60" x2="95" y2="60"/>
                 <line class="cad-line" x1="105" y1="60" x2="160" y2="60"/>
                 <circle class="cad-point" cx="95" cy="60" r="4"/>
-                <text class="cad-label" x="55" y="45">2 objetos</text>
+                <text class="cad-label" x="55" y="45" data-i18n="vis.svg.57">2 objetos</text>
               </svg>
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
             <div class="diagram-step">
-              <span class="diagram-step-label">Polilínea</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.58">Polilínea</span>
               <svg viewBox="0 0 200 100">
                 <line class="cad-line" x1="25" y1="60" x2="160" y2="60"/>
                 <circle class="cad-point-cyan" cx="95" cy="60" r="4"/>
-                <text class="cad-label" x="52" y="45" style="fill:var(--layer-green)">1 polilínea</text>
+                <text class="cad-label" x="52" y="45" style="fill:var(--layer-green)" data-i18n="vis.svg.59">1 polilínea</text>
               </svg>
             </div>
           </div>
@@ -1366,29 +1369,29 @@
       <!-- ====== BOX (3D) ====== -->
       <div class="diagram-card" id="vis-box" data-cat="3d" data-aos="fade-up">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">3D</span> BOX</h4>
-          <span class="key-inline">BOX</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.3d">3D</span> <span class="vis-cmd" data-cmd="BOX" data-cmd-es="CAJA">BOX</span></h4>
+          <span class="key-inline" data-keys="BOX" data-keys-es="BOX">BOX</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.box.desc">Crea un sólido rectangular primitivo definido por largo, ancho y alto.</p>
           <div class="diagram-steps">
             <div class="diagram-step">
-              <span class="diagram-step-label">Base 2D</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.60">Base 2D</span>
               <svg viewBox="0 0 200 100">
                 <rect class="cad-fill" x="40" y="35" width="100" height="40" rx="2"/>
-                <text class="cad-label" x="60" y="60">largo × ancho</text>
+                <text class="cad-label" x="60" y="60" data-i18n="vis.svg.61">largo × ancho</text>
               </svg>
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
             <div class="diagram-step">
-              <span class="diagram-step-label">Sólido</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.62">Sólido</span>
               <svg viewBox="0 0 200 120">
                 <rect class="cad-fill" x="30" y="55" width="90" height="45" rx="2"/>
                 <polygon class="cad-fill" points="30,55 55,25 145,25 120,55" style="fill:rgba(53,214,203,.25);stroke:var(--layer-cyan);stroke-width:1.5"/>
                 <polygon class="cad-fill" points="120,55 145,25 145,70 120,100" style="fill:rgba(53,214,203,.15);stroke:var(--layer-cyan);stroke-width:1.5"/>
                 <line class="cad-dim" x1="165" y1="82" x2="165" y2="30" stroke="var(--amber)"/>
                 <polygon class="cad-arrow" points="160,35 165,22 170,35"/>
-                <text class="cad-dim-text" x="172" y="57" style="fill:var(--amber)">altura</text>
+                <text class="cad-dim-text" x="172" y="57" style="fill:var(--amber)" data-i18n="vis.svg.9">altura</text>
               </svg>
             </div>
           </div>
@@ -1402,29 +1405,29 @@
       <!-- ====== SWEEP (3D) ====== -->
       <div class="diagram-card" id="vis-sweep" data-cat="3d" data-aos="fade-up" data-aos-delay="60">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">3D</span> SWEEP</h4>
-          <span class="key-inline">SWEEP</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.3d">3D</span> <span class="vis-cmd" data-cmd="SWEEP" data-cmd-es="BARRIDO">SWEEP</span></h4>
+          <span class="key-inline" data-keys="SWEEP" data-keys-es="SWEEP">SWEEP</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.sweep.desc">Desplaza un perfil 2D a lo largo de una trayectoria curva para crear un sólido.</p>
           <div class="diagram-steps">
             <div class="diagram-step">
-              <span class="diagram-step-label">Perfil + ruta</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.63">Perfil + ruta</span>
               <svg viewBox="0 0 200 100">
                 <circle class="cad-fill" cx="28" cy="75" r="13"/>
-                <text class="cad-label" x="10" y="55">perfil</text>
+                <text class="cad-label" x="10" y="55" data-i18n="vis.svg.64">perfil</text>
                 <path class="cad-line-dim" d="M60,75 C100,20 160,110 192,45"/>
-                <text class="cad-label" x="148" y="98">ruta</text>
+                <text class="cad-label" x="148" y="98" data-i18n="vis.svg.65">ruta</text>
               </svg>
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
             <div class="diagram-step">
-              <span class="diagram-step-label">Tubo</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.66">Tubo</span>
               <svg viewBox="0 0 200 100">
                 <path d="M60,75 C100,20 160,110 192,45" fill="none" stroke="var(--layer-cyan)" stroke-width="9" opacity="0.3"/>
                 <path d="M60,75 C100,20 160,110 192,45" fill="none" stroke="var(--layer-cyan)" stroke-width="1.5" stroke-dasharray="4,3"/>
                 <circle class="cad-fill" cx="60" cy="75" r="8"/>
-                <text class="cad-label" x="128" y="92">sección constante</text>
+                <text class="cad-label" x="128" y="92" data-i18n="vis.svg.67">sección constante</text>
               </svg>
             </div>
           </div>
@@ -1438,8 +1441,8 @@
       <!-- ====== ORBIT (3D) ====== -->
       <div class="diagram-card" id="vis-orbit" data-cat="3d" data-aos="fade-up">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">3D</span> ORBIT</h4>
-          <span class="key-inline">ORBIT</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.3d">3D</span> <span class="vis-cmd" data-cmd="ORBIT" data-cmd-es="3DORBITA">ORBIT</span></h4>
+          <span class="key-inline" data-keys="ORBIT" data-keys-es="ORBIT">ORBIT</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.orbit.desc">Navega libremente alrededor del modelo 3D para verlo desde cualquier ángulo.</p>
@@ -1450,7 +1453,7 @@
               <polygon class="cad-fill" points="160,55 185,25 185,70 160,100" style="fill:rgba(53,214,203,.15);stroke:var(--layer-cyan);stroke-width:1.5"/>
               <ellipse cx="160" cy="60" rx="82" ry="40" fill="none" stroke="var(--amber)" stroke-width="1.5" stroke-dasharray="6,4"/>
               <polygon class="cad-arrow" points="230,32 238,20 222,22"/>
-              <text class="cad-label" x="205" y="20" style="fill:var(--amber)">órbita libre</text>
+              <text class="cad-label" x="205" y="20" style="fill:var(--amber)" data-i18n="vis.svg.68">órbita libre</text>
             </svg>
           </div>
           <div class="callout" style="margin-top:1rem">
@@ -1463,20 +1466,20 @@
       <!-- ====== XREF ====== -->
       <div class="diagram-card" id="vis-xref" data-cat="capas" data-aos="fade-up" data-aos-delay="60">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Capas</span> <span data-i18n="vis.xref.title">Referencias externas (Xref)</span></h4>
-          <span class="key-inline">XREF</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.capas">Capas</span> <span data-i18n="vis.xref.title">Referencias externas (Xref)</span></h4>
+          <span class="key-inline" data-keys="XREF" data-keys-es="XREF">XREF</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.xref.desc">Vincula archivos DWG externos como referencias. Se actualizan automáticamente cuando el archivo original cambia.</p>
           <div class="diagram-canvas">
             <svg viewBox="0 0 300 140">
               <rect x="25" y="35" width="150" height="75" fill="none" stroke="var(--layer-cyan)" stroke-width="1.5" rx="3"/>
-              <text class="cad-label-cmd" x="38" y="78">Plano principal (local)</text>
+              <text class="cad-label-cmd" x="38" y="78" data-i18n="vis.svg.69">Plano principal (local)</text>
               <rect x="205" y="45" width="70" height="50" fill="var(--layer-blue)" opacity="0.15" stroke="var(--layer-blue)" stroke-width="1.5" rx="3"/>
               <text class="cad-label" x="214" y="63" style="font-size:8px">A-01.dwg</text>
-              <text class="cad-label" x="216" y="80" style="font-size:8px">(externo)</text>
+              <text class="cad-label" x="216" y="80" style="font-size:8px" data-i18n="vis.svg.70">(externo)</text>
               <path d="M175,60 L205,60" stroke="var(--amber)" stroke-width="2" stroke-dasharray="4,3"/>
-              <text class="cad-label" x="90" y="122" style="font-size:8px;fill:var(--amber)">Xref vinculado</text>
+              <text class="cad-label" x="90" y="122" style="font-size:8px;fill:var(--amber)" data-i18n="vis.svg.71">Xref vinculado</text>
             </svg>
           </div>
           <div class="callout" style="margin-top:1rem">
@@ -1489,33 +1492,33 @@
       <!-- ====== PURGE / AUDIT ====== -->
       <div class="diagram-card" id="vis-purge" data-cat="modificacion" data-aos="fade-up">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Modificación</span> <span data-i18n="vis.purge.title">PURGE y AUDIT</span></h4>
-          <span class="key-inline">PU / AUDIT</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.modificacion">Modificación</span> <span data-i18n="vis.purge.title">PURGE y AUDIT</span></h4>
+          <span class="key-inline" data-keys="PU / AUDIT" data-keys-es="PU / AUDIT">PU / AUDIT</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.purge.desc">PURGE elimina capas, bloques y estilos no usados. AUDIT corrige errores internos del DWG.</p>
           <div class="diagram-steps">
             <div class="diagram-step">
-              <span class="diagram-step-label">Antes</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.72">Antes</span>
               <svg viewBox="0 0 200 100">
                 <rect class="cad-trim-zone" x="15" y="10" width="170" height="18" rx="2"/>
                 <text class="cad-label" x="22" y="23" style="font-size:8px">Bloque_mesa_antiguo</text>
                 <rect class="cad-trim-zone" x="15" y="32" width="170" height="18" rx="2"/>
-                <text class="cad-label" x="22" y="45" style="font-size:8px">Capa "prueba"</text>
+                <text class="cad-label" x="22" y="45" style="font-size:8px" data-i18n="vis.svg.73">Capa "prueba"</text>
                 <rect class="cad-fill" x="15" y="54" width="170" height="18" rx="2"/>
-                <text class="cad-label" x="22" y="67" style="font-size:8px">Capas y bloques usados...</text>
-                <text class="cad-label" x="35" y="92" style="font-size:8px;fill:var(--layer-red)">archivo pesado y sucio</text>
+                <text class="cad-label" x="22" y="67" style="font-size:8px" data-i18n="vis.svg.74">Capas y bloques usados...</text>
+                <text class="cad-label" x="35" y="92" style="font-size:8px;fill:var(--layer-red)" data-i18n="vis.svg.75">archivo pesado y sucio</text>
               </svg>
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
             <div class="diagram-step">
-              <span class="diagram-step-label">Después</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.76">Después</span>
               <svg viewBox="0 0 200 100">
                 <rect class="cad-fill-new" x="15" y="10" width="170" height="18" rx="2"/>
-                <text class="cad-label" x="22" y="23" style="font-size:8px;fill:var(--layer-green)">Solo lo necesario</text>
+                <text class="cad-label" x="22" y="23" style="font-size:8px;fill:var(--layer-green)" data-i18n="vis.svg.77">Solo lo necesario</text>
                 <rect class="cad-fill-new" x="15" y="32" width="170" height="18" rx="2"/>
-                <text class="cad-label" x="22" y="45" style="font-size:8px;fill:var(--layer-green)">Archivo más ligero</text>
-                <text class="cad-label" x="60" y="85" style="font-size:9px;fill:var(--layer-green)">✓ limpio</text>
+                <text class="cad-label" x="22" y="45" style="font-size:8px;fill:var(--layer-green)" data-i18n="vis.svg.78">Archivo más ligero</text>
+                <text class="cad-label" x="60" y="85" style="font-size:9px;fill:var(--layer-green)" data-i18n="vis.svg.79">✓ limpio</text>
               </svg>
             </div>
           </div>
@@ -1529,22 +1532,22 @@
       <!-- ====== RASTREO POLAR (F10) ====== -->
       <div class="diagram-card" data-cat="precision" data-aos="fade-up">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Precisión</span> <span data-i18n="vis.polar.title">Rastreo polar (F10)</span></h4>
-          <span class="key-inline">F10</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.precision">Precisión</span> <span data-i18n="vis.polar.title">Rastreo polar (F10)</span></h4>
+          <span class="key-inline" data-keys="F10" data-keys-es="F10">F10</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.polar.desc">Muestra guías de ángulo exactas mientras dibujas (15°, 30°, 45°, 90°…) y el cursor se engancha a ellas.</p>
           <div class="diagram-steps">
             <div class="diagram-step">
-              <span class="diagram-step-label">Sin rastreo</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.80">Sin rastreo</span>
               <svg viewBox="0 0 200 100">
                 <path class="cad-line-old" d="M30,75 L160,35"/>
-                <text class="cad-label" x="42" y="25" style="fill:var(--layer-red)">ángulo libre</text>
+                <text class="cad-label" x="42" y="25" style="fill:var(--layer-red)" data-i18n="vis.svg.81">ángulo libre</text>
               </svg>
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
             <div class="diagram-step">
-              <span class="diagram-step-label">Rastreo 45°</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.82">Rastreo 45°</span>
               <svg viewBox="0 0 200 100">
                 <line class="cad-line-dim" x1="100" y1="90" x2="100" y2="10"/>
                 <line class="cad-line" x1="30" y1="80" x2="100" y2="25"/>
@@ -1564,29 +1567,29 @@
       <!-- ====== BLOCK / INSERT ====== -->
       <div class="diagram-card" id="vis-block" data-cat="capas" data-aos="fade-up" data-aos-delay="60">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Capas</span> <span data-i18n="vis.block.title">BLOCK e INSERT</span></h4>
-          <span class="key-inline">B / I</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.capas">Capas</span> <span data-i18n="vis.block.title">BLOCK e INSERT</span></h4>
+          <span class="key-inline" data-keys="B / I" data-keys-es="BQ / I">B / I</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.block.desc">Agrupa objetos en un bloque reutilizable con un punto base. INSERT coloca copias con escala y rotación.</p>
           <div class="diagram-steps">
             <div class="diagram-step">
-              <span class="diagram-step-label">Objetos sueltos</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.83">Objetos sueltos</span>
               <svg viewBox="0 0 200 100">
                 <rect class="cad-fill" x="30" y="35" width="50" height="30" rx="2"/>
                 <circle class="cad-fill" cx="120" cy="50" r="14"/>
-                <text class="cad-label" x="52" y="78">2 objetos</text>
+                <text class="cad-label" x="52" y="78" data-i18n="vis.svg.57">2 objetos</text>
               </svg>
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
             <div class="diagram-step">
-              <span class="diagram-step-label">1 bloque</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.53">1 bloque</span>
               <svg viewBox="0 0 200 100">
                 <rect x="25" y="28" width="105" height="45" fill="none" stroke="var(--layer-green)" stroke-dasharray="5,3" rx="2"/>
                 <rect class="cad-fill" x="30" y="35" width="50" height="30" rx="2"/>
                 <circle class="cad-fill" cx="120" cy="50" r="14"/>
                 <circle class="cad-point-cyan" cx="30" cy="65" r="4"/>
-                <text class="cad-label" x="40" y="92" style="fill:var(--layer-green)">punto base</text>
+                <text class="cad-label" x="40" y="92" style="fill:var(--layer-green)" data-i18n="vis.svg.39">punto base</text>
                 <text class="cad-label" x="130" y="18" style="font-size:8px">mesa.dwg</text>
               </svg>
             </div>
@@ -1601,8 +1604,8 @@
       <!-- ====== ELLIPSE ====== -->
       <div class="diagram-card" id="vis-ellipse" data-cat="dibujo" data-aos="fade-up">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Dibujo</span> ELLIPSE</h4>
-          <span class="key-inline">EL</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.dibujo">Dibujo</span> <span class="vis-cmd" data-cmd="ELLIPSE" data-cmd-es="ELIPSE">ELLIPSE</span></h4>
+          <span class="key-inline" data-keys="EL" data-keys-es="EL">EL</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.ellipse.desc">Dibuja elipses definiendo el eje mayor, el eje menor y el centro.</p>
@@ -1611,15 +1614,15 @@
               <ellipse cx="110" cy="70" rx="70" ry="35" fill="none" stroke="var(--layer-cyan)" stroke-width="2"/>
               <line class="cad-dim" x1="40" y1="70" x2="180" y2="70"/>
               <polygon class="cad-arrow" points="180,70 172,65 172,75"/>
-              <text class="cad-dim-text" x="95" y="64">eje mayor 140</text>
+              <text class="cad-dim-text" x="95" y="64" data-i18n="vis.svg.84">eje mayor 140</text>
               <line class="cad-dim" x1="110" y1="70" x2="110" y2="35"/>
-              <text class="cad-dim-text" x="116" y="55">eje menor 35</text>
+              <text class="cad-dim-text" x="116" y="55" data-i18n="vis.svg.85">eje menor 35</text>
               <circle class="cad-point-cyan" cx="110" cy="70" r="4"/>
-              <text class="cad-label" x="118" y="80">centro</text>
-              <text class="cad-label-cmd" x="230" y="20" style="font-size:9px">Métodos:</text>
-              <text class="cad-label" x="230" y="40" style="font-size:8px">• Ejes (A,B)</text>
-              <text class="cad-label" x="230" y="56" style="font-size:8px">• Centro + ejes</text>
-              <text class="cad-label" x="230" y="72" style="font-size:8px">• Arco de elipse</text>
+              <text class="cad-label" x="118" y="80" data-i18n="vis.svg.86">centro</text>
+              <text class="cad-label-cmd" x="230" y="20" style="font-size:9px" data-i18n="vis.svg.87">Métodos:</text>
+              <text class="cad-label" x="230" y="40" style="font-size:8px" data-i18n="vis.svg.88">• Ejes (A,B)</text>
+              <text class="cad-label" x="230" y="56" style="font-size:8px" data-i18n="vis.svg.89">• Centro + ejes</text>
+              <text class="cad-label" x="230" y="72" style="font-size:8px" data-i18n="vis.svg.90">• Arco de elipse</text>
             </svg>
           </div>
           <div class="callout" style="margin-top:1rem">
@@ -1632,14 +1635,14 @@
       <!-- ====== SPLINE ====== -->
       <div class="diagram-card" id="vis-spline" data-cat="dibujo" data-aos="fade-up" data-aos-delay="60">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Dibujo</span> SPLINE</h4>
-          <span class="key-inline">SPL</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.dibujo">Dibujo</span> <span class="vis-cmd" data-cmd="SPLINE" data-cmd-es="SPLINE">SPLINE</span></h4>
+          <span class="key-inline" data-keys="SPL" data-keys-es="SPL">SPL</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.spline.desc">Dibuja curvas suaves que pasan por puntos de ajuste (fit points).</p>
           <div class="diagram-steps">
             <div class="diagram-step">
-              <span class="diagram-step-label">Puntos de ajuste</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.91">Puntos de ajuste</span>
               <svg viewBox="0 0 200 100">
                 <polyline class="cad-line-dim" points="25,80 70,40 120,70 175,25"/>
                 <circle class="cad-point" cx="25" cy="80" r="4"/>
@@ -1654,12 +1657,12 @@
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
             <div class="diagram-step">
-              <span class="diagram-step-label">Curva suave</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.92">Curva suave</span>
               <svg viewBox="0 0 200 100">
                 <path class="cad-line" d="M25,80 C55,45 85,20 120,70 C145,105 160,40 175,25"/>
                 <circle class="cad-point-cyan" cx="25" cy="80" r="4"/>
                 <circle class="cad-point-cyan" cx="175" cy="25" r="4"/>
-                <text class="cad-label" x="95" y="95" style="font-size:8px;fill:var(--layer-green)">curva continua</text>
+                <text class="cad-label" x="95" y="95" style="font-size:8px;fill:var(--layer-green)" data-i18n="vis.svg.93">curva continua</text>
               </svg>
             </div>
           </div>
@@ -1673,29 +1676,29 @@
       <!-- ====== MTEXT ====== -->
       <div class="diagram-card" id="vis-mtext" data-cat="dibujo" data-aos="fade-up">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Dibujo</span> MTEXT</h4>
-          <span class="key-inline">T / MT</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.dibujo">Dibujo</span> <span class="vis-cmd" data-cmd="MTEXT" data-cmd-es="TEXTO MULTILÍNEA">MTEXT</span></h4>
+          <span class="key-inline" data-keys="T / MT" data-keys-es="T / MT">T / MT</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.mtext.desc">Crea texto multilínea con formato: negrita, alineación, columnas y justificación en un editor.</p>
           <div class="diagram-steps">
             <div class="diagram-step">
-              <span class="diagram-step-label">TEXT · 1 línea</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.94">TEXT · 1 línea</span>
               <svg viewBox="0 0 200 100">
                 <line x1="25" y1="50" x2="175" y2="50" stroke="var(--border-soft)" stroke-width="1" stroke-dasharray="4,3"/>
-                <text class="cad-label-cmd" x="30" y="45" style="font-size:9px">RÓTULO</text>
-                <text class="cad-label" x="25" y="75" style="font-size:7px;fill:var(--layer-red)">una sola línea</text>
+                <text class="cad-label-cmd" x="30" y="45" style="font-size:9px" data-i18n="vis.svg.95">RÓTULO</text>
+                <text class="cad-label" x="25" y="75" style="font-size:7px;fill:var(--layer-red)" data-i18n="vis.svg.96">una sola línea</text>
               </svg>
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
             <div class="diagram-step">
-              <span class="diagram-step-label">MTEXT · párrafo</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.97">MTEXT · párrafo</span>
               <svg viewBox="0 0 200 100">
                 <rect x="25" y="20" width="150" height="62" fill="var(--bg-elevated)" stroke="var(--layer-cyan)" rx="2"/>
-                <text class="cad-label-cmd" x="32" y="38" style="font-size:8px;font-weight:700">Nota técnica</text>
-                <text class="cad-label" x="32" y="52" style="font-size:7px">Primera línea del párrafo</text>
-                <text class="cad-label" x="32" y="63" style="font-size:7px">justificado y con formato</text>
-                <text class="cad-label" x="32" y="74" style="font-size:7px">en un solo objeto</text>
+                <text class="cad-label-cmd" x="32" y="38" style="font-size:8px;font-weight:700" data-i18n="vis.svg.98">Nota técnica</text>
+                <text class="cad-label" x="32" y="52" style="font-size:7px" data-i18n="vis.svg.99">Primera línea del párrafo</text>
+                <text class="cad-label" x="32" y="63" style="font-size:7px" data-i18n="vis.svg.100">justificado y con formato</text>
+                <text class="cad-label" x="32" y="74" style="font-size:7px" data-i18n="vis.svg.101">en un solo objeto</text>
               </svg>
             </div>
           </div>
@@ -1709,14 +1712,14 @@
       <!-- ====== BREAK ====== -->
       <div class="diagram-card" id="vis-break" data-cat="modificacion" data-aos="fade-up" data-aos-delay="60">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Modificación</span> BREAK</h4>
-          <span class="key-inline">BR</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.modificacion">Modificación</span> <span class="vis-cmd" data-cmd="BREAK" data-cmd-es="ROMPER">BREAK</span></h4>
+          <span class="key-inline" data-keys="BR" data-keys-es="BR">BR</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.break.desc">Rompe un objeto en dos partes eliminando el tramo entre dos puntos.</p>
           <div class="diagram-steps">
             <div class="diagram-step">
-              <span class="diagram-step-label">2 puntos</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.102">2 puntos</span>
               <svg viewBox="0 0 200 100">
                 <line class="cad-line" x1="25" y1="55" x2="175" y2="55"/>
                 <circle class="cad-point" cx="70" cy="55" r="4"/>
@@ -1727,11 +1730,11 @@
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
             <div class="diagram-step">
-              <span class="diagram-step-label">Resultado</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.36">Resultado</span>
               <svg viewBox="0 0 200 100">
                 <line class="cad-line" x1="25" y1="55" x2="68" y2="55"/>
                 <line class="cad-line" x1="132" y1="55" x2="175" y2="55"/>
-                <text class="cad-label" x="78" y="45" style="font-size:8px;fill:var(--layer-red)">hueco</text>
+                <text class="cad-label" x="78" y="45" style="font-size:8px;fill:var(--layer-red)" data-i18n="vis.svg.103">hueco</text>
               </svg>
             </div>
           </div>
@@ -1745,14 +1748,14 @@
       <!-- ====== ALIGN ====== -->
       <div class="diagram-card" id="vis-align" data-cat="modificacion" data-aos="fade-up">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Modificación</span> ALIGN</h4>
-          <span class="key-inline">AL</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.modificacion">Modificación</span> <span class="vis-cmd" data-cmd="ALIGN" data-cmd-es="ALINEAR">ALIGN</span></h4>
+          <span class="key-inline" data-keys="AL" data-keys-es="AL">AL</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.align.desc">Alinea y rota objetos de una sola vez tomando pares de puntos origen-destino.</p>
           <div class="diagram-steps">
             <div class="diagram-step">
-              <span class="diagram-step-label">Origen → destino</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.104">Origen → destino</span>
               <svg viewBox="0 0 200 100">
                 <rect class="cad-fill" x="20" y="30" width="60" height="40" rx="2"/>
                 <circle class="cad-point" cx="20" cy="70" r="3"/>
@@ -1760,18 +1763,18 @@
                 <line x1="130" y1="80" x2="180" y2="25" stroke="var(--layer-green)" stroke-width="1.5"/>
                 <circle class="cad-point-cyan" cx="130" cy="80" r="3"/>
                 <circle class="cad-point-cyan" cx="180" cy="25" r="3"/>
-                <text class="cad-label" x="120" y="94" style="font-size:8px;fill:var(--layer-green)">objetivo</text>
+                <text class="cad-label" x="120" y="94" style="font-size:8px;fill:var(--layer-green)" data-i18n="vis.svg.105">objetivo</text>
               </svg>
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
             <div class="diagram-step">
-              <span class="diagram-step-label">Alineado y rotado</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.106">Alineado y rotado</span>
               <svg viewBox="0 0 200 100">
                 <line x1="130" y1="80" x2="180" y2="25" stroke="var(--layer-green)" stroke-width="1.5"/>
                 <rect class="cad-fill" x="20" y="30" width="60" height="40" rx="2" transform="rotate(-38,20,70)" style="opacity:0.9"/>
                 <circle class="cad-point-cyan" cx="130" cy="80" r="3"/>
                 <circle class="cad-point-cyan" cx="180" cy="25" r="3"/>
-                <text class="cad-label" x="55" y="25" style="font-size:8px;fill:var(--layer-green)">encaja en la línea</text>
+                <text class="cad-label" x="55" y="25" style="font-size:8px;fill:var(--layer-green)" data-i18n="vis.svg.107">encaja en la línea</text>
               </svg>
             </div>
           </div>
@@ -1785,28 +1788,28 @@
       <!-- ====== DIVIDE ====== -->
       <div class="diagram-card" id="vis-divide" data-cat="dibujo" data-aos="fade-up" data-aos-delay="60">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Dibujo</span> DIVIDE</h4>
-          <span class="key-inline">DIV</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.dibujo">Dibujo</span> <span class="vis-cmd" data-cmd="DIVIDE" data-cmd-es="DIVIDE">DIVIDE</span></h4>
+          <span class="key-inline" data-keys="DIV" data-keys-es="DIV">DIV</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.divide.desc">Coloca puntos o bloques a intervalos iguales a lo largo de un objeto sin partirlo.</p>
           <div class="diagram-steps">
             <div class="diagram-step">
-              <span class="diagram-step-label">Línea</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.108">Línea</span>
               <svg viewBox="0 0 200 100">
                 <line class="cad-line" x1="25" y1="55" x2="175" y2="55"/>
               </svg>
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
             <div class="diagram-step">
-              <span class="diagram-step-label">DIVIDE en 5</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.109">DIVIDE en 5</span>
               <svg viewBox="0 0 200 100">
                 <line class="cad-line" x1="25" y1="55" x2="175" y2="55"/>
                 <circle class="cad-point-cyan" cx="55" cy="55" r="3"/>
                 <circle class="cad-point-cyan" cx="85" cy="55" r="3"/>
                 <circle class="cad-point-cyan" cx="115" cy="55" r="3"/>
                 <circle class="cad-point-cyan" cx="145" cy="55" r="3"/>
-                <text class="cad-label" x="55" y="42" style="font-size:8px">5 tramos iguales</text>
+                <text class="cad-label" x="55" y="42" style="font-size:8px" data-i18n="vis.svg.110">5 tramos iguales</text>
               </svg>
             </div>
           </div>
@@ -1820,27 +1823,27 @@
       <!-- ====== REVOLVE (3D) ====== -->
       <div class="diagram-card" id="vis-revolve" data-cat="3d" data-aos="fade-up">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">3D</span> REVOLVE</h4>
-          <span class="key-inline">REV</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.3d">3D</span> <span class="vis-cmd" data-cmd="REVOLVE" data-cmd-es="REVOLVER">REVOLVE</span></h4>
+          <span class="key-inline" data-keys="REV" data-keys-es="REV">REV</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.revolve.desc">Gira un perfil 2D alrededor de un eje para crear un sólido de revolución.</p>
           <div class="diagram-steps">
             <div class="diagram-step">
-              <span class="diagram-step-label">Perfil + eje</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.111">Perfil + eje</span>
               <svg viewBox="0 0 200 100">
                 <polygon class="cad-fill" points="70,70 70,20 110,45 110,70"/>
                 <line class="cad-line-dim" x1="70" y1="10" x2="70" y2="92"/>
-                <text class="cad-label" x="55" y="16" style="font-size:8px;fill:var(--amber)">eje</text>
+                <text class="cad-label" x="55" y="16" style="font-size:8px;fill:var(--amber)" data-i18n="vis.svg.112">eje</text>
               </svg>
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
             <div class="diagram-step">
-              <span class="diagram-step-label">Sólido rotado</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.113">Sólido rotado</span>
               <svg viewBox="0 0 200 120">
                 <path class="cad-fill" d="M55,15 C70,25 70,45 55,50 C40,55 40,80 55,92 C70,100 70,105 55,108 L55,15 Z"/>
                 <line class="cad-line-dim" x1="55" y1="8" x2="55" y2="112"/>
-                <text class="cad-label" x="60" y="120" style="font-size:8px;fill:var(--layer-green)">simétrico al eje</text>
+                <text class="cad-label" x="60" y="120" style="font-size:8px;fill:var(--layer-green)" data-i18n="vis.svg.114">simétrico al eje</text>
               </svg>
             </div>
           </div>
@@ -1854,28 +1857,28 @@
       <!-- ====== LOFT (3D) ====== -->
       <div class="diagram-card" id="vis-loft" data-cat="3d" data-aos="fade-up" data-aos-delay="60">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">3D</span> LOFT</h4>
-          <span class="key-inline">LOFT</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.3d">3D</span> <span class="vis-cmd" data-cmd="LOFT" data-cmd-es="SOLEVACIÓN">LOFT</span></h4>
+          <span class="key-inline" data-keys="LOFT" data-keys-es="LOFT">LOFT</span>
         </div>
         <div class="diagram-card-body">
           <p data-i18n="vis.loft.desc">Crea un sólido que conecta dos o más secciones transversales con una transición suave.</p>
           <div class="diagram-steps">
             <div class="diagram-step">
-              <span class="diagram-step-label">Secciones</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.115">Secciones</span>
               <svg viewBox="0 0 200 100">
                 <circle class="cad-fill" cx="100" cy="20" r="12"/>
                 <rect class="cad-fill" x="70" y="60" width="60" height="26" rx="2"/>
-                <text class="cad-label" x="85" y="98" style="font-size:8px">2 perfiles distintos</text>
+                <text class="cad-label" x="85" y="98" style="font-size:8px" data-i18n="vis.svg.116">2 perfiles distintos</text>
               </svg>
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
             <div class="diagram-step">
-              <span class="diagram-step-label">Transición suave</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.117">Transición suave</span>
               <svg viewBox="0 0 200 100">
                 <path class="cad-fill" d="M92,8 A12,12 0 0,1 108,8 C108,30 128,45 132,58 L132,86 L68,86 L68,58 C72,45 92,30 92,8 Z"/>
                 <circle class="cad-fill" cx="100" cy="20" r="12" opacity="0.9"/>
                 <rect class="cad-fill" x="68" y="58" width="64" height="28" rx="2" opacity="0.9"/>
-                <text class="cad-label" x="62" y="98" style="font-size:8px;fill:var(--layer-green)">un solo sólido</text>
+                <text class="cad-label" x="62" y="98" style="font-size:8px;fill:var(--layer-green)" data-i18n="vis.svg.118">un solo sólido</text>
               </svg>
             </div>
           </div>
@@ -1889,33 +1892,33 @@
       <!-- ====== TEXT ====== -->
       <div class="diagram-card" id="vis-text" data-cat="dibujo" data-aos="fade-up" data-aos-delay="60">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Dibujo</span> TEXT</h4>
-          <span class="key-inline">DT</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.dibujo">Dibujo</span> <span class="vis-cmd" data-cmd="TEXT" data-cmd-es="TEXTO">TEXT</span></h4>
+          <span class="key-inline" data-keys="DT" data-keys-es="DT">DT</span>
         </div>
         <div class="diagram-card-body">
-          <p>Crea un texto de una sola línea definiendo el punto de inserción, la altura y la rotación.</p>
+          <p data-i18n="vis.text.desc">Crea un texto de una sola línea definiendo el punto de inserción, la altura y la rotación.</p>
           <div class="diagram-steps">
             <div class="diagram-step">
-              <span class="diagram-step-label">Antes</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.72">Antes</span>
               <svg viewBox="0 0 200 100">
                 <circle class="cad-point" cx="30" cy="55" r="4"/>
-                <text class="cad-label" x="44" y="52" style="font-size:8px">punto de inserción</text>
+                <text class="cad-label" x="44" y="52" style="font-size:8px" data-i18n="vis.svg.119">punto de inserción</text>
               </svg>
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
             <div class="diagram-step">
-              <span class="diagram-step-label">Después</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.76">Después</span>
               <svg viewBox="0 0 200 100">
                 <line x1="30" y1="72" x2="170" y2="72" stroke="var(--border-soft)" stroke-width="1" stroke-dasharray="4,3"/>
                 <text class="cad-label-cmd" x="30" y="66" style="font-size:15px">AUTOCAD</text>
                 <circle class="cad-point-cyan" cx="30" cy="72" r="3"/>
-                <text class="cad-label" x="44" y="92" style="font-size:8px">línea de base</text>
+                <text class="cad-label" x="44" y="92" style="font-size:8px" data-i18n="vis.svg.120">línea de base</text>
               </svg>
             </div>
           </div>
           <div class="callout" style="margin-top:1rem">
             <span class="callout-title">Tip</span>
-            <span>Para rótulos cortos TEXT basta; para párrafos con formato usa MTEXT.</span>
+            <span><span data-i18n="vis.text.tip">Para rótulos cortos TEXT basta; para párrafos con formato usa MTEXT.</span></span>
           </div>
         </div>
       </div>
@@ -1923,21 +1926,21 @@
       <!-- ====== AREA ====== -->
       <div class="diagram-card" id="vis-area" data-cat="precision" data-aos="fade-up">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Precisión</span> AREA</h4>
-          <span class="key-inline">AA</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.precision">Precisión</span> <span class="vis-cmd" data-cmd="AREA" data-cmd-es="ÁREA">AREA</span></h4>
+          <span class="key-inline" data-keys="AA" data-keys-es="AA">AA</span>
         </div>
         <div class="diagram-card-body">
-          <p>Calcula el área y el perímetro de un recinto definido por puntos o de un objeto cerrado.</p>
+          <p data-i18n="vis.area.desc">Calcula el área y el perímetro de un recinto definido por puntos o de un objeto cerrado.</p>
           <div class="diagram-steps">
             <div class="diagram-step">
-              <span class="diagram-step-label">Antes</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.72">Antes</span>
               <svg viewBox="0 0 200 100">
                 <rect x="35" y="20" width="130" height="60" fill="none" stroke="var(--layer-cyan)" stroke-width="1.5" rx="2"/>
               </svg>
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
             <div class="diagram-step">
-              <span class="diagram-step-label">Después</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.76">Después</span>
               <svg viewBox="0 0 200 100">
                 <rect class="cad-fill" x="35" y="20" width="130" height="60" rx="2" opacity="0.85"/>
                 <text class="cad-label" x="55" y="58" style="font-size:10px;fill:var(--layer-green)">A = 12.50 m²</text>
@@ -1946,7 +1949,7 @@
           </div>
           <div class="callout" style="margin-top:1rem">
             <span class="callout-title">Tip</span>
-            <span>Pulsa O dentro de AREA para medir el área de un objeto cerrado con un solo clic.</span>
+            <span><span data-i18n="vis.area.tip">Pulsa O dentro de AREA para medir el área de un objeto cerrado con un solo clic.</span></span>
           </div>
         </div>
       </div>
@@ -1954,14 +1957,14 @@
       <!-- ====== DIST ====== -->
       <div class="diagram-card" id="vis-dist" data-cat="precision" data-aos="fade-up" data-aos-delay="60">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Precisión</span> DIST</h4>
-          <span class="key-inline">DI</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.precision">Precisión</span> <span class="vis-cmd" data-cmd="DIST" data-cmd-es="DISTANCIA">DIST</span></h4>
+          <span class="key-inline" data-keys="DI" data-keys-es="DI">DI</span>
         </div>
         <div class="diagram-card-body">
-          <p>Mide la distancia y el ángulo entre dos puntos seleccionados del dibujo.</p>
+          <p data-i18n="vis.dist.desc">Mide la distancia y el ángulo entre dos puntos seleccionados del dibujo.</p>
           <div class="diagram-steps">
             <div class="diagram-step">
-              <span class="diagram-step-label">Antes</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.72">Antes</span>
               <svg viewBox="0 0 200 100">
                 <circle class="cad-point" cx="30" cy="70" r="4"/>
                 <circle class="cad-point" cx="170" cy="30" r="4"/>
@@ -1971,7 +1974,7 @@
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
             <div class="diagram-step">
-              <span class="diagram-step-label">Después</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.76">Después</span>
               <svg viewBox="0 0 200 100">
                 <line class="cad-line-dim" x1="30" y1="70" x2="95" y2="70"/>
                 <line class="cad-line" x1="30" y1="70" x2="170" y2="30"/>
@@ -1987,7 +1990,7 @@
           </div>
           <div class="callout" style="margin-top:1rem">
             <span class="callout-title">Tip</span>
-            <span>DIST informa también el ángulo de la línea respecto al eje X.</span>
+            <span><span data-i18n="vis.dist.tip">DIST informa también el ángulo de la línea respecto al eje X.</span></span>
           </div>
         </div>
       </div>
@@ -1995,14 +1998,14 @@
       <!-- ====== LAYERISO ====== -->
       <div class="diagram-card" id="vis-layeriso" data-cat="capas" data-aos="fade-up">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Capas</span> LAYERISO</h4>
-          <span class="key-inline">LAYISO</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.capas">Capas</span> <span class="vis-cmd" data-cmd="LAYERISO" data-cmd-es="AISLACAPA">LAYERISO</span></h4>
+          <span class="key-inline" data-keys="LAYISO" data-keys-es="LAYISO">LAYISO</span>
         </div>
         <div class="diagram-card-body">
-          <p>Aísla una capa: el resto se apaga o se atenúa para trabajar sin distracciones.</p>
+          <p data-i18n="vis.layeriso.desc">Aísla una capa: el resto se apaga o se atenúa para trabajar sin distracciones.</p>
           <div class="diagram-steps">
             <div class="diagram-step">
-              <span class="diagram-step-label">Antes</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.72">Antes</span>
               <svg viewBox="0 0 200 100">
                 <rect class="cad-fill" x="25" y="20" width="50" height="60" rx="2"/>
                 <circle class="cad-circle" cx="130" cy="45" r="20"/>
@@ -2011,18 +2014,18 @@
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
             <div class="diagram-step">
-              <span class="diagram-step-label">Después</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.76">Después</span>
               <svg viewBox="0 0 200 100">
                 <rect class="cad-fill" x="25" y="20" width="50" height="60" rx="2" opacity="0.2"/>
                 <line class="cad-line" x1="105" y1="80" x2="180" y2="80" opacity="0.2"/>
                 <circle class="cad-circle" cx="130" cy="45" r="20"/>
-                <text class="cad-label" x="88" y="18" style="font-size:8px;fill:var(--layer-green)">capa aislada</text>
+                <text class="cad-label" x="88" y="18" style="font-size:8px;fill:var(--layer-green)" data-i18n="vis.svg.121">capa aislada</text>
               </svg>
             </div>
           </div>
           <div class="callout" style="margin-top:1rem">
             <span class="callout-title">Tip</span>
-            <span>Para recuperar la visibilidad de todas las capas usa LAYUNISO.</span>
+            <span><span data-i18n="vis.layeriso.tip">Para recuperar la visibilidad de todas las capas usa LAYUNISO.</span></span>
           </div>
         </div>
       </div>
@@ -2030,14 +2033,14 @@
       <!-- ====== DIMCONTINUE ====== -->
       <div class="diagram-card" id="vis-dimcontinue" data-cat="precision" data-aos="fade-up" data-aos-delay="60">
         <div class="diagram-card-head">
-          <h4><span class="cmd-badge">Precisión</span> DIMCONTINUE</h4>
-          <span class="key-inline">DCO</span>
+          <h4><span class="cmd-badge" data-i18n="cmd.cat.precision">Precisión</span> <span class="vis-cmd" data-cmd="DIMCONTINUE" data-cmd-es="ACOCONTINUA">DIMCONTINUE</span></h4>
+          <span class="key-inline" data-keys="DCO" data-keys-es="DCO">DCO</span>
         </div>
         <div class="diagram-card-body">
-          <p>Continúa una serie de cotas lineales encadenadas a partir de la última cota creada.</p>
+          <p data-i18n="vis.dimcontinue.desc">Continúa una serie de cotas lineales encadenadas a partir de la última cota creada.</p>
           <div class="diagram-steps">
             <div class="diagram-step">
-              <span class="diagram-step-label">Antes</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.72">Antes</span>
               <svg viewBox="0 0 200 100">
                 <line class="cad-line" x1="25" y1="65" x2="175" y2="65"/>
                 <line class="cad-dim" x1="25" y1="45" x2="100" y2="45"/>
@@ -2050,7 +2053,7 @@
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
             <div class="diagram-step">
-              <span class="diagram-step-label">Después</span>
+              <span class="diagram-step-label" data-i18n="vis.svg.76">Después</span>
               <svg viewBox="0 0 200 100">
                 <line class="cad-line" x1="25" y1="65" x2="175" y2="65"/>
                 <line class="cad-dim" x1="25" y1="45" x2="175" y2="45"/>
@@ -2068,7 +2071,7 @@
           </div>
           <div class="callout" style="margin-top:1rem">
             <span class="callout-title">Tip</span>
-            <span>Primero crea una cota lineal con DIM y luego DCO añade segmentos encadenados.</span>
+            <span><span data-i18n="vis.dimcontinue.tip">Primero crea una cota lineal con DIM y luego DCO añade segmentos encadenados.</span></span>
           </div>
         </div>
       </div>
@@ -2162,28 +2165,5 @@
 <script src="../assets/js/search-index.js"></script>
 <script src="../assets/js/main.js"></script>
 
-<script>
-/* Visual examples page filters */
-(function(){
-  var filters = document.getElementById('visFilters');
-  var grid = document.getElementById('visGrid');
-  if (!filters || !grid) return;
-
-  var buttons = filters.querySelectorAll('.cmd-filter-btn');
-  var cards = grid.querySelectorAll('.diagram-card');
-
-  buttons.forEach(function(btn){
-    btn.addEventListener('click', function(){
-      buttons.forEach(function(b){ b.classList.remove('active'); });
-      btn.classList.add('active');
-      var filter = btn.getAttribute('data-filter');
-      cards.forEach(function(card){
-        var cat = card.getAttribute('data-cat');
-        card.style.display = (filter === 'todos' || cat === filter) ? '' : 'none';
-      });
-    });
-  });
-})();
-</script>
 </body>
 </html>

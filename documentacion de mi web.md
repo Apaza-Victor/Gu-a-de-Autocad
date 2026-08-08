@@ -10,7 +10,7 @@
 
 ## 1. Descripcion general
 
-Sitio web estatico educativo que funciona como guia teorica y diccionario de comandos de AutoCAD. Contiene 5 niveles de aprendizaje progresivos, un diccionario de 95 comandos, ejemplos visuales, trucos, recursos descargables y preguntas frecuentes. Soporta dos idiomas (ES/EN) y tema oscuro/claro.
+Sitio web estatico educativo que funciona como guia teorica y diccionario de comandos de AutoCAD. Contiene 5 niveles de aprendizaje progresivos, un diccionario de 979 comandos, ejemplos visuales, trucos, recursos descargables y preguntas frecuentes. Soporta dos idiomas (ES/EN) y tema oscuro/claro.
 
 ---
 
@@ -36,7 +36,7 @@ Guia de Autocad/
 │   ├── nivel-3-organizacion.html   # Nivel 3: Organizacion y productividad
 │   ├── nivel-4-modelado-3d.html    # Nivel 4: Modelado 3D
 │   ├── nivel-5-avanzado.html       # Nivel 5: Nivel experto
-│   ├── comandos.html               # Diccionario de 95 comandos
+│   ├── comandos.html               # Diccionario de 979 comandos
 │   ├── ejemplos-visuales.html      # Diagramas paso a paso
 │   ├── trucos.html                 # Atajos, tips, errores comunes
 │   ├── recursos.html               # 19 recursos descargables
@@ -53,7 +53,7 @@ Guia de Autocad/
 | `assets/css/responsive.css` | Todos los @media: breakpoints, print, reduced-motion | ~110 lineas |
 | `assets/js/main.js` | Theme toggle, search, filters, scroll-spy, mark-done, FAQ, Swiper, Prism | ~755 lineas |
 | `assets/js/i18n.js` | Diccionario de traducciones ES/EN para toda la interfaz | ~1200 lineas |
-| `paginas/comandos.html` | 95 tarjetas de comandos con data-cmd, data-cat, data-level, data-keys | ~1414 lineas |
+| `paginas/comandos.html` | 979 tarjetas de comandos con data-cmd, data-cat, data-level, data-keys, data-cmd-es | ~13000 lineas |
 
 ---
 
@@ -104,22 +104,25 @@ Guia de Autocad/
 
 ### 4.4 Diccionario de comandos (`comandos.html`)
 
-- **95 tarjetas** de comandos HTML estaticos
+- **979 tarjetas** de comandos HTML estaticos
 - Cada tarjeta es un `div.cmd-full-card` con atributos:
   - `data-cmd`: nombre del comando (LINE, CIRCLE, etc.)
-  - `data-cat`: categoria (dibujo, modificacion, precision, capas, acotacion, texto, bloques, edicion, 3d, consulta)
+  - `data-cat`: categoria (dibujo, modificacion, precision, capas, acotacion, texto, bloques, edicion, 3d, consulta, archivo, vista, utiles, render)
   - `data-level`: nivel (basico, intermedio, avanzado)
-  - `data-keys`: atajos de teclado separados por coma
-- **10 filtros** por categoria via `data-filter`
-- **Busqueda** por nombre, descripcion, atajo o categoria
+  - `data-keys`: atajos de teclado (ingles) separados por coma
+  - `data-keys-es`: atajo en espanol cuando difiere del ingles (ej. OFFSET → DF)
+  - `data-cmd-es`: nombre del comando en espanol (ej. LINE → LINEA)
+- **14 filtros** por categoria via `data-filter`
+- **Busqueda** por nombre, nombre en espanol, descripcion, atajo (EN/ES) o categoria
 - Contador dinamico actualizado por JS
+- El buscador local busca por `data-cmd`, `data-cmd-es`, `data-keys`, `data-keys-es`, descripcion y categoria
 
 ### 4.5 Buscador global
 
 - Overlay con `#searchOverlay`
 - Input `#globalSearchInput`
 - Resultados en `#globalSearchResults`
-- Fuse.js con keys: title (0.4), command (0.3), shortcut (0.2), description (0.1)
+- Fuse.js con keys: title (0.4), command (0.3), commandEs (0.3), shortcut (0.2), shortcutEs (0.2), description (0.1)
 - Threshold: 0.4, minMatchCharLength: 2
 - Atajo de teclado: `Ctrl+K`
 
@@ -191,7 +194,7 @@ Guia de Autocad/
 
 ### Secciones complementarias
 
-- **Diccionario de comandos**: 95 comandos en 10 categorias
+- **Diccionario de comandos**: 979 comandos en 14 categorias
 - **Ejemplos visuales**: diagramas SVG paso a paso
 - **Trucos**: atajos, aprendizaje, errores comunes, flujo de trabajo, avanzado
 - **Recursos**: 19 recursos (bloques, cursos, comunidades, plantillas, YouTube, herramientas y chuleta de atajos en PDF)
