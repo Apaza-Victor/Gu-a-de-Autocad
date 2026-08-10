@@ -30,6 +30,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/3d.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -829,6 +830,34 @@
   </div>
 </div>
 
+<!-- ===================== LABORATORIO 3D ===================== -->
+<section class="cad3d-lab" id="lab-3d">
+  <div class="container container-xl">
+    <div class="row mb-4">
+      <div class="col-lg-8" data-aos="fade-up">
+        <p class="eyebrow" data-i18n="lab.eyebrow">Experimenta en tiempo real</p>
+        <h2 class="mb-2" style="font-size:clamp(1.6rem,3vw,2.2rem)" data-i18n="lab.title">Laboratorio 3D interactivo</h2>
+        <p class="text-muted-custom mb-0" data-i18n="lab.subtitle">Experimenta con los mismos conceptos del nivel: sólidos, extrusión, revolución y operaciones booleanas, renderizados en tiempo real.</p>
+      </div>
+    </div>
+
+    <div class="lab-panel" data-aos="fade-up">
+      <div class="lab-controls" role="toolbar" aria-label="Operaciones 3D">
+        <button class="lab-btn" type="button" data-lab="box" data-i18n="lab.box">CUBO (BOX)</button>
+        <button class="lab-btn" type="button" data-lab="extrude" data-i18n="lab.extrude">EXTRUSIÓN</button>
+        <button class="lab-btn" type="button" data-lab="revolve" data-i18n="lab.revolve">REVOLUCIÓN</button>
+        <button class="lab-btn" type="button" data-lab="union" data-i18n="lab.union">UNIÓN</button>
+        <button class="lab-btn" type="button" data-lab="subtract" data-i18n="lab.subtract">SUSTRACCIÓN</button>
+      </div>
+      <div class="lab-stage">
+        <canvas id="babylonCanvas" aria-label="Laboratorio 3D interactivo"></canvas>
+        <span class="lab-hud"><i class="bi bi-arrows-move"></i> <span data-i18n="lab.hint"></span></span>
+      </div>
+      <p class="lab-caption" id="labCaption" data-i18n="lab.caption.box" aria-live="polite"></p>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== FOOTER ===================== -->
 <footer class="site-footer">
   <div class="container container-xl">
@@ -899,9 +928,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+<script src="https://cdn.babylonjs.com/babylon.js"></script>
 <script src="../assets/js/i18n.js"></script>
 <script src="../assets/js/search-index.js"></script>
 <script src="../assets/js/quiz.js"></script>
+<script src="../assets/js/animations.js"></script>
+<script src="../assets/js/babylon-lab.js"></script>
 <script src="../assets/js/main.js"></script>
 
 </body>

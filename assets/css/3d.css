@@ -1,0 +1,276 @@
+/* =========================================================
+   AutoCAD Guía — 3d.css
+   Visores Three.js (hero + ejemplos) y Babylon.js (lab).
+   Fondo animado de la portada (cadbg).
+   Sigue el sistema de diseño del sitio (variables CSS).
+   ========================================================= */
+
+/* ---------- Fondo animado de la portada ---------- */
+.cadbg-canvas{
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ---------- Héroe 3D de la portada ---------- */
+.hero-3d-wrap{
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+.hero-3d-wrap canvas{
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: .9;
+  pointer-events: auto;
+  touch-action: none;
+  cursor: grab;
+}
+.hero-3d-wrap canvas:active{ cursor: grabbing; }
+.cad3d-stage{
+  position: absolute;
+  inset: 0;
+  background-color: var(--bg-panel-2);
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 28px 28px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.cad3d-stage canvas{
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  cursor: grab;
+}
+.cad3d-stage canvas:active{ cursor: grabbing; }
+.cad3d-stage.cad3d-unsupported{
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  color: var(--text-muted);
+  font-family: var(--font-display);
+  font-size: .75rem;
+  text-align: center;
+}
+
+/* HUD de los visores */
+.cad3d-hud{
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  font-family: var(--font-display);
+  font-size: .62rem;
+  letter-spacing: .06em;
+  color: var(--text-faint);
+  background: rgba(11, 18, 32, .55);
+  border: 1px solid var(--border-soft);
+  padding: .3rem .55rem;
+  border-radius: 4px;
+  pointer-events: none;
+  white-space: nowrap;
+}
+[data-theme="light"] .cad3d-hud{ background: rgba(255, 255, 255, .72); }
+.cad3d-hud i{ font-size: .8rem; color: var(--cyan); }
+
+.cad3d-ucs{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 2;
+  font-family: var(--font-display);
+  font-size: .58rem;
+  letter-spacing: .12em;
+  color: var(--layer-green);
+  border: 1px dashed var(--border);
+  padding: .25rem .45rem;
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+.hero .drawing-sheet{ position: relative; z-index: 1; }
+
+/* ---------- Mini visores (ejemplos visuales) ---------- */
+.cad3d-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.4rem;
+  margin-top: 2.2rem;
+}
+.cad3d-mini{
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-panel);
+}
+.cad3d-mini-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+  padding: .75rem 1rem;
+  border-bottom: 1px dashed var(--border);
+  font-family: var(--font-display);
+  font-size: .72rem;
+  color: var(--text-faint);
+}
+.cad3d-mini-canvas{
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background-color: var(--bg-panel-2);
+  overflow: hidden;
+}
+.cad3d-mini-canvas canvas{
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  cursor: grab;
+}
+.cad3d-mini-canvas canvas:active{ cursor: grabbing; }
+
+/* ---------- Laboratorio Babylon (Nivel 4) ---------- */
+.cad3d-lab{
+  padding: 5rem 0;
+  border-top: 1px solid var(--border-soft);
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+.lab-panel{
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-panel);
+  overflow: hidden;
+  max-width: 920px;
+}
+.lab-controls{
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  padding: 1rem;
+  border-bottom: 1px dashed var(--border);
+  background: var(--bg-elevated);
+}
+.lab-btn{
+  font-family: var(--font-display);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: .4rem .8rem;
+  cursor: pointer;
+  transition: color .15s ease, border-color .15s ease, background .15s ease;
+}
+.lab-btn:hover{ color: var(--cyan); border-color: var(--cyan); }
+.lab-btn:focus-visible{ outline: 2px solid var(--cyan); outline-offset: 2px; }
+.lab-btn.active{ color: #06201E; background: var(--cyan); border-color: var(--cyan); }
+
+.lab-stage{
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background-color: var(--bg-panel-2);
+  overflow: hidden;
+}
+.lab-stage canvas{ display: block; width: 100%; height: 100%; touch-action: none; }
+.lab-hud{
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  font-family: var(--font-display);
+  font-size: .62rem;
+  letter-spacing: .06em;
+  color: var(--text-faint);
+  background: rgba(11, 18, 32, .55);
+  border: 1px solid var(--border-soft);
+  padding: .3rem .55rem;
+  border-radius: 4px;
+  pointer-events: none;
+  white-space: nowrap;
+}
+[data-theme="light"] .lab-hud{ background: rgba(255, 255, 255, .72); }
+.lab-hud i{ font-size: .8rem; color: var(--cyan); }
+
+.lab-caption{
+  padding: 1rem 1.25rem;
+  margin: 0;
+  color: var(--text-muted);
+  font-size: .95rem;
+  border-top: 1px dashed var(--border);
+  min-height: 3.4rem;
+}
+
+/* Transición suave al cambiar de operación */
+.cad3d-fade-in{ animation: cad3dFadeIn .35s ease both; }
+@keyframes cad3dFadeIn{
+  from{ opacity: 0; }
+  to{ opacity: 1; }
+}
+
+@media (max-width: 768px){
+  .lab-stage{ aspect-ratio: 4 / 3; }
+}
+
+/* ---------- Plano del hero: 2D animado -> 3D ---------- */
+.plan-anim{ position: relative; }
+.plan-anim svg#plan2d{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.plan-anim canvas#plan3dCanvas{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  touch-action: none;
+  cursor: grab;
+}
+.plan-anim canvas#plan3dCanvas:active{ cursor: grabbing; }
+.plan-anim .plan-hud{ left: 8px; bottom: 8px; z-index: 3; }
+.plan-anim .plan-replay{
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  z-index: 3;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--border-soft);
+  background: rgba(11, 18, 32, .55);
+  color: var(--text-faint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: .8rem;
+  cursor: pointer;
+  transition: color .15s ease, border-color .15s ease, background .15s ease;
+}
+.plan-anim .plan-replay:hover{ color: var(--cyan); border-color: var(--cyan); }
+.plan-anim .plan-replay:focus-visible{ outline: 2px solid var(--cyan); outline-offset: 2px; }
+[data-theme="light"] .plan-anim .plan-replay{ background: rgba(255, 255, 255, .85); }

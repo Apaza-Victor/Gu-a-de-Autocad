@@ -1368,8 +1368,24 @@ code[class*="language-"]{
   margin: 1rem 0;
   overflow: hidden;
 }
-.plan-sheet svg{ width: 100%; height: auto; display: block; }
+.plan-sheet svg{ width: 100%; height: auto; max-height: 60vh; display: block; margin: 0 auto; }
 .plan-sheet svg .plan-cursor{ animation: blink 1.4s step-end infinite; }
+
+/* Teclado con perfil de teclado mecánico */
+.plan-sheet svg.kbd-svg{ filter: drop-shadow(0 8px 12px rgba(0,0,0,.35)); }
+.plan-sheet svg.kbd-svg rect{ filter: drop-shadow(0 2px 1px rgba(0,0,0,.45)); }
+
+/* ---- Sección de Visuales: espaciados compactos ---- */
+#visSection .diagram-grid{ gap: 1rem; }
+#visSection .diagram-card-head{ padding: .7rem 1rem; }
+#visSection .diagram-card-body{ padding: 1rem; }
+#visSection .diagram-card-body p{ margin-bottom: .6rem; }
+#visSection .diagram-steps{ margin: .65rem 0; }
+#visSection .diagram-step{ padding: .75rem; }
+#visSection .diagram-step-label{ margin-bottom: .4rem; }
+#visSection .plan-sheet{ margin: .6rem 0; }
+#visSection .layer-legend{ margin-top: .6rem; }
+#visSection .callout{ padding: .75rem 1rem; margin: .75rem 0 !important; }
 
 /* ---------- Language toggle ---------- */
 .lang-toggle{
@@ -1565,6 +1581,13 @@ code[class*="language-"]{
   color: var(--amber);
   font-size: 1.2rem;
   flex-shrink: 0;
+}
+.diagram-step-arrow i{
+  animation: cadArrowPulse 1.6s ease-in-out infinite;
+}
+@keyframes cadArrowPulse{
+  0%, 100%{ opacity: .35; transform: translateX(0); }
+  50%{ opacity: 1; transform: translateX(3px); }
 }
 
 /* Animated sequence */

@@ -916,7 +916,7 @@ function initCmdCopy(){
 
 /* ---------- Enlace a ejemplo visual desde el diccionario ---------- */
 const VISUAL_MAP = {
-  line: 'vis-line', pline: 'vis-line', offset: 'vis-offset', trim: 'vis-trim',
+  line: 'vis-line', pline: 'vis-pline', offset: 'vis-offset', trim: 'vis-trim',
   fillet: 'vis-fillet', mirror: 'vis-mirror', array: 'vis-array', osnap: 'vis-osnap',
   layer: 'vis-layers', extrude: 'vis-extrude', union: 'vis-boolean', subtract: 'vis-boolean',
   chamfer: 'vis-chamfer', extend: 'vis-extend', stretch: 'vis-stretch', circle: 'vis-circle',
@@ -927,7 +927,11 @@ const VISUAL_MAP = {
   purge: 'vis-purge', audit: 'vis-purge', block: 'vis-block', insert: 'vis-block',
   ellipse: 'vis-ellipse', spline: 'vis-spline', mtext: 'vis-mtext', text: 'vis-text',
   break: 'vis-break', align: 'vis-align', divide: 'vis-divide', revolve: 'vis-revolve',
-  loft: 'vis-loft', area: 'vis-area', dist: 'vis-dist', layeriso: 'vis-layeriso'
+  loft: 'vis-loft', area: 'vis-area', dist: 'vis-dist', layeriso: 'vis-layeriso',
+  ttr: 'vis-ttr', donut: 'vis-donut', xline: 'vis-xline', pedit: 'vis-pedit',
+  matchprop: 'vis-matchprop', lengthen: 'vis-lengthen', arraypolar: 'vis-arraypolar',
+  dimstyle: 'vis-dimstyle', ucs: 'vis-ucs', linetype: 'vis-linetype', ltscale: 'vis-linetype',
+  presspull: 'vis-presspull', slice: 'vis-slice', dimcontinue: 'vis-dimcontinue'
 };
 
 function initCmdVisualLinks(){

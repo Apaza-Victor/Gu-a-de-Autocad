@@ -35,6 +35,7 @@
 
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/responsive.css">
+<link rel="stylesheet" href="assets/css/3d.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -58,6 +59,8 @@
 <body>
 
 <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+<canvas id="cadbgCanvas" class="cadbg-canvas" aria-hidden="true"></canvas>
 
 <!-- ===================== NAVBAR ===================== -->
 <nav class="navbar navbar-cad navbar-expand-lg">
@@ -134,58 +137,20 @@
       </div>
 
       <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+        <div class="hero-3d-wrap">
+          <canvas id="hero3dCanvas" aria-hidden="true"></canvas>
+        </div>
         <div class="drawing-sheet">
           <div class="sheet-head">
             <span class="sheet-dots"><span style="background:var(--layer-red)"></span><span style="background:var(--layer-yellow)"></span><span style="background:var(--layer-green)"></span></span>
             <span>PLANO-01.DWG</span>
             <span>ESCALA 1:50</span>
           </div>
-          <div class="ratio ratio-4x3 plan-canvas" style="border:1px dashed var(--border); border-radius:6px; overflow:hidden;">
-            <svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Plano de planta de ejemplo">
-              <defs>
-                <pattern id="planGrid" width="20" height="20" patternUnits="userSpaceOnUse">
-                  <path d="M20 0H0V20" fill="none" stroke="var(--border)" stroke-width="0.4"/>
-                </pattern>
-              </defs>
-              <rect width="320" height="240" fill="url(#planGrid)"/>
-
-              <g stroke="var(--layer-green)" stroke-width="0.8">
-                <line x1="36" y1="20" x2="150" y2="20"/>
-                <line x1="36" y1="14" x2="36" y2="26"/>
-                <line x1="150" y1="14" x2="150" y2="26"/>
-              </g>
-              <text x="93" y="16" fill="var(--layer-green)" font-family="'JetBrains Mono',monospace" font-size="8" text-anchor="middle">4200</text>
-
-              <rect x="36" y="36" width="248" height="168" fill="var(--amber-dim)" stroke="var(--amber)" stroke-width="5"/>
-              <line x1="140" y1="36" x2="140" y2="120" stroke="var(--layer-red)" stroke-width="3"/>
-
-              <line x1="110" y1="204" x2="150" y2="204" stroke="var(--bg-panel)" stroke-width="6"/>
-              <line x1="150" y1="204" x2="150" y2="164" stroke="var(--layer-cyan)" stroke-width="1.5"/>
-              <path d="M 150 164 A 40 40 0 0 0 110 204" fill="none" stroke="var(--layer-cyan)" stroke-width="1.5"/>
-
-              <line x1="180" y1="32" x2="236" y2="32" stroke="var(--layer-green)" stroke-width="1.5"/>
-              <line x1="180" y1="40" x2="236" y2="40" stroke="var(--layer-green)" stroke-width="1.5"/>
-
-              <rect x="182" y="150" width="50" height="30" rx="2" fill="var(--layer-magenta)" opacity="0.22" stroke="var(--layer-magenta)" stroke-width="1.5"/>
-              <rect x="166" y="186" width="18" height="8" fill="var(--layer-magenta)" opacity="0.45"/>
-              <rect x="230" y="186" width="18" height="8" fill="var(--layer-magenta)" opacity="0.45"/>
-
-              <g stroke="var(--layer-green)" stroke-width="0.8">
-                <line x1="36" y1="212" x2="284" y2="212"/>
-                <line x1="36" y1="206" x2="36" y2="218"/>
-                <line x1="284" y1="206" x2="284" y2="218"/>
-              </g>
-              <text x="160" y="208" fill="var(--layer-green)" font-family="'JetBrains Mono',monospace" font-size="8" text-anchor="middle">6200</text>
-
-              <g stroke="var(--layer-blue)" stroke-width="1">
-                <line x1="66" y1="120" x2="78" y2="120"/>
-                <line x1="102" y1="120" x2="114" y2="120"/>
-                <line x1="90" y1="102" x2="90" y2="114"/>
-                <line x1="90" y1="126" x2="90" y2="138"/>
-              </g>
-
-              <line class="plan-cursor" x1="246" y1="130" x2="246" y2="158" stroke="var(--amber)" stroke-width="1.5"/>
-            </svg>
+          <div class="plan-canvas plan-anim" style="aspect-ratio:4/3; border:1px dashed var(--border); border-radius:6px; overflow:hidden; position:relative;">
+            <svg id="plan2d" viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Plano de planta dibujado paso a paso y convertido a 3D"></svg>
+            <canvas id="plan3dCanvas" aria-hidden="true"></canvas>
+            <div class="cad3d-hud plan-hud" id="planHud"><i class="bi bi-pencil-square"></i><span id="planHudText">Paso 1/6 · Líneas de muro</span></div>
+            <button type="button" class="plan-replay" id="planReplay" title="Reproducir de nuevo"><i class="bi bi-arrow-counterclockwise"></i></button>
           </div>
           <div class="d-flex justify-content-between mono small text-muted-custom mt-3">
             <span>CAPA: Muros</span>
@@ -601,8 +566,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
 <script src="assets/js/i18n.js"></script>
 <script src="assets/js/search-index.js"></script>
+<script src="assets/js/cad-background.js"></script>
+<script src="assets/js/animations.js"></script>
+<script src="assets/js/three-hero.js"></script>
+<script src="assets/js/plan-3d.js"></script>
 <script src="assets/js/main.js"></script>
 
 </body>
