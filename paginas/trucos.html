@@ -209,7 +209,7 @@
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
             <div class="diagram-step">
-              <span class="diagram-step-label" data-cmd="DIMANGULAR" data-cmd-es="COTA ANGULAR">DIMANGULAR</span>
+              <span class="diagram-step-label" data-cmd="DIMANGULAR" data-cmd-es="ACOANGULO">DIMANGULAR</span>
               <svg viewBox="0 0 180 70">
                 <rect x="5" y="5" width="170" height="60" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="2"/>
                 <text class="cad-label" x="10" y="20" style="font-size:7px;fill:var(--layer-yellow)" data-i18n="tips.svg.208">acotar el ángulo</text>
@@ -563,12 +563,12 @@
               <text class="cad-label-cmd" x="12" y="54" style="font-size:7px">REC = RECTANGLE</text>
               <text class="cad-label-cmd" x="12" y="64" style="font-size:7px" data-cmd="O = OFFSET" data-cmd-es="O = DESFASE">O = OFFSET</text>
               <text class="cad-label-cmd" x="12" y="74" style="font-size:7px" data-cmd="TR = TRIM" data-cmd-es="TR = RECORTAR">TR = TRIM</text>
-              <text class="cad-label-cmd" x="12" y="84" style="font-size:7px" data-cmd="M = MOVE" data-cmd-es="M = MOVER">M = MOVE</text>
+              <text class="cad-label-cmd" x="12" y="84" style="font-size:7px" data-cmd="M = MOVE" data-cmd-es="M = DESPLAZA">M = MOVE</text>
               <text class="cad-label-cmd" x="12" y="94" style="font-size:7px" data-cmd="CO = COPY" data-cmd-es="CO = COPIAR">CO = COPY</text>
               <rect x="145" y="20" width="130" height="90" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="2"/>
               <text class="cad-label-cmd" x="152" y="34" style="font-size:7px" data-cmd="F = FILLET" data-cmd-es="F = EMPALME">F = FILLET</text>
               <text class="cad-label-cmd" x="152" y="44" style="font-size:7px" data-cmd="MI = MIRROR" data-cmd-es="MI = ESPEJO">MI = MIRROR</text>
-              <text class="cad-label-cmd" x="152" y="54" style="font-size:7px" data-cmd="RO = ROTATE" data-cmd-es="RO = ROTAR">RO = ROTATE</text>
+              <text class="cad-label-cmd" x="152" y="54" style="font-size:7px" data-cmd="RO = ROTATE" data-cmd-es="RO = GIRAR">RO = ROTATE</text>
               <text class="cad-label-cmd" x="152" y="70" style="font-size:8px;fill:var(--amber)" data-i18n="tips.svg.62">Atajos de vista:</text>
               <text class="cad-label-cmd" x="152" y="82" style="font-size:7px" data-cmd="Z+E = Zoom Extents" data-cmd-es="Z+E = Zoom Extensión">Z+E = Zoom Extents</text>
               <text class="cad-label-cmd" x="152" y="92" style="font-size:7px" data-cmd="Z+W = Zoom Window" data-cmd-es="Z+W = Zoom Ventana">Z+W = Zoom Window</text>
@@ -885,6 +885,121 @@
         </div>
       </div>
 
+      <!-- ====== ATAJO: Ctrl + clic = copia ====== -->
+      <div class="diagram-card" data-cat="atajos" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge" data-i18n="tips.badge.shortcut">Atajo esencial</span> <span data-i18n="tips.ctrlclick.title">Ctrl + clic = copia sobre la marcha</span></h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.ctrlclick.desc">Con un objeto seleccionado, mantén pulsada la tecla Ctrl y arrastra: AutoCAD crea una copia en vez de mover el original.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label" data-i18n="tips.svg.221">objeto seleccionado</span>
+              <svg viewBox="0 0 160 70">
+                <rect x="5" y="5" width="150" height="60" fill="var(--bg-elevated)" stroke="var(--layer-cyan)" rx="2"/>
+                <rect class="cad-fill" x="30" y="20" width="80" height="30" rx="2"/>
+                <circle class="cad-point-cyan" cx="35" cy="25" r="3"/>
+                <text class="cad-label-cmd" x="12" y="18" style="font-size:7px;fill:var(--layer-cyan)" data-i18n="tips.svg.222">mantén Ctrl + clic</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label" data-i18n="tips.svg.224">copia creada</span>
+              <svg viewBox="0 0 160 70">
+                <rect x="5" y="5" width="150" height="60" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+                <rect class="cad-fill" x="15" y="20" width="50" height="30" rx="2" opacity="0.4"/>
+                <text class="cad-label" x="15" y="58" style="font-size:6px" data-i18n="tips.svg.223">original se queda</text>
+                <rect class="cad-fill-new" x="85" y="20" width="50" height="30" rx="2"/>
+                <text class="cad-label" x="85" y="58" style="font-size:6px" data-i18n="tips.svg.224">copia creada</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="tips.callout.tip">Consejo</span>
+            <span data-i18n="tips.ctrlclick.tip">Ideal para duplicar muebles o detalles sin escribir CO. Combínalo con F8 (ORTO) para copias perfectamente alineadas.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== ATAJO: F7 cuadrícula / F9 forzado ====== -->
+      <div class="diagram-card" data-cat="atajos" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge" data-i18n="tips.badge.shortcut">Atajo esencial</span> <span data-i18n="tips.gridsnap.title">F7 cuadrícula y F9 forzado</span></h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.gridsnap.desc">F7 muestra u oculta la cuadrícula de referencia y F9 activa o desactiva el forzado del cursor a sus puntos (snap).</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 280 80">
+              <rect x="5" y="5" width="125" height="70" fill="var(--bg-elevated)" stroke="var(--layer-magenta)" rx="2"/>
+              <text class="cad-label-cmd" x="15" y="20" style="font-size:8px;fill:var(--layer-magenta)" data-i18n="tips.svg.226">sin cuadrícula</text>
+              <line x1="30" y1="40" x2="115" y2="40" class="cad-line-old"/>
+              <rect x="150" y="5" width="125" height="70" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+              <text class="cad-label-cmd" x="160" y="20" style="font-size:8px;fill:var(--layer-green)" data-i18n="tips.svg.227">con cuadrícula</text>
+              <line x1="160" y1="30" x2="270" y2="30" stroke="var(--layer-green)" stroke-width="1" stroke-dasharray="3,3"/>
+              <line x1="160" y1="42" x2="270" y2="42" stroke="var(--layer-green)" stroke-width="1" stroke-dasharray="3,3"/>
+              <line x1="160" y1="54" x2="270" y2="54" stroke="var(--layer-green)" stroke-width="1" stroke-dasharray="3,3"/>
+              <line x1="197" y1="24" x2="197" y2="66" stroke="var(--layer-green)" stroke-width="1" stroke-dasharray="3,3"/>
+              <line x1="233" y1="24" x2="233" y2="66" stroke="var(--layer-green)" stroke-width="1" stroke-dasharray="3,3"/>
+              <circle class="cad-point-cyan" cx="160" cy="42" r="3"/>
+              <text class="cad-label" x="5" y="79" style="font-size:7px;fill:var(--amber)" data-i18n="tips.svg.225">F7: cuadrícula</text>
+              <text class="cad-label" x="150" y="79" style="font-size:7px;fill:var(--amber)" data-i18n="tips.svg.228">F9: forzado</text>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="tips.callout.tip">Consejo</span>
+            <span data-i18n="tips.gridsnap.tip">El forzado (F9) engaña: si tus líneas no se tocan, revisa la rejilla y el forzado antes de acusar al plano.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== ATAJO: Ctrl+1 Propiedades ====== -->
+      <div class="diagram-card" data-cat="atajos" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge" data-i18n="tips.badge.shortcut">Atajo esencial</span> <span data-i18n="tips.props.title">Ctrl+1 abre Propiedades</span></h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.props.desc">Ctrl+1 abre o cierra la paleta PROPIEDADES del objeto seleccionado: capa, color, tipo de línea y mucho más.</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 280 80">
+              <rect x="8" y="5" width="120" height="70" fill="var(--bg-elevated)" stroke="var(--layer-cyan)" rx="2"/>
+              <text class="cad-label-cmd" x="18" y="20" style="font-size:8px;fill:var(--layer-cyan)" data-i18n="tips.svg.230">Ctrl+1</text>
+              <text class="cad-label" x="18" y="35" style="font-size:7px" data-i18n="tips.svg.232">Capa: MUROS</text>
+              <text class="cad-label" x="18" y="47" style="font-size:7px" data-i18n="tips.svg.233">Color: rojo</text>
+              <text class="cad-label" x="18" y="59" style="font-size:7px" data-i18n="tips.svg.234">Tipo de línea: HIDDEN</text>
+              <rect class="cad-fill" x="155" y="22" width="60" height="30" rx="2"/>
+              <text class="cad-label" x="150" y="64" style="font-size:6px" data-i18n="tips.svg.223">original se queda</text>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="tips.callout.tip">Consejo</span>
+            <span data-i18n="tips.props.tip">La paleta Propiedades es la herramienta diaria del profesional: edita todo sin buscar botones.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== ATAJO: F2 historial ====== -->
+      <div class="diagram-card" data-cat="atajos" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge" data-i18n="tips.badge.shortcut">Atajo esencial</span> <span data-i18n="tips.f2.title">F2 muestra el historial</span></h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.f2.desc">F2 abre la ventana de texto con todo el historial de comandos de la sesión: lo que escribiste, errores y resultados.</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 280 80">
+              <rect x="5" y="5" width="270" height="70" fill="var(--bg-elevated)" stroke="var(--layer-magenta)" rx="2"/>
+              <text class="cad-label-cmd" x="15" y="20" style="font-size:8px;fill:var(--layer-magenta)" data-i18n="tips.svg.235">F2</text>
+              <text class="cad-label" x="15" y="36" style="font-size:7px" data-i18n="tips.svg.237">Command: LINE</text>
+              <text class="cad-label" x="15" y="49" style="font-size:7px" data-i18n="tips.svg.238">Command: TRIM</text>
+              <text class="cad-label" x="15" y="62" style="font-size:7px" data-i18n="tips.svg.239">historial de la sesión</text>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="tips.callout.tip">Consejo</span>
+            <span data-i18n="tips.f2.tip">Cuando un comando "no hace nada", abre F2 y verás exactamente qué esperaba AutoCAD de ti.</span>
+          </div>
+        </div>
+      </div>
+
       <!-- ====== ERRORES: Huecos falsos ====== -->
       <div class="diagram-card" data-cat="errores" data-aos="fade-up" data-aos-delay="60">
         <div class="diagram-card-head">
@@ -1142,18 +1257,18 @@
               <line x1="90" y1="38" x2="90" y2="46" stroke="var(--layer-cyan)" stroke-width="1"/>
               <text class="cad-label" x="38" y="33" style="font-size:6px;fill:var(--layer-cyan)">4.50</text>
               <rect x="143" y="5" width="132" height="50" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="2"/>
-              <text class="cad-label-cmd" x="150" y="18" style="font-size:6px;fill:var(--layer-green)" data-cmd="DIMALIGNED" data-cmd-es="ACOALINEADA">DIMALIGNED</text>
+              <text class="cad-label-cmd" x="150" y="18" style="font-size:6px;fill:var(--layer-green)" data-cmd="DIMALIGNED" data-cmd-es="ACOLINEADA">DIMALIGNED</text>
               <line x1="155" y1="46" x2="230" y2="22" stroke="var(--layer-green)" stroke-width="1.5"/>
               <line x1="155" y1="46" x2="230" y2="22" stroke="var(--layer-green)" stroke-width="1"/>
               <text class="cad-label" x="185" y="38" style="font-size:6px;fill:var(--layer-green)">3.20</text>
               <rect x="5" y="61" width="132" height="46" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="2"/>
-              <text class="cad-label-cmd" x="12" y="74" style="font-size:6px;fill:var(--layer-yellow)" data-cmd="DIMANGULAR" data-cmd-es="COTA ANGULAR">DIMANGULAR</text>
+              <text class="cad-label-cmd" x="12" y="74" style="font-size:6px;fill:var(--layer-yellow)" data-cmd="DIMANGULAR" data-cmd-es="ACOANGULO">DIMANGULAR</text>
               <line x1="18" y1="95" x2="70" y2="80" stroke="var(--layer-yellow)" stroke-width="1.5"/>
               <line x1="70" y1="80" x2="92" y2="68" stroke="var(--layer-yellow)" stroke-width="1.5"/>
               <path d="M 35 90 A 16 16 0 0 0 79 72" fill="none" stroke="var(--layer-yellow)" stroke-width="1"/>
               <text class="cad-label" x="40" y="101" style="font-size:6px;fill:var(--layer-yellow)">45°</text>
               <rect x="143" y="61" width="132" height="46" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="2"/>
-              <text class="cad-label-cmd" x="150" y="74" style="font-size:6px;fill:var(--layer-red)" data-cmd="DIMRADIUS" data-cmd-es="COTA RADIO">DIMRADIUS</text>
+              <text class="cad-label-cmd" x="150" y="74" style="font-size:6px;fill:var(--layer-red)" data-cmd="DIMRADIUS" data-cmd-es="ACORADIO">DIMRADIUS</text>
               <circle cx="190" cy="92" r="14" fill="none" stroke="var(--layer-red)" stroke-width="1.5"/>
               <line x1="204" y1="92" x2="235" y2="80" stroke="var(--layer-red)" stroke-width="1"/>
               <line x1="229" y1="80" x2="235" y2="80" stroke="var(--layer-red)" stroke-width="1"/>
@@ -1461,7 +1576,7 @@
               <text class="cad-label-cmd" x="90" y="82" style="font-size:12px;fill:var(--amber)">→</text>
               <rect x="100" y="64" width="80" height="34" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
               <text class="cad-label" x="107" y="76" style="font-size:6px;fill:var(--layer-green)">5</text>
-              <text class="cad-label" x="117" y="76" style="font-size:6px" data-cmd="FILLET · CHAMFER" data-cmd-es="EMPALME · CHAFLETE">FILLET · CHAMFER</text>
+              <text class="cad-label" x="117" y="76" style="font-size:6px" data-cmd="FILLET · CHAMFER" data-cmd-es="EMPALME · CHAFLÁN">FILLET · CHAMFER</text>
               <text class="cad-label" x="117" y="86" style="font-size:6px" data-i18n="tips.svg.188">redondea el 3D</text>
               <text class="cad-label-cmd" x="185" y="82" style="font-size:12px;fill:var(--amber)">→</text>
               <rect x="195" y="64" width="80" height="34" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>

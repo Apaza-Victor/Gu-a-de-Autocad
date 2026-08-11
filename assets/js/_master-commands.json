@@ -66,28 +66,28 @@
     "cmd": "CIRCLE-TTR",
     "cat": "dibujo",
     "level": "basico",
-    "keys": "TTR",
+    "keys": "C → TTR",
     "cmdEs": "CÍRCULO TTR",
-    "keysEs": "TTR",
-    "desc": "Círculo tangente a dos objetos con un radio definido. Opción TTR del comando CIRCLE."
+    "keysEs": "C → TTR",
+    "desc": "Círculo tangente a dos objetos con un radio definido. No es un atajo directo: escribe C (CIRCLE) y elige la opción TTR."
   },
   {
     "cmd": "CIRCLE-TTT",
     "cat": "dibujo",
     "level": "basico",
-    "keys": "TTT",
+    "keys": "C → TTT",
     "cmdEs": "CÍRCULO TTT",
-    "keysEs": "TTT",
-    "desc": "Círculo tangente a tres objetos. Opción TTT (tangente, tangente, tangente) del comando CIRCLE."
+    "keysEs": "C → TTT",
+    "desc": "Círculo tangente a tres objetos. No es un atajo directo: escribe C (CIRCLE) y elige la opción TTT (tangente, tangente, tangente)."
   },
   {
     "cmd": "CIRCLE-D",
     "cat": "dibujo",
     "level": "basico",
-    "keys": "D",
+    "keys": "C → D",
     "cmdEs": "CÍRCULO D",
-    "keysEs": "D",
-    "desc": "Círculo dibujado por su diámetro: dos puntos opuestos. Opción D del comando CIRCLE."
+    "keysEs": "C → D",
+    "desc": "Círculo dibujado por su diámetro: dos puntos opuestos. No es un atajo directo: escribe C (CIRCLE) y elige la opción D (diámetro)."
   },
   {
     "cmd": "DIVIDE",
@@ -221,7 +221,7 @@
     "level": "basico",
     "keys": "PL",
     "cmdEs": "POLILÍNEA",
-    "keysEs": "PL",
+    "keysEs": "POL",
     "desc": "Serie de segmentos rectos y curvos unidos como un solo objeto polilínea."
   },
   {
@@ -239,7 +239,7 @@
     "level": "basico",
     "keys": "POL",
     "cmdEs": "POLÍGONO",
-    "keysEs": "POL",
+    "keysEs": "PG",
     "desc": "Polígono regular inscrito o circunscrito en un círculo."
   },
   {
@@ -410,7 +410,7 @@
     "level": "intermedio",
     "keys": "AL",
     "cmdEs": "ALINEAR",
-    "keysEs": "AL",
+    "keysEs": "ALI",
     "desc": "Alinea objetos definiendo puntos de origen y destino. Puede mover, rotar y escalar simultáneamente."
   },
   {
@@ -428,7 +428,7 @@
     "level": "intermedio",
     "keys": "AR",
     "cmdEs": "MATRIZ",
-    "keysEs": "MC",
+    "keysEs": "MA",
     "desc": "Repite objetos en filas/columnas, en círculo o a lo largo de una ruta."
   },
   {
@@ -526,8 +526,8 @@
     "cat": "modificacion",
     "level": "basico",
     "keys": "CHA",
-    "cmdEs": "CHAFLETE",
-    "keysEs": "CHA",
+    "cmdEs": "CHAFLÁN",
+    "keysEs": "CH",
     "desc": "Une dos líneas con un corte recto en la esquina (chaflán)."
   },
   {
@@ -697,7 +697,7 @@
     "cat": "modificacion",
     "level": "basico",
     "keys": "EX",
-    "cmdEs": "EXTENDER",
+    "cmdEs": "ALARGA",
     "keysEs": "AL",
     "desc": "Extiende un objeto hasta tocar un límite de referencia."
   },
@@ -716,7 +716,7 @@
     "level": "basico",
     "keys": "F",
     "cmdEs": "EMPALME",
-    "keysEs": "EM",
+    "keysEs": "MP",
     "desc": "Une dos líneas con un arco de radio definido (empalme)."
   },
   {
@@ -805,8 +805,8 @@
     "cat": "modificacion",
     "level": "intermedio",
     "keys": "MA",
-    "cmdEs": "COPYPROP",
-    "keysEs": "MA",
+    "cmdEs": "IGUALARPROP",
+    "keysEs": "IP",
     "desc": "Copia propiedades (capa, color, tipo de línea) de un objeto a otro."
   },
   {
@@ -868,7 +868,7 @@
     "cat": "modificacion",
     "level": "basico",
     "keys": "M",
-    "cmdEs": "MOVER",
+    "cmdEs": "DESPLAZA",
     "keysEs": "D",
     "desc": "Traslada objetos de un punto base a un punto destino."
   },
@@ -1048,7 +1048,7 @@
     "cat": "modificacion",
     "level": "basico",
     "keys": "RO",
-    "cmdEs": "ROTAR",
+    "cmdEs": "GIRAR",
     "keysEs": "GI",
     "desc": "Gira objetos un ángulo respecto a un punto base."
   },
@@ -1067,7 +1067,7 @@
     "level": "basico",
     "keys": "SC",
     "cmdEs": "ESCALAR",
-    "keysEs": "ESC",
+    "keysEs": "ES",
     "desc": "Aumenta o reduce el tamaño de objetos respecto a un punto base."
   },
   {
@@ -1112,7 +1112,7 @@
     "level": "basico",
     "keys": "TR",
     "cmdEs": "RECORTAR",
-    "keysEs": "RC",
+    "keysEs": "RR",
     "desc": "Recorta objetos hasta el límite de otro objeto de referencia."
   },
   {
@@ -1625,7 +1625,7 @@
     "level": "basico",
     "keys": "MEA",
     "cmdEs": "MEDIRGEOM",
-    "keysEs": "MEA",
+    "keysEs": "MG",
     "desc": "Mide distancia, radio, ángulo, área y volumen de objetos o puntos."
   },
   {
@@ -2110,8 +2110,8 @@
     "cat": "acotacion",
     "level": "basico",
     "keys": "DAL",
-    "cmdEs": "ACOALINEADA",
-    "keysEs": "ACOA",
+    "cmdEs": "ACOLINEADA",
+    "keysEs": "ACA",
     "desc": "Cota paralela a una línea inclinada."
   },
   {
@@ -2119,8 +2119,8 @@
     "cat": "acotacion",
     "level": "basico",
     "keys": "DAN",
-    "cmdEs": "COTA ANGULAR",
-    "keysEs": "ACOAN",
+    "cmdEs": "ACOANGULO",
+    "keysEs": "ACG",
     "desc": "Crea una cota angular que mide el ángulo entre dos líneas o definido por tres puntos."
   },
   {
@@ -2182,8 +2182,8 @@
     "cat": "acotacion",
     "level": "basico",
     "keys": "DDI",
-    "cmdEs": "COTA DIÁMETRO",
-    "keysEs": "ACODI",
+    "cmdEs": "ACODIÁMETRO",
+    "keysEs": "ACD",
     "desc": "Crea una cota de diámetro para un círculo o arco, mostrando el símbolo Ø y el valor."
   },
   {
@@ -2264,7 +2264,7 @@
     "level": "basico",
     "keys": "DLI",
     "cmdEs": "ACOLINEAL",
-    "keysEs": "ACOL",
+    "keysEs": "ACL",
     "desc": "Crea una cota lineal horizontal o vertical entre dos puntos."
   },
   {
@@ -2308,8 +2308,8 @@
     "cat": "acotacion",
     "level": "basico",
     "keys": "DRA",
-    "cmdEs": "COTA RADIO",
-    "keysEs": "ACORA",
+    "cmdEs": "ACORADIO",
+    "keysEs": "ACR",
     "desc": "Crea una cota de radio para un círculo o arco, mostrando el valor del radio."
   },
   {
@@ -2362,8 +2362,8 @@
     "cat": "acotacion",
     "level": "intermedio",
     "keys": "D",
-    "cmdEs": "ACOESTIL",
-    "keysEs": "D",
+    "cmdEs": "ESTILOCOTA",
+    "keysEs": "ESC",
     "desc": "Administra estilos de cota: tamaño de texto, flechas, unidades y precisión."
   },
   {
@@ -2605,8 +2605,8 @@
     "cat": "texto",
     "level": "basico",
     "keys": "T,MT",
-    "cmdEs": "TEXTO MULTILÍNEA",
-    "keysEs": "T,MT",
+    "cmdEs": "TEXTOM",
+    "keysEs": "TXM",
     "desc": "Texto multilínea con formato rich text dentro de un cuadro definido."
   },
   {
@@ -2651,7 +2651,7 @@
     "level": "intermedio",
     "keys": "ST",
     "cmdEs": "ESTILO",
-    "keysEs": "ST",
+    "keysEs": "ET",
     "desc": "Define fuente, altura y estilo por defecto para los textos del dibujo."
   },
   {
@@ -3047,7 +3047,7 @@
     "level": "intermedio",
     "keys": "",
     "cmdEs": "EDITARBLOQUE",
-    "keysEs": "",
+    "keysEs": "EB",
     "desc": "Abre el editor de bloques para modificar el contenido de un bloque definido."
   },
   {
@@ -3370,7 +3370,7 @@
     "cat": "bloques",
     "level": "basico",
     "keys": "I",
-    "cmdEs": "INSERTAR",
+    "cmdEs": "INSERT",
     "keysEs": "I",
     "desc": "Inserta un bloque existente en el dibujo actual."
   },
@@ -5602,8 +5602,8 @@
     "cat": "consulta",
     "level": "basico",
     "keys": "P",
-    "cmdEs": "DESPLAZAR",
-    "keysEs": "P",
+    "cmdEs": "ENCUADRE",
+    "keysEs": "EN",
     "desc": "Desplaza la vista del dibujo sin cambiar el zoom. También se activa manteniendo la rueda del ratón."
   },
   {
@@ -5666,7 +5666,7 @@
     "level": "intermedio",
     "keys": "PU",
     "cmdEs": "LIMPIA",
-    "keysEs": "PU",
+    "keysEs": "LI",
     "desc": "Elimina elementos no utilizados del archivo: capas, bloques, estilos, tipos de línea."
   },
   {
@@ -5783,7 +5783,7 @@
     "level": "basico",
     "keys": "RE",
     "cmdEs": "REGENERAR",
-    "keysEs": "RE",
+    "keysEs": "RG",
     "desc": "Regenera todo el dibujo desde la base de datos. Útil cuando los círculos se ven segmentados."
   },
   {
