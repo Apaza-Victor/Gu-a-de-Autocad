@@ -1625,6 +1625,110 @@
         </div>
       </div>
 
+      <!-- ====== AVANZADO: Texturas y sombreados (HATCH) ====== -->
+      <div class="diagram-card" data-cat="avanzado" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge" data-i18n="tips.badge.advanced">Avanzado</span> <span data-i18n="tips.texture.title">Texturas con HATCH: el patrón correcto</span></h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.texture.desc">HATCH (H) rellena un área cerrada con un patrón. En planos se usan convenciones: ANSI31 para secciones, AR-CONC para concreto, AR-BOZZ para grava y SOLID para rellenos macizos.</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 280 90">
+              <rect x="5" y="5" width="125" height="60" fill="var(--bg-elevated)" stroke="var(--layer-cyan)" rx="3"/>
+              <text class="cad-label-cmd" x="12" y="20" style="font-size:7px;fill:var(--layer-cyan)" data-i18n="tips.svg.240">H + clic dentro</text>
+              <text class="cad-label" x="12" y="36" style="font-size:6px" data-i18n="tips.svg.241">área cerrada</text>
+              <line x1="15" y1="46" x2="115" y2="46" stroke="var(--layer-cyan)" stroke-width="1" stroke-dasharray="4,3"/>
+              <line x1="20" y1="41" x2="24" y2="51" stroke="var(--layer-cyan)" stroke-width="1"/>
+              <line x1="30" y1="41" x2="34" y2="51" stroke="var(--layer-cyan)" stroke-width="1"/>
+              <line x1="40" y1="41" x2="44" y2="51" stroke="var(--layer-cyan)" stroke-width="1"/>
+              <line x1="50" y1="41" x2="54" y2="51" stroke="var(--layer-cyan)" stroke-width="1"/>
+              <line x1="60" y1="41" x2="64" y2="51" stroke="var(--layer-cyan)" stroke-width="1"/>
+              <line x1="70" y1="41" x2="74" y2="51" stroke="var(--layer-cyan)" stroke-width="1"/>
+              <text class="cad-label" x="5" y="80" style="font-size:7px;fill:var(--amber)" data-i18n="tips.svg.242">ANSI31 · AR-CONC · SOLID</text>
+              <rect x="150" y="5" width="125" height="60" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="3"/>
+              <text class="cad-label-cmd" x="157" y="20" style="font-size:7px;fill:var(--layer-green)" data-i18n="tips.svg.243">escala y ángulo</text>
+              <text class="cad-label" x="157" y="36" style="font-size:6px" data-i18n="tips.svg.244">¿patrón muy denso o gigante?</text>
+              <text class="cad-label" x="157" y="48" style="font-size:6px" data-i18n="tips.svg.245">ajusta la ESCALA del hatch</text>
+              <text class="cad-label" x="157" y="60" style="font-size:6px" data-i18n="tips.svg.246">en el editor, sin rehacerlo</text>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="tips.callout.protip">Pro tip</span>
+            <span data-i18n="tips.texture.tip">Si el patrón se ve muy denso o gigante, no lo rehagas: cambia la ESCALA del hatch. Para planos a 1:50 prueba escalas de 0.5 a 2 y ajusta el ÁNGULO a 45°.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== AVANZADO: Hatch asociativo ====== -->
+      <div class="diagram-card" data-cat="avanzado" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge" data-i18n="tips.badge.advanced">Avanzado</span> <span data-i18n="tips.hatchassoc.title">Hatch asociativo: se actualiza solo</span></h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.hatchassoc.desc">Un hatch asociativo está vinculado a su contorno: si lo mueves o redimensionas con los grips, el sombreado se actualiza solo. Usa HATCHEDIT (HE) para cambiar patrón, escala o ángulo sin recrearlo.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label" data-i18n="tips.svg.247">dibujo original</span>
+              <svg viewBox="0 0 160 70">
+                <rect x="5" y="5" width="150" height="60" fill="var(--bg-elevated)" stroke="var(--layer-cyan)" rx="2"/>
+                <rect class="cad-fill" x="30" y="15" width="80" height="40" rx="2" opacity="0.6"/>
+                <line x1="38" y1="25" x2="48" y2="45" stroke="var(--layer-cyan)" stroke-width="1"/>
+                <line x1="52" y1="25" x2="62" y2="45" stroke="var(--layer-cyan)" stroke-width="1"/>
+                <line x1="66" y1="25" x2="76" y2="45" stroke="var(--layer-cyan)" stroke-width="1"/>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label" data-i18n="tips.svg.248">mueve el contorno</span>
+              <svg viewBox="0 0 160 70">
+                <rect x="5" y="5" width="150" height="60" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+                <rect class="cad-fill" x="20" y="15" width="60" height="40" rx="2" opacity="0.6"/>
+                <line x1="26" y1="25" x2="34" y2="45" stroke="var(--layer-green)" stroke-width="1"/>
+                <line x1="38" y1="25" x2="46" y2="45" stroke="var(--layer-green)" stroke-width="1"/>
+                <line x1="50" y1="25" x2="58" y2="45" stroke="var(--layer-green)" stroke-width="1"/>
+                <rect class="cad-fill" x="90" y="15" width="60" height="40" rx="2" opacity="0.6"/>
+                <line x1="96" y1="25" x2="104" y2="45" stroke="var(--layer-green)" stroke-width="1"/>
+                <line x1="108" y1="25" x2="116" y2="45" stroke="var(--layer-green)" stroke-width="1"/>
+                <line x1="120" y1="25" x2="128" y2="45" stroke="var(--layer-green)" stroke-width="1"/>
+                <text class="cad-label-cmd" x="12" y="14" style="font-size:6px;fill:var(--layer-green)" data-i18n="tips.svg.249">el hatch se actualiza solo ✓</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="tips.callout.tip">Consejo</span>
+            <span data-i18n="tips.hatchassoc.tip">Aplica el hatch SIEMPRE dentro de un contorno cerrado (dibújalo con PLINE). Si AutoCAD lo crea "desasociado", el contorno tenía huecos: usa BOUNDARY para detectar fugas.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== AVANZADO: Sólidos y materiales en 3D ====== -->
+      <div class="diagram-card" data-cat="avanzado" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge" data-i18n="tips.badge.advanced">Avanzado</span> <span data-i18n="tips.material.title">Sólidos y materiales en 3D</span></h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n="tips.material.desc">Para rellenos planos usa HATCH con patrón SOLID o degradado. En 3D, MAT abre el editor de materiales (textura, brillo, transparencia) y MATERIALMAP ajusta cómo se proyecta la textura sobre la cara.</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 280 80">
+              <rect x="5" y="5" width="125" height="60" fill="var(--bg-elevated)" stroke="var(--layer-cyan)" rx="3"/>
+              <text class="cad-label-cmd" x="12" y="20" style="font-size:7px;fill:var(--layer-cyan)" data-i18n="tips.svg.250">MAT</text>
+              <text class="cad-label" x="12" y="36" style="font-size:6px" data-i18n="tips.svg.251">editor de materiales</text>
+              <text class="cad-label" x="12" y="48" style="font-size:6px" data-i18n="tips.svg.252">asigna a una cara u objeto</text>
+              <text class="cad-label-cmd" x="12" y="62" style="font-size:10px;fill:var(--amber)">→</text>
+              <rect x="150" y="5" width="125" height="60" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="3"/>
+              <text class="cad-label-cmd" x="157" y="20" style="font-size:7px;fill:var(--layer-green)" data-i18n="tips.svg.253">MATERIALMAP</text>
+              <text class="cad-label" x="157" y="36" style="font-size:6px" data-i18n="tips.svg.254">mapeado UV: planar,</text>
+              <text class="cad-label" x="157" y="48" style="font-size:6px" data-i18n="tips.svg.255">cilíndrico o esférico</text>
+              <text class="cad-label" x="157" y="60" style="font-size:6px" data-i18n="tips.svg.256">¿estirada? cambia la proyección</text>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span class="callout-title" data-i18n="tips.callout.tip">Consejo</span>
+            <span data-i18n="tips.material.tip">¿La textura se ve estirada o descolocada? El problema suele estar en el mapeado, no en el material: prueba a cambiar la proyección planar por cilíndrica o esférica.</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
