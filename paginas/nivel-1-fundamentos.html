@@ -306,27 +306,233 @@
           <!-- 5. Configuración inicial -->
           <section id="configuracion" data-topic="nivel1-configuracion">
             <h2><span class="sec-num">5</span><span data-i18n="lvl1.s5.title">Configuración inicial de un dibujo</span></h2>
-            <p>Antes de empezar cualquier proyecto real, define estos parámetros para evitar tener que corregir todo el dibujo después:</p>
+            <p>Antes de dibujar una sola línea, define las unidades, los límites del área de trabajo y la cuadrícula. Un archivo bien configurado se dibuja el doble de rápido y evita el error más común de los principiantes: <strong>cotas gigantes, objetos microscópicos o escalas incorrectas</strong>.</p>
 
-            <h3>Unidades de dibujo</h3>
-            <p>Se configuran con el comando <span class="cmd-inline">UNITS</span> (o <span class="cmd-inline">UNIDADES</span>). Define la unidad de longitud (milímetros, centímetros, metros o pulgadas) y la precisión decimal. En arquitectura e ingeniería civil en países de habla hispana, lo más común es trabajar en <strong>milímetros o centímetros</strong> a escala real.</p>
+            <!-- ====== UNIDADES DE MEDIDA ====== -->
+            <h3>Unidades de dibujo — el comando UNITS</h3>
+            <p>Escribe <span class="cmd-inline">UNITS</span> (o <span class="cmd-inline">UNIDADES</span>) y se abre el cuadro de diálogo. Allí defines:</p>
+            <ul>
+              <li><strong>Type (Tipo):</strong> Decimal, Architectural, Engineering, Fractional o Scientific. Para métrico, usa <strong>Decimal</strong>.</li>
+              <li><strong>Precision (Precisión):</strong> cuántos decimales muestra. Para mm usa <code>0</code>, para metros usa <code>0.00</code> o <code>0.000</code>.</li>
+              <li><strong>Insertion scale (Escala de inserción):</strong> la unidad con la que se insertan bloques y archivos externos. Debe coincidir con la unidad de tu dibujo.</li>
+            </ul>
 
-            <h3>Formato de dibujo y plantilla</h3>
-            <p>Una plantilla (archivo <strong>.DWT</strong>) guarda de antemano las capas, estilos de texto, de cota y de tabla que usarás en todos tus proyectos, para no configurarlos cada vez desde cero.</p>
+            <div class="callout warn">
+              <span class="callout-title">Error común</span>
+              Si dibujas un muro de 3 metros pero configuraste las unidades en milímetros, el muro medirá 3000 unidades. Si después insertas un bloque que mide en metros, aparecerá 1000 veces más grande. <strong>Las unidades deben ser consistentes en todo el proyecto.</strong>
+            </div>
 
-            <h3>Capas base recomendadas para empezar</h3>
+            <!-- ====== TABLA COMPARATIVA DE UNIDADES ====== -->
+            <h3>Tabla comparativa de unidades de medida</h3>
+            <p>AutoCAD no tiene una unidad "oficial": tú decides qué representa cada unidad de dibujo. La tabla siguiente te ayuda a elegir la unidad correcta según tu disciplina:</p>
+
             <table class="table-cad">
-              <thead><tr><th>Capa</th><th>Color sugerido</th><th>Uso</th></tr></thead>
+              <thead>
+                <tr><th>Unidad</th><th>Símbolo</th><th>Equivalencia</th><th>Disciplina típica</th><th>Precision decimal</th><th>Ejemplo en dibujo</th></tr>
+              </thead>
               <tbody>
-                <tr><td>0-Ejes</td><td><span style="color:var(--layer-red)">■</span> Rojo</td><td>Ejes estructurales o de referencia</td></tr>
-                <tr><td>1-Muros</td><td><span style="color:var(--layer-yellow)">■</span> Amarillo</td><td>Muros y elementos constructivos</td></tr>
-                <tr><td>2-Cotas</td><td><span style="color:var(--layer-green)">■</span> Verde</td><td>Acotaciones y anotaciones</td></tr>
-                <tr><td>3-Textos</td><td><span style="color:var(--layer-cyan)">■</span> Cian</td><td>Textos generales y etiquetas</td></tr>
-                <tr><td>4-Auxiliar</td><td><span style="color:var(--layer-magenta)">■</span> Magenta</td><td>Líneas de construcción temporales</td></tr>
+                <tr>
+                  <td><strong>Milímetros</strong></td>
+                  <td>mm</td>
+                  <td>1 m = 1000 mm</td>
+                  <td>Arquitectura (Latinoamérica), mecánica</td>
+                  <td><code>0</code> (sin decimales)</td>
+                  <td>Muro de 15 cm = <strong>150</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Centímetros</strong></td>
+                  <td>cm</td>
+                  <td>1 m = 100 cm</td>
+                  <td>Arquitectura, mobiliario</td>
+                  <td><code>0.0</code></td>
+                  <td>Muro de 15 cm = <strong>15</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Decímetros</strong></td>
+                  <td>dm</td>
+                  <td>1 m = 10 dm</td>
+                  <td>Poco usado en AutoCAD</td>
+                  <td><code>0.0</code></td>
+                  <td>Muro de 15 cm = <strong>1.5</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Metros</strong></td>
+                  <td>m</td>
+                  <td>Unidad base del SI</td>
+                  <td>Ingeniería civil, topografía, instalaciones</td>
+                  <td><code>0.00</code> o <code>0.000</code></td>
+                  <td>Muro de 15 cm = <strong>0.15</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Kilómetros</strong></td>
+                  <td>km</td>
+                  <td>1 km = 1000 m</td>
+                  <td>Infraestructura vial, planificación urbana</td>
+                  <td><code>0.00</code></td>
+                  <td>Carretera de 5 km = <strong>5</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Pulgadas</strong></td>
+                  <td>in</td>
+                  <td>1 in = 25.4 mm</td>
+                  <td>Estados Unidos (US customary)</td>
+                  <td>Architectural / Fractional</td>
+                  <td>Muro de 6" = <strong>6</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Pies</strong></td>
+                  <td>ft</td>
+                  <td>1 ft = 304.8 mm</td>
+                  <td>Estados Unidos, ingeniería civil</td>
+                  <td>Engineering / Architectural</td>
+                  <td>Habitación de 12 ft = <strong>12</strong></td>
+                </tr>
               </tbody>
             </table>
 
-            <p>En el <strong>Nivel 2</strong> verás en detalle cómo crear y administrar estas capas dentro del panel correspondiente.</p>
+            <div class="callout">
+              <span class="callout-title">¿Qué unidad elegir?</span>
+              <p><strong>Arquitectura en Latinoamérica:</strong> milímetros (mm) es el estándar más usado. Dibujas un muro de 15 cm como 150 unidades.</p>
+              <p><strong>Ingeniería civil / topografía:</strong> metros (m). Dibujas un terreno de 50 × 30 m como 50,30 unidades.</p>
+              <p><strong>Mecánica:</strong> milímetros (mm) para piezas pequeñas, metros para estructuras grandes.</p>
+              <p><strong>Si trabajas con planos de EE.UU.:</strong> pies (ft) o pulgadas (in) en formato Architectural.</p>
+            </div>
+
+            <!-- ====== TUTORIAL UNITS PASO A PASO ====== -->
+            <h3>Tutorial: configurar unidades paso a paso</h3>
+
+            <div class="lesson-step">
+              <span class="lesson-num">1</span>
+              <div class="lesson-body">
+                <h4>Abre el cuadro de unidades</h4>
+                <p>Escribe <span class="cmd-inline">UNITS</span> o <span class="cmd-inline">UNIDADES</span> en la línea de comandos y presiona Enter. Se abre el diálogo "Drawing Units".</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">2</span>
+              <div class="lesson-body">
+                <h4>Configura el tipo de longitud</h4>
+                <p>En <strong>L Length → Type</strong>, selecciona <strong>Decimal</strong> (para sistema métrico) o <strong>Architectural</strong> (para pies/pulgadas). Para metros, siempre usa Decimal.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">3</span>
+              <div class="lesson-body">
+                <h4>Ajusta la precisión</h4>
+                <p>En <strong>L Length → Precision</strong>, elige cuántos decimales:</p>
+                <ul>
+                  <li><strong>Milímetros:</strong> <code>0</code> (sin decimales, porque 1 mm es la unidad más pequeña visible)</li>
+                  <li><strong>Centímetros:</strong> <code>0.0</code></li>
+                  <li><strong>Metros:</strong> <code>0.00</code> o <code>0.000</code> (para mayor precisión en topografía)</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">4</span>
+              <div class="lesson-body">
+                <h4>Define la escala de inserción</h4>
+                <p>En <strong>Insertion scale → Units</strong>, selecciona la misma unidad que estás usando (Milimeters, Meters, etc.). Esto controla cómo se escalan los bloques y archivos XREF que inserts.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">5</span>
+              <div class="lesson-body">
+                <h4>Guarda como plantilla</h4>
+                <p>Una vez configurado, guarda el archivo como plantilla con <span class="cmd-inline">SAVEAS</span> → formato <strong>.DWT</strong> (Drawing Template). Así no tendrás que repetir esta configuración cada vez que crees un dibujo nuevo.</p>
+              </div>
+            </div>
+
+            <!-- ====== CONFIGURAR LIMITS ====== -->
+            <h3>Configurar los límites del área de dibujo (LIMITS)</h3>
+            <p>El comando <span class="cmd-inline">LIMITS</span> define el tamaño del área de trabajo visible con <span class="cmd-inline">ZOOM → All</span>. No recorta el dibujo, pero sí controla la cuadrícula visual y el zoom Extents.</p>
+
+            <table class="table-cad">
+              <thead><tr><th>Disciplina</th><th>Límites típicos</th><th>Equivalencia real</th></tr></thead>
+              <tbody>
+                <tr><td>Dibujo en milímetros (A4)</td><td><span class="cmd-inline">0,0</span> a <span class="cmd-inline">297,210</span></td><td>Hoja A4 en mm</td></tr>
+                <tr><td>Dibujo en milímetros (A3)</td><td><span class="cmd-inline">0,0</span> a <span class="cmd-inline">420,297</span></td><td>Hoja A3 en mm</td></tr>
+                <tr><td>Planta en milímetros</td><td><span class="cmd-inline">0,0</span> a <span class="cmd-inline">20000,15000</span></td><td>20 m × 15 m en mm</td></tr>
+                <tr><td>Terreno en metros</td><td><span class="cmd-inline">0,0</span> a <span class="cmd-inline">100,80</span></td><td>100 m × 80 m</td></tr>
+                <tr><td>Carretera en metros</td><td><span class="cmd-inline">0,0</span> a <span class="cmd-inline">5000,500</span></td><td>5 km × 500 m</td></tr>
+              </tbody>
+            </table>
+
+            <div class="lesson-step">
+              <span class="lesson-num">1</span>
+              <div class="lesson-body">
+                <h4>Escribe LIMITS</h4>
+                <p>Ejecuta <span class="cmd-inline">LIMITS</span>. Pide la esquina inferior izquierda: escribe <span class="cmd-inline">0,0</span> y presiona Enter.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">2</span>
+              <div class="lesson-body">
+                <h4>Define la esquina superior derecha</h4>
+                <p>Si dibujas en milímetros una planta de 20 × 15 metros, escribe <span class="cmd-inline">20000,15000</span>. Si dibujas en metros, escribe <span class="cmd-inline">20,15</span>.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">3</span>
+              <div class="lesson-body">
+                <h4>Aplica ZOOM → All</h4>
+                <p>Escribe <span class="cmd-inline">Z</span> + Enter, luego <span class="cmd-inline">A</span> + Enter. La vista se ajusta a los límites definidos y la cuadrícula cubre toda esa área.</p>
+              </div>
+            </div>
+
+            <!-- ====== GRID Y SNAP ====== -->
+            <h3>Configurar cuadrícula (GRID) y captura (SNAP)</h3>
+            <p>Ambos se configuran con <span class="cmd-inline">DSETTINGS</span> (o <span class="cmd-inline">DS</span>) en la pestaña "Snap and Grid", o directamente con las siguientes variables:</p>
+
+            <table class="table-cad">
+              <thead><tr><th>Variable</th><th>Qué controla</th><th>Valor típico (mm)</th><th>Valor típico (m)</th></tr></thead>
+              <tbody>
+                <tr><td><span class="cmd-inline">GRIDDISPLAY</span></td><td>Visibilidad de la cuadrícula (<span class="key-inline">F7</span>)</td><td>Activo</td><td>Activo</td></tr>
+                <tr><td><span class="cmd-inline">GRID</span></td><td>Espaciado de la cuadrícula visual</td><td>100 o 50</td><td>1 o 0.5</td></tr>
+                <tr><td><span class="cmd-inline">SNAP</span></td><td>Espaciado del cursor magnético (<span class="key-inline">F9</span>)</td><td>100 o 50</td><td>1 o 0.5</td></tr>
+                <tr><td><span class="cmd-inline">SNAPSTYL</span></td><td>Tipo de snap (0 = cartesiano, 1 = polar)</td><td>0</td><td>0</td></tr>
+              </tbody>
+            </table>
+
+            <div class="callout">
+              <span class="callout-title">Diferencia clave GRID vs SNAP</span>
+              <p><strong>GRID</strong> es solo visual: una guía de referencia que no afecta el dibujo. <strong>SNAP</strong> es el que realmente "atrapa" el cursor a los puntos de la cuadrícula. Puedes tener GRID activo sin SNAP, o al revés. Para dibujo preciso, activa ambos (<span class="key-inline">F7</span> + <span class="key-inline">F9</span>).</p>
+            </div>
+
+            <!-- ====== TABLA RESUMEN: DÓNDE CONFIGURAR CADA COSA ====== -->
+            <h3>Tabla resumen: dónde configurar cada cosa</h3>
+            <table class="table-cad">
+              <thead><tr><th>¿Qué necesitas?</th><th>Comando</th><th>Ubicación en la cinta</th></tr></thead>
+              <tbody>
+                <tr><td>Unidad de medida</td><td><span class="cmd-inline">UNITS</span></td><td>Inicio → Utilidades → Unidades</td></tr>
+                <tr><td>Límites del área de dibujo</td><td><span class="cmd-inline">LIMITS</span></td><td>Línea de comandos directamente</td></tr>
+                <tr><td>Espaciado de cuadrícula</td><td><span class="cmd-inline">DSETTINGS</span></td><td>Barra de estado → clic derecho en GRID</td></tr>
+                <tr><td>Snap del cursor</td><td><span class="cmd-inline">DSETTINGS</span></td><td>Barra de estado → clic derecho en SNAP</td></tr>
+                <tr><td>Tipos de línea disponibles</td><td><span class="cmd-inline">LINETYPE</span></td><td>Inicio → Propiedades → Otro</td></tr>
+                <tr><td>Crear / editar capas</td><td><span class="cmd-inline">LAYER</span></td><td>Inicio → Capas → Capa</td></tr>
+                <tr><td>Guardar como plantilla</td><td><span class="cmd-inline">SAVEAS</span> → .DWT</td><td>Menú → Guardar como</td></tr>
+              </tbody>
+            </table>
+
+            <!-- ====== FORMATO DE DIBUJO Y PLANTILLA ====== -->
+            <h3>Formato de dibujo y plantilla</h3>
+            <p>Una plantilla (archivo <strong>.DWT</strong>) guarda de antemano las capas, estilos de texto, de cota y de tabla que usarás en todos tus proyectos, para no configurarlos cada vez desde cero. Crea tu plantilla:</p>
+            <ol>
+              <li>Abre un dibujo nuevo y configura unidades, capas, estilos y cotas como necesites.</li>
+              <li>Escribe <span class="cmd-inline">SAVEAS</span> y en "Tipo de archivo" selecciona <strong>AutoCAD Drawing Template (*.dwt)</strong>.</li>
+              <li>Nombra la plantilla (ej. <code>PLANTILLA-ARQ-MM.dwt</code>) y guárdala.</li>
+              <li>La próxima vez que crees un dibujo, selecciona esa plantilla en lugar de "acad.dwt".</li>
+            </ol>
+
+            <div class="callout">
+              <span class="callout-title">Consejo profesional</span>
+              Crea al menos dos plantillas: una para planos en <strong>milímetros</strong> (arquitectura, mecánica) y otra para planos en <strong>metros</strong> (civil, topografía). Así nunca confundirás las unidades entre proyectos.
+            </div>
 
             <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
           </section>

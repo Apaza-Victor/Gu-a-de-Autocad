@@ -307,19 +307,190 @@
           <!-- 4. Capas -->
           <section id="capas" data-topic="nivel2-capas">
             <h2><span class="sec-num">4</span><span data-i18n="lvl2.s4.title">Capas (Layers)</span></h2>
-            <p>Una capa es un "acetato" transparente donde se agrupan objetos con propiedades comunes. Se administran desde el <strong>Administrador de propiedades de capas</strong> (comando <span class="cmd-inline">LAYER</span> / <span class="key-inline">LA</span>).</p>
-
-            <h3>Propiedades que puede tener cada capa</h3>
-            <ul>
-              <li><strong>Color:</strong> identifica visualmente la capa y, si se imprime por color, puede controlar el grosor de línea.</li>
-              <li><strong>Tipo de línea:</strong> continua, discontinua, de eje, punteada, etc. (se cargan con el comando <span class="cmd-inline">LINETYPE</span>).</li>
-              <li><strong>Grosor de línea:</strong> define el espesor con que se imprime esa capa.</li>
-              <li><strong>Estado:</strong> activada/desactivada, inmovilizada, congelada, sin imprimir.</li>
-            </ul>
+            <p>Una capa es un "acetato" transparente donde se agrupan objetos con propiedades comunes: mismo color, mismo tipo de línea, mismo grosor. Se administran desde el <strong>Administrador de propiedades de capas</strong> (comando <span class="cmd-inline">LAYER</span> / <span class="key-inline">LA</span>).</p>
 
             <div class="callout">
               <span class="callout-title">Regla de oro</span>
-              Dibuja siempre en la capa correspondiente al elemento (muros en "Muros", cotas en "Cotas") y no cambies el color manualmente objeto por objeto. Así, si necesitas ocultar todas las cotas, basta con apagar una sola capa.
+              Dibuja <strong>siempre</strong> en la capa correspondiente al elemento (muros en "Muros", cotas en "Cotas") y nunca cambies el color manualmente objeto por objeto. Así, si necesitas ocultar todas las cotas, basta con apagar una sola capa.
+            </div>
+
+            <!-- ====== PROPIEDADES DE CADA CAPA ====== -->
+            <h3>Propiedades que puede tener cada capa</h3>
+            <table class="table-cad">
+              <thead><tr><th>Propiedad</th><th>Qué controla</th><th>Valores típicos</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Color</strong></td><td>Identifica visualmente la capa. En impresión por color, también controla el grosor de línea.</td><td>Rojo (1), Amarillo (2), Verde (3), Cian (4), Azul (5), Magenta (6)</td></tr>
+                <tr><td><strong>Tipo de línea</strong></td><td>Cómo se ve la línea: continua, discontinua, de eje, punteada.</td><td>Continuous, DASHED, CENTER, DOTTED, PHANTOM</td></tr>
+                <tr><td><strong>Grosor de línea</strong></td><td>Espesor con que se imprime esa capa.</td><td>0.15 mm (cotas), 0.25 mm (texto), 0.50 mm (muros)</td></tr>
+                <tr><td><strong>Transparency</strong></td><td>Opacidad de los objetos de esa capa (0 = opaco, 90 = casi invisible).</td><td>0 (por defecto), 50–70 para rellenos de referencia</td></tr>
+                <tr><td><strong>Estado</strong></td><td>Si la capa está visible, congelada, inmovilizada o no se imprime.</td><td>On/Off, Frozen, Locked, No Plot</td></tr>
+              </tbody>
+            </table>
+
+            <!-- ====== TUTORIAL LAYER PASO A PASO ====== -->
+            <h3>Tutorial: crear capas paso a paso</h3>
+
+            <div class="lesson-step">
+              <span class="lesson-num">1</span>
+              <div class="lesson-body">
+                <h4>Abre el Administrador de capas</h4>
+                <p>Escribe <span class="cmd-inline">LAYER</span> o <span class="key-inline">LA</span> en la línea de comandos y presiona Enter. Se abre el cuadro "Layer Properties Manager". También puedes acceder desde <strong>Inicio → Capas → Capa</strong> en la cinta de opciones.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">2</span>
+              <div class="lesson-body">
+                <h4>Crea una capa nueva</h4>
+                <p>Haz clic en el ícono de "Nueva capa" (hoja con estrella, o presiona <span class="key-inline">Alt+N</span>). Aparece una capa llamada "Layer1" con propiedades por defecto.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">3</span>
+              <div class="lesson-body">
+                <h4>Nombra la capa</h4>
+                <p>Escribe directamente el nombre. Usa la nomenclatura correcta (ver tabla más abajo). Ejemplo: <code>A-Muros</code>, <code>A-Cotas</code>, <code>S-Ejes</code>.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">4</span>
+              <div class="lesson-body">
+                <h4>Asigna el color</h4>
+                <p>Haz clic en el cuadrado de color de esa capa. Se abre el selector de colores. Elige uno de los 7 colores estándar de AutoCAD o un color índice. Los colores 1–7 se imprimen con grosores predefinidos en muchos estándares.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">5</span>
+              <div class="lesson-body">
+                <h4>Asigna el tipo de línea</h4>
+                <p>Haz clic en la columna "Linetype". Si el tipo que necesitas no aparece, haz clic en "Load" para cargarlo desde el archivo <strong>acad.lin</strong>. Los más usados:</p>
+                <ul>
+                  <li><strong>Continuous:</strong> muros, contornos, cotas</li>
+                  <li><strong>CENTER:</strong> ejes de simetría</li>
+                  <li><strong>DASHED:</strong> líneas ocultas, bordes no visibles</li>
+                  <li><strong>DOTTED:</strong> líneas de referencia</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">6</span>
+              <div class="lesson-body">
+                <h4>Asigna el grosor de línea</h4>
+                <p>Haz clic en la columna "Lineweight". Se abre un cuadro con los grosores disponibles. Elige el grosor adecuado según la función de la capa (ver tabla de recomendaciones más abajo).</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">7</span>
+              <div class="lesson-body">
+                <h4>Repite para todas las capas necesarias</h4>
+                <p>Crea todas las capas de tu proyecto antes de empezar a dibujar. Repite los pasos 2–6 para cada una.</p>
+              </div>
+            </div>
+
+            <!-- ====== NOMENCLATURA DE CAPAS ====== -->
+            <h3>Nomenclatura de capas — sistema organizado</h3>
+            <p>Un buen sistema de nombres te permite encontrar y administrar capas rápidamente. La convención más usada en arquitectura e ingeniería civil es un <strong>prefijo de disciplina</strong> seguido de un guion y el nombre del elemento:</p>
+
+            <table class="table-cad">
+              <thead><tr><th>Prefijo</th><th>Disciplina</th><th>Ejemplo</th></tr></thead>
+              <tbody>
+                <tr><td><code>A-</code></td><td>Arquitectura</td><td>A-Muros, A-Puertas, A-Ventanas</td></tr>
+                <tr><td><code>S-</code></td><td>Estructura</td><td>S-Vigas, S-Pilares, S-Hormigón</td></tr>
+                <tr><td><code>E-</code></td><td>Eléctrico</td><td>E-Iluminación, E-Tomas</td></tr>
+                <tr><td><code>I-</code></td><td>Instalaciones sanitarias</td><td>I-Agua, I-Drenaje, I-Gas</td></tr>
+                <tr><td><code>M-</code></td><td>Mecánica / HVAC</td><td>M-Ductos, M-Equipos</td></tr>
+                <tr><td><code>C-</code></td><td>Civil / Topografía</td><td>C-Terreno, C-Vial, C-Drenaje</td></tr>
+              </tbody>
+            </table>
+
+            <!-- ====== CAPAS RECOMENDADAS POR DISCIPLINA ====== -->
+            <h3>Capas recomendadas — arquitectura en milímetros</h3>
+            <table class="table-cad">
+              <thead><tr><th>Capa</th><th>Color</th><th>Tipo de línea</th><th>Grosor</th><th>Uso</th></tr></thead>
+              <tbody>
+                <tr><td><code>A-Ejes</code></td><td><span style="color:var(--layer-red)">■</span> Rojo (1)</td><td>CENTER</td><td>0.15 mm</td><td>Ejes de muros, ejes de ventanas</td></tr>
+                <tr><td><code>A-Muros</code></td><td><span style="color:var(--layer-yellow)">■</span> Amarillo (2)</td><td>Continuous</td><td>0.50 mm</td><td>Muros y elementos constructivos</td></tr>
+                <tr><td><code>A-Muros-Relleno</code></td><td><span style="color:var(--layer-yellow)">■</span> Amarillo (2)</td><td>Continuous</td><td>0.15 mm</td><td>Relleno de muros en corte</td></tr>
+                <tr><td><code>A-Puertas</code></td><td><span style="color:var(--layer-cyan)">■</span> Cian (4)</td><td>Continuous</td><td>0.25 mm</td><td>Hojas de puertas y marcos</td></tr>
+                <tr><td><code>A-Ventanas</code></td><td><span style="color:var(--layer-cyan)">■</span> Cian (4)</td><td>Continuous</td><td>0.25 mm</td><td>Ventanas y marcos</td></tr>
+                <tr><td><code>A-Cotas</code></td><td><span style="color:var(--layer-green)">■</span> Verde (3)</td><td>Continuous</td><td>0.15 mm</td><td>Acotaciones y cotas</td></tr>
+                <tr><td><code>A-Textos</code></td><td><span style="color:var(--layer-cyan)">■</span> Cian (4)</td><td>Continuous</td><td>0.25 mm</td><td>Textos, etiquetas, nombres de ambientes</td></tr>
+                <tr><td><code>A-Mobiliario</code></td><td><span style="color:var(--layer-magenta)">■</span> Magenta (6)</td><td>Continuous</td><td>0.15 mm</td><td>Muebles, equipamiento</td></tr>
+                <tr><td><code>A-Auxiliar</code></td><td><span style="color:var(--layer-magenta)">■</span> Magenta (6)</td><td>DASHED</td><td>0.15 mm</td><td>Líneas de construcción temporales</td></tr>
+                <tr><td><code>A-Hatch</code></td><td><span style="color:var(--layer-green)">■</span> Verde (3)</td><td>Continuous</td><td>0.05 mm</td><td>Sombreados y rellenos</td></tr>
+              </tbody>
+            </table>
+
+            <div class="callout">
+              <span class="callout-title">Capa 0: nunca dibujes en ella</span>
+              La capa <strong>0</strong> es especial: se usa exclusivamente para crear <strong>bloques</strong>. Si dibujas en la capa 0, los objetos heredarán las propiedades de la capa donde se inserte el bloque, lo cual puede causar confusión. <strong>Regla simple: crea tus propias capas y no toques la 0.</strong>
+            </div>
+
+            <!-- ====== BYLAYER ====== -->
+            <h3>Propiedad ByLayer — la clave del orden</h3>
+            <p>Cuando dibujas, el color, tipo de línea y grosor deben estar en <strong>"ByLayer"</strong> (Por Capa). Esto significa que el objeto hereda automáticamente las propiedades de la capa a la que pertenece.</p>
+
+            <table class="table-cad">
+              <thead><tr><th>Valor</th><th>Qué significa</th><th>Cuándo usarlo</th></tr></thead>
+              <tbody>
+                <tr><td><strong>ByLayer</strong></td><td>El objeto toma el color/tipo/grosor de su capa padre.</td><td><strong>Siempre</strong> — esta es la práctica correcta.</td></tr>
+                <tr><td><strong>ByBlock</strong></td><td>El objeto hereda las propiedades del bloque donde está contenido.</td><td>Solo al crear bloques que deben cambiar de color al insertarse.</td></tr>
+                <tr><td><strong>Color/Type específico</strong></td><td>El objeto tiene una propiedad fija que ignora la capa.</td><td><strong>Nunca</strong> en dibujo normal — dificulta la edición y organización.</td></tr>
+              </tbody>
+            </table>
+
+            <div class="callout warn">
+              <span class="callout-title">Error común</span>
+              Si dibujas una línea roja directamente (color fijo 1) en la capa "A-Muros" (amarilla), la línea aparecerá roja aunque la capa sea amarilla. Esto rompe la organización: al cambiar el color de la capa, esa línea no cambiará. <strong>Siempre usa ByLayer.</strong>
+            </div>
+
+            <!-- ====== ESTADOS DE CAPA ====== -->
+            <h3>Estados de capa — control de visibilidad</h3>
+            <table class="table-cad">
+              <thead><tr><th>Estado</th><th>Icono en el administrador</th><th>Qué hace</th><th>Atajo rápido</th></tr></thead>
+              <tbody>
+                <tr><td><strong>On / Off</strong></td><td>💡 bombilla</td><td>Apaga la capa: los objetos no se ven ni se seleccionan. Al encenderla, todo vuelve.</td><td><span class="cmd-inline">LAYOFF</span> / <span class="cmd-inline">LAYON</span></td></tr>
+                <tr><td><strong>Freeze / Thaw</strong></td><td>❄️ copo de nieve</td><td>Congela: como Off pero AutoCAD no calcula los objetos al regenerar. Mejor rendimiento en archivos grandes.</td><td><span class="cmd-inline">LAYFRZ</span> / <span class="cmd-inline">LAYTHW</span></td></tr>
+                <tr><td><strong>Lock / Unlock</strong></td><td>🔒 candado</td><td>Inmoviliza: los objetos se ven pero no se pueden editar (seleccionar, mover, borrar).</td><td><span class="cmd-inline">LAYLCK</span> / <span class="cmd-inline">LAYULK</span></td></tr>
+                <tr><td><strong>No Plot</strong></td><td>🖨️ impresora con X</td><td>La capa se ve en pantalla pero no se imprime. Ideal para capas auxiliares y de referencia.</td><td>Desde el administrador de capas</td></tr>
+              </tbody>
+            </table>
+
+            <h3>Comandos rápidos de capa</h3>
+            <table class="table-cad">
+              <thead><tr><th>Comando</th><th>Atajo</th><th>Qué hace</th></tr></thead>
+              <tbody>
+                <tr><td><span class="cmd-inline">LAYISO</span></td><td>—</td><td>Aísla: apaga todas las capas excepto la del objeto que selecciones. Ideal para trabajar sin distracciones.</td></tr>
+                <tr><td><span class="cmd-inline">LAYUNISO</span></td><td>—</td><td>Restaura el estado anterior de capas (después de LAYISO).</td></tr>
+                <tr><td><span class="cmd-inline">LAYMCH</span></td><td>—</td><td>Mueve objetos seleccionados a la capa que elijas después.</td></tr>
+                <tr><td><span class="cmd-inline">LAYCUR</span></td><td>—</td><td>Mueve objetos seleccionados a la capa actual (la activa).</td></tr>
+                <tr><td><span class="cmd-inline">LAYDEL</span></td><td>—</td><td>Elimina una capa y todos sus objetos. <strong>Usar con cuidado.</strong></td></tr>
+                <tr><td><span class="cmd-inline">MATCHPROP</span></td><td><span class="key-inline">MA</span></td><td>Copia propiedades (incluida la capa) de un objeto a otros.</td></tr>
+              </tbody>
+            </table>
+
+            <!-- ====== EJEMPLO PRÁCTICO ====== -->
+            <h3>Ejemplo práctico: crear el set de capas de un proyecto arquitectónico</h3>
+            <ol>
+              <li>Escribe <span class="cmd-inline">LAYER</span> y presiona Enter.</li>
+              <li>Haz clic en "Nueva capa" 10 veces para crear 10 capas.</li>
+              <li>Renombra cada una con los nombres de la tabla anterior (A-Ejes, A-Muros, A-Cotas, etc.).</li>
+              <li>Para cada capa, haz clic en su casilla de color y asigna el color correspondiente.</li>
+              <li>Para A-Ejes, haz clic en "Linetype" → "Load" → selecciona <strong>CENTER</strong> → acepta → asigna CENTER a la capa.</li>
+              <li>Para A-Auxiliar, carga el tipo <strong>DASHED</strong> y asígnalo.</li>
+              <li>Para cada capa, haz clic en "Lineweight" y asigna el grosor de la tabla.</li>
+              <li>Cierra el administrador. Activa la capa "A-Muros" como capa actual (haz doble clic en ella).</li>
+              <li>Dibuja tu primer muro: verás que hereda el color amarillo, línea continua y grosor 0.50 mm automáticamente.</li>
+            </ol>
+
+            <div class="callout">
+              <span class="callout-title">Consejo profesional</span>
+              Guarda tu set de capas en una <strong>plantilla (.DWT)</strong> (ver Nivel 1, Sección 5). Así cada proyecto nuevo ya viene con todas las capas configuradas y no tienes que repetir este proceso.
             </div>
 
             <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
@@ -348,8 +519,10 @@
           <!-- 6. Acotación -->
           <section id="acotacion" data-topic="nivel2-acotacion">
             <h2><span class="sec-num">6</span><span data-i18n="lvl2.s6.title">Acotación (dimensiones)</span></h2>
-            <p>Acotar es indicar medidas reales sobre el dibujo. AutoCAD calcula automáticamente la distancia entre los puntos que selecciones, siempre que el dibujo esté hecho a escala 1:1.</p>
+            <p>Acotar es indicar medidas reales sobre el dibujo. AutoCAD calcula automáticamente la distancia entre los puntos que selecciones, siempre que el dibujo esté hecho a escala 1:1. El problema más común es que <strong>las cotas salen enormes o diminutas</strong> porque no se configuró el estilo correctamente.</p>
 
+            <!-- ====== TIPOS DE COTA ====== -->
+            <h3>Tipos de cota</h3>
             <table class="table-cad">
               <thead><tr><th>Tipo de cota</th><th>Comando</th><th>Uso</th></tr></thead>
               <tbody>
@@ -361,7 +534,172 @@
               </tbody>
             </table>
 
-            <p>Los <strong>estilos de cota</strong> (comando <span class="cmd-inline">DIMSTYLE</span>) controlan el tamaño de texto, flechas, unidades y precisión decimal de todas las cotas de ese estilo a la vez.</p>
+            <!-- ====== ¿POR QUÉ LAS COTAS SALEN GRANDES? ====== -->
+            <h3>¿Por qué las cotas salen enormes? — la variable DIMSCALE</h3>
+            <p>AutoCAD dibuja las cotas con un tamaño por defecto de <strong>0.18 unidades</strong> para el texto y <strong>0.18</strong> para las flechas. Si dibujas en milímetros (un muro mide 150 unidades), esas cotas son perfectas. Pero si dibujas en metros (un muro mide 0.15 unidades), las cotas aparecen 1000 veces más grandes que el muro.</p>
+
+            <p>La solución es la variable <span class="cmd-inline">DIMSCALE</span>: un <strong>factor de escala general</strong> que multiplica TODO el tamaño de la cota (texto + flechas + líneas de extensión + espacio). Es la variable más importante de la acotación.</p>
+
+            <div class="callout warn">
+              <span class="callout-title">Error más común</span>
+              Si dibujas en metros y la cota muestra "3.0000" con un texto gigante que no cabe en la pantalla, el problema NO es la cota en sí — es que <span class="cmd-inline">DIMSCALE</span> está en 1 (por defecto) cuando debería ser <strong>100</strong> o <strong>1000</strong>. Cambia DIMSCALE y todo se arregla de golpe.
+            </div>
+
+            <!-- ====== TABLA DIMSCALE SEGÚN UNIDAD ====== -->
+            <h3>Tabla: valor de DIMSCALE según unidad de dibujo</h3>
+            <p>El valor de DIMSCALE depende de <strong>en qué unidad dibujas</strong> y <strong>a qué escala piensas imprimir</strong>. Usa esta tabla como referencia:</p>
+
+            <table class="table-cad">
+              <thead><tr><th>Unidad de dibujo</th><th>Escala de impresión</th><th>DIMSCALE recomendado</th><th>Texto resultante (en plano)</th><th>Flechas resultantes</th></tr></thead>
+              <tbody>
+                <tr><td rowspan="3"><strong>Milímetros (mm)</strong></td><td>1:1</td><td><code>1</code></td><td>0.18 mm</td><td>0.18 mm</td></tr>
+                <tr><td>1:50</td><td><code>50</code></td><td>9 mm</td><td>9 mm</td></tr>
+                <tr><td>1:100</td><td><code>100</code></td><td>18 mm</td><td>18 mm</td></tr>
+                <tr><td rowspan="3"><strong>Metros (m)</strong></td><td>1:1</td><td><code>100</code></td><td>18 mm</td><td>18 mm</td></tr>
+                <tr><td>1:50</td><td><code>50</code></td><td>9 mm</td><td>9 mm</td></tr>
+                <tr><td>1:100</td><td><code>25</code></td><td>4.5 mm</td><td>4.5 mm</td></tr>
+                <tr><td rowspan="2"><strong>Pies (ft)</strong></td><td>1/4" = 1'</td><td><code>48</code></td><td>~2.3 mm</td><td>~2.3 mm</td></tr>
+                <tr><td>1/8" = 1'</td><td><code>96</code></td><td>~4.6 mm</td><td>~4.6 mm</td></tr>
+              </tbody>
+            </table>
+
+            <div class="callout">
+              <span class="callout-title">Regla práctica</span>
+              <p>El tamaño ideal de una cota impresa es de <strong>2.5 mm a 3.5 mm</strong> de alto (texto y flechas). Para saber qué DIMSCALE usar, multiplica el denominador de la escala de impresión por la unidad base:</p>
+              <p><strong>En milímetros:</strong> DIMSCALE = denominador de la escala (ej. para 1:50 → DIMSCALE = 50)</p>
+              <p><strong>En metros:</strong> DIMSCALE = denominador ÷ 1000 × factor de ajuste (ej. para 1:100 → DIMSCALE = 25 a 100)</p>
+            </div>
+
+            <!-- ====== TUTORIAL DIMSTYLE PASO A PASO ====== -->
+            <h3>Tutorial: crear un estilo de cota paso a paso</h3>
+
+            <div class="lesson-step">
+              <span class="lesson-num">1</span>
+              <div class="lesson-body">
+                <h4>Abre el Administrador de estilos de cota</h4>
+                <p>Escribe <span class="cmd-inline">DIMSTYLE</span> o <span class="cmd-inline">D</span> + Enter en la línea de comandos. Se abre el cuadro "Dimension Style Manager". También puedes acceder desde <strong>Anotar → Cota → el ícono pequeño de la esquina</strong> en la cinta.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">2</span>
+              <div class="lesson-body">
+                <h4>Crea un estilo nuevo</h4>
+                <p>Haz clic en <strong>"New"</strong> (Nueva). Ponle un nombre descriptivo como <code>MI-ESTILO-50</code> (para escala 1:50 en mm) o <code>METROS-100</code> (para metros a 1:100). Selecciona el estilo base "Standard" y haz clic en Continue.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">3</span>
+              <div class="lesson-body">
+                <h4>Pestaña "Lines" (Líneas)</h4>
+                <p>Configura las líneas de extensión y la línea de cota:</p>
+                <ul>
+                  <li><strong>Extend beyond dim lines:</strong> cuánto sobresale la línea de extensión más allá de la cota. Valor típico: <code>1.25</code> a <code>2.5</code> mm (en el plano impreso).</li>
+                  <li><strong>Offset from origin:</strong> distancia entre el objeto y el inicio de la línea de extensión. Valor típico: <code>0.625</code> a <code>1.5</code> mm.</li>
+                  <li><strong>Baseline spacing:</strong> distancia entre cotas apiladas con DIMBASELINE. Valor típico: <code>3.75</code> a <code>5</code> mm.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">4</span>
+              <div class="lesson-body">
+                <h4>Pestaña "Symbols and Arrows" (Símbolos y flechas)</h4>
+                <ul>
+                  <li><strong>Arrowheads → First / Second / Leader:</strong> elige el tipo de punta (Closed filled, Architectural tick, Dot, etc.). Para arquitectura, el <strong>Architectural tick</strong> es el más común.</li>
+                  <li><strong>Arrow size:</strong> tamaño de la punta. Valor típico: <code>1.5</code> a <code>2.5</code> mm en el plano impreso.</li>
+                  <li><strong>Center marks → Type:</strong> marca de centro para radios y diámetros. "Mark" o "Line".</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">5</span>
+              <div class="lesson-body">
+                <h4>Pestaña "Text" (Texto)</h4>
+                <ul>
+                  <li><strong>Text style:</strong> elige el estilo de texto que creaste (ver sección de Texto más abajo).</li>
+                  <li><strong>Text color / Fill color:</strong> color del texto y fondo (usualmente "ByLayer" y "None").</li>
+                  <li><strong>Text height:</strong> altura del texto de cota. Valor típico: <code>2.5</code> a <code>3.5</code> mm en el plano impreso.</li>
+                  <li><strong>Text placement → Offset from dim line:</strong> espacio entre el texto y la línea de cota. Valor típico: <code>0.625</code> a <code>1</code> mm.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">6</span>
+              <div class="lesson-body">
+                <h4>Pestaña "Primary Units" (Unidades primarias)</h4>
+                <ul>
+                  <li><strong>Unit format:</strong> Decimal, Architectural, Engineering, Fractional. Para métrico, usa <strong>Decimal</strong>.</li>
+                  <li><strong>Precision:</strong> cuántos decimales. Para mm usa <code>0</code>, para metros usa <code>0.00</code>.</li>
+                  <li><strong>Decimal separator:</strong> punto (.) o coma (,) según tu país. En Latinoamérica, punto es el estándar técnico.</li>
+                  <li><strong>Prefix / Suffix:</strong> texto antes o después del valor (ej. Sufijo: <code> mm</code> o <code> m</code>).</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">7</span>
+              <div class="lesson-body">
+                <h4>Pestaña "Fit" (Ajuste) — DIMSCALE está aquí</h4>
+                <ul>
+                  <li><strong>Use overall scale of (Escala general):</strong> este es <span class="cmd-inline">DIMSCALE</span>. Ingresa el valor de la tabla anterior según tu unidad y escala de impresión.</li>
+                  <li><strong>Fit options:</strong> qué hacer cuando el texto no cabe entre las líneas de extensión. "Either text or arrows (best fit)" es la opción más versátil.</li>
+                  <li><strong>Text placement:</strong> si el texto no cabe, colócalo sobre la línea de cota o dentro de las líneas de extensión.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">8</span>
+              <div class="lesson-body">
+                <h4>Establece como estilo actual</h4>
+                <p>Selecciona tu nuevo estilo en la lista y haz clic en <strong>"Set Current"</strong> (Establecer actual). Cierra el administrador. Todas las cotas que coloques ahora usarán tu estilo configurado.</p>
+              </div>
+            </div>
+
+            <!-- ====== TABLA RESUMEN DE VALORES TÍPICOS ====== -->
+            <h3>Tabla resumen: valores típicos de una cota arquitectónica</h3>
+            <p>Valores recomendados para que la cota se vea proporcional y limpia en el plano impreso:</p>
+
+            <table class="table-cad">
+              <thead><tr><th>Parámetro</th><th>Valor típico (mm en plano)</th><th>Variable DIMSTYLE</th></tr></thead>
+              <tbody>
+                <tr><td>Altura del texto de cota</td><td>2.5 – 3.5 mm</td><td><code>dimtxt</code></td></tr>
+                <tr><td>Tamaño de flechas</td><td>1.5 – 2.5 mm</td><td><code>dimasz</code></td></tr>
+                <tr><td>Sobresalido de línea de extensión</td><td>1.25 – 2.5 mm</td><td><code>dimexe</code></td></tr>
+                <tr><td>Distancia al objeto (offset)</td><td>0.625 – 1.5 mm</td><td><code>dimexo</code></td></tr>
+                <tr><td>Espacio entre cotas apiladas</td><td>3.75 – 5 mm</td><td><code>dimdli</code></td></tr>
+                <tr><td>Separación texto-línea de cota</td><td>0.625 – 1 mm</td><td><code>dimgap</code></td></tr>
+              </tbody>
+            </table>
+
+            <div class="callout">
+              <span class="callout-title">¿Cómo sé si mis cotas están bien?</span>
+              <p>Imprime una prueba o exporta a PDF a la escala final. Mide con una regla física: el texto de la cota debe tener entre <strong>2.5 mm y 3.5 mm</strong> de alto. Si mide menos de 2 mm, aumenta DIMSCALE. Si mide más de 5 mm, disminúyelo.</p>
+            </div>
+
+            <!-- ====== EJEMPLO PRÁCTICO ====== -->
+            <h3>Ejemplo práctico: configurar cotas para un plano en metros a 1:100</h3>
+            <ol>
+              <li>Escribe <span class="cmd-inline">UNITS</span> y configura en <strong>Meters, Decimal, precisión 0.00</strong>.</li>
+              <li>Escribe <span class="cmd-inline">DIMSTYLE</span> → <strong>New</strong> → nombre: <code>METROS-100</code>.</li>
+              <li>En <strong>Lines</strong>: Extend beyond = <code>2.5</code>, Offset from origin = <code>1.25</code>.</li>
+              <li>En <strong>Symbols and Arrows</strong>: Architectural tick, Arrow size = <code>2.5</code>.</li>
+              <li>En <strong>Text</strong>: Text height = <code>3.5</code>, Offset = <code>1</code>.</li>
+              <li>En <strong>Primary Units</strong>: Decimal, Precision = <code>0.00</code>, Decimal separator = <code>.</code>.</li>
+              <li>En <strong>Fit</strong>: Overall scale = <code>25</code> (prueba con este valor primero).</li>
+              <li><strong>Set Current</strong> → Close.</li>
+              <li>Dibuja un rectángulo de 10 × 8 unidades (representa 10 m × 8 m).</li>
+              <li>Coloca una cota con <span class="cmd-inline">DIM</span>. Si el texto mide ~3 mm en pantalla y se ve legible, el valor es correcto. Si es gigante, baja DIMSCALE a <code>10</code>. Si es diminuto, súbelo a <code>50</code>.</li>
+            </ol>
+
+            <div class="callout">
+              <span class="callout-title">Consejo profesional</span>
+              Crea <strong>un estilo de cota por cada escala de impresión</strong> que uses (MI-50, MI-100, MI-200). Así solo cambias de estilo con el desplegable de la barra de propiedades y no tienes que reconfigurar cada vez.
+            </div>
 
             <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
           </section>
