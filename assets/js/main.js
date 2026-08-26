@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initResourceFilters();
   initCategoryFilters('visFilters', 'visGrid');
   initCategoryFilters('tipsFilters', 'tipsGrid');
+  initCategoryFilters('tutsFilters', 'tutsGrid');
   initGlobalSearch();
   initSwiperCarousel();
   initPrism();

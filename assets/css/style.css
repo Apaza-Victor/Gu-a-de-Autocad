@@ -943,7 +943,7 @@ footer.site-footer a:hover{ color: var(--cyan); }
   background: var(--amber);
   border-color: var(--amber);
 }
-.res-grid{ display: grid; gap: 1rem; }
+.res-grid{ display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1rem; }
 .res-full-card{
   background: var(--bg-panel);
   border: 1px solid var(--border);
