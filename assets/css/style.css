@@ -679,6 +679,33 @@ footer.site-footer a:hover{ color: var(--cyan); }
   border-radius: 3px;
 }
 
+/* ---------- Data-cmd spans & kbd in tutorial tips ---------- */
+[data-cmd]{
+  font-family: var(--font-display);
+  font-size: .82rem;
+  font-weight: 700;
+  color: var(--cyan);
+  background: var(--cyan-dim);
+  padding: .12rem .45rem;
+  border-radius: 4px;
+  border: 1px solid rgba(0,210,255,.18);
+  white-space: nowrap;
+  letter-spacing: .02em;
+}
+kbd{
+  font-family: var(--font-display);
+  font-size: .78rem;
+  font-weight: 700;
+  color: var(--amber);
+  background: var(--amber-dim);
+  padding: .12rem .45rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255,180,0,.2);
+  box-shadow: 0 2px 0 rgba(0,0,0,.25);
+  white-space: nowrap;
+  letter-spacing: .03em;
+}
+
 /* ---------- Callout ---------- */
 .callout{
   background: var(--bg-panel);
@@ -700,6 +727,56 @@ footer.site-footer a:hover{ color: var(--cyan); }
 }
 .callout.warn .callout-title{ color: var(--amber); }
 .callout p:last-child{ margin-bottom: 0; }
+.callout ol{
+  margin: .5rem 0;
+  padding-left: 1.4rem;
+  color: var(--text-muted);
+  font-size: .85rem;
+}
+.callout ol li{ margin-bottom: .4rem; }
+.callout ol li:last-child{ margin-bottom: 0; }
+
+/* ---------- Collapsible details in tips ---------- */
+.callout details{
+  margin: .6rem 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: rgba(0,0,0,.15);
+  overflow: hidden;
+}
+.callout details[open]{
+  border-color: rgba(0,210,255,.2);
+}
+.callout details summary{
+  padding: .5rem .8rem;
+  font-family: var(--font-display);
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--cyan);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  user-select: none;
+  transition: background .2s;
+}
+.callout details summary:hover{
+  background: rgba(0,210,255,.06);
+}
+.callout details summary::before{
+  content: '▸';
+  font-size: .7rem;
+  transition: transform .2s;
+  flex-shrink: 0;
+}
+.callout details[open] summary::before{
+  transform: rotate(90deg);
+}
+.callout details summary::-webkit-details-marker{ display: none; }
+.callout details .detail-body{
+  padding: 0 .8rem .6rem;
+}
 
 /* ---------- Image placeholder ---------- */
 .img-placeholder{
