@@ -707,12 +707,12 @@
     };
 
     allWalls.forEach(function(m,i){
-      addAnim(anime({ targets:m.scale, y:1, duration:750, delay:t+i*26, easing:'easeOutBack' }));
+      addAnim(anime({ targets:m.scale, x:1, y:1, z:1, duration:750, delay:t+i*26, easing:'easeOutBack' }));
     });
     t+=900;
 
     doorLeaves.forEach(function(m,i){
-      addAnim(anime({ targets:m.scale, y:1, duration:500, delay:t+i*80, easing:'easeOutBack' }));
+      addAnim(anime({ targets:m.scale, x:1, y:1, z:1, duration:500, delay:t+i*80, easing:'easeOutBack' }));
     });
     t+=500;
 
@@ -724,17 +724,17 @@
              allWalls.indexOf(m)===-1 && glassMats.indexOf(m.material)===-1;
     });
     frameMeshes.forEach(function(m,i){
-      addAnim(anime({ targets:m.scale, y:1, duration:400, delay:t+i*40, easing:'easeOutBack' }));
+      addAnim(anime({ targets:m.scale, x:1, y:1, z:1, duration:400, delay:t+i*40, easing:'easeOutBack' }));
     });
     t+=450;
 
     var furnMeshes=allRisers.filter(isFurn);
     furnMeshes.forEach(function(m,i){
-      addAnim(anime({ targets:m.scale, y:1, duration:520, delay:t+i*25, easing:'easeOutBack' }));
+      addAnim(anime({ targets:m.scale, x:1, y:1, z:1, duration:520, delay:t+i*25, easing:'easeOutBack' }));
     });
     t+=800;
 
-    addAnim(anime({ targets:roofMesh.scale, y:1, duration:650, delay:t, easing:'easeOutBack' }));
+    addAnim(anime({ targets:roofMesh.scale, x:1, y:1, z:1, duration:650, delay:t, easing:'easeOutBack' }));
 
     addAnim(anime({
       targets:camera.position, x:7.6, y:5.6, z:9.2,
