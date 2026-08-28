@@ -777,6 +777,17 @@ kbd{
 .callout details .detail-body{
   padding: 0 .8rem .6rem;
 }
+.callout em.tip-label{
+  display: block;
+  margin: .8rem 0 .3rem;
+  font-style: normal;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: .78rem;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--amber);
+}
 
 /* ---------- Image placeholder ---------- */
 .img-placeholder{
