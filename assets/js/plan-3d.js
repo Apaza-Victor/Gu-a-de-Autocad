@@ -664,21 +664,21 @@
       });
     })();
 
-    /* cubierta con labio del mismo color (sin bloques claros sobresalientes) */
-    var RLX=6.6, RDZ=4.6;
+    /* cubierta con vuelo/alero en el color del techo (sin bloques claros) */
+    var RLX=7.0, RDZ=5.0;
     roofMesh=box(RLX,0.16,RDZ,matRoof);
     roofMesh.position.set(CX,2.8,CZ);               // apoya en y=0..2.8 (techo en 2.8..2.96)
     roofMesh.castShadow=true; roofMesh.receiveShadow=true;
     addRiser(roofMesh);
-    function lip(len, dep, x, z){                   // borde de cubierta, mismo color oscuro
-      var p=box(len,0.16,dep,matRoof);
+    function eave(len, dep, x, z){                  // alero: sobresale del borde, color del techo
+      var p=box(len,0.3,dep,matRoof);
       p.position.set(x,2.8,z);
       addRiser(p);
     }
-    lip(RLX+0.2, 0.12, CX,      CZ+RDZ/2);           // frontal
-    lip(RLX+0.2, 0.12, CX,      CZ-RDZ/2);           // trasero
-    lip(0.12,    RDZ+0.2, CX-RLX/2, CZ);             // lateral izq
-    lip(0.12,    RDZ+0.2, CX+RLX/2, CZ);             // lateral der
+    eave(RLX+0.4, 0.24, CX,      CZ+RDZ/2+0.12);     // frontal
+    eave(RLX+0.4, 0.24, CX,      CZ-RDZ/2-0.12);     // trasero
+    eave(0.24,    RDZ+0.4, CX-RLX/2-0.12, CZ);       // lateral izq
+    eave(0.24,    RDZ+0.4, CX+RLX/2+0.12, CZ);       // lateral der
 
     group.position.x=-CX; group.position.z=-CZ;
     group.rotation.y=0.35;
