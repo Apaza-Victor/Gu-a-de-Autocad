@@ -554,11 +554,11 @@
 
     /* losa + zócalo (centrados en la huella: muros 0..6.2 X, 0..4.2 Z => centro 3.1,2.1) */
     var CX=6.2/2, CZ=4.2/2;
-    slabMesh=box(6.6,0.2,4.6,matFloor);
+    slabMesh=box(6.3,0.2,4.3,matFloor);
     slabMesh.position.set(CX,-0.1,CZ);              // top en y=0 = base de los muros
     slabMesh.receiveShadow=true; slabMesh.castShadow=true;
     group.add(slabMesh);
-    var plinth=box(6.9,0.5,4.9,matPlith);
+    var plinth=box(6.4,0.5,4.4,matPlith);
     plinth.position.set(CX,-0.7,CZ);                // top en -0.2 = fondo de la losa
     plinth.receiveShadow=true; plinth.castShadow=true;
     group.add(plinth);
@@ -664,21 +664,21 @@
       });
     })();
 
-    /* cubierta con vuelo (alero) — apoyada en los muros y centrada en la huella */
-    var RLX=7.0, RDZ=5.0;
+    /* cubierta con labio del mismo color (sin bloques claros sobresalientes) */
+    var RLX=6.6, RDZ=4.6;
     roofMesh=box(RLX,0.16,RDZ,matRoof);
     roofMesh.position.set(CX,2.8,CZ);               // apoya en y=0..2.8 (techo en 2.8..2.96)
     roofMesh.castShadow=true; roofMesh.receiveShadow=true;
     addRiser(roofMesh);
-    function eave(len, y, dep, x, z){               // borde/perfil de la cubierta
-      var p=box(len,0.3,dep,matFrame);
-      p.position.set(x,y,z);
+    function lip(len, dep, x, z){                   // borde de cubierta, mismo color oscuro
+      var p=box(len,0.16,dep,matRoof);
+      p.position.set(x,2.8,z);
       addRiser(p);
     }
-    eave(RLX, 2.8, 0.3, CX,      CZ+RDZ/2);          // frontal
-    eave(RLX, 2.8, 0.3, CX,      CZ-RDZ/2);          // trasero
-    eave(0.3, 2.8, RDZ, CX-RLX/2, CZ);               // lateral izq
-    eave(0.3, 2.8, RDZ, CX+RLX/2, CZ);               // lateral der
+    lip(RLX+0.2, 0.12, CX,      CZ+RDZ/2);           // frontal
+    lip(RLX+0.2, 0.12, CX,      CZ-RDZ/2);           // trasero
+    lip(0.12,    RDZ+0.2, CX-RLX/2, CZ);             // lateral izq
+    lip(0.12,    RDZ+0.2, CX+RLX/2, CZ);             // lateral der
 
     group.position.x=-CX; group.position.z=-CZ;
     group.rotation.y=0.35;
