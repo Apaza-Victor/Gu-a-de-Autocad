@@ -665,29 +665,11 @@
       });
     })();
 
-    /* cubierta a dos aguas (prisma con cumbrera) dentro de la huella 6.2 x 4.2 */
-    function gable(ridge, mat){
-      var Z=4.2, X=6.2, Y=2.8, T=Y+ridge, C=Z/2;
-      var pos=[
-        0,Y,0, X,Y,0, X,T,C,    0,Y,0, X,T,C, 0,T,C,          // vertiente frontal
-        0,Y,Z, X,Y,Z, X,T,C,    0,Y,Z, X,T,C, 0,T,C,          // vertiente trasera
-        0,Y,0, 0,Y,Z, 0,T,C,                                   // hastial izquierdo
-        X,Y,0, X,T,C, X,Y,Z                                    // hastial derecho
-      ];
-      var g=new THREE.BufferGeometry();
-      g.setAttribute('position', new THREE.Float32BufferAttribute(pos,3));
-      g.computeVertexNormals();
-      return new THREE.Mesh(g, mat);
-    }
-    roofMesh=gable(0.85, matRoof);
+    /* cubierta a ras con la huella de los muros (sin bloques que sobresalgan) */
+    roofMesh=box(6.2,0.16,4.2,matRoof);
+    roofMesh.position.set(CX,2.8,CZ);               // apoya en y=0..2.8 (techo en 2.8..2.96)
     roofMesh.castShadow=true; roofMesh.receiveShadow=true;
     addRiser(roofMesh);
-
-    /* cumbrera: remate fino en la cresta del techo */
-    var cap=box(6.2,0.1,0.22,matRoof);
-    cap.position.set(CX,2.8+0.85,2.1);
-    cap.material=new THREE.MeshStandardMaterial({ color:0x6d5742, roughness:0.7, metalness:0.1 });
-    addRiser(cap);
 
     group.position.x=-CX; group.position.z=-CZ;
     group.rotation.y=0.35;
