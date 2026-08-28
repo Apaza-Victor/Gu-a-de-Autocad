@@ -274,3 +274,43 @@
 .plan-anim .plan-replay:hover{ color: var(--cyan); border-color: var(--cyan); }
 .plan-anim .plan-replay:focus-visible{ outline: 2px solid var(--cyan); outline-offset: 2px; }
 [data-theme="light"] .plan-anim .plan-replay{ background: rgba(255, 255, 255, .85); }
+
+/* Barra de alternancia 2D / 3D del plano */
+.plan-toolbar{
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 3;
+  display: inline-flex;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid var(--border-soft);
+  border-radius: 6px;
+  background: rgba(11, 18, 32, .6);
+  backdrop-filter: blur(4px);
+}
+[data-theme="light"] .plan-toolbar{ background: rgba(255, 255, 255, .8); }
+.plan-mode-btn{
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  padding: .28rem .5rem;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text-faint);
+  font-family: var(--font-display);
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  cursor: pointer;
+  transition: color .15s ease, background .15s ease, border-color .15s ease;
+}
+.plan-mode-btn i{ font-size: .72rem; color: var(--text-faint); }
+.plan-mode-btn:hover{ color: var(--cyan); }
+.plan-mode-btn.active{
+  background: var(--cyan-dim);
+  color: var(--cyan);
+  border-color: var(--cyan);
+}
+.plan-mode-btn.active i{ color: var(--cyan); }
