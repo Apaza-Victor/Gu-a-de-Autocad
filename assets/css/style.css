@@ -706,6 +706,20 @@ kbd{
   letter-spacing: .03em;
 }
 
+/* Comandos auto-resaltados en la sección de trucos (cian, distinto de atajos ámbar) */
+.hl-cmd{
+  font-family: var(--font-display);
+  font-size: .82rem;
+  font-weight: 700;
+  color: var(--cyan);
+  background: var(--cyan-dim);
+  padding: .12rem .45rem;
+  border-radius: 4px;
+  border: 1px solid rgba(0,210,255,.18);
+  white-space: nowrap;
+  letter-spacing: .02em;
+}
+
 /* ---------- Callout ---------- */
 .callout{
   background: var(--bg-panel);
@@ -2122,3 +2136,87 @@ code[class*="language-"]{
 }
 .checklist-block li i{ color: var(--layer-green); margin-top: .18rem; }
 .checklist-block .dl-btn{ margin-top: .4rem; }
+
+/* ---------- Paso a paso desplegable (trucos) ---------- */
+.pasos-block{
+  margin-top: 1rem;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--layer-green);
+  border-radius: var(--radius-md);
+  background: var(--bg-panel-2);
+  overflow: hidden;
+}
+.pasos-block summary{
+  padding: .7rem 1rem;
+  font-family: var(--font-display);
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .03em;
+  color: var(--layer-green);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  user-select: none;
+  transition: background .2s;
+}
+.pasos-block summary i{ font-size: .95rem; }
+.pasos-block summary::after{
+  content: '\f282'; /* chevron-down */
+  font-family: 'bootstrap-icons';
+  margin-left: auto;
+  opacity: .6;
+  transition: transform .2s;
+}
+.pasos-block[open] summary::after{ transform: rotate(180deg); }
+.pasos-block summary::-webkit-details-marker{ display: none; }
+.pasos-block summary:hover{ background: rgba(0,255,170,.05); }
+.pasos-block .pasos-body{
+  padding: 0 1rem .9rem;
+  border-top: 1px solid var(--border);
+}
+.pasos-block ol{
+  margin: .9rem 0 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: paso;
+}
+.pasos-block ol li{
+  counter-increment: paso;
+  position: relative;
+  padding: .4rem 0 .4rem 2.2rem;
+  font-size: .86rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+.pasos-block ol li::before{
+  content: counter(paso);
+  position: absolute;
+  left: 0; top: .45rem;
+  width: 1.5rem; height: 1.5rem;
+  background: var(--cyan-dim);
+  color: var(--cyan);
+  border-radius: 50%;
+  display: grid; place-items: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: .72rem;
+}
+.pasos-block ol li kbd{
+  font-family: var(--font-mono);
+  font-size: .78em;
+  background: rgba(0,210,255,.12);
+  color: var(--cyan);
+  border: 1px solid rgba(0,210,255,.25);
+  border-radius: 4px;
+  padding: .05rem .35rem;
+}
+.pasos-block ol li code{
+  font-family: var(--font-mono);
+  font-size: .78em;
+  background: rgba(0,255,170,.1);
+  color: var(--layer-green);
+  border-radius: 4px;
+  padding: .05rem .3rem;
+}
