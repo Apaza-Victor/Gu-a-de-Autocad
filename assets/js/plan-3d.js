@@ -552,13 +552,16 @@
     matAccent=new THREE.MeshStandardMaterial({ color:0xe8e2d6, roughness:0.55, metalness:0.2 });
     matPlant =new THREE.MeshStandardMaterial({ color:0x5aa86a, roughness:0.9, metalness:0 });
 
-    /* losa + zócalo */
-    var plinth=box(6.9,0.5,4.9,matPlith);
-    plinth.position.y=-0.45; plinth.receiveShadow=true; plinth.castShadow=true;
-    group.add(plinth);
+    /* losa + zócalo (centrados en la huella: muros 0..6.2 X, 0..4.2 Z => centro 3.1,2.1) */
+    var CX=6.2/2, CZ=4.2/2;
     slabMesh=box(6.6,0.2,4.6,matFloor);
-    slabMesh.position.y=-0.1; slabMesh.receiveShadow=true; slabMesh.castShadow=true;
+    slabMesh.position.set(CX,-0.1,CZ);              // top en y=0 = base de los muros
+    slabMesh.receiveShadow=true; slabMesh.castShadow=true;
     group.add(slabMesh);
+    var plinth=box(6.9,0.5,4.9,matPlith);
+    plinth.position.set(CX,-0.7,CZ);                // top en -0.2 = fondo de la losa
+    plinth.receiveShadow=true; plinth.castShadow=true;
+    group.add(plinth);
 
     function addRiser(m){ allRisers.push(m); m.castShadow=true; m.receiveShadow=true; group.add(m); }
 
@@ -661,21 +664,23 @@
       });
     })();
 
-    /* cubierta con vuelo (alero) */
-    roofMesh=box(7.0,0.16,5.0,matRoof);
-    roofMesh.position.y=2.86; roofMesh.castShadow=true; roofMesh.receiveShadow=true;
+    /* cubierta con vuelo (alero) — apoyada en los muros y centrada en la huella */
+    var RLX=7.0, RDZ=5.0;
+    roofMesh=box(RLX,0.16,RDZ,matRoof);
+    roofMesh.position.set(CX,2.8,CZ);               // apoya en y=0..2.8 (techo en 2.8..2.96)
+    roofMesh.castShadow=true; roofMesh.receiveShadow=true;
     addRiser(roofMesh);
-    function eave(ld, xz, tx, xx){                  // borde/perfil de la cubierta
-      var p=box(ld,0.28,tx,matFrame);
-      p.position.set(xz||0, 2.86, xx||0);
+    function eave(len, y, dep, x, z){               // borde/perfil de la cubierta
+      var p=box(len,0.3,dep,matFrame);
+      p.position.set(x,y,z);
       addRiser(p);
     }
-    eave(7.0,  0,   0.28, -2.46);                   // frontal
-    eave(7.0,  0,   0.28,  2.46);                   // trasero
-    eave(0.28, -3.46, 5.0, 0);                      // lateral izq
-    eave(0.28,  3.46, 5.0, 0);                      // lateral der
+    eave(RLX, 2.8, 0.3, CX,      CZ+RDZ/2);          // frontal
+    eave(RLX, 2.8, 0.3, CX,      CZ-RDZ/2);          // trasero
+    eave(0.3, 2.8, RDZ, CX-RLX/2, CZ);               // lateral izq
+    eave(0.3, 2.8, RDZ, CX+RLX/2, CZ);               // lateral der
 
-    group.position.x=-3.1; group.position.z=-2.1;
+    group.position.x=-CX; group.position.z=-CZ;
     group.rotation.y=0.35;
 
     resize();
