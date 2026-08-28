@@ -552,13 +552,13 @@
     matAccent=new THREE.MeshStandardMaterial({ color:0xe8e2d6, roughness:0.55, metalness:0.2 });
     matPlant =new THREE.MeshStandardMaterial({ color:0x5aa86a, roughness:0.9, metalness:0 });
 
-    /* losa + zócalo (centrados en la huella: muros 0..6.2 X, 0..4.2 Z => centro 3.1,2.1) */
+    /* losa + zócalo (a ras con la huella de los muros 6.2 x 4.2) */
     var CX=6.2/2, CZ=4.2/2;
-    slabMesh=box(6.3,0.2,4.3,matFloor);
+    slabMesh=box(6.2,0.2,4.2,matFloor);
     slabMesh.position.set(CX,-0.1,CZ);              // top en y=0 = base de los muros
     slabMesh.receiveShadow=true; slabMesh.castShadow=true;
     group.add(slabMesh);
-    var plinth=box(6.4,0.5,4.4,matPlith);
+    var plinth=box(6.3,0.5,4.3,matPlith);
     plinth.position.set(CX,-0.7,CZ);                // top en -0.2 = fondo de la losa
     plinth.receiveShadow=true; plinth.castShadow=true;
     group.add(plinth);
