@@ -251,6 +251,17 @@
   cursor: grab;
 }
 .plan-anim canvas#plan3dCanvas:active{ cursor: grabbing; }
+.plan-anim .plan-stage{
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(75% 70% at 50% 78%, rgba(79, 214, 232, .14), transparent 70%),
+              linear-gradient(180deg, rgba(11, 18, 32, 0) 55%, rgba(11, 18, 32, .55) 100%);
+  pointer-events: none;
+}
+[data-theme="light"] .plan-anim .plan-stage{
+  background: radial-gradient(75% 70% at 50% 78%, rgba(79, 214, 232, .16), transparent 70%),
+              linear-gradient(180deg, rgba(255, 255, 255, 0) 55%, rgba(220, 228, 240, .6) 100%);
+}
 .plan-anim .plan-hud{ left: 8px; bottom: 8px; z-index: 3; }
 .plan-anim .plan-replay{
   position: absolute;

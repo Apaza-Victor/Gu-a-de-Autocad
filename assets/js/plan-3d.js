@@ -204,12 +204,10 @@
     titleGrp.appendChild(t1); titleGrp.appendChild(t2);
     els.fade.push(titleGrp);
 
-    /* muros (línea gruesa + eje fino animado) */
+    /* muros (línea gruesa dibujada) */
     WALLS.forEach(function(w){
       var col = w.kind==='outer' ? C.amber : C.red;
       els.walls.push(pencil([px(w.a[0]),py(w.a[1])],[px(w.b[0]),py(w.b[1])], col, TH));
-      els.walls.push(pencil([px(w.a[0]),py(w.a[1])],[px(w.b[0]),py(w.b[1])],
-        w.kind==='outer'?'rgba(255,145,66,.55)':'rgba(255,93,93,.55)', 1.1));
     });
 
     /* Cotas (verde) */
@@ -517,46 +515,49 @@
     renderer.shadowMap.enabled=true;
     renderer.shadowMap.type=THREE.PCFSoftShadowMap;
 
-    scene.add(new THREE.HemisphereLight(0xfff4e6,0x223344,0.95));
-    var key=new THREE.DirectionalLight(0xffedd6,2.0);
-    key.position.set(6,11,5); key.castShadow=true;
-    key.shadow.mapSize.set(1024,1024);
-    key.shadow.camera.near=0.5; key.shadow.camera.far=30;
-    key.shadow.camera.left=-8; key.shadow.camera.right=8;
-    key.shadow.camera.top=8; key.shadow.camera.bottom=-8;
+    scene.add(new THREE.HemisphereLight(0xfff3e0,0x33404f,1.0));
+    var key=new THREE.DirectionalLight(0xfff0dc,2.1);
+    key.position.set(7,12,6); key.castShadow=true;
+    key.shadow.mapSize.set(2048,2048);
+    key.shadow.camera.near=0.5; key.shadow.camera.far=40;
+    key.shadow.camera.left=-10; key.shadow.camera.right=10;
+    key.shadow.camera.top=10; key.shadow.camera.bottom=-10;
     scene.add(key);
-    var fill=new THREE.DirectionalLight(0x9fd0ff,0.7);
-    fill.position.set(-5,5,-6); scene.add(fill);
-    scene.add(new THREE.AmbientLight(0x6e7b9e,0.45));
+    var fill=new THREE.DirectionalLight(0xa8d4ff,0.6);
+    fill.position.set(-6,6,-7); scene.add(fill);
+    scene.add(new THREE.AmbientLight(0x8b98b8,0.4));
 
     group=new THREE.Group();
     scene.add(group);
 
-    var matGround=new THREE.ShadowMaterial(); matGround.opacity=0.55;
-    var ground=new THREE.Mesh(new THREE.PlaneGeometry(26,20), matGround);
+    var matGround=new THREE.ShadowMaterial(); matGround.opacity=0.6;
+    var ground=new THREE.Mesh(new THREE.CircleGeometry(16,48), matGround);
     ground.rotation.x=-Math.PI/2; ground.position.y=0.001; ground.receiveShadow=true;
     scene.add(ground);
 
-    var grid=new THREE.GridHelper(10,10,tcol('--layer-cyan','#35D6CB'),tcol('--layer-cyan','#35D6CB'));
-    grid.material.transparent=true; grid.material.opacity=0.14; grid.position.y=0.015;
+    var grid=new THREE.GridHelper(12,12,tcol('--layer-cyan','#35D6CB'),tcol('--layer-cyan','#35D6CB'));
+    grid.material.transparent=true; grid.material.opacity=0.12; grid.position.y=0.015;
     scene.add(grid);
 
-    var matFloor=new THREE.MeshStandardMaterial({ color:tcol('--bg-panel','#0B1220'), roughness:0.7, metalness:0.1 });
-    var matWall =new THREE.MeshStandardMaterial({ color:tcol('--amber','#FF9142'), roughness:0.55, metalness:0.05 });
-    matWall.flatShading=false;
-    var matPart =new THREE.MeshStandardMaterial({ color:tcol('--layer-red','#FF5D5D'), roughness:0.6, metalness:0.05 });
-    var matRoof =new THREE.MeshStandardMaterial({ color:tcol('--bg-panel-2','#111A2E'), roughness:0.55, metalness:0.1 });
+    var matFloor=new THREE.MeshStandardMaterial({ color:0xd9cdbb, roughness:0.9, metalness:0 });   // suelo hormigón claro
+    var matPlith=new THREE.MeshStandardMaterial({ color:0x8c9aa8, roughness:0.6, metalness:0.25 }); // zócalo
+    var matWall =new THREE.MeshStandardMaterial({ color:0xf0e6d8, roughness:0.92, metalness:0 });   // fachada yeso
+    var matPart =new THREE.MeshStandardMaterial({ color:0xeae0d0, roughness:0.92, metalness:0 });   // tabiques
+    var matRoof =new THREE.MeshStandardMaterial({ color:0x5a4635, roughness:0.75, metalness:0.15 }); // cubierta teja
     matRoof.side=THREE.DoubleSide;
-    var matDoor =new THREE.MeshStandardMaterial({ color:0x9b6a35, roughness:0.5, metalness:0.2 });
-    matFrame =new THREE.MeshStandardMaterial({ color:0xe6edf7, roughness:0.35, metalness:0.4 });
-    matGlass =new THREE.MeshStandardMaterial({ color:tcol('--layer-cyan','#35D6CB'), transparent:true, opacity:0, roughness:0.05, metalness:0.85, side:THREE.DoubleSide });
-    matFurn  =new THREE.MeshStandardMaterial({ color:tcol('--layer-magenta','#E36BFF'), roughness:0.75, metalness:0.05 });
-    matAccent=new THREE.MeshStandardMaterial({ color:0xe4e8f0, roughness:0.55, metalness:0.2 });
+    var matDoor =new THREE.MeshStandardMaterial({ color:0x8a5a2e, roughness:0.55, metalness:0.25 });
+    matFrame =new THREE.MeshStandardMaterial({ color:0xeef2f7, roughness:0.3, metalness:0.5 });
+    matGlass =new THREE.MeshStandardMaterial({ color:0x7fd4e8, transparent:true, opacity:0, roughness:0.05, metalness:0.85, side:THREE.DoubleSide });
+    matFurn  =new THREE.MeshStandardMaterial({ color:0x4c3a28, roughness:0.75, metalness:0.05 });   // madera muebles
+    matAccent=new THREE.MeshStandardMaterial({ color:0xe8e2d6, roughness:0.55, metalness:0.2 });
     matPlant =new THREE.MeshStandardMaterial({ color:0x5aa86a, roughness:0.9, metalness:0 });
 
-    /* losa */
-    slabMesh=box(6.6,0.16,4.6,matFloor);
-    slabMesh.position.y=-0.16; slabMesh.receiveShadow=true; slabMesh.castShadow=true;
+    /* losa + zócalo */
+    var plinth=box(6.9,0.5,4.9,matPlith);
+    plinth.position.y=-0.45; plinth.receiveShadow=true; plinth.castShadow=true;
+    group.add(plinth);
+    slabMesh=box(6.6,0.2,4.6,matFloor);
+    slabMesh.position.y=-0.1; slabMesh.receiveShadow=true; slabMesh.castShadow=true;
     group.add(slabMesh);
 
     function addRiser(m){ allRisers.push(m); m.castShadow=true; m.receiveShadow=true; group.add(m); }
@@ -660,19 +661,19 @@
       });
     })();
 
-    /* cubierta + parapeto */
-    roofMesh=box(6.8,0.16,4.8,matRoof);
-    roofMesh.position.y=2.82; roofMesh.castShadow=true; roofMesh.receiveShadow=true;
+    /* cubierta con vuelo (alero) */
+    roofMesh=box(7.0,0.16,5.0,matRoof);
+    roofMesh.position.y=2.86; roofMesh.castShadow=true; roofMesh.receiveShadow=true;
     addRiser(roofMesh);
-    function parapet(wz, xz, wx, xx){
-      var p=box(wz,0.18,wx,matFrame);
-      p.position.set(xz||0, 2.95, xx||0);
+    function eave(ld, xz, tx, xx){                  // borde/perfil de la cubierta
+      var p=box(ld,0.28,tx,matFrame);
+      p.position.set(xz||0, 2.86, xx||0);
       addRiser(p);
     }
-    parapet(6.84, 0,  0.14, -2.36);
-    parapet(6.84, 0,  0.14,  2.36);
-    parapet(0.14, -3.36, 4.8, 0);
-    parapet(0.14,  3.36, 4.8, 0);
+    eave(7.0,  0,   0.28, -2.46);                   // frontal
+    eave(7.0,  0,   0.28,  2.46);                   // trasero
+    eave(0.28, -3.46, 5.0, 0);                      // lateral izq
+    eave(0.28,  3.46, 5.0, 0);                      // lateral der
 
     group.position.x=-3.1; group.position.z=-2.1;
     group.rotation.y=0.35;
@@ -700,6 +701,7 @@
       if (m===roofMesh||m===slabMesh) return false;
       if (allWalls.indexOf(m)!==-1) return false;
       if (doorLeaves.indexOf(m)!==-1) return false;
+      if (m.material===matFrame) return false;          // marcos/aleros: se animan aparte
       if (glassMats.indexOf(m.material)!==-1) return false;
       return true;
     };
@@ -803,8 +805,9 @@
     mode=m;
     if(btn2D) btn2D.classList.toggle('active', m==='2d');
     if(btn3D) btn3D.classList.toggle('active', m==='3d'||m==='build');
-    if(m==='2d'){ svg2d.style.opacity='1'; canvas3d.style.display='none'; }
-    else { canvas3d.style.display='block'; svg2d.style.opacity='0'; }
+    var stg=svg2d.parentNode.querySelector('.plan-stage');
+    if(m==='2d'){ svg2d.style.opacity='1'; canvas3d.style.display='none'; if(stg) stg.style.display='none'; }
+    else { canvas3d.style.display='block'; svg2d.style.opacity='0'; if(stg) stg.style.display='block'; }
   }
 
   function start(){
