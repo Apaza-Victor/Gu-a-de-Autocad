@@ -84,7 +84,7 @@
     tub:    { x:1050, y:3300, w:300,  h:1500 },
     basin:  { x:400,  y:2900, w:420,  h:300 },
     plant1: { x:3500, y:900,  r:150 },
-    plant2: { x:6100, y:380,  r:150 }
+    plant2: { x:5650, y:450,  r:150 }
   };
 
   var STEP_LABELS = [
@@ -558,7 +558,7 @@
     slabMesh.position.set(CX,-0.1,CZ);              // top en y=0 = base de los muros
     slabMesh.receiveShadow=true; slabMesh.castShadow=true;
     group.add(slabMesh);
-    var plinth=box(6.3,0.5,4.3,matPlith);
+    var plinth=box(6.2,0.5,4.2,matPlith);
     plinth.position.set(CX,-0.7,CZ);                // top en -0.2 = fondo de la losa
     plinth.receiveShadow=true; plinth.castShadow=true;
     group.add(plinth);
@@ -641,9 +641,10 @@
         var lg=box(0.1,0.76,0.1,matAccent);
         lg.position.set(F.dining.x*M2+s[0]*0.55, 0.38, F.dining.y*M2+s[1]*0.55); addRiser(lg);
       });
+      var dsM=F.dining.r*M2/Math.SQRT2;                 // media diagonal (sillas, coincide con 2D)
       [[-1,-1],[1,-1],[-1,1],[1,1]].forEach(function(s){
         var ch=box(0.44,0.5,0.44,matFurn);
-        ch.position.set(F.dining.x*M2+s[0]*0.95, 0.25, F.dining.y*M2+s[1]*0.95); addRiser(ch);
+        ch.position.set(F.dining.x*M2+s[0]*dsM, 0.25, F.dining.y*M2+s[1]*dsM); addRiser(ch);
       });
 
       F3(F.kcount, 1.0,0.9,0.6, matFurn);
@@ -654,7 +655,7 @@
 
       F3(F.toilet, 0.34,0.75,0.3, matAccent);                                             // tanque
       F3({x:F.toilet.x+40,y:F.toilet.y-70,w:250,h:250}, 0.2,0.45,0.2, matAccent);          // inodoro
-      F3(F.tub, F.tub.h*M2,0.55,F.tub.w*M2, matAccent);                                   // bañera
+      F3(F.tub, F.tub.h*M2,0.55,F.tub.w*M2, matAccent, { cx:F.tub.h/2, cz:F.tub.w/2 });   // bañera
       F3(F.basin, F.basin.w*M2,0.85,F.basin.h*M2, matAccent);                             // lavabo
 
       [F.plant1,F.plant2].forEach(function(p){
