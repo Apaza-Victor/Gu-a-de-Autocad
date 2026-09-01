@@ -162,6 +162,13 @@ a:hover{ color: var(--amber); }
   width: auto; height: 34px;
   flex-shrink: 0;
 }
+.navbar-cad .brand-cad .brand-logo,
+footer .brand-cad .brand-logo{
+  width: auto !important;
+  height: 34px !important;
+  max-height: 34px !important;
+  max-width: none !important;
+}
 .brand-cad small{ color: var(--text-muted); font-weight: 500; font-size: clamp(.56rem, 2.4vw, .68rem); }
 .brand-cad:hover{ color: #e51050 !important; transition: color .2s ease; }
 

@@ -134,7 +134,7 @@
             </div>
           </div>
           <div class="callout" style="margin-top:1rem">
-            <span data-i18n-html="tuts.line.tip">Escribe coordenadas relativas con <kbd>@</kbd> (ej: <kbd>@100,0</kbd>) para dibujar líneas exactas sin helpers.</span>
+            <span data-i18n-html="tuts.line.tip">Para dibujar una <strong>línea diagonal</strong> con longitud y ángulo exactos, activa el Input Dinámico (<kbd>F12</kbd>), escribe la longitud y pulsa <kbd>TAB</kbd> para cambiar al campo de <strong>ángulo</strong>; escribe el valor y presiona Enter.</span>
           </div>
         </div>
       </div>
@@ -198,7 +198,7 @@
             </div>
           </div>
           <div class="callout" style="margin-top:1rem">
-            <span data-i18n-html="tuts.rect.tip">Después del primer punto, escribe <kbd>@ancho,alto</kbd> (ej: <kbd>@200,100</kbd>) para crear un rectángulo con dimensiones exactas.</span>
+            <span data-i18n-html="tuts.rect.tip">Con la opción Dimensiones (<kbd>D</kbd>), pulsa <kbd>TAB</kbd> para alternar entre el campo de <strong>ancho</strong> y el de <strong>altura</strong>. También puedes escribir <kbd>@ancho,alto</kbd> (ej: <kbd>@200,100</kbd>) para dimensiones exactas.</span>
           </div>
         </div>
       </div>
@@ -342,7 +342,7 @@
             </svg>
           </div>
           <div class="callout" style="margin-top:1rem">
-            <span data-i18n-html="tuts.ellipse.tip">Usa la opción Centro (<kbd>C</kbd>) para definir desde el centro en vez de un extremo.</span>
+            <span data-i18n-html="tuts.ellipse.tip">Usa la opción Centro (<kbd>C</kbd>) para definir desde el centro en vez de un extremo, y <kbd>TAB</kbd> para alternar entre los campos del eje mayor y del eje menor.</span>
           </div>
         </div>
       </div>
@@ -746,7 +746,7 @@
             </svg>
           </div>
           <div class="callout" style="margin-top:1rem">
-            <span data-i18n-html="tuts.createlayer.tip">Usa colores distintos por capa para identificar rápidamente elementos. Nunca dibujes todo en la capa 0.</span>
+            <span data-i18n-html="tuts.createlayer.tip">Cómo crear una capa: escribe <kbd>LA</kbd> → botón "Crear nueva capa" → ponle <strong>nombre</strong> (Muros, Ventanas, Cotas...) → asigna <strong>color</strong>, <strong>tipo de línea</strong> (carga DASHED para ejes) y <strong>grosor</strong> → "Aplicar" y "Aceptar". Selecciónala antes de dibujar o usa <kbd>CAPACORR</kbd>. Dibuja siempre <strong>ByLayer</strong>. Nunca dibujes todo en la capa 0.</span>
           </div>
         </div>
       </div>
@@ -948,7 +948,7 @@
             </svg>
           </div>
           <div class="callout" style="margin-top:1rem">
-            <span data-i18n-html="tuts.linetype.tip">Los tipos de línea se escalan con LTSCALE. Ajusta este valor hasta que el patrón sea visible en pantalla.</span>
+            <span data-i18n-html="tuts.linetype.tip">Para cambiar el tipo de línea: <kbd>LT</kbd> → "Cargar" (CONTINUOUS, DASHED, CENTER...) → asígnalo a la capa o al objeto con PROPERTIES. El <strong>tamaño</strong> de las rayas se controla con <kbd>LTSCALE</kbd> (global), <kbd>CELTSCALE</kbd> (por objeto) y <kbd>PSLTSCALE</kbd> (papel). Tras cambiarlo, fuerza el refresco con <kbd>REGEN</kbd> si no se actualiza.</span>
           </div>
         </div>
       </div>
@@ -1449,13 +1449,13 @@
               <text class="cad-label" x="18" y="42" style="font-size:6px;fill:var(--text-muted)">Precision:</text>
               <text class="cad-label" x="70" y="42" style="font-size:6px;fill:var(--layer-green)">0.00</text>
               <text class="cad-label" x="18" y="52" style="font-size:6px;fill:var(--text-muted)">Unidad:</text>
-              <text class="cad-label" x="55" y="52" style="font-size:6px;fill:var(--layer-yellow)">Milimetros</text>
+              <text class="cad-label" x="55" y="52" style="font-size:6px;fill:var(--layer-yellow)">Metros</text>
               <text class="cad-label" x="18" y="62" style="font-size:6px;fill:var(--text-muted)">Angulo:</text>
               <text class="cad-label" x="65" y="62" style="font-size:6px;fill:var(--layer-magenta)">Grados</text>
             </svg>
           </div>
           <div class="callout" style="margin-top:1rem">
-            <span data-i18n-html="tuts.unidades.tip">Configura unidades al inicio del proyecto para evitar problemas de escala al imprimir o insertar bloques.</span>
+            <span data-i18n-html="tuts.unidades.tip">Para trabajar en <strong>metros</strong> con <strong>2 decimales</strong>: escribe <kbd>UN</kbd> → Tipo: <strong>Decimal</strong> → Precisión: <strong>0.00</strong> → Unidades de inserción: <strong>Metros</strong> → Aceptar. Ese valor se guarda en el <strong>.DWG</strong>, así que revísalo en cada archivo nuevo. En metros dibujan natural 1:1 (un muro de 5 m = 5); en millimetros sería 5000. Usa la misma unidad y precision en ACOESTILO para que las cotas coincidan.</span>
           </div>
         </div>
       </div>
@@ -1532,7 +1532,7 @@
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
             <div class="diagram-step">
-              <span class="diagram-step-label">SC + R</span>
+              <span class="diagram-step-label">ES + R</span>
               <svg viewBox="0 0 180 70">
                 <rect x="30" y="10" width="60" height="45" rx="2" fill="rgba(255,93,93,.1)" stroke="var(--layer-red)" stroke-width="1" stroke-dasharray="3,2"/>
                 <rect x="20" y="5" width="80" height="55" rx="2" fill="rgba(123,216,127,.15)" stroke="var(--layer-green)" stroke-width="1.5"/>
@@ -1544,7 +1544,7 @@
             <svg viewBox="0 0 280 60">
               <text class="cad-label-cmd" x="5" y="12" style="font-size:7px;fill:var(--amber)">Pasos:</text>
               <text class="cad-label" x="5" y="24" style="font-size:6px">1. Selecciona el bloque</text>
-              <text class="cad-label" x="5" y="34" style="font-size:6px">2. Escribe SC + Enter</text>
+              <text class="cad-label" x="5" y="34" style="font-size:6px">2. Escribe ES + Enter</text>
               <text class="cad-label" x="5" y="44" style="font-size:6px">3. Punto base (esquina)</text>
               <text class="cad-label" x="5" y="54" style="font-size:6px">4. Escribe R (Referencia)</text>
               <text class="cad-label" x="145" y="24" style="font-size:6px">5. Longitud actual (clic 2 pts)</text>
@@ -1579,7 +1579,7 @@
             </div>
             <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
             <div class="diagram-step">
-              <span class="diagram-step-label">SC + R + 2500</span>
+              <span class="diagram-step-label">ES + R + 2500</span>
               <svg viewBox="0 0 180 70">
                 <rect x="20" y="15" width="50" height="35" rx="2" fill="rgba(255,93,93,.1)" stroke="var(--layer-red)" stroke-width="1" stroke-dasharray="3,2"/>
                 <text class="cad-label" x="25" y="37" style="font-size:6px;fill:var(--layer-red)">Bloque</text>
@@ -1632,11 +1632,11 @@
           <div class="diagram-canvas" style="margin-top:1rem">
             <svg viewBox="0 0 280 120">
               <text class="cad-label-cmd" x="5" y="12" style="font-size:7px;fill:var(--amber)">Pasos detallados:</text>
-              <text class="cad-label" x="5" y="24" style="font-size:6px">1. Escribe D + Enter (abre Administrador)</text>
-              <text class="cad-label" x="5" y="34" style="font-size:6px">2. Haz clic en "Nuevo" (New)</text>
-              <text class="cad-label" x="5" y="44" style="font-size:6px">3. Nombra el estilo (ej: MI_ESTILO)</text>
-              <text class="cad-label" x="5" y="54" style="font-size:6px">4. Selecciona "Empezar por" un estilo base</text>
-              <text class="cad-label" x="5" y="64" style="font-size:6px">5. Haz clic en "Continuar"</text>
+              <text class="cad-label" x="5" y="24" style="font-size:6px">1. Escribe ACOESTILO + Enter (o D)</text>
+              <text class="cad-label" x="5" y="34" style="font-size:6px">2. Selecciona el estilo "Standard" de la lista</text>
+              <text class="cad-label" x="5" y="44" style="font-size:6px">3. Haz clic en "Nuevo" (New)</text>
+              <text class="cad-label" x="5" y="54" style="font-size:6px">4. Nombra el estilo (ej: METROS-100)</text>
+              <text class="cad-label" x="5" y="64" style="font-size:6px">5. "Empezar por": Standard → "Continuar"</text>
               <text class="cad-label-cmd" x="5" y="78" style="font-size:7px;fill:var(--amber)">En la pestaña "Lines":</text>
               <text class="cad-label" x="5" y="90" style="font-size:6px">6. Lineas de cota: Color, Tipo, Grosor</text>
               <text class="cad-label" x="5" y="100" style="font-size:6px">7. Extensiones: Separación, Offset</text>
@@ -1650,10 +1650,14 @@
               <text class="cad-label" x="145" y="54" style="font-size:6px">13. Suffix: mm, m, etc.</text>
               <text class="cad-label-cmd" x="145" y="66" style="font-size:7px;fill:var(--amber)">En "Symbols and Arrows":</text>
               <text class="cad-label" x="145" y="78" style="font-size:6px">14. Tipo de flecha y tamaño</text>
+              <text class="cad-label-cmd" x="5" y="78" style="font-size:7px;fill:var(--amber)">En "Fit" (para metros):</text>
+              <text class="cad-label" x="5" y="90" style="font-size:6px">15. Baja la "Escala general" (DIMSCALE)</text>
+              <text class="cad-label" x="5" y="100" style="font-size:6px">16. En metros: 1, 0.5 o 0.1</text>
+              <text class="cad-label" x="5" y="110" style="font-size:6px">17. En mm: escala de impresión (50, 100)</text>
             </svg>
           </div>
           <div class="callout" style="margin-top:1rem">
-            <span data-i18n-html="tuts.dimstyle.tip">Después de configurar, haz clic en "Cerrar" y luego escribe D → selecciona tu estilo → "Actual" para activarlo. Todas las cotas nuevas usarán ese estilo.</span>
+            <span data-i18n-html="tuts.dimstyle.tip">Flujo: <kbd>ACOESTILO</kbd> → selecciona "Standard" → "Nuevo" → nombre → "Continuar" → configura las pestañas (Líneas, Flechas, Texto, Ajuste, Unidades) → "Aceptar" → "Cerrar". ¿Cotas demasiado grandes? En la pestaña "Ajuste" baja la "Escala general": en metros usa 1, 0.5 o 0.1; en mm déjala en la escala de impresión (50, 100...). Para texto pequeño, baja la altura del texto en la pestaña "Texto".</span>
           </div>
         </div>
       </div>
@@ -2210,7 +2214,7 @@
           <h4><span class="cmd-badge" data-i18n="tuts.badge.edicion">Edición</span> <span data-i18n="tuts.agrupar.title">Agrupar objetos</span></h4>
         </div>
         <div class="diagram-card-body">
-          <p data-i18n-html="tuts.agrupar.desc">GROUP (atajo G) une varios objetos para seleccionarlos como un solo conjunto.</p>
+          <p data-i18n-html="tuts.agrupar.desc">GROUP (atajo <kbd>G</kbd>) une varios objetos o <strong>varios bloques</strong> para seleccionarlos como un solo conjunto, editable sin descomponer. Si quieres pieza única rígida, usa BLOQUE.</p>
           <div class="diagram-steps">
             <div class="diagram-step">
               <span class="diagram-step-label" data-cmd="LOOSE" data-cmd-es="SUELTOS">SUELTOS</span>
@@ -2234,7 +2238,7 @@
             </div>
           </div>
           <div class="callout" style="margin-top:1rem">
-            <span data-i18n-html="tuts.agrupar.tip">FUNCIÓN COMPLEMENTARIA: para seleccionar el grupo completo en un solo clic, responde “Sí” cuando AutoCAD pregunte al iniciar el comando.</span>
+            <span data-i18n-html="tuts.agrupar.tip">Cómo agrupar: escribe <kbd>G</kbd> → selecciona los objetos o bloques → ponle nombre → "Aceptar". Para seleccionar todo el grupo con un clic responde "Sí" al iniciar. <strong>¿No agrupa?</strong> Fija <kbd>PICKSTYLE</kbd> en 2-3, activa <kbd>Ctrl+H</kbd>, desbloquea la capa; si quieres pieza única rígida usa <strong>BLOQUE</strong> en lugar de grupo.</span>
           </div>
         </div>
       </div>
@@ -2280,6 +2284,172 @@
           </div>
           <div class="callout" style="margin-top:1rem">
             <span data-i18n-html="tuts.dynblock.tip">PASO A PASO: crea el bloque con BLOCK, entra a BEDIT, abre la Paleta de Autoría (Ctrl+3), añade un parámetro Lineal + acción Estirar, guarda e inserta el bloque para estirarlo con su pinzamiento.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== SOLUCIÓN: LÍNEAS DISCONTINUAS SE VEN CONTINUAS ====== -->
+      <div class="diagram-card" data-cat="vista" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge" data-i18n="tuts.badge.vista">Vista</span> <span data-i18n="tuts.ltscale.title">Líneas discontinuas se ven continuas</span></h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n-html="tuts.ltscale.desc">Si una línea "discontinua" se ve como continua, la escala de tipo de línea está mal. Ajústala con <span data-cmd="LTSCALE" data-cmd-es="ESCALATIPOLINEA">LTSCALE</span>.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label">PROBLEMA</span>
+              <svg viewBox="0 0 180 70">
+                <line x1="20" y1="35" x2="160" y2="35" stroke="var(--text-muted)" stroke-width="1.5"/>
+                <text class="cad-label" x="30" y="58" style="font-size:6px;fill:var(--layer-red)">se ve continua ✗</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label" data-cmd="LTSCALE" data-cmd-es="ESCALATIPOLINEA">ESCALATIPOLINEA</span>
+              <svg viewBox="0 0 180 70">
+                <line x1="20" y1="35" x2="160" y2="35" stroke="var(--layer-cyan)" stroke-width="1.5" stroke-dasharray="8,6"/>
+                <text class="cad-label" x="30" y="58" style="font-size:6px;fill:var(--layer-green)">rayas visibles ✓</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span data-i18n-html="tuts.ltscale.tip">Escribe <kbd>ESCALATIPOLINEA</kbd> y sube el valor (10, 50, 100) hasta que las rayas se vean. Si solo falla en el layout, usa <kbd>ESCALATIPOPLANO</kbd> en 1. Si no se actualiza, regenérate con <kbd>REGENTODO</kbd>.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== SOLUCIÓN: BLOQUE CAMBIA DE ESCALA / UNIDADES ====== -->
+      <div class="diagram-card" data-cat="edicion" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge" data-i18n="tuts.badge.edicion">Edición</span> <span data-i18n="tuts.blockunits.title">Bloque cambia al moverlo / de escala o unidades</span></h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n-html="tuts.blockunits.desc">Un bloque insertado con tamaño o unidades distintas a las del dibujo es un problema típico de <span data-cmd="INSUNITS" data-cmd-es="UNIDINS">INSUNITS</span>. Se corrige sin redibujar.</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 280 90">
+              <text class="cad-label-cmd" x="5" y="14" style="font-size:7px;fill:var(--amber)">Bloque en mm dentro de dibujo en m:</text>
+              <rect x="15" y="25" width="60" height="40" rx="2" fill="rgba(255,93,93,.12)" stroke="var(--layer-red)" stroke-width="1.5"/>
+              <text class="cad-label" x="30" y="78" style="font-size:6px;fill:var(--layer-red)">aparece enorme ✗</text>
+              <line x1="120" y1="15" x2="120" y2="80" stroke="var(--border-soft)" stroke-width="1"/>
+              <rect x="150" y="50" width="30" height="15" rx="2" fill="rgba(123,216,127,.12)" stroke="var(--layer-green)" stroke-width="1.5"/>
+              <text class="cad-label" x="150" y="78" style="font-size:6px;fill:var(--layer-green)">×0.001 ✓ (mm→m)</text>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span data-i18n-html="tuts.blockunits.tip">Revisa <kbd>UNIDADES</kbd> y el <kbd>UNIDINS</kbd> del dibujo. Si el bloque ya está mal, selecciónalo y en PROPERTIES corrige el "Factor de escala" (×0.001 para pasar de mm a m).</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== SOLUCIÓN: CURSOR SE SALTA / NO ENGANCHA ====== -->
+      <div class="diagram-card" data-cat="geometria" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge" data-i18n="tuts.badge.geometria">Geometría</span> <span data-i18n="tuts.osnap.title">Cursor se salta o no engancha los puntos</span></h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n-html="tuts.osnap.desc">Si el cursor "salta" de más o no se pega a extremos, centros e intersecciones, la referencia a objetos no está funcionando. Actívala con <span data-cmd="OSNAP" data-cmd-es="REFCAD">OSNAP</span>.</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 280 80">
+              <line class="cad-line" x1="20" y1="30" x2="150" y2="30"/>
+              <circle class="cad-line" cx="185" cy="30" r="14"/>
+              <rect x="60" y="45" width="40" height="20" rx="2" fill="rgba(53,214,203,.12)" stroke="var(--layer-cyan)" stroke-width="1.5"/>
+              <circle class="cad-point-cyan" cx="20" cy="30" r="3.5"/>
+              <circle class="cad-point-cyan" cx="150" cy="30" r="3.5"/>
+              <circle class="cad-point-magenta" cx="185" cy="30" r="3.5"/>
+              <circle class="cad-point-magenta" cx="80" cy="45" r="3"/>
+              <text class="cad-label" x="25" y="70" style="font-size:6px;fill:var(--layer-green)">F3 + extremos/medio/centro ✓</text>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span data-i18n-html="tuts.osnap.tip">Activa la referencia a objetos con <kbd>F3</kbd>. Si el cursor salta, apaga <kbd>F9</kbd> (SNAP). Configura qué engancha con <kbd>REFCAD</kbd>: Extremo, Medio, Centro, Intersección.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== SOLUCIÓN: DIBUJO LENTO / ARCHIVO PESADO ====== -->
+      <div class="diagram-card" data-cat="edicion" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge" data-i18n="tuts.badge.edicion">Edición</span> <span data-i18n="tuts.slowfile.title">Dibujo va lento / archivo pesado</span></h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n-html="tuts.slowfile.desc">Un plano que tarda en moverse o pesa demasiado suele llenarse de datos basura: bloques o capas sin usar, líneas duplicadas y regeneraciones constantes.</p>
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 280 80">
+              <text class="cad-label-cmd" x="5" y="14" style="font-size:7px;fill:var(--amber)">Limpieza en cascada:</text>
+              <text class="cad-label-cmd" x="10" y="36" style="font-size:7px;fill:var(--layer-red)" data-cmd="PURGE" data-cmd-es="LIMPIA">LIMPIA</text>
+              <text class="cad-label" x="70" y="36" style="font-size:6px;fill:var(--text-muted)">elementos no usados</text>
+              <text class="cad-label-cmd" x="10" y="56" style="font-size:7px;fill:var(--layer-yellow)" data-cmd="OVERKILL" data-cmd-es="RESTRUCTURA">RESTRUCTURA</text>
+              <text class="cad-label" x="95" y="56" style="font-size:6px;fill:var(--text-muted)">duplicados</text>
+              <text class="cad-label-cmd" x="150" y="56" style="font-size:7px;fill:var(--layer-cyan)" data-cmd="AUDIT" data-cmd-es="REVISION">REVISIÓN</text>
+              <text class="cad-label" x="215" y="56" style="font-size:6px;fill:var(--text-muted)">repara errores</text>
+              <text class="cad-label" x="10" y="72" style="font-size:6px;fill:var(--layer-green)">⚡ archivo ligero ✓</text>
+            </svg>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span data-i18n-html="tuts.slowfile.tip">Ejecuta <kbd>LIMPIA</kbd> (atajo <kbd>PU</kbd>) marcando "Entidades anidadas" hasta que no quede nada, luego <kbd>RESTRUCTURA</kbd> para duplicados y <kbd>REVISIÓN</kbd> para errores. Guarda con "Guardar como" a la versión actual.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== SOLUCIÓN: COPIA Y PEGA CON ESCALA / ÁNGULO RARO ====== -->
+      <div class="diagram-card" data-cat="edicion" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge" data-i18n="tuts.badge.edicion">Edición</span> <span data-i18n="tuts.pastescale.title">Copia y pega con escala o ángulo raro</span></h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n-html="tuts.pastescale.desc">Al pegar el objeto a veces aparece descomunal, girado o lejos. Esto viene del punto base y de las unidades al copiar entre archivos.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label">Ctrl+C</span>
+              <svg viewBox="0 0 180 70">
+                <rect x="30" y="20" width="90" height="30" rx="2" fill="rgba(255,93,93,.12)" stroke="var(--layer-red)" stroke-width="1.5"/>
+                <text class="cad-label" x="40" y="62" style="font-size:6px;fill:var(--layer-red)">se pega lejos / raro ✗</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label">Ctrl+Shift+C / V</span>
+              <svg viewBox="0 0 180 70">
+                <rect x="20" y="15" width="100" height="35" rx="2" fill="rgba(123,216,127,.12)" stroke="var(--layer-green)" stroke-width="1.5"/>
+                <circle class="cad-point-magenta" cx="20" cy="50" r="3.5"/>
+                <text class="cad-label" x="40" y="62" style="font-size:6px;fill:var(--layer-green)">punto base exacto ✓</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span data-i18n-html="tuts.pastescale.tip">Usa <kbd>Ctrl+Shift+C</kbd> (copiar con punto base) y pega eligiendo el punto de inserción con OSNAP. Si queda girado o desplazado, mueve/rota con <kbd>DESPLAZA</kbd> y <kbd>GIRA</kbd>.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== SOLUCIÓN: NO PUEDO EDITAR UN BLOQUE ====== -->
+      <div class="diagram-card" data-cat="edicion" data-aos="fade-up">
+        <div class="diagram-card-head">
+          <h4><span class="cmd-badge" data-i18n="tuts.badge.edicion">Edición</span> <span data-i18n="tuts.editblock.title">No puedo editar un bloque (bloqueado)</span></h4>
+        </div>
+        <div class="diagram-card-body">
+          <p data-i18n-html="tuts.editblock.desc">Cuando no deja modificar un bloque suele ser por una capa bloqueada, un bloque anidado o una referencia externa. Se resuelve con BEDIT, REFEDIT o desbloqueando la capa.</p>
+          <div class="diagram-steps">
+            <div class="diagram-step">
+              <span class="diagram-step-label">BLOQUE</span>
+              <svg viewBox="0 0 180 70">
+                <rect x="20" y="15" width="90" height="40" rx="3" fill="none" stroke="var(--layer-red)" stroke-width="1.5"/>
+                <text class="cad-label" x="30" y="35" style="font-size:6px;fill:var(--layer-red)">🔒 no edita</text>
+                <text class="cad-label" x="30" y="48" style="font-size:6px;fill:var(--text-muted)">capa bloqueada / XREF</text>
+              </svg>
+            </div>
+            <div class="diagram-step-arrow"><i class="bi bi-arrow-right"></i></div>
+            <div class="diagram-step">
+              <span class="diagram-step-label" data-cmd="BEDIT" data-cmd-es="EDITARBLOQUE">EDITARBLOQUE</span>
+              <svg viewBox="0 0 180 70">
+                <rect x="20" y="15" width="90" height="40" rx="3" fill="none" stroke="var(--layer-green)" stroke-width="1.5"/>
+                <text class="cad-label" x="30" y="35" style="font-size:6px;fill:var(--layer-green)">2 clics = editor ✓</text>
+                <text class="cad-label" x="30" y="48" style="font-size:6px;fill:var(--text-muted)">cambios en todo el bloque</text>
+              </svg>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:1rem">
+            <span data-i18n-html="tuts.editblock.tip">Desbloquea la capa y haz doble clic sobre el bloque (abre editor). Si es una XREF o está anidado, usa <kbd>EDITAREF</kbd> o <kbd>ABRIRREF</kbd>. No es bloque: es grupo → edita con <kbd>EDIGRUPO</kbd>.</span>
           </div>
         </div>
       </div>

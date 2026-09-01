@@ -122,7 +122,7 @@
     <div class="row align-items-center gy-5">
       <div class="col-lg-6" data-aos="fade-up">
         <p class="eyebrow" data-i18n="home.hero.eyebrow">Guía completa · Nivel 1 a Nivel 5</p>
-        <h1 data-i18n-html="home.hero.title">Domina AutoCAD desde <em>la primera línea</em> hasta el plano maestro.</h1>
+        <h1 class="fx-aurora" data-i18n-html="home.hero.title">Domina AutoCAD desde <em>la primera línea</em> hasta el plano maestro.</h1>
         <p class="lead-cad" data-i18n="home.hero.desc">Teoría clara, comandos explicados y una ruta de aprendizaje ordenada para dibujar en 2D, modelar en 3D y trabajar como un profesional del CAD. Ideal para aprender desde cero o repasar un tema puntual.</p>
         <div class="d-flex flex-wrap gap-3 mt-4">
           <a href="paginas/nivel-1-fundamentos.html" class="btn-cad-primary"><i class="bi bi-play-fill me-1"></i> <span data-i18n="home.hero.start">Empezar desde cero</span></a>
@@ -138,30 +138,15 @@
       </div>
 
       <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
-        <div class="hero-3d-wrap">
-          <canvas id="hero3dCanvas" aria-hidden="true"></canvas>
-        </div>
-        <div class="drawing-sheet">
-          <div class="sheet-head">
-            <span class="sheet-dots"><span style="background:var(--layer-red)"></span><span style="background:var(--layer-yellow)"></span><span style="background:var(--layer-green)"></span></span>
-            <span>PLANO-01.DWG</span>
-            <span>ESCALA 1:50</span>
-          </div>
-            <div class="plan-canvas plan-anim" style="aspect-ratio:4/3; border:1px dashed var(--border); border-radius:6px; overflow:hidden; position:relative;">
-              <svg id="plan2d" viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Plano de planta dibujado paso a paso y convertido a 3D"></svg>
-              <canvas id="plan3dCanvas" aria-hidden="true"></canvas>
-              <div class="plan-stage" aria-hidden="true"></div>
-              <div class="plan-toolbar" id="planToolbar">
-                <button type="button" class="plan-mode-btn" id="planView2D" title="Vista en planta (2D)"><i class="bi bi-grid-3x3-gap"></i><span>2D</span></button>
-                <button type="button" class="plan-mode-btn" id="planView3D" title="Modelo 3D"><i class="bi bi-box"></i><span>3D</span></button>
-              </div>
-              <div class="cad3d-hud plan-hud" id="planHud"><i class="bi bi-pencil-square"></i><span id="planHudText">Paso 1/6 · Muros</span></div>
-              <button type="button" class="plan-replay" id="planReplay" title="Reproducir de nuevo"><i class="bi bi-arrow-counterclockwise"></i></button>
-            </div>
-          <div class="d-flex justify-content-between mono small text-muted-custom mt-3">
-            <span>CAPA: Muros</span>
-            <span>UNIDADES: mm</span>
-          </div>
+        <div class="house-slider" id="houseSlider" aria-label="Galería de imágenes de una casa" role="group" aria-roledescription="carrusel">
+          <div class="house-slide active"><img src="assets/img/house/casa1.png" alt="Casa de referencia — vista 1" loading="lazy"></div>
+          <div class="house-slide"><img src="assets/img/house/casa2.png" alt="Casa de referencia — vista 2" loading="lazy"></div>
+          <div class="house-slide"><img src="assets/img/house/casa3.png" alt="Casa de referencia — vista 3" loading="lazy"></div>
+          <div class="house-slide"><img src="assets/img/house/casa4.png" alt="Casa de referencia — vista 4" loading="lazy"></div>
+          <div class="house-slide"><img src="assets/img/house/casa5.png" alt="Casa de referencia — vista 5" loading="lazy"></div>
+          <div class="house-slide"><img src="assets/img/house/casa6.png" alt="Casa de referencia — vista 6" loading="lazy"></div>
+          <div class="house-slide"><img src="assets/img/house/casa7.png" alt="Casa de referencia — vista 7" loading="lazy"></div>
+          <div class="house-slider-nav" aria-hidden="true"></div>
         </div>
       </div>
     </div>
@@ -574,13 +559,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
 <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
 <script src="assets/js/i18n.js"></script>
 <script src="assets/js/search-index.js"></script>
 <script src="assets/js/cad-background.js"></script>
 <script src="assets/js/animations.js"></script>
-<script src="assets/js/three-hero.js"></script>
-<script src="assets/js/plan-3d.js"></script>
+<script src="assets/js/house-slider.js"></script>
 <script src="assets/js/main.js"></script>
 
 </body>
