@@ -196,6 +196,25 @@
               <p>Usa <span class="cmd-inline">IMPRIMIR</span> (en inglés: <span class="cmd-inline">PLOT</span>) (o <span class="key-inline">Ctrl+P</span>) y elige "DWG to PDF" como impresora. Así envías un plano que cualquiera puede leer sin AutoCAD.</p>
             </div>
           </div>
+
+          <h3>Versiones de DWG: ¿por qué avisan de "formato más reciente"?</h3>
+          <p>Google "DWG 2018, 2013, 2010..." <strong>no significa un dibujo mejor</strong>: es el formato binario en que se guardó. Cada versión de AutoCAD abre las anteriores, pero no las posteriores. Por eso, al entregar un archivo a un cliente, conviene guardarlo en una versión <strong>compatible</strong> con su programa.</p>
+          <table class="table-cad">
+            <thead><tr><th>Versión DWG</th><th>AutoCAD que la usa</th><th>Nota</th></tr></thead>
+            <tbody>
+              <tr><td><span class="cmd-inline">2018</span></td><td>2018, 2019, 2020, 2021, 2022, 2023, 2024...</td><td>La más segura para entregas hasta hace poco.</td></tr>
+              <tr><td><span class="cmd-inline">2013</span></td><td>2013 a 2017</td><td>Sigue abriéndose en la mayoría de versiones actuales.</td></tr>
+              <tr><td><span class="cmd-inline">2010</span></td><td>2010 a 2012</td><td>Útil si el cliente usa una versión antigua.</td></tr>
+              <tr><td><span class="cmd-inline">2007</span></td><td>2007 a 2009</td><td>Compatibilidad amplia con software CAE antiguo.</td></tr>
+              <tr><td><span class="cmd-inline">2004</span></td><td>2004 a 2006</td><td>Aún muy usado en archivos "heredados" de obra.</td></tr>
+              <tr><td><span class="cmd-inline">2000</span></td><td>2000 a 2002</td><td>Formato mínimo por defecto en muchos estudios.</td></tr>
+              <tr><td><span class="cmd-inline">R12</span></td><td>Release 12/13/14</td><td>Formato "legacy" sin capas de mantenimiento; úsalo solo si te lo exigen.</td></tr>
+            </tbody>
+          </table>
+          <div class="callout">
+            <span class="callout-title">Regla de entrega</span>
+            <span>Cuando no conozcas la versión del receptor, guarda como <strong>AutoCAD 2013 DWG</strong> (o 2010): casi todo el ecosistema lo abre y no pierdes capacidades importantes. La opción <em>Guardar como</em> de <span class="cmd-inline">GUARDARCOMO</span> (en inglés: <span class="cmd-inline">SAVEAS</span>) muestra la lista completa de formatos.</span>
+          </div>
           <!-- ENRIQ END -->
           <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
           </section>

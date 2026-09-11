@@ -256,6 +256,53 @@
                           <span>OSNAP (<span class="key-inline">F3</span>) para puntos exactos de objetos, OTrack (<span class="key-inline">F11</span>) para alineaciones y la abreviatura del modificador para usos puntuales. Con estas tres herramientas dibujas sin medir nada dos veces.</span>
                         </div>
 
+          <!-- ENRIQ START -->
+          <h3>Los 13 modos OSNAP de AutoCAD</h3>
+          <p>En total AutoCAD ofrece <strong>13 referencias a objetos</strong>. Las 8 primeras de la tabla anterior son las habituales; las 5 restantes (<span class="cmd-inline">EXT</span>, <span class="cmd-inline">APP</span>, <span class="cmd-inline">PAR</span> y los menos usados) resuelven casos concretos:</p>
+          <table class="table-cad">
+            <thead><tr><th>Modo</th><th>Abreviatura</th><th>Qué busca</th><th>Imagen típica</th></tr></thead>
+            <tbody>
+              <tr><td>Extremo (Endpoint)</td><td class="key-inline">END</td><td>Final de línea, arco o polilínea</td><td class="key-inline">□</td></tr>
+              <tr><td>Punto medio (Midpoint)</td><td class="key-inline">MID</td><td>Mitad exacta de un segmento</td><td class="key-inline">△</td></tr>
+              <tr><td>Centro (Center)</td><td class="key-inline">CEN</td><td>Centro de círculo, arco o elipse</td><td class="key-inline">○</td></tr>
+              <tr><td>Nodo (Node)</td><td class="key-inline">NOD</td><td>Un punto (POINT/DIVIDE)</td><td class="key-inline">✕</td></tr>
+              <tr><td>Cuadrante (Quadrant)</td><td class="key-inline">QUA</td><td>Puntos cardinales del círculo/elipse</td><td class="key-inline">◧</td></tr>
+              <tr><td>Intersección (Intersection)</td><td class="key-inline">INT</td><td>Cruce de dos objetos</td><td class="key-inline">✚</td></tr>
+              <tr><td>Extensión (Extension)</td><td class="key-inline">EXT</td><td>Prolongación imaginaria de una línea o arco</td><td class="key-inline">⌐</td></tr>
+              <tr><td>Inserción (Insertion)</td><td class="key-inline">INS</td><td>Punto base de bloque o texto</td><td class="key-inline">✚</td></tr>
+              <tr><td>Perpendicular (Perpendicular)</td><td class="key-inline">PER</td><td>Punto perpendicular a un objeto</td><td class="key-inline">┴</td></tr>
+              <tr><td>Tangente (Tangent)</td><td class="key-inline">TAN</td><td>Punto de tangencia a círculo/arco</td><td class="key-inline">○</td></tr>
+              <tr><td>Más cercano (Nearest)</td><td class="key-inline">NEA</td><td>Punto más próximo del objeto</td><td class="key-inline">△</td></tr>
+              <tr><td>Intersección aparente (Apparent)</td><td class="key-inline">APP</td><td>Cruce visual de objetos que en 3D no se tocan</td><td class="key-inline">✕</td></tr>
+              <tr><td>Paralelo (Parallel)</td><td class="key-inline">PAR</td><td>Línea paralela a otra</td><td class="key-inline">∥</td></tr>
+            </tbody>
+          </table>
+
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 460 240" role="img" aria-label="Los 13 modos OSNAP sobre un rectángulo y un círculo">
+              <rect x="40" y="40" width="180" height="140" class="cad-fill" />
+              <circle cx="340" cy="110" r="70" class="cad-circle" />
+              <line x1="40" y1="180" x2="330" y2="20" class="cad-line" />
+              <circle cx="40" cy="180" r="4" class="cad-point" />
+              <text x="12" y="196" class="cad-label">END (extremo)</text>
+              <circle cx="130" cy="110" r="4" class="cad-point-cyan" />
+              <text x="108" y="100" class="cad-label-cmd">MID (punto medio)</text>
+              <circle cx="340" cy="110" r="4" class="cad-point" />
+              <text x="344" y="98" class="cad-label">CEN (centro)</text>
+              <line x1="340" y1="40" x2="340" y2="180" class="cad-dim" />
+              <line x1="270" y1="110" x2="410" y2="110" class="cad-dim" />
+              <circle cx="340" cy="40" r="4" class="cad-point" />
+              <text x="348" y="36" class="cad-label">QUA (cuadrante)</text>
+              <text x="150" y="228" class="cad-label-cmd">INT (intersección) en el cruce · PER (perpendicular) al caer ┴ · TAN (tangente) en el círculo · PAR (paralela) con la guía ∥ · NEA (más cercano) al acercarte</text>
+            </svg>
+          </div>
+
+          <div class="callout warn">
+            <span class="callout-title">Clave de abreviatura</span>
+            <span>No memorices los 13: activa por defecto <strong>END · MID · CEN · INT · PER · QUA · NEA</strong> y escribe la abreviatura del resto bajo demanda (<span class="cmd-inline">TAN</span>, <span class="cmd-inline">PAR</span>, <span class="cmd-inline">EXT</span>, <span class="cmd-inline">APP</span>, <span class="cmd-inline">NOD</span>, <span class="cmd-inline">INS</span>). Así el cursor no "salta" entre puntos que no te interesan.</span>
+          </div>
+          <!-- ENRIQ END -->
+
                         <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
           </section>
 

@@ -105,8 +105,8 @@
     <p class="crumb"><a href="../../index.html">Inicio</a> / <a href="../../index.html#niveles">Niveles</a> / <a href="index.html">Nivel experto</a> / Tema 1</p>
     <span class="eyebrow" data-i18n="lvl5.eyebrow">Nivel 05 · Experto</span>
     <h1>Personalización de la interfaz (CUI)</h1>
-    <div class="level-progress-bar" data-level-prefix="nivel5" data-level-total="17"><div class="fill"></div></div>
-    <p class="level-progress-label">0 de 17 temas completados · 0%</p>
+    <div class="level-progress-bar" data-level-prefix="nivel5" data-level-total="18"><div class="fill"></div></div>
+    <p class="level-progress-label">0 de 18 temas completados · 0%</p>
   </div>
 </header>
 
@@ -198,6 +198,48 @@
           <div class="callout warn">
             <span class="callout-title">Error común</span>
             <span>Personalizar sin exportar el .cuix: cualquier actualización o cambio de instalación borra tus ajustes. Guarda una copia del perfil y restáurala con <em>Transferir</em> (pestaña en <span class="cmd-inline">CUI</span>).</span>
+          </div>
+
+          <h3>Alias de comandos: el archivo .PGP</h3>
+          <p>Detrás de cada atajo de teclado como <span class="cmd-inline">L</span> para <span class="cmd-inline">LÍNEA</span> (en inglés: <span class="cmd-inline">LINE</span>) hay un archivo de texto <strong>acad.pgp</strong> (o <strong>acadiso.pgp</strong>). Editándolo directamente puedes crear tus propios alias sin tocar la interfaz CUI: rapidez pura y transferible a cualquier equipo.</p>
+
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 460 190" role="img" aria-label="Estructura de una línea de alias en acad.pgp">
+              <rect x="30" y="20" width="400" height="150" rx="4" class="cad-fill-new" fill="none" stroke="var(--accent-cyan)" stroke-width="1.5"/>
+              <text x="45" y="50" class="cad-label-cmd">Alias,       *Comando,                     Activación</text>
+              <text x="45" y="80" class="cad-label">LL,          *LINE,                        --------</text>
+              <text x="45" y="100" class="cad-label">RR,          *RECTANG,                     --------</text>
+              <text x="45" y="120" class="cad-label">MI,          *MIRROR,                      --------</text>
+              <text x="45" y="140" class="cad-label">DI,          *DIST,                        --------</text>
+              <text x="45" y="170" class="cad-dim-text">acad.pgp (carpeta de apoyo o de usuario)</text>
+            </svg>
+          </div>
+
+          <div class="lesson-step">
+            <span class="lesson-num">1</span>
+            <div class="lesson-body">
+              <h4>Localiza el archivo</h4>
+              <p>Escribe <span class="cmd-inline">CUIXPATH</span> o busca en <span class="cmd-inline">OPCIONES</span> (en inglés: <span class="cmd-inline">OPTIONS</span>) → Archivos → <em>Archivos de apoyo</em>. Copia la ruta y abre <strong>acad.pgp</strong> con un editor de texto plano.</p>
+            </div>
+          </div>
+          <div class="lesson-step">
+            <span class="lesson-num">2</span>
+            <div class="lesson-body">
+              <h4>Añade tus alias</h4>
+              <p>Añade al final:<br><code>L,           *LINE</code><br><code>LL,          *LINE</code><br><code>PL,          *PLINE</code><br><code>C,           *CIRCLE</code><br><code>REC,         *RECTANG</code><br><code>X,           *EXPLODE</code></p>
+            </div>
+          </div>
+          <div class="lesson-step">
+            <span class="lesson-num">3</span>
+            <div class="lesson-body">
+              <h4>Recarga sin reiniciar</h4>
+              <p>Ejecuta <span class="cmd-inline">REINIT</span> → marca <strong>PGP</strong> → OK. Tus nuevos alias funcionan al instante sin cerrar el programa.</p>
+            </div>
+          </div>
+
+          <div class="callout">
+            <span class="callout-title">Compartir el .PGP del equipo</span>
+            <span>Si trabajas en un estudio, guarda tu archivo .pgp en la carpeta de arranque compartida (<span class="cmd-inline">OPCIONES</span> → Apoyo) para que todos arranquen con los mismos alias. Si cada uno tiene los suyos, al abrir el dibujo de otro "no encuentra" las abreviaturas.</span>
           </div>
           <!-- ENRIQ END -->
           <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>

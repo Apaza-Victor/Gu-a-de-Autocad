@@ -6,16 +6,17 @@ Añade 14 lecciones nuevas repartidas en los niveles y aplica mejoras de UI:
   - Nivel 1:  configurar-espacio-trabajo
   - Nivel 2:  crear-capas, configurar-capas, cambiar-tipo-linea, escalar-bloques,
               agrupar-objetos, texturas-bloques, anadir-hatch, configurar-cotas,
-              leyendas
+              leyendas, limites-unidades, wblock-biblioteca
   - Nivel 3:  importar-exportar, zapatas-machones, muros-detalle,
               planos-estructurales
+  - Nivel 5:  scripts-automatizacion
 
 El contenido de cada lección se lee de los fragmentos en scripts/lessons_data/.
 Además:
   - Actualiza cada portada index.html (TOC, tarjetas, totales).
   - Convierte las autoevaluaciones (.quiz-section) en contenedores desplegables
     que por defecto están contraídos.
-  - Actualiza search-index.js, sitemap.xml, main.js (total 96) e index.html.
+  - Actualiza search-index.js, sitemap.xml, main.js (total 99) e index.html.
 
 Ejecutar desde la raíz del repositorio:  python scripts/add_new_lessons.py
 """
@@ -32,8 +33,8 @@ from build_level_folders import (  # noqa: E402
     build_head, build_navbar, build_footer, build_scripts, build_end_block, LEVELS,
 )
 
-NEW_TOTAL = {1: 13, 2: 27, 3: 20, 4: 19, 5: 17}
-TOTAL_GLOBAL = sum(NEW_TOTAL.values())  # 96
+NEW_TOTAL = {1: 13, 2: 29, 3: 20, 4: 19, 5: 18}
+TOTAL_GLOBAL = sum(NEW_TOTAL.values())  # 99
 
 LEVEL_PARAMS = {}
 for num, (folder, name, full, eyebrow, head_desc, schema_name, schema_desc) in LEVELS.items():
@@ -75,6 +76,11 @@ LESSON_CATALOG = [
          title="Configurar capas: color, tipo de línea y estados", label="Configurar capas",
          desc="Configurar color, tipo de línea, grosor, transparencia y estados (On/Off, Freeze, Lock) de cada capa.",
          anchor="capas.html", frag="nivel2-configurar-capas.html"),
+    # Nivel 2 (después de precisión)
+    dict(num=2, dt="nivel2-limites-unidades", file="limites-unidades.html",
+         title="Límites y unidades del dibujo", label="Límites y unidades",
+         desc="Configurar las unidades (UNITS) y los límites (LIMITS) antes de dibujar para que todo escale bien.",
+         anchor="precision.html", frag="nivel2-limites-unidades.html"),
     # Nivel 2 (después de bloques)
     dict(num=2, dt="nivel2-escalar-bloques", file="escalar-bloques.html",
          title="Escalar bloques", label="Escalar bloques",
@@ -88,6 +94,10 @@ LESSON_CATALOG = [
          title="Texturas de imagen en bloques", label="Texturas en bloques",
          desc="Añadir texturas de imagen a bloques con IMAGEATTACH y materiales para que se vean realistas.",
          anchor="bloques.html", frag="nivel2-texturas-bloques.html"),
+    dict(num=2, dt="nivel2-wblock-biblioteca", file="wblock-biblioteca.html",
+         title="WBLOCK y bibliotecas de bloques", label="WBLOCK y bibliotecas",
+         desc="Guardar bloques como archivos .DWG con WBLOCK y crear bibliotecas reutilizables de símbolos.",
+         anchor="bloques.html", frag="nivel2-wblock-biblioteca.html"),
     # Nivel 2 (después de acotación)
     dict(num=2, dt="nivel2-configurar-cotas", file="configurar-cotas.html",
          title="Configurar estilos de cota", label="Configurar cotas",
@@ -126,6 +136,11 @@ LESSON_CATALOG = [
          title="Planos estructurales", label="Planos estructurales",
          desc="Qué incluye un juego de planos estructurales: plantas, cimentación, rejillas, armado y simbología.",
          anchor="cajetines.html", frag="nivel3-planos-estructurales.html"),
+    # Nivel 5 (después de autolisp)
+    dict(num=5, dt="nivel5-scripts-automatizacion", file="scripts-automatizacion.html",
+         title="Scripts de automatización (.SCR)", label="Scripts de automatización",
+         desc="Automatizar tareas repetitivas con scripts .SCR: crear capas, imprimir en lote y estandarizar la revisión.",
+         anchor="autolisp.html", frag="nivel5-scripts-automatizacion.html"),
 ]
 
 
@@ -403,7 +418,6 @@ def update_index(num, ordered):
     html = read(path)
     total = NEW_TOTAL[num]
     folder = LEVEL_PARAMS[num][0]
-    old_total = total - len([l for l in LESSON_CATALOG if l["num"] == num])
 
     # 1) TOC
     m = re.search(r'<ul class="toc-list">(.*?)</ul>', html, re.S)
@@ -427,7 +441,7 @@ def update_index(num, ordered):
                   'Este nivel se divide en %d temas' % total, html)
 
     # 4) Total del progreso (barra + etiqueta) en la portada
-    html = html.replace('data-level-total="%d"' % old_total, 'data-level-total="%d"' % total)
+    html = re.sub(r'data-level-total="\d+"', 'data-level-total="%d"' % total, html)
     html = re.sub(r'0 de \d+ temas completados · 0%',
                   '0 de %d temas completados · 0%%' % total, html)
 
@@ -441,17 +455,14 @@ def update_index(num, ordered):
 def update_all_level_totals():
     """Actualiza data-level-total y la etiqueta de progreso en TODAS las páginas de nivel."""
     for num, total in NEW_TOTAL.items():
-        old = total - len([l for l in LESSON_CATALOG if l["num"] == num])
         folder = LEVEL_PARAMS[num][0]
         for fname in sorted(os.listdir(PATH[num])):
             if not fname.endswith(".html"):
                 continue
             p = os.path.join(PATH[num], fname)
             txt = read(p)
-            if ('data-level-total="%d"' % old) in txt:
-                txt = txt.replace('data-level-total="%d"' % old, 'data-level-total="%d"' % total)
-            if ("0 de %d temas completados" % old) in txt:
-                txt = txt.replace("0 de %d temas completados" % old, "0 de %d temas completados" % total)
+            txt = re.sub(r'data-level-total="\d+"', 'data-level-total="%d"' % total, txt)
+            txt = re.sub(r'0 de \d+ temas completados', '0 de %d temas completados' % total, txt)
             write(p, txt)
         print("  totales de", folder, "->", total)
 
@@ -519,24 +530,24 @@ def update_main_js_and_home():
     # main.js: total global de temas
     mp = os.path.join(ROOT, "assets", "js", "main.js")
     mj = read(mp)
-    src = "const total = 82; // 12 + 18 + 16 + 19 + 17"
-    dst = "const total = 96; // 13 + 27 + 20 + 19 + 17"
+    src = "const total = 96; // 13 + 27 + 20 + 19 + 17"
+    dst = "const total = 99; // 13 + 29 + 20 + 19 + 18"
     if src in mj:
         mj = mj.replace(src, dst)
         write(mp, mj)
-        print("main.js: total 82 -> 96")
+        print("main.js: total 96 -> 99")
     else:
-        print("main.js: total 82 no encontrado (revisar)")
+        print("main.js: total 96 no encontrado (revisar)")
 
     # portada index.html: etiqueta de progreso global
     ip = os.path.join(ROOT, "index.html")
     idx = read(ip)
-    if "0 de 82 temas completados" in idx:
-        idx = idx.replace("0 de 82 temas completados", "0 de %d temas completados" % TOTAL_GLOBAL)
+    if "0 de 96 temas completados" in idx:
+        idx = idx.replace("0 de 96 temas completados", "0 de %d temas completados" % TOTAL_GLOBAL)
         write(ip, idx)
-        print("index.html: etiqueta 82 ->", TOTAL_GLOBAL)
+        print("index.html: etiqueta 96 ->", TOTAL_GLOBAL)
     else:
-        print("index.html: etiqueta 82 no encontrada (revisar)")
+        print("index.html: etiqueta 96 no encontrada (revisar)")
 
 
 def main():

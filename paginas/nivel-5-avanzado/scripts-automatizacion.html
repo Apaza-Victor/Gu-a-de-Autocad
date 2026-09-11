@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scripts de automatización (.SCR) · Nivel experto — AutoCAD Guía</title>
+<link rel="canonical" href="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-5-avanzado/scripts-automatizacion.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-5-avanzado/scripts-automatizacion.html">
+<meta property="og:site_name" content="AutoCAD Guía">
+<meta property="og:title" content="Scripts de automatización (.SCR) · Nivel experto — AutoCAD Guía">
+<meta property="og:description" content="Automatizar tareas repetitivas con scripts .SCR: crear capas, imprimir en lote y estandarizar la revisión.">
+<meta property="og:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Scripts de automatización (.SCR) · Nivel experto — AutoCAD Guía">
+<meta name="twitter:description" content="Automatizar tareas repetitivas con scripts .SCR: crear capas, imprimir en lote y estandarizar la revisión.">
+<meta name="twitter:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="description" content="Automatizar tareas repetitivas con scripts .SCR: crear capas, imprimir en lote y estandarizar la revisión.">
+
+<link rel="icon" type="image/svg+xml" href="../../assets/img/autocad-2.svg">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../../assets/css/responsive.css">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Nivel · AutoCAD nivel experto",
+  "description": "CUI, AutoLISP, estándares CAD, integración, Dynamo, Python, BIM y optimización.",
+  "provider": {
+    "@type": "Organization",
+    "name": "AutoCAD Guía",
+    "sameAs": "https://apaza-victor.github.io/Gu-a-de-Autocad/"
+  },
+  "inLanguage": "es",
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "online",
+    "learningResourceType": "tutorial",
+    "inLanguage": "es"
+  }
+}
+  </script>
+</head>
+
+<body>
+
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+<nav class="navbar navbar-cad navbar-expand-lg">
+  <div class="container container-xl">
+    <a class="navbar-brand brand-cad" href="../../index.html">
+      <img class="brand-logo" src="../../assets/img/autocad-2.svg" alt="AutoCAD">
+      <span>AutoCAD<small class="d-block" data-i18n-html="brand.sub">Guía · Teoría &amp; Práctica</small></span>
+    </a>
+    <div class="d-flex align-items-center gap-2 nav-actions order-lg-last">
+      <button class="icon-btn" id="searchToggle" title="Buscar" data-i18n-title="ui.search"><i class="bi bi-search"></i></button>
+      <button class="icon-btn" id="themeToggle" title="Cambiar tema" data-i18n-title="ui.theme"><i class="bi bi-moon-stars"></i></button>
+      <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
+        <i class="bi bi-list fs-4"></i>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navCad">
+      <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../../index.html" data-i18n="nav.home">Inicio</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-cad dropdown-toggle active" href="#" data-bs-toggle="dropdown" data-i18n="nav.levels">Niveles</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="../nivel-1-fundamentos/index.html">Nivel 1 · Fundamentos</a></li>
+            <li><a class="dropdown-item" href="../nivel-2-dibujo-2d/index.html">Nivel 2 · Dibujo 2D</a></li>
+            <li><a class="dropdown-item" href="../nivel-3-organizacion/index.html">Nivel 3 · Organización</a></li>
+            <li><a class="dropdown-item" href="../nivel-4-modelado-3d/index.html">Nivel 4 · Modelado 3D</a></li>
+            <li><a class="dropdown-item active" href="../nivel-5-avanzado/index.html">Nivel 5 · Experto</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../comandos.html" data-i18n="nav.commands">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../ejemplos-visuales.html" data-i18n="nav.visual">Visuales</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../trucos.html" data-i18n="nav.tips">Trucos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../recursos.html" data-i18n="nav.resources">Recursos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../faq.html" data-i18n="nav.faq">FAQ</a></li>
+      </ul>
+
+      <div class="d-flex align-items-center gap-2 nav-actions-menu ms-lg-auto">
+        <span class="coord-readout d-none d-lg-inline-flex">X: <span id="coordX">000.00</span>&nbsp; Y: <span id="coordY">000.00</span></span>
+        <button class="lang-toggle" id="langToggle" title="Cambiar idioma" data-i18n-title="ui.lang">
+          <i class="bi bi-translate lang-toggle-flag"></i>
+          <span class="lang-toggle-text">EN</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header" id="main-content">
+  <div class="container container-xl">
+    <p class="crumb"><a href="../../index.html">Inicio</a> / <a href="../../index.html#niveles">Niveles</a> / <a href="index.html">Experto</a> / Tema 3</p>
+    <span class="eyebrow" data-i18n="lvl5.eyebrow">Nivel 05 · Experto</span>
+    <h1>Scripts de automatización (.SCR)</h1>
+    <div class="level-progress-bar" data-level-prefix="nivel5" data-level-total="18"><div class="fill"></div></div>
+    <p class="level-progress-label">0 de 18 temas completados · 0%</p>
+  </div>
+</header>
+
+<div class="content-layout">
+  <div class="container container-xl">
+    <div class="row">
+
+      <aside class="col-lg-3 mb-5 mb-lg-0">
+        <div class="toc-sidebar">
+          <h6 data-i18n="ui.inThisLevel">En este nivel</h6>
+          <ul class="toc-list">
+            <li><a href="personalizacion.html"><span class="toc-check"></span> Personalización de la interfaz</a></li>
+            <li><a href="autolisp.html"><span class="toc-check"></span> AutoLISP y scripts</a></li>
+            <li><a href="scripts-automatizacion.html" data-toc="nivel5-scripts-automatizacion"><span class="toc-check"></span> Scripts de automatización</a></li>
+            <li><a href="estandares.html"><span class="toc-check"></span> Estándares CAD</a></li>
+            <li><a href="buenas-practicas.html"><span class="toc-check"></span> Buenas prácticas</a></li>
+            <li><a href="campos-tablas.html"><span class="toc-check"></span> Campos y tablas de datos</a></li>
+            <li><a href="integracion.html"><span class="toc-check"></span> Integración con otros programas</a></li>
+            <li><a href="optimizacion.html"><span class="toc-check"></span> Optimización y solución de errores</a></li>
+            <li><a href="dynamo.html"><span class="toc-check"></span> Dynamo para AutoCAD</a></li>
+            <li><a href="python.html"><span class="toc-check"></span> Automatización con Python</a></li>
+            <li><a href="bim.html"><span class="toc-check"></span> AutoCAD y BIM</a></li>
+            <li><a href="interoperabilidad.html"><span class="toc-check"></span> Interoperabilidad CAD-BIM</a></li>
+            <li><a href="georreferenciacion.html"><span class="toc-check"></span> Georreferenciación y mapas</a></li>
+            <li><a href="dynamic-blocks.html"><span class="toc-check"></span> Bloques dinámicos</a></li>
+            <li><a href="diseno-parametrico.html"><span class="toc-check"></span> Diseño paramétrico</a></li>
+            <li><a href="cad-standards.html"><span class="toc-check"></span> Verificador de estándares</a></li>
+            <li><a href="publish.html"><span class="toc-check"></span> Publicación por lotes</a></li>
+            <li><a href="colaboracion.html"><span class="toc-check"></span> Colaboración y nube</a></li>
+            <li><a href="index.html#autoevaluacion"><span class="toc-check"></span> Autoevaluación</a></li>
+          </ul>
+          <hr style="border-color:var(--border-soft)" class="my-4">
+          <a href="index.html" class="btn-cad-outline w-100 text-center d-block"><i class="bi bi-arrow-left"></i> Volver al índice</a>
+        </div>
+      </aside>
+
+      <div class="col-lg-9">
+        <article class="content-article">
+
+          <section id="scripts-automatizacion" data-topic="nivel5-scripts-automatizacion">
+            <h2><span class="sec-num">3</span>Scripts de automatización (.SCR)</h2>
+            <p>Un <strong>script</strong> (archivo <span class="cmd-inline">.SCR</span>) es una secuencia de comandos de AutoCAD escrita línea por línea, justo como la teclearías tú. Sirve para repetir tareas largas y para estándares: configurar capas, insertar un bloque cajetín, imprimir una tanda de planos o limpiar un archivo.</p>
+
+            <h3>1. Script vs. AutoLISP</h3>
+            <div class="table-scroll">
+            <table class="table-cad">
+              <thead><tr><th>Criterio</th><th>Script (.SCR)</th><th>AutoLISP (.LSP)</th></tr></thead>
+              <tbody>
+                <tr><td>Formato</td><td>Texto plano, secuencial, sin lógica</td><td>Lenguaje de programación con variables y funciones</td></tr>
+                <tr><td>Curva de aprendizaje</td><td>Mínima (solo saber los comandos)</td><td>Media: paréntesis, variables, condicionales</td></tr>
+                <tr><td>Bueno para</td><td>Rutinas de una sola vez, configurar, imprimir</td><td>Automatizaciones reutilizables y con decisiones</td></tr>
+                <tr><td>Dentro del script</td><td>—</td><td>Puedes invocar una función LISP cargada</td></tr>
+              </tbody>
+            </table>
+            </div>
+
+            <h3>2. Escribir tu primer script</h3>
+            <p>Cada línea del archivo se escribe como si la ejecutaras en la línea de comandos, terminando con una pulsación de Enter (la propia nueva línea ya lo representa). Este ejemplo crea tres capas:</p>
+            <div class="code-block">
+              <span class="code-label">capas.scr</span>
+              <button class="copy-btn" data-i18n="ui.copy">Copiar</button>
+              <pre><code class="language-plaintext">-CAPA
+                      N
+                      Ejes
+                      N
+                      Muros
+                      N
+                      Mobiliario
+
+                    ZOOM
+                    A</code></pre>
+            </div>
+            <div class="callout">
+              <span class="callout-title">Regla de oro</span>
+              Escribe el <strong>guión largo</strong> delante del comando cuando esperes un cuadro de diálogo: <span class="cmd-inline">-CAPA</span> (en inglés: <span class="cmd-inline">-LAYER</span>) usa la versión por línea de comandos. Si escribes <span class="cmd-inline">CAPA</span> normal, el script se detiene esperándote en el diálogo.
+            </div>
+
+            <h3>3. Ejecutar y controlar el script</h3>
+            <ul>
+              <li><span class="cmd-inline">GUION</span> (en inglés: <span class="cmd-inline">SCRIPT</span>): carga y ejecuta el .SCR seleccionado.</li>
+              <li><span class="cmd-inline">RSCRIPT</span>: repite el script desde el principio (útil en bucles de animación o pruebas).</li>
+              <li><span class="cmd-inline">RETOMAR</span> (en inglés: <span class="cmd-inline">RESUME</span>): continúa un script detenido por un error o por la tecla <span class="key-inline">Esc</span>.</li>
+              <li><span class="cmd-inline">RETARDO</span> (en inglés: <span class="cmd-inline">DELAY</span>): pausa el script una cantidad de milisegundos.</li>
+            </ul>
+
+            <div class="diagram-canvas">
+            <svg viewBox="0 0 460 180" role="img" aria-label="Ciclo de un script: escribir, ejecutar, repetir">
+              <rect x="20" y="45" width="120" height="70" rx="8" class="cad-fill" />
+              <text x="80" y="73" text-anchor="middle" class="cad-label">Editar</text>
+              <text x="80" y="90" text-anchor="middle" class="cad-label-cmd">capas.scr</text>
+              <rect x="170" y="45" width="120" height="70" rx="8" class="cad-fill-new" />
+              <text x="230" y="73" text-anchor="middle" class="cad-label">Ejecutar</text>
+              <text x="230" y="90" text-anchor="middle" class="cad-label-cmd">SCRIPT</text>
+              <rect x="320" y="45" width="120" height="70" rx="8" class="cad-fill" />
+              <text x="380" y="73" text-anchor="middle" class="cad-label">Repetir</text>
+              <text x="380" y="90" text-anchor="middle" class="cad-label-cmd">RSCRIPT</text>
+              <line x1="140" y1="80" x2="168" y2="80" class="cad-line-new" />
+              <polygon points="168,74 182,80 168,86" class="cad-arrow-new" />
+              <line x1="290" y1="80" x2="318" y2="80" class="cad-line" />
+              <polygon points="318,74 332,80 318,86" class="cad-arrow" />
+              <path d="M 380 115 C 380 150 80 150 80 115" fill="none" class="cad-arc" />
+              <polygon points="74,120 80,138 86,120" class="cad-arrow" />
+              <text x="230" y="158" text-anchor="middle" class="cad-dim-text">bucle continuo (RSCRIPT)</text>
+            </svg>
+            </div>
+
+            <h3>4. Automatizaciones útiles</h3>
+            <div class="lesson-step">
+              <span class="lesson-num">1</span>
+              <div class="lesson-body">
+                <h4>Configurar un dibujo nuevo</h4>
+                <p>Limpiar capas base, fijar unidades y cajetín en un solo paso.</p>
+              </div>
+            </div>
+            <div class="lesson-step">
+              <span class="lesson-num">2</span>
+              <div class="lesson-body">
+                <h4>Imprimir plano por plano</h4>
+                <p>Para cada layout: <span class="cmd-inline">IMPRIMIR</span> (en inglés: <span class="cmd-inline">PLOT</span>) → <strong>Enviar al archivo</strong> → cambiar nombre → siguiente. Se hace en una sola ejecución.</p>
+              </div>
+            </div>
+            <div class="lesson-step">
+              <span class="lesson-num">3</span>
+              <div class="lesson-body">
+                <h4>Limpieza de archivos heredados</h4>
+                <p><span class="cmd-inline">PURGAR</span> (en inglés: <span class="cmd-inline">PURGE</span>) → <span class="cmd-inline">AUDITAR</span> (en inglés: <span class="cmd-inline">AUDIT</span>) → guardar con <span class="cmd-inline">GUARDARCOMO</span> (en inglés: <span class="cmd-inline">SAVEAS</span>) en .DWG 2018 para estandarizar la entrega.</p>
+              </div>
+            </div>
+
+            <div class="callout warn">
+              <span class="callout-title">Cuidado con los cuadros de diálogo</span>
+              Si un script ejecuta un comando que abre diálogo y das Enter, algunos diálogos tienen predeterminada la acción "Cancelar": usa siempre la versión con guión (<span class="cmd-inline">-CAPA</span>, <span class="cmd-inline">-ESTILOACOT</span> en inglés: <span class="cmd-inline">-ACOESTILO</span> (en inglés: <span class="cmd-inline">-DIMSTYLE</span>), <span class="cmd-inline">-IMPRIMIR</span> en inglés: <span class="cmd-inline">-IMPRIMIR</span> (en inglés: <span class="cmd-inline">-PLOT</span>)) cuando automatices.
+            </div>
+
+            <h3>5. Scripts en dibujos de la red</h3>
+            <p>En oficinas se usa el script como checklist ejecutable: al abrir un archivo entregado, corres el script de auditoría que revisa capas, cotas y purga. Si algo no responde, el script lo notifica <em>en la salida de comandos</em>, así se estandariza la revisión sin depender de la memoria de nadie.</p>
+
+            <h3>6. Mini ejercicio: guion de nueva obra</h3>
+            <div class="lesson-step">
+              <span class="lesson-num">1</span>
+              <div class="lesson-body">
+                <h4>Inicia en un dibujo</h4>
+                <p>Crea <code>obra.scr</code> con tus capas base y el bloque cajetín insertado en las coordenadas del formato.</p>
+              </div>
+            </div>
+            <div class="lesson-step">
+              <span class="lesson-num">2</span>
+              <div class="lesson-body">
+                <h4>Prueba el script</h4>
+                <p>Guarda el archivo con <span class="cmd-inline">GUION</span> (en inglés: <span class="cmd-inline">SCRIPT</span>) y arrastra el .SCR hasta AutoCAD si está en modo "abrir con".</p>
+              </div>
+            </div>
+            <div class="lesson-step">
+              <span class="lesson-num">3</span>
+              <div class="lesson-body">
+                <h4>Bucle de prueba</h4>
+                <p>Con <span class="cmd-inline">RSCRIPT</span> repite la rutina y usa <span class="cmd-inline">RETARDO</span> (en inglés: <span class="cmd-inline">DELAY</span>) para no saltarte ningún mensaje.</p>
+              </div>
+            </div>
+          <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+        </article>
+
+        <nav class="level-nav">
+          <a href="autolisp.html">
+            <span class="nav-label">Anterior</span>
+            <span class="nav-title"><i class="bi bi-arrow-left"></i> AutoLISP y scripts</span>
+          </a>
+          <a href="estandares.html" class="nav-next">
+            <span class="nav-label">Siguiente</span>
+            <span class="nav-title">Estándares CAD <i class="bi bi-arrow-right"></i></span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container container-xl">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <div class="brand-cad mb-2"><img class="brand-logo" src="../../assets/img/autocad-2.svg" alt="AutoCAD"><span>AutoCAD Guía</span></div>
+        <p data-i18n="footer.disclaimer">Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.levels">Niveles</h6>
+        <ul class="list-unstyled">
+          <li><a href="../nivel-1-fundamentos/index.html">Fundamentos</a></li>
+          <li><a href="../nivel-2-dibujo-2d/index.html">Dibujo 2D</a></li>
+          <li><a href="../nivel-3-organizacion/index.html">Organización</a></li>
+          <li><a href="../nivel-4-modelado-3d/index.html">Modelado 3D</a></li>
+          <li><a href="../nivel-5-avanzado/index.html">Experto</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.guide">Guía</h6>
+        <ul class="list-unstyled">
+          <li><a href="../comandos.html">Comandos</a></li>
+          <li><a href="../ejemplos-visuales.html">Ejemplos</a></li>
+          <li><a href="../trucos.html">Trucos</a></li>
+          <li><a href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
+          <li><a href="../recursos.html">Recursos</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.follow">Síguenos</h6>
+        <div class="d-flex gap-2">
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-5 mb-4" style="border-color:var(--border-soft)">
+    <p class="mb-0 small" data-i18n="footer.copyright">© 2026 Victor Apaza. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<div class="command-line-bar" id="cmdBar">
+  <div class="command-line-inner">
+    <span class="prompt-sign" data-i18n="ui.command">Comando:</span>
+    <span id="cmd-typed"></span><span class="cursor-blink"></span>
+    <button class="cl-close" id="cmdClose" title="Ocultar" data-i18n-title="ui.hide"><i class="bi bi-x-lg"></i></button>
+  </div>
+</div>
+
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Buscar en la guía" data-i18n-aria="ui.search">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="bi bi-search"></i>
+      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar" data-i18n-placeholder="ui.searchPlaceholder">
+      <kbd class="search-kbd">ESC</kbd>
+    </div>
+    <div class="search-results" id="globalSearchResults">
+      <div class="search-empty" data-i18n="ui.typeToSearch">Escribe al menos 2 caracteres para buscar...</div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-lisp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+<script src="../../assets/js/i18n.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/animations.js"></script>
+<script src="../../assets/js/main.js"></script>
+
+</body>
+</html>

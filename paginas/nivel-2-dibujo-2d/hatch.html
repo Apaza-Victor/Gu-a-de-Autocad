@@ -105,8 +105,8 @@
     <p class="crumb"><a href="../../index.html">Inicio</a> / <a href="../../index.html#niveles">Niveles</a> / <a href="index.html">Dibujo 2D</a> / Tema 9</p>
     <span class="eyebrow" data-i18n="lvl2.eyebrow">Nivel 02 · Básico–Intermedio</span>
     <h1>Sombreado y rellenos (Hatch)</h1>
-    <div class="level-progress-bar" data-level-prefix="nivel2" data-level-total="27"><div class="fill"></div></div>
-    <p class="level-progress-label">0 de 27 temas completados · 0%</p>
+    <div class="level-progress-bar" data-level-prefix="nivel2" data-level-total="29"><div class="fill"></div></div>
+    <p class="level-progress-label">0 de 29 temas completados · 0%</p>
   </div>
 </header>
 
@@ -174,6 +174,46 @@
           <div class="callout warn">
             <span class="callout-title">Error común</span>
             <span>"Boundary definition error": el contorno no está cerrado. Acércate con zoom, sella las esquinas con <span class="cmd-inline">REDONDEAR</span> (en inglés: <span class="cmd-inline">FILLET</span>) radio 0 o <span class="cmd-inline">UNIR</span> (en inglés: <span class="cmd-inline">JOIN</span>), y vuelve a intentarlo.</span>
+          </div>
+
+          <h3>Degradados (GRADIENT): el sombreado de color continuo</h3>
+          <p>Con <span class="cmd-inline">DEGRADADO</span> (en inglés: <span class="cmd-inline">GRADIENT</span>) rellenas un área cerrada con un <strong>degradado de color</strong> (dos colores con transición), muy útil en presentaciones, secciones con sombra y alzados. Es el mismo contorno que Hatch, pero con un patrón de difuminado.</p>
+          <table class="table-cad">
+            <thead><tr><th>Diferencia</th><th>HATCH</th><th>GRADIENT</th></tr></thead>
+            <tbody>
+              <tr><td>Resultado</td><td>Patrón repetido (rayado, ladrillo...)</td><td>Transición suave entre colores</td></tr>
+              <tr><td>Comando</td><td><span class="cmd-inline">SOMBREADO</span> (en inglés: <span class="cmd-inline">HATCH</span>)</td><td><span class="cmd-inline">DEGRADADO</span> (en inglés: <span class="cmd-inline">GRADIENT</span>) o pestaña del mismo diálogo</td></tr>
+              <tr><td>Usos</td><td>Materiales, secciones técnicas</td><td>Masa de sombra, alzados, mapas de calor</td></tr>
+              <tr><td>Impresión por defecto</td><td>Imprimible "muy oscuro" si el ángulo de trama es 0</td><td>Mantiene la transición; ajusta tono y trama</td></tr>
+            </tbody>
+          </table>
+
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 460 190" role="img" aria-label="Comparación entre Hatch de patrón y degradado GRADIENT">
+              <rect x="30" y="30" width="180" height="130" class="cad-fill-new" />
+              <line x1="30" y1="60" x2="210" y2="60" class="cad-line" stroke-dasharray="6 4"/>
+              <line x1="30" y1="90" x2="210" y2="90" class="cad-line" stroke-dasharray="6 4"/>
+              <line x1="30" y1="120" x2="210" y2="120" class="cad-line" stroke-dasharray="6 4"/>
+              <text x="120" y="22" text-anchor="middle" class="cad-label-cmd">HATch · patrón ANSI31</text>
+              <rect x="250" y="30" width="180" height="130" class="cad-fill" />
+              <text x="340" y="22" text-anchor="middle" class="cad-label-cmd">GRADIENT · de claro a oscuro</text>
+              <text x="340" y="180" text-anchor="middle" class="cad-label">Mismo contorno cerrado, dos rellenos distintos</text>
+            </svg>
+          </div>
+
+          <div class="lesson-step">
+            <span class="lesson-num">1</span>
+            <div class="lesson-body">
+              <h4>Aplica el degradado</h4>
+              <p>Con <span class="cmd-inline">DEGRADADO</span> (en inglés: <span class="cmd-inline">GRADIENT</span>), clic dentro del área y elige dos colores (por ejemplo azul claro → azul oscuro) y el ángulo de la transición (196° suele funcionar bien).</p>
+            </div>
+          </div>
+          <div class="lesson-step">
+            <span class="lesson-num">2</span>
+            <div class="lesson-body">
+              <h4>Ajusta e imprime</h4>
+              <p>En <span class="cmd-inline">PROPIEDADES</span> (en inglés: <span class="cmd-inline">PROPERTIES</span>) cambia los colores o el centro/ángulo. Para impresión, revisa el tono en el plotstyle: los degradados pueden salir "planos" si el filtro de color los unifica.</p>
+            </div>
           </div>
 
           <h3>Mini ejercicio: rellenar un pilar y dejar su hueco</h3>

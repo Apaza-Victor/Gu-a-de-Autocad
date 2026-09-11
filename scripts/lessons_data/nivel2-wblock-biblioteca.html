@@ -1,0 +1,139 @@
+<p>El comando <span class="cmd-inline">BLOQUEDISC</span> (en inglés: <span class="cmd-inline">WBLOCK</span>) guarda un bloque en un archivo .DWG independiente. Es la forma correcta de <strong>construir bibliotecas</strong> de símbolos reutilizables: muebles, simbología, rótulos, detalles constructivos.</p>
+
+<h3>1. BLOCK no es WBLOCK</h3>
+<div class="table-scroll">
+<table class="table-cad">
+  <thead><tr><th>Comando</th><th>Hace</th><th>Dónde vive</th><th>Para qué</th></tr></thead>
+  <tbody>
+    <tr><td><span class="cmd-inline">DEFINIRBLOQUE</span> (en inglés: <span class="cmd-inline">BLOCK</span>)</td><td>Agrupa objetos dentro del dibujo actual</td><td>Solo en el .DWG actual</td><td>Reutilizar símbolos dentro del proyecto</td></tr>
+    <tr><td><span class="cmd-inline">BLOQUEDISC</span> (en inglés: <span class="cmd-inline">WBLOCK</span>)</td><td>Exporta la definición a un archivo .DWG propio</td><td>En una carpeta del equipo o de la red</td><td>Construir bibliotecas y compartir símbolos</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Si defines un bloque con <span class="cmd-inline">DEFINIRBLOQUE</span> (en inglés: <span class="cmd-inline">BLOCK</span>) y luego lo exportas con <span class="cmd-inline">BLOQUEDISC</span> (en inglés: <span class="cmd-inline">WBLOCK</span>) eligiendo su nombre, AutoCAD lo guarda como un archivo con el color, la capa y el punto base que definiste.</p>
+
+<h3>2. Exportar un bloque paso a paso</h3>
+
+<div class="diagram-canvas">
+<svg viewBox="0 0 460 200" role="img" aria-label="Diferencia entre BLOCK (interno) y WBLOCK (archivo DWG externo)">
+  <rect x="20" y="30" width="170" height="140" rx="4" class="cad-fill-new" fill="none" stroke="var(--accent-cyan)" stroke-width="1.5"/>
+  <text x="105" y="22" text-anchor="middle" class="cad-label-cmd">BLOQUEDISC (WBLOCK)</text>
+  <rect x="35" y="60" width="60" height="30" class="cad-fill" fill="none" stroke="var(--accent-cyan)"/>
+  <text x="65" y="80" text-anchor="middle" class="cad-label">DWG</text>
+  <rect x="115" y="60" width="60" height="30" class="cad-fill" fill="none" stroke="var(--accent-cyan)"/>
+  <text x="145" y="80" text-anchor="middle" class="cad-label">DWG</text>
+  <rect x="35" y="110" width="60" height="30" class="cad-fill" fill="none" stroke="var(--accent-cyan)"/>
+  <text x="65" y="130" text-anchor="middle" class="cad-label">DWG</text>
+  <text x="105" y="162" text-anchor="middle" class="cad-label">Carpeta de biblioteca</text>
+  <line x1="190" y1="100" x2="270" y2="100" class="cad-arrow-new" stroke-dasharray="6 4"/>
+  <polygon points="268,96 278,100 268,104" class="cad-arrow"/>
+  <text x="230" y="90" text-anchor="middle" class="cad-dim-text">guardar</text>
+  <rect x="270" y="30" width="170" height="140" rx="4" class="cad-fill-new" fill="none" stroke="var(--accent-cyan)" stroke-width="1.5"/>
+  <text x="355" y="22" text-anchor="middle" class="cad-label-cmd">INSERTAR (INSERT)</text>
+  <rect x="300" y="60" width="110" height="100" rx="2" class="cad-fill" fill="none" stroke="var(--accent-cyan)"/>
+  <text x="355" y="80" text-anchor="middle" class="cad-label">Dibujo nuevo</text>
+  <rect x="300" y="100" width="110" height="30" rx="2" class="cad-fill" fill="none" stroke="var(--accent-cyan)" stroke-dasharray="4 3"/>
+  <text x="355" y="120" text-anchor="middle" class="cad-label">símbolo insertado</text>
+  <text x="355" y="162" text-anchor="middle" class="cad-label">Dibujo que recibe</text>
+  <text x="230" y="190" text-anchor="middle" class="cad-dim-text">WBLOCK crea DWG independiente → se reinserta en cualquier proyecto</text>
+</svg>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Prepara el símbolo</h4>
+    <p>Dibuja el objeto en su capa correcta (p. ej. <strong>Mobiliario</strong>), con <strong>ByLayer</strong> en color y tipo de línea. Nunca desselecciones capas que no correspondan.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Base point</h4>
+    <p>Elige el punto base lógico: en mobiliario, la esquina inferior izquierda del asiento; en simbología, el punto de inserción; en puertas, la bisagra.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>BLOQUEDISC</h4>
+    <p>Ejecuta <span class="cmd-inline">BLOQUEDISC</span> (en inglés: <span class="cmd-inline">WBLOCK</span>), indica el <strong>archivo/carpeta</strong> donde guardarlo y escribe el nombre del símbolo. Marca <em>Insertar unidades</em> según el estándar de tu oficina (Milímetros o Metros).</p>
+  </div>
+</div>
+
+<div class="callout">
+  <span class="callout-title">Nombres legibles</span>
+  Usa nombres normalizados si vas a compartir: <code>MF-SILLA-RECT</code>, <code>PL-TABLERO-x</code>. Evita nombres en mayúsculas sin criterio (<code>CHAIR</code>, <code>silla1</code>) que hacen imposible buscar en una biblioteca grande.
+</div>
+
+<h3>3. Reinsertar tu biblioteca</h3>
+<p>Tienes dos rutas para traer los símbolos a un dibujo nuevo:</p>
+<ul>
+  <li><strong>INSERTAR</strong> (en inglés: <span class="cmd-inline">INSERT</span>): botón <em>Examinar</em> y seleccionas el .DWG guardado. En la paleta de inserción ajusta escala, rotación y nombre de capa.</li>
+  <li><strong>DesignCenter</strong> (<span class="cmd-inline">CENTRODC</span>, en inglés: <span class="cmd-inline">CENTRODC</span> (en inglés: <span class="cmd-inline">ADCENTER</span>)): navega a tu carpeta de biblioteca, arrastra los bloques al dibujo y los coloca con el punto base ya configurado.</li>
+  <li><strong>Paletas de herramientas</strong> (<span class="cmd-inline">PALETASHERR</span>, en inglés: <span class="cmd-inline">TOOLPALETTES</span>): arrastra el bloque a una pestaña y luego lo insertas con un clic.</li>
+</ul>
+
+<h3>4. Buena práctica: plantilla de biblioteca</h3>
+<p>Una biblioteca ordenada comparte tres ideas:</p>
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Carpetas estándar</h4>
+    <p><code>Biblioteca/Mobiliario</code>, <code>Biblioteca/Simbología</code>, <code>Biblioteca/Detalles</code>. Una sola raíz en la red para todos.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Un dibujo origen por familia</h4>
+    <p>Cada .DWG guarda todos los bloques de su familia; así puedes exportar varios de una sola vez con <span class="cmd-inline">BLOQUEDISC</span>.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Versionado</h4>
+    <p>Usa la versión de DWG de la oficina (p. ej. AutoCAD 2018) para que nada abra con incompatibilidad.</p>
+  </div>
+</div>
+
+<div class="table-scroll">
+<table class="table-cad">
+  <thead><tr><th>Comando</th><th>Qué hace</th><th>Atajo</th></tr></thead>
+  <tbody>
+    <tr><td><span class="cmd-inline">BLOQUEDISC</span> (en inglés: <span class="cmd-inline">WBLOCK</span>)</td><td>Guarda un bloque como archivo .DWG</td><td><span class="key-inline">WB</span></td></tr>
+    <tr><td><span class="cmd-inline">INSERTAR</span> (en inglés: <span class="cmd-inline">INSERT</span>)</td><td>Inserta un bloque o archivo en el dibujo</td><td><span class="key-inline">I</span></td></tr>
+    <tr><td><span class="cmd-inline">CENTRODC</span> (en inglés: <span class="cmd-inline">ADCENTER</span>)</td><td>Abre DesignCenter para explorar y arrastrar bloques</td><td><span class="key-inline">Ctrl+2</span></td></tr>
+    <tr><td><span class="cmd-inline">PALETASHERR</span> (en inglés: <span class="cmd-inline">TOOLPALETTES</span>)</td><td>Paletas de herramientas personales</td><td><span class="key-inline">Ctrl+3</span></td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout warn">
+  <span class="callout-title">Error común</span>
+  Guardar el bloque con <strong>líneas RGB personalizadas</strong> en lugar de ByLayer. El símbolo se ve bien en tu archivo, pero cuando otro lo inserta con capas distintas queda "muerto". Dibuja siempre con ByLayer (color, tipo y grosor) antes del <span class="cmd-inline">BLOQUEDISC</span>.
+</div>
+
+<h3>5. Mini ejercicio: crea tu primer símbolo de biblioteca</h3>
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Pila doble</h4>
+    <p>Dibuja un plano de silla 450x450 mm (o tu pieza favorita) en capa <strong>Mobiliario</strong>, color ByLayer.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Inserta y exporta</h4>
+    <p>Con <span class="cmd-inline">BLOQUEDISC</span> (en inglés: <span class="cmd-inline">WBLOCK</span>) guárdalo en tu carpeta de biblioteca con nombre normalizado.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Utilízalo en otro dibujo</h4>
+    <p>Abre un .DWG en blanco, arrastra el símbolo desde DesignCenter y comprueba que entra en la capa y unidades correctas.</p>
+  </div>
+</div>

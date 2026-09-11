@@ -180,6 +180,54 @@
             <span class="callout-title">Error común</span>
             <span>Dibujar el perfil y la trayectoria en capas distintas sin comprobar que ambos estén en el mismo plano o que la trayectoria toque el perfil. Con <span class="cmd-inline">BARRIDO</span> (en inglés: <span class="cmd-inline">SWEEP</span>) y <span class="cmd-inline">EXTRUIR</span> (en inglés: <span class="cmd-inline">EXTRUDE</span>) la referencia de inicio importa.</span>
           </div>
+
+          <h3>EXTRUDE en detalle: cónico y por trayectoria</h3>
+          <p>La extrusión no solo empuja en vertical: con la opción <strong>Ángulo de conicidad</strong> (<span class="cmd-inline">A</span>) inclinas las paredes del sólido, y con la opción <strong>Trayectoria</strong> (<span class="cmd-inline">T</span>) lo extruyes a lo largo de una polilínea o spline. Ejemplos reales: una zapata troncocónica es un perfil cuadrado con conicidad; una barandilla curva se extruye a lo largo de su eje.</p>
+          <table class="table-cad">
+            <thead><tr><th>Opción</th><th>Qué hace</th><th>Cuándo usarla</th></tr></thead>
+            <tbody>
+              <tr><td>Altura (por defecto)</td><td>Extruye recto una distancia dada</td><td>Muros, losas, perfiles verticales.</td></tr>
+              <tr><td>Conicidad <span class="cmd-inline">A</span></td><td>Inclina las caras (valor en grados)</td><td>Zapatas, molduras, piezas con desmoldeo.</td></tr>
+              <tr><td>Trayectoria <span class="cmd-inline">T</span></td><td>Sigue una polilínea/spline como ruta</td><td>Cuerdas, canalones, perfiles curvos.</td></tr>
+            </tbody>
+          </table>
+
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 460 200" role="img" aria-label="Comparación de EXTRUDE recto, con conicidad y por trayectoria">
+              <rect x="30" y="120" width="90" height="60" class="cad-fill-new"/>
+              <line x1="30" y1="120" x2="30" y2="20" class="cad-line"/>
+              <line x1="120" y1="120" x2="120" y2="20" class="cad-line"/>
+              <line x1="30" y1="20" x2="120" y2="20" class="cad-line"/>
+              <text x="75" y="170" text-anchor="middle" class="cad-label">Altura (recto)</text>
+
+              <polygon points="180,120 270,120 260,20 190,20" class="cad-fill"/>
+              <line x1="180" y1="120" x2="190" y2="20" class="cad-line"/>
+              <line x1="270" y1="120" x2="260" y2="20" class="cad-line"/>
+              <line x1="190" y1="20" x2="260" y2="20" class="cad-line"/>
+              <text x="225" y="170" text-anchor="middle" class="cad-label">Conicidad (A)</text>
+
+              <path d="M 320 130 Q 360 130 380 90 T 400 40" fill="none" class="cad-line-new"/>
+              <circle cx="320" cy="130" r="14" class="cad-arc"/>
+              <circle cx="320" cy="130" r="4" class="cad-point"/>
+              <text x="340" y="175" text-anchor="middle" class="cad-label">Trayectoria (T)</text>
+              <text x="230" y="196" text-anchor="middle" class="cad-label-cmd">EXTRUIR (EXTRUDE) · tres formas de crecer un perfil</text>
+            </svg>
+          </div>
+
+          <div class="lesson-step">
+            <span class="lesson-num">1</span>
+            <div class="lesson-body">
+              <h4>Zapata con conicidad</h4>
+              <p>Dibuja un cuadrado 100×100, ejecuta <span class="cmd-inline">EXTRUIR</span> (en inglés: <span class="cmd-inline">EXTRUDE</span>) → opción <span class="cmd-inline">A</span> → ángulo 5° → altura 200. La cara superior queda más pequeña que la base.</p>
+            </div>
+          </div>
+          <div class="lesson-step">
+            <span class="lesson-num">2</span>
+            <div class="lesson-body">
+              <h4>Barandilla por trayectoria</h4>
+              <p>Dibuja una spline y un círculo de radio 5; ejecuta <span class="cmd-inline">EXTRUIR</span> → <span class="cmd-inline">T</span> → toca la spline. Obtendrás una tubería curva sin usar <span class="cmd-inline">BARRIDO</span> (en inglés: <span class="cmd-inline">SWEEP</span>).</p>
+            </div>
+          </div>
           <!-- ENRIQ END -->
           <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
           </section>

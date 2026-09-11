@@ -201,6 +201,30 @@
             <span class="callout-title">Error común</span>
             <span>Guardar una plantilla con geometría del proyecto. Una .DWT debe estar limpia: si quien la abre encuentra "residuos" de otra obra, dejará de usarla y el estándar muere.</span>
           </div>
+
+          <h3>Checklist: qué revisar antes de dar una plantilla por buena</h3>
+          <ul>
+            <li>Capas con <strong>color, grosor y tipo de línea por ByLayer</strong> (ninguna capa con color fijo RGB).</li>
+            <li>Estilos de texto y de cota con escala anotativa preparada.</li>
+            <li>Layout con cajetín, vista y escala de trazado <strong>1:1 vs. mm</strong> definida.</li>
+            <li><span class="cmd-inline">PURGAR</span> (en inglés: <span class="cmd-inline">PURGE</span>) ejecutado y sin objetos en el espacio modelo.</li>
+            <li>Unidades y límites probados: abre un dibujo en blanco desde ella y dibuja un muro para confirmar.</li>
+          </ul>
+
+          <h3>Rutas por defecto de las plantillas</h3>
+          <table class="table-cad">
+            <thead><tr><th>Ubicación</th><th>Qué contiene</th><th>Cómo configurarla</th></tr></thead>
+            <tbody>
+              <tr><td><code>C:\Users\&lt;usuario&gt;\AppData\Roaming\Autodesk\AutoCAD &lt;año&gt;\...\Template</code></td><td>Las plantillas que propone AutoCAD al crear un dibujo</td><td><span class="cmd-inline">OPCIONES</span> (en inglés: <span class="cmd-inline">OPTIONS</span>) → Archivos → <em>Ubicación de plantillas</em></td></tr>
+              <tr><td>Carpeta de red compartida (ej. <code>\\servidor\CAD\templates</code>)</td><td>Las plantillas oficiales de la empresa (solo lectura)</td><td>Añádela a la lista de buscados de <span class="cmd-inline">OPCIONES</span> (en inglés: <span class="cmd-inline">OPTIONS</span>)</td></tr>
+              <tr><td>Carpeta de "arranque" (Startup)</td><td>Muestra el diálogo al abrir AutoCAD</td><td>Variable <span class="cmd-inline">INICIO</span> (en inglés: <span class="cmd-inline">STARTUP</span>) = 1</td></tr>
+            </tbody>
+          </table>
+
+          <div class="callout">
+            <span class="callout-title">Buena práctica de equipo</span>
+            <span>Pon las plantillas en una <strong>carpeta de red de solo lectura</strong>: el dibujante no usa "su" versión local, sino la oficial. Si cambia el estándar, se actualiza una vez y todo el equipo hereda el cambio.</span>
+          </div>
           <!-- ENRIQ END -->
           <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
           </section>

@@ -225,6 +225,43 @@
                           </div>
                         </div>
 
+          <!-- ENRIQ START -->
+          <h3>Compartir paletas de herramientas con tu equipo (.btp)</h3>
+          <p>Las paletas de herramientas se guardan como archivos <span class="cmd-inline">.btp</span> (o <span class="cmd-inline">.xtp</span>) y se pueden compartir; así todos los dibujantes insertan los mismos bloques, sombreados y comandos de la misma forma.</p>
+          <table class="table-cad">
+            <thead><tr><th>Formato</th><th>Contenido típico</th><th>Dónde se guarda</th></tr></thead>
+            <tbody>
+              <tr><td><span class="cmd-inline">.btp</span></td><td>Paleta suelta (una pestaña de herramienta)</td><td><code>C:\Users\&lt;usuario&gt;\AppData\Roaming\Autodesk\...\Tool Palettes</code></td></tr>
+              <tr><td><span class="cmd-inline">.xtp</span></td><td>Paquete completo de un grupo de paletas (varias pestañas)</td><td>Se exporta desde "Herramientas · Paletas" → <em>Exportar</em></td></tr>
+            </tbody>
+          </table>
+          <div class="lesson-step">
+            <span class="lesson-num">1</span>
+            <div class="lesson-body">
+              <h4>Exporta tu paleta</h4>
+              <p>En la paleta (<span class="cmd-inline">PALETASHERR</span>, en inglés: <span class="cmd-inline">TOOLPALETTES</span>) clic derecho sobre el grupo de paletas → <em>Exportar...</em> y guarda el <span class="cmd-inline">.xtp</span>.</p>
+            </div>
+          </div>
+          <div class="lesson-step">
+            <span class="lesson-num">2</span>
+            <div class="lesson-body">
+              <h4>Compártelo en la red</h4>
+              <p>Coloca el archivo en una carpeta común (por ejemplo <code>\\servidor\CAD\paletas</code>) y avisa con la versión (cada actualización de bloques debe regenerar el .xtp).</p>
+            </div>
+          </div>
+          <div class="lesson-step">
+            <span class="lesson-num">3</span>
+            <div class="lesson-body">
+              <h4>Impórtalo en otro equipo</h4>
+              <p><span class="cmd-inline">PALETASHERR</span> (en inglés: <span class="cmd-inline">TOOLPALETTES</span>) → clic derecho → <em>Importar...</em>, o simplemente arrastra el .xtp a la ventana de paletas.</p>
+            </div>
+          </div>
+          <div class="callout warn">
+            <span class="callout-title">Cuidado con las rutas</span>
+            <span>Una paleta solo inserta los bloques que encuentra. Si el .xtp referencia bloques de tu carpeta personal, en otro equipo "fallará": guarda los bloques en una <strong>carpeta de biblioteca compartida</strong> (la misma que apunta DesignCenter) antes de exportar.</span>
+          </div>
+          <!-- ENRIQ END -->
+
                         <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
           </section>
 

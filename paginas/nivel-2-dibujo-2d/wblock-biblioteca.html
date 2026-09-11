@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cambiar el tipo de línea de un objeto · Dibujo 2D — AutoCAD Guía</title>
-<link rel="canonical" href="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-2-dibujo-2d/cambiar-tipo-linea.html">
+<title>WBLOCK y bibliotecas de bloques · Dibujo 2D — AutoCAD Guía</title>
+<link rel="canonical" href="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-2-dibujo-2d/wblock-biblioteca.html">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-2-dibujo-2d/cambiar-tipo-linea.html">
+<meta property="og:url" content="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-2-dibujo-2d/wblock-biblioteca.html">
 <meta property="og:site_name" content="AutoCAD Guía">
-<meta property="og:title" content="Cambiar el tipo de línea de un objeto · Dibujo 2D — AutoCAD Guía">
-<meta property="og:description" content="Cambiar el tipo de línea de varias formas: Propiedades, MATCHPROP, LINETYPE y propiedades de capa.">
+<meta property="og:title" content="WBLOCK y bibliotecas de bloques · Dibujo 2D — AutoCAD Guía">
+<meta property="og:description" content="Guardar bloques como archivos .DWG con WBLOCK y crear bibliotecas reutilizables de símbolos.">
 <meta property="og:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Cambiar el tipo de línea de un objeto · Dibujo 2D — AutoCAD Guía">
-<meta name="twitter:description" content="Cambiar el tipo de línea de varias formas: Propiedades, MATCHPROP, LINETYPE y propiedades de capa.">
+<meta name="twitter:title" content="WBLOCK y bibliotecas de bloques · Dibujo 2D — AutoCAD Guía">
+<meta name="twitter:description" content="Guardar bloques como archivos .DWG con WBLOCK y crear bibliotecas reutilizables de símbolos.">
 <meta name="twitter:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
-<meta name="description" content="Cambiar el tipo de línea de varias formas: Propiedades, MATCHPROP, LINETYPE y propiedades de capa.">
+<meta name="description" content="Guardar bloques como archivos .DWG con WBLOCK y crear bibliotecas reutilizables de símbolos.">
 
 <link rel="icon" type="image/svg+xml" href="../../assets/img/autocad-2.svg">
 
@@ -102,9 +102,9 @@
 
 <header class="page-header" id="main-content">
   <div class="container container-xl">
-    <p class="crumb"><a href="../../index.html">Inicio</a> / <a href="../../index.html#niveles">Niveles</a> / <a href="index.html">Dibujo 2D</a> / Tema 23</p>
+    <p class="crumb"><a href="../../index.html">Inicio</a> / <a href="../../index.html#niveles">Niveles</a> / <a href="index.html">Dibujo 2D</a> / Tema 10</p>
     <span class="eyebrow" data-i18n="lvl2.eyebrow">Nivel 02 · Básico–Intermedio</span>
-    <h1>Cambiar el tipo de línea de un objeto</h1>
+    <h1>WBLOCK y bibliotecas de bloques</h1>
     <div class="level-progress-bar" data-level-prefix="nivel2" data-level-total="29"><div class="fill"></div></div>
     <p class="level-progress-label">0 de 29 temas completados · 0%</p>
   </div>
@@ -157,98 +157,120 @@
       <div class="col-lg-9">
         <article class="content-article">
 
-          <section id="cambiar-tipo-linea" data-topic="nivel2-cambiar-tipo-linea">
-            <h2><span class="sec-num">23</span>Cambiar el tipo de línea de un objeto</h2>
-            <p>Cambiar el <strong>tipo de línea</strong> de un objeto o de una capa es clave para diferenciar ejes auxiliares, líneas ocultas, contornos cortados y muros. Los tipos de línea de AutoCAD se cargan de los archivos <code>acad.lin</code>, <code>acadiso.lin</code> y <code>ltscale.lin</code>.</p>
+          <section id="wblock-biblioteca" data-topic="nivel2-wblock-biblioteca">
+            <h2><span class="sec-num">10</span>WBLOCK y bibliotecas de bloques</h2>
+            <p>El comando <span class="cmd-inline">BLOQUEDISC</span> (en inglés: <span class="cmd-inline">WBLOCK</span>) guarda un bloque en un archivo .DWG independiente. Es la forma correcta de <strong>construir bibliotecas</strong> de símbolos reutilizables: muebles, simbología, rótulos, detalles constructivos.</p>
 
-            <h3>1. Cargar un tipo de línea nuevo</h3>
+            <h3>1. BLOCK no es WBLOCK</h3>
+            <div class="table-scroll">
+            <table class="table-cad">
+              <thead><tr><th>Comando</th><th>Hace</th><th>Dónde vive</th><th>Para qué</th></tr></thead>
+              <tbody>
+                <tr><td><span class="cmd-inline">DEFINIRBLOQUE</span> (en inglés: <span class="cmd-inline">BLOCK</span>)</td><td>Agrupa objetos dentro del dibujo actual</td><td>Solo en el .DWG actual</td><td>Reutilizar símbolos dentro del proyecto</td></tr>
+                <tr><td><span class="cmd-inline">BLOQUEDISC</span> (en inglés: <span class="cmd-inline">WBLOCK</span>)</td><td>Exporta la definición a un archivo .DWG propio</td><td>En una carpeta del equipo o de la red</td><td>Construir bibliotecas y compartir símbolos</td></tr>
+              </tbody>
+            </table>
+            </div>
+            <p>Si defines un bloque con <span class="cmd-inline">DEFINIRBLOQUE</span> (en inglés: <span class="cmd-inline">BLOCK</span>) y luego lo exportas con <span class="cmd-inline">BLOQUEDISC</span> (en inglés: <span class="cmd-inline">WBLOCK</span>) eligiendo su nombre, AutoCAD lo guarda como un archivo con el color, la capa y el punto base que definiste.</p>
 
+            <h3>2. Exportar un bloque paso a paso</h3>
             <div class="lesson-step">
               <span class="lesson-num">1</span>
               <div class="lesson-body">
-                <h4>Abre el Administrador de tipos de línea</h4>
-                <p>Escribe <span class="cmd-inline">TIPOLÍNEA</span> (en inglés: <span class="cmd-inline">LINETYPE</span>) o <span class="key-inline">LT</span>, o ve a Inicio → Propiedades → el desplegable de "Tipo de línea" → Otros.</p>
+                <h4>Prepara el símbolo</h4>
+                <p>Dibuja el objeto en su capa correcta (p. ej. <strong>Mobiliario</strong>), con <strong>ByLayer</strong> en color y tipo de línea. Nunca desselecciones capas que no correspondan.</p>
               </div>
             </div>
-
             <div class="lesson-step">
               <span class="lesson-num">2</span>
               <div class="lesson-body">
-                <h4>Carga el tipo deseado</h4>
-                <p>Pulsa <strong>Cargar…</strong>, elige el archivo <code>acadiso.lin</code> y marca los tipos que uses: <code>DASHED</code> (ocultas), <code>CENTER</code> (ejes), <code>PHANTOM</code> (contornos auxiliares), <code>DOT</code>, <code>HIDDEN</code>. Pulsa Aceptar.</p>
+                <h4>Base point</h4>
+                <p>Elige el punto base lógico: en mobiliario, la esquina inferior izquierda del asiento; en simbología, el punto de inserción; en puertas, la bisagra.</p>
               </div>
             </div>
-
             <div class="lesson-step">
               <span class="lesson-num">3</span>
               <div class="lesson-body">
-                <h4>Asigna a una capa</h4>
-                <p>En el Administrador de capas (<span class="cmd-inline">LA</span>) haz clic en "Linetype" de la capa y elige el tipo cargado. Todos los objetos ByLayer de esa capa lo heredan.</p>
+                <h4>BLOQUEDISC</h4>
+                <p>Ejecuta <span class="cmd-inline">BLOQUEDISC</span> (en inglés: <span class="cmd-inline">WBLOCK</span>), indica el <strong>archivo/carpeta</strong> donde guardarlo y escribe el nombre del símbolo. Marca <em>Insertar unidades</em> según el estándar de tu oficina (Milímetros o Metros).</p>
               </div>
             </div>
-
-            <div class="lesson-step">
-              <span class="lesson-num">4</span>
-              <div class="lesson-body">
-                <h4>Asigna a un objeto concreto</h4>
-                <p>Selecciona el/los objeto(s), abre <span class="cmd-inline">PROPIEDADES</span> (en inglés: <span class="cmd-inline">PROPERTIES</span>) (<span class="key-inline">Ctrl+1</span>) y en "Tipo de línea" elige el tipo (mejor ByLayer si es posible).</p>
-              </div>
-            </div>
-
-            <h3>2. Hacer que el tipo de línea se vea correcto (escala de línea)</h3>
-            <p>El "no se me ve la línea punteada" es el problema número uno. La causa casi siempre es la <strong>escala del tipo de línea</strong> (variable <span class="cmd-inline">ESCALATIPO</span> (en inglés: <span class="cmd-inline">LTSCALE</span>)): si es muy pequeña o muy grande, las líneas parecen continuas o colapsadas.</p>
-
-            <div class="lesson-step">
-              <span class="lesson-num">1</span>
-              <div class="lesson-body">
-                <h4>Ajusta la escala global</h4>
-                <p>Escribe <span class="cmd-inline">ESCALATIPO</span> (en inglés: <span class="cmd-inline">LTSCALE</span>) y prueba un valor. En dibujos 2D a escala (metros con mm), un 0.1–1 suele funcionar. Si ves líneas continuas, baja; si las ve todo tronchado de puntos, súbela.</p>
-              </div>
-            </div>
-
-            <div class="lesson-step">
-              <span class="lesson-num">2</span>
-              <div class="lesson-body">
-                <h4>Escala por objeto (papel)</h4>
-                <p>Cuando trabajas en el espacio papel con vistas escaladas, activa <span class="cmd-inline">PSLTSCALE</span> = 1: así el tamaño de los guiones se ajusta según el factor de escala de la vista y se ven igual en pantalla y papel.</p>
-              </div>
-            </div>
-
-            <div class="lesson-step">
-              <span class="lesson-num">3</span>
-              <div class="lesson-body">
-                <h4>Escala individual</h4>
-                <p>Si un solo objeto necesita otra escala, selecciónalo y en <span class="cmd-inline">PROPIEDADES</span> (en inglés: <span class="cmd-inline">PROPERTIES</span>) → "Escala del tipo de línea" escribe un factor propio (es una clave <strong>CELTSCALE</strong> por objeto).</p>
-              </div>
-            </div>
-
-            <h3>3. Crear un tipo de línea personalizado</h3>
-            <p>Puedes crear tu propia línea con texto (útiles para ejes tipo "A" repetida): guarda un <code>.lin</code> con este formato en una carpeta de tu empresa:</p>
 
             <div class="callout">
-              <span class="callout-title">Formato .lin</span>
-              <p><code>*NOMBRE, Descripción de la línea</code><br>
-              <code>A, 5, -2, ["TEXTO", STANDARD, S=1, X=-0.5, Y=-0.5], -2</code></p>
-              <p><code>A</code> es alineación; <code>5</code> = 5 unidades firmes; <code>-2</code> = 2 unidades en blanco; el bloque <code>["TEXTO",…]</code> inserta texto cada tramo.</p>
+              <span class="callout-title">Nombres legibles</span>
+              Usa nombres normalizados si vas a compartir: <code>MF-SILLA-RECT</code>, <code>PL-TABLERO-x</code>. Evita nombres en mayúsculas sin criterio (<code>CHAIR</code>, <code>silla1</code>) que hacen imposible buscar en una biblioteca grande.
             </div>
 
-            <p>Luego cárgalo con <span class="cmd-inline">TIPOLÍNEA</span> (en inglés: <span class="cmd-inline">LINETYPE</span>) → Cargar → Archivo → busca tu <code>.lin</code> personal.</p>
+            <h3>3. Reinsertar tu biblioteca</h3>
+            <p>Tienes dos rutas para traer los símbolos a un dibujo nuevo:</p>
+            <ul>
+              <li><strong>INSERTAR</strong> (en inglés: <span class="cmd-inline">INSERT</span>): botón <em>Examinar</em> y seleccionas el .DWG guardado. En la paleta de inserción ajusta escala, rotación y nombre de capa.</li>
+              <li><strong>DesignCenter</strong> (<span class="cmd-inline">CENTRODC</span>, en inglés: <span class="cmd-inline">CENTRODC</span> (en inglés: <span class="cmd-inline">ADCENTER</span>)): navega a tu carpeta de biblioteca, arrastra los bloques al dibujo y los coloca con el punto base ya configurado.</li>
+              <li><strong>Paletas de herramientas</strong> (<span class="cmd-inline">PALETASHERR</span>, en inglés: <span class="cmd-inline">TOOLPALETTES</span>): arrastra el bloque a una pestaña y luego lo insertas con un clic.</li>
+            </ul>
+
+            <h3>4. Buena práctica: plantilla de biblioteca</h3>
+            <p>Una biblioteca ordenada comparte tres ideas:</p>
+            <div class="lesson-step">
+              <span class="lesson-num">1</span>
+              <div class="lesson-body">
+                <h4>Carpetas estándar</h4>
+                <p><code>Biblioteca/Mobiliario</code>, <code>Biblioteca/Simbología</code>, <code>Biblioteca/Detalles</code>. Una sola raíz en la red para todos.</p>
+              </div>
+            </div>
+            <div class="lesson-step">
+              <span class="lesson-num">2</span>
+              <div class="lesson-body">
+                <h4>Un dibujo origen por familia</h4>
+                <p>Cada .DWG guarda todos los bloques de su familia; así puedes exportar varios de una sola vez con <span class="cmd-inline">BLOQUEDISC</span>.</p>
+              </div>
+            </div>
+            <div class="lesson-step">
+              <span class="lesson-num">3</span>
+              <div class="lesson-body">
+                <h4>Versionado</h4>
+                <p>Usa la versión de DWG de la oficina (p. ej. AutoCAD 2018) para que nada abra con incompatibilidad.</p>
+              </div>
+            </div>
 
             <div class="table-scroll">
             <table class="table-cad">
               <thead><tr><th>Comando</th><th>Qué hace</th><th>Atajo</th></tr></thead>
               <tbody>
-                <tr><td><span class="cmd-inline">TIPOLÍNEA</span> (en inglés: <span class="cmd-inline">LINETYPE</span>)</td><td>Abre el Administrador de tipos de línea</td><td><span class="key-inline">LT</span></td></tr>
-                <tr><td><span class="cmd-inline">ESCALATIPO</span> (en inglés: <span class="cmd-inline">LTSCALE</span>)</td><td>Escala global de todos los tipos de línea</td><td><span class="key-inline">LTS</span></td></tr>
-                <tr><td><span class="cmd-inline">PSLTSCALE</span></td><td>Ajusta la escala de los tipos de línea al papel</td><td>—</td></tr>
-                <tr><td><span class="cmd-inline">-TIPOLÍNEA</span> (en inglés: <span class="cmd-inline">-LINETYPE</span>)</td><td>Versión de línea de comandos (cargar, set, ?)</td><td>—</td></tr>
+                <tr><td><span class="cmd-inline">BLOQUEDISC</span> (en inglés: <span class="cmd-inline">WBLOCK</span>)</td><td>Guarda un bloque como archivo .DWG</td><td><span class="key-inline">WB</span></td></tr>
+                <tr><td><span class="cmd-inline">INSERTAR</span> (en inglés: <span class="cmd-inline">INSERT</span>)</td><td>Inserta un bloque o archivo en el dibujo</td><td><span class="key-inline">I</span></td></tr>
+                <tr><td><span class="cmd-inline">CENTRODC</span> (en inglés: <span class="cmd-inline">ADCENTER</span>)</td><td>Abre DesignCenter para explorar y arrastrar bloques</td><td><span class="key-inline">Ctrl+2</span></td></tr>
+                <tr><td><span class="cmd-inline">PALETASHERR</span> (en inglés: <span class="cmd-inline">TOOLPALETTES</span>)</td><td>Paletas de herramientas personales</td><td><span class="key-inline">Ctrl+3</span></td></tr>
               </tbody>
             </table>
             </div>
 
             <div class="callout warn">
-              <span class="callout-title">Atención</span>
-              Los tipos de línea <strong>no se ven en la impresión física por defecto</strong> si el estilo de trazado los sobreescribe. Revisa que el color correspondiente en tu tabla de trazo no fuerce "Continua". El tipo de línea se respeta siempre que la pluma del color no lo anule.
+              <span class="callout-title">Error común</span>
+              Guardar el bloque con <strong>líneas RGB personalizadas</strong> en lugar de ByLayer. El símbolo se ve bien en tu archivo, pero cuando otro lo inserta con capas distintas queda "muerto". Dibuja siempre con ByLayer (color, tipo y grosor) antes del <span class="cmd-inline">BLOQUEDISC</span>.
+            </div>
+
+            <h3>5. Mini ejercicio: crea tu primer símbolo de biblioteca</h3>
+            <div class="lesson-step">
+              <span class="lesson-num">1</span>
+              <div class="lesson-body">
+                <h4>Pila doble</h4>
+                <p>Dibuja un plano de silla 450x450 mm (o tu pieza favorita) en capa <strong>Mobiliario</strong>, color ByLayer.</p>
+              </div>
+            </div>
+            <div class="lesson-step">
+              <span class="lesson-num">2</span>
+              <div class="lesson-body">
+                <h4>Inserta y exporta</h4>
+                <p>Con <span class="cmd-inline">BLOQUEDISC</span> (en inglés: <span class="cmd-inline">WBLOCK</span>) guárdalo en tu carpeta de biblioteca con nombre normalizado.</p>
+              </div>
+            </div>
+            <div class="lesson-step">
+              <span class="lesson-num">3</span>
+              <div class="lesson-body">
+                <h4>Utilízalo en otro dibujo</h4>
+                <p>Abre un .DWG en blanco, arrastra el símbolo desde DesignCenter y comprueba que entra en la capa y unidades correctas.</p>
+              </div>
             </div>
           <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
           </section>
@@ -256,13 +278,13 @@
         </article>
 
         <nav class="level-nav">
-          <a href="lineas.html">
+          <a href="bloques.html">
             <span class="nav-label">Anterior</span>
-            <span class="nav-title"><i class="bi bi-arrow-left"></i> Tipos de línea</span>
+            <span class="nav-title"><i class="bi bi-arrow-left"></i> Bloques y atributos</span>
           </a>
-          <a href="puntos.html" class="nav-next">
+          <a href="escalar-bloques.html" class="nav-next">
             <span class="nav-label">Siguiente</span>
-            <span class="nav-title">Puntos y división <i class="bi bi-arrow-right"></i></span>
+            <span class="nav-title">Escalar bloques <i class="bi bi-arrow-right"></i></span>
           </a>
         </nav>
       </div>

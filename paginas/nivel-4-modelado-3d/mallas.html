@@ -207,6 +207,36 @@
             <span class="callout-title">Error común</span>
             <span>Refinar una malla entera "por si acaso": cada <span class="cmd-inline">MESHREFINE</span> multiplica el número de caras y el archivo crece sin que se note. Refina solo las zonas donde vas a trabajar.</span>
           </div>
+
+          <h3>De malla a sólido: cuándo y cómo convertir</h3>
+          <p>El paso <strong>4</strong> del flujo es importante para piezas "de fabricación": un sólido se opera con booleans, se acota, se envía a CAM/imprimible y su forma queda definida por NURBS (caras suaves), no por miles de triángulos. Convierte <strong>al final</strong>, cuando ya no quieras esculpir libremente.</p>
+          <table class="table-cad">
+            <thead><tr><th>Objetivo</th><th>Comando</th><th>Resultado</th></tr></thead>
+            <tbody>
+              <tr><td>Malla → Sólido 3D</td><td><span class="cmd-inline">CONVTOSOLID</span></td><td>Sólido editable con operaciones booleanas y empuje/estirar caras.</td></tr>
+              <tr><td>Malla → Superficie</td><td><span class="cmd-inline">CONVTOSURFACE</span></td><td>Superficie NURBS editable en aristas; útil para carcasas.</td></tr>
+              <tr><td>Sólido → Malla</td><td><span class="cmd-inline">CONVTOMESH</span></td><td>Malla para esculpir; preserva caras si usas la opción de suavizado 0.</td></tr>
+            </tbody>
+          </table>
+          <div class="callout">
+            <span class="callout-title">Regla práctica</span>
+            <span>Si la pieza tiene <strong>planos, ángulos rectos o huecos</strong> → trabaja en sólido. Si tiene <strong>curvas orgánicas</strong> líquidas → esculpe en malla (o superficie NURBS). Mezclar máscaras de malla y sólido en el mismo conjunto puede dar problemas al imprimir/ensamblar.</span>
+          </div>
+
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 460 180" role="img" aria-label="Conversión de malla a sólido con una caja suavizada">
+              <polygon points="60,50 140,50 160,120 40,120" class="cad-fill-new"/>
+              <line x1="60" y1="50" x2="55" y2="40" class="cad-arrow"/>
+              <polygon points="200,60 280,60 300,120 180,120" class="cad-fill"/>
+              <line x1="300" y1="60" x2="410" y2="55" class="cad-arrow-new"/>
+              <rect x="330" y="30" width="60" height="45" class="cad-fill-new"/>
+              <rect x="330" y="75" width="60" height="45" class="cad-fill-new"/>
+              <text x="100" y="150" text-anchor="middle" class="cad-label-cmd">MALLA esculpible</text>
+              <text x="240" y="150" text-anchor="middle" class="cad-label-cmd">CONVTOSOLID</text>
+              <text x="360" y="150" text-anchor="middle" class="cad-label">SÓLIDO operativo</text>
+              <text x="230" y="172" text-anchor="middle" class="cad-label">Convierte al final del modelado para conservar la libertad creativa</text>
+            </svg>
+          </div>
           <!-- ENRIQ END -->
           <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
           </section>

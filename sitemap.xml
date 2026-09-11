@@ -235,6 +235,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-2-dibujo-2d/limites-unidades.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-2-dibujo-2d/lineas.html</loc>
     <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
@@ -296,6 +302,12 @@
   </url>
   <url>
     <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-2-dibujo-2d/texturas-bloques.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-2-dibujo-2d/wblock-biblioteca.html</loc>
     <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -650,6 +662,12 @@
   </url>
   <url>
     <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-5-avanzado/python.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-5-avanzado/scripts-automatizacion.html</loc>
     <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

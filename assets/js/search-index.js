@@ -10933,6 +10933,14 @@ window.SEARCH_INDEX = [
   },
   {
     "type": "topic",
+    "title": "Límites y unidades del dibujo",
+    "description": "Configurar las unidades (UNITS) y los límites (LIMITS) antes de dibujar para que todo escale bien.",
+    "file": "nivel-2-dibujo-2d/limites-unidades.html",
+    "anchor": "",
+    "path": "Nivel 2 · Dibujo 2D"
+  },
+  {
+    "type": "topic",
     "title": "Capas (Layers)",
     "description": "Una capa es un \"acetato\" transparente donde se agrupan objetos con propiedades comunes. Se administran desde el Administrador de propiedades de capas (comando L",
     "file": "nivel-2-dibujo-2d/capas.html",
@@ -10960,6 +10968,14 @@ window.SEARCH_INDEX = [
     "title": "Bloques y atributos",
     "description": "Un bloque es un conjunto de objetos agrupados bajo un solo nombre, reutilizable en el mismo dibujo o en otros (una puerta, una silla, un símbolo eléctrico).",
     "file": "nivel-2-dibujo-2d/bloques.html",
+    "anchor": "",
+    "path": "Nivel 2 · Dibujo 2D"
+  },
+  {
+    "type": "topic",
+    "title": "WBLOCK y bibliotecas de bloques",
+    "description": "Guardar bloques como archivos .DWG con WBLOCK y crear bibliotecas reutilizables de símbolos.",
+    "file": "nivel-2-dibujo-2d/wblock-biblioteca.html",
     "anchor": "",
     "path": "Nivel 2 · Dibujo 2D"
   },
@@ -11440,6 +11456,14 @@ window.SEARCH_INDEX = [
     "title": "AutoLISP y scripts básicos",
     "description": "AutoLISP es un lenguaje de programación integrado en AutoCAD que permite automatizar tareas repetitivas, crear comandos personalizados y extender las capacidade",
     "file": "nivel-5-avanzado/autolisp.html",
+    "anchor": "",
+    "path": "Nivel 5 · Avanzado"
+  },
+  {
+    "type": "topic",
+    "title": "Scripts de automatización (.SCR)",
+    "description": "Automatizar tareas repetitivas con scripts .SCR: crear capas, imprimir en lote y estandarizar la revisión.",
+    "file": "nivel-5-avanzado/scripts-automatizacion.html",
     "anchor": "",
     "path": "Nivel 5 · Avanzado"
   },

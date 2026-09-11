@@ -1,0 +1,120 @@
+<p>Cuando empiezas un dibujo, AutoCAD necesita saber <strong>en qué unidades</strong> vas a trabajar y <strong>hasta dónde llega</strong> tu área de dibujo. Configurarlo al principio evita dibujos "perdidos", cotas absurdas y escalas imposibles de imprimir.</p>
+
+<h3>1. Definir las unidades del dibujo</h3>
+<p>Escribe <span class="cmd-inline">UNIDADES</span> (en inglés: <span class="cmd-inline">UNITS</span>) y configura el cuadro <strong>Unidades de dibujo</strong>:</p>
+<ul>
+  <li><strong>Tipo de longitud:</strong> Decimal (lo habitual), Arquitectónico (p. ej. <code>1'-3 1/2"</code>), Ingeniería, Fraccionario o Científico. Para arquitectura e ingeniería civil casi siempre <strong>Decimal</strong>.</li>
+  <li><strong>Precisión:</strong> 0.00 o 0.000 en proyectos técnicos; no uses más decimales de los que vas a acotar.</li>
+  <li><strong>Ángulo:</strong> Grados decimales con dirección <em>Este</em> y en sentido antihorario (valores por defecto).</li>
+  <li><strong>Escala de inserción:</strong> define la unidad que usarás al insertar bloques: Milímetros, Centímetros o Metros.</li>
+</ul>
+
+<div class="table-scroll">
+<table class="table-cad">
+  <thead><tr><th>Caso típico</th><th>Tipo</th><th>Precisión</th><th>Escala de inserción</th></tr></thead>
+  <tbody>
+    <tr><td>Plano de arquitectura</td><td>Decimal</td><td>0 o 0.00</td><td>Milímetros</td></tr>
+    <tr><td>Urbanización / civil</td><td>Decimal</td><td>0.00 o 0.000</td><td>Metros</td></tr>
+    <tr><td>Pieza mecánica</td><td>Decimal</td><td>0.000</td><td>Milímetros</td></tr>
+    <tr><td>Planos imperiales (EE. UU.)</td><td>Arquitectónico</td><td>1/16" o 1/32"</td><td>Pulgadas</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3>2. Establecer los límites del dibujo</h3>
+<p>El comando <span class="cmd-inline">LÍMITES</span> (en inglés: <span class="cmd-inline">LIMITS</span>) define el rectángulo del área de dibujo (esquina inferior izquierda y superior derecha). No limita dónde puedes dibujar (solo si activas <strong>ON</strong>), pero sí marca la zona "oficial" y la que usa la cuadrícula.</p>
+
+<div class="diagram-canvas">
+<svg viewBox="0 0 460 300" role="img" aria-label="Límites del dibujo en espacio modelo con cuadrícula">
+  <rect x="30" y="20" width="400" height="250" class="cad-fill-new" rx="4"/>
+  <line x1="30" y1="20" x2="430" y2="20" class="cad-line"/>
+  <line x1="430" y1="20" x2="430" y2="270" class="cad-line"/>
+  <line x1="430" y1="270" x2="30" y2="270" class="cad-line"/>
+  <line x1="30" y1="270" x2="30" y2="20" class="cad-line"/>
+  <circle cx="30" cy="270" r="3.5" class="cad-point"/>
+  <circle cx="430" cy="20" r="3.5" class="cad-point-cyan"/>
+  <text x="42" y="286" class="cad-label">0 , 0 (esquina inferior izquierda)</text>
+  <line x1="30" y1="288" x2="430" y2="288" class="cad-dim"/>
+  <polygon points="425,288 430,288 427,284" class="cad-arrow"/>
+  <polygon points="35,288 30,288 33,284" class="cad-arrow"/>
+  <text x="205" y="281" class="cad-dim-text">Ancho (ej.: 420 mm)</text>
+  <line x1="20" y1="20" x2="20" y2="270" class="cad-dim"/>
+  <text x="-52" y="150" class="cad-dim-text" transform="rotate(-90 20 150)">Alto (ej.: 297 mm)</text>
+  <text x="335" y="42" class="cad-label-cmd">LÍMITES (LIMITS) y CUADRÍCULA (GRID)</text>
+</svg>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Esquina 1</h4>
+    <p>Ejecuta <span class="cmd-inline">LÍMITES</span> (en inglés: <span class="cmd-inline">LIMITS</span>) y escribe la esquina inferior izquierda: <code>0,0</code> y Enter.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Esquina 2</h4>
+    <p>Escribe la superior derecha según el formato de tu plantilla: en milímetros <code>420,297</code> (A3) o <code>841,594</code> (A0). En metros un lienzo urbano puede ser <code>400000,300000</code>.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Ver todo y encender la cuadrícula</h4>
+    <p>Escribe <span class="cmd-inline">ZOOM</span> → <span class="cmd-inline">A</span> (Todo) para ver el rectángulo completo. Activa <span class="cmd-inline">CUADRÍCULA</span> (en inglés: <span class="cmd-inline">GRID</span>) (<span class="key-inline">F7</span>), y ajusta sus límites con <span class="cmd-inline">LA</span> (diseño) o en <span class="cmd-inline">CONFIGURAR</span> (en inglés: <span class="cmd-inline">SETTINGS</span>) → Referencia a objetos.</p>
+  </div>
+</div>
+
+<div class="callout">
+  <span class="callout-title">Sí o no: activar límites</span>
+  Si pones <strong>LÍMITES ON</strong>, AutoCAD rechaza puntos fuera del rectángulo: útil para obligar a que todos dibujen dentro del formato. Con <strong>OFF</strong> (por defecto) puedes dibujar en cualquier parte; los límites solo definen la cuadrícula y el zoom Todo.
+</div>
+
+<h3>3. Escala del tipo de línea y ayuda con GPS</h3>
+<p>Fíjate en dos detalles que dependen de las unidades:</p>
+<ul>
+  <li>La <strong>escala del tipo de línea</strong> (<span class="cmd-inline">ESCALATIPO</span>, en inglés: <span class="cmd-inline">ESCALATIPO</span> (en inglés: <span class="cmd-inline">LTSCALE</span>)) se define en unidades de dibujo: un dibujo en mm necesita valores grandes (p. ej. 1000) para ver las discontinuidades; uno en metros trabaja con 1–10.</li>
+  <li>En el cuadro <span class="cmd-inline">UNIDADES</span> (en inglés: <span class="cmd-inline">UNITS</span>), la <strong>escala de inserción</strong> evita que un bloque dibujado en mm entre gigante en un plano en metros.</li>
+</ul>
+
+<h3>4. Mini ejercicio: configuración inicial de un plano A3</h3>
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>UNITS</h4>
+    <p>Configura Decimal, precisión 0.00, escala de inserción Milímetros.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>LÍMITES</h4>
+    <p>Fija <code>0,0</code> → <code>420,297</code>.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>ZOOM Todo + GRID</h4>
+    <p>Comprueba que ves el rectángulo completo con la cuadrícula encendida.</p>
+  </div>
+</div>
+
+<div class="table-scroll">
+<table class="table-cad">
+  <thead><tr><th>Comando</th><th>Qué hace</th><th>Atajo</th></tr></thead>
+  <tbody>
+    <tr><td><span class="cmd-inline">UNIDADES</span> (en inglés: <span class="cmd-inline">UNITS</span>)</td><td>Abre el cuadro de formato, precisión y escala de inserción</td><td><span class="key-inline">UN</span></td></tr>
+    <tr><td><span class="cmd-inline">LÍMITES</span> (en inglés: <span class="cmd-inline">LIMITS</span>)</td><td>Define el rectángulo del área de dibujo</td><td><span class="key-inline">LÍM</span></td></tr>
+    <tr><td><span class="cmd-inline">CUADRÍCULA</span> (en inglés: <span class="cmd-inline">GRID</span>)</td><td>Muestra la cuadrícula del área</td><td><span class="key-inline">F7</span></td></tr>
+    <tr><td><span class="cmd-inline">ADHERENCIA</span> (en inglés: <span class="cmd-inline">SNAP</span>)</td><td>Obliga el cursor a saltos regulares</td><td><span class="key-inline">F9</span></td></tr>
+    <tr><td><span class="cmd-inline">ZOOM</span></td><td>Acerca/aleja; opción Todo ajusta el encuadre</td><td><span class="key-inline">Z</span></td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout warn">
+  <span class="callout-title">Error común</span>
+  Dibujar "en el aire": si un dibujo llega con objetos a varios millones de unidades, casi siempre es por <strong>unidades mal configuradas</strong> (se dibujó en mm y se trabajó en m, o al revés). Antes de escalar nada, revisa <span class="cmd-inline">UNIDADES</span> (en inglés: <span class="cmd-inline">UNITS</span>) y la escala de inserción.
+</div>

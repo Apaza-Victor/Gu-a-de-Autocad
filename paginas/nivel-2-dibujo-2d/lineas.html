@@ -105,8 +105,8 @@
     <p class="crumb"><a href="../../index.html">Inicio</a> / <a href="../../index.html#niveles">Niveles</a> / <a href="index.html">Dibujo 2D</a> / Tema 12</p>
     <span class="eyebrow" data-i18n="lvl2.eyebrow">Nivel 02 · Básico–Intermedio</span>
     <h1>Tipos de línea</h1>
-    <div class="level-progress-bar" data-level-prefix="nivel2" data-level-total="27"><div class="fill"></div></div>
-    <p class="level-progress-label">0 de 27 temas completados · 0%</p>
+    <div class="level-progress-bar" data-level-prefix="nivel2" data-level-total="29"><div class="fill"></div></div>
+    <p class="level-progress-label">0 de 29 temas completados · 0%</p>
   </div>
 </header>
 
@@ -187,6 +187,38 @@
           <div class="callout warn">
             <span class="callout-title">Error común</span>
             <span>Asignar el tipo de línea objeto a objeto en lugar de a la capa. Un objeto "a mano" con línea continua dentro de una capa de ejes rompe el sistema: si cambias la capa, ese objeto no obedece. Usa cualidades ByLayer.</span>
+          </div>
+
+          <h3>De dónde salen: el archivo acad.lin</h3>
+          <p>Los tipos de línea están definidos en archivos de texto <span class="cmd-inline">.lin</span> (por defecto <strong>acad.lin</strong> y <strong>acadiso.lin</strong>). Abrir uno con un editor de texto muestra la receta de cada tipo:</p>
+          <div class="code-block">
+            <span class="code-label">acad.lin</span>
+            <button class="copy-btn" data-i18n="ui.copy">Copiar</button>
+            <pre><code class="language-plaintext">*DASHED,Discontinuous ____ __ ____ __ ____
+A,12.7,-6.35
+
+*CENTER,Centre ____ _ ____ _ ____
+A,31.75,-6.35,6.35,-6.35
+
+*DOTTED,Dotted. . . . . . . . . . .
+A,0,-6.35</code></pre>
+          </div>
+          <p>Cada definición comienza con <code>*NOMBRE,Descripción</code> seguida de una línea <code>A,</code> con la secuencia de trazos: <strong>valor positivo</strong> = trazo visible, <strong>negativo</strong> = espacio, <strong>0</strong> = punto. Por eso "DASHED" es 12.7 hacia adelante y 6.35 en blanco: así se dibuja la raya.</p>
+
+          <div class="diagram-canvas">
+            <svg viewBox="0 0 460 150" role="img" aria-label="Secuencia de trazos de un tipo de línea discontinua">
+              <line x1="20" y1="40" x2="440" y2="40" class="cad-line-new" stroke-dasharray="18 9" stroke-width="4"/>
+              <text x="20" y="30" class="cad-label">DASHED = trazo 12.7 + hueco 6.35</text>
+              <line x1="20" y1="90" x2="440" y2="90" class="cad-line" stroke-dasharray="48 9 9 9" stroke-width="4"/>
+              <text x="20" y="80" class="cad-label">CENTER = trazo largo 31.75 + hueco + punto + hueco</text>
+              <line x1="20" y1="140" x2="440" y2="140" class="cad-line" stroke-dasharray="0.01 12" stroke-width="4" stroke-linecap="round"/>
+              <text x="20" y="130" class="cad-label-cmd">DOTTED = 0 (punto) + hueco 6.35</text>
+            </svg>
+          </div>
+
+          <div class="callout">
+            <span class="callout-title">Crear los tuyos</span>
+            <span>Para un tipo "de obra", copia <strong>acad.lin</strong> a tu carpeta de biblioteca, añade tus definiciones al final y cárgalas con <span class="cmd-inline">TIPOLÍNEA</span> (en inglés: <span class="cmd-inline">LINETYPE</span>) usando el botón <strong>Cargar → Archivo</strong>. Si tu oficina comparte ese .lin, todos ven el mismo trazado.</span>
           </div>
 
           <h3>Mini ejercicio: ejes que se ven y se ocultan</h3>
