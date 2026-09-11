@@ -1,0 +1,64 @@
+<p>Un plano sin texto no es un plano: necesita títulos, notas, rótulos y dimensiones. AutoCAD tiene dos herramientas: <strong>TEXTO</strong> (en inglés: <span class="cmd-inline">TEXT</span>, una línea simple) y <strong>TEXTOM</strong> (en inglés: <span class="cmd-inline">MTEXT</span>, textos enriquecidos de varias líneas con formato). Saber cuándo usar cada una ya es media batalla.</p>
+
+<h3>1. Comandos</h3>
+<table class="table-cad">
+  <thead><tr><th>Para</th><th>Comando</th><th>Atajo</th></tr></thead>
+  <tbody>
+    <tr><td>Una línea corta</td><td><span class="cmd-inline">TEXTO</span> (en inglés: <span class="cmd-inline">TEXT</span>)</td><td><span class="key-inline">TEX</span></td></tr>
+    <tr><td>Varias líneas / notas</td><td><span class="cmd-inline">TEXTOM</span> (en inglés: <span class="cmd-inline">MTEXT</span>)</td><td><span class="key-inline">T</span> o <span class="key-inline">MT</span></td></tr>
+  </tbody>
+</table>
+
+<h3>2. Cómo se usa</h3>
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Texto simple (TEXT)</h4>
+    <p><span class="cmd-inline">TEXTO</span> (en inglés: <span class="cmd-inline">TEXT</span>) → clic donde va el texto → altura (ej. <code>2.5</code>) → ángulo (normalmente 0) → escribe y pulsa <span class="key-inline">Enter</span>. Para una línea o rótulo corto es perfecto.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Texto enriquecido (MTEXT)</h4>
+    <p><span class="cmd-inline">TEXTOM</span> (en inglés: <span class="cmd-inline">MTEXT</span>) → arrastra un cuadro (ancho del párrafo) → escribe el contenido. En la cinta editable el formato (negrita, tamaño, interlineado, alineación). Termina con <span class="cmd-inline">OK</span> fuera del cuadro.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Editar</h4>
+    <p>Doble clic sobre cualquier texto lo abre para editar sin perder el formato. Con <span class="cmd-inline">ESTILO</span> (en inglés: <span class="cmd-inline">STYLE</span>) defines la fuente/altura por defecto.</p>
+  </div>
+</div>
+
+<div class="diagram-canvas">
+  <svg viewBox="0 0 460 200" role="img" aria-label="Texto simple de una línea y texto enriquecido en varias líneas">
+    <line x1="40" y1="60" x2="280" y2="60" class="cad-dim"/>
+    <text x="55" y="95" class="cad-label-cmd">TEXTO (una línea)</text>
+    <text x="55" y="130" class="cad-label">Rótulo: "2.ª planta"</text>
+    <text x="55" y="175" class="cad-label-cmd">TEXTOM (párrafo enriquecido)</text>
+    <text x="200" y="205" text-anchor="middle" class="cad-dim-text">MTEXT permite negrita, colores y listas · doble clic para editar</text>
+  </svg>
+</div>
+
+<h3>3. Mini ejercicio</h3>
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Un rótulo de plano</h4>
+    <p><span class="cmd-inline">TEXTO</span> (en inglés: <span class="cmd-inline">TEXT</span>) → clic abajo del plano → escribe "Planta de cimentación". Prueba a cambiarle la altura si sale pequeño.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Una nota de proyecto</h4>
+    <p><span class="cmd-inline">TEXTOM</span> (en inglés: <span class="cmd-inline">MTEXT</span>) → dibuja el cuadro → escribe dos líneas: "NOTA: el hormigón será HA-25/P/20/IIa. Todas las cotas en cm." Usa negrita en la primera línea.</p>
+  </div>
+</div>
+
+<div class="callout warn">
+  <span class="callout-title">Error común</span>
+  <span>Poner textos "flotantes" en medio del plano sin capa ni estilo de texto definido. Crea una capa <strong>Cotas/Texto</strong> y un estilo de texto estándar; todo lo escrito subirá ordenado y editable cuando el equipo lo necesite.</span>
+</div>

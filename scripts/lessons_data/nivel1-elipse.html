@@ -1,0 +1,68 @@
+<p>La <strong>elipse</strong> dibuja curvas elípticas definidas por dos puntos que marcan un eje y una distancia perpendicular. Es la herramienta correcta para representar aros, arcos de vista, tanques en proyección o cualquier forma ovalada que no sea un círculo perfecto.</p>
+
+<h3>1. Ejecutar el comando</h3>
+<table class="table-cad">
+  <thead><tr><th>Cómo</th><th>Qué escribir</th><th>Atajo</th></tr></thead>
+  <tbody>
+    <tr><td>Barra de comandos</td><td><span class="cmd-inline">ELIPSE</span> (en inglés: <span class="cmd-inline">ELLIPSE</span>)</td><td><span class="key-inline">EL</span></td></tr>
+    <tr><td>Cinta → Inicio → Dibujo</td><td>Icono de elipse (menú con arco elíptico)</td><td>Clic</td></tr>
+  </tbody>
+</table>
+
+<h3>2. Cómo se usa</h3>
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Eje mayor con dos clics</h4>
+    <p><span class="cmd-inline">ELIPSE</span> (en inglés: <span class="cmd-inline">ELLIPSE</span>) → clic en un extremo del eje mayor → clic en el otro extremo. Ese segmento fija la orientación y la longitud del elipse.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Distancia del eje menor</h4>
+    <p>El tercer clic (o una distancia) define cuán "achatada" es la elipse: es la mitad del eje menor desde el centro.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Centro y arco elíptico</h4>
+    <p>Con <span class="cmd-inline">C</span> definimos centro + ejes. Con el mismo comando y la opción <span class="cmd-inline">ARCO</span>, dibujas un tramo de elipse (por ejemplo un arco de medio punto elíptico).</p>
+  </div>
+</div>
+
+<div class="diagram-canvas">
+  <svg viewBox="0 0 460 200" role="img" aria-label="Elipse definida por eje mayor y eje menor">
+    <line x1="60" y1="100" x2="320" y2="100" class="cad-dim"/>
+    <ellipse cx="190" cy="100" rx="130" ry="55" class="cad-circle"/>
+    <circle cx="190" cy="100" r="3.5" class="cad-point-cyan"/>
+    <line x1="190" y1="100" x2="190" y2="45" class="cad-dim"/>
+    <text x="190" y="95" class="cad-label">Eje menor (mitad)</text>
+    <text x="110" y="92" class="cad-label-cmd">Eje mayor</text>
+    <circle cx="60" cy="100" r="3.5" class="cad-point"/>
+    <circle cx="320" cy="100" r="3.5" class="cad-point"/>
+    <text x="190" y="196" text-anchor="middle" class="cad-dim-text">elipse = círculo "estirable" · ideal para aros, tanques y arcos elípticos</text>
+  </svg>
+</div>
+
+<h3>3. Mini ejercicio</h3>
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Un tanque visto en planta</h4>
+    <p><span class="cmd-inline">EL</span> → clic a 0,0 → clic a 300,0 (eje mayor 300) → mover el ratón hacia arriba y teclear <code>80</code> (eje menor mitad).</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Centrar y medir</h4>
+    <p>Selecciona la elipse y comprueba en <span class="cmd-inline">PROPIEDADES</span> (en inglés: <span class="cmd-inline">PROPERTIES</span>) el radio X y el radio Y.</p>
+  </div>
+</div>
+
+<div class="callout warn">
+  <span class="callout-title">Error común</span>
+  <span>Dibujar una elipse deformada porque la distancia del segundo clic es variable. Para una elipse exacta usa <span class="cmd-inline">C</span> (centro) y teclea las distancias exactas de cada eje, no arrastres "a ojo".</span>
+</div>

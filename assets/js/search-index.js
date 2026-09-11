@@ -10893,6 +10893,198 @@ window.SEARCH_INDEX = [
   },
   {
     "type": "topic",
+    "title": "Línea (LINE): trazos rectos precisos",
+    "description": "Dibujar líneas rectas con el comando LÍNEA (LINE): segmentos, cierre, coordenadas y ortogonalidad.",
+    "file": "nivel-1-fundamentos/linea.html",
+    "anchor": "",
+    "path": "Nivel 1 · Fundamentos"
+  },
+  {
+    "type": "topic",
+    "title": "Polilínea (PLINE): un solo objeto compuesto",
+    "description": "Crear polilíneas con segmentos rectos y arcos en un único objeto editable con PLINE.",
+    "file": "nivel-1-fundamentos/polilinea.html",
+    "anchor": "",
+    "path": "Nivel 1 · Fundamentos"
+  },
+  {
+    "type": "topic",
+    "title": "Círculo (CIRCLE) y sus variantes",
+    "description": "Dibujar círculos por centro+radio, diámetro, 2P, 3P y tangencias (TTR) en AutoCAD.",
+    "file": "nivel-1-fundamentos/circulo.html",
+    "anchor": "",
+    "path": "Nivel 1 · Fundamentos"
+  },
+  {
+    "type": "topic",
+    "title": "Arco (ARC): curvas parciales",
+    "description": "Dibujar arcos por 3 puntos, centro-inicio-fin, ángulo y radio con el comando ARC.",
+    "file": "nivel-1-fundamentos/arco.html",
+    "anchor": "",
+    "path": "Nivel 1 · Fundamentos"
+  },
+  {
+    "type": "topic",
+    "title": "Rectángulo (RECTANG): esquinas exactas",
+    "description": "Dibujar rectángulos por esquinas, con dimensiones, chaflanes y esquinas redondeadas.",
+    "file": "nivel-1-fundamentos/rectangulo.html",
+    "anchor": "",
+    "path": "Nivel 1 · Fundamentos"
+  },
+  {
+    "type": "topic",
+    "title": "Polígono (POLYGON): figuras regulares",
+    "description": "Dibujar polígonos regulares inscritos o circunscritos con el comando POLYGON.",
+    "file": "nivel-1-fundamentos/poligono.html",
+    "anchor": "",
+    "path": "Nivel 1 · Fundamentos"
+  },
+  {
+    "type": "topic",
+    "title": "Elipse (ELLIPSE): curvas ovaladas",
+    "description": "Dibujar elipses por eje mayor/menor, centro y arcos elípticos con ELLIPSE.",
+    "file": "nivel-1-fundamentos/elipse.html",
+    "anchor": "",
+    "path": "Nivel 1 · Fundamentos"
+  },
+  {
+    "type": "topic",
+    "title": "Seleccionar objetos: técnicas esenciales",
+    "description": "Seleccionar con clic, ventana, cruzamiento, lasso, Shift y filtros (QSELECT) eficientes.",
+    "file": "nivel-1-fundamentos/seleccion.html",
+    "anchor": "",
+    "path": "Nivel 1 · Fundamentos"
+  },
+  {
+    "type": "topic",
+    "title": "Mover objetos (MOVE): punto base y destino",
+    "description": "Desplazar objetos con MOVE usando punto base, desplazamiento relativo y referencias.",
+    "file": "nivel-1-fundamentos/mover.html",
+    "anchor": "",
+    "path": "Nivel 1 · Fundamentos"
+  },
+  {
+    "type": "topic",
+    "title": "Copiar objetos (COPY): duplicados en cadena",
+    "description": "Duplicar objetos con COPY: copias simples, múltiples y en array con precisión.",
+    "file": "nivel-1-fundamentos/copiar.html",
+    "anchor": "",
+    "path": "Nivel 1 · Fundamentos"
+  },
+  {
+    "type": "topic",
+    "title": "Desfase (OFFSET): paralelas y concéntricos",
+    "description": "Crear líneas paralelas y círculos concéntricos a distancia exacta con OFFSET.",
+    "file": "nivel-1-fundamentos/desfase.html",
+    "anchor": "",
+    "path": "Nivel 1 · Fundamentos"
+  },
+  {
+    "type": "topic",
+    "title": "Girar objetos (ROTATE): ángulo y referencia",
+    "description": "Rotar objetos con ROTATE por ángulo, referencia y copia alrededor de un punto base.",
+    "file": "nivel-1-fundamentos/girar.html",
+    "anchor": "",
+    "path": "Nivel 1 · Fundamentos"
+  },
+  {
+    "type": "topic",
+    "title": "Reflejar objetos (MIRROR): simetrías",
+    "description": "Crear simetrías con MIRROR: eje de espejo, conservar o no el original y MIRRTEXT.",
+    "file": "nivel-1-fundamentos/reflejar.html",
+    "anchor": "",
+    "path": "Nivel 1 · Fundamentos"
+  },
+  {
+    "type": "topic",
+    "title": "Recortar objetos (TRIM): limpieza de planos",
+    "description": "Eliminar partes sobrantes con TRIM: límites, corte en cadena y vallas de recorte.",
+    "file": "nivel-1-fundamentos/recortar.html",
+    "anchor": "",
+    "path": "Nivel 1 · Fundamentos"
+  },
+  {
+    "type": "topic",
+    "title": "Extender objetos (EXTEND): hasta el límite",
+    "description": "Prolongar objetos hasta un límite con EXTEND, incluido el modo borde virtual.",
+    "file": "nivel-1-fundamentos/extender.html",
+    "anchor": "",
+    "path": "Nivel 1 · Fundamentos"
+  },
+  {
+    "type": "topic",
+    "title": "Redondear esquinas (FILLET) y chaflanes",
+    "description": "Unir líneas con esquinas redondeadas (FILLET) o biseladas (CHAMFER), y el truco del radio 0.",
+    "file": "nivel-1-fundamentos/redondear.html",
+    "anchor": "",
+    "path": "Nivel 1 · Fundamentos"
+  },
+  {
+    "type": "topic",
+    "title": "Estirar objetos (STRETCH): ajustar medidas",
+    "description": "Estirar partes de un dibujo con STRETCH usando ventana de cruce para cambiar medidas.",
+    "file": "nivel-1-fundamentos/estirar.html",
+    "anchor": "",
+    "path": "Nivel 1 · Fundamentos"
+  },
+  {
+    "type": "topic",
+    "title": "Explotar objetos (EXPLODE): descomponer",
+    "description": "Descomponer bloques, polilíneas y cotas en sus elementos básicos con EXPLODE.",
+    "file": "nivel-1-fundamentos/explotar.html",
+    "anchor": "",
+    "path": "Nivel 1 · Fundamentos"
+  },
+  {
+    "type": "topic",
+    "title": "Capas (LAYER): organización del dibujo",
+    "description": "Crear y gestionar capas con LAYER: color, tipo de línea, grosor, visibilidad y estados.",
+    "file": "nivel-1-fundamentos/capas.html",
+    "anchor": "",
+    "path": "Nivel 1 · Fundamentos"
+  },
+  {
+    "type": "topic",
+    "title": "Propiedades de objetos (PROPERTIES)",
+    "description": "Editar capa, color, tipo de línea y geometría con la paleta PROPERTIES y MATCHPROP.",
+    "file": "nivel-1-fundamentos/propiedades.html",
+    "anchor": "",
+    "path": "Nivel 1 · Fundamentos"
+  },
+  {
+    "type": "topic",
+    "title": "Acotación básica (DIM): medir planos",
+    "description": "Acotar lineal, alineada, radial y angular con los comandos de cota de AutoCAD.",
+    "file": "nivel-1-fundamentos/acotacion.html",
+    "anchor": "",
+    "path": "Nivel 1 · Fundamentos"
+  },
+  {
+    "type": "topic",
+    "title": "Texto (TEXT / MTEXT): rótulos y notas",
+    "description": "Añadir texto de una línea (TEXT) y párrafos enriquecidos (MTEXT) a tus planos.",
+    "file": "nivel-1-fundamentos/texto.html",
+    "anchor": "",
+    "path": "Nivel 1 · Fundamentos"
+  },
+  {
+    "type": "topic",
+    "title": "Sombreado (HATCH): rellenos y materiales",
+    "description": "Rellenar áreas cerradas con HATCH: patrones, escala, degradados e islas.",
+    "file": "nivel-1-fundamentos/hatch.html",
+    "anchor": "",
+    "path": "Nivel 1 · Fundamentos"
+  },
+  {
+    "type": "topic",
+    "title": "Insertar bloques (INSERT): bibliotecas",
+    "description": "Insertar bloques y archivos .DWG con INSERT: escala, rotación y punto base.",
+    "file": "nivel-1-fundamentos/insertar.html",
+    "anchor": "",
+    "path": "Nivel 1 · Fundamentos"
+  },
+  {
+    "type": "topic",
     "title": "Tu primer dibujo: práctica guiada",
     "description": "Reúne todo lo aprendido en este nivel dibujando la planta de un cuarto pequeño de 3 × 2 metros . Sigue cada paso en el orden indicado; no importa la velocidad, ",
     "file": "nivel-1-fundamentos/primer-dibujo.html",

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Copiar objetos (COPY): duplicados en cadena · Fundamentos de AutoCAD — AutoCAD Guía</title>
+<link rel="canonical" href="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/copiar.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/copiar.html">
+<meta property="og:site_name" content="AutoCAD Guía">
+<meta property="og:title" content="Copiar objetos (COPY): duplicados en cadena · Fundamentos de AutoCAD — AutoCAD Guía">
+<meta property="og:description" content="Duplicar objetos con COPY: copias simples, múltiples y en array con precisión.">
+<meta property="og:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Copiar objetos (COPY): duplicados en cadena · Fundamentos de AutoCAD — AutoCAD Guía">
+<meta name="twitter:description" content="Duplicar objetos con COPY: copias simples, múltiples y en array con precisión.">
+<meta name="twitter:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="description" content="Duplicar objetos con COPY: copias simples, múltiples y en array con precisión.">
+
+<link rel="icon" type="image/svg+xml" href="../../assets/img/autocad-2.svg">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../../assets/css/responsive.css">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Nivel · Fundamentos de AutoCAD",
+  "description": "Qué es AutoCAD, instalación y licencias, interfaz, sistema de coordenadas y configuración inicial.",
+  "provider": {
+    "@type": "Organization",
+    "name": "AutoCAD Guía",
+    "sameAs": "https://apaza-victor.github.io/Gu-a-de-Autocad/"
+  },
+  "inLanguage": "es",
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "online",
+    "learningResourceType": "tutorial",
+    "inLanguage": "es"
+  }
+}
+  </script>
+</head>
+
+<body>
+
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+<nav class="navbar navbar-cad navbar-expand-lg">
+  <div class="container container-xl">
+    <a class="navbar-brand brand-cad" href="../../index.html">
+      <img class="brand-logo" src="../../assets/img/autocad-2.svg" alt="AutoCAD">
+      <span>AutoCAD<small class="d-block" data-i18n-html="brand.sub">Guía · Teoría &amp; Práctica</small></span>
+    </a>
+    <div class="d-flex align-items-center gap-2 nav-actions order-lg-last">
+      <button class="icon-btn" id="searchToggle" title="Buscar" data-i18n-title="ui.search"><i class="bi bi-search"></i></button>
+      <button class="icon-btn" id="themeToggle" title="Cambiar tema" data-i18n-title="ui.theme"><i class="bi bi-moon-stars"></i></button>
+      <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
+        <i class="bi bi-list fs-4"></i>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navCad">
+      <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../../index.html" data-i18n="nav.home">Inicio</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-cad dropdown-toggle active" href="#" data-bs-toggle="dropdown" data-i18n="nav.levels">Niveles</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item active" href="../nivel-1-fundamentos/index.html">Nivel 1 · Fundamentos</a></li>
+            <li><a class="dropdown-item" href="../nivel-2-dibujo-2d/index.html">Nivel 2 · Dibujo 2D</a></li>
+            <li><a class="dropdown-item" href="../nivel-3-organizacion/index.html">Nivel 3 · Organización</a></li>
+            <li><a class="dropdown-item" href="../nivel-4-modelado-3d/index.html">Nivel 4 · Modelado 3D</a></li>
+            <li><a class="dropdown-item" href="../nivel-5-avanzado/index.html">Nivel 5 · Experto</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../comandos.html" data-i18n="nav.commands">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../ejemplos-visuales.html" data-i18n="nav.visual">Visuales</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../trucos.html" data-i18n="nav.tips">Trucos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../recursos.html" data-i18n="nav.resources">Recursos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../faq.html" data-i18n="nav.faq">FAQ</a></li>
+      </ul>
+
+      <div class="d-flex align-items-center gap-2 nav-actions-menu ms-lg-auto">
+        <span class="coord-readout d-none d-lg-inline-flex">X: <span id="coordX">000.00</span>&nbsp; Y: <span id="coordY">000.00</span></span>
+        <button class="lang-toggle" id="langToggle" title="Cambiar idioma" data-i18n-title="ui.lang">
+          <i class="bi bi-translate lang-toggle-flag"></i>
+          <span class="lang-toggle-text">EN</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header" id="main-content">
+  <div class="container container-xl">
+    <p class="crumb"><a href="../../index.html">Inicio</a> / <a href="../../index.html#niveles">Niveles</a> / <a href="index.html">Fundamentos</a> / Tema 22</p>
+    <span class="eyebrow" data-i18n="lvl1.eyebrow">Nivel 01 · Básico</span>
+    <h1>Copiar objetos (COPY): duplicados en cadena</h1>
+    <div class="level-progress-bar" data-level-prefix="nivel1" data-level-total="37"><div class="fill"></div></div>
+    <p class="level-progress-label">0 de 37 temas completados · 0%</p>
+  </div>
+</header>
+
+<div class="content-layout">
+  <div class="container container-xl">
+    <div class="row">
+
+      <aside class="col-lg-3 mb-5 mb-lg-0">
+        <div class="toc-sidebar">
+          <h6 data-i18n="ui.inThisLevel">En este nivel</h6>
+          <ul class="toc-list">
+            <li><a href="que-es.html"><span class="toc-check"></span> Qué es AutoCAD</a></li>
+            <li><a href="instalacion.html"><span class="toc-check"></span> Instalación y licencias</a></li>
+            <li><a href="interfaz.html"><span class="toc-check"></span> Interfaz de usuario</a></li>
+            <li><a href="coordenadas.html"><span class="toc-check"></span> Sistema de coordenadas</a></li>
+            <li><a href="osnap-basico.html"><span class="toc-check"></span> Referencia a objetos (OSNAP)</a></li>
+            <li><a href="configuracion.html"><span class="toc-check"></span> Configuración inicial</a></li>
+            <li><a href="configurar-espacio-trabajo.html" data-toc="nivel1-espacio-trabajo"><span class="toc-check"></span> Configurar el espacio de trabajo</a></li>
+            <li><a href="archivos.html"><span class="toc-check"></span> Gestión de archivos</a></li>
+            <li><a href="tipos-archivo.html"><span class="toc-check"></span> Tipos de archivo</a></li>
+            <li><a href="gestion-dibujo.html"><span class="toc-check"></span> Mantener el dibujo sano</a></li>
+            <li><a href="zoom.html"><span class="toc-check"></span> Zoom y navegación</a></li>
+            <li><a href="atajos-esenciales.html"><span class="toc-check"></span> Comandos y atajos esenciales</a></li>
+            <li><a href="linea.html" data-toc="nivel1-linea"><span class="toc-check"></span> Línea (LINE)</a></li>
+            <li><a href="polilinea.html" data-toc="nivel1-polilinea"><span class="toc-check"></span> Polilínea (PLINE)</a></li>
+            <li><a href="circulo.html" data-toc="nivel1-circulo"><span class="toc-check"></span> Círculo (CIRCLE)</a></li>
+            <li><a href="arco.html" data-toc="nivel1-arco"><span class="toc-check"></span> Arco (ARC)</a></li>
+            <li><a href="rectangulo.html" data-toc="nivel1-rectangulo"><span class="toc-check"></span> Rectángulo (RECTANG)</a></li>
+            <li><a href="poligono.html" data-toc="nivel1-poligono"><span class="toc-check"></span> Polígono (POLYGON)</a></li>
+            <li><a href="elipse.html" data-toc="nivel1-elipse"><span class="toc-check"></span> Elipse (ELLIPSE)</a></li>
+            <li><a href="seleccion.html" data-toc="nivel1-seleccion"><span class="toc-check"></span> Seleccionar objetos</a></li>
+            <li><a href="mover.html" data-toc="nivel1-mover"><span class="toc-check"></span> Mover (MOVE)</a></li>
+            <li><a href="copiar.html" data-toc="nivel1-copiar"><span class="toc-check"></span> Copiar (COPY)</a></li>
+            <li><a href="desfase.html" data-toc="nivel1-desfase"><span class="toc-check"></span> Desfase (OFFSET)</a></li>
+            <li><a href="girar.html" data-toc="nivel1-girar"><span class="toc-check"></span> Girar (ROTATE)</a></li>
+            <li><a href="reflejar.html" data-toc="nivel1-reflejar"><span class="toc-check"></span> Reflejar (MIRROR)</a></li>
+            <li><a href="recortar.html" data-toc="nivel1-recortar"><span class="toc-check"></span> Recortar (TRIM)</a></li>
+            <li><a href="extender.html" data-toc="nivel1-extender"><span class="toc-check"></span> Extender (EXTEND)</a></li>
+            <li><a href="redondear.html" data-toc="nivel1-redondear"><span class="toc-check"></span> Redondear (FILLET)</a></li>
+            <li><a href="estirar.html" data-toc="nivel1-estirar"><span class="toc-check"></span> Estirar (STRETCH)</a></li>
+            <li><a href="explotar.html" data-toc="nivel1-explotar"><span class="toc-check"></span> Explotar (EXPLODE)</a></li>
+            <li><a href="capas.html" data-toc="nivel1-capas"><span class="toc-check"></span> Capas (LAYER)</a></li>
+            <li><a href="propiedades.html" data-toc="nivel1-propiedades"><span class="toc-check"></span> Propiedades (PROPERTIES)</a></li>
+            <li><a href="acotacion.html" data-toc="nivel1-acotacion"><span class="toc-check"></span> Acotación (DIM)</a></li>
+            <li><a href="texto.html" data-toc="nivel1-texto"><span class="toc-check"></span> Texto (TEXT/MTEXT)</a></li>
+            <li><a href="hatch.html" data-toc="nivel1-hatch"><span class="toc-check"></span> Sombreado (HATCH)</a></li>
+            <li><a href="insertar.html" data-toc="nivel1-insertar"><span class="toc-check"></span> Insertar (INSERT)</a></li>
+            <li><a href="primer-dibujo.html"><span class="toc-check"></span> Primer dibujo guiado</a></li>
+            <li><a href="index.html#autoevaluacion"><span class="toc-check"></span> Autoevaluación</a></li>
+          </ul>
+          <hr style="border-color:var(--border-soft)" class="my-4">
+          <a href="index.html" class="btn-cad-outline w-100 text-center d-block"><i class="bi bi-arrow-left"></i> Volver al índice</a>
+        </div>
+      </aside>
+
+      <div class="col-lg-9">
+        <article class="content-article">
+
+          <section id="copiar" data-topic="nivel1-copiar">
+            <h2><span class="sec-num">22</span>Copiar objetos (COPY): duplicados en cadena</h2>
+            <p><strong>COPIAR</strong> crea duplicados de un objeto en el mismo dibujo. Como MOVER, se basa en un <strong>punto base y un destino</strong>, pero a diferencia de él, el original se queda en su sitio. Es una de las herramientas que más tiempo ahorra: una hilera de sillas, un muro repetido, una fila de pilares...</p>
+
+            <h3>1. Ejecutar el comando</h3>
+            <table class="table-cad">
+              <thead><tr><th>Cómo</th><th>Qué escribir</th><th>Atajo</th></tr></thead>
+              <tbody>
+                <tr><td>Barra de comandos</td><td><span class="cmd-inline">COPIAR</span> (en inglés: <span class="cmd-inline">COPY</span>)</td><td><span class="key-inline">CO</span> o <span class="key-inline">CP</span></td></tr>
+                <tr><td>Cinta → Inicio → Modificar</td><td>Icono de copiar</td><td>Clic</td></tr>
+              </tbody>
+            </table>
+
+            <h3>2. Cómo se usa</h3>
+            <div class="lesson-step">
+              <span class="lesson-num">1</span>
+              <div class="lesson-body">
+                <h4>Selecciona y determina el punto base</h4>
+                <p><span class="cmd-inline">COPIAR</span> (en inglés: <span class="cmd-inline">COPY</span>) → selecciona el objeto → <span class="key-inline">Enter</span> → clic en el punto base (una esquina, un centro... ideal con OSNAP).</p>
+              </div>
+            </div>
+            <div class="lesson-step">
+              <span class="lesson-num">2</span>
+              <div class="lesson-body">
+                <h4>Varias copias en cadena</h4>
+                <p>El comando se queda "pegando" puntos de destino: haz clic (o teclea <code>@100,0</code>) y AutoCAD sitúa copias una tras otra. Pulsa <span class="key-inline">Enter</span> para terminar.</p>
+              </div>
+            </div>
+            <div class="lesson-step">
+              <span class="lesson-num">3</span>
+              <div class="lesson-body">
+                <h4>Desplazamiento del modo array</h4>
+                <p>Con <span class="cmd-inline">A</span> (Array) indicas cuántos objetos <em>en total</em> (incluido el original) quieres separados a una distancia; ideal para pilares o ejes repetidos.</p>
+              </div>
+            </div>
+
+            <div class="diagram-canvas">
+              <svg viewBox="0 0 460 200" role="img" aria-label="Copiar un círculo varias veces con punto base">
+                <circle cx="70" cy="100" r="20" class="cad-circle"/>
+                <circle cx="150" cy="100" r="20" class="cad-circle"/>
+                <circle cx="230" cy="100" r="20" class="cad-circle"/>
+                <circle cx="310" cy="100" r="20" class="cad-circle"/>
+                <circle cx="390" cy="100" r="20" class="cad-circle"/>
+                <circle cx="70" cy="100" r="3.5" class="cad-point-cyan"/>
+                <text x="70" y="92" class="cad-label-cmd">base</text>
+                <text x="230" y="140" text-anchor="middle" class="cad-label">copias encadenadas @80,0</text>
+                <text x="230" y="196" text-anchor="middle" class="cad-dim-text">COPIAR (COPY): el original se queda · con MÚLTIPLE (A) pones varias a la vez</text>
+              </svg>
+            </div>
+
+            <h3>3. Mini ejercicio</h3>
+            <div class="lesson-step">
+              <span class="lesson-num">1</span>
+              <div class="lesson-body">
+                <h4>Copia una silla en una fila</h4>
+                <p>Dibuja una silla simple (rectángulo 40×40 + asiento) en un extremo. <span class="cmd-inline">COPIAR</span> (en inglés: <span class="cmd-inline">COPY</span>) → selecciona → punto base en la esquina → teclea <code>@120,0</code>, <code>@240,0</code>, <code>@360,0</code>... hasta llenar la hilera con <span class="key-inline">Enter</span>.</p>
+              </div>
+            </div>
+            <div class="lesson-step">
+              <span class="lesson-num">2</span>
+              <div class="lesson-body">
+                <h4>Comprueba la distancia</h4>
+                <p>Mide entre esquinas de sillas consecutivas con <span class="cmd-inline">DISTANCIA</span> (en inglés: <span class="cmd-inline">DIST</span>): deben quedar a 120 unidades.</p>
+              </div>
+            </div>
+
+            <div class="callout warn">
+              <span class="callout-title">Error común</span>
+              <span>Confundir COPIAR (duplica con punto base, en pantalla) con el portapapeles del sistema (Ctrl+C / Ctrl+V). COPIAR no usa el portapapeles: crea copias del dibujo con precisión. El <strong>COPIARbase</strong> (en inglés: <span class="cmd-inline">COPYBASE</span>) sí sirve para pasar entre dibujos.</span>
+            </div>
+          <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+        </article>
+
+        <nav class="level-nav">
+          <a href="mover.html">
+            <span class="nav-label">Anterior</span>
+            <span class="nav-title"><i class="bi bi-arrow-left"></i> Mover (MOVE)</span>
+          </a>
+          <a href="desfase.html" class="nav-next">
+            <span class="nav-label">Siguiente</span>
+            <span class="nav-title">Desfase (OFFSET) <i class="bi bi-arrow-right"></i></span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container container-xl">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <div class="brand-cad mb-2"><img class="brand-logo" src="../../assets/img/autocad-2.svg" alt="AutoCAD"><span>AutoCAD Guía</span></div>
+        <p data-i18n="footer.disclaimer">Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.levels">Niveles</h6>
+        <ul class="list-unstyled">
+          <li><a href="../nivel-1-fundamentos/index.html">Fundamentos</a></li>
+          <li><a href="../nivel-2-dibujo-2d/index.html">Dibujo 2D</a></li>
+          <li><a href="../nivel-3-organizacion/index.html">Organización</a></li>
+          <li><a href="../nivel-4-modelado-3d/index.html">Modelado 3D</a></li>
+          <li><a href="../nivel-5-avanzado/index.html">Experto</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.guide">Guía</h6>
+        <ul class="list-unstyled">
+          <li><a href="../comandos.html">Comandos</a></li>
+          <li><a href="../ejemplos-visuales.html">Ejemplos</a></li>
+          <li><a href="../trucos.html">Trucos</a></li>
+          <li><a href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
+          <li><a href="../recursos.html">Recursos</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.follow">Síguenos</h6>
+        <div class="d-flex gap-2">
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-5 mb-4" style="border-color:var(--border-soft)">
+    <p class="mb-0 small" data-i18n="footer.copyright">© 2026 Victor Apaza. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<div class="command-line-bar" id="cmdBar">
+  <div class="command-line-inner">
+    <span class="prompt-sign" data-i18n="ui.command">Comando:</span>
+    <span id="cmd-typed"></span><span class="cursor-blink"></span>
+    <button class="cl-close" id="cmdClose" title="Ocultar" data-i18n-title="ui.hide"><i class="bi bi-x-lg"></i></button>
+  </div>
+</div>
+
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Buscar en la guía" data-i18n-aria="ui.search">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="bi bi-search"></i>
+      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar" data-i18n-placeholder="ui.searchPlaceholder">
+      <kbd class="search-kbd">ESC</kbd>
+    </div>
+    <div class="search-results" id="globalSearchResults">
+      <div class="search-empty" data-i18n="ui.typeToSearch">Escribe al menos 2 caracteres para buscar...</div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+<script src="../../assets/js/i18n.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/animations.js"></script>
+<script src="../../assets/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<p>Una <strong>polilínea</strong> es una secuencia de segmentos (rectos o curvos) que funcionan como <strong>un único objeto</strong>. A diferencia de dibujar varias líneas sueltas, la polilínea se selecciona, se edita y se usa como contorno de sombreado o de extrusión con mucha mayor facilidad.</p>
+
+<h3>1. Ejecutar el comando</h3>
+<table class="table-cad">
+  <thead><tr><th>Cómo</th><th>Qué escribir</th><th>Atajo</th></tr></thead>
+  <tbody>
+    <tr><td>Barra de comandos</td><td><span class="cmd-inline">POLILÍNEA</span> (en inglés: <span class="cmd-inline">PLINE</span>)</td><td><span class="key-inline">PL</span></td></tr>
+    <tr><td>Cinta → Inicio → Dibujo</td><td>Icono de polilínea</td><td>Clic</td></tr>
+  </tbody>
+</table>
+
+<h3>2. Cómo se usa</h3>
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Primer segmento</h4>
+    <p><span class="cmd-inline">POLILÍNEA</span> (en inglés: <span class="cmd-inline">PLINE</span>) → clic en el punto inicial → clic o distancia para el final del tramo recto.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Cambia a arco</h4>
+    <p>Teclea <span class="cmd-inline">A</span> (Arco) para dibujar segmentos curvos; con <span class="cmd-inline">L</span> vuelves a rectas. También puedes dar ancho a los trazos con la opción <span class="cmd-inline">G</span> (Grosor).</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Cierra la figura</h4>
+    <p>Con <span class="cmd-inline">C</span> cierras y terminas; esa ventaja permite que el sombreado o la extrusión reconozcan el contorno sin huecos.</p>
+  </div>
+</div>
+
+<div class="diagram-canvas">
+  <svg viewBox="0 0 460 200" role="img" aria-label="Polilínea con segmentos rectos y arcos en un solo objeto">
+    <path d="M 40 150 L 160 150 L 200 100 Q 200 40 260 40 L 360 40" fill="none" class="cad-line-new" stroke-width="3"/>
+    <text x="90" y="170" class="cad-label-cmd">rectos (L)</text>
+    <text x="205" y="70" class="cad-label-cmd">arco (A)</text>
+    <text x="300" y="30" class="cad-label-cmd">recto (L)</text>
+    <circle cx="40" cy="150" r="4" class="cad-point"/>
+    <circle cx="360" cy="40" r="4" class="cad-point"/>
+    <text x="40" y="196" text-anchor="middle" class="cad-dim-text">Es UN solo objeto: se selecciona de un clic · pline → LIST muestra todos sus vértices</text>
+  </svg>
+</div>
+
+<h3>3. Mini ejercicio</h3>
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Un perfil cerrado</h4>
+    <p><span class="cmd-inline">PL</span> → clic → 4 tramos rectos dibujando un rectángulo de 150×80 → opción <span class="cmd-inline">C</span> para cerrar.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Compruébalo</h4>
+    <p>Haz clic sobre cualquier tramo: se selecciona <strong>todo el contorno</strong>. Luego rellénalo con <span class="cmd-inline">SOMBREADO</span> (en inglés: <span class="cmd-inline">HATCH</span>) y verás que el contorno se reconoce al instante.</p>
+  </div>
+</div>
+
+<div class="callout warn">
+  <span class="callout-title">Error común</span>
+  <span>Creer que línea y polilínea son intercambiables. Si dibujas un muro con <span class="cmd-inline">L</span> (líneas sueltas), el sombreado, el grosor y la edición de vértices se complican; con polilínea todo es más simple. Regla: <strong>dibuja "compuestos" siempre con PL</strong>.</span>
+</div>

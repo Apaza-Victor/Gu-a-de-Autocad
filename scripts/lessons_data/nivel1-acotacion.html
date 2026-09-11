@@ -1,0 +1,72 @@
+<p>La <strong>acotación</strong> (en inglés: <span class="cmd-inline">Dimension</span>) es lo que convierte un dibujo en una <em>especificación</em>: las medidas numéricas que cualquier constructor o colega leerá. La cota lineal, la alineada y la radial cubren el 95% de los planos. Todo pasa por elegir bien el estilo de cota y la escala.</p>
+
+<h3>1. Comandos principales</h3>
+<table class="table-cad">
+  <thead><tr><th>Para</th><th>Comando</th><th>Definición</th></tr></thead>
+  <tbody>
+    <tr><td>Medida horizontal/vertical</td><td><span class="cmd-inline">ACOTLINEAL</span> (en inglés: <span class="cmd-inline">DIMLINEAR</span>)</td><td>Distancia proyectada sobre X o Y.</td></tr>
+    <tr><td>Medida inclinada</td><td><span class="cmd-inline">ACOALINEADA</span> (en inglés: <span class="cmd-inline">DIMALIGNED</span>)</td><td>Distancia en la dirección real del objeto.</td></tr>
+    <tr><td>Radio/Diámetro</td><td><span class="cmd-inline">DIMRADIO</span> / <span class="cmd-inline">ACOTDIÁMETRO</span></td><td>Para arcos y círculos.</td></tr>
+    <tr><td>Ángulo</td><td><span class="cmd-inline">ACOTACIÓN ÁNGULO</span> (en inglés: <span class="cmd-inline">DIMANGULAR</span>)</td><td>Ángulo entre dos líneas.</td></tr>
+  </tbody>
+</table>
+
+<h3>2. Cómo se usa</h3>
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Cota lineal</h4>
+    <p><span class="cmd-inline">ACOTLINEAL</span> (en inglés: <span class="cmd-inline">DIMLINEAR</span>) → clic en el primer punto (p. ej. esquina) → clic en el segundo → clic para colocar la línea de cota donde quieras. AutoCAD escribe la medida automáticamente.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Cota de línea inclinada</h4>
+    <p>Si la pieza no está horizontal ni vertical, usa <span class="cmd-inline">ACOALINEADA</span>: la línea de cota acompaña la dirección del objeto.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Radio y diámetro</h4>
+    <p>En un círculo o arco, <span class="cmd-inline">DIMRADIO</span> muestra el radio con la "R"; para diámetros usa <span class="cmd-inline">ACOTDIÁMETRO</span> (en inglés: <span class="cmd-inline">DIMDIAMETER</span>).</p>
+  </div>
+</div>
+
+<div class="diagram-canvas">
+  <svg viewBox="0 0 460 200" role="img" aria-label="Cotas lineal, alineada, radial y de diámetro">
+    <line x1="60" y1="150" x2="300" y2="150" class="cad-line-new" stroke-width="3"/>
+    <line x1="70" y1="40" x2="70" y2="150" class="cad-line" stroke-width="3"/>
+    <line x1="300" y1="150" x2="380" y2="110" class="cad-dim"/>
+    <text x="170" y="140" class="cad-label-cmd">ACOTLINEAL · 240</text>
+    <text x="195" y="185" text-anchor="middle" class="cad-label">80</text>
+    <line x1="70" y1="40" x2="70" y2="150" class="cad-dim" />
+    <text x="55" y="100" class="cad-label">ACOALINEADA</text>
+    <circle cx="400" cy="100" r="45" class="cad-circle"/>
+    <line x1="400" y1="100" x2="400" y2="55" class="cad-dim"/>
+    <text x="410" y="60" class="cad-label">R45</text>
+    <text x="230" y="196" text-anchor="middle" class="cad-dim-text">Cota = lee medida real · estilo de cota define tamaño de letra/flecha</text>
+  </svg>
+</div>
+
+<h3>3. Mini ejercicio</h3>
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Acota tu plano base</h4>
+    <p>Con un rectángulo 300×400 en pantalla, coloca cotas lineales en horizontal, en vertical y del espesor de un muro con <span class="cmd-inline">ACOTLINEAL</span>.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Escala de cota</h4>
+    <p>Si la letra sale gigante o diminuta, abre <span class="cmd-inline">ACOESTILO</span> (en inglés: <span class="cmd-inline">DIMSTYLE</span>) y ajusta la altura de texto y la escala: es la clave para que se imprima legible.</p>
+  </div>
+</div>
+
+<div class="callout warn">
+  <span class="callout-title">Error común</span>
+  <span>Acotar "a mano" con texto fijo que no se actualiza. Las cotas de AutoCAD se regeneran solas si mides bien: si escribe un valor que no quieres, es porque el dibujo mide otra cosa. Nada de escribir números a lo bruto: revisa la escala y la cota exacta del objeto.</span>
+</div>

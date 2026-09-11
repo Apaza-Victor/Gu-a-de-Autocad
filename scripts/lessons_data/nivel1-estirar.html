@@ -1,0 +1,65 @@
+<p><strong>ESTIRAR</strong> (en inglés: <span class="cmd-inline">STRETCH</span>) mueve una parte de un dibujo y <em>estira</em> los objetos que la tocan, manteniendo las conexiones. Es la herramienta con la que alargas un muro, una escalera o una pieza sin volver a dibujarla: solo desplaza los extremos.</p>
+
+<h3>1. Ejecutar el comando</h3>
+<table class="table-cad">
+  <thead><tr><th>Cómo</th><th>Qué escribir</th><th>Atajo</th></tr></thead>
+  <tbody>
+    <tr><td>Barra de comandos</td><td><span class="cmd-inline">ESTIRAR</span> (en inglés: <span class="cmd-inline">STRETCH</span>)</td><td><span class="key-inline">S</span></td></tr>
+    <tr><td>Cinta → Inicio → Modificar</td><td>Icono de estirar (flecha que se estira)</td><td>Clic</td></tr>
+  </tbody>
+</table>
+
+<h3>2. Cómo se usa</h3>
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Selecciona con ventana de cruce (obligatoria)</h4>
+    <p><span class="cmd-inline">ESTIRAR</span> (en inglés: <span class="cmd-inline">STRETCH</span>) → selecciona los objetos con una <strong>ventana de cruce</strong> (de derecha a izquierda) que abarque la zona a estirar. Solo se moverán los <em>extremos</em> que queden <em>dentro</em> de la ventana.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Punto base y desplazamiento</h4>
+    <p>Tras el Enter, haz clic en un punto base y en el destino (como en mover). Las partes "enganchadas" de los objetos dentro de la ventana se estiran, las que no, se quedan.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Repite y verifica</h4>
+    <p>El comando termina y quedan estirados los extremos dentro de la ventana. Con <span class="cmd-inline">N</span> (no recortar) mantienes el resto intacto; con <span class="cmd-inline">S</span> (sí recortar) cortas los restos sobrantes.</p>
+  </div>
+</div>
+
+<div class="diagram-canvas">
+  <svg viewBox="0 0 460 200" role="img" aria-label="Estirar un muro moviendo sus extremos con STRETCH">
+    <rect x="60" y="60" width="200" height="80" class="cad-fill"/>
+    <rect x="260" y="60" width="140" height="80" class="cad-fill" fill="var(--accent-cyan)" opacity="0.4"/>
+    <line x1="60" y1="100" x2="400" y2="100" class="cad-line" stroke-dasharray="6 4"/>
+    <text x="60" y="40" text-anchor="middle" class="cad-label-cmd">ventana de cruce (mueve esto)</text>
+    <text x="230" y="196" text-anchor="middle" class="cad-dim-text">ESTIRAR (STRETCH): los extremos dentro de la ventana se desplazan y alargan la pieza</text>
+    <text x="320" y="170" class="cad-label-cmd">se estira aquí</text>
+  </svg>
+</div>
+
+<h3>3. Mini ejercicio</h3>
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Estira una habitación</h4>
+    <p>Dibuja un rectángulo de habitación 300×400. <span class="cmd-inline">ESTIRAR</span> (en inglés: <span class="cmd-inline">STRETCH</span>) → ventana de cruce desde la esquina inferior izquierda hasta la pared derecha, cubriendo el borde superior → Enter → desplaza a <code>@100,0</code>. La habitación ahora mide 400 de ancho.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Verifica las cotas</h4>
+    <p>Comprueba con <span class="cmd-inline">DISTANCIA</span> (en inglés: <span class="cmd-inline">DIST</span>) o <span class="cmd-inline">ÁREA</span> (en inglés: <span class="cmd-inline">AREA</span>) la nueva medida: 400 de ancho, 400 de alto.</p>
+  </div>
+</div>
+
+<div class="callout warn">
+  <span class="callout-title">Error común</span>
+  <span>Seleccionar objetos con clic normal en lugar de con ventana de cruce: la selección a mano no "estira" nada, simplemente los mueve. Para estirar correctamente, el área de cruce (de derecha a izquierda) debe <em>abarcar</em> los extremos que querés mover.</span>
+</div>

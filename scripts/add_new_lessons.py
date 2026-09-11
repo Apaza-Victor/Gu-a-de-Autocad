@@ -33,8 +33,8 @@ from build_level_folders import (  # noqa: E402
     build_head, build_navbar, build_footer, build_scripts, build_end_block, LEVELS,
 )
 
-NEW_TOTAL = {1: 13, 2: 29, 3: 20, 4: 19, 5: 18}
-TOTAL_GLOBAL = sum(NEW_TOTAL.values())  # 99
+NEW_TOTAL = {1: 37, 2: 29, 3: 20, 4: 19, 5: 18}
+TOTAL_GLOBAL = sum(NEW_TOTAL.values())  # 123
 
 LEVEL_PARAMS = {}
 for num, (folder, name, full, eyebrow, head_desc, schema_name, schema_desc) in LEVELS.items():
@@ -67,6 +67,108 @@ LESSON_CATALOG = [
          title="Configurar el espacio de trabajo", label="Configurar el espacio de trabajo",
          desc="Personalizar la cinta, los espacios de trabajo y el entorno para dibujar como un profesional.",
          anchor="configuracion.html", frag="nivel1-configurar-espacio-trabajo.html"),
+    # Nivel 1 — herramientas de dibujo
+    dict(num=1, dt="nivel1-linea", file="linea.html",
+         title="Línea (LINE): trazos rectos precisos", label="Línea (LINE)",
+         desc="Dibujar líneas rectas con el comando LÍNEA (LINE): segmentos, cierre, coordenadas y ortogonalidad.",
+         anchor="atajos-esenciales.html", frag="nivel1-linea.html"),
+    dict(num=1, dt="nivel1-polilinea", file="polilinea.html",
+         title="Polilínea (PLINE): un solo objeto compuesto", label="Polilínea (PLINE)",
+         desc="Crear polilíneas con segmentos rectos y arcos en un único objeto editable con PLINE.",
+         anchor="atajos-esenciales.html", frag="nivel1-polilinea.html"),
+    dict(num=1, dt="nivel1-circulo", file="circulo.html",
+         title="Círculo (CIRCLE) y sus variantes", label="Círculo (CIRCLE)",
+         desc="Dibujar círculos por centro+radio, diámetro, 2P, 3P y tangencias (TTR) en AutoCAD.",
+         anchor="atajos-esenciales.html", frag="nivel1-circulo.html"),
+    dict(num=1, dt="nivel1-arco", file="arco.html",
+         title="Arco (ARC): curvas parciales", label="Arco (ARC)",
+         desc="Dibujar arcos por 3 puntos, centro-inicio-fin, ángulo y radio con el comando ARC.",
+         anchor="atajos-esenciales.html", frag="nivel1-arco.html"),
+    dict(num=1, dt="nivel1-rectangulo", file="rectangulo.html",
+         title="Rectángulo (RECTANG): esquinas exactas", label="Rectángulo (RECTANG)",
+         desc="Dibujar rectángulos por esquinas, con dimensiones, chaflanes y esquinas redondeadas.",
+         anchor="atajos-esenciales.html", frag="nivel1-rectangulo.html"),
+    dict(num=1, dt="nivel1-poligono", file="poligono.html",
+         title="Polígono (POLYGON): figuras regulares", label="Polígono (POLYGON)",
+         desc="Dibujar polígonos regulares inscritos o circunscritos con el comando POLYGON.",
+         anchor="atajos-esenciales.html", frag="nivel1-poligono.html"),
+    dict(num=1, dt="nivel1-elipse", file="elipse.html",
+         title="Elipse (ELLIPSE): curvas ovaladas", label="Elipse (ELLIPSE)",
+         desc="Dibujar elipses por eje mayor/menor, centro y arcos elípticos con ELLIPSE.",
+         anchor="atajos-esenciales.html", frag="nivel1-elipse.html"),
+    # Nivel 1 — selección
+    dict(num=1, dt="nivel1-seleccion", file="seleccion.html",
+         title="Seleccionar objetos: técnicas esenciales", label="Seleccionar objetos",
+         desc="Seleccionar con clic, ventana, cruzamiento, lasso, Shift y filtros (QSELECT) eficientes.",
+         anchor="atajos-esenciales.html", frag="nivel1-seleccion.html"),
+    # Nivel 1 — herramientas de modificación
+    dict(num=1, dt="nivel1-mover", file="mover.html",
+         title="Mover objetos (MOVE): punto base y destino", label="Mover (MOVE)",
+         desc="Desplazar objetos con MOVE usando punto base, desplazamiento relativo y referencias.",
+         anchor="atajos-esenciales.html", frag="nivel1-mover.html"),
+    dict(num=1, dt="nivel1-copiar", file="copiar.html",
+         title="Copiar objetos (COPY): duplicados en cadena", label="Copiar (COPY)",
+         desc="Duplicar objetos con COPY: copias simples, múltiples y en array con precisión.",
+         anchor="atajos-esenciales.html", frag="nivel1-copiar.html"),
+    dict(num=1, dt="nivel1-desfase", file="desfase.html",
+         title="Desfase (OFFSET): paralelas y concéntricos", label="Desfase (OFFSET)",
+         desc="Crear líneas paralelas y círculos concéntricos a distancia exacta con OFFSET.",
+         anchor="atajos-esenciales.html", frag="nivel1-desfase.html"),
+    dict(num=1, dt="nivel1-girar", file="girar.html",
+         title="Girar objetos (ROTATE): ángulo y referencia", label="Girar (ROTATE)",
+         desc="Rotar objetos con ROTATE por ángulo, referencia y copia alrededor de un punto base.",
+         anchor="atajos-esenciales.html", frag="nivel1-girar.html"),
+    dict(num=1, dt="nivel1-reflejar", file="reflejar.html",
+         title="Reflejar objetos (MIRROR): simetrías", label="Reflejar (MIRROR)",
+         desc="Crear simetrías con MIRROR: eje de espejo, conservar o no el original y MIRRTEXT.",
+         anchor="atajos-esenciales.html", frag="nivel1-reflejar.html"),
+    dict(num=1, dt="nivel1-recortar", file="recortar.html",
+         title="Recortar objetos (TRIM): limpieza de planos", label="Recortar (TRIM)",
+         desc="Eliminar partes sobrantes con TRIM: límites, corte en cadena y vallas de recorte.",
+         anchor="atajos-esenciales.html", frag="nivel1-recortar.html"),
+    dict(num=1, dt="nivel1-extender", file="extender.html",
+         title="Extender objetos (EXTEND): hasta el límite", label="Extender (EXTEND)",
+         desc="Prolongar objetos hasta un límite con EXTEND, incluido el modo borde virtual.",
+         anchor="atajos-esenciales.html", frag="nivel1-extender.html"),
+    dict(num=1, dt="nivel1-redondear", file="redondear.html",
+         title="Redondear esquinas (FILLET) y chaflanes", label="Redondear (FILLET)",
+         desc="Unir líneas con esquinas redondeadas (FILLET) o biseladas (CHAMFER), y el truco del radio 0.",
+         anchor="atajos-esenciales.html", frag="nivel1-redondear.html"),
+    dict(num=1, dt="nivel1-estirar", file="estirar.html",
+         title="Estirar objetos (STRETCH): ajustar medidas", label="Estirar (STRETCH)",
+         desc="Estirar partes de un dibujo con STRETCH usando ventana de cruce para cambiar medidas.",
+         anchor="atajos-esenciales.html", frag="nivel1-estirar.html"),
+    dict(num=1, dt="nivel1-explotar", file="explotar.html",
+         title="Explotar objetos (EXPLODE): descomponer", label="Explotar (EXPLODE)",
+         desc="Descomponer bloques, polilíneas y cotas en sus elementos básicos con EXPLODE.",
+         anchor="atajos-esenciales.html", frag="nivel1-explotar.html"),
+    # Nivel 1 — propiedades y organización
+    dict(num=1, dt="nivel1-capas", file="capas.html",
+         title="Capas (LAYER): organización del dibujo", label="Capas (LAYER)",
+         desc="Crear y gestionar capas con LAYER: color, tipo de línea, grosor, visibilidad y estados.",
+         anchor="atajos-esenciales.html", frag="nivel1-capas.html"),
+    dict(num=1, dt="nivel1-propiedades", file="propiedades.html",
+         title="Propiedades de objetos (PROPERTIES)", label="Propiedades (PROPERTIES)",
+         desc="Editar capa, color, tipo de línea y geometría con la paleta PROPERTIES y MATCHPROP.",
+         anchor="atajos-esenciales.html", frag="nivel1-propiedades.html"),
+    # Nivel 1 — documentación
+    dict(num=1, dt="nivel1-acotacion", file="acotacion.html",
+         title="Acotación básica (DIM): medir planos", label="Acotación (DIM)",
+         desc="Acotar lineal, alineada, radial y angular con los comandos de cota de AutoCAD.",
+         anchor="atajos-esenciales.html", frag="nivel1-acotacion.html"),
+    dict(num=1, dt="nivel1-texto", file="texto.html",
+         title="Texto (TEXT / MTEXT): rótulos y notas", label="Texto (TEXT/MTEXT)",
+         desc="Añadir texto de una línea (TEXT) y párrafos enriquecidos (MTEXT) a tus planos.",
+         anchor="atajos-esenciales.html", frag="nivel1-texto.html"),
+    dict(num=1, dt="nivel1-hatch", file="hatch.html",
+         title="Sombreado (HATCH): rellenos y materiales", label="Sombreado (HATCH)",
+         desc="Rellenar áreas cerradas con HATCH: patrones, escala, degradados e islas.",
+         anchor="atajos-esenciales.html", frag="nivel1-hatch.html"),
+    # Nivel 1 — bloques
+    dict(num=1, dt="nivel1-insertar", file="insertar.html",
+         title="Insertar bloques (INSERT): bibliotecas", label="Insertar (INSERT)",
+         desc="Insertar bloques y archivos .DWG con INSERT: escala, rotación y punto base.",
+         anchor="atajos-esenciales.html", frag="nivel1-insertar.html"),
     # Nivel 2 (después de capas)
     dict(num=2, dt="nivel2-crear-capas", file="crear-capas.html",
          title="Crear, renombrar y eliminar capas", label="Crear y eliminar capas",
@@ -530,24 +632,24 @@ def update_main_js_and_home():
     # main.js: total global de temas
     mp = os.path.join(ROOT, "assets", "js", "main.js")
     mj = read(mp)
-    src = "const total = 96; // 13 + 27 + 20 + 19 + 17"
-    dst = "const total = 99; // 13 + 29 + 20 + 19 + 18"
+    src = "const total = 99; // 13 + 29 + 20 + 19 + 18"
+    dst = "const total = 123; // 37 + 29 + 20 + 19 + 18"
     if src in mj:
         mj = mj.replace(src, dst)
         write(mp, mj)
-        print("main.js: total 96 -> 99")
+        print("main.js: total 99 -> 123")
     else:
-        print("main.js: total 96 no encontrado (revisar)")
+        print("main.js: total 99 no encontrado (revisar)")
 
     # portada index.html: etiqueta de progreso global
     ip = os.path.join(ROOT, "index.html")
     idx = read(ip)
-    if "0 de 96 temas completados" in idx:
-        idx = idx.replace("0 de 96 temas completados", "0 de %d temas completados" % TOTAL_GLOBAL)
+    if "0 de 99 temas completados" in idx:
+        idx = idx.replace("0 de 99 temas completados", "0 de %d temas completados" % TOTAL_GLOBAL)
         write(ip, idx)
-        print("index.html: etiqueta 96 ->", TOTAL_GLOBAL)
+        print("index.html: etiqueta 99 ->", TOTAL_GLOBAL)
     else:
-        print("index.html: etiqueta 96 no encontrada (revisar)")
+        print("index.html: etiqueta 99 no encontrada (revisar)")
 
 
 def main():

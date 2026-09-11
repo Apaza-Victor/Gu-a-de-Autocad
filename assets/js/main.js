@@ -722,7 +722,7 @@ function initHomeProgress(){
 
   const allTopics = document.querySelectorAll('[data-topic]');
   const savedTopics = JSON.parse(localStorage.getItem('autocad-guia-progreso') || '[]');
-  const total = 99; // 13 + 29 + 20 + 19 + 18
+  const total = 123; // 37 + 29 + 20 + 19 + 18
   let done = Math.min(savedTopics.length, total);
 
   const pct = Math.round((done / total) * 100);

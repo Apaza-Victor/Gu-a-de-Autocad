@@ -55,13 +55,37 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/acotacion.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/archivos.html</loc>
     <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/arco.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/atajos-esenciales.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/capas.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/circulo.html</loc>
     <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -85,7 +109,61 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/copiar.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/desfase.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/elipse.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/estirar.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/explotar.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/extender.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/gestion-dibujo.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/girar.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/hatch.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/insertar.html</loc>
     <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -103,7 +181,31 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/linea.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/mover.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/osnap-basico.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/poligono.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/polilinea.html</loc>
     <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -115,7 +217,49 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/propiedades.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/que-es.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/recortar.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/rectangulo.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/redondear.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/reflejar.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/seleccion.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/texto.html</loc>
     <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

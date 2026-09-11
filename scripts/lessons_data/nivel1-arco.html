@@ -1,0 +1,71 @@
+<p>Un <strong>arco</strong> es un tramo curvo de una circunferencia. AutoCAD lo dibuja con varios métodos según qué datos conozcas: tres puntos, punto inicial + centro + final, o punto inicial + ángulo + radio. El método <strong>3 puntos</strong> es el más intuitivo para empezar.</p>
+
+<h3>1. Ejecutar el comando</h3>
+<table class="table-cad">
+  <thead><tr><th>Cómo</th><th>Qué escribir</th><th>Atajo</th></tr></thead>
+  <tbody>
+    <tr><td>Barra de comandos</td><td><span class="cmd-inline">ARCO</span> (en inglés: <span class="cmd-inline">ARC</span>)</td><td><span class="key-inline">A</span></td></tr>
+    <tr><td>Cinta → Inicio → Dibujo</td><td>Icono de arco (desplegable con variantes)</td><td>Clic</td></tr>
+  </tbody>
+</table>
+
+<h3>2. Métodos más usados</h3>
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>3 puntos (por defecto)</h4>
+    <p><span class="cmd-inline">ARCO</span> (en inglés: <span class="cmd-inline">ARC</span>) → clic en el punto inicial → clic en el punto del medio de la curva → clic en el punto final. Es el método natural para trazar "a ojo" o apoyándote en referencias.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Centro, inicio, fin (C)</h4>
+    <p>Si conoces el centro de la circunferencia, usa la opción <span class="cmd-inline">C</span>: clic en el centro → clic donde empieza → clic donde termina. El arco se dibuja en sentido antihorario por defecto.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Inicio, fin, ángulo o radio</h4>
+    <p>Combinaciones que encajan el arco entre dos puntos dados: inicio → final → <span class="cmd-inline">A</span> (ángulo), o inicio → final → <span class="cmd-inline">R</span> (radio con valor concreto).</p>
+  </div>
+</div>
+
+<div class="diagram-canvas">
+  <svg viewBox="0 0 460 200" role="img" aria-label="Tres métodos para dibujar un arco">
+    <path d="M 40 140 A 80 80 0 0 1 200 140" fill="none" class="cad-line-new" stroke-width="3"/>
+    <circle cx="120" cy="140" r="3.5" class="cad-point"/>
+    <circle cx="40" cy="140" r="3.5" class="cad-point"/>
+    <circle cx="200" cy="140" r="3.5" class="cad-point"/>
+    <text x="120" y="168" text-anchor="middle" class="cad-label">3 puntos: inicio → medio → fin</text>
+    <circle cx="330" cy="120" r="70" class="cad-circle"/>
+    <path d="M 269 145 A 70 70 0 0 1 371 70" fill="none" class="cad-line-new" stroke-width="3"/>
+    <circle cx="330" cy="120" r="3.5" class="cad-point-cyan"/>
+    <circle cx="269" cy="145" r="3.5" class="cad-point"/>
+    <circle cx="371" cy="70" r="3.5" class="cad-point"/>
+    <text x="330" y="168" text-anchor="middle" class="cad-label-cmd">Centro (C) → inicio → fin</text>
+    <text x="120" y="196" text-anchor="middle" class="cad-dim-text">El arco dibuja en sentido antihorario cuando usa el método por defecto</text>
+  </svg>
+</div>
+
+<h3>3. Mini ejercicio</h3>
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Una puerta vista en planta</h4>
+    <p>Dibuja una línea de 90 mm (la puerta abierta) y sobre su extremo dibuja un arco de 3 puntos: inicio en la bisagra, medio en el borde de la hoja, fin en el extremo libre. ¡Es el arco típico de giro de la puerta!</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Verifica el radio</h4>
+    <p>Usa <span class="cmd-inline">DIMRADIO</span> (en inglés: <span class="cmd-inline">DIMRADIUS</span>) sobre el arco y confirma que mide 90, igual que la hoja de la puerta.</p>
+  </div>
+</div>
+
+<div class="callout warn">
+  <span class="callout-title">Error común</span>
+  <span>Dibujar arcos con el método equivocado y que salgan "al revés". Si el arco sale por el lado incorrecto, prueba a teclear la opción <strong>C</strong> para fijar el centro explícitamente o invierte el sentido de los puntos de inicio/fin.</span>
+</div>

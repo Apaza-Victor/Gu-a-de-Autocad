@@ -1,0 +1,67 @@
+<p><strong>EXPLOTAR</strong> (en inglés: <span class="cmd-inline">EXPLODE</span>) descompone un objeto compuesto en sus piezas básicas: convierte una polilínea en líneas sueltas, un bloque en sus objetos originales, una cota en líneas aisladas, una malla en una poligonal. Sirve cuando <em>ya no necesitas</em> la estructura "de una pieza".</p>
+
+<h3>1. Ejecutar el comando</h3>
+<table class="table-cad">
+  <thead><tr><th>Cómo</th><th>Qué escribir</th><th>Atajo</th></tr></thead>
+  <tbody>
+    <tr><td>Barra de comandos</td><td><span class="cmd-inline">EXPLOTAR</span> (en inglés: <span class="cmd-inline">EXPLODE</span>)</td><td><span class="key-inline">X</span></td></tr>
+    <tr><td>Cinta → Inicio → Modificar</td><td>Icono de explosionar</td><td>Clic</td></tr>
+    <tr><td>Barra de atajos</td><td><span class="cmd-inline">DESCOMPONER</span></td><td><span class="key-inline">EX</span></td></tr>
+  </tbody>
+</table>
+
+<h3>2. Cómo se usa</h3>
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Selecciona el bloque y explota</h4>
+    <p><span class="cmd-inline">EXPLOTAR</span> (en inglés: <span class="cmd-inline">EXPLODE</span>) → clic en el bloque (o polilínea) → <span class="key-inline">Enter</span>. El bloque se descompone: ahora puedes editar cada línea por separado.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Cuidado con "no seleccionable"</h4>
+    <p>Si el bloque estaba insertado con escala no uniforme o anidado, es posible que AutoCAD te avise de que no se puede explotar. Revisa la línea de comandos: a veces aparece el mensaje "no se puede explotar este objeto".</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>El resultado ya no es "uno"</h4>
+    <p>Después de explotar, cada tramo/pieza es un objeto independiente: seleccionar todo lo de la polilínea ahora requiere ventana o "todos". Guarda una copia antes de explotar si todavía no estás seguro.</p>
+  </div>
+</div>
+
+<div class="diagram-canvas">
+  <svg viewBox="0 0 460 200" role="img" aria-label="Explotar una polilínea en líneas sueltas">
+    <polyline points="50,130 150,60 250,60 300,130 50,130" fill="none" class="cad-line-new" stroke-width="3"/>
+    <text x="150" y="180" text-anchor="middle" class="cad-label">polilínea: UN objeto</text>
+    <line x1="180" y1="110" x2="280" y2="110" class="cad-arrow-new"/>
+    <line x1="320" y1="130" x2="420" y2="60" class="cad-line" stroke-width="3"/>
+    <line x1="380" y1="130" x2="430" y2="130" class="cad-line" stroke-width="3"/>
+    <text x="320" y="180" text-anchor="middle" class="cad-label-cmd">EXPLOTAR (X): varias líneas sueltas</text>
+    <text x="230" y="196" text-anchor="middle" class="cad-dim-text">¡Guarda copia! Explotar no se puede deshacer del todo y pierdes la estructura</text>
+  </svg>
+</div>
+
+<h3>3. Mini ejercicio</h3>
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Explota un bloque de mueble</h4>
+    <p>Inserta un bloque (por ejemplo una silla) y luego <span class="cmd-inline">EXPLOTAR</span> (en inglés: <span class="cmd-inline">EXPLODE</span>) sobre él. Ahora intenta seleccionar solo una pata: ya es un objeto suelto editable.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Revisa lo que pasó</h4>
+    <p>Después de explotar, pulsa <span class="cmd-inline">Ctrl+Z</span> (DESHACER) y vuelve al estado bloque; verás la diferencia entre "una pieza" y "varios trozos" (y por qué a veces NO conviene explotar).</p>
+  </div>
+</div>
+
+<div class="callout warn">
+  <span class="callout-title">Error común</span>
+  <span>Explotar bloques como forma "de editar" y luego perder el vínculo con el original. Si lo que quieres es editar un bloque <em>sin</em> perder la definición original, usa <span class="cmd-inline">EDITBLOQUE</span> (en inglés: <span class="cmd-inline">BEDIT</span>), no EXPLOTAR.</span>
+</div>

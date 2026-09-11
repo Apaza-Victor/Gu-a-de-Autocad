@@ -1,0 +1,66 @@
+<p><strong>EXTENDER</strong> (en inglés: <span class="cmd-inline">EXTEND</span>) es la "herramienta compañera" de RECORTAR: alarga un objeto hasta que toca el borde (límite) de otro. Es perfecta para cerrar muros que no llegan, llevar ejes hasta el límite del plano o completar una poligonal de cierre.</p>
+
+<h3>1. Ejecutar el comando</h3>
+<table class="table-cad">
+  <thead><tr><th>Cómo</th><th>Qué escribir</th><th>Atajo</th></tr></thead>
+  <tbody>
+    <tr><td>Barra de comandos</td><td><span class="cmd-inline">EXTENDER</span> (en inglés: <span class="cmd-inline">EXTEND</span>)</td><td><span class="key-inline">EX</span></td></tr>
+    <tr><td>Cinta → Inicio → Modificar</td><td>Icono de extender</td><td>Clic</td></tr>
+  </tbody>
+</table>
+
+<h3>2. Cómo se usa</h3>
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Elige el límite</h4>
+    <p><span class="cmd-inline">EXTENDER</span> (en inglés: <span class="cmd-inline">EXTEND</span>) → clic en el objeto que sirve de "hasta dónde llegar" (el borde, un muro, el sobre) → <span class="key-inline">Enter</span>.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Haz clic en lo que alargas</h4>
+    <p>Haz clic en el extremo del objeto que quieres prolongar (cerca del final, hacia el límite). AutoCAD lo estira hasta la frontera. Repite con más objetos o crea con <span class="cmd-inline">F</span> (Valla) para alagar varios a la vez.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Extender "sin límite"</h4>
+    <p>Con la opción <span class="cmd-inline">E</span> (Borde) puedes indicar que la prolongación siga aunque el límite no se toque físicamente (se alarga hasta la intersección virtual). Ideal cuando el borde está cortado pero visualmente debe llegar.</p>
+  </div>
+</div>
+
+<div class="diagram-canvas">
+  <svg viewBox="0 0 460 200" role="img" aria-label="Extender una línea corta hasta que toca la vertical">
+    <line x1="90" y1="30" x2="90" y2="170" class="cad-line"/>
+    <line x1="90" y1="90" x2="300" y2="90"  class="cad-line-new" stroke-width="3"/>
+    <line x1="300" y1="90" x2="380" y2="90" class="cad-line" stroke-dasharray="6 4"/>
+    <circle cx="380" cy="90" r="4" class="cad-point"/>
+    <text x="90" y="20" text-anchor="middle" class="cad-label-cmd">límite</text>
+    <text x="195" y="105" text-anchor="middle" class="cad-dim-text">haz clic aquí para alargar</text>
+    <text x="230" y="196" text-anchor="middle" class="cad-dim-text">EXTENDER (EXTEND): el objeto crece hasta la frontera elegida</text>
+  </svg>
+</div>
+
+<h3>3. Mini ejercicio</h3>
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Cierra un muro</h4>
+    <p>Dibuja una línea vertical larga (límite) y una horizontal corta que quede a 20 unidades de tocarla. <span class="cmd-inline">EXTENDER</span> (en inglés: <span class="cmd-inline">EXTEND</span>) → límite = la vertical → Enter → clic en la horizontal hacia el límite. Ahora llega hasta la pared.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Juega con borde virtual</h4>
+    <p>Activa la opción <span class="cmd-inline">E</span> → Borde → Alargar y alarga una línea que no debería tocar físicamente el límite: la prolongación sigue recta hasta cruzarlo.</p>
+  </div>
+</div>
+
+<div class="callout warn">
+  <span class="callout-title">Error común</span>
+  <span>Confundir objeto "límite" y objeto "extendido". El primero se marca primero y luego debes pulsar <span class="cmd-inline">Enter</span>; cualquier clic antes de eso se interpreta como límite adicional. Practica el orden: límite → Enter → clic sobre lo que alargas.</span>
+</div>

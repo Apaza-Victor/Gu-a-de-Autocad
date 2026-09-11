@@ -1,0 +1,68 @@
+<p><strong>GIRAR</strong> (en inglés: <span class="cmd-inline">ROTATE</span>) rota objetos alrededor de un <strong>punto base</strong>. Como en mover, se usa con precisión: un ángulo concreto (45°, 90°, -30°), con referencia a una línea existente o dejando una copia rotada del objeto original.</p>
+
+<h3>1. Ejecutar el comando</h3>
+<table class="table-cad">
+  <thead><tr><th>Cómo</th><th>Qué escribir</th><th>Atajo</th></tr></thead>
+  <tbody>
+    <tr><td>Barra de comandos</td><td><span class="cmd-inline">GIRAR</span> (en inglés: <span class="cmd-inline">ROTATE</span>)</td><td><span class="key-inline">RO</span></td></tr>
+    <tr><td>Cinta → Inicio → Modificar</td><td>Icono de girar</td><td>Clic</td></tr>
+  </tbody>
+</table>
+
+<h3>2. Cómo se usa</h3>
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Selecciona y fija el punto base</h4>
+    <p><span class="cmd-inline">GIRAR</span> (en inglés: <span class="cmd-inline">ROTATE</span>) → selecciona el objeto → <span class="key-inline">Enter</span> → haz clic en el punto alrededor del cual girará (centro de la pieza, una esquina, un eje).</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Ángulo</h4>
+    <p>Teclea el ángulo: <code>45</code> gira en sentido antihorario, <code>-45</code> en horario. También puedes arrastrar el ratón y ver cómo gira en tiempo real antes de soltar el clic.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Referencia (R) y copia (C)</h4>
+    <p>Con <span class="cmd-inline">R</span> (Referencia) indicas qué ángulo tiene el objeto en pantalla y a cuál debe quedar (ideal para "enderezar" una pieza). Con <span class="cmd-inline">C</span> (Copia) giras y dejas además una copia en la posición original.</p>
+  </div>
+</div>
+
+<div class="diagram-canvas">
+  <svg viewBox="0 0 460 200" role="img" aria-label="Rotación de una flecha 45 grados alrededor de su extremo">
+    <line x1="60" y1="150" x2="220" y2="150" class="cad-line-new"/>
+    <polygon points="220,145 240,150 220,155" class="cad-arrow"/>
+    <line x1="60" y1="150" x2="330" y2="80" class="cad-line" stroke-dasharray="6 4"/>
+    <polygon points="327,88 345,70 330,87" class="cad-arrow" />
+    <circle cx="60" cy="150" r="4" class="cad-point-cyan"/>
+    <text x="52" y="170" class="cad-label-cmd">punto base</text>
+    <text x="180" y="165" class="cad-label">45°</text>
+    <circle cx="60" cy="150" r="55" class="cad-circle" fill="none" stroke-dasharray="3 3"/>
+    <text x="230" y="196" text-anchor="middle" class="cad-dim-text">GIRAR (ROTATE): ángulo positivo = antihorario · con R se endereza contra una referencia</text>
+  </svg>
+</div>
+
+<h3>3. Mini ejercicio</h3>
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Inclina un muro</h4>
+    <p>Dibuja una línea de 200. <span class="cmd-inline">GIRAR</span> (en inglés: <span class="cmd-inline">ROTATE</span>) → selecciónala → punto base en su extremo → ángulo <code>30</code>. Queda a 30° del horizontal.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Gira contra la referencia</h4>
+    <p>Dibuja una línea diagonal "a ojo" y una horizontal. Gira la diagonal con la opción <span class="cmd-inline">R</span>: punto base en un extremo, teclea el ángulo actual como "referencia" y el destino 0 para enderezarla.</p>
+  </div>
+</div>
+
+<div class="callout warn">
+  <span class="callout-title">Error común</span>
+  <span>Girar sin punto base fijo: sin un punto base claro el objeto rota "de la nada". Recuerda que el sentido va en contra de las agujas del reloj con ángulos positivos, y usa OSNAP para fijar el centro de rotación.</span>
+</div>

@@ -1,0 +1,70 @@
+<p><strong>INSERTAR</strong> (en inglés: <span class="cmd-inline">INSERT</span>) trae bloques (grupos de objetos guardados con un nombre) o archivos .DWG enteros dentro del dibujo actual. Es la puerta a las <strong>bibliotecas</strong>: sillas, simbología, rótulos, muebles... los insertas sin redibujarlos.</p>
+
+<h3>1. Ejecutar el comando</h3>
+<table class="table-cad">
+  <thead><tr><th>Cómo</th><th>Qué escribir</th><th>Atajo</th></tr></thead>
+  <tbody>
+    <tr><td>Barra de comandos</td><td><span class="cmd-inline">INSERTAR</span> (en inglés: <span class="cmd-inline">INSERT</span>)</td><td><span class="key-inline">I</span></td></tr>
+    <tr><td>Cinta → Insertar → Bloque</td><td>Selector de bloque de biblioteca</td><td>Clic</td></tr>
+  </tbody>
+</table>
+
+<h3>2. Cómo se usa</h3>
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Abre el cuadro de inserción</h4>
+    <p><span class="cmd-inline">INSERTAR</span> (en inglés: <span class="cmd-inline">INSERT</span>) → en la lista de bloques del dibujo actual, o pulsa <em>Examinar</em> para abrir tu biblioteca .DWG (busca tu carpeta de recursos).</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Ajusta escala, rotación y punto</h4>
+    <p>En el cuadro: define Factor de escala (por defecto 1) y el ángulo (0). Al pulsar OK, AutoCAD pide el punto base de inserción: haz clic en el sitio del plano (puedes usar OSNAP para encajarlo con precisión).</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Inserta unidades coherentes</h4>
+    <p>El "Insertar unidades" del bloque (mm, m...) se respeta al insertar; si mezclas unidades distintas, las piezas entran a otra escala. Define la escala de inserción de tu plantilla en <span class="cmd-inline">UNIDADES</span> (en inglés: <span class="cmd-inline">UNITS</span>).</p>
+  </div>
+</div>
+
+<div class="diagram-canvas">
+  <svg viewBox="0 0 460 200" role="img" aria-label="Insertar un bloque con escala, rotación y punto base">
+    <rect x="40" y="30" width="140" height="130" rx="4" class="cad-fill-new" fill="none" stroke="var(--accent-cyan)"/>
+    <text x="110" y="55" text-anchor="middle" class="cad-label-cmd">BLOQUE</text>
+    <text x="110" y="90" text-anchor="middle" class="cad-label">silla 450×450</text>
+    <text x="110" y="140" text-anchor="middle" class="cad-label">escala 1</text>
+    <line x1="180" y1="95" x2="290" y2="95" class="cad-arrow-new" stroke-dasharray="6 4"/>
+    <circle cx="110" cy="140" r="4" class="cad-point-cyan"/>
+    <text x="240" y="150" text-anchor="middle" class="cad-label-cmd">punto base</text>
+    <rect x="290" y="40" width="150" height="110" rx="4" class="cad-fill" fill="none" stroke="var(--accent-cyan)"/>
+    <text x="365" y="100" text-anchor="middle" class="cad-label">DWG actual</text>
+    <text x="365" y="125" text-anchor="middle" class="cad-label-cmd">¡encajado!</text>
+    <text x="230" y="196" text-anchor="middle" class="cad-dim-text">INSERTAR (INSERT): trae símbolo de biblioteca a tu dibujo con su punto base</text>
+  </svg>
+</div>
+
+<h3>3. Mini ejercicio</h3>
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Inserta tu primer símbolo</h4>
+    <p>Con <span class="cmd-inline">INSERTAR</span> (en inglés: <span class="cmd-inline">INSERT</span>) → Examinar → elige una silla de tu biblioteca → escala 1 → ángulo 0 → clic en el centro del plano.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Insertado con rotación</h4>
+    <p>Inserta la misma silla rotada 90° (en el cuadro, ángulo 90) y comprueba que giran sin cambiar de tamaño. Si la gira, es porque no dominabas el <em>ángulo de rotación</em>.</p>
+  </div>
+</div>
+
+<div class="callout warn">
+  <span class="callout-title">Error común</span>
+  <span>Insertar desde carpeta personal con un bloque que usa unidades distintas: entra a escala doble o a décimas. Antes de entregar, revisa <span class="cmd-inline">UNIDADES</span> (en inglés: <span class="cmd-inline">UNITS</span>) y la escala de inserción; luego mide con <span class="cmd-inline">DISTANCIA</span> (en inglés: <span class="cmd-inline">DIST</span>) el símbolo recién insertado.</span>
+</div>

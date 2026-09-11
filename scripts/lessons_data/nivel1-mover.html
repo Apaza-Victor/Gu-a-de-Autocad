@@ -1,0 +1,67 @@
+<p><strong>MOVER</strong> desplaza objetos de un punto a otro del dibujo sin cambiar su tamaño ni su orientación. En la práctica, casi nunca "arrastras a ojo": usas un <strong>punto base</strong> (un extremo, una esquina o un centro) y una referencia, y AutoCAD coloca el objeto con exactitud milimétrica.</p>
+
+<h3>1. Ejecutar el comando</h3>
+<table class="table-cad">
+  <thead><tr><th>Cómo</th><th>Qué escribir</th><th>Atajo</th></tr></thead>
+  <tbody>
+    <tr><td>Barra de comandos</td><td><span class="cmd-inline">MOVER</span> (en inglés: <span class="cmd-inline">MOVE</span>)</td><td><span class="key-inline">M</span></td></tr>
+    <tr><td>Cinta → Inicio → Modificar</td><td>Icono de mover</td><td>Clic</td></tr>
+  </tbody>
+</table>
+
+<h3>2. Cómo se usa</h3>
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Selecciona el objeto</h4>
+    <p><span class="cmd-inline">MOVER</span> (en inglés: <span class="cmd-inline">MOVE</span>) → haz clic sobre el objeto (o usa ventana/cruzamiento) → pulsa <span class="key-inline">Enter</span>.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Punto base</h4>
+    <p>Haz clic en un punto que identifiques: la esquina del objeto, el centro de un círculo, un nodo de referencia. Puedes atraparlo con OSNAP (activado con <span class="key-inline">F3</span>).</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Punto de destino</h4>
+    <p>Haz clic en el lugar de destino (o teclea un desplazamiento relativo como <code>@200,0</code>). El objeto se mueve llevando el punto base hasta ahí.</p>
+  </div>
+</div>
+
+<div class="diagram-canvas">
+  <svg viewBox="0 0 460 200" role="img" aria-label="Mover un objeto desde su esquina a un destino con referencia">
+    <rect x="60" y="90" width="90" height="60" class="cad-fill-new"/>
+    <circle cx="60" cy="90" r="4" class="cad-point-cyan"/>
+    <text x="55" y="82" class="cad-label-cmd">punto base</text>
+    <line x1="60" y1="90" x2="330" y2="60" class="cad-arrow-new" stroke-dasharray="6 4"/>
+    <circle cx="330" cy="60" r="4" class="cad-point"/>
+    <text x="330" y="48" class="cad-label">destino</text>
+    <rect x="260" y="110" width="90" height="60" class="cad-fill" stroke="var(--accent-cyan)"/>
+    <text x="180" y="196" text-anchor="middle" class="cad-dim-text">MOVER (MOVE): el punto base "viaja" al destino · mueve sin deformar</text>
+  </svg>
+</div>
+
+<h3>3. Mini ejercicio</h3>
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Mueve con desplazamiento exacto</h4>
+    <p>Dibuja un rectángulo 100×50 en (0,0). Ejecuta <span class="cmd-inline">MOVER</span> (en inglés: <span class="cmd-inline">MOVE</span>) → selecciona el rectángulo → Enter → clic en cualquier parte → teclea <code>@150,0</code>. Queda trasladado 150 a la derecha.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Mueve con referencia</h4>
+    <p>Quiere ese rectángulo pegado al borde derecho de otro. Mueve usando como punto base la esquina del rectángulo y encaja en la esquina del otro con OSNAP.</p>
+  </div>
+</div>
+
+<div class="callout warn">
+  <span class="callout-title">Error común</span>
+  <span>Usar MOVER sin punto base fijo y arrastrar el objeto a ojo. Si no encajas extremo-con-extremo con OSNAP (o no tecleas un @desplazamiento), el objeto queda "casi" bien con decimales: en planos, "casi" no sirve.</span>
+</div>

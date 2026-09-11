@@ -1,0 +1,68 @@
+<p><strong>COPIAR</strong> crea duplicados de un objeto en el mismo dibujo. Como MOVER, se basa en un <strong>punto base y un destino</strong>, pero a diferencia de él, el original se queda en su sitio. Es una de las herramientas que más tiempo ahorra: una hilera de sillas, un muro repetido, una fila de pilares...</p>
+
+<h3>1. Ejecutar el comando</h3>
+<table class="table-cad">
+  <thead><tr><th>Cómo</th><th>Qué escribir</th><th>Atajo</th></tr></thead>
+  <tbody>
+    <tr><td>Barra de comandos</td><td><span class="cmd-inline">COPIAR</span> (en inglés: <span class="cmd-inline">COPY</span>)</td><td><span class="key-inline">CO</span> o <span class="key-inline">CP</span></td></tr>
+    <tr><td>Cinta → Inicio → Modificar</td><td>Icono de copiar</td><td>Clic</td></tr>
+  </tbody>
+</table>
+
+<h3>2. Cómo se usa</h3>
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Selecciona y determina el punto base</h4>
+    <p><span class="cmd-inline">COPIAR</span> (en inglés: <span class="cmd-inline">COPY</span>) → selecciona el objeto → <span class="key-inline">Enter</span> → clic en el punto base (una esquina, un centro... ideal con OSNAP).</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Varias copias en cadena</h4>
+    <p>El comando se queda "pegando" puntos de destino: haz clic (o teclea <code>@100,0</code>) y AutoCAD sitúa copias una tras otra. Pulsa <span class="key-inline">Enter</span> para terminar.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Desplazamiento del modo array</h4>
+    <p>Con <span class="cmd-inline">A</span> (Array) indicas cuántos objetos <em>en total</em> (incluido el original) quieres separados a una distancia; ideal para pilares o ejes repetidos.</p>
+  </div>
+</div>
+
+<div class="diagram-canvas">
+  <svg viewBox="0 0 460 200" role="img" aria-label="Copiar un círculo varias veces con punto base">
+    <circle cx="70" cy="100" r="20" class="cad-circle"/>
+    <circle cx="150" cy="100" r="20" class="cad-circle"/>
+    <circle cx="230" cy="100" r="20" class="cad-circle"/>
+    <circle cx="310" cy="100" r="20" class="cad-circle"/>
+    <circle cx="390" cy="100" r="20" class="cad-circle"/>
+    <circle cx="70" cy="100" r="3.5" class="cad-point-cyan"/>
+    <text x="70" y="92" class="cad-label-cmd">base</text>
+    <text x="230" y="140" text-anchor="middle" class="cad-label">copias encadenadas @80,0</text>
+    <text x="230" y="196" text-anchor="middle" class="cad-dim-text">COPIAR (COPY): el original se queda · con MÚLTIPLE (A) pones varias a la vez</text>
+  </svg>
+</div>
+
+<h3>3. Mini ejercicio</h3>
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Copia una silla en una fila</h4>
+    <p>Dibuja una silla simple (rectángulo 40×40 + asiento) en un extremo. <span class="cmd-inline">COPIAR</span> (en inglés: <span class="cmd-inline">COPY</span>) → selecciona → punto base en la esquina → teclea <code>@120,0</code>, <code>@240,0</code>, <code>@360,0</code>... hasta llenar la hilera con <span class="key-inline">Enter</span>.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Comprueba la distancia</h4>
+    <p>Mide entre esquinas de sillas consecutivas con <span class="cmd-inline">DISTANCIA</span> (en inglés: <span class="cmd-inline">DIST</span>): deben quedar a 120 unidades.</p>
+  </div>
+</div>
+
+<div class="callout warn">
+  <span class="callout-title">Error común</span>
+  <span>Confundir COPIAR (duplica con punto base, en pantalla) con el portapapeles del sistema (Ctrl+C / Ctrl+V). COPIAR no usa el portapapeles: crea copias del dibujo con precisión. El <strong>COPIARbase</strong> (en inglés: <span class="cmd-inline">COPYBASE</span>) sí sirve para pasar entre dibujos.</span>
+</div>

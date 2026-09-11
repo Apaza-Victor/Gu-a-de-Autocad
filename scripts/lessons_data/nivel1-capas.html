@@ -1,0 +1,68 @@
+<p>Las <strong>capas</strong> (en inglés: <span class="cmd-inline">Layer</span>) son la forma de organizar un dibujo: cada elemento (muros, mobiliario, cotas, ejes, texto) vive en su capa con su color, grosor y tipo de línea. Es el estándar que hace legible un plano para cualquier otro usuario de AutoCAD.</p>
+
+<h3>1. Ejecutar el comando</h3>
+<table class="table-cad">
+  <thead><tr><th>Cómo</th><th>Qué escribir</th><th>Atajo</th></tr></thead>
+  <tbody>
+    <tr><td>Barra de comandos</td><td><span class="cmd-inline">CAPA</span> (en inglés: <span class="cmd-inline">LAYER</span>)</td><td><span class="key-inline">LA</span></td></tr>
+    <tr><td>Cinta → Inicio → Capas</td><td>Selector de capa actual</td><td>Clic</td></tr>
+  </tbody>
+</table>
+
+<h3>2. Cómo se usa</h3>
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Crea una capa</h4>
+    <p><span class="cmd-inline">CAPA</span> (en inglés: <span class="cmd-inline">LAYER</span>) → botón <em>Nueva capa</em> → escribe un nombre (por ejemplo <strong>Muros</strong>) y asigna color, tipo de línea (TCP) y grosor (G). Cierra el gestor.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Hazla actual</h4>
+    <p>En el selector de la cinta (o con clic en la capa → <em>Definir actual</em>) dejas la capa activa. Desde ahora todo lo que dibujes irá a esa capa. El color y el tipo de línea deberían estar en <strong>ByLayer</strong> para que obedezcan a la capa.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Controla la visibilidad</h4>
+    <p>Con los iconos del gestor apagas/encendes (<span class="cmd-inline">Apagar</span>) o congelas (<span class="cmd-inline">Inmovilizar</span>) capas completas, o las bloqueas con candado para no moverlas sin querer. Los objetos de una capa apagada no se ven <em>ni se imprimen</em>.</p>
+  </div>
+</div>
+
+<div class="diagram-canvas">
+  <svg viewBox="0 0 460 200" role="img" aria-label="Capas con iconos de visibilidad, bloqueo y color">
+    <rect x="40" y="30" width="380" height="140" rx="4" class="cad-fill" fill="var(--bg-card)" stroke="var(--border-soft)"/>
+    <text x="60" y="60" class="cad-label-cmd">✔ Capa actual</text>
+    <text x="60" y="85" class="cad-label">Muros  · color 7 · grosor 0.50</text>
+    <text x="60" y="110" class="cad-label">Mobiliario · color 5 · grosor 0.25</text>
+    <text x="60" y="135" class="cad-label">Cotas  · color 3 · grosor 0.18</text>
+    <text x="60" y="160" class="cad-label">Ejes  · color 2 · tipo __▼__ (central)</text>
+    <text x="340" y="60" class="cad-label">👁 👁 🔒</text>
+    <text x="360" y="60" class="cad-label-cmd">visibilidad / bloqueo</text>
+    <text x="230" y="196" text-anchor="middle" class="cad-dim-text">La paleta de capas es el "armario" de tu plano: todo tiene su cajón</text>
+  </svg>
+</div>
+
+<h3>3. Mini ejercicio</h3>
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Organiza un plano de planta</h4>
+    <p>Crea las capas <strong>Muros</strong>, <strong>Mobiliario</strong> y <strong>Cotas</strong> con colores distintos. Dibuja un muro con la capa <em>Muros</em> activa, inserta un sofá en <em>Mobiliario</em> y acota en <em>Cotas</em>.</p>
+  </div>
+</div>
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Apaga para limpiar</h4>
+    <p>Apaga (o congela) la capa <em>Mobiliario</em> y observa cómo el plano queda solo con estructura y cotas: todo lo que no sea de esa capa sigue visible.</p>
+  </div>
+</div>
+
+<div class="callout warn">
+  <span class="callout-title">Error común</span>
+  <span>Dibujar sin capas (todo en 0) o con <strong>ByBlock</strong> en lugar de <strong>ByLayer</strong>. El color ByLayer hace que un objeto herede el color de su capa; si pones colores fijos, luego cambiar la capa no cambia nada. Tic a tic: capas con ByLayer desde el día uno.</span>
+</div>

@@ -174,6 +174,32 @@
             <p>Si defines un bloque con <span class="cmd-inline">DEFINIRBLOQUE</span> (en inglés: <span class="cmd-inline">BLOCK</span>) y luego lo exportas con <span class="cmd-inline">BLOQUEDISC</span> (en inglés: <span class="cmd-inline">WBLOCK</span>) eligiendo su nombre, AutoCAD lo guarda como un archivo con el color, la capa y el punto base que definiste.</p>
 
             <h3>2. Exportar un bloque paso a paso</h3>
+
+            <div class="diagram-canvas">
+            <svg viewBox="0 0 460 200" role="img" aria-label="Diferencia entre BLOCK (interno) y WBLOCK (archivo DWG externo)">
+              <rect x="20" y="30" width="170" height="140" rx="4" class="cad-fill-new" fill="none" stroke="var(--accent-cyan)" stroke-width="1.5"/>
+              <text x="105" y="22" text-anchor="middle" class="cad-label-cmd">BLOQUEDISC (WBLOCK)</text>
+              <rect x="35" y="60" width="60" height="30" class="cad-fill" fill="none" stroke="var(--accent-cyan)"/>
+              <text x="65" y="80" text-anchor="middle" class="cad-label">DWG</text>
+              <rect x="115" y="60" width="60" height="30" class="cad-fill" fill="none" stroke="var(--accent-cyan)"/>
+              <text x="145" y="80" text-anchor="middle" class="cad-label">DWG</text>
+              <rect x="35" y="110" width="60" height="30" class="cad-fill" fill="none" stroke="var(--accent-cyan)"/>
+              <text x="65" y="130" text-anchor="middle" class="cad-label">DWG</text>
+              <text x="105" y="162" text-anchor="middle" class="cad-label">Carpeta de biblioteca</text>
+              <line x1="190" y1="100" x2="270" y2="100" class="cad-arrow-new" stroke-dasharray="6 4"/>
+              <polygon points="268,96 278,100 268,104" class="cad-arrow"/>
+              <text x="230" y="90" text-anchor="middle" class="cad-dim-text">guardar</text>
+              <rect x="270" y="30" width="170" height="140" rx="4" class="cad-fill-new" fill="none" stroke="var(--accent-cyan)" stroke-width="1.5"/>
+              <text x="355" y="22" text-anchor="middle" class="cad-label-cmd">INSERTAR (INSERT)</text>
+              <rect x="300" y="60" width="110" height="100" rx="2" class="cad-fill" fill="none" stroke="var(--accent-cyan)"/>
+              <text x="355" y="80" text-anchor="middle" class="cad-label">Dibujo nuevo</text>
+              <rect x="300" y="100" width="110" height="30" rx="2" class="cad-fill" fill="none" stroke="var(--accent-cyan)" stroke-dasharray="4 3"/>
+              <text x="355" y="120" text-anchor="middle" class="cad-label">símbolo insertado</text>
+              <text x="355" y="162" text-anchor="middle" class="cad-label">Dibujo que recibe</text>
+              <text x="230" y="190" text-anchor="middle" class="cad-dim-text">WBLOCK crea DWG independiente → se reinserta en cualquier proyecto</text>
+            </svg>
+            </div>
+
             <div class="lesson-step">
               <span class="lesson-num">1</span>
               <div class="lesson-body">
