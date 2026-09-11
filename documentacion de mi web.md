@@ -26,16 +26,25 @@ Guia de Autocad/
 │   │   ├── style.css           # Estilos base del sitio (~1500 lineas)
 │   │   └── responsive.css      # Breakpoints, print y reduced-motion
 │   ├── js/
-│   │   ├── main.js             # Funcionalidad JS compartida (~755 lineas)
-│   │   └── i18n.js             # Sistema de traduccion ES/EN (~1170 lineas)
+│   │   ├── main.js             # Funcionalidad JS compartida (~1025 lineas)
+│   │   ├── i18n.js             # Sistema de traduccion ES/EN (~1170 lineas)
+│   │   ├── search-index.js     # Indice del buscador (82 temas + comandos + paginas)
+│   │   ├── quiz.js             # Autoevaluaciones de los niveles
+│   │   ├── animations.js       # Animaciones y micro-interacciones
+│   │   └── babylon-lab.js      # Laboratorio 3D interactivo (portada nivel 4)
 │   └── img/
 │       └── autocad-2.svg       # Logo AutoCAD (navbar, footer, favicon)
 ├── paginas/
-│   ├── nivel-1-fundamentos.html    # Nivel 1: Fundamentos
-│   ├── nivel-2-dibujo-2d.html      # Nivel 2: Dibujo 2D
-│   ├── nivel-3-organizacion.html   # Nivel 3: Organizacion y productividad
-│   ├── nivel-4-modelado-3d.html    # Nivel 4: Modelado 3D
-│   ├── nivel-5-avanzado.html       # Nivel 5: Nivel experto
+│   ├── nivel-1-fundamentos/    # Portada index.html + 12 lecciones (que-es, interfaz, ...)
+│   ├── nivel-2-dibujo-2d/      # Portada index.html + 18 lecciones (dibujo, capas, ...)
+│   ├── nivel-3-organizacion/   # Portada index.html + 16 lecciones (espacios, xref, ...)
+│   ├── nivel-4-modelado-3d/    # Portada index.html + 19 lecciones (solidos, render, ...) + lab 3D
+│   ├── nivel-5-avanzado/       # Portada index.html + 17 lecciones (autolisp, python, ...)
+│   ├── nivel-1-fundamentos.html    # Redireccion a la carpeta (compatibilidad enlaces antiguos)
+│   ├── nivel-2-dibujo-2d.html      # Redireccion a la carpeta (compatibilidad enlaces antiguos)
+│   ├── nivel-3-organizacion.html   # Redireccion a la carpeta (compatibilidad enlaces antiguos)
+│   ├── nivel-4-modelado-3d.html    # Redireccion a la carpeta (compatibilidad enlaces antiguos)
+│   ├── nivel-5-avanzado.html       # Redireccion a la carpeta (compatibilidad enlaces antiguos)
 │   ├── comandos.html               # Diccionario de 979 comandos
 │   ├── ejemplos-visuales.html      # Diagramas paso a paso
 │   ├── trucos.html                 # Atajos, tips, errores comunes
@@ -51,7 +60,7 @@ Guia de Autocad/
 | `index.html` | Landing page con hero, cards de niveles, progreso | ~120 lineas |
 | `assets/css/style.css` | Estilos completos, variables CSS, accesibilidad, secciones | ~1400 lineas |
 | `assets/css/responsive.css` | Todos los @media: breakpoints, print, reduced-motion | ~110 lineas |
-| `assets/js/main.js` | Theme toggle, search, filters, scroll-spy, mark-done, FAQ, Swiper, Prism | ~755 lineas |
+| `assets/js/main.js` | Theme toggle, search, filters, scroll-spy, mark-done, FAQ, Swiper, Prism | ~1025 lineas |
 | `assets/js/i18n.js` | Diccionario de traducciones ES/EN para toda la interfaz | ~1200 lineas |
 | `paginas/comandos.html` | 979 tarjetas de comandos con data-cmd, data-cat, data-level, data-keys, data-cmd-es | ~13000 lineas |
 
@@ -130,7 +139,7 @@ Guia de Autocad/
 
 - Botones "Marcar tema como visto" en cada seccion
 - Almacenamiento en `localStorage` key: `autocad-guia-progreso`
-- Barra de progreso en la pagina principal
+- Barra de progreso en la pagina principal (`initHomeProgress`, total 82 temas) y en la portada de cada nivel (`updateLevelProgress` lee `data-level-prefix`/`data-level-total`)
 - Formato: `["nivel1-que-es", "nivel2-capas", ...]` (array plano con los IDs `data-topic` de los temas completados)
 
 ### 4.7 Otros

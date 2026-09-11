@@ -1,0 +1,83 @@
+<p>Una vez creadas las capas, toca definir sus propiedades. Una capa bien configurada hace que el dibujo se vea ordenado y que la impresión salga perfecta sin retoques. Se configura todo desde el <strong>Administrador de propiedades de capas</strong> (<span class="cmd-inline">LA</span>).</p>
+
+<h3>1. Color, tipo de línea, grosor y transparencia</h3>
+<p>Cada columna del Administrador de capas cambia una propiedad:</p>
+<div class="table-scroll">
+<table class="table-cad">
+  <thead><tr><th>Columna</th><th>Qué controla</th><th>Recomendación</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Color</strong></td><td>Identidad visual y, con estilos de trazado por color, el grosor al imprimir</td><td>Usa los colores 1–7 para impresión con grosor: rojo = muros (0.50), amarillo = puertas (0.25), cian = ejes (0.15)</td></tr>
+    <tr><td><strong>Tipo de línea</strong></td><td>Continua, DASHED, CENTER, PHANTOM…</td><td>Si no aparece el tipo, cárgalo con el botón "Cargar"</td></tr>
+    <tr><td><strong>Grosor de línea</strong></td><td>Ancho de impresión de esa capa</td><td>Puedes usar "Por defecto" y delegar en el color + estilos de trazado</td></tr>
+    <tr><td><strong>Transparencia</strong></td><td>Grado de opacidad (0–90)</td><td>50–70 para rellenos de referencia o mobiliario de fondo</td></tr>
+    <tr><td><strong>Trazado</strong></td><td>Si la capa imprime o no (<strong>Trazado</strong> desmarcado = no se imprime)</td><td>Usa capas no trazables para geometría de trabajo</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Cambiar el color</h4>
+    <p>Haz clic en el cuadrado de color de la capa. Elige un color índice (los 1–7 son los clásicos de impresión). Pulsa Aceptar.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Cargar y asignar un tipo de línea</h4>
+    <p>Haz clic en la celda de "Linetype" → botón <strong>Cargar</strong> → elige de <code>acad.lin</code> los tipos que uses (por ejemplo <code>CENTER</code> y <code>DASHED</code>). Así quedan disponibles para todas las capas.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Asignar grosor de línea</h4>
+    <p>Haz clic en la columna "Lineweight" y elige un milimetraje. Los más prácticos en arquitectura: 0.05 (ejes), 0.15 (cotas), 0.25 (mobiliario), 0.35 (muros), 0.50 (contornos gruesos).</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">4</span>
+  <div class="lesson-body">
+    <h4>Aplicar transparencia</h4>
+    <p>Haz clic en la columna "Transparency" e introduce un valor entre 0 y 90. Es útil para esconder visualmente capas de referencia sin desactivarlas.</p>
+  </div>
+</div>
+
+<h3>2. Estados de capa: apagar, congelar, bloquear</h3>
+<p>Cuatro estados te permiten controlar la visibilidad y la edición:</p>
+<div class="table-scroll">
+<table class="table-cad">
+  <thead><tr><th>Estado</th><th>Icono</th><th>Efecto</th><th>Úsalo para</th></tr></thead>
+  <tbody>
+    <tr><td><strong>On / Off</strong></td><td>Bombilla</td><td>Oculta (apagada) o muestra (encendida); los objetos no se ven pero siguen en memoria</td><td>Alternar rápidamente entre vistas del mismo dibujo</td></tr>
+    <tr><td><strong>Congelar / Descongelar</strong></td><td>Sol</td><td>Quita del cálculo de regeneración; los objetos no se ven ni se regeneran</td><td>Mejorar el rendimiento en planos enormes</td></tr>
+    <tr><td><strong>Bloquear / Desbloquear</strong></td><td>Candado</td><td>Los objetos se ven pero no se editan (sí se pueden seleccionar con referencia)</td><td>Proteger cotas o muros mientras editas mobiliario</td></tr>
+    <tr><td><strong>No trazar</strong></td><td>Impresora</td><td>La capa se ve en pantalla pero no se imprime</td><td>Capas de trabajo, Xref de referencia, notas temporales</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout">
+  <span class="callout-title">Regla práctica</span>
+  Prefiere <strong>congelar</strong> sobre <strong>apagar</strong> cuando la capa no se necesite durante mucho rato, y <strong>bloquear</strong> siempre que quieras ver sin riesgo de mover sin querer.
+</div>
+
+<h3>3. La capa actual y la lista desplegable</h3>
+<p>En la cinta, dentro de Inicio → Capas, la lista desplegable te muestra el nombre de la capa actual. Para cambiar de capa actual:</p>
+<ul>
+  <li><strong>Desde la lista:</strong> despliégala y elige otra capa.</li>
+  <li><strong>Hacer actual la del objeto:</strong> botón "Hacer actual la capa del objeto" y selecciona un objeto existente.</li>
+  <li><strong>Comando rápido:</strong> selecciona objetos y escribe <span class="cmd-inline">AISLAR</span> continuando; o directamente usa <span class="cmd-inline">-LA</span> para operar por líneas de comando.</li>
+</ul>
+
+<h3>4. Propiedades por objeto vs por capa (ByLayer)</h3>
+<p>Todo objeto debería tener sus propiedades de color, tipo y grosor en <strong>ByLayer</strong>. Así el objeto sigue a su capa automáticamente. Si necesitas excepciones, cámbialas con <span class="cmd-inline">PROPERTIES</span> (<span class="key-inline">Ctrl+1</span>), pero recuerda: cada excepción sobreescrita complica la impresión.</p>
+
+<div class="callout warn">
+  <span class="callout-title">Alerta de impresión</span>
+  Si al trazar sale todo del mismo grosor o con colores extraños, revisa dos cosas: que los objetos estén en <strong>ByLayer</strong> y que el estilo de trazado esté configurado en <span class="cmd-inline">OPTIONS</span> → Trazar → "Usar estilos de trazado dependientes de color" o "asignados por objeto" según tu flujo.
+</div>

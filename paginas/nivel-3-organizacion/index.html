@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nivel 3 · Organización y productividad — AutoCAD Guía</title>
+<link rel="canonical" href="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-3-organizacion/index.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-3-organizacion/index.html">
+<meta property="og:site_name" content="AutoCAD Guía">
+<meta property="og:title" content="Nivel 3 · Organización y productividad — AutoCAD Guía">
+<meta property="og:description" content="Espacio modelo vs presentación, ventanas gráficas y escalas, plantillas, impresión y exportación, Xref y atajos de teclado en AutoCAD. Nivel 3 de la guía.">
+<meta property="og:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nivel 3 · Organización y productividad — AutoCAD Guía">
+<meta name="twitter:description" content="Espacio modelo vs presentación, ventanas gráficas y escalas, plantillas, impresión y exportación, Xref y atajos de teclado en AutoCAD. Nivel 3 de la guía.">
+<meta name="twitter:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="description" content="Espacio modelo vs presentación, ventanas gráficas y escalas, plantillas, impresión y exportación, Xref y atajos de teclado en AutoCAD. Nivel 3 de la guía.">
+
+<link rel="icon" type="image/svg+xml" href="../../assets/img/autocad-2.svg">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../../assets/css/responsive.css">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Nivel · Organización y productividad en AutoCAD",
+  "description": "Espacio modelo vs papel, viewports, plantillas, impresión, Xref, estilos de trazado y campos.",
+  "provider": {
+    "@type": "Organization",
+    "name": "AutoCAD Guía",
+    "sameAs": "https://apaza-victor.github.io/Gu-a-de-Autocad/"
+  },
+  "inLanguage": "es",
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "online",
+    "learningResourceType": "tutorial",
+    "inLanguage": "es"
+  }
+}
+  </script>
+</head>
+
+<body>
+
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+<nav class="navbar navbar-cad navbar-expand-lg">
+  <div class="container container-xl">
+    <a class="navbar-brand brand-cad" href="../../index.html">
+      <img class="brand-logo" src="../../assets/img/autocad-2.svg" alt="AutoCAD">
+      <span>AutoCAD<small class="d-block" data-i18n-html="brand.sub">Guía · Teoría &amp; Práctica</small></span>
+    </a>
+    <div class="d-flex align-items-center gap-2 nav-actions order-lg-last">
+      <button class="icon-btn" id="searchToggle" title="Buscar" data-i18n-title="ui.search"><i class="bi bi-search"></i></button>
+      <button class="icon-btn" id="themeToggle" title="Cambiar tema" data-i18n-title="ui.theme"><i class="bi bi-moon-stars"></i></button>
+      <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
+        <i class="bi bi-list fs-4"></i>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navCad">
+      <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../../index.html" data-i18n="nav.home">Inicio</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-cad dropdown-toggle active" href="#" data-bs-toggle="dropdown" data-i18n="nav.levels">Niveles</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="../nivel-1-fundamentos/index.html">Nivel 1 · Fundamentos</a></li>
+            <li><a class="dropdown-item" href="../nivel-2-dibujo-2d/index.html">Nivel 2 · Dibujo 2D</a></li>
+            <li><a class="dropdown-item active" href="../nivel-3-organizacion/index.html">Nivel 3 · Organización</a></li>
+            <li><a class="dropdown-item" href="../nivel-4-modelado-3d/index.html">Nivel 4 · Modelado 3D</a></li>
+            <li><a class="dropdown-item" href="../nivel-5-avanzado/index.html">Nivel 5 · Experto</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../comandos.html" data-i18n="nav.commands">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../ejemplos-visuales.html" data-i18n="nav.visual">Visuales</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../trucos.html" data-i18n="nav.tips">Trucos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../recursos.html" data-i18n="nav.resources">Recursos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../faq.html" data-i18n="nav.faq">FAQ</a></li>
+      </ul>
+
+      <div class="d-flex align-items-center gap-2 nav-actions-menu ms-lg-auto">
+        <span class="coord-readout d-none d-lg-inline-flex">X: <span id="coordX">000.00</span>&nbsp; Y: <span id="coordY">000.00</span></span>
+        <button class="lang-toggle" id="langToggle" title="Cambiar idioma" data-i18n-title="ui.lang">
+          <i class="bi bi-translate lang-toggle-flag"></i>
+          <span class="lang-toggle-text">EN</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header" id="main-content">
+  <div class="container container-xl">
+    <p class="crumb"><a href="../../index.html">Inicio</a> / <a href="../../index.html#niveles">Niveles</a> / Organización y productividad</p>
+    <span class="eyebrow" data-i18n="lvl3.eyebrow">Nivel 03 · Intermedio</span>
+    <h1 data-i18n="lvl3.title">Organización y productividad</h1>
+    <p class="subtitle" data-i18n="lvl3.subtitle">Espacio modelo vs presentación, ventanas gráficas y escalas, plantillas, impresión y exportación, Xref y atajos de teclado en AutoCAD. Nivel 3 de la guía.</p>
+    <div class="level-progress-bar" data-level-prefix="nivel3" data-level-total="20"><div class="fill"></div></div>
+    <p class="level-progress-label">0 de 20 temas completados · 0%</p>
+  </div>
+</header>
+
+<div class="content-layout">
+  <div class="container container-xl">
+    <div class="row">
+
+      <aside class="col-lg-3 mb-5 mb-lg-0">
+        <div class="toc-sidebar">
+          <h6 data-i18n="ui.inThisLevel">En este nivel</h6>
+          <ul class="toc-list">            <li><a href="espacios.html"><span class="toc-check"></span> Espacio modelo vs. papel</a></li>
+            <li><a href="viewports.html"><span class="toc-check"></span> Ventanas gráficas y escalas</a></li>
+            <li><a href="plantillas.html"><span class="toc-check"></span> Plantillas (.DWT)</a></li>
+            <li><a href="designcenter.html"><span class="toc-check"></span> DesignCenter y paletas</a></li>
+            <li><a href="impresion.html"><span class="toc-check"></span> Impresión y exportación</a></li>
+            <li><a href="publish.html"><span class="toc-check"></span> Publicación por lotes (PUBLISH)</a></li>
+            <li><a href="xref.html"><span class="toc-check"></span> Referencias externas (Xref)</a></li>
+            <li><a href="atajos.html"><span class="toc-check"></span> Atajos de teclado</a></li>
+            <li><a href="plotstyles.html"><span class="toc-check"></span> Estilos de trazado</a></li>
+            <li><a href="campos.html"><span class="toc-check"></span> Campos (Fields)</a></li>
+            <li><a href="xref-avanzado.html"><span class="toc-check"></span> Xref avanzado</a></li>
+            <li><a href="cajetines.html"><span class="toc-check"></span> Cajetines y bloques de título</a></li>
+            <li><a href="zapatas-machones.html" data-toc="nivel3-zapatas-machones"><span class="toc-check"></span> Zapatas y machones</a></li>
+            <li><a href="muros-detalle.html" data-toc="nivel3-muros-detalle"><span class="toc-check"></span> Muros y detalles constructivos</a></li>
+            <li><a href="planos-estructurales.html" data-toc="nivel3-planos-estructurales"><span class="toc-check"></span> Planos estructurales</a></li>
+            <li><a href="escala-anotativa.html"><span class="toc-check"></span> Escala anotativa</a></li>
+            <li><a href="estandares-capas.html"><span class="toc-check"></span> Estándares de capas</a></li>
+            <li><a href="sheet-sets.html"><span class="toc-check"></span> Conjuntos de planos</a></li>
+            <li><a href="etransmit.html"><span class="toc-check"></span> Transmitir y empaquetar</a></li>
+            <li><a href="importar-exportar.html" data-toc="nivel3-importar-exportar"><span class="toc-check"></span> Importar y exportar</a></li>
+            <li><a href="index.html#autoevaluacion"><span class="toc-check"></span> Autoevaluación</a></li></ul>
+          </div>
+      </aside>
+
+      <div class="col-lg-9">
+        <article class="content-article">
+          <section class="level-intro">
+            <h2>Contenido del nivel</h2>
+            <p>Este nivel se divide en 20 temas. Sigue el orden recomendado o salta directamente al que necesites.</p>
+                                                            <div class="row g-4 mt-1">
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                      <a href="espacios.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">01</div>
+                          <span class="level-tag">Tema 1</span>
+                          <h3>Espacio modelo vs. papel</h3>
+                          <p>Los dos entornos de AutoCAD: el modelo a escala real y las presentaciones que preparan la hoja impresa.</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+                      <a href="viewports.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">02</div>
+                          <span class="level-tag">Tema 2</span>
+                          <h3>Ventanas gráficas y escalas</h3>
+                          <p>Ventanas gráficas dentro de un layout, su escala y cómo congelar capas por ventana.</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+                      <a href="plantillas.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">03</div>
+                          <span class="level-tag">Tema 3</span>
+                          <h3>Plantillas (.DWT)</h3>
+                          <p>Guardar capas, estilos y layouts en una plantilla para no reconfigurar cada proyecto.</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                      <a href="designcenter.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">04</div>
+                          <span class="level-tag">Tema 4</span>
+                          <h3>DesignCenter y paletas</h3>
+                          <p>Reutilizar bloques, capas y estilos de otros dibujos con DesignCenter y las paletas de herramientas.</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+                      <a href="impresion.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">05</div>
+                          <span class="level-tag">Tema 5</span>
+                          <h3>Impresión y exportación</h3>
+                          <p>PLOT, PDF, DWF y DXF: cómo preparar y generar el plano final desde el layout.</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+                      <a href="publish.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">06</div>
+                          <span class="level-tag">Tema 6</span>
+                          <h3>Publicación por lotes (PUBLISH)</h3>
+                          <p>Imprimir o exportar varios layouts y archivos a la vez con una sola orden.</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                      <a href="xref.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">07</div>
+                          <span class="level-tag">Tema 7</span>
+                          <h3>Referencias externas (Xref)</h3>
+                          <p>Vincular otros dibujos sin fusionarlos: adjuntar, administrar y recortar Xrefs.</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+                      <a href="atajos.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">08</div>
+                          <span class="level-tag">Tema 8</span>
+                          <h3>Atajos de teclado</h3>
+                          <p>Los atajos y alias que más aceleran el trabajo diario en AutoCAD.</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+                      <a href="plotstyles.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">09</div>
+                          <span class="level-tag">Tema 9</span>
+                          <h3>Estilos de trazado</h3>
+                          <p>Traducir colores a grosores y tonos de impresión con archivos .CTB y .STB.</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                      <a href="campos.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">10</div>
+                          <span class="level-tag">Tema 10</span>
+                          <h3>Campos (Fields)</h3>
+                          <p>Textos que se actualizan solos: fecha, autor, área, número de lámina.</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+                      <a href="xref-avanzado.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">11</div>
+                          <span class="level-tag">Tema 11</span>
+                          <h3>Xref avanzado</h3>
+                          <p>Adjuntar vs. enlazar, Overlay vs. Attach, recortes y cadenas de referencias.</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+                      <a href="cajetines.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">12</div>
+                          <span class="level-tag">Tema 12</span>
+                          <h3>Cajetines y bloques de título</h3>
+                          <p>El recuadro de identificación del plano como bloque con atributos y campos.</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                      <a href="zapatas-machones.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">13</div>
+                          <span class="level-tag">Tema 13</span>
+                          <h3>Zapatas y machones</h3>
+                          <p>Qué son las zapatas y los machones (columnas de amarre) y sus medidas típicas en construcción.</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+                      <a href="muros-detalle.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">14</div>
+                          <span class="level-tag">Tema 14</span>
+                          <h3>Muros y detalles constructivos</h3>
+                          <p>Tipos de muro, espesores habituales y cómo dibujar detalles constructivos a escala.</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+                      <a href="planos-estructurales.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">15</div>
+                          <span class="level-tag">Tema 15</span>
+                          <h3>Planos estructurales</h3>
+                          <p>Qué incluye un juego de planos estructurales: plantas, cimentación, rejillas, armado y simbología.</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                      <a href="escala-anotativa.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">16</div>
+                          <span class="level-tag">Tema 16</span>
+                          <h3>Escala anotativa</h3>
+                          <p>Una sola cota o texto que se muestra correcto en todas las escalas de la lámina.</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+                      <a href="estandares-capas.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">17</div>
+                          <span class="level-tag">Tema 17</span>
+                          <h3>Estándares de capas</h3>
+                          <p>Convenciones de nombres y organización de capas para trabajar en equipo.</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+                      <a href="sheet-sets.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">18</div>
+                          <span class="level-tag">Tema 18</span>
+                          <h3>Conjuntos de planos</h3>
+                          <p>Organizar, numerar y publicar todas las láminas de un proyecto desde un panel.</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                      <a href="etransmit.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">19</div>
+                          <span class="level-tag">Tema 19</span>
+                          <h3>Transmitir y empaquetar</h3>
+                          <p>Empaquetar el dibujo con sus Xrefs, fuentes y estilos en un solo archivo para entregar.</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+                      <a href="importar-exportar.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">20</div>
+                          <span class="level-tag">Tema 20</span>
+                          <h3>Importar y exportar</h3>
+                          <p>Importar y exportar planos entre formatos: DWG, DXF, PDF y referencias externas.</p>
+                        </div>
+                      </a>
+                    </div>
+            </div>
+          </section>
+
+          <section class="inline-visual-examples" style="margin-top:2rem">
+                                <div class="visual-examples">
+                                  <h3 style="font-size:1.3rem;margin-bottom:1.2rem" data-i18n="vis.levelTitle">Ejemplos del nivel</h3>
+                                  <div class="diagram-grid cols-2">
+
+                                    <div class="diagram-card" data-aos="fade-up">
+                                      <div class="diagram-card-head"><h4><span class="cmd-badge">Capas</span> Concepto de capas</h4><span class="key-inline">LA</span></div>
+                                      <div class="diagram-card-body">
+                                        <div class="diagram-canvas">
+                                          <svg viewBox="0 0 280 140">
+                                            <text class="cad-label-cmd" x="5" y="14" style="font-size:9px">Capas = acetatos transparentes apilados</text>
+                                            <rect x="15" y="20" width="80" height="65" fill="none" stroke="var(--layer-red)" stroke-dasharray="4,3" rx="2"/>
+                                            <text class="cad-label" x="22" y="35" style="fill:var(--layer-red);font-size:9px">Ejes</text>
+                                            <line x1="15" y1="52" x2="95" y2="52" stroke="var(--layer-red)" stroke-dasharray="6,3" stroke-width="1.5"/>
+                                            <line x1="55" y1="20" x2="55" y2="85" stroke="var(--layer-red)" stroke-dasharray="6,3" stroke-width="1.5"/>
+                                            <rect x="55" y="20" width="80" height="65" fill="none" stroke="var(--layer-yellow)" stroke-width="2" rx="2"/>
+                                            <text class="cad-label" x="62" y="35" style="fill:var(--layer-yellow);font-size:9px">Muros</text>
+                                            <rect x="63" y="38" width="22" height="14" fill="none" stroke="var(--layer-yellow)" stroke-width="2" rx="1"/>
+                                            <rect x="95" y="38" width="22" height="14" fill="none" stroke="var(--layer-yellow)" stroke-width="2" rx="1"/>
+                                            <rect x="95" y="20" width="80" height="65" fill="none" stroke="var(--layer-green)" rx="2"/>
+                                            <text class="cad-label" x="105" y="35" style="fill:var(--layer-green);font-size:9px">Cotas</text>
+                                            <line class="cad-dim" x1="103" y1="78" x2="167" y2="78" stroke="var(--layer-green)"/>
+                                            <text class="cad-dim-text" x="120" y="92" style="fill:var(--layer-green);font-size:9px">8.00 m</text>
+                                            <rect x="135" y="20" width="80" height="65" fill="none" stroke="var(--layer-cyan)" stroke-dasharray="2,2" rx="2"/>
+                                            <text class="cad-label" x="142" y="35" style="fill:var(--layer-cyan);font-size:9px">Texto</text>
+                                            <text class="cad-label" x="145" y="60" style="font-size:9px">PLANTA 1</text>
+                                            <rect x="175" y="20" width="80" height="65" fill="none" stroke="var(--amber)" stroke-dasharray="1,3" rx="2"/>
+                                            <text class="cad-label" x="180" y="35" style="fill:var(--amber);font-size:9px">Simbolos</text>
+                                            <circle cx="200" cy="55" r="6" fill="none" stroke="var(--amber)" stroke-width="1.5"/>
+                                            <text class="cad-label" x="5" y="108" style="font-size:8px;fill:var(--layer-red)">■ Ejes</text>
+                                            <text class="cad-label" x="55" y="108" style="font-size:8px;fill:var(--layer-yellow)">■ Muros</text>
+                                            <text class="cad-label" x="110" y="108" style="font-size:8px;fill:var(--layer-green)">■ Cotas</text>
+                                            <text class="cad-label" x="165" y="108" style="font-size:8px;fill:var(--layer-cyan)">■ Texto</text>
+                                            <text class="cad-label" x="215" y="108" style="font-size:8px;fill:var(--amber)">■ Símbolos</text>
+                                            <text class="cad-label" x="5" y="125" style="font-size:8px">Cada categoría → su propia capa → su color/grosor</text>
+                                          </svg>
+                                        </div>
+                                        <div class="callout" style="margin-top:.8rem">
+                                          <span class="callout-title">Regla de oro</span>
+                                          <span>Cada categoría (ejes, muros, cotas) va en su capa propia con color único. Nunca pongas todo en la capa 0.</span>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div class="diagram-card" data-aos="fade-up" data-aos-delay="60">
+                                      <div class="diagram-card-head"><h4>Espacio modelo vs. papel</h4></div>
+                                      <div class="diagram-card-body">
+                                        <div class="diagram-canvas">
+                                          <svg viewBox="0 0 280 130">
+                                            <rect x="5" y="5" width="115" height="105" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="3"/>
+                                            <text class="cad-label-cmd" x="12" y="18" style="font-size:8px">Model (1:1)</text>
+                                            <rect class="cad-fill" x="12" y="24" width="98" height="78" rx="2"/>
+                                            <text class="cad-label" x="28" y="50" style="font-size:9px">Tu dibujo aquí</text>
+                                            <text class="cad-label" x="22" y="68" style="font-size:8px">escala REAL</text>
+                                            <text class="cad-label" x="22" y="90" style="font-size:8px;fill:var(--layer-cyan)">1 metro = 1 unidad</text>
+                                            <text class="cad-label-cmd" x="132" y="18" style="font-size:8px">Paper / Layout</text>
+                                            <rect x="130" y="5" width="145" height="105" fill="var(--bg-surface)" stroke="var(--border-soft)" rx="3"/>
+                                            <rect x="138" y="12" width="65" height="50" fill="none" stroke="var(--layer-cyan)" stroke-dasharray="3,2" rx="1"/>
+                                            <text class="cad-label" x="144" y="36" style="font-size:7px">VP 1:50</text>
+                                            <rect x="138" y="12" width="65" height="50" fill="var(--cad-fill)" fill-opacity="0.08" rx="1"/>
+                                            <rect x="210" y="12" width="55" height="35" fill="none" stroke="var(--layer-cyan)" stroke-dasharray="3,2" rx="1"/>
+                                            <text class="cad-label" x="218" y="30" style="font-size:7px">VP 1:100</text>
+                                            <rect x="138" y="68" width="127" height="35" fill="none" stroke="var(--layer-green)" rx="1"/>
+                                            <text class="cad-label" x="172" y="90" style="font-size:8px">Title block + Info</text>
+                                            <polygon class="cad-arrow" points="118,55 128,55" style="fill:var(--amber)"/>
+                                            <text class="cad-label" x="118" y="48" style="font-size:7px;fill:var(--amber)">referencia</text>
+                                          </svg>
+                                        </div>
+                                        <div class="callout" style="margin-top:.8rem">
+                                          <span class="callout-title">Flujo correcto</span>
+                                          <span>Dibuja a 1:1 en modelo → crea Layout → añade Viewports con escala → configura Title Block → imprime.</span>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div class="diagram-card" data-aos="fade-up">
+                                      <div class="diagram-card-head"><h4><span class="cmd-badge">Organización</span> Plot Styles</h4></div>
+                                      <div class="diagram-card-body">
+                                        <p data-i18n="vis.plotstyle.desc">Controlan cómo se imprime cada capa: grosor de línea, color de impresión y trama.</p>
+                                        <div class="diagram-canvas">
+                                          <svg viewBox="0 0 280 90">
+                                            <text class="cad-label-cmd" x="5" y="14" style="font-size:8px">Pantalla vs. Impresión:</text>
+                                            <rect x="5" y="20" width="65" height="55" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="2"/>
+                                            <text class="cad-label-cmd" x="12" y="32" style="font-size:7px">Pantalla</text>
+                                            <line x1="12" y1="55" x2="58" y2="55" stroke="var(--layer-red)" stroke-width="1"/>
+                                            <line x1="12" y1="65" x2="58" y2="65" stroke="var(--layer-yellow)" stroke-width="1"/>
+                                            <text class="cad-label" x="10" y="78" style="font-size:7px;fill:var(--layer-red)">rojo = eje</text>
+                                            <text class="cad-label" x="10" y="88" style="font-size:7px;fill:var(--layer-yellow)">amarillo = muro</text>
+                                            <text class="cad-label-cmd" x="90" y="45" style="font-size:14px;fill:var(--amber)">→</text>
+                                            <text class="cad-label-cmd" x="80" y="58" style="font-size:7px">.CTB</text>
+                                            <rect x="110" y="20" width="65" height="55" fill="white" stroke="var(--border-soft)" rx="2"/>
+                                            <text class="cad-label-cmd" x="117" y="32" style="font-size:7px;fill:black">Impresión</text>
+                                            <line x1="117" y1="55" x2="163" y2="55" stroke="black" stroke-width="0.5"/>
+                                            <line x1="117" y1="65" x2="163" y2="65" stroke="black" stroke-width="2.5"/>
+                                            <text class="cad-label" x="115" y="78" style="font-size:7px;fill:black">negro = fino</text>
+                                            <text class="cad-label" x="115" y="88" style="font-size:7px;fill:black">negro = grueso</text>
+                                            <rect x="190" y="20" width="85" height="55" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="2"/>
+                                            <text class="cad-label-cmd" x="197" y="32" style="font-size:7px">Regla simple:</text>
+                                            <text class="cad-label" x="197" y="48" style="font-size:7px">Color rojo → 0.1mm</text>
+                                            <text class="cad-label" x="197" y="60" style="font-size:7px">Color amarillo → 0.5mm</text>
+                                            <text class="cad-label" x="197" y="72" style="font-size:7px">Todo → negro</text>
+                                          </svg>
+                                        </div>
+                                        <div class="callout" style="margin-top:.8rem">
+                                          <span class="callout-title">Tip</span>
+                                          <span>Usa .CTB (por color) para proyectos simples o .STB (por estilo) para control avanzado. Configura en Page Setup.</span>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div class="diagram-card" data-aos="fade-up" data-aos-delay="60">
+                                      <div class="diagram-card-head"><h4><span class="cmd-badge">Organización</span> Referencias externas (Xref)</h4></div>
+                                      <div class="diagram-card-body">
+                                        <p data-i18n="vis.xref.desc">Vincula archivos DWG externos como referencias. Se actualizan automáticamente cuando el original cambia.</p>
+                                        <div class="diagram-canvas">
+                                          <svg viewBox="0 0 280 100">
+                                            <text class="cad-label-cmd" x="5" y="14" style="font-size:8px">Trabajo en equipo con Xref:</text>
+                                            <rect x="5" y="20" width="60" height="50" fill="var(--bg-elevated)" stroke="var(--layer-cyan)" rx="2"/>
+                                            <text class="cad-label-cmd" x="12" y="35" style="font-size:7px">Arquitecto</text>
+                                            <text class="cad-label-cmd" x="12" y="48" style="font-size:7px">planta.dwg</text>
+                                            <rect x="5" y="72" width="60" height="22" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+                                            <text class="cad-label-cmd" x="10" y="87" style="font-size:7px">Estructural</text>
+                                            <polygon class="cad-arrow" points="68,45 82,45" style="fill:var(--amber)"/>
+                                            <polygon class="cad-arrow" points="68,83 82,83" style="fill:var(--amber)"/>
+                                            <rect x="85" y="20" width="110" height="74" fill="var(--bg-elevated)" stroke="var(--layer-yellow)" stroke-width="2" rx="3"/>
+                                            <text class="cad-label-cmd" x="92" y="35" style="font-size:8px">Plano colectivo</text>
+                                            <text class="cad-label-cmd" x="92" y="48" style="font-size:7px">colectivo.dwg</text>
+                                            <rect x="92" y="55" width="95" height="12" fill="none" stroke="var(--layer-cyan)" stroke-dasharray="2,2" rx="1"/>
+                                            <text class="cad-label" x="96" y="64" style="font-size:7px">Xref: planta.dwg</text>
+                                            <rect x="92" y="72" width="95" height="12" fill="none" stroke="var(--layer-green)" stroke-dasharray="2,2" rx="1"/>
+                                            <text class="cad-label" x="96" y="81" style="font-size:7px">Xref: estructura.dwg</text>
+                                            <rect x="210" y="30" width="65" height="55" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="2"/>
+                                            <text class="cad-label-cmd" x="217" y="48" style="font-size:7px">Cada uno</text>
+                                            <text class="cad-label-cmd" x="217" y="60" style="font-size:7px">edita su parte</text>
+                                            <text class="cad-label" x="217" y="78" style="font-size:7px;fill:var(--layer-cyan)">auto-actualiza</text>
+                                          </svg>
+                                        </div>
+                                        <div class="callout" style="margin-top:.8rem">
+                                          <span class="callout-title">Tip</span>
+                                          <span>Ideal para trabajo en equipo: cada profesional actualiza su archivo y el plano colectivo se refresca al abrirlo.</span>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                  </div>
+                                </div>
+                              </section
+          <section class="quiz-section" id="autoevaluacion">
+  <button class="quiz-toggle" type="button" aria-expanded="false" aria-controls="autoevaluacion-cuerpo">
+    <span class="quiz-toggle-icon"><i class="bi bi-chevron-down"></i></span>
+    <span class="quiz-toggle-title">
+      <span class="quiz-toggle-title-main">Autoevaluación del nivel</span>
+      <span class="quiz-toggle-title-sub">5 preguntas de repaso</span>
+    </span>
+  </button>
+  <div class="quiz-collapse" id="autoevaluacion-cuerpo">
+<p class="quiz-intro">Responde las 5 preguntas para repasar. Pulsa en la respuesta y verás la corrección al instante.</p>
+
+                                <div class="quiz" data-quiz="nivel3">
+
+                                  <div class="quiz-q" data-answer="A">
+                                    <p class="quiz-question">¿Qué evita la propiedad Annotative en textos y cotas?</p>
+                                    <button class="quiz-opt" data-key="A">A) Dibujar la misma cota o texto a varias escalas distintas</button>
+                                    <button class="quiz-opt" data-key="B">B) Tener que crear capas por cada escala del proyecto</button>
+                                    <button class="quiz-opt" data-key="C">C) El uso de viewports en la presentación</button>
+                                    <p class="quiz-feedback">Con la anotatividad dibujas una sola cota o texto y AutoCAD lo muestra con su altura de papel correcta en cada escala del viewport.</p>
+                                  </div>
+
+                                  <div class="quiz-q" data-answer="C">
+                                    <p class="quiz-question">Para que el cajetín sea editable sin explotar el bloque, ¿qué se añade a la definición?</p>
+                                    <button class="quiz-opt" data-key="A">A) Un Xclip</button>
+                                    <button class="quiz-opt" data-key="B">B) Un campo de hoja</button>
+                                    <button class="quiz-opt" data-key="C">C) Atributos definidos con ATTDEF</button>
+                                    <p class="quiz-feedback">Los atributos (ATTDEF) crean casillas de texto dentro del bloque que se rellenan en cada inserción y se editan con ATTEDIT o EATTEDIT.</p>
+                                  </div>
+
+                                  <div class="quiz-q" data-answer="B">
+                                    <p class="quiz-question">¿Qué significa un nombre de capa como "A-Muros" en la convención AIA?</p>
+                                    <button class="quiz-opt" data-key="A">A) Es el color amarillo asignado al muro</button>
+                                    <button class="quiz-opt" data-key="B">B) Disciplina de arquitectura, contenido muros</button>
+                                    <button class="quiz-opt" data-key="C">C) Un bloque llamado Muros dentro de la capa A</button>
+                                    <p class="quiz-feedback">El prefijo indica la disciplina (A = Arquitectura) y la palabra que sigue indica el contenido (Muros), de modo que cualquiera del equipo lo interpreta al instante.</p>
+                                  </div>
+
+                                  <div class="quiz-q" data-answer="A">
+                                    <p class="quiz-question">¿Qué organiza y automatiza el Sheet Set (SSM)?</p>
+                                    <button class="quiz-opt" data-key="A">A) La lista de láminas, su numeración y su publicación por lotes</button>
+                                    <button class="quiz-opt" data-key="B">B) Únicamente los grosores de línea de impresión</button>
+                                    <button class="quiz-opt" data-key="C">C) Las unidades y límites del espacio modelo</button>
+                                    <p class="quiz-feedback">El Sheet Set reúne todas las láminas del proyecto en un panel, numera automáticamente, sincroniza campos y publica todo con PUBLISH.</p>
+                                  </div>
+
+                                  <div class="quiz-q" data-answer="C">
+                                    <p class="quiz-question">En un layout con dos viewports a escalas 1:50 y 1:100, ¿qué ocurre con un texto anotativo?</p>
+                                    <button class="quiz-opt" data-key="A">A) Aparece solo en la escala 1:50</button>
+                                    <button class="quiz-opt" data-key="B">B) Se ve igual de grande en ambos si no tiene escala asignada</button>
+                                    <button class="quiz-opt" data-key="C">C) Se muestra con la misma altura de papel en ambos viewports</button>
+                                    <p class="quiz-feedback">Si el texto tiene asociadas ambas escalas de anotación, AutoCAD lo muestra con la misma altura de papel en los dos viewports, sin duplicarlo.</p>
+                                  </div>
+
+                                </div>
+  </div>
+</section></article>
+
+        <nav class="level-nav">
+          <span></span>
+          <a href="../nivel-4-modelado-3d/index.html" class="nav-next">
+            <span class="nav-label">Siguiente</span>
+            <span class="nav-title">Siguiente nivel <i class="bi bi-arrow-right"></i></span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container container-xl">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <div class="brand-cad mb-2"><img class="brand-logo" src="../../assets/img/autocad-2.svg" alt="AutoCAD"><span>AutoCAD Guía</span></div>
+        <p data-i18n="footer.disclaimer">Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.levels">Niveles</h6>
+        <ul class="list-unstyled">
+          <li><a href="../nivel-1-fundamentos/index.html">Fundamentos</a></li>
+          <li><a href="../nivel-2-dibujo-2d/index.html">Dibujo 2D</a></li>
+          <li><a href="../nivel-3-organizacion/index.html">Organización</a></li>
+          <li><a href="../nivel-4-modelado-3d/index.html">Modelado 3D</a></li>
+          <li><a href="../nivel-5-avanzado/index.html">Experto</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.guide">Guía</h6>
+        <ul class="list-unstyled">
+          <li><a href="../comandos.html">Comandos</a></li>
+          <li><a href="../ejemplos-visuales.html">Ejemplos</a></li>
+          <li><a href="../trucos.html">Trucos</a></li>
+          <li><a href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
+          <li><a href="../recursos.html">Recursos</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.follow">Síguenos</h6>
+        <div class="d-flex gap-2">
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-5 mb-4" style="border-color:var(--border-soft)">
+    <p class="mb-0 small" data-i18n="footer.copyright">© 2026 Victor Apaza. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<div class="command-line-bar" id="cmdBar">
+  <div class="command-line-inner">
+    <span class="prompt-sign" data-i18n="ui.command">Comando:</span>
+    <span id="cmd-typed"></span><span class="cursor-blink"></span>
+    <button class="cl-close" id="cmdClose" title="Ocultar" data-i18n-title="ui.hide"><i class="bi bi-x-lg"></i></button>
+  </div>
+</div>
+
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Buscar en la guía" data-i18n-aria="ui.search">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="bi bi-search"></i>
+      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar" data-i18n-placeholder="ui.searchPlaceholder">
+      <kbd class="search-kbd">ESC</kbd>
+    </div>
+    <div class="search-results" id="globalSearchResults">
+      <div class="search-empty" data-i18n="ui.typeToSearch">Escribe al menos 2 caracteres para buscar...</div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+<script src="../../assets/js/i18n.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script src="../../assets/js/animations.js"></script>
+<script src="../../assets/js/main.js"></script>
+
+</body>
+</html>

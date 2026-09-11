@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nivel 5 · Nivel experto — AutoCAD Guía</title>
+<link rel="canonical" href="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-5-avanzado/index.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-5-avanzado/index.html">
+<meta property="og:site_name" content="AutoCAD Guía">
+<meta property="og:title" content="Nivel 5 · Nivel experto — AutoCAD Guía">
+<meta property="og:description" content="Personalización de AutoCAD, AutoLISP, estándares CAD profesionales, buenas prácticas e integración con otros programas. Nivel 5 de la guía.">
+<meta property="og:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nivel 5 · Nivel experto — AutoCAD Guía">
+<meta name="twitter:description" content="Personalización de AutoCAD, AutoLISP, estándares CAD profesionales, buenas prácticas e integración con otros programas. Nivel 5 de la guía.">
+<meta name="twitter:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="description" content="Personalización de AutoCAD, AutoLISP, estándares CAD profesionales, buenas prácticas e integración con otros programas. Nivel 5 de la guía.">
+
+<link rel="icon" type="image/svg+xml" href="../../assets/img/autocad-2.svg">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../../assets/css/responsive.css">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Nivel · AutoCAD nivel experto",
+  "description": "CUI, AutoLISP, estándares CAD, integración, Dynamo, Python, BIM y optimización.",
+  "provider": {
+    "@type": "Organization",
+    "name": "AutoCAD Guía",
+    "sameAs": "https://apaza-victor.github.io/Gu-a-de-Autocad/"
+  },
+  "inLanguage": "es",
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "online",
+    "learningResourceType": "tutorial",
+    "inLanguage": "es"
+  }
+}
+  </script>
+</head>
+
+<body>
+
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+<nav class="navbar navbar-cad navbar-expand-lg">
+  <div class="container container-xl">
+    <a class="navbar-brand brand-cad" href="../../index.html">
+      <img class="brand-logo" src="../../assets/img/autocad-2.svg" alt="AutoCAD">
+      <span>AutoCAD<small class="d-block" data-i18n-html="brand.sub">Guía · Teoría &amp; Práctica</small></span>
+    </a>
+    <div class="d-flex align-items-center gap-2 nav-actions order-lg-last">
+      <button class="icon-btn" id="searchToggle" title="Buscar" data-i18n-title="ui.search"><i class="bi bi-search"></i></button>
+      <button class="icon-btn" id="themeToggle" title="Cambiar tema" data-i18n-title="ui.theme"><i class="bi bi-moon-stars"></i></button>
+      <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
+        <i class="bi bi-list fs-4"></i>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navCad">
+      <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../../index.html" data-i18n="nav.home">Inicio</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-cad dropdown-toggle active" href="#" data-bs-toggle="dropdown" data-i18n="nav.levels">Niveles</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="../nivel-1-fundamentos/index.html">Nivel 1 · Fundamentos</a></li>
+            <li><a class="dropdown-item" href="../nivel-2-dibujo-2d/index.html">Nivel 2 · Dibujo 2D</a></li>
+            <li><a class="dropdown-item" href="../nivel-3-organizacion/index.html">Nivel 3 · Organización</a></li>
+            <li><a class="dropdown-item" href="../nivel-4-modelado-3d/index.html">Nivel 4 · Modelado 3D</a></li>
+            <li><a class="dropdown-item active" href="../nivel-5-avanzado/index.html">Nivel 5 · Experto</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../comandos.html" data-i18n="nav.commands">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../ejemplos-visuales.html" data-i18n="nav.visual">Visuales</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../trucos.html" data-i18n="nav.tips">Trucos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../recursos.html" data-i18n="nav.resources">Recursos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../faq.html" data-i18n="nav.faq">FAQ</a></li>
+      </ul>
+
+      <div class="d-flex align-items-center gap-2 nav-actions-menu ms-lg-auto">
+        <span class="coord-readout d-none d-lg-inline-flex">X: <span id="coordX">000.00</span>&nbsp; Y: <span id="coordY">000.00</span></span>
+        <button class="lang-toggle" id="langToggle" title="Cambiar idioma" data-i18n-title="ui.lang">
+          <i class="bi bi-translate lang-toggle-flag"></i>
+          <span class="lang-toggle-text">EN</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header" id="main-content">
+  <div class="container container-xl">
+    <p class="crumb"><a href="../../index.html">Inicio</a> / <a href="../../index.html#niveles">Niveles</a> / Nivel experto</p>
+    <span class="eyebrow" data-i18n="lvl5.eyebrow">Nivel 05 · Experto</span>
+    <h1 data-i18n="lvl5.title">Nivel experto</h1>
+    <p class="subtitle" data-i18n="lvl5.subtitle">Personalización de AutoCAD, AutoLISP, estándares CAD profesionales, buenas prácticas e integración con otros programas. Nivel 5 de la guía.</p>
+    <div class="level-progress-bar" data-level-prefix="nivel5" data-level-total="17"><div class="fill"></div></div>
+    <p class="level-progress-label">0 de 17 temas completados · 0%</p>
+  </div>
+</header>
+
+<div class="content-layout">
+  <div class="container container-xl">
+    <div class="row">
+
+      <aside class="col-lg-3 mb-5 mb-lg-0">
+        <div class="toc-sidebar">
+          <h6 data-i18n="ui.inThisLevel">En este nivel</h6>
+          <ul class="toc-list">            <li><a href="personalizacion.html"><span class="toc-check"></span> Personalización de la interfaz</a></li>
+            <li><a href="autolisp.html"><span class="toc-check"></span> AutoLISP y scripts</a></li>
+            <li><a href="estandares.html"><span class="toc-check"></span> Estándares CAD</a></li>
+            <li><a href="buenas-practicas.html"><span class="toc-check"></span> Buenas prácticas</a></li>
+            <li><a href="campos-tablas.html"><span class="toc-check"></span> Campos y tablas de datos</a></li>
+            <li><a href="integracion.html"><span class="toc-check"></span> Integración con otros programas</a></li>
+            <li><a href="optimizacion.html"><span class="toc-check"></span> Optimización y solución de errores</a></li>
+            <li><a href="dynamo.html"><span class="toc-check"></span> Dynamo para AutoCAD</a></li>
+            <li><a href="python.html"><span class="toc-check"></span> Automatización con Python</a></li>
+            <li><a href="bim.html"><span class="toc-check"></span> AutoCAD y BIM</a></li>
+            <li><a href="interoperabilidad.html"><span class="toc-check"></span> Interoperabilidad CAD-BIM</a></li>
+            <li><a href="georreferenciacion.html"><span class="toc-check"></span> Georreferenciación y mapas</a></li>
+            <li><a href="dynamic-blocks.html"><span class="toc-check"></span> Bloques dinámicos</a></li>
+            <li><a href="diseno-parametrico.html"><span class="toc-check"></span> Diseño paramétrico</a></li>
+            <li><a href="cad-standards.html"><span class="toc-check"></span> Verificador de estándares</a></li>
+            <li><a href="publish.html"><span class="toc-check"></span> Publicación por lotes</a></li>
+            <li><a href="colaboracion.html"><span class="toc-check"></span> Colaboración y nube</a></li>
+            <li><a href="index.html#autoevaluacion"><span class="toc-check"></span> Autoevaluación</a></li></ul>
+          </div>
+      </aside>
+
+      <div class="col-lg-9">
+        <article class="content-article">
+          <section class="level-intro">
+            <h2>Contenido del nivel</h2>
+            <p>Este nivel se divide en 17 temas. Sigue el orden recomendado o salta directamente al que necesites.</p>
+                                                            <div class="row g-4 mt-1">
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                      <a href="personalizacion.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">01</div>
+                          <span class="level-tag">Tema 1</span>
+                          <h3>Personalización de la interfaz</h3>
+                          <p>Crear espacios de trabajo y comandos propios con el editor de personalización (CUI).</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+                      <a href="autolisp.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">02</div>
+                          <span class="level-tag">Tema 2</span>
+                          <h3>AutoLISP y scripts</h3>
+                          <p>Automatizar tareas repetitivas con scripts .scr y programas AutoLISP .lsp.</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+                      <a href="estandares.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">03</div>
+                          <span class="level-tag">Tema 3</span>
+                          <h3>Estándares CAD</h3>
+                          <p>Normas de capas, textos, acotación y archivos de dibujo en entornos profesionales.</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                      <a href="buenas-practicas.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">04</div>
+                          <span class="level-tag">Tema 4</span>
+                          <h3>Buenas prácticas</h3>
+                          <p>Flujos de trabajo limpios: orden, limpieza, copias de seguridad y versionado.</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+                      <a href="campos-tablas.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">05</div>
+                          <span class="level-tag">Tema 5</span>
+                          <h3>Campos y tablas de datos</h3>
+                          <p>Campos dinámicos, tablas de AutoCAD y extracción de datos a Excel (DATAEXTRACTION).</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+                      <a href="integracion.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">06</div>
+                          <span class="level-tag">Tema 6</span>
+                          <h3>Integración con otros programas</h3>
+                          <p>Conectar AutoCAD con Excel, SketchUp, Revit y otras aplicaciones de diseño.</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                      <a href="optimizacion.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">07</div>
+                          <span class="level-tag">Tema 7</span>
+                          <h3>Optimización y solución de errores</h3>
+                          <p>Reducir el peso del dibujo, purgar, auditar y resolver errores comunes.</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+                      <a href="dynamo.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">08</div>
+                          <span class="level-tag">Tema 8</span>
+                          <h3>Dynamo para AutoCAD</h3>
+                          <p>Programación visual con nodos para crear geometría y automatizar el modelado.</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+                      <a href="python.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">09</div>
+                          <span class="level-tag">Tema 9</span>
+                          <h3>Automatización con Python</h3>
+                          <p>Controlar AutoCAD desde Python con la librería pyautocad.</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                      <a href="bim.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">10</div>
+                          <span class="level-tag">Tema 10</span>
+                          <h3>AutoCAD y BIM</h3>
+                          <p>Cómo encaja AutoCAD en el flujo de información BIM y sus módulos verticales.</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+                      <a href="interoperabilidad.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">11</div>
+                          <span class="level-tag">Tema 11</span>
+                          <h3>Interoperabilidad CAD-BIM</h3>
+                          <p>Formatos de intercambio (DXF, IFC, STEP, PDF...) y herramientas de conversión.</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+                      <a href="georreferenciacion.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">12</div>
+                          <span class="level-tag">Tema 12</span>
+                          <h3>Georreferenciación y mapas</h3>
+                          <p>Ubicar el dibujo en coordenadas reales y conectarlo con cartografía GIS.</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                      <a href="dynamic-blocks.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">13</div>
+                          <span class="level-tag">Tema 13</span>
+                          <h3>Bloques dinámicos</h3>
+                          <p>Parámetros y acciones para crear bloques que se adaptan al instante.</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+                      <a href="diseno-parametrico.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">14</div>
+                          <span class="level-tag">Tema 14</span>
+                          <h3>Diseño paramétrico</h3>
+                          <p>Restricciones geométricas y de cota para controlar la geometría con parámetros.</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+                      <a href="cad-standards.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">15</div>
+                          <span class="level-tag">Tema 15</span>
+                          <h3>Verificador de estándares</h3>
+                          <p>Contratar estándares .dws y comprobar que todo el dibujo los cumple.</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                      <a href="publish.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">16</div>
+                          <span class="level-tag">Tema 16</span>
+                          <h3>Publicación por lotes</h3>
+                          <p>Imprimir o exportar decenas de láminas en un solo lote.</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+                      <a href="colaboracion.html" class="text-decoration-none">
+                        <div class="level-card">
+                          <div class="level-index">17</div>
+                          <span class="level-tag">Tema 17</span>
+                          <h3>Colaboración y nube</h3>
+                          <p>Compartir, editar y coordinar proyectos en la nube desde cualquier dispositivo.</p>
+                        </div>
+                      </a>
+                    </div>
+            </div>
+          </section>
+
+          <section class="inline-visual-examples" style="margin-top:2rem">
+                                <div class="visual-examples">
+                                  <h3 style="font-size:1.3rem;margin-bottom:1.2rem" data-i18n="vis.levelTitle">Ejemplos del nivel</h3>
+                                  <div class="diagram-grid cols-2">
+
+                                    <div class="diagram-card" data-aos="fade-up">
+                                      <div class="diagram-card-head"><h4><span class="cmd-badge">Automatización</span> Flujo AutoLISP</h4></div>
+                                      <div class="diagram-card-body">
+                                        <p data-i18n="vis.cui.desc">Modifica barras de herramientas, menús, teclas rápidas y paneles arrastrando comandos.</p>
+                                        <div class="diagram-canvas">
+                                          <svg viewBox="0 0 280 110">
+                                            <rect x="5" y="15" width="65" height="70" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="3"/>
+                                            <text class="cad-label-cmd" x="12" y="32" style="font-size:8px">Usuario</text>
+                                            <text class="cad-label-cmd" x="12" y="45" style="font-size:8px">escribe:</text>
+                                            <rect x="10" y="50" width="55" height="16" fill="var(--bg-surface)" stroke="var(--layer-amber)" rx="2"/>
+                                            <text class="cad-label-cmd" x="15" y="62" style="font-size:7px;fill:var(--amber)">MI-PLANTA</text>
+                                            <polygon class="cad-arrow" points="73,50 88,50" style="fill:var(--amber)"/>
+                                            <rect x="92" y="15" width="80" height="70" fill="var(--bg-elevated)" stroke="var(--layer-cyan)" rx="3"/>
+                                            <text class="cad-label-cmd" x="100" y="30" style="font-size:8px">AutoLISP</text>
+                                            <text class="cad-label-cmd" x="100" y="42" style="font-size:7px">1. Crea capas</text>
+                                            <text class="cad-label-cmd" x="100" y="52" style="font-size:7px">2. Dibuja ejes</text>
+                                            <text class="cad-label-cmd" x="100" y="62" style="font-size:7px">3. Añade cotas</text>
+                                            <text class="cad-label-cmd" x="100" y="72" style="font-size:7px">4. Inserta title</text>
+                                            <polygon class="cad-arrow" points="175,50 190,50" style="fill:var(--amber)"/>
+                                            <rect x="195" y="15" width="80" height="70" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="3"/>
+                                            <text class="cad-label-cmd" x="203" y="30" style="font-size:8px">AutoCAD</text>
+                                            <text class="cad-label-cmd" x="203" y="42" style="font-size:7px">ejecuta cada</text>
+                                            <text class="cad-label-cmd" x="203" y="52" style="font-size:7px">paso en</text>
+                                            <text class="cad-label-cmd" x="203" y="62" style="font-size:7px">segundos</text>
+                                            <text class="cad-label" x="140" y="100" style="font-size:8px">Un comando personalizado ejecuta 20 pasos automáticos</text>
+                                          </svg>
+                                        </div>
+                                        <div class="callout" style="margin-top:.8rem">
+                                          <span class="callout-title">Poder real</span>
+                                          <span>Con AutoLISP puedes crear comandos personalizados que ejecuten secuencias complejas con un solo atajo.</span>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div class="diagram-card" data-aos="fade-up" data-aos-delay="60">
+                                      <div class="diagram-card-head"><h4><span class="cmd-badge">Interfaz</span> Personalización CUI</h4><span class="key-inline">CUI</span></div>
+                                      <div class="diagram-card-body">
+                                        <div class="diagram-canvas">
+                                          <svg viewBox="0 0 280 110">
+                                            <text class="cad-label-cmd" x="5" y="14" style="font-size:8px">Editor de personalización:</text>
+                                            <rect x="5" y="20" width="130" height="75" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="3"/>
+                                            <text class="cad-label-cmd" x="12" y="34" style="font-size:7px">Árbol de comandos:</text>
+                                            <text class="cad-label" x="16" y="48" style="font-size:7px">▸ Mi grupo</text>
+                                            <text class="cad-label" x="22" y="58" style="font-size:7px">  ▸ Dibujar muro</text>
+                                            <text class="cad-label" x="22" y="68" style="font-size:7px">  ▸ Insertar cota</text>
+                                            <text class="cad-label" x="22" y="78" style="font-size:7px">  ▸ Exportar plancha</text>
+                                            <text class="cad-label" x="16" y="88" style="font-size:7px">▸ Atajos de teclado</text>
+                                            <polygon class="cad-arrow" points="138,57 152,57" style="fill:var(--amber)"/>
+                                            <rect x="155" y="20" width="120" height="75" fill="var(--bg-elevated)" stroke="var(--layer-cyan)" rx="3"/>
+                                            <text class="cad-label-cmd" x="162" y="34" style="font-size:7px">Barra personalizada:</text>
+                                            <rect x="162" y="40" width="28" height="22" fill="var(--bg-surface)" stroke="var(--layer-cyan)" rx="2"/>
+                                            <text class="cad-label" x="166" y="54" style="font-size:6px">Muro</text>
+                                            <rect x="195" y="40" width="28" height="22" fill="var(--bg-surface)" stroke="var(--layer-cyan)" rx="2"/>
+                                            <text class="cad-label" x="199" y="54" style="font-size:6px">Cota</text>
+                                            <rect x="228" y="40" width="28" height="22" fill="var(--bg-surface)" stroke="var(--layer-cyan)" rx="2"/>
+                                            <text class="cad-label" x="232" y="54" style="font-size:6px">Plan</text>
+                                            <text class="cad-label-cmd" x="162" y="80" style="font-size:7px">Arrastra comandos</text>
+                                            <text class="cad-label-cmd" x="162" y="90" style="font-size:7px">para crear tu barra</text>
+                                          </svg>
+                                        </div>
+                                        <div class="callout" style="margin-top:.8rem">
+                                          <span class="callout-title">Tip</span>
+                                          <span>Escribe CUI para abrir el editor. Crea un grupo de comandos personalizados para tu flujo de trabajo diario.</span>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div class="diagram-card" data-aos="fade-up">
+                                      <div class="diagram-card-head"><h4><span class="cmd-badge">Mantenimiento</span> PURGE y AUDIT</h4></div>
+                                      <div class="diagram-card-body">
+                                        <p data-i18n="vis.purge.desc">PURGE elimina capas, bloques y estilos no usados. AUDIT corrige errores internos del DWG.</p>
+                                        <div class="diagram-canvas">
+                                          <svg viewBox="0 0 280 90">
+                                            <text class="cad-label-cmd" x="5" y="14" style="font-size:8px">PURGE — limpieza de elementos no usados:</text>
+                                            <rect x="5" y="20" width="80" height="60" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="2"/>
+                                            <text class="cad-label-cmd" x="12" y="34" style="font-size:7px">Antes: 15MB</text>
+                                            <text class="cad-label" x="12" y="46" style="font-size:7px">Capas: 25</text>
+                                            <text class="cad-label" x="12" y="56" style="font-size:7px">Bloques: 40</text>
+                                            <text class="cad-label" x="12" y="66" style="font-size:7px">Estilos: 18</text>
+                                            <text class="cad-label" x="12" y="76" style="font-size:7px;fill:var(--layer-red)">muchos sin usar</text>
+                                            <text class="cad-label-cmd" x="100" y="50" style="font-size:16px;fill:var(--amber)">PURGE</text>
+                                            <rect x="135" y="20" width="80" height="60" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="2"/>
+                                            <text class="cad-label-cmd" x="142" y="34" style="font-size:7px">Después: 8MB</text>
+                                            <text class="cad-label" x="142" y="46" style="font-size:7px">Capas: 6</text>
+                                            <text class="cad-label" x="142" y="56" style="font-size:7px">Bloques: 12</text>
+                                            <text class="cad-label" x="142" y="66" style="font-size:7px">Estilos: 3</text>
+                                            <text class="cad-label" x="142" y="76" style="font-size:7px;fill:var(--layer-green)">solo los activos</text>
+                                            <rect x="225" y="20" width="55" height="60" fill="var(--bg-elevated)" stroke="var(--layer-cyan)" rx="2"/>
+                                            <text class="cad-label-cmd" x="232" y="34" style="font-size:7px">AUDIT</text>
+                                            <text class="cad-label" x="232" y="48" style="font-size:6px">Detecta:</text>
+                                            <text class="cad-label" x="232" y="58" style="font-size:6px">• Errores</text>
+                                            <text class="cad-label" x="232" y="68" style="font-size:6px">• Corromp.</text>
+                                            <text class="cad-label" x="232" y="78" style="font-size:6px;fill:var(--layer-green)">→ Repara</text>
+                                          </svg>
+                                        </div>
+                                        <div class="callout" style="margin-top:.8rem">
+                                          <span class="callout-title">Tip</span>
+                                          <span>Ejecuta PURGE periódicamente para reducir tamaño. AUDIT después de un cierre inesperado o si el archivo falla.</span>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div class="diagram-card" data-aos="fade-up" data-aos-delay="60">
+                                      <div class="diagram-card-head"><h4><span class="cmd-badge">CAD-BIM</span> Flujo interoperabilidad</h4></div>
+                                      <div class="diagram-card-body">
+                                        <p>Lleva tu plano de AutoCAD a un flujo BIM: exporta a IFC o vincula el DWG como referencia en Revit para coordinar arquitectura, estructura e instalaciones.</p>
+                                        <div class="diagram-canvas">
+                                          <svg viewBox="0 0 280 100">
+                                            <text class="cad-label-cmd" x="5" y="14" style="font-size:8px">Del plano CAD al modelo BIM:</text>
+                                            <rect x="5" y="20" width="55" height="55" fill="var(--bg-elevated)" stroke="var(--layer-cyan)" rx="3"/>
+                                            <text class="cad-label-cmd" x="12" y="38" style="font-size:8px">AutoCAD</text>
+                                            <text class="cad-label-cmd" x="12" y="50" style="font-size:7px">.DWG</text>
+                                            <text class="cad-label" x="12" y="68" style="font-size:7px;fill:var(--layer-cyan)">2D/3D</text>
+                                            <polygon class="cad-arrow" points="63,47 78,47" style="fill:var(--amber)"/>
+                                            <rect x="82" y="20" width="50" height="55" fill="var(--bg-elevated)" stroke="var(--border-soft)" rx="3"/>
+                                            <text class="cad-label-cmd" x="88" y="38" style="font-size:7px">IFC /</text>
+                                            <text class="cad-label-cmd" x="88" y="50" style="font-size:7px">RVT</text>
+                                            <text class="cad-label-cmd" x="88" y="62" style="font-size:7px">XDWG</text>
+                                            <polygon class="cad-arrow" points="135,47 150,47" style="fill:var(--amber)"/>
+                                            <rect x="155" y="20" width="60" height="55" fill="var(--bg-elevated)" stroke="var(--layer-green)" rx="3"/>
+                                            <text class="cad-label-cmd" x="162" y="38" style="font-size:7px">Revit /</text>
+                                            <text class="cad-label-cmd" x="162" y="50" style="font-size:7px">Navisworks</text>
+                                            <text class="cad-label-cmd" x="162" y="62" style="font-size:7px">.IFC</text>
+                                            <polygon class="cad-arrow" points="218,47 233,47" style="fill:var(--amber)"/>
+                                            <rect x="238" y="20" width="40" height="55" fill="var(--bg-elevated)" stroke="var(--layer-yellow)" rx="3"/>
+                                            <text class="cad-label-cmd" x="243" y="38" style="font-size:7px">BIM</text>
+                                            <text class="cad-label-cmd" x="243" y="50" style="font-size:7px">Model</text>
+                                            <text class="cad-label" x="5" y="92" style="font-size:8px">AutoCAD → formato intermedio → software BIM → modelo integrado</text>
+                                          </svg>
+                                        </div>
+                                        <div class="callout" style="margin-top:.8rem">
+                                          <span class="callout-title">Tendencia</span>
+                                          <span>El futuro del CAD profesional pasa por la integración BIM. AutoCAD sigue siendo el punto de partida sólido.</span>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                  </div>
+                                </div>
+                              </section
+          <section class="quiz-section" id="autoevaluacion">
+  <button class="quiz-toggle" type="button" aria-expanded="false" aria-controls="autoevaluacion-cuerpo">
+    <span class="quiz-toggle-icon"><i class="bi bi-chevron-down"></i></span>
+    <span class="quiz-toggle-title">
+      <span class="quiz-toggle-title-main">Autoevaluación del nivel</span>
+      <span class="quiz-toggle-title-sub">5 preguntas de repaso</span>
+    </span>
+  </button>
+  <div class="quiz-collapse" id="autoevaluacion-cuerpo">
+<p class="quiz-intro">Responde las 5 preguntas para comprobar lo aprendido. Pulsa la opción correcta y aparecerá la explicación con tu puntuación.</p>
+
+                                <div class="quiz" data-quiz="nivel5">
+                                  <div class="quiz-q" data-answer="B">
+                                    <p class="quiz-question">1. ¿Qué necesita un bloque para tener un grip de estiramiento?</p>
+                                    <button class="quiz-opt" data-key="A">A) Solo cambiar la escala con SCALE</button>
+                                    <button class="quiz-opt" data-key="B">B) Un parámetro de distancia y una acción de estiramiento (Stretch)</button>
+                                    <button class="quiz-opt" data-key="C">C) Añadir un estado de visibilidad</button>
+                                    <p class="quiz-feedback">El estiramiento combina un parámetro (que genera el grip) y una acción que aplica ese cambio a la geometría seleccionada.</p>
+                                  </div>
+
+                                  <div class="quiz-q" data-answer="A">
+                                    <p class="quiz-question">2. ¿Qué diferencia hay entre restricciones geométricas y de cota?</p>
+                                    <button class="quiz-opt" data-key="A">A) Las geométricas fijan relaciones (paralelo, tangente); las de cota fijan medidas con valores</button>
+                                    <button class="quiz-opt" data-key="B">B) Solo las de cota modifican el dibujo</button>
+                                    <button class="quiz-opt" data-key="C">C) Son lo mismo y se pueden usar indistintamente</button>
+                                    <p class="quiz-feedback">GEOMCONSTRAINT controla la forma y la posición relativa; DIMCONSTRAINT controla tamaños y distancias numéricas.</p>
+                                  </div>
+
+                                  <div class="quiz-q" data-answer="C">
+                                    <p class="quiz-question">3. ¿Para qué sirve un archivo de estándares .DWS?</p>
+                                    <button class="quiz-opt" data-key="A">A) Guarda una copia de seguridad del dibujo</button>
+                                    <button class="quiz-opt" data-key="B">B) Almacena los layouts de las plantillas</button>
+                                    <button class="quiz-opt" data-key="C">C) Define capas y estilos aprobados para comparar y corregir el dibujo</button>
+                                    <p class="quiz-feedback">El .DWS contiene las definiciones oficiales; CHECKSTANDARDS compara tu dibujo contra él y corrige las infracciones.</p>
+                                  </div>
+
+                                  <div class="quiz-q" data-answer="B">
+                                    <p class="quiz-question">4. ¿Qué hace PUBLISH?</p>
+                                    <button class="quiz-opt" data-key="A">A) Imprime solo el layout activo</button>
+                                    <button class="quiz-opt" data-key="B">B) Imprime o exporta un lote de planos a PDF o plotter en una sola operación</button>
+                                    <button class="quiz-opt" data-key="C">C) Convierte el DWG a formato IFC</button>
+                                    <p class="quiz-feedback">PUBLISH procesa una lista de hojas en lote; PLOT imprime un solo dibujo a la vez.</p>
+                                  </div>
+
+                                  <div class="quiz-q" data-answer="C">
+                                    <p class="quiz-question">5. En el Editor de bloques (BEDIT), ¿qué pasos crean un bloque dinámico?</p>
+                                    <button class="quiz-opt" data-key="A">A) Insertar el bloque y aplicar TRIM</button>
+                                    <button class="quiz-opt" data-key="B">B) Guardar con SAVE y cerrar el archivo</button>
+                                    <button class="quiz-opt" data-key="C">C) Crear un parámetro, añadir una acción y guardar con BSAVE antes de cerrar</button>
+                                    <p class="quiz-feedback">BEDIT abre el editor: se define el parámetro, se le asigna una acción (estirar, girar, visibilidad) y se guarda con BSAVE.</p>
+                                  </div>
+                                </div>
+  </div>
+</section></article>
+
+        <nav class="level-nav">
+          <span></span>
+          <a href="../comandos.html" class="nav-next">
+            <span class="nav-label">Siguiente</span>
+            <span class="nav-title">Diccionario de comandos <i class="bi bi-arrow-right"></i></span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container container-xl">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <div class="brand-cad mb-2"><img class="brand-logo" src="../../assets/img/autocad-2.svg" alt="AutoCAD"><span>AutoCAD Guía</span></div>
+        <p data-i18n="footer.disclaimer">Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.levels">Niveles</h6>
+        <ul class="list-unstyled">
+          <li><a href="../nivel-1-fundamentos/index.html">Fundamentos</a></li>
+          <li><a href="../nivel-2-dibujo-2d/index.html">Dibujo 2D</a></li>
+          <li><a href="../nivel-3-organizacion/index.html">Organización</a></li>
+          <li><a href="../nivel-4-modelado-3d/index.html">Modelado 3D</a></li>
+          <li><a href="../nivel-5-avanzado/index.html">Experto</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.guide">Guía</h6>
+        <ul class="list-unstyled">
+          <li><a href="../comandos.html">Comandos</a></li>
+          <li><a href="../ejemplos-visuales.html">Ejemplos</a></li>
+          <li><a href="../trucos.html">Trucos</a></li>
+          <li><a href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
+          <li><a href="../recursos.html">Recursos</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.follow">Síguenos</h6>
+        <div class="d-flex gap-2">
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-5 mb-4" style="border-color:var(--border-soft)">
+    <p class="mb-0 small" data-i18n="footer.copyright">© 2026 Victor Apaza. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<div class="command-line-bar" id="cmdBar">
+  <div class="command-line-inner">
+    <span class="prompt-sign" data-i18n="ui.command">Comando:</span>
+    <span id="cmd-typed"></span><span class="cursor-blink"></span>
+    <button class="cl-close" id="cmdClose" title="Ocultar" data-i18n-title="ui.hide"><i class="bi bi-x-lg"></i></button>
+  </div>
+</div>
+
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Buscar en la guía" data-i18n-aria="ui.search">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="bi bi-search"></i>
+      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar" data-i18n-placeholder="ui.searchPlaceholder">
+      <kbd class="search-kbd">ESC</kbd>
+    </div>
+    <div class="search-results" id="globalSearchResults">
+      <div class="search-empty" data-i18n="ui.typeToSearch">Escribe al menos 2 caracteres para buscar...</div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-lisp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+<script src="../../assets/js/i18n.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+<script src="../../assets/js/animations.js"></script>
+<script src="../../assets/js/main.js"></script>
+
+</body>
+</html>

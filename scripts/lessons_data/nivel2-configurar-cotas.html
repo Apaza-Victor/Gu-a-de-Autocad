@@ -1,0 +1,118 @@
+<p>Las cotas comunican las medidas reales del proyecto. Configurarlas bien en el <strong>Administrador de estilos de cota</strong> (<span class="cmd-inline">DIMSTYLE</span>/<span class="key-inline">D</span>) evita redibujar y garantiza que el plano se entienda sin dudas.</p>
+
+<h3>1. Abrir el Administrador de estilos de cota</h3>
+<p>Escribe <span class="cmd-inline">D</span> en la línea de comandos (o Anotar → Cotas → pestaña "Estilos"). Se abre una lista con los estilos disponibles. AutoCAD incluye por defecto <strong>ISO-25</strong>; conviene crear uno propio a partir de él.</p>
+
+<h3>2. Crear un estilo nuevo desde un estilo base</h3>
+
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Crea el estilo hijo</h4>
+    <p>En el Administrador pulsa <strong>Nuevo</strong>, escribe un nombre (ej.: <code>A-COTAS-50</code>) y elige "Empezar con: ISO-25". Pulsa Continuar.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Configura la pestaña Líneas</h4>
+    <p>En <strong>Líneas de cota</strong> deja los valores con pluma 0.15 y colorea "ByLayer" para heredar de la capa. En <strong>Líneas de extensión</strong> fija la separación (ej.: 0.5 mm en papel) y el offset del objeto (ej.: 2 mm).</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Ajusta flechas y símbolos</h4>
+    <p>En <strong>Flechas y símbolos</strong> elige el tipo de flecha (arquitectónico, oblicua o rellena), su tamaño (ej.: 2.5 mm) y el tamaño del círculo para marcas de centro.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">4</span>
+  <div class="lesson-body">
+    <h4>Configura el texto</h4>
+    <p>En <strong>Texto</strong> elige el estilo de texto (crea uno de cotas con <span class="cmd-inline">STYLE</span>), la altura (ej.: 3.5 mm), color ByLayer y la posición de las cotas lineales (centro, encima de la línea).</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">5</span>
+  <div class="lesson-body">
+    <h4>Ajusta unidades y precisión</h4>
+    <p>En <strong>Unidades principales</strong> selecciona la precisión (0 o 0.00), el separador decimal y la unidad (milímetros). En <strong>Tolerancias</strong> deja "Sin tolerancia" si no las usas.</p>
+  </div>
+</div>
+
+<h3>3. Ajustar el factor de escala global</h3>
+<p>El espesor de líneas de cota, flechas y texto se calculan con un factor global en <strong>Adaptar → Escala general</strong>, que multiplica todos los valores nominales. Para trabajo en metros con mm de papel puedes dejarlo en 1 y configurar bien la presentación; en espacio modelo conviene ajustarlo para que se vea proporcionado al imprimir. La forma más segura: <strong>usar el espacio papel</strong> (<span class="cmd-inline">PSPACE</span>) con cotas asociadas a la vista.</p>
+
+<h3>4. Definir el estilo actual y cotejar objetos</h3>
+<p>Cuando tengas tu estilo perfecto:</p>
+<ul>
+  <li>Hazlo <strong>actual</strong> (barril) y coteja con <span class="cmd-inline">DIMLIN</span> (<span class="key-inline">DLI</span>), <span class="cmd-inline">DIMANG</span> o <span class="cmd-inline">DIMRAD</span>.</li>
+  <li>Las cotas nuevas heredan las propiedades de <strong>la capa actual</strong>: crea una capa <code>A-Cotas</code> y ponla actual antes de acotar.</li>
+  <li>Si una cota sale con flechas raras o texto torcido, selecciónala y en <span class="cmd-inline">PROPERTIES</span> (<span class="key-inline">Ctrl+1</span>) reasigna el estilo.</li>
+</ul>
+
+<h3>5. Estilos "hijos" para radios y ángulos</h3>
+<p>Para que radios, diámetros o ángulos hereden tu estilo pero con ajustes propios, crea <strong>estilos secundarios</strong>: en el Administrador, sobre tu estilo, botón derecho → <strong>Nuevo subestilo</strong> (o usa la pestaña "Subestilos"). Configura solo lo distinto (ej.: flecha más pequeña en radios). Al acotar un radio, AutoCAD aplica automáticamente el subestilo correspondiente.</p>
+
+<h3>6. Trabajar en metros: unidades, tipo de línea y grosor</h3>
+<p>Si tu proyecto se dibuja en <strong>metros</strong> (habitual en arquitectura civil), revisa estos cuatro ajustes antes de acotar para que las medidas, los tipos de línea y los grosores se vean correctos.</p>
+
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Ajusta las unidades del dibujo</h4>
+    <p>Ejecuta <span class="cmd-inline">UNITS</span> y elige formato <strong>Decimal</strong>, precisión <code>0.00</code> o <code>0.000</code> y, en "Escala de inserción", <strong>Metros</strong>. Si el archivo está dibujado en milímetros y quieres trabajar en metros, escala todo el dibujo con <span class="cmd-inline">SCALE</span> por factor <code>0.001</code>.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Muestra las cotas en metros</h4>
+    <p>En <strong>DIMSTYLE → Unidades principales</strong> ajusta precisión y sufijo. Si dibujas en metros deja el <strong>factor de escala</strong> en <code>1</code> y añade el sufijo <code>m</code> para que un muro de 3 unidades se lea <code>3.00 m</code>. Si el dibujo está en milímetros pero quieres cotar en metros, pon factor de escala <code>0.001</code> (o "Escala lineal" en «Ajustar») y el mismo sufijo: 3000 mm se mostrará como <code>3.00 m</code>.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Escala el tipo de línea para metros</h4>
+    <p>Carga los patrones con <span class="cmd-inline">LINETYPE</span> (ej.: <code>CENTER</code> para ejes, <code>DASHED</code> para elementos ocultos). Los patrones se definieron para milímetros, así que en un dibujo en metros se ven <strong>sólidos</strong>: sube el <strong>factor de escala global</strong> (<span class="cmd-inline">LTSCALE</span>) hasta que se aprecie el patrón (empieza con <code>10</code>). Activa <span class="cmd-inline">PSLTSCALE</span> = 1 para que el patrón se vea igual en todas las vistas del papel.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">4</span>
+  <div class="lesson-body">
+    <h4>Asigna el grosor de línea</h4>
+    <p>El grosor se define en la <strong>capa</strong> (columna "Grosor de línea": 0.15, 0.25, 0.35, 0.50 mm) y <strong>no</strong> se escala con los metros: se imprime en mm de papel. Pulsa <span class="cmd-inline">LWT</span> en la barra de estado para verlo en pantalla. Si usas estilos de trazado por color (ctb), el grosor también se controla desde la tabla de estilos al imprimir.</p>
+  </div>
+</div>
+
+<div class="callout">
+  <span class="callout-title">Recapitulación en metros</span>
+  <strong>UNITS</strong> → Metros, precisión 0.00 · <strong>DIMSTYLE</strong> → factor 1 (+<code>m</code>) o 0.001 si dibujas en mm · <strong>LTSCALE</strong> → subir hasta ver el patrón (ej. 10) · <strong>Grosor</strong> → por capa, 0.15–0.50 mm.
+</div>
+
+<div class="table-scroll">
+<table class="table-cad">
+  <thead><tr><th>Comando</th><th>Qué hace</th><th>Atajo</th></tr></thead>
+  <tbody>
+    <tr><td><span class="cmd-inline">DIMSTYLE</span></td><td>Abre el Administrador de estilos de cota</td><td><span class="key-inline">D</span></td></tr>
+    <tr><td><span class="cmd-inline">DIMLINEAR</span></td><td>Acota distancias horizontales/verticales</td><td><span class="key-inline">DLI</span></td></tr>
+    <tr><td><span class="cmd-inline">DIMALIGNED</span></td><td>Acota distancias inclinadas</td><td><span class="key-inline">DAL</span></td></tr>
+    <tr><td><span class="cmd-inline">DIMRADIUS</span>/<span class="cmd-inline">DIMDIAMETER</span></td><td>Acota radios y diámetros</td><td><span class="key-inline">DRA</span>/<span class="key-inline">DDI</span></td></tr>
+    <tr><td><span class="cmd-inline">DIMANGULAR</span></td><td>Acota ángulos</td><td><span class="key-inline">DAN</span></td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout warn">
+  <span class="callout-title">Alerta</span>
+  Si las cotas "saltan" de tamaño al cambiar de ventana o imprimir, la causa casi siempre es el <strong>factor de escala</strong> o cotas dibujadas en espacio modelo mientras el título está en papel. Mantén un solo criterio: cotas asociadas a la vista en papel con vistas escaladas 1:1.
+</div>

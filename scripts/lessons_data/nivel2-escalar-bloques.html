@@ -1,0 +1,85 @@
+<p>Escalar un bloque significa cambiar su tamaño globalmente manteniendo la proporción (o no, si usas la escala no uniforme al insertar). El bloque se estira completo: sus textos, aristas y atributos se escalan juntos.</p>
+
+<h3>1. Escalar con el comando SCALE (paso a paso)</h3>
+
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Selecciona el bloque</h4>
+    <p>Haz clic sobre el bloque o selecciónalo con una ventana.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Ejecuta SCALE</h4>
+    <p>Escribe <span class="cmd-inline">SCALE</span> o <span class="key-inline">SC</span> en la línea de comandos y pulsa Enter.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Indica el punto base</h4>
+    <p>Haz clic en un punto de referencia (el vértice o centro del bloque). El bloque crecerá o encogerá manteniendo ese punto fijo.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">4</span>
+  <div class="lesson-body">
+    <h4>Escribe el factor de escala</h4>
+    <p>Teclea el factor: <strong>2</strong> = dobla su tamaño, <strong>0.5</strong> = lo reduce a la mitad, <strong>1</strong> = no cambia. Pulsa Enter.</p>
+  </div>
+</div>
+
+<h3>2. Escala por referencia (el truco más usado)</h3>
+<p>Cuando no sabes el factor exacto pero sí una medida del bloque, usa la opción <strong>Referencia</strong>:</p>
+
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Ejecuta SCALE con la opción R</h4>
+    <p>Tras el punto base, escribe <span class="key-inline">R</span> (Referencia) y pulsa Enter.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Marca la longitud de referencia</h4>
+    <p>Haz clic en dos puntos del bloque que sepas cuánto miden (por ejemplo un muro que debería ser de 3.00 m).</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Escribe la longitud deseada</h4>
+    <p>Teclea el valor real (<code>3000</code> si trabajas en milímetros). AutoCALCULATES el factor: si el muro medía 500 y quieres 3000, escala x6 automáticamente.</p>
+  </div>
+</div>
+
+<h3>3. Escala no uniforme (X, Y, Z) al insertar</h3>
+<p>Un bloque insertado puede tener factores distintos en cada eje (útil para apilar o aplanar). Escribe <span class="cmd-inline">INSERT</span> (<span class="key-inline">I</span>), elige el bloque y en el diálogo marca la casilla <strong>Especificar en pantalla</strong> o escribe valores distintos en X, Y y Z. Ten cuidado: con escala no uniforme, los objetos 3D pueden deformarse.</p>
+
+<h3>4. Escalar desde un clic: los grips</h3>
+<p>Selecciona el bloque y pulsa <span class="key-inline">Esc</span> una vez para dejar solo el punto base activo. Escribe <span class="key-inline">SC</span> y teclear el factor: así escalas sin ejecutar el comando completo. También puedes hacer clic en el grip azul y escribir <span class="key-inline">ES</span> en el menú contextual para escala rápida múltiple.</p>
+
+<div class="table-scroll">
+<table class="table-cad">
+  <thead><tr><th>Comando</th><th>Qué hace</th><th>Nota</th></tr></thead>
+  <tbody>
+    <tr><td><span class="cmd-inline">SCALE</span></td><td>Escala objetos manteniendo proporción</td><td>Atajo <span class="key-inline">SC</span></td></tr>
+    <tr><td><span class="cmd-inline">INSERT</span></td><td>Inserta un bloque con escala X/Y/Z</td><td>Atajo <span class="key-inline">I</span></td></tr>
+    <tr><td><span class="cmd-inline">REFERENCE</span></td><td>Escala un bloque Xref con longitud de referencia</td><td>Constructor de objetos</td></tr>
+    <tr><td><span class="cmd-inline">ALIGN</span></td><td>Mueve y escala un objeto para encajarlo con otro</td><td>Atajo <span class="key-inline">AL</span></td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout">
+  <span class="callout-title">Tip</span>
+  Para bloques de mobiliario insertados a escala equivocada, el método más limpio es: borrar la inserción y volver a <span class="cmd-inline">INSERT</span> con el factor correcto. Así evitas "bloques raros" con escalas X/Y descentradas.
+</div>

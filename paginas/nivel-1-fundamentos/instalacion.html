@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instalación, requisitos y tipos de licencia · Nivel 1 — AutoCAD Guía</title>
+<link rel="canonical" href="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/instalacion.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/instalacion.html">
+<meta property="og:site_name" content="AutoCAD Guía">
+<meta property="og:title" content="Instalación, requisitos y tipos de licencia · Nivel 1 — AutoCAD Guía">
+<meta property="og:description" content="Cómo instalar AutoCAD, requisitos mínimos orientativos y los distintos tipos de licencia disponibles.">
+<meta property="og:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Instalación, requisitos y tipos de licencia · Nivel 1 — AutoCAD Guía">
+<meta name="twitter:description" content="Cómo instalar AutoCAD, requisitos mínimos orientativos y los distintos tipos de licencia disponibles.">
+<meta name="twitter:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="description" content="Cómo instalar AutoCAD, requisitos mínimos orientativos y los distintos tipos de licencia disponibles.">
+
+<link rel="icon" type="image/svg+xml" href="../../assets/img/autocad-2.svg">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../../assets/css/responsive.css">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Nivel · Fundamentos de AutoCAD",
+  "description": "Qué es AutoCAD, instalación y licencias, interfaz, sistema de coordenadas y configuración inicial.",
+  "provider": {
+    "@type": "Organization",
+    "name": "AutoCAD Guía",
+    "sameAs": "https://apaza-victor.github.io/Gu-a-de-Autocad/"
+  },
+  "inLanguage": "es",
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "online",
+    "learningResourceType": "tutorial",
+    "inLanguage": "es"
+  }
+}
+  </script>
+</head>
+
+<body>
+
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+<nav class="navbar navbar-cad navbar-expand-lg">
+  <div class="container container-xl">
+    <a class="navbar-brand brand-cad" href="../../index.html">
+      <img class="brand-logo" src="../../assets/img/autocad-2.svg" alt="AutoCAD">
+      <span>AutoCAD<small class="d-block" data-i18n-html="brand.sub">Guía · Teoría &amp; Práctica</small></span>
+    </a>
+    <div class="d-flex align-items-center gap-2 nav-actions order-lg-last">
+      <button class="icon-btn" id="searchToggle" title="Buscar" data-i18n-title="ui.search"><i class="bi bi-search"></i></button>
+      <button class="icon-btn" id="themeToggle" title="Cambiar tema" data-i18n-title="ui.theme"><i class="bi bi-moon-stars"></i></button>
+      <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
+        <i class="bi bi-list fs-4"></i>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navCad">
+      <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../../index.html" data-i18n="nav.home">Inicio</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-cad dropdown-toggle active" href="#" data-bs-toggle="dropdown" data-i18n="nav.levels">Niveles</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item active" href="../nivel-1-fundamentos/index.html">Nivel 1 · Fundamentos</a></li>
+            <li><a class="dropdown-item" href="../nivel-2-dibujo-2d/index.html">Nivel 2 · Dibujo 2D</a></li>
+            <li><a class="dropdown-item" href="../nivel-3-organizacion/index.html">Nivel 3 · Organización</a></li>
+            <li><a class="dropdown-item" href="../nivel-4-modelado-3d/index.html">Nivel 4 · Modelado 3D</a></li>
+            <li><a class="dropdown-item" href="../nivel-5-avanzado/index.html">Nivel 5 · Experto</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../comandos.html" data-i18n="nav.commands">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../ejemplos-visuales.html" data-i18n="nav.visual">Visuales</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../trucos.html" data-i18n="nav.tips">Trucos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../recursos.html" data-i18n="nav.resources">Recursos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../faq.html" data-i18n="nav.faq">FAQ</a></li>
+      </ul>
+
+      <div class="d-flex align-items-center gap-2 nav-actions-menu ms-lg-auto">
+        <span class="coord-readout d-none d-lg-inline-flex">X: <span id="coordX">000.00</span>&nbsp; Y: <span id="coordY">000.00</span></span>
+        <button class="lang-toggle" id="langToggle" title="Cambiar idioma" data-i18n-title="ui.lang">
+          <i class="bi bi-translate lang-toggle-flag"></i>
+          <span class="lang-toggle-text">EN</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header" id="main-content">
+  <div class="container container-xl">
+    <p class="crumb"><a href="../../index.html">Inicio</a> / <a href="../../index.html#niveles">Niveles</a> / <a href="index.html">Fundamentos de AutoCAD</a> / Tema 2</p>
+    <span class="eyebrow" data-i18n="lvl1.eyebrow">Nivel 01 · Básico</span>
+    <h1>Instalación, requisitos y tipos de licencia</h1>
+    <div class="level-progress-bar" data-level-prefix="nivel1" data-level-total="13"><div class="fill"></div></div>
+    <p class="level-progress-label">0 de 13 temas completados · 0%</p>
+  </div>
+</header>
+
+<div class="content-layout">
+  <div class="container container-xl">
+    <div class="row">
+
+      <aside class="col-lg-3 mb-5 mb-lg-0">
+        <div class="toc-sidebar">
+          <h6 data-i18n="ui.inThisLevel">En este nivel</h6>
+          <ul class="toc-list">
+            <li><a href="que-es.html" data-toc="nivel1-que-es"><span class="toc-check"></span> Qué es AutoCAD</a></li>
+            <li><a href="instalacion.html" data-toc="nivel1-instalacion"><span class="toc-check"></span> Instalación y licencias</a></li>
+            <li><a href="interfaz.html" data-toc="nivel1-interfaz"><span class="toc-check"></span> Interfaz de usuario</a></li>
+            <li><a href="coordenadas.html" data-toc="nivel1-coordenadas"><span class="toc-check"></span> Sistema de coordenadas</a></li>
+            <li><a href="osnap-basico.html" data-toc="nivel1-osnap-basico"><span class="toc-check"></span> Referencia a objetos (OSNAP)</a></li>
+            <li><a href="configuracion.html" data-toc="nivel1-configuracion"><span class="toc-check"></span> Configuración inicial</a></li>
+            <li><a href="archivos.html" data-toc="nivel1-archivos"><span class="toc-check"></span> Gestión de archivos</a></li>
+            <li><a href="tipos-archivo.html" data-toc="nivel1-tipos-archivo"><span class="toc-check"></span> Tipos de archivo</a></li>
+            <li><a href="gestion-dibujo.html" data-toc="nivel1-gestion-dibujo"><span class="toc-check"></span> Mantener el dibujo sano</a></li>
+            <li><a href="zoom.html" data-toc="nivel1-zoom"><span class="toc-check"></span> Zoom y navegación</a></li>
+            <li><a href="atajos-esenciales.html" data-toc="nivel1-atajos-esenciales"><span class="toc-check"></span> Comandos y atajos esenciales</a></li>
+            <li><a href="primer-dibujo.html" data-toc="nivel1-primer-dibujo"><span class="toc-check"></span> Primer dibujo guiado</a></li>
+            <li><a href="index.html#autoevaluacion"><span class="toc-check"></span> Autoevaluación</a></li>
+          </ul>
+          <hr style="border-color:var(--border-soft)" class="my-4">
+          <a href="index.html" class="btn-cad-outline w-100 text-center d-block"><i class="bi bi-arrow-left"></i> Volver al índice</a>
+        </div>
+      </aside>
+
+      <div class="col-lg-9">
+        <article class="content-article">
+
+          <section id="instalacion" data-topic="nivel1-instalacion">
+                                          <h2><span class="sec-num">2</span><span data-i18n="lvl1.s2.title">Instalación, requisitos y tipos de licencia</span></h2>
+
+                                          <h3>Requisitos mínimos orientativos</h3>
+                                          <table class="table-cad">
+                                            <thead>
+                                              <tr><th>Componente</th><th>Requisito orientativo</th></tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr><td>Sistema operativo</td><td>Windows 10/11 de 64 bits (versión Mac disponible con menos herramientas)</td></tr>
+                                              <tr><td>Procesador</td><td>2.5–3 GHz o superior</td></tr>
+                                              <tr><td>Memoria RAM</td><td>8 GB mínimo, 16 GB recomendado para 3D</td></tr>
+                                              <tr><td>Espacio en disco</td><td>10 GB libres para la instalación</td></tr>
+                                              <tr><td>Tarjeta gráfica</td><td>1 GB VRAM mínimo, dedicada recomendada para 3D</td></tr>
+                                            </tbody>
+                                          </table>
+                                          <p class="text-muted-custom small">Estos valores varían según la versión del programa; verifica siempre los requisitos oficiales antes de instalar.</p>
+
+                                          <h3>Tipos de licencia</h3>
+                                          <ul>
+                                            <li><strong>Suscripción comercial:</strong> pago mensual o anual, con acceso a todas las actualizaciones.</li>
+                                            <li><strong>Licencia educativa gratuita:</strong> Autodesk ofrece acceso gratuito de un año (renovable) a estudiantes y docentes verificados a través de su portal de educación.</li>
+                                            <li><strong>Versión de prueba (trial):</strong> acceso completo por tiempo limitado, útil para evaluar el programa.</li>
+                                            <li><strong>AutoCAD Web / móvil:</strong> versión reducida en navegador o app, útil para consultar y editar planos sin instalar el programa completo.</li>
+                                          </ul>
+
+                                          <div class="callout warn">
+                                            <span class="callout-title">Importante</span>
+                                            Verifica siempre la vigencia de precios, requisitos y condiciones de licencia directamente en el sitio oficial de Autodesk, ya que cambian con frecuencia.
+                                          </div>
+
+                              <h3>Dónde y cómo descargar AutoCAD</h3>
+                                  <ol>
+                                    <li>Crea una cuenta en el portal de Autodesk y verifica tu correo.</li>
+                                    <li>Entra en <em>Productos y servicios</em> y elige tu versión de AutoCAD.</li>
+                                    <li>Descarga el instalador (varios GB) y ejecútalo con permisos de administrador.</li>
+                                    <li>Sigue el asistente aceptando la licencia y los componentes por defecto.</li>
+                                    <li>Al abrir AutoCAD por primera vez, inicia sesión con tu cuenta Autodesk.</li>
+                                  </ol>
+                                  <div class="callout">
+                                    <span class="callout-title">Versión de prueba (Trial)</span>
+                                    <span>Si aún no decides, la <strong>versión de prueba</strong> es la misma aplicación completa por tiempo limitado: sirve para comprobar el rendimiento con tus propios archivos antes de pagar.</span>
+                                  </div>
+
+                                  <h3>Licencia educativa gratuita</h3>
+                                  <p>Autodesk ofrece <strong>acceso gratuito</strong> a estudiantes, docentes e instituciones a través de su portal de educación. El acceso se gestiona por año lectivo y requiere verificación.</p>
+                                  <div class="lesson-step">
+                                    <span class="lesson-num">1</span>
+                                    <div class="lesson-body">
+                                      <h4>Solicita tu acceso educativo</h4>
+                                      <p>Entra al programa de educación de Autodesk y registra tu correo institucional (.edu o el que tu centro reconozca).</p>
+                                    </div>
+                                  </div>
+                                  <div class="lesson-step">
+                                    <span class="lesson-num">2</span>
+                                    <div class="lesson-body">
+                                      <h4>Descarga AutoCAD dentro de Education</h4>
+                                      <p>Una vez verificado, el portal te permite descargar la licencia de estudiante, que funciona como la versión comercial.</p>
+                                    </div>
+                                  </div>
+                                  <div class="lesson-step">
+                                    <span class="lesson-num">3</span>
+                                    <div class="lesson-body">
+                                      <h4>Renueva cada año</h4>
+                                      <p>La licencia educativa se renueva anualmente mientras sigas activo como estudiante o docente. Recuerda renovarla antes de que expire.</p>
+                                    </div>
+                                  </div>
+
+                                  <h3>AutoCAD frente a AutoCAD LT</h3>
+                                  <table class="table-cad">
+                                    <thead><tr><th>Característica</th><th>AutoCAD</th><th>AutoCAD LT</th></tr></thead>
+                                    <tbody>
+                                      <tr><td>Dibujo 2D y anotación</td><td>Sí</td><td>Sí</td></tr>
+                                      <tr><td>Modelado y sólidos 3D</td><td>Sí</td><td>No (solo visualiza archivos 3D)</td></tr>
+                                      <tr><td>Personalización con LISP / scripts</td><td>Sí</td><td>No</td></tr>
+                                      <tr><td>Herramientas de automatización avanzadas</td><td>Sí</td><td>Limitadas</td></tr>
+                                      <tr><td>Precio</td><td>Mayor</td><td>Menor</td></tr>
+                                    </tbody>
+                                  </table>
+                                  <div class="callout">
+                                    <span class="callout-title">Consejo</span>
+                                    <span>Si tu trabajo es solo 2D y no requieres LISP, LT puede ser suficiente. Para seguir esta guía (incluye 3D) necesitas <strong>AutoCAD completo</strong> o la licencia educativa.</span>
+                                  </div>
+
+                                  <h3>Mini ejercicio: conoce tu instalación</h3>
+                                  <div class="lesson-step">
+                                    <span class="lesson-num">1</span>
+                                    <div class="lesson-body">
+                                      <h4>Comprueba tu versión</h4>
+                                      <p>Escribe <span class="cmd-inline">ABOUT</span> en la línea de comandos y observa la versión, build y tipo de licencia.</p>
+                                    </div>
+                                  </div>
+                                  <div class="lesson-step">
+                                    <span class="lesson-num">2</span>
+                                    <div class="lesson-body">
+                                      <h4>Comprueba los requisitos reales</h4>
+                                      <p>Compara los requisitos de tu equipo (Windows + RAM + tarjeta gráfica) con los oficiales y anota cuál de tus componentes es el "cuello de botella".</p>
+                                    </div>
+                                  </div>
+
+          <!-- ENRIQ START -->
+          <h3>Dónde y cómo descargar AutoCAD</h3>
+              <ol>
+                <li>Crea una cuenta en el portal de Autodesk y verifica tu correo.</li>
+                <li>Entra en <em>Productos y servicios</em> y elige tu versión de AutoCAD.</li>
+                <li>Descarga el instalador (varios GB) y ejecútalo con permisos de administrador.</li>
+                <li>Sigue el asistente aceptando la licencia y los componentes por defecto.</li>
+                <li>Al abrir AutoCAD por primera vez, inicia sesión con tu cuenta Autodesk.</li>
+              </ol>
+              <div class="callout">
+                <span class="callout-title">Versión de prueba (Trial)</span>
+                <span>Si aún no decides, la <strong>versión de prueba</strong> es la misma aplicación completa por tiempo limitado: sirve para comprobar el rendimiento con tus propios archivos antes de pagar.</span>
+              </div>
+
+              <h3>Licencia educativa gratuita</h3>
+              <p>Autodesk ofrece <strong>acceso gratuito</strong> a estudiantes, docentes e instituciones a través de su portal de educación. El acceso se gestiona por año lectivo y requiere verificación.</p>
+              <div class="lesson-step">
+                <span class="lesson-num">1</span>
+                <div class="lesson-body">
+                  <h4>Solicita tu acceso educativo</h4>
+                  <p>Entra al programa de educación de Autodesk y registra tu correo institucional (.edu o el que tu centro reconozca).</p>
+                </div>
+              </div>
+              <div class="lesson-step">
+                <span class="lesson-num">2</span>
+                <div class="lesson-body">
+                  <h4>Descarga AutoCAD dentro de Education</h4>
+                  <p>Una vez verificado, el portal te permite descargar la licencia de estudiante, que funciona como la versión comercial.</p>
+                </div>
+              </div>
+              <div class="lesson-step">
+                <span class="lesson-num">3</span>
+                <div class="lesson-body">
+                  <h4>Renueva cada año</h4>
+                  <p>La licencia educativa se renueva anualmente mientras sigas activo como estudiante o docente. Recuerda renovarla antes de que expire.</p>
+                </div>
+              </div>
+
+              <h3>AutoCAD frente a AutoCAD LT</h3>
+              <table class="table-cad">
+                <thead><tr><th>Característica</th><th>AutoCAD</th><th>AutoCAD LT</th></tr></thead>
+                <tbody>
+                  <tr><td>Dibujo 2D y anotación</td><td>Sí</td><td>Sí</td></tr>
+                  <tr><td>Modelado y sólidos 3D</td><td>Sí</td><td>No (solo visualiza archivos 3D)</td></tr>
+                  <tr><td>Personalización con LISP / scripts</td><td>Sí</td><td>No</td></tr>
+                  <tr><td>Herramientas de automatización avanzadas</td><td>Sí</td><td>Limitadas</td></tr>
+                  <tr><td>Precio</td><td>Mayor</td><td>Menor</td></tr>
+                </tbody>
+              </table>
+              <div class="callout">
+                <span class="callout-title">Consejo</span>
+                <span>Si tu trabajo es solo 2D y no requieres LISP, LT puede ser suficiente. Para seguir esta guía (incluye 3D) necesitas <strong>AutoCAD completo</strong> o la licencia educativa.</span>
+              </div>
+
+              <h3>Mini ejercicio: conoce tu instalación</h3>
+              <div class="lesson-step">
+                <span class="lesson-num">1</span>
+                <div class="lesson-body">
+                  <h4>Comprueba tu versión</h4>
+                  <p>Escribe <span class="cmd-inline">ABOUT</span> en la línea de comandos y observa la versión, build y tipo de licencia.</p>
+                </div>
+              </div>
+              <div class="lesson-step">
+                <span class="lesson-num">2</span>
+                <div class="lesson-body">
+                  <h4>Comprueba los requisitos reales</h4>
+                  <p>Compara los requisitos de tu equipo (Windows + RAM + tarjeta gráfica) con los oficiales y anota cuál de tus componentes es el "cuello de botella".</p>
+                </div>
+              </div>
+    
+          <!-- ENRIQ END -->
+          <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+        </article>
+
+        <nav class="level-nav">
+          <a href="que-es.html">
+            <span class="nav-label">Anterior</span>
+            <span class="nav-title"><i class="bi bi-arrow-left"></i> Qué es AutoCAD</span>
+          </a>
+          <a href="interfaz.html" class="nav-next">
+            <span class="nav-label">Siguiente</span>
+            <span class="nav-title">Interfaz de usuario <i class="bi bi-arrow-right"></i></span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container container-xl">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <div class="brand-cad mb-2"><img class="brand-logo" src="../../assets/img/autocad-2.svg" alt="AutoCAD"><span>AutoCAD Guía</span></div>
+        <p data-i18n="footer.disclaimer">Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.levels">Niveles</h6>
+        <ul class="list-unstyled">
+          <li><a href="../nivel-1-fundamentos/index.html">Fundamentos</a></li>
+          <li><a href="../nivel-2-dibujo-2d/index.html">Dibujo 2D</a></li>
+          <li><a href="../nivel-3-organizacion/index.html">Organización</a></li>
+          <li><a href="../nivel-4-modelado-3d/index.html">Modelado 3D</a></li>
+          <li><a href="../nivel-5-avanzado/index.html">Experto</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.guide">Guía</h6>
+        <ul class="list-unstyled">
+          <li><a href="../comandos.html">Comandos</a></li>
+          <li><a href="../ejemplos-visuales.html">Ejemplos</a></li>
+          <li><a href="../trucos.html">Trucos</a></li>
+          <li><a href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
+          <li><a href="../recursos.html">Recursos</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.follow">Síguenos</h6>
+        <div class="d-flex gap-2">
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-5 mb-4" style="border-color:var(--border-soft)">
+    <p class="mb-0 small" data-i18n="footer.copyright">© 2026 Victor Apaza. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<div class="command-line-bar" id="cmdBar">
+  <div class="command-line-inner">
+    <span class="prompt-sign" data-i18n="ui.command">Comando:</span>
+    <span id="cmd-typed"></span><span class="cursor-blink"></span>
+    <button class="cl-close" id="cmdClose" title="Ocultar" data-i18n-title="ui.hide"><i class="bi bi-x-lg"></i></button>
+  </div>
+</div>
+
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Buscar en la guía" data-i18n-aria="ui.search">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="bi bi-search"></i>
+      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar" data-i18n-placeholder="ui.searchPlaceholder">
+      <kbd class="search-kbd">ESC</kbd>
+    </div>
+    <div class="search-results" id="globalSearchResults">
+      <div class="search-empty" data-i18n="ui.typeToSearch">Escribe al menos 2 caracteres para buscar...</div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+<script src="../../assets/js/i18n.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/animations.js"></script>
+<script src="../../assets/js/main.js"></script>
+
+</body>
+</html>

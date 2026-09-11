@@ -1,0 +1,114 @@
+<p>Las <strong>zapatas</strong> (cimentaciones aisladas), los <strong>machones</strong> (pilares de fábrica en esquinas) y las <strong>columnas</strong> son los elementos que transmiten la carga al terreno. Dibujarlos bien en planta y sección es imprescindible para el ingeniero estructural.</p>
+
+<div class="callout">
+  <span class="callout-title">Definiciones rápidas</span>
+  <strong>Zapata:</strong> elemento de cimentación que reparte la carga de un pilar/muro al suelo. <strong>Machón:</strong> pilar macizo de fábrica (ladrillo/piedra) en esquinas o contrafuertes. <strong>Columna:</strong> pilar estructural de hormigón armado o acero.
+</div>
+
+<h3>1. Dibujar una zapata en planta (paso a paso)</h3>
+
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Dibuja el contorno de la zapata</h4>
+    <p>Con <span class="cmd-inline">RECTANG</span> (<span class="key-inline">REC</span>) dibuja el cuadro de la zapata según medida del cálculo (ej.: 1.00 × 1.00 m). Ponlo en una capa <code>E-Zapatas</code> con línea Continua de grosor 0.35.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Marca las armaduras</h4>
+    <p>Dibuja las barras con <span class="cmd-inline">LINE</span> o <span class="cmd-inline">CIRCLE</span> (secciones de barra redonda) en una capa <code>E-Acero</code>. Sobre la vista en planta dibuja la parrilla de acero inferior (retícula).</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Coloca cotas y referencias</h4>
+    <p>Acota las dimensiones de la zapata y marca su eje de referencia. Añade el <strong>texto de la zapata</strong> (ej.: "Z-1") mediante un bloque de cajetín.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">4</span>
+  <div class="lesson-body">
+    <h4>Añade el material y el nivel</h4>
+    <p>Con <span class="cmd-inline">HATCH</span> rellena el hormigón con un patrón (por ejemplo hormigón alzado en sección) y escribe el nivel (<span class="cmd-inline">TEXT</span>): "Nivel -1.50" para la cara superior de la zapata.</p>
+  </div>
+</div>
+
+<h3>2. Zapata en sección (corte)</h3>
+<p>Además de la planta, el ingeniero necesita el corte para ver la altura de la zapata y su armado:</p>
+
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Dibuja el perfil</h4>
+    <p>Con <span class="cmd-inline">RECTANG</span> o <span class="cmd-inline">LINE</span> dibuja la zapata en alzado (ej.: base de 1.00 m y altura de 0.40 m de canto).</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Representa el hormigón</h4>
+    <p>Rellena con un <strong>sombreado de hormigón alzado</strong> (patrón <code>AR-CONC</code>) con transparencia. La sección de la barra vertical se marca con círculos pequeños.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Añade acotación de altura y niveles</h4>
+    <p>Acota el canto de la zapata y marca el nivel del terreno natural y el de excavación.</p>
+  </div>
+</div>
+
+<h3>3. Dibujar un machón</h3>
+
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Planta del machón</h4>
+    <p>Dibuja un <strong>rectángulo macizo</strong> en la esquina con <span class="cmd-inline">RECTANG</span>, del tamaño definido (ej.: 0.30 × 0.30 m). El machón es masa de fábrica: no lleva "vacio interior".</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Marca su posición en el muro</h4>
+    <p>Colócalo coincidiendo con el eje del muro de la esquina (con <span class="cmd-inline">SNAP</span> o referencias a objeto). Pónlo en una capa propia <code>A-Machones</code>.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Nombra el machón</h4>
+    <p>Añade el texto "M-1" o "P-1" con <span class="cmd-inline">TEXT</span> y cota sus dimensiones. En sección, muéstralo con un sombreado de fábrica (ladrillo) u hormigón según el caso.</p>
+  </div>
+</div>
+
+<h3>4. Cajetín de datos del elemento</h3>
+<p>Junto a cada elemento coloca un pequeño cajetín (bloque con atributos) que resuma: descripción, material, dimensiones, armado y nota estructural. Usa <span class="cmd-inline">ATTDEF</span> para crearlo con atributos editables (D: diámetro, N: número de barras).</p>
+
+<div class="table-scroll">
+<table class="table-cad">
+  <thead><tr><th>Comando</th><th>Qué hace</th></tr></thead>
+  <tbody>
+    <tr><td><span class="cmd-inline">RECTANG</span></td><td>Dibuja el cuadro base de la zapata / machón</td></tr>
+    <tr><td><span class="cmd-inline">HATCH</span></td><td>Sombreado de hormigón o fábrica en planta/sección</td></tr>
+    <tr><td><span class="cmd-inline">CIRCLE</span></td><td>Sección de barra en planta</td></tr>
+    <tr><td><span class="cmd-inline">ATTDEF</span></td><td>Crea atributos para el cajetín del elemento</td></tr>
+    <tr><td><span class="cmd-inline">DIMLINEAR</span></td><td>Acota la zapata / machón</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout warn">
+  <span class="callout-title">Importante</span>
+  Las dimensiones definitivas de zapatas y armados las da el <strong>cálculo estructural</strong>. En el dibujo refleja SIEMPRE lo que indique el ingeniero: nunca inventes cantos ni diámetros de barra.
+</div>

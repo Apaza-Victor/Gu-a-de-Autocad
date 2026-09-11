@@ -1,0 +1,96 @@
+<p>El <strong>sombreado</strong> (hatch) rellena áreas con patrones o colores sólidos: representa muros, hormigón, aislamiento, césped o acabados. Es una de las herramientas más usadas (y más mal usadas) en planos de arquitectura.</p>
+
+<h3>1. Crear un hatch básico (paso a paso)</h3>
+
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Ejecuta HATCH</h4>
+    <p>Escribe <span class="cmd-inline">HATCH</span> o <span class="key-inline">H</span>. Aparece la pestaña contextual "Creación de sombreado" en la cinta.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Elige el patrón</h4>
+    <p>En el panel "Patrón" selecciona el tipo: <strong>Sólido</strong> (color plano), <strong>Degradado</strong> (degradado), o un <strong>patrón predefinido</strong> como <code>ANSI31</code> (líneas 45°), <code>NET</code> o <code>AR-CONC</code> (aspecto hormigón).</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Selecciona el área</h4>
+    <p>Escribe <span class="key-inline">P</span> para Seleccionar puntos y haz clic dentro de la región cerrada (el hatch detecta los límites), o pulsa Seleccionar objetos y marca el contorno.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">4</span>
+  <div class="lesson-body">
+    <h4>Ajusta escala y ángulo</h4>
+    <p>Con el patrón predefinido, la <strong>escala</strong> controla la separación entre líneas (empieza por 1 y prueba). El <strong>ángulo</strong> rota el patrón (45°, 90°…). Pulsa <strong>Cerrar</strong> (o <span class="key-inline">Enter</span>).</p>
+  </div>
+</div>
+
+<h3>2. Los patrones más usados en planos</h3>
+<div class="table-scroll">
+<table class="table-cad">
+  <thead><tr><th>Patrón</th><th>Uso habitual</th></tr></thead>
+  <tbody>
+    <tr><td><code>ANSI31</code> o <code>EARTH</code></td><td>Muros en sección, corte de materiales</td></tr>
+    <tr><td><code>AR-CONC</code></td><td>Aspecto de hormigón visto</td></tr>
+    <tr><td><code>Sólido</code></td><td>Rellenos planos: carpintería, zonas de color</td></tr>
+    <tr><td><code>NET</code> / <code>GRASS</code></td><td>Césped, pavimentos, texturas de terreno</td></tr>
+    <tr><td><code>ANSI32</code></td><td>Aislamiento, materiales blandos</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3>3. Editar, cambiar y limpiar hatches</h3>
+<ul>
+  <li><strong>Editar:</strong> doble clic sobre el hatch abre <span class="cmd-inline">HATCHEDIT</span>: cambia patrón, escala o color sin borrar.</li>
+  <li><strong>Actualizar límites:</strong> si un muro cambió, los "límites" del hatch se quedaron viejos. Escribe <span class="cmd-inline">-HATCH</span> y elige la opción <strong>Recreate boundary</strong>, o en <span class="cmd-inline">HATCHEDIT</span> pulsa "Guardar límites" / "Recrear límites".</li>
+  <li><strong>Separar áreas:</strong> un contorno con líneas de más dejará manchas; revisa que el contorno sea una polilínea cerrada.</li>
+  <li><strong>Limpiar el dibujo:</strong> los hatches "rotos" (sin límites reconocibles) se detectan a simple vista; bórralos y rehazlos rápido con <span class="cmd-inline">H</span>.</li>
+</ul>
+
+<h3>4. Hatch por capa y por objeto</h3>
+<p>Regla de oro en planos con estilos de trazado por color: pon el hatch en una <strong>capa propia</strong> (ej.: <code>A-Hatch</code>, <code>R-Hatch</code>) con la transparencia y el color correctos. Nunca cambies las propiedades de los hatches objeto a objeto: se vuelve imposible imprimir bien.</p>
+
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Transparencia para no tapar</h4>
+    <p>En la capa del hatch pon una transparencia de 40–70 si quieres que se vean las líneas del muro por debajo (muy profesional en cortes).</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Hatch con fondo capturado</h4>
+    <p>Herramienta muy útil: <span class="cmd-inline">HATCH</span> → opción <strong>Fondo</strong> → captura con el botón de imagen (<span class="key-inline">I</span>) una muestra de una imagen para relleno. Ideal para mockups rápidos de texturas.</p>
+  </div>
+</div>
+
+<div class="callout warn">
+  <span class="callout-title">Alerta clásica</span>
+  "El hatch no aparece" suele ser: (1) la escala del patrón es demasiado grande/pequeña, (2) el área no está cerrada, o (3) el hatch está en una capa apagada o con color blanco sobre fondo blanco. Revisa esos tres puntos primero.
+</div>
+
+<h3>5. Hatches con líneas de comandos rápidas</h3>
+<p>Aprende estos atajos para trabajar sin ratón:</p>
+<div class="table-scroll">
+<table class="table-cad">
+  <thead><tr><th>Comando</th><th>Qué hace</th></tr></thead>
+  <tbody>
+    <tr><td><span class="cmd-inline">HATCH</span></td><td>Inicia un sombreado nuevo (atajo <span class="key-inline">H</span>)</td></tr>
+    <tr><td><span class="cmd-inline">HATCHEDIT</span></td><td>Edita un hatch existente</td></tr>
+    <tr><td><span class="cmd-inline">BOUNDARY</span></td><td>Genera una polilínea cerrada del contorno (para limpiar)</td></tr>
+    <tr><td><span class="cmd-inline">MATCHPROP</span></td><td>Copia las propiedades de un hatch a otro</td></tr>
+    <tr><td><span class="cmd-inline">-HATCH</span></td><td>Versión de línea de comandos con opciones avanzadas</td></tr>
+  </tbody>
+</table>
+</div>

@@ -1,0 +1,91 @@
+<p>Las capas son la columna vertebral de un dibujo limpio. Aprender a crearlas, renombrarlas y eliminarlas con seguridad evita archivos desordenados y problemas de impresión. Todo se gestiona desde el <strong>Administrador de propiedades de capas</strong> (<span class="cmd-inline">LAYER</span> / <span class="key-inline">LA</span>).</p>
+
+<h3>1. Crear una capa nueva (paso a paso)</h3>
+
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Abre el Administrador de capas</h4>
+    <p>Escribe <span class="cmd-inline">LA</span> y pulsa Enter, o ve a Inicio → Capas → Capa.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Crea la capa</h4>
+    <p>Pulsa el botón <strong>Nueva capa</strong> (hoja con una estrella) o la combinación <span class="key-inline">Alt+N</span>. Se añade una fila llamada "Layer1".</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Nómbrala correctamente</h4>
+    <p>Escribe el nombre usando la nomenclatura del estudio: por ejemplo <code>A-Muros</code>, <code>S-Ejes</code>, <code>A-Cotas</code>. Usa <span class="key-inline">Tab</span> para pasar a la siguiente casilla sin usar el ratón.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">4</span>
+  <div class="lesson-body">
+    <h4>Crea varias capas a la vez</h4>
+    <p>Pulsa <span class="key-inline">Alt+N</span> repetidamente: cada pulsación añade una capa nueva con el mismo estilo que la seleccionada. Útil para crear toda la plantilla en un minuto.</p>
+  </div>
+</div>
+
+<h3>2. Renombrar una capa</h3>
+<p>Selecciona la capa y pulsa <span class="key-inline">F2</span> (igual que un archivo en el Explorador) o haz doble clic en el nombre. Escribe el nombre nuevo y pulsa Enter. Los nombres pueden tener hasta 255 caracteres y no pueden repetirse ni contener los caracteres <code>&lt; &gt; / \ " : ; ? * | , = `</code>.</p>
+
+<h3>3. Eliminar capas (hazlo con cuidado)</h3>
+<p>AutoCAD NO te deja borrar una capa que tenga objetos, ni la capa 0, ni las capas de Referencias externas (con ícono de papel enlazado). Para eliminar una capa:</p>
+
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Selecciona la capa y pulsa el botón de papelera</h4>
+    <p>En el Administrador de capas, selecciona la fila y pulsa el botón <strong>Eliminar capa</strong> (papelera).</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Si no se elimina: revisa qué la mantiene</h4>
+    <p>Haz clic en el candado de la columna y pulsa el ícono de filtro "Mostrar todos los objetos utilizados en la capa" (o usa <span class="cmd-inline">LAYDEL</span>) para descubrir qué objetos están en esa capa.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Elimina objetos y repite</h4>
+    <p>Borra los objetos de esa capa (o muévelos a otra con el botón derecho → "Cambiar capa") y vuelve a intentar la eliminación.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">4</span>
+  <div class="lesson-body">
+    <h4>Elimina varias capas a la vez</h4>
+    <p>Mantén <span class="key-inline">Ctrl</span> para seleccionar varias filas y pulsa la papelera. Con <span class="key-inline">Shift</span> seleccionas un rango consecutivo.</p>
+  </div>
+</div>
+
+<div class="table-scroll">
+<table class="table-cad">
+  <thead><tr><th>Comando</th><th>Qué hace</th><th>Atajo</th></tr></thead>
+  <tbody>
+    <tr><td><span class="cmd-inline">LAYER</span></td><td>Abre el Administrador de propiedades de capas</td><td><span class="key-inline">LA</span></td></tr>
+    <tr><td><span class="cmd-inline">LAYDEL</span></td><td>Elimina capas seleccionando un objeto de la capa</td><td>—</td></tr>
+    <tr><td><span class="cmd-inline">LAYMRG</span></td><td>Une todos los objetos de una capa en otra y borra la capa</td><td>—</td></tr>
+    <tr><td><span class="cmd-inline">LAYISO</span></td><td>Aísla la capa de los objetos seleccionados</td><td>—</td></tr>
+    <tr><td><span class="cmd-inline">PURGE</span></td><td>Elimina capas sin uso que "no se dejan borrar"</td><td><span class="key-inline">PU</span></td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout">
+  <span class="callout-title">Tip</span>
+  Para limpiar el dibujo por completo usa <span class="cmd-inline">PURGE</span> y marca "Eliminar capas sin usar". Es la forma más rápida de quitar decenas de capas huérfanas de una vez.
+</div>

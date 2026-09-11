@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zapatas, machones y cimentaciones · Organización y productividad — AutoCAD Guía</title>
+<link rel="canonical" href="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-3-organizacion/zapatas-machones.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-3-organizacion/zapatas-machones.html">
+<meta property="og:site_name" content="AutoCAD Guía">
+<meta property="og:title" content="Zapatas, machones y cimentaciones · Organización y productividad — AutoCAD Guía">
+<meta property="og:description" content="Qué son las zapatas y los machones (columnas de amarre) y sus medidas típicas en construcción.">
+<meta property="og:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Zapatas, machones y cimentaciones · Organización y productividad — AutoCAD Guía">
+<meta name="twitter:description" content="Qué son las zapatas y los machones (columnas de amarre) y sus medidas típicas en construcción.">
+<meta name="twitter:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="description" content="Qué son las zapatas y los machones (columnas de amarre) y sus medidas típicas en construcción.">
+
+<link rel="icon" type="image/svg+xml" href="../../assets/img/autocad-2.svg">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../../assets/css/responsive.css">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Nivel · Organización y productividad en AutoCAD",
+  "description": "Espacio modelo vs papel, viewports, plantillas, impresión, Xref, estilos de trazado y campos.",
+  "provider": {
+    "@type": "Organization",
+    "name": "AutoCAD Guía",
+    "sameAs": "https://apaza-victor.github.io/Gu-a-de-Autocad/"
+  },
+  "inLanguage": "es",
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "online",
+    "learningResourceType": "tutorial",
+    "inLanguage": "es"
+  }
+}
+  </script>
+</head>
+
+<body>
+
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+<nav class="navbar navbar-cad navbar-expand-lg">
+  <div class="container container-xl">
+    <a class="navbar-brand brand-cad" href="../../index.html">
+      <img class="brand-logo" src="../../assets/img/autocad-2.svg" alt="AutoCAD">
+      <span>AutoCAD<small class="d-block" data-i18n-html="brand.sub">Guía · Teoría &amp; Práctica</small></span>
+    </a>
+    <div class="d-flex align-items-center gap-2 nav-actions order-lg-last">
+      <button class="icon-btn" id="searchToggle" title="Buscar" data-i18n-title="ui.search"><i class="bi bi-search"></i></button>
+      <button class="icon-btn" id="themeToggle" title="Cambiar tema" data-i18n-title="ui.theme"><i class="bi bi-moon-stars"></i></button>
+      <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
+        <i class="bi bi-list fs-4"></i>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navCad">
+      <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../../index.html" data-i18n="nav.home">Inicio</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-cad dropdown-toggle active" href="#" data-bs-toggle="dropdown" data-i18n="nav.levels">Niveles</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="../nivel-1-fundamentos/index.html">Nivel 1 · Fundamentos</a></li>
+            <li><a class="dropdown-item" href="../nivel-2-dibujo-2d/index.html">Nivel 2 · Dibujo 2D</a></li>
+            <li><a class="dropdown-item active" href="../nivel-3-organizacion/index.html">Nivel 3 · Organización</a></li>
+            <li><a class="dropdown-item" href="../nivel-4-modelado-3d/index.html">Nivel 4 · Modelado 3D</a></li>
+            <li><a class="dropdown-item" href="../nivel-5-avanzado/index.html">Nivel 5 · Experto</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../comandos.html" data-i18n="nav.commands">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../ejemplos-visuales.html" data-i18n="nav.visual">Visuales</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../trucos.html" data-i18n="nav.tips">Trucos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../recursos.html" data-i18n="nav.resources">Recursos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../faq.html" data-i18n="nav.faq">FAQ</a></li>
+      </ul>
+
+      <div class="d-flex align-items-center gap-2 nav-actions-menu ms-lg-auto">
+        <span class="coord-readout d-none d-lg-inline-flex">X: <span id="coordX">000.00</span>&nbsp; Y: <span id="coordY">000.00</span></span>
+        <button class="lang-toggle" id="langToggle" title="Cambiar idioma" data-i18n-title="ui.lang">
+          <i class="bi bi-translate lang-toggle-flag"></i>
+          <span class="lang-toggle-text">EN</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header" id="main-content">
+  <div class="container container-xl">
+    <p class="crumb"><a href="../../index.html">Inicio</a> / <a href="../../index.html#niveles">Niveles</a> / <a href="index.html">Organización</a> / Tema 13</p>
+    <span class="eyebrow" data-i18n="lvl3.eyebrow">Nivel 03 · Intermedio</span>
+    <h1>Zapatas, machones y cimentaciones</h1>
+    <div class="level-progress-bar" data-level-prefix="nivel3" data-level-total="20"><div class="fill"></div></div>
+    <p class="level-progress-label">0 de 20 temas completados · 0%</p>
+  </div>
+</header>
+
+<div class="content-layout">
+  <div class="container container-xl">
+    <div class="row">
+
+      <aside class="col-lg-3 mb-5 mb-lg-0">
+        <div class="toc-sidebar">
+          <h6 data-i18n="ui.inThisLevel">En este nivel</h6>
+          <ul class="toc-list">
+            <li><a href="espacios.html"><span class="toc-check"></span> Espacio modelo vs. papel</a></li>
+            <li><a href="viewports.html"><span class="toc-check"></span> Ventanas gráficas y escalas</a></li>
+            <li><a href="plantillas.html"><span class="toc-check"></span> Plantillas (.DWT)</a></li>
+            <li><a href="designcenter.html"><span class="toc-check"></span> DesignCenter y paletas</a></li>
+            <li><a href="impresion.html"><span class="toc-check"></span> Impresión y exportación</a></li>
+            <li><a href="publish.html"><span class="toc-check"></span> Publicación por lotes (PUBLISH)</a></li>
+            <li><a href="xref.html"><span class="toc-check"></span> Referencias externas (Xref)</a></li>
+            <li><a href="atajos.html"><span class="toc-check"></span> Atajos de teclado</a></li>
+            <li><a href="plotstyles.html"><span class="toc-check"></span> Estilos de trazado</a></li>
+            <li><a href="campos.html"><span class="toc-check"></span> Campos (Fields)</a></li>
+            <li><a href="xref-avanzado.html"><span class="toc-check"></span> Xref avanzado</a></li>
+            <li><a href="cajetines.html"><span class="toc-check"></span> Cajetines y bloques de título</a></li>
+            <li><a href="zapatas-machones.html" data-toc="nivel3-zapatas-machones"><span class="toc-check"></span> Zapatas y machones</a></li>
+            <li><a href="muros-detalle.html" data-toc="nivel3-muros-detalle"><span class="toc-check"></span> Muros y detalles constructivos</a></li>
+            <li><a href="planos-estructurales.html" data-toc="nivel3-planos-estructurales"><span class="toc-check"></span> Planos estructurales</a></li>
+            <li><a href="escala-anotativa.html"><span class="toc-check"></span> Escala anotativa</a></li>
+            <li><a href="estandares-capas.html"><span class="toc-check"></span> Estándares de capas</a></li>
+            <li><a href="sheet-sets.html"><span class="toc-check"></span> Conjuntos de planos</a></li>
+            <li><a href="etransmit.html"><span class="toc-check"></span> Transmitir y empaquetar</a></li>
+            <li><a href="importar-exportar.html" data-toc="nivel3-importar-exportar"><span class="toc-check"></span> Importar y exportar</a></li>
+            <li><a href="index.html#autoevaluacion"><span class="toc-check"></span> Autoevaluación</a></li>
+          </ul>
+          <hr style="border-color:var(--border-soft)" class="my-4">
+          <a href="index.html" class="btn-cad-outline w-100 text-center d-block"><i class="bi bi-arrow-left"></i> Volver al índice</a>
+        </div>
+      </aside>
+
+      <div class="col-lg-9">
+        <article class="content-article">
+
+          <section id="zapatas-machones" data-topic="nivel3-zapatas-machones">
+            <h2><span class="sec-num">13</span>Zapatas, machones y cimentaciones</h2>
+            <p>Las <strong>zapatas</strong> (cimentaciones aisladas), los <strong>machones</strong> (pilares de fábrica en esquinas) y las <strong>columnas</strong> son los elementos que transmiten la carga al terreno. Dibujarlos bien en planta y sección es imprescindible para el ingeniero estructural.</p>
+
+            <div class="callout">
+              <span class="callout-title">Definiciones rápidas</span>
+              <strong>Zapata:</strong> elemento de cimentación que reparte la carga de un pilar/muro al suelo. <strong>Machón:</strong> pilar macizo de fábrica (ladrillo/piedra) en esquinas o contrafuertes. <strong>Columna:</strong> pilar estructural de hormigón armado o acero.
+            </div>
+
+            <h3>1. Dibujar una zapata en planta (paso a paso)</h3>
+
+            <div class="lesson-step">
+              <span class="lesson-num">1</span>
+              <div class="lesson-body">
+                <h4>Dibuja el contorno de la zapata</h4>
+                <p>Con <span class="cmd-inline">RECTANG</span> (<span class="key-inline">REC</span>) dibuja el cuadro de la zapata según medida del cálculo (ej.: 1.00 × 1.00 m). Ponlo en una capa <code>E-Zapatas</code> con línea Continua de grosor 0.35.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">2</span>
+              <div class="lesson-body">
+                <h4>Marca las armaduras</h4>
+                <p>Dibuja las barras con <span class="cmd-inline">LINE</span> o <span class="cmd-inline">CIRCLE</span> (secciones de barra redonda) en una capa <code>E-Acero</code>. Sobre la vista en planta dibuja la parrilla de acero inferior (retícula).</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">3</span>
+              <div class="lesson-body">
+                <h4>Coloca cotas y referencias</h4>
+                <p>Acota las dimensiones de la zapata y marca su eje de referencia. Añade el <strong>texto de la zapata</strong> (ej.: "Z-1") mediante un bloque de cajetín.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">4</span>
+              <div class="lesson-body">
+                <h4>Añade el material y el nivel</h4>
+                <p>Con <span class="cmd-inline">HATCH</span> rellena el hormigón con un patrón (por ejemplo hormigón alzado en sección) y escribe el nivel (<span class="cmd-inline">TEXT</span>): "Nivel -1.50" para la cara superior de la zapata.</p>
+              </div>
+            </div>
+
+            <h3>2. Zapata en sección (corte)</h3>
+            <p>Además de la planta, el ingeniero necesita el corte para ver la altura de la zapata y su armado:</p>
+
+            <div class="lesson-step">
+              <span class="lesson-num">1</span>
+              <div class="lesson-body">
+                <h4>Dibuja el perfil</h4>
+                <p>Con <span class="cmd-inline">RECTANG</span> o <span class="cmd-inline">LINE</span> dibuja la zapata en alzado (ej.: base de 1.00 m y altura de 0.40 m de canto).</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">2</span>
+              <div class="lesson-body">
+                <h4>Representa el hormigón</h4>
+                <p>Rellena con un <strong>sombreado de hormigón alzado</strong> (patrón <code>AR-CONC</code>) con transparencia. La sección de la barra vertical se marca con círculos pequeños.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">3</span>
+              <div class="lesson-body">
+                <h4>Añade acotación de altura y niveles</h4>
+                <p>Acota el canto de la zapata y marca el nivel del terreno natural y el de excavación.</p>
+              </div>
+            </div>
+
+            <h3>3. Dibujar un machón</h3>
+
+            <div class="lesson-step">
+              <span class="lesson-num">1</span>
+              <div class="lesson-body">
+                <h4>Planta del machón</h4>
+                <p>Dibuja un <strong>rectángulo macizo</strong> en la esquina con <span class="cmd-inline">RECTANG</span>, del tamaño definido (ej.: 0.30 × 0.30 m). El machón es masa de fábrica: no lleva "vacio interior".</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">2</span>
+              <div class="lesson-body">
+                <h4>Marca su posición en el muro</h4>
+                <p>Colócalo coincidiendo con el eje del muro de la esquina (con <span class="cmd-inline">SNAP</span> o referencias a objeto). Pónlo en una capa propia <code>A-Machones</code>.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">3</span>
+              <div class="lesson-body">
+                <h4>Nombra el machón</h4>
+                <p>Añade el texto "M-1" o "P-1" con <span class="cmd-inline">TEXT</span> y cota sus dimensiones. En sección, muéstralo con un sombreado de fábrica (ladrillo) u hormigón según el caso.</p>
+              </div>
+            </div>
+
+            <h3>4. Cajetín de datos del elemento</h3>
+            <p>Junto a cada elemento coloca un pequeño cajetín (bloque con atributos) que resuma: descripción, material, dimensiones, armado y nota estructural. Usa <span class="cmd-inline">ATTDEF</span> para crearlo con atributos editables (D: diámetro, N: número de barras).</p>
+
+            <div class="table-scroll">
+            <table class="table-cad">
+              <thead><tr><th>Comando</th><th>Qué hace</th></tr></thead>
+              <tbody>
+                <tr><td><span class="cmd-inline">RECTANG</span></td><td>Dibuja el cuadro base de la zapata / machón</td></tr>
+                <tr><td><span class="cmd-inline">HATCH</span></td><td>Sombreado de hormigón o fábrica en planta/sección</td></tr>
+                <tr><td><span class="cmd-inline">CIRCLE</span></td><td>Sección de barra en planta</td></tr>
+                <tr><td><span class="cmd-inline">ATTDEF</span></td><td>Crea atributos para el cajetín del elemento</td></tr>
+                <tr><td><span class="cmd-inline">DIMLINEAR</span></td><td>Acota la zapata / machón</td></tr>
+              </tbody>
+            </table>
+            </div>
+
+            <div class="callout warn">
+              <span class="callout-title">Importante</span>
+              Las dimensiones definitivas de zapatas y armados las da el <strong>cálculo estructural</strong>. En el dibujo refleja SIEMPRE lo que indique el ingeniero: nunca inventes cantos ni diámetros de barra.
+            </div>
+          <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+        </article>
+
+        <nav class="level-nav">
+          <a href="cajetines.html">
+            <span class="nav-label">Anterior</span>
+            <span class="nav-title"><i class="bi bi-arrow-left"></i> Cajetines y bloques de título</span>
+          </a>
+          <a href="muros-detalle.html" class="nav-next">
+            <span class="nav-label">Siguiente</span>
+            <span class="nav-title">Muros y detalles constructivos <i class="bi bi-arrow-right"></i></span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container container-xl">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <div class="brand-cad mb-2"><img class="brand-logo" src="../../assets/img/autocad-2.svg" alt="AutoCAD"><span>AutoCAD Guía</span></div>
+        <p data-i18n="footer.disclaimer">Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.levels">Niveles</h6>
+        <ul class="list-unstyled">
+          <li><a href="../nivel-1-fundamentos/index.html">Fundamentos</a></li>
+          <li><a href="../nivel-2-dibujo-2d/index.html">Dibujo 2D</a></li>
+          <li><a href="../nivel-3-organizacion/index.html">Organización</a></li>
+          <li><a href="../nivel-4-modelado-3d/index.html">Modelado 3D</a></li>
+          <li><a href="../nivel-5-avanzado/index.html">Experto</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.guide">Guía</h6>
+        <ul class="list-unstyled">
+          <li><a href="../comandos.html">Comandos</a></li>
+          <li><a href="../ejemplos-visuales.html">Ejemplos</a></li>
+          <li><a href="../trucos.html">Trucos</a></li>
+          <li><a href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
+          <li><a href="../recursos.html">Recursos</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.follow">Síguenos</h6>
+        <div class="d-flex gap-2">
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-5 mb-4" style="border-color:var(--border-soft)">
+    <p class="mb-0 small" data-i18n="footer.copyright">© 2026 Victor Apaza. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<div class="command-line-bar" id="cmdBar">
+  <div class="command-line-inner">
+    <span class="prompt-sign" data-i18n="ui.command">Comando:</span>
+    <span id="cmd-typed"></span><span class="cursor-blink"></span>
+    <button class="cl-close" id="cmdClose" title="Ocultar" data-i18n-title="ui.hide"><i class="bi bi-x-lg"></i></button>
+  </div>
+</div>
+
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Buscar en la guía" data-i18n-aria="ui.search">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="bi bi-search"></i>
+      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar" data-i18n-placeholder="ui.searchPlaceholder">
+      <kbd class="search-kbd">ESC</kbd>
+    </div>
+    <div class="search-results" id="globalSearchResults">
+      <div class="search-empty" data-i18n="ui.typeToSearch">Escribe al menos 2 caracteres para buscar...</div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+<script src="../../assets/js/i18n.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/animations.js"></script>
+<script src="../../assets/js/main.js"></script>
+
+</body>
+</html>

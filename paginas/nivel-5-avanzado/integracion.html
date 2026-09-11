@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Integración con otros programas · Nivel 5 — AutoCAD Guía</title>
+<link rel="canonical" href="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-5-avanzado/integracion.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-5-avanzado/integracion.html">
+<meta property="og:site_name" content="AutoCAD Guía">
+<meta property="og:title" content="Integración con otros programas · Nivel 5 — AutoCAD Guía">
+<meta property="og:description" content="Conectar AutoCAD con Excel, SketchUp, Revit y otras aplicaciones de diseño.">
+<meta property="og:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Integración con otros programas · Nivel 5 — AutoCAD Guía">
+<meta name="twitter:description" content="Conectar AutoCAD con Excel, SketchUp, Revit y otras aplicaciones de diseño.">
+<meta name="twitter:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="description" content="Conectar AutoCAD con Excel, SketchUp, Revit y otras aplicaciones de diseño.">
+
+<link rel="icon" type="image/svg+xml" href="../../assets/img/autocad-2.svg">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../../assets/css/responsive.css">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Nivel · AutoCAD nivel experto",
+  "description": "CUI, AutoLISP, estándares CAD, integración, Dynamo, Python, BIM y optimización.",
+  "provider": {
+    "@type": "Organization",
+    "name": "AutoCAD Guía",
+    "sameAs": "https://apaza-victor.github.io/Gu-a-de-Autocad/"
+  },
+  "inLanguage": "es",
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "online",
+    "learningResourceType": "tutorial",
+    "inLanguage": "es"
+  }
+}
+  </script>
+</head>
+
+<body>
+
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+<nav class="navbar navbar-cad navbar-expand-lg">
+  <div class="container container-xl">
+    <a class="navbar-brand brand-cad" href="../../index.html">
+      <img class="brand-logo" src="../../assets/img/autocad-2.svg" alt="AutoCAD">
+      <span>AutoCAD<small class="d-block" data-i18n-html="brand.sub">Guía · Teoría &amp; Práctica</small></span>
+    </a>
+    <div class="d-flex align-items-center gap-2 nav-actions order-lg-last">
+      <button class="icon-btn" id="searchToggle" title="Buscar" data-i18n-title="ui.search"><i class="bi bi-search"></i></button>
+      <button class="icon-btn" id="themeToggle" title="Cambiar tema" data-i18n-title="ui.theme"><i class="bi bi-moon-stars"></i></button>
+      <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
+        <i class="bi bi-list fs-4"></i>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navCad">
+      <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../../index.html" data-i18n="nav.home">Inicio</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-cad dropdown-toggle active" href="#" data-bs-toggle="dropdown" data-i18n="nav.levels">Niveles</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="../nivel-1-fundamentos/index.html">Nivel 1 · Fundamentos</a></li>
+            <li><a class="dropdown-item" href="../nivel-2-dibujo-2d/index.html">Nivel 2 · Dibujo 2D</a></li>
+            <li><a class="dropdown-item" href="../nivel-3-organizacion/index.html">Nivel 3 · Organización</a></li>
+            <li><a class="dropdown-item" href="../nivel-4-modelado-3d/index.html">Nivel 4 · Modelado 3D</a></li>
+            <li><a class="dropdown-item active" href="../nivel-5-avanzado/index.html">Nivel 5 · Experto</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../comandos.html" data-i18n="nav.commands">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../ejemplos-visuales.html" data-i18n="nav.visual">Visuales</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../trucos.html" data-i18n="nav.tips">Trucos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../recursos.html" data-i18n="nav.resources">Recursos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../faq.html" data-i18n="nav.faq">FAQ</a></li>
+      </ul>
+
+      <div class="d-flex align-items-center gap-2 nav-actions-menu ms-lg-auto">
+        <span class="coord-readout d-none d-lg-inline-flex">X: <span id="coordX">000.00</span>&nbsp; Y: <span id="coordY">000.00</span></span>
+        <button class="lang-toggle" id="langToggle" title="Cambiar idioma" data-i18n-title="ui.lang">
+          <i class="bi bi-translate lang-toggle-flag"></i>
+          <span class="lang-toggle-text">EN</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header" id="main-content">
+  <div class="container container-xl">
+    <p class="crumb"><a href="../../index.html">Inicio</a> / <a href="../../index.html#niveles">Niveles</a> / <a href="index.html">Nivel experto</a> / Tema 6</p>
+    <span class="eyebrow" data-i18n="lvl5.eyebrow">Nivel 05 · Experto</span>
+    <h1>Integración con otros programas</h1>
+    <div class="level-progress-bar" data-level-prefix="nivel5" data-level-total="17"><div class="fill"></div></div>
+    <p class="level-progress-label">0 de 17 temas completados · 0%</p>
+  </div>
+</header>
+
+<div class="content-layout">
+  <div class="container container-xl">
+    <div class="row">
+
+      <aside class="col-lg-3 mb-5 mb-lg-0">
+        <div class="toc-sidebar">
+          <h6 data-i18n="ui.inThisLevel">En este nivel</h6>
+          <ul class="toc-list">
+            <li><a href="personalizacion.html" data-toc="nivel5-personalizacion"><span class="toc-check"></span> Personalización de la interfaz</a></li>
+            <li><a href="autolisp.html" data-toc="nivel5-autolisp"><span class="toc-check"></span> AutoLISP y scripts</a></li>
+            <li><a href="estandares.html" data-toc="nivel5-estandares"><span class="toc-check"></span> Estándares CAD</a></li>
+            <li><a href="buenas-practicas.html" data-toc="nivel5-buenas-practicas"><span class="toc-check"></span> Buenas prácticas</a></li>
+            <li><a href="campos-tablas.html" data-toc="nivel5-campos-tablas"><span class="toc-check"></span> Campos y tablas de datos</a></li>
+            <li><a href="integracion.html" data-toc="nivel5-integracion"><span class="toc-check"></span> Integración con otros programas</a></li>
+            <li><a href="optimizacion.html" data-toc="nivel5-optimizacion"><span class="toc-check"></span> Optimización y solución de errores</a></li>
+            <li><a href="dynamo.html" data-toc="nivel5-dynamo"><span class="toc-check"></span> Dynamo para AutoCAD</a></li>
+            <li><a href="python.html" data-toc="nivel5-python"><span class="toc-check"></span> Automatización con Python</a></li>
+            <li><a href="bim.html" data-toc="nivel5-bim"><span class="toc-check"></span> AutoCAD y BIM</a></li>
+            <li><a href="interoperabilidad.html" data-toc="nivel5-interoperabilidad"><span class="toc-check"></span> Interoperabilidad CAD-BIM</a></li>
+            <li><a href="georreferenciacion.html" data-toc="nivel5-georreferenciacion"><span class="toc-check"></span> Georreferenciación y mapas</a></li>
+            <li><a href="dynamic-blocks.html" data-toc="nivel5-dynamic-blocks"><span class="toc-check"></span> Bloques dinámicos</a></li>
+            <li><a href="diseno-parametrico.html" data-toc="nivel5-diseno-parametrico"><span class="toc-check"></span> Diseño paramétrico</a></li>
+            <li><a href="cad-standards.html" data-toc="nivel5-cad-standards"><span class="toc-check"></span> Verificador de estándares</a></li>
+            <li><a href="publish.html" data-toc="nivel5-publish"><span class="toc-check"></span> Publicación por lotes</a></li>
+            <li><a href="colaboracion.html" data-toc="nivel5-colaboracion"><span class="toc-check"></span> Colaboración y nube</a></li>
+            <li><a href="index.html#autoevaluacion"><span class="toc-check"></span> Autoevaluación</a></li>
+          </ul>
+          <hr style="border-color:var(--border-soft)" class="my-4">
+          <a href="index.html" class="btn-cad-outline w-100 text-center d-block"><i class="bi bi-arrow-left"></i> Volver al índice</a>
+        </div>
+      </aside>
+
+      <div class="col-lg-9">
+        <article class="content-article">
+
+          <section id="integracion" data-topic="nivel5-integracion">
+                                <h2><span class="sec-num">6</span><span data-i18n="lvl5.s5.title">Integración con otros programas</span></h2>
+
+                                <table class="table-cad">
+                                  <thead><tr><th>Programa</th><th>Tipo de integración</th></tr></thead>
+                                  <tbody>
+                                    <tr><td><strong>Revit</strong></td><td>Modelo BIM se exporta a AutoCAD para planos de detalle y fabricación.</td></tr>
+                                    <tr><td><strong>SketchUp</strong></td><td>Modelos 3D se importan como bloques o sólidos para referencia.</td></tr>
+                                    <tr><td><strong>Civil 3D</strong></td><td>Extensión de AutoCAD para ingeniería civil: topografía, redes y pavimentos.</td></tr>
+                                    <tr><td><strong>3ds Max</strong></td><td>Modelos 3D de AutoCAD se importan para renderizado fotorealista.</td></tr>
+                                    <tr><td><strong>Navisworks</strong></td><td>Coordination: combina modelos de varias disciplinas para detectar choques.</td></tr>
+                                    <tr><td><strong>Excel / hojas de cálculo</strong></td><td>Tablas y listas de áreas se extraen con <span class="cmd-inline">DATAEXTRACTION</span>.</td></tr>
+                                  </tbody>
+                                </table>
+
+                                <p>Los formatos de intercambio más usados son <strong>.DWG</strong> (nativo), <strong>.DXF</strong> (intercambio entre CADs), <strong>.IFC</strong> (BIM) y <strong>.SAT</strong> (ACIS sólidos).</p>
+
+          <!-- ENRIQ START -->
+          <h3>Llevar datos de AutoCAD a Excel</h3>
+          <div class="lesson-step">
+            <span class="lesson-num">1</span>
+            <div class="lesson-body">
+              <h4>Lanza la extracción</h4>
+              <p>Con <span class="cmd-inline">DATAEXTRACTION</span> se abre el asistente para crear una tabla de datos del dibujo.</p>
+            </div>
+          </div>
+          <div class="lesson-step">
+            <span class="lesson-num">2</span>
+            <div class="lesson-body">
+              <h4>Elige qué extraer</h4>
+              <p>Selecciona bloques o atributos (por ejemplo puertas: nombre, dimensiones, cantidad).</p>
+            </div>
+          </div>
+          <div class="lesson-step">
+            <span class="lesson-num">3</span>
+            <div class="lesson-body">
+              <h4>El destino</h4>
+              <p>Escoge insertar la tabla en el dibujo o <strong>exportarla a .xls</strong> para seguir trabajando en Excel.</p>
+            </div>
+          </div>
+          <h3>Integraciones típicas</h3>
+          <table class="table-cad">
+            <thead><tr><th>Programa</th><th>Cómo integra</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Excel</strong></td><td><span class="cmd-inline">DATALINK</span> vincula tablas en vivo; DATAEXTRACTION exporta información.</td></tr>
+              <tr><td><strong>SketchUp</strong></td><td>Importa/exporta DXF o 3DS para bocetos de presentación.</td></tr>
+              <tr><td><strong>Revit</strong></td><td>Flujo BIM: IFC / DWG convertido como base topológica.</td></tr>
+              <tr><td><strong>GIS</strong></td><td><span class="cmd-inline">MAPCONNECT</span> conecta capas SHP/WMS y exporta geometría con datos.</td></tr>
+            </tbody>
+          </table>
+          <div class="callout">
+            <span class="callout-title">Consejo</span>
+            <span>Cuando integres con otro programa, usa <strong>formatos neutros</strong> (DXF, IFC, PDF) salvo que el flujo admita DWG nativo. Así evitas incompatibilidades de versión entre aplicaciones.</span>
+          </div>
+          <!-- ENRIQ END -->
+          <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+        </article>
+
+        <nav class="level-nav">
+          <a href="campos-tablas.html">
+            <span class="nav-label">Anterior</span>
+            <span class="nav-title"><i class="bi bi-arrow-left"></i> Campos y tablas de datos</span>
+          </a>
+          <a href="optimizacion.html" class="nav-next">
+            <span class="nav-label">Siguiente</span>
+            <span class="nav-title">Optimización y solución de errores <i class="bi bi-arrow-right"></i></span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container container-xl">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <div class="brand-cad mb-2"><img class="brand-logo" src="../../assets/img/autocad-2.svg" alt="AutoCAD"><span>AutoCAD Guía</span></div>
+        <p data-i18n="footer.disclaimer">Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.levels">Niveles</h6>
+        <ul class="list-unstyled">
+          <li><a href="../nivel-1-fundamentos/index.html">Fundamentos</a></li>
+          <li><a href="../nivel-2-dibujo-2d/index.html">Dibujo 2D</a></li>
+          <li><a href="../nivel-3-organizacion/index.html">Organización</a></li>
+          <li><a href="../nivel-4-modelado-3d/index.html">Modelado 3D</a></li>
+          <li><a href="../nivel-5-avanzado/index.html">Experto</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.guide">Guía</h6>
+        <ul class="list-unstyled">
+          <li><a href="../comandos.html">Comandos</a></li>
+          <li><a href="../ejemplos-visuales.html">Ejemplos</a></li>
+          <li><a href="../trucos.html">Trucos</a></li>
+          <li><a href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
+          <li><a href="../recursos.html">Recursos</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.follow">Síguenos</h6>
+        <div class="d-flex gap-2">
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-5 mb-4" style="border-color:var(--border-soft)">
+    <p class="mb-0 small" data-i18n="footer.copyright">© 2026 Victor Apaza. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<div class="command-line-bar" id="cmdBar">
+  <div class="command-line-inner">
+    <span class="prompt-sign" data-i18n="ui.command">Comando:</span>
+    <span id="cmd-typed"></span><span class="cursor-blink"></span>
+    <button class="cl-close" id="cmdClose" title="Ocultar" data-i18n-title="ui.hide"><i class="bi bi-x-lg"></i></button>
+  </div>
+</div>
+
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Buscar en la guía" data-i18n-aria="ui.search">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="bi bi-search"></i>
+      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar" data-i18n-placeholder="ui.searchPlaceholder">
+      <kbd class="search-kbd">ESC</kbd>
+    </div>
+    <div class="search-results" id="globalSearchResults">
+      <div class="search-empty" data-i18n="ui.typeToSearch">Escribe al menos 2 caracteres para buscar...</div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-lisp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+<script src="../../assets/js/i18n.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/animations.js"></script>
+<script src="../../assets/js/main.js"></script>
+
+</body>
+</html>

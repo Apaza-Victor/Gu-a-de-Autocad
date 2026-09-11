@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initBackToTop();
   initScrollSpy();
   initMarkDone();
+  refreshTocDone();
   initFaqAccordion();
   initCommandFilters();
   initCommandLevelFilters();
@@ -30,7 +31,20 @@ document.addEventListener('DOMContentLoaded', () => {
   initCmdVisualLinks();
   initInterfaceMap();
   initChecklistDownload();
+  initQuizCollapse();
 });
+
+/* ---------- Quiz colapsable: contraído por defecto, toggle al pulsar ---------- */
+function initQuizCollapse(){
+  document.querySelectorAll('.quiz-section').forEach(section => {
+    const toggleBtn = section.querySelector('.quiz-toggle');
+    if (!toggleBtn) return;
+    toggleBtn.addEventListener('click', () => {
+      const isOpen = section.classList.toggle('open');
+      toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  });
+}
 
 /* ---------- Animaciones al hacer scroll ---------- */
 function initAOS(){
@@ -197,8 +211,7 @@ function initMarkDone(){
     if (isTopicComplete(topicId)) {
       btn.classList.add('completed');
       btn.innerHTML = '<i class="bi bi-check-circle-fill"></i> ' + (window.I18N_SYSTEM ? I18N_SYSTEM.t('ui.done') : 'Tema completado');
-      const tocLink = document.querySelector('.toc-list a[data-toc="' + topicId + '"]');
-      if (tocLink) tocLink.classList.add('done');
+      refreshTocDone();
     }
 
     btn.addEventListener('click', () => {
@@ -222,20 +235,35 @@ function initMarkDone(){
   updateLevelProgress();
 }
 
+function refreshTocDone(){
+  document.querySelectorAll('.toc-list a[data-toc]').forEach(link => {
+    const id = link.getAttribute('data-toc');
+    link.classList.toggle('done', isTopicComplete(id));
+  });
+}
 function updateLevelProgress(){
   const label = document.querySelector('.level-progress-label');
   const fill = document.querySelector('.level-progress-bar .fill');
   if (!label || !fill) return;
 
-  const allTopics = document.querySelectorAll('[data-topic]');
-  const total = allTopics.length;
-  if (total === 0) return;
+  const bar = document.querySelector('.level-progress-bar');
+  const levelPrefix = bar && bar.getAttribute('data-level-prefix');
+  const levelTotal = bar ? parseInt(bar.getAttribute('data-level-total') || '0', 10) : 0;
+  const saved = JSON.parse(localStorage.getItem('autocad-guia-progreso') || '[]');
 
-  let done = 0;
-  allTopics.forEach(s => {
-    const id = s.getAttribute('data-topic');
-    if (isTopicComplete(id)) done++;
-  });
+  let total, done;
+  if (levelPrefix && levelTotal) {
+    total = levelTotal;
+    done = saved.filter(id => id.indexOf(levelPrefix) === 0).length;
+  } else {
+    const allTopics = document.querySelectorAll('[data-topic]');
+    total = allTopics.length;
+    if (total === 0) return;
+    done = 0;
+    allTopics.forEach(s => {
+      if (isTopicComplete(s.getAttribute('data-topic'))) done++;
+    });
+  }
 
   const pct = Math.round((done / total) * 100);
   fill.style.width = pct + '%';
@@ -607,11 +635,11 @@ function buildSearchData(){
   // Si estamos en home, agregar links a niveles
   if (isHome) {
     const levels = [
-      { name: 'Nivel 1 · Fundamentos', url: 'paginas/nivel-1-fundamentos.html' },
-      { name: 'Nivel 2 · Dibujo 2D', url: 'paginas/nivel-2-dibujo-2d.html' },
-      { name: 'Nivel 3 · Organización', url: 'paginas/nivel-3-organizacion.html' },
-      { name: 'Nivel 4 · Modelado 3D', url: 'paginas/nivel-4-modelado-3d.html' },
-      { name: 'Nivel 5 · Avanzado', url: 'paginas/nivel-5-avanzado.html' },
+      { name: 'Nivel 1 · Fundamentos', url: 'paginas/nivel-1-fundamentos/index.html' },
+      { name: 'Nivel 2 · Dibujo 2D', url: 'paginas/nivel-2-dibujo-2d/index.html' },
+      { name: 'Nivel 3 · Organización', url: 'paginas/nivel-3-organizacion/index.html' },
+      { name: 'Nivel 4 · Modelado 3D', url: 'paginas/nivel-4-modelado-3d/index.html' },
+      { name: 'Nivel 5 · Avanzado', url: 'paginas/nivel-5-avanzado/index.html' },
       { name: 'Comandos', url: 'paginas/comandos.html' },
       { name: 'Recursos', url: 'paginas/recursos.html' },
       { name: 'FAQ', url: 'paginas/faq.html' }
@@ -626,12 +654,11 @@ function buildSearchData(){
 
 function determinePage(section){
   const topic = section.getAttribute('data-topic') || '';
-  if (topic.startsWith('nivel1')) return 'nivel-1-fundamentos.html';
-  if (topic.startsWith('nivel2')) return 'nivel-2-dibujo-2d.html';
-  if (topic.startsWith('nivel3')) return 'nivel-3-organizacion.html';
-  if (topic.startsWith('nivel4')) return 'nivel-4-modelado-3d.html';
-  if (topic.startsWith('nivel5')) return 'nivel-5-avanzado.html';
-  return 'nivel-1-fundamentos.html';
+  const PAGES = { nivel1: 'nivel-1-fundamentos', nivel2: 'nivel-2-dibujo-2d', nivel3: 'nivel-3-organizacion', nivel4: 'nivel-4-modelado-3d', nivel5: 'nivel-5-avanzado' };
+  const m = topic.match(/^(nivel[1-5])-(.+)$/);
+  if (!m) return 'nivel-1-fundamentos/index.html';
+  const folder = PAGES[m[1]] || 'nivel-1-fundamentos';
+  return folder + '/' + m[2] + '.html';
 }
 
 function highlightMatch(text, query){
@@ -694,17 +721,9 @@ function initHomeProgress(){
   if (!fill || !label) return;
 
   const allTopics = document.querySelectorAll('[data-topic]');
-  const total = allTopics.length || 51; // fallback al total conocido
-  let done = 0;
-
-  allTopics.forEach(s => {
-    const id = s.getAttribute('data-topic');
-    if (isTopicComplete(id)) done++;
-  });
-
-  // También contar desde localStorage directamente
-  const saved = JSON.parse(localStorage.getItem('autocad-guia-progreso') || '[]');
-  done = Math.max(done, saved.length);
+  const savedTopics = JSON.parse(localStorage.getItem('autocad-guia-progreso') || '[]');
+  const total = 96; // 13 + 27 + 20 + 19 + 17
+  let done = Math.min(savedTopics.length, total);
 
   const pct = Math.round((done / total) * 100);
   fill.style.width = pct + '%';

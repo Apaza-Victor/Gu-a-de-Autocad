@@ -1,0 +1,91 @@
+<p>Un <strong>espacio de trabajo</strong> es un conjunto de paneles, cintas, menús y barras de herramientas agrupados según la tarea. AutoCAD trae varios predefinidos (Dibujo y anotación, Modelado 3D, etc.) y te permite crear los tuyos propios para trabajar más rápido.</p>
+
+<div class="callout">
+  <span class="callout-title">Regla de oro</span>
+  No dibujes con el espacio de trabajo por defecto de todos. Crea uno propio con solo lo que usas: menos clics, menos errores y una pantalla limpia.
+</div>
+
+<h3>1. Cambiar de espacio de trabajo</h3>
+<p>En la parte inferior derecha de la ventana, junto a la barra de estado, hay un conmutador de espacios de trabajo (el ícono de engranaje o el nombre actual, por ejemplo "Dibujo y anotación"). Pulsa ahí y elige uno de la lista.</p>
+
+<div class="table-scroll">
+<table class="table-cad">
+  <thead><tr><th>Espacio de trabajo</th><th>Para qué sirve</th><th>Cuándo usarlo</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Dibujo y anotación</strong></td><td>Cinta con Inicio, Insertar, Anotar, Capas, etc.</td><td>Trabajo 2D cotidiano (planta, cortes, detalles)</td></tr>
+    <tr><td><strong>Modelado 3D</strong></td><td>Cintas de Sólido, Superficies, Render</td><td>Modelado y renderizado 3D</td></tr>
+    <tr><td><strong>3D básicos</strong></td><td>Subconjunto reducido para empezar en 3D</td><td>Primeros pasos en 3D</td></tr>
+    <tr><td><strong>AutoCAD clásico</strong></td><td>Menús + barras de herramientas (sin cinta)</td><td>Si vienes de versiones antiguas o prefieres menús</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3>2. Personalizar la cinta de opciones</h3>
+<p>La cinta se organiza en <strong>pestañas</strong> (Inicio, Insertar, Anotar…) y cada pestaña contiene <strong>paneles</strong> (Dibujo, Modificar, Capas…). Puedes mover y ocultar paneles:</p>
+
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Muestra u oculta una pestaña</h4>
+    <p>Haz clic con el botón derecho sobre cualquier pestaña de la cinta y marca o desmarca las pestañas que quieras ver.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Mueve un panel</h4>
+    <p>Arrastra el título de un panel (por ejemplo "Modificar") hacia otra pestaña para reorganizarlo. Una flecha gris te indica la nueva posición.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Maximiza el espacio de dibujo</h4>
+    <p>Con la tecla <span class="key-inline">Ctrl+0</span> (cero) limpias toda la interfaz y dejas solo el área de dibujo. Púlsala de nuevo para restaurarla.</p>
+  </div>
+</div>
+
+<h3>3. Crear tu propio espacio de trabajo</h3>
+<p>Una vez que tengas la cinta como a ti te gusta, guarda el conjunto como un espacio de trabajo nuevo:</p>
+
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Abre el Administrador de espacios de trabajo</h4>
+    <p>Escribe <span class="cmd-inline">WSSETTINGS</span> o <span class="cmd-inline">WORKSPACE</span> en la línea de comandos y pulsa Enter.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Guarda el espacio actual con tu propio nombre</h4>
+    <p>En el cuadro de diálogo elige <strong>Guardar como espacio de trabajo</strong> (o en la barra inferior: flecha desplegable junto al conmutador → "Guardar espacio actual como…"). Ponle un nombre, por ejemplo "Mi 2D profesional".</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Restablece si lo estropeas</h4>
+    <p>Si algo se desordena, usa <span class="cmd-inline">RESET</span> (Restablecer configuración) o, mejor aún, <span class="cmd-inline">CUI</span> → pestaña "Espacios de trabajo" y haz clic en <strong>Restablecer</strong> sobre el tuyo.</p>
+  </div>
+</div>
+
+<h3>4. La línea de comandos y la barra de estado</h3>
+<p>El espacio de trabajo no es solo la cinta. También conviene decidir qué ves abajo:</p>
+<ul>
+  <li><strong>Línea de comandos</strong>: muéstrala siempre (tecla <span class="key-inline">Ctrl+9</span>). Es la vía más rápida para ejecutar comandos.</li>
+  <li><strong>Barra de estado</strong>: activa/desactiva ORTO, OSNAP, rastreo polar, rejilla… con un solo clic (habilitadas suelen ir en azul).</li>
+  <li><strong>Pestañas de archivos</strong>: con <span class="key-inline">Ctrl+Tab</span> alternas entre dibujos abiertos.</li>
+</ul>
+
+<div class="callout warn">
+  <span class="callout-title">Atención</span>
+  Los espacios de trabajo se guardan en tu perfil de usuario, no en el archivo DWG. Si cambias de equipo, deberás recrear tu espacio o migrar tu perfil con el comando <span class="cmd-inline">OPTIONS</span> → pestaña "Perfiles".
+</div>
+
+<h3>Práctica recomendada</h3>
+<p>Configura una sola vez: pestañas y paneles esenciales, barra de estado con ORTO + OSNAP + rastreo polar, y línea de comandos siempre visible. Luego guarda el espacio con nombre y no vuelvas a tocarlo. Ese ahorro de tiempo se nota todos los días.</p>

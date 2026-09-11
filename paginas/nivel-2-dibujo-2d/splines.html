@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Splines y curvas · Nivel 2 — AutoCAD Guía</title>
+<link rel="canonical" href="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-2-dibujo-2d/splines.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-2-dibujo-2d/splines.html">
+<meta property="og:site_name" content="AutoCAD Guía">
+<meta property="og:title" content="Splines y curvas · Nivel 2 — AutoCAD Guía">
+<meta property="og:description" content="Curvas libres con SPLINE: control de la forma, tolerancia y edición.">
+<meta property="og:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Splines y curvas · Nivel 2 — AutoCAD Guía">
+<meta name="twitter:description" content="Curvas libres con SPLINE: control de la forma, tolerancia y edición.">
+<meta name="twitter:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="description" content="Curvas libres con SPLINE: control de la forma, tolerancia y edición.">
+
+<link rel="icon" type="image/svg+xml" href="../../assets/img/autocad-2.svg">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../../assets/css/responsive.css">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Nivel · Dibujo 2D en AutoCAD",
+  "description": "Geometría, edición, precisión, capas, bloques, cotas, texto, hatch y splines.",
+  "provider": {
+    "@type": "Organization",
+    "name": "AutoCAD Guía",
+    "sameAs": "https://apaza-victor.github.io/Gu-a-de-Autocad/"
+  },
+  "inLanguage": "es",
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "online",
+    "learningResourceType": "tutorial",
+    "inLanguage": "es"
+  }
+}
+  </script>
+</head>
+
+<body>
+
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+<nav class="navbar navbar-cad navbar-expand-lg">
+  <div class="container container-xl">
+    <a class="navbar-brand brand-cad" href="../../index.html">
+      <img class="brand-logo" src="../../assets/img/autocad-2.svg" alt="AutoCAD">
+      <span>AutoCAD<small class="d-block" data-i18n-html="brand.sub">Guía · Teoría &amp; Práctica</small></span>
+    </a>
+    <div class="d-flex align-items-center gap-2 nav-actions order-lg-last">
+      <button class="icon-btn" id="searchToggle" title="Buscar" data-i18n-title="ui.search"><i class="bi bi-search"></i></button>
+      <button class="icon-btn" id="themeToggle" title="Cambiar tema" data-i18n-title="ui.theme"><i class="bi bi-moon-stars"></i></button>
+      <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
+        <i class="bi bi-list fs-4"></i>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navCad">
+      <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../../index.html" data-i18n="nav.home">Inicio</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-cad dropdown-toggle active" href="#" data-bs-toggle="dropdown" data-i18n="nav.levels">Niveles</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="../nivel-1-fundamentos/index.html">Nivel 1 · Fundamentos</a></li>
+            <li><a class="dropdown-item active" href="../nivel-2-dibujo-2d/index.html">Nivel 2 · Dibujo 2D</a></li>
+            <li><a class="dropdown-item" href="../nivel-3-organizacion/index.html">Nivel 3 · Organización</a></li>
+            <li><a class="dropdown-item" href="../nivel-4-modelado-3d/index.html">Nivel 4 · Modelado 3D</a></li>
+            <li><a class="dropdown-item" href="../nivel-5-avanzado/index.html">Nivel 5 · Experto</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../comandos.html" data-i18n="nav.commands">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../ejemplos-visuales.html" data-i18n="nav.visual">Visuales</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../trucos.html" data-i18n="nav.tips">Trucos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../recursos.html" data-i18n="nav.resources">Recursos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../faq.html" data-i18n="nav.faq">FAQ</a></li>
+      </ul>
+
+      <div class="d-flex align-items-center gap-2 nav-actions-menu ms-lg-auto">
+        <span class="coord-readout d-none d-lg-inline-flex">X: <span id="coordX">000.00</span>&nbsp; Y: <span id="coordY">000.00</span></span>
+        <button class="lang-toggle" id="langToggle" title="Cambiar idioma" data-i18n-title="ui.lang">
+          <i class="bi bi-translate lang-toggle-flag"></i>
+          <span class="lang-toggle-text">EN</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header" id="main-content">
+  <div class="container container-xl">
+    <p class="crumb"><a href="../../index.html">Inicio</a> / <a href="../../index.html#niveles">Niveles</a> / <a href="index.html">Dibujo 2D</a> / Tema 18</p>
+    <span class="eyebrow" data-i18n="lvl2.eyebrow">Nivel 02 · Básico–Intermedio</span>
+    <h1>Splines y curvas</h1>
+    <div class="level-progress-bar" data-level-prefix="nivel2" data-level-total="27"><div class="fill"></div></div>
+    <p class="level-progress-label">0 de 27 temas completados · 0%</p>
+  </div>
+</header>
+
+<div class="content-layout">
+  <div class="container container-xl">
+    <div class="row">
+
+      <aside class="col-lg-3 mb-5 mb-lg-0">
+        <div class="toc-sidebar">
+          <h6 data-i18n="ui.inThisLevel">En este nivel</h6>
+          <ul class="toc-list">
+            <li><a href="dibujo.html" data-toc="nivel2-dibujo"><span class="toc-check"></span> Herramientas de dibujo</a></li>
+            <li><a href="modificacion.html" data-toc="nivel2-modificacion"><span class="toc-check"></span> Herramientas de modificación</a></li>
+            <li><a href="matrices.html" data-toc="nivel2-matrices"><span class="toc-check"></span> Matrices (ARRAY)</a></li>
+            <li><a href="precision.html" data-toc="nivel2-precision"><span class="toc-check"></span> Precisión: referencias y rastreo</a></li>
+            <li><a href="capas.html" data-toc="nivel2-capas"><span class="toc-check"></span> Capas (Layers)</a></li>
+            <li><a href="bloques.html" data-toc="nivel2-bloques"><span class="toc-check"></span> Bloques y atributos</a></li>
+            <li><a href="acotacion.html" data-toc="nivel2-acotacion"><span class="toc-check"></span> Acotación</a></li>
+            <li><a href="texto.html" data-toc="nivel2-texto"><span class="toc-check"></span> Texto y tablas</a></li>
+            <li><a href="hatch.html" data-toc="nivel2-hatch"><span class="toc-check"></span> Sombreado (Hatch)</a></li>
+            <li><a href="seleccion.html" data-toc="nivel2-seleccion"><span class="toc-check"></span> Selección de objetos</a></li>
+            <li><a href="grips.html" data-toc="nivel2-grips"><span class="toc-check"></span> Pinzamientos (GRIPS)</a></li>
+            <li><a href="lineas.html" data-toc="nivel2-lineas"><span class="toc-check"></span> Tipos de línea</a></li>
+            <li><a href="puntos.html" data-toc="nivel2-puntos"><span class="toc-check"></span> Puntos y división</a></li>
+            <li><a href="auxiliares.html" data-toc="nivel2-auxiliares"><span class="toc-check"></span> Geometría auxiliar</a></li>
+            <li><a href="consulta.html" data-toc="nivel2-consulta"><span class="toc-check"></span> Medición y verificación</a></li>
+            <li><a href="propiedades.html" data-toc="nivel2-propiedades"><span class="toc-check"></span> Propiedades de objeto</a></li>
+            <li><a href="pedit.html" data-toc="nivel2-pedit"><span class="toc-check"></span> Edición de polilíneas</a></li>
+            <li><a href="splines.html" data-toc="nivel2-splines"><span class="toc-check"></span> Splines y curvas</a></li>
+            <li><a href="index.html#autoevaluacion"><span class="toc-check"></span> Autoevaluación</a></li>
+          </ul>
+          <hr style="border-color:var(--border-soft)" class="my-4">
+          <a href="index.html" class="btn-cad-outline w-100 text-center d-block"><i class="bi bi-arrow-left"></i> Volver al índice</a>
+        </div>
+      </aside>
+
+      <div class="col-lg-9">
+        <article class="content-article">
+
+          <section id="splines" data-topic="nivel2-splines">
+                                <h2><span class="sec-num">18</span>Splines y curvas</h2>
+                                <p>Una <strong>spline</strong> es una curva suave que se define a partir de puntos de control. A diferencia del arco, no tiene un radio constante: se adapta libremente a la forma que quieras trazar. Se dibuja con <span class="cmd-inline">SPLINE</span> (<span class="key-inline">SPL</span>).</p>
+
+                                <h3>¿Spline, arco o polilínea?</h3>
+                                <table class="table-cad">
+                                  <thead><tr><th>Tipo</th><th>Comando</th><th>Úsalo cuando</th></tr></thead>
+                                  <tbody>
+                                    <tr><td>Arco</td><td><span class="cmd-inline">ARC</span></td><td>La curva tiene un radio constante (esquinas redondeadas, arcos de círculo).</td></tr>
+                                    <tr><td>Polilínea</td><td><span class="cmd-inline">PLINE</span></td><td>Necesitas segmentos rectos y arcos combinados, o editar con PEDIT.</td></tr>
+                                    <tr><td>Spline</td><td><span class="cmd-inline">SPLINE</span></td><td>La curva es libre y orgánica: topografía, viales, piezas de diseño.</td></tr>
+                                  </tbody>
+                                </table>
+
+                                <h3>Control de la curva</h3>
+                                <p>Con la spline dibujada puedes editar sus <strong>puntos de control</strong> (o puntos de ajuste) para modelar la forma. La <strong>tolerancia</strong> define cuán cerca debe pasar la curva de los puntos: tolerancia 0 pasa exactamente por ellos; tolerancias mayores la suavizan más.</p>
+                                <ul>
+                                  <li><span class="cmd-inline">SPLINEDIT</span>: edita la spline (mueve puntos de control, ajusta tolerancia, cierra o invierte la curva).</li>
+                                  <li><span class="cmd-inline">PEDIT</span> → <strong>Spline</strong>: convierte una polilínea en una curva spline suave.</li>
+                                  <li><strong>Flatten</strong> o <span class="cmd-inline">SPLINEDIT</span> → Decurve: convierte la spline de vuelta a segmentos rectos.</li>
+                                </ul>
+
+                                <h3>Uso real</h3>
+                                <ul>
+                                  <li><strong>Topografía:</strong> curvas de nivel que siguen el terreno.</li>
+                                  <li><strong>Trazados viales:</strong> el eje de una carretera no es un arco de radio único.</li>
+                                  <li><strong>Piezas orgánicas:</strong> carcasas, interiores de vehículos y diseño industrial.</li>
+                                </ul>
+
+                                <div class="callout">
+                                  <span class="callout-title">No abuses</span>
+                                  Para curvas de <strong>radio constante</strong> (una esquina redondeada de 50 mm) usa <span class="cmd-inline">ARC</span> o <span class="cmd-inline">FILLET</span>. La spline está pensada para curvas libres; abusar de ella hace los planos difíciles de acotar y de reproducir.
+                                </div>
+
+                                <div class="diagram-canvas">
+                                  <svg viewBox="0 0 280 170">
+                                    <text class="cad-label-cmd" x="10" y="16" style="font-size:8px">SPLINE · curva por puntos de control</text>
+                                    <path class="cad-line" d="M 20,130 C 60,40 120,60 150,110 S 230,150 260,80"/>
+                                    <circle class="cad-point" cx="20" cy="130" r="4"/>
+                                    <circle class="cad-point-cyan" cx="60" cy="40" r="4"/>
+                                    <circle class="cad-point-cyan" cx="120" cy="60" r="4"/>
+                                    <circle class="cad-point-cyan" cx="150" cy="110" r="4"/>
+                                    <circle class="cad-point-cyan" cx="230" cy="150" r="4"/>
+                                    <circle class="cad-point" cx="260" cy="80" r="4"/>
+                                    <text class="cad-label" x="10" y="152" style="font-size:8px">inicio</text>
+                                    <text class="cad-label" x="240" y="72" style="font-size:8px">fin</text>
+                                    <text class="cad-label" x="135" y="140" style="font-size:8px">puntos de control →</text>
+                                  </svg>
+                                </div>
+
+          <!-- ENRIQ START -->
+          <h3>Puntos de ajuste frente a puntos de control</h3>
+          <p>Al dibujar con <span class="cmd-inline">SPLINE</span>, AutoCAD pregunta por el método: <em>Control</em> arrastra la curva por puntos tensores (más matemática) y <em>Fit</em> hace que pase por los puntos que tocas (más intuitiva, preferida en topografía).</p>
+          <ul>
+            <li><strong>Cerrada:</strong> la opción <span class="cmd-inline">Close</span> une el final con el inicio formando un lazo continuo.</li>
+            <li><strong>Tolerancia:</strong> 0 pasa por los puntos exactos; subirla suaviza y aleja la curva del punteo (útil con curvas muy ruidosas).</li>
+            <li><strong>De polilínea a spline:</strong> <span class="cmd-inline">PEDIT</span> → Spline; y al revés con <span class="cmd-inline">SPLINEDIT</span> → Decurve.</li>
+          </ul>
+          <div class="callout">
+            <span class="callout-title">Idea clave</span>
+            <span>La spline no se acota con ángulos fijos; en fabricación se prefiere polilínea con arcos tangentes. Reserva la spline para curvas de terreno o diseño libre.</span>
+          </div>
+
+          <h3>Mini ejercicio: curva de nivel cerrada</h3>
+          <div class="lesson-step">
+            <span class="lesson-num">1</span>
+            <div class="lesson-body">
+              <h4>Traza</h4>
+              <p>Con <span class="cmd-inline">SPLINE</span>, método Fit, toca 6 puntos formando un bucle irregular.</p>
+            </div>
+          </div>
+          <div class="lesson-step">
+            <span class="lesson-num">2</span>
+            <div class="lesson-body">
+              <h4>Cierra y suaviza</h4>
+              <p>Elige <span class="cmd-inline">Close</span> y luego edita con <span class="cmd-inline">SPLINEDIT</span> subiendo la tolerancia hasta 5; compara el resultado.</p>
+            </div>
+          </div>
+          <!-- ENRIQ END -->
+          <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+        </article>
+
+        <nav class="level-nav">
+          <a href="pedit.html">
+            <span class="nav-label">Anterior</span>
+            <span class="nav-title"><i class="bi bi-arrow-left"></i> Edición de polilíneas</span>
+          </a>
+          <a href="index.html#autoevaluacion" class="nav-next">
+            <span class="nav-label">Siguiente</span>
+            <span class="nav-title">Autoevaluación <i class="bi bi-arrow-right"></i></span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container container-xl">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <div class="brand-cad mb-2"><img class="brand-logo" src="../../assets/img/autocad-2.svg" alt="AutoCAD"><span>AutoCAD Guía</span></div>
+        <p data-i18n="footer.disclaimer">Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.levels">Niveles</h6>
+        <ul class="list-unstyled">
+          <li><a href="../nivel-1-fundamentos/index.html">Fundamentos</a></li>
+          <li><a href="../nivel-2-dibujo-2d/index.html">Dibujo 2D</a></li>
+          <li><a href="../nivel-3-organizacion/index.html">Organización</a></li>
+          <li><a href="../nivel-4-modelado-3d/index.html">Modelado 3D</a></li>
+          <li><a href="../nivel-5-avanzado/index.html">Experto</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.guide">Guía</h6>
+        <ul class="list-unstyled">
+          <li><a href="../comandos.html">Comandos</a></li>
+          <li><a href="../ejemplos-visuales.html">Ejemplos</a></li>
+          <li><a href="../trucos.html">Trucos</a></li>
+          <li><a href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
+          <li><a href="../recursos.html">Recursos</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.follow">Síguenos</h6>
+        <div class="d-flex gap-2">
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-5 mb-4" style="border-color:var(--border-soft)">
+    <p class="mb-0 small" data-i18n="footer.copyright">© 2026 Victor Apaza. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<div class="command-line-bar" id="cmdBar">
+  <div class="command-line-inner">
+    <span class="prompt-sign" data-i18n="ui.command">Comando:</span>
+    <span id="cmd-typed"></span><span class="cursor-blink"></span>
+    <button class="cl-close" id="cmdClose" title="Ocultar" data-i18n-title="ui.hide"><i class="bi bi-x-lg"></i></button>
+  </div>
+</div>
+
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Buscar en la guía" data-i18n-aria="ui.search">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="bi bi-search"></i>
+      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar" data-i18n-placeholder="ui.searchPlaceholder">
+      <kbd class="search-kbd">ESC</kbd>
+    </div>
+    <div class="search-results" id="globalSearchResults">
+      <div class="search-empty" data-i18n="ui.typeToSearch">Escribe al menos 2 caracteres para buscar...</div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+<script src="../../assets/js/i18n.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/animations.js"></script>
+<script src="../../assets/js/main.js"></script>
+
+</body>
+</html>

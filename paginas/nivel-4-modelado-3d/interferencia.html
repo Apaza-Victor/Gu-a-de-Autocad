@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interferencia y análisis · Nivel 4 — AutoCAD Guía</title>
+<link rel="canonical" href="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-4-modelado-3d/interferencia.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-4-modelado-3d/interferencia.html">
+<meta property="og:site_name" content="AutoCAD Guía">
+<meta property="og:title" content="Interferencia y análisis · Nivel 4 — AutoCAD Guía">
+<meta property="og:description" content="Detectar choques entre sólidos y medir propiedades de masa y geometría.">
+<meta property="og:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Interferencia y análisis · Nivel 4 — AutoCAD Guía">
+<meta name="twitter:description" content="Detectar choques entre sólidos y medir propiedades de masa y geometría.">
+<meta name="twitter:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="description" content="Detectar choques entre sólidos y medir propiedades de masa y geometría.">
+
+<link rel="icon" type="image/svg+xml" href="../../assets/img/autocad-2.svg">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../../assets/css/responsive.css">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Nivel · Modelado 3D en AutoCAD",
+  "description": "Sólidos, booleanos, extrusión, mallas, superficies NURBS, renderizado y análisis.",
+  "provider": {
+    "@type": "Organization",
+    "name": "AutoCAD Guía",
+    "sameAs": "https://apaza-victor.github.io/Gu-a-de-Autocad/"
+  },
+  "inLanguage": "es",
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "online",
+    "learningResourceType": "tutorial",
+    "inLanguage": "es"
+  }
+}
+  </script>
+</head>
+
+<body>
+
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+<nav class="navbar navbar-cad navbar-expand-lg">
+  <div class="container container-xl">
+    <a class="navbar-brand brand-cad" href="../../index.html">
+      <img class="brand-logo" src="../../assets/img/autocad-2.svg" alt="AutoCAD">
+      <span>AutoCAD<small class="d-block" data-i18n-html="brand.sub">Guía · Teoría &amp; Práctica</small></span>
+    </a>
+    <div class="d-flex align-items-center gap-2 nav-actions order-lg-last">
+      <button class="icon-btn" id="searchToggle" title="Buscar" data-i18n-title="ui.search"><i class="bi bi-search"></i></button>
+      <button class="icon-btn" id="themeToggle" title="Cambiar tema" data-i18n-title="ui.theme"><i class="bi bi-moon-stars"></i></button>
+      <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
+        <i class="bi bi-list fs-4"></i>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navCad">
+      <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../../index.html" data-i18n="nav.home">Inicio</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-cad dropdown-toggle active" href="#" data-bs-toggle="dropdown" data-i18n="nav.levels">Niveles</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="../nivel-1-fundamentos/index.html">Nivel 1 · Fundamentos</a></li>
+            <li><a class="dropdown-item" href="../nivel-2-dibujo-2d/index.html">Nivel 2 · Dibujo 2D</a></li>
+            <li><a class="dropdown-item" href="../nivel-3-organizacion/index.html">Nivel 3 · Organización</a></li>
+            <li><a class="dropdown-item active" href="../nivel-4-modelado-3d/index.html">Nivel 4 · Modelado 3D</a></li>
+            <li><a class="dropdown-item" href="../nivel-5-avanzado/index.html">Nivel 5 · Experto</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../comandos.html" data-i18n="nav.commands">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../ejemplos-visuales.html" data-i18n="nav.visual">Visuales</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../trucos.html" data-i18n="nav.tips">Trucos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../recursos.html" data-i18n="nav.resources">Recursos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../faq.html" data-i18n="nav.faq">FAQ</a></li>
+      </ul>
+
+      <div class="d-flex align-items-center gap-2 nav-actions-menu ms-lg-auto">
+        <span class="coord-readout d-none d-lg-inline-flex">X: <span id="coordX">000.00</span>&nbsp; Y: <span id="coordY">000.00</span></span>
+        <button class="lang-toggle" id="langToggle" title="Cambiar idioma" data-i18n-title="ui.lang">
+          <i class="bi bi-translate lang-toggle-flag"></i>
+          <span class="lang-toggle-text">EN</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header" id="main-content">
+  <div class="container container-xl">
+    <p class="crumb"><a href="../../index.html">Inicio</a> / <a href="../../index.html#niveles">Niveles</a> / <a href="index.html">Modelado 3D</a> / Tema 13</p>
+    <span class="eyebrow" data-i18n="lvl4.eyebrow">Nivel 04 · Avanzado</span>
+    <h1>Interferencia y análisis</h1>
+    <div class="level-progress-bar" data-level-prefix="nivel4" data-level-total="19"><div class="fill"></div></div>
+    <p class="level-progress-label">0 de 19 temas completados · 0%</p>
+  </div>
+</header>
+
+<div class="content-layout">
+  <div class="container container-xl">
+    <div class="row">
+
+      <aside class="col-lg-3 mb-5 mb-lg-0">
+        <div class="toc-sidebar">
+          <h6 data-i18n="ui.inThisLevel">En este nivel</h6>
+          <ul class="toc-list">
+            <li><a href="navegacion.html" data-toc="nivel4-navegacion"><span class="toc-check"></span> Navegación 3D</a></li>
+            <li><a href="ucs.html" data-toc="nivel4-ucs"><span class="toc-check"></span> Sistema de coordenadas (UCS)</a></li>
+            <li><a href="solidos.html" data-toc="nivel4-solidos"><span class="toc-check"></span> Sólidos básicos</a></li>
+            <li><a href="booleanas.html" data-toc="nivel4-booleanas"><span class="toc-check"></span> Operaciones booleanas</a></li>
+            <li><a href="creacion.html" data-toc="nivel4-creacion"><span class="toc-check"></span> De perfil a volumen</a></li>
+            <li><a href="edicion.html" data-toc="nivel4-edicion"><span class="toc-check"></span> Edición de sólidos</a></li>
+            <li><a href="render.html" data-toc="nivel4-render"><span class="toc-check"></span> Renderizado básico</a></li>
+            <li><a href="recorridos.html" data-toc="nivel4-recorridos"><span class="toc-check"></span> Recorridos y animaciones</a></li>
+            <li><a href="nav-3d-detalle.html" data-toc="nivel4-nav-3d-detalle"><span class="toc-check"></span> Navegación avanzada</a></li>
+            <li><a href="mallas.html" data-toc="nivel4-mallas"><span class="toc-check"></span> Mallas (Mesh)</a></li>
+            <li><a href="superficies.html" data-toc="nivel4-superficies"><span class="toc-check"></span> Superficies y NURBS</a></li>
+            <li><a href="seccion.html" data-toc="nivel4-seccion"><span class="toc-check"></span> Secciones sólidas</a></li>
+            <li><a href="interferencia.html" data-toc="nivel4-interferencia"><span class="toc-check"></span> Interferencia y análisis</a></li>
+            <li><a href="cotado3d.html" data-toc="nivel4-cotado3d"><span class="toc-check"></span> Cotado 3D</a></li>
+            <li><a href="materiales.html" data-toc="nivel4-materiales"><span class="toc-check"></span> Materiales y mapeado</a></li>
+            <li><a href="iluminacion.html" data-toc="nivel4-iluminacion"><span class="toc-check"></span> Iluminación y escenas</a></li>
+            <li><a href="vistas-2d.html" data-toc="nivel4-vistas-2d"><span class="toc-check"></span> Vistas 2D desde el 3D</a></li>
+            <li><a href="massprop.html" data-toc="nivel4-massprop"><span class="toc-check"></span> MASSPROP</a></li>
+            <li><a href="impresion3d.html" data-toc="nivel4-impresion3d"><span class="toc-check"></span> Impresión 3D (STL)</a></li>
+            <li><a href="index.html#autoevaluacion"><span class="toc-check"></span> Autoevaluación</a></li>
+          </ul>
+          <hr style="border-color:var(--border-soft)" class="my-4">
+          <a href="index.html" class="btn-cad-outline w-100 text-center d-block"><i class="bi bi-arrow-left"></i> Volver al índice</a>
+        </div>
+      </aside>
+
+      <div class="col-lg-9">
+        <article class="content-article">
+
+          <section id="interferencia" data-topic="nivel4-interferencia">
+                                <h2><span class="sec-num">13</span><span data-i18n="lvl4.s11.title">Interferencia y análisis</span></h2>
+                                <p>En proyectos con múltiples componentes, es fundamental detectar choques entre piezas antes de fabricar o construir.</p>
+
+                                <table class="table-cad">
+                                  <thead><tr><th>Comando</th><th>Qué hace</th></tr></thead>
+                                  <tbody>
+                                    <tr><td><span class="cmd-inline">INTERFERE</span></td><td>Compara dos o más sólidos y muestra las zonas donde se superponen (interferencias).</td></tr>
+                                    <tr><td><span class="cmd-inline">MASSPROP</span></td><td>Calcula propiedades físicas de un sólido: volumen, área superficial, centro de masa, momentos de inercia.</td></tr>
+                                    <tr><td><span class="cmd-inline">AREA</span></td><td>Mide el área y perímetro de la cara de un sólido o de una sección 2D.</td></tr>
+                                    <tr><td><span class="cmd-inline">DIST</span></td><td>Mide la distancia y ángulo entre dos puntos en el espacio 3D.</td></tr>
+                                  </tbody>
+                                </table>
+
+                                <div class="callout">
+                                  <span class="callout-title">Uso práctico</span>
+                                  En ingeniería mecánica, <span class="cmd-inline">INTERFERE</span> detecta si dos piezas de un ensamble chocan. En arquitectura, verifica si conductos de HVAC atraviesan vigas estructurales.
+                                </div>
+
+          <!-- ENRIQ START -->
+          <h3>Detectar choques antes de construir</h3>
+          <div class="lesson-step">
+            <span class="lesson-num">1</span>
+            <div class="lesson-body">
+              <h4>Ejecuta la comprobación</h4>
+              <p>Escribe <span class="cmd-inline">INTERFERE</span> y selecciona el primer conjunto de sólidos, <span class="key-inline">Enter</span>, y luego el segundo.</p>
+            </div>
+          </div>
+          <div class="lesson-step">
+            <span class="lesson-num">2</span>
+            <div class="lesson-body">
+              <h4>Revisa los choques</h4>
+              <p>AutoCAD resalta las zonas de superposición y las contabiliza; usa <em>Siguiente/Anterior</em> para recorrerlas.</p>
+            </div>
+          </div>
+          <div class="lesson-step">
+            <span class="lesson-num">3</span>
+            <div class="lesson-body">
+              <h4>Crea el sólido de interferencia</h4>
+              <p>Si respondes <span class="cmd-inline">S</span> (Sí) a "Crear sólidos de interferencia", obtienes el volumen del choque como objeto: úsalo para medirlo o mostrarlo en la lámina.</p>
+            </div>
+          </div>
+          <div class="callout">
+            <span class="callout-title">Caso de uso</span>
+            <span>En coordinación MEP/estructura: cruzas los conductos (primer conjunto) con las vigas (segundo conjunto) y en segundos sabes qué zonas deben reubicarse antes de la obra.</span>
+          </div>
+          <!-- ENRIQ END -->
+          <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+        </article>
+
+        <nav class="level-nav">
+          <a href="seccion.html">
+            <span class="nav-label">Anterior</span>
+            <span class="nav-title"><i class="bi bi-arrow-left"></i> Secciones sólidas</span>
+          </a>
+          <a href="cotado3d.html" class="nav-next">
+            <span class="nav-label">Siguiente</span>
+            <span class="nav-title">Cotado 3D <i class="bi bi-arrow-right"></i></span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container container-xl">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <div class="brand-cad mb-2"><img class="brand-logo" src="../../assets/img/autocad-2.svg" alt="AutoCAD"><span>AutoCAD Guía</span></div>
+        <p data-i18n="footer.disclaimer">Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.levels">Niveles</h6>
+        <ul class="list-unstyled">
+          <li><a href="../nivel-1-fundamentos/index.html">Fundamentos</a></li>
+          <li><a href="../nivel-2-dibujo-2d/index.html">Dibujo 2D</a></li>
+          <li><a href="../nivel-3-organizacion/index.html">Organización</a></li>
+          <li><a href="../nivel-4-modelado-3d/index.html">Modelado 3D</a></li>
+          <li><a href="../nivel-5-avanzado/index.html">Experto</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.guide">Guía</h6>
+        <ul class="list-unstyled">
+          <li><a href="../comandos.html">Comandos</a></li>
+          <li><a href="../ejemplos-visuales.html">Ejemplos</a></li>
+          <li><a href="../trucos.html">Trucos</a></li>
+          <li><a href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
+          <li><a href="../recursos.html">Recursos</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.follow">Síguenos</h6>
+        <div class="d-flex gap-2">
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-5 mb-4" style="border-color:var(--border-soft)">
+    <p class="mb-0 small" data-i18n="footer.copyright">© 2026 Victor Apaza. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<div class="command-line-bar" id="cmdBar">
+  <div class="command-line-inner">
+    <span class="prompt-sign" data-i18n="ui.command">Comando:</span>
+    <span id="cmd-typed"></span><span class="cursor-blink"></span>
+    <button class="cl-close" id="cmdClose" title="Ocultar" data-i18n-title="ui.hide"><i class="bi bi-x-lg"></i></button>
+  </div>
+</div>
+
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Buscar en la guía" data-i18n-aria="ui.search">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="bi bi-search"></i>
+      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar" data-i18n-placeholder="ui.searchPlaceholder">
+      <kbd class="search-kbd">ESC</kbd>
+    </div>
+    <div class="search-results" id="globalSearchResults">
+      <div class="search-empty" data-i18n="ui.typeToSearch">Escribe al menos 2 caracteres para buscar...</div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+<script src="../../assets/js/i18n.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/animations.js"></script>
+<script src="../../assets/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<p>El <strong>plano estructural</strong> define la geometría, el armado y las uniones de la estructura del edificio. Se dibuja a partir del plano de arquitectura y lo revisa/valida el ingeniero estructural. Debe ser claro, referenciado y sin ambigüedades.</p>
+
+<h3>1. Estructura de un plano estructural</h3>
+<p>Un buen plano estructural contiene, como mínimo:</p>
+<ul>
+  <li><strong>Ejes de replanteo:</strong> la malla de ejes (A, B, C… y 1, 2, 3…) con sus cotas.</li>
+  <li><strong>Elementos portantes:</strong> pilares, muros de carga, zapatas, vigas (con su canto/yo en un listado).</li>
+  <li><strong>Forjados y losas:</strong> contornos, armados y direcciones de vertido.</li>
+  <li><strong>Armaduras:</strong> representación simplificada de las barras (en detalle o en cuadro de armado).</li>
+  <li><strong>Cuadro de plantas y listado de elementos</strong> o referencia a los detalles.</li>
+  <li><strong>Niveles y cotas</strong> de cada cara superior/inferior de los elementos.</li>
+</ul>
+
+<h3>2. Montar el plano en AutoCAD (paso a paso)</h3>
+
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Importa la base de arquitectura</h4>
+    <p>Arrastra o adjunta el plano de arquitectura como <strong>Xref</strong> (<span class="cmd-inline">XREF</span>/<span class="key-inline">XR</span>). Déjalo en referencia para no moverlo.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Trazas los ejes de replanteo</h4>
+    <p>Con <span class="cmd-inline">LINE</span> dibuja la malla de ejes en capa <code>E-Ejes</code> (tipo <code>CENTER</code>). Acótalos con <span class="cmd-inline">DIMLINEAR</span>.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Dibuja pilares y muros estructurales</h4>
+    <p>Con <span class="cmd-inline">RECTANG</span>/<span class="cmd-inline">PLINE</span> dibuja los pilares en capa <code>E-Portantes</code>. Rellena la sección de pilares/muros con <span class="cmd-inline">HATCH</span> limpio (sólido) para diferenciarlos de la arquitectura.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">4</span>
+  <div class="lesson-body">
+    <h4>Dibuja zapatas y cimentación</h4>
+    <p>Con base en las cotas del cajetín, dibuja las zapatas bajo cada pilar (capas <code>E-Zapatas</code>, <code>E-Armado</code>). En la sección añadirás su canto.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">5</span>
+  <div class="lesson-body">
+    <h4>Añade vigas y losa</h4>
+    <p>Dibuja las vigas como líneas <strong>ocultas o discontinuas</strong> en planta (según convenio del estudio) en capa <code>E-Vigas</code>, y el contorno de la losa en <code>E-Losas</code>.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">6</span>
+  <div class="lesson-body">
+    <h4>Referencia los detalles</h4>
+    <p>Con un bloque de "vista de detalle" (círculo + número) apunta a los detalles estructurales (armado de zapata, nudo de viga-pilar) que se dibujan en A3 o A4 aparte.</p>
+  </div>
+</div>
+
+<h3>3. Presentación final en papel</h3>
+
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Crea el espacio papel</h4>
+    <p>Entra en una presentación (<span class="cmd-inline">LAYOUT</span>), coloca el formato del sello, y crea una <strong>ventana gráfica</strong> por cada vista del plano.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Configura la escala de la ventana</h4>
+    <p>Selecciona la ventana y elige la escala en la lista (ej.: 1:50). Congela capas de arquitectura que ya no aporten, para que el plano quede "solo estructura".</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Comprueba las cotas y saca el PDF</h4>
+    <p>Acota dentro de la ventana (asociativo) y expórtalo con <span class="cmd-inline">PLOT</span>. El plano estructural se revisa con el cálculo: <strong>no se improvisa</strong>.</p>
+  </div>
+</div>
+
+<div class="table-scroll">
+<table class="table-cad">
+  <thead><tr><th>Comando</th><th>Qué hace</th></tr></thead>
+  <tbody>
+    <tr><td><span class="cmd-inline">XREF</span></td><td>Vincula el plano de arquitectura como referencia</td></tr>
+    <tr><td><span class="cmd-inline">HATCH</span></td><td>Sombreado limpio de pilares y muros en planta</td></tr>
+    <tr><td><span class="cmd-inline">XREFCLIP</span></td><td>Recorta la parte de arquitectura que interesa</td></tr>
+    <tr><td><span class="cmd-inline">LAYOUT</span></td><td>Crea/vista de presentación para el plano final</td></tr>
+    <tr><td><span class="cmd-inline">PSPACE</span></td><td>Trabaja dentro del espacio papel</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout">
+  <span class="callout-title">Consejo de entregas</span>
+  El plano estructural suele ir numerado: E-01, E-02… con sus correspondientes <strong>cuadros de barras y cantidades</strong>. Incluye SIEMPRE un pequeño esquema con la dirección de las losas (flechas) y el canto de vigas y losa, que es lo primero que busca el constructor.
+</div>

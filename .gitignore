@@ -1,2 +1,5 @@
 # Imágenes fuente descargadas temporalmente (no se usan en el sitio)
 _src_house/
+
+# Caché de Python
+__pycache__/

@@ -1,0 +1,108 @@
+<p>Importar y exportar planos es el día a día de la colaboración entre arquitectos, ingenieros y constructores. Saber mover <strong>DWG</strong>, <strong>DXF</strong> y <strong>PDF</strong> sin perder capas ni textos marca la diferencia en la entrega final.</p>
+
+<h3>1. Exportar a PDF (publicar planos)</h3>
+
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Configura la impresora PDF</h4>
+    <p>Escribe <span class="cmd-inline">PLOT</span> o <span class="key-inline">Ctrl+P</span>. Elige como impresora <strong>Archivo PDF (DWG To PDF.pc3)</strong> (o tu ploter virtual).</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Elige el tamaño de papel y la vista</h4>
+    <p>Selecciona el tamaño (A3, A4…), el área que imprimir (ventana gráfica del papel o ventana de modelo) y la escala 1:1 o la correspondiente.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Configura los estilos de trazado</h4>
+    <p>Elige la tabla de estilos (monocromo o por colores). Revisa en Vista previa que los grosores y colores se vean bien. Pulsa <strong>Aceptar</strong> y guarda el PDF.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">4</span>
+  <div class="lesson-body">
+    <h4>Publicar varios planos a la vez</h4>
+    <p>Usa <span class="cmd-inline">PUBLISH</span> (<span class="key-inline">Ctrl+P</span> → Publicar) para imprimir varias presentaciones en un único PDF multihoja, con numeración automática.</p>
+  </div>
+</div>
+
+<h3>2. Importar PDF al dibujo</h3>
+<p>AutoCAD puede insertar un PDF como <strong>referencia</strong> (<span class="cmd-inline">PDFATTACH</span>) o <strong>convertir sus geometrías a vectores editables</strong> (<span class="cmd-inline">PDFIMPORT</span>).</p>
+
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Inserta el PDF como objeto</h4>
+    <p>Escribe <span class="cmd-inline">PDFATTACH</span>, elige el archivo y colócalo. Se comporta como una imagen: escala, mueve, recorta.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Convierte el PDF a líneas (cuando sea necesario)</h4>
+    <p>Si el PDF no trae capas texturizables y quieres editar, ejecuta <span class="cmd-inline">PDFIMPORT</span>. Elige la página y las opciones (reconocer texto, líneas…). El resultado son polilíneas y textos editables. Advertencia: los textos importados suelen venir rotos o con tipografías raras; revisarlos y rehacerlos con estilo propio.</p>
+  </div>
+</div>
+
+<h3>3. Exportar a DXF y otros formatos</h3>
+<p>Para que otro software (o una versión vieja de AutoCAD) abra tu archivo, exporta a <strong>DXF</strong>:</p>
+<ul>
+  <li><span class="cmd-inline">DXFOUT</span> (o Guardar como → Tipo de archivo → <code>*.dxf</code>).</li>
+  <li>Elige la versión de DXF compatible: <code>ASCII DXF</code> es el más universal; <code>DWG</code> es binario nativo.</li>
+  <li>Si fue para otra persona, guarda también un <strong>DWG nativo</strong> con "Guardar como" en una versión anterior (ej.: 2013) para abrir en AutoCAD antiguos.</li>
+</ul>
+
+<h3>4. Compartir el archivo completo (ETRANSMIT)</h3>
+<p>Un DWG suele depender de Xrefs, imágenes, fuentes y CTBs. Para no entregar un archivo "roto":</p>
+
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Ejecuta ETRANSMIT</h4>
+    <p>Escribe <span class="cmd-inline">ETRANSMIT</span> y pulsa Enter. Se abre el asistente de "Crear transmisión".</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Revisa los archivos dependientes</h4>
+    <p>Haz clic en "Archivos de transmisión": verás el DWG más sus Xrefs, imágenes, tipos de línea y CTB/STB. Marca/desmarca lo que quieras incluir.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Genera el paquete</h4>
+    <p>En formato <strong>Archivo ZIP</strong> obtendrás un único comprimido con todo. Acompaña con una hoja explicativa si es para un cliente.</p>
+  </div>
+</div>
+
+<div class="table-scroll">
+<table class="table-cad">
+  <thead><tr><th>Comando</th><th>Qué hace</th></tr></thead>
+  <tbody>
+    <tr><td><span class="cmd-inline">PLOT</span></td><td>Imprime/exporta a PDF (atajo <span class="key-inline">Ctrl+P</span>)</td></tr>
+    <tr><td><span class="cmd-inline">PUBLISH</span></td><td>Publica varias presentaciones en un PDF multihoja</td></tr>
+    <tr><td><span class="cmd-inline">PDFATTACH</span></td><td>Inserta PDF como referencia (imagen)</td></tr>
+    <tr><td><span class="cmd-inline">PDFIMPORT</span></td><td>Convierte el PDF a geometrías editables</td></tr>
+    <tr><td><span class="cmd-inline">DXFOUT</span></td><td>Exporta el dibujo a DXF</td></tr>
+    <tr><td><span class="cmd-inline">ETRANSMIT</span></td><td>Empaqueta DWG + dependencias en un ZIP</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout warn">
+  <span class="callout-title">Atención</span>
+  Al importar cualquier archivo (PDF, DXF, DWG de otra empresa) <strong>no uses capa 0 para dibujos de otros</strong>: pon todo en un bloque o en capas con prefijo propio. Así nunca mezclas tu proyecto con geometría ajena.
+</div>

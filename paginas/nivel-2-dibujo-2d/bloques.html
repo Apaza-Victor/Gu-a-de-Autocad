@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bloques y atributos · Nivel 2 — AutoCAD Guía</title>
+<link rel="canonical" href="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-2-dibujo-2d/bloques.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-2-dibujo-2d/bloques.html">
+<meta property="og:site_name" content="AutoCAD Guía">
+<meta property="og:title" content="Bloques y atributos · Nivel 2 — AutoCAD Guía">
+<meta property="og:description" content="Agrupar objetos en bloques reutilizables y enriquecerlos con atributos editables.">
+<meta property="og:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bloques y atributos · Nivel 2 — AutoCAD Guía">
+<meta name="twitter:description" content="Agrupar objetos en bloques reutilizables y enriquecerlos con atributos editables.">
+<meta name="twitter:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="description" content="Agrupar objetos en bloques reutilizables y enriquecerlos con atributos editables.">
+
+<link rel="icon" type="image/svg+xml" href="../../assets/img/autocad-2.svg">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../../assets/css/responsive.css">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Nivel · Dibujo 2D en AutoCAD",
+  "description": "Geometría, edición, precisión, capas, bloques, cotas, texto, hatch y splines.",
+  "provider": {
+    "@type": "Organization",
+    "name": "AutoCAD Guía",
+    "sameAs": "https://apaza-victor.github.io/Gu-a-de-Autocad/"
+  },
+  "inLanguage": "es",
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "online",
+    "learningResourceType": "tutorial",
+    "inLanguage": "es"
+  }
+}
+  </script>
+</head>
+
+<body>
+
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+<nav class="navbar navbar-cad navbar-expand-lg">
+  <div class="container container-xl">
+    <a class="navbar-brand brand-cad" href="../../index.html">
+      <img class="brand-logo" src="../../assets/img/autocad-2.svg" alt="AutoCAD">
+      <span>AutoCAD<small class="d-block" data-i18n-html="brand.sub">Guía · Teoría &amp; Práctica</small></span>
+    </a>
+    <div class="d-flex align-items-center gap-2 nav-actions order-lg-last">
+      <button class="icon-btn" id="searchToggle" title="Buscar" data-i18n-title="ui.search"><i class="bi bi-search"></i></button>
+      <button class="icon-btn" id="themeToggle" title="Cambiar tema" data-i18n-title="ui.theme"><i class="bi bi-moon-stars"></i></button>
+      <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
+        <i class="bi bi-list fs-4"></i>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navCad">
+      <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../../index.html" data-i18n="nav.home">Inicio</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-cad dropdown-toggle active" href="#" data-bs-toggle="dropdown" data-i18n="nav.levels">Niveles</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="../nivel-1-fundamentos/index.html">Nivel 1 · Fundamentos</a></li>
+            <li><a class="dropdown-item active" href="../nivel-2-dibujo-2d/index.html">Nivel 2 · Dibujo 2D</a></li>
+            <li><a class="dropdown-item" href="../nivel-3-organizacion/index.html">Nivel 3 · Organización</a></li>
+            <li><a class="dropdown-item" href="../nivel-4-modelado-3d/index.html">Nivel 4 · Modelado 3D</a></li>
+            <li><a class="dropdown-item" href="../nivel-5-avanzado/index.html">Nivel 5 · Experto</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../comandos.html" data-i18n="nav.commands">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../ejemplos-visuales.html" data-i18n="nav.visual">Visuales</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../trucos.html" data-i18n="nav.tips">Trucos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../recursos.html" data-i18n="nav.resources">Recursos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../faq.html" data-i18n="nav.faq">FAQ</a></li>
+      </ul>
+
+      <div class="d-flex align-items-center gap-2 nav-actions-menu ms-lg-auto">
+        <span class="coord-readout d-none d-lg-inline-flex">X: <span id="coordX">000.00</span>&nbsp; Y: <span id="coordY">000.00</span></span>
+        <button class="lang-toggle" id="langToggle" title="Cambiar idioma" data-i18n-title="ui.lang">
+          <i class="bi bi-translate lang-toggle-flag"></i>
+          <span class="lang-toggle-text">EN</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header" id="main-content">
+  <div class="container container-xl">
+    <p class="crumb"><a href="../../index.html">Inicio</a> / <a href="../../index.html#niveles">Niveles</a> / <a href="index.html">Dibujo 2D</a> / Tema 6</p>
+    <span class="eyebrow" data-i18n="lvl2.eyebrow">Nivel 02 · Básico–Intermedio</span>
+    <h1>Bloques y atributos</h1>
+    <div class="level-progress-bar" data-level-prefix="nivel2" data-level-total="27"><div class="fill"></div></div>
+    <p class="level-progress-label">0 de 27 temas completados · 0%</p>
+  </div>
+</header>
+
+<div class="content-layout">
+  <div class="container container-xl">
+    <div class="row">
+
+      <aside class="col-lg-3 mb-5 mb-lg-0">
+        <div class="toc-sidebar">
+          <h6 data-i18n="ui.inThisLevel">En este nivel</h6>
+          <ul class="toc-list">
+            <li><a href="dibujo.html" data-toc="nivel2-dibujo"><span class="toc-check"></span> Herramientas de dibujo</a></li>
+            <li><a href="modificacion.html" data-toc="nivel2-modificacion"><span class="toc-check"></span> Herramientas de modificación</a></li>
+            <li><a href="matrices.html" data-toc="nivel2-matrices"><span class="toc-check"></span> Matrices (ARRAY)</a></li>
+            <li><a href="precision.html" data-toc="nivel2-precision"><span class="toc-check"></span> Precisión: referencias y rastreo</a></li>
+            <li><a href="capas.html" data-toc="nivel2-capas"><span class="toc-check"></span> Capas (Layers)</a></li>
+            <li><a href="bloques.html" data-toc="nivel2-bloques"><span class="toc-check"></span> Bloques y atributos</a></li>
+            <li><a href="acotacion.html" data-toc="nivel2-acotacion"><span class="toc-check"></span> Acotación</a></li>
+            <li><a href="texto.html" data-toc="nivel2-texto"><span class="toc-check"></span> Texto y tablas</a></li>
+            <li><a href="hatch.html" data-toc="nivel2-hatch"><span class="toc-check"></span> Sombreado (Hatch)</a></li>
+            <li><a href="seleccion.html" data-toc="nivel2-seleccion"><span class="toc-check"></span> Selección de objetos</a></li>
+            <li><a href="grips.html" data-toc="nivel2-grips"><span class="toc-check"></span> Pinzamientos (GRIPS)</a></li>
+            <li><a href="lineas.html" data-toc="nivel2-lineas"><span class="toc-check"></span> Tipos de línea</a></li>
+            <li><a href="puntos.html" data-toc="nivel2-puntos"><span class="toc-check"></span> Puntos y división</a></li>
+            <li><a href="auxiliares.html" data-toc="nivel2-auxiliares"><span class="toc-check"></span> Geometría auxiliar</a></li>
+            <li><a href="consulta.html" data-toc="nivel2-consulta"><span class="toc-check"></span> Medición y verificación</a></li>
+            <li><a href="propiedades.html" data-toc="nivel2-propiedades"><span class="toc-check"></span> Propiedades de objeto</a></li>
+            <li><a href="pedit.html" data-toc="nivel2-pedit"><span class="toc-check"></span> Edición de polilíneas</a></li>
+            <li><a href="splines.html" data-toc="nivel2-splines"><span class="toc-check"></span> Splines y curvas</a></li>
+            <li><a href="index.html#autoevaluacion"><span class="toc-check"></span> Autoevaluación</a></li>
+          </ul>
+          <hr style="border-color:var(--border-soft)" class="my-4">
+          <a href="index.html" class="btn-cad-outline w-100 text-center d-block"><i class="bi bi-arrow-left"></i> Volver al índice</a>
+        </div>
+      </aside>
+
+      <div class="col-lg-9">
+        <article class="content-article">
+
+          <section id="bloques" data-topic="nivel2-bloques">
+                                <h2><span class="sec-num">6</span><span data-i18n="lvl2.s5.title">Bloques y atributos</span></h2>
+                                <p>Un <strong>bloque</strong> es un conjunto de objetos agrupados bajo un solo nombre, reutilizable en el mismo dibujo o en otros (una puerta, una silla, un símbolo eléctrico).</p>
+
+                                <table class="table-cad">
+                                  <thead><tr><th>Acción</th><th>Comando</th></tr></thead>
+                                  <tbody>
+                                    <tr><td>Crear un bloque a partir de objetos seleccionados</td><td class="cmd-inline">BLOCK</td></tr>
+                                    <tr><td>Insertar un bloque existente</td><td class="cmd-inline">INSERT</td></tr>
+                                    <tr><td>Editar el contenido de un bloque</td><td class="cmd-inline">BEDIT</td></tr>
+                                    <tr><td>Descomponer un bloque en objetos sueltos</td><td class="cmd-inline">EXPLODE</td></tr>
+                                  </tbody>
+                                </table>
+
+                                <p>Un bloque puede incluir <strong>atributos</strong>: campos de texto editables asociados al bloque, útiles para etiquetar (por ejemplo, el número de una habitación o el código de una pieza) y luego extraerlos en una tabla.</p>
+
+          <!-- ENRIQ START -->
+          <h3>Crear, guardar y reutilizar bloques</h3>
+          <p>El flujo profesional completo de bloques usa cuatro comandos:</p>
+          <table class="table-cad">
+            <thead><tr><th>Comando</th><th>Qué hace</th><th>Cuándo usarlo</th></tr></thead>
+            <tbody>
+              <tr><td><span class="cmd-inline">BLOCK</span></td><td>Crea un bloque dentro del dibujo actual.</td><td>Elemento que solo usará este archivo.</td></tr>
+              <tr><td><span class="cmd-inline">WBLOCK</span></td><td>Guarda el bloque como un .DWG independiente.</td><td>Una librería reutilizable entre proyectos (puertas, mobiliario, símbolos).</td></tr>
+              <tr><td><span class="cmd-inline">INSERT</span></td><td>Inserta un bloque (o archivo) con escala, rotación y repetición.</td><td>Colocar la definición en el plano.</td></tr>
+              <tr><td><span class="cmd-inline">DCENTER</span></td><td>Centro de diseño: biblioteca de bloques del dibujo y de carpetas.</td><td>Arrastrar bloques de una librería sin escribir comandos.</td></tr>
+            </tbody>
+          </table>
+          <ul>
+            <li><strong>Editar:</strong> haz <strong>doble clic</strong> en un bloque y se abre <span class="cmd-inline">BEDIT</span>. Los cambios se propagan a todas las inserciones.</li>
+            <li><strong>Atributos:</strong> define campos editables con <span class="cmd-inline">ATTDEF</span>; al insertar, AutoCAD te pide los valores. Se editan con <span class="cmd-inline">EATTEDIT</span> y se re-sincronizan con <span class="cmd-inline">ATTSYNC</span>.</li>
+            <li><strong>Limpiar:</strong> los bloques no usados engordan el archivo; elimínalos con <span class="cmd-inline">PURGE</span>.</li>
+          </ul>
+          <div class="callout">
+            <span class="callout-title">Idea clave</span>
+            <span>El bloque es una <strong>definición</strong>: al cambiar la definición, cambian todas sus inserciones a la vez. Por eso NUNCA rompas un bloque con <span class="cmd-inline">EXPLODE</span> salvo que sea imprescindible: pierdes esa inteligencia.</span>
+          </div>
+
+          <h3>Mini ejercicio: bloque de puerta con atributo de numeración</h3>
+          <div class="lesson-step">
+            <span class="lesson-num">1</span>
+            <div class="lesson-body">
+              <h4>Dibuja y define</h4>
+              <p>Dibuja una puerta simple (hoja + arco de giro) y crea el bloque con <span class="cmd-inline">BLOCK</span>, nombre "PUERTA" y punto base en la bisagra.</p>
+            </div>
+          </div>
+          <div class="lesson-step">
+            <span class="lesson-num">2</span>
+            <div class="lesson-body">
+              <h4>Añade el atributo</h4>
+              <p>Descompón (<span class="cmd-inline">EXPLODE</span>), escribe <span class="cmd-inline">ATTDEF</span>, etiqueta <strong>NUMERO</strong>, y redefine el bloque. Insertar te pedirá el número.</p>
+            </div>
+          </div>
+          <div class="lesson-step">
+            <span class="lesson-num">3</span>
+            <div class="lesson-body">
+              <h4>Inserta tres puertas</h4>
+              <p>Inserta PUERTA en tres huecos con los números 01, 02 y 03. Edita uno con EATTEDIT y comprueba que el resto no se altera.</p>
+            </div>
+          </div>
+          <!-- ENRIQ END -->
+          <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+        </article>
+
+        <nav class="level-nav">
+          <a href="capas.html">
+            <span class="nav-label">Anterior</span>
+            <span class="nav-title"><i class="bi bi-arrow-left"></i> Capas (Layers)</span>
+          </a>
+          <a href="acotacion.html" class="nav-next">
+            <span class="nav-label">Siguiente</span>
+            <span class="nav-title">Acotación <i class="bi bi-arrow-right"></i></span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container container-xl">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <div class="brand-cad mb-2"><img class="brand-logo" src="../../assets/img/autocad-2.svg" alt="AutoCAD"><span>AutoCAD Guía</span></div>
+        <p data-i18n="footer.disclaimer">Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.levels">Niveles</h6>
+        <ul class="list-unstyled">
+          <li><a href="../nivel-1-fundamentos/index.html">Fundamentos</a></li>
+          <li><a href="../nivel-2-dibujo-2d/index.html">Dibujo 2D</a></li>
+          <li><a href="../nivel-3-organizacion/index.html">Organización</a></li>
+          <li><a href="../nivel-4-modelado-3d/index.html">Modelado 3D</a></li>
+          <li><a href="../nivel-5-avanzado/index.html">Experto</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.guide">Guía</h6>
+        <ul class="list-unstyled">
+          <li><a href="../comandos.html">Comandos</a></li>
+          <li><a href="../ejemplos-visuales.html">Ejemplos</a></li>
+          <li><a href="../trucos.html">Trucos</a></li>
+          <li><a href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
+          <li><a href="../recursos.html">Recursos</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.follow">Síguenos</h6>
+        <div class="d-flex gap-2">
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-5 mb-4" style="border-color:var(--border-soft)">
+    <p class="mb-0 small" data-i18n="footer.copyright">© 2026 Victor Apaza. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<div class="command-line-bar" id="cmdBar">
+  <div class="command-line-inner">
+    <span class="prompt-sign" data-i18n="ui.command">Comando:</span>
+    <span id="cmd-typed"></span><span class="cursor-blink"></span>
+    <button class="cl-close" id="cmdClose" title="Ocultar" data-i18n-title="ui.hide"><i class="bi bi-x-lg"></i></button>
+  </div>
+</div>
+
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Buscar en la guía" data-i18n-aria="ui.search">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="bi bi-search"></i>
+      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar" data-i18n-placeholder="ui.searchPlaceholder">
+      <kbd class="search-kbd">ESC</kbd>
+    </div>
+    <div class="search-results" id="globalSearchResults">
+      <div class="search-empty" data-i18n="ui.typeToSearch">Escribe al menos 2 caracteres para buscar...</div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+<script src="../../assets/js/i18n.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/animations.js"></script>
+<script src="../../assets/js/main.js"></script>
+
+</body>
+</html>

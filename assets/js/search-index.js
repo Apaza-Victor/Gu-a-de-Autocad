@@ -10799,536 +10799,768 @@ window.SEARCH_INDEX = [
     "type": "topic",
     "title": "¿Qué es AutoCAD y para qué se usa?",
     "description": "AutoCAD es un programa de diseño asistido por computadora (CAD, por sus siglas en inglés) desarrollado por Autodesk, usado para crear dibujos técnicos precisos ",
-    "file": "nivel-1-fundamentos.html",
-    "anchor": "que-es",
+    "file": "nivel-1-fundamentos/que-es.html",
+    "anchor": "",
     "path": "Nivel 1 · Fundamentos"
   },
   {
     "type": "topic",
     "title": "Instalación, requisitos y tipos de licencia",
     "description": "Estos valores varían según la versión del programa; verifica siempre los requisitos oficiales antes de instalar.",
-    "file": "nivel-1-fundamentos.html",
-    "anchor": "instalacion",
+    "file": "nivel-1-fundamentos/instalacion.html",
+    "anchor": "",
     "path": "Nivel 1 · Fundamentos"
   },
   {
     "type": "topic",
     "title": "Interfaz de usuario",
     "description": "La interfaz de AutoCAD está compuesta por varias zonas que conviene reconocer antes de dibujar:",
-    "file": "nivel-1-fundamentos.html",
-    "anchor": "interfaz",
+    "file": "nivel-1-fundamentos/interfaz.html",
+    "anchor": "",
     "path": "Nivel 1 · Fundamentos"
   },
   {
     "type": "topic",
     "title": "Sistema de coordenadas",
     "description": "AutoCAD ubica cada punto del dibujo mediante coordenadas. Entender los cuatro tipos siguientes es esencial para dibujar con precisión sin depender solo del mous",
-    "file": "nivel-1-fundamentos.html",
-    "anchor": "coordenadas",
+    "file": "nivel-1-fundamentos/coordenadas.html",
+    "anchor": "",
+    "path": "Nivel 1 · Fundamentos"
+  },
+  {
+    "type": "topic",
+    "title": "Referencia a objetos (OSNAP) y rastreo",
+    "description": "Referencia a objetos (OSNAP): cómo enganchar el cursor a puntos geométricos y rastrear alineaciones.",
+    "file": "nivel-1-fundamentos/osnap-basico.html",
+    "anchor": "",
     "path": "Nivel 1 · Fundamentos"
   },
   {
     "type": "topic",
     "title": "Configuración inicial de un dibujo",
     "description": "Antes de empezar cualquier proyecto real, define estos parámetros para evitar tener que corregir todo el dibujo después:",
-    "file": "nivel-1-fundamentos.html",
-    "anchor": "configuracion",
+    "file": "nivel-1-fundamentos/configuracion.html",
+    "anchor": "",
+    "path": "Nivel 1 · Fundamentos"
+  },
+  {
+    "type": "topic",
+    "title": "Configurar el espacio de trabajo",
+    "description": "Personalizar la cinta, los espacios de trabajo y el entorno para dibujar como un profesional.",
+    "file": "nivel-1-fundamentos/configurar-espacio-trabajo.html",
+    "anchor": "",
     "path": "Nivel 1 · Fundamentos"
   },
   {
     "type": "topic",
     "title": "Gestión de archivos DWG",
     "description": "AutoCAD guarda cada dibujo en un archivo .DWG . Saber cómo proteger, guardar y recuperar estos archivos evita perder horas de trabajo.",
-    "file": "nivel-1-fundamentos.html",
-    "anchor": "archivos",
+    "file": "nivel-1-fundamentos/archivos.html",
+    "anchor": "",
     "path": "Nivel 1 · Fundamentos"
   },
   {
     "type": "topic",
     "title": "Tipos de archivo",
     "description": "AutoCAD maneja varios formatos. Conocer la diferencia te permite trabajar con clientes y programas externos sin problemas.",
-    "file": "nivel-1-fundamentos.html",
-    "anchor": "tipos-archivo",
+    "file": "nivel-1-fundamentos/tipos-archivo.html",
+    "anchor": "",
+    "path": "Nivel 1 · Fundamentos"
+  },
+  {
+    "type": "topic",
+    "title": "Deshacer, purgar y mantener tu dibujo",
+    "description": "UNDO/REDO, PURGE, AUDIT y RECOVER para corregir errores y mantener archivos rápidos y fiables.",
+    "file": "nivel-1-fundamentos/gestion-dibujo.html",
+    "anchor": "",
     "path": "Nivel 1 · Fundamentos"
   },
   {
     "type": "topic",
     "title": "Zoom y navegación",
     "description": "Moverte por el área de dibujo es algo que harás cientos de veces por sesión. Dominar el zoom y el pan te ahorra tiempo constante.",
-    "file": "nivel-1-fundamentos.html",
-    "anchor": "zoom",
+    "file": "nivel-1-fundamentos/zoom.html",
+    "anchor": "",
+    "path": "Nivel 1 · Fundamentos"
+  },
+  {
+    "type": "topic",
+    "title": "Comandos y atajos esenciales del nivel 1",
+    "description": "Teclas de función, combinaciones de teclado y el hábito de escribir comandos en la línea.",
+    "file": "nivel-1-fundamentos/atajos-esenciales.html",
+    "anchor": "",
     "path": "Nivel 1 · Fundamentos"
   },
   {
     "type": "topic",
     "title": "Tu primer dibujo: práctica guiada",
     "description": "Reúne todo lo aprendido en este nivel dibujando la planta de un cuarto pequeño de 3 × 2 metros . Sigue cada paso en el orden indicado; no importa la velocidad, ",
-    "file": "nivel-1-fundamentos.html",
-    "anchor": "primer-dibujo",
+    "file": "nivel-1-fundamentos/primer-dibujo.html",
+    "anchor": "",
     "path": "Nivel 1 · Fundamentos"
   },
   {
     "type": "topic",
     "title": "Herramientas de dibujo",
     "description": "Son los comandos que crean geometría nueva. Todos aceptan coordenadas exactas (ver Nivel 1) además de clics con el mouse.",
-    "file": "nivel-2-dibujo-2d.html",
-    "anchor": "dibujo",
+    "file": "nivel-2-dibujo-2d/dibujo.html",
+    "anchor": "",
     "path": "Nivel 2 · Dibujo 2D"
   },
   {
     "type": "topic",
     "title": "Herramientas de modificación",
     "description": "Permiten transformar objetos ya dibujados sin volver a trazarlos desde cero.",
-    "file": "nivel-2-dibujo-2d.html",
-    "anchor": "modificacion",
+    "file": "nivel-2-dibujo-2d/modificacion.html",
+    "anchor": "",
+    "path": "Nivel 2 · Dibujo 2D"
+  },
+  {
+    "type": "topic",
+    "title": "Matrices: repite objetos en patrón (ARRAY)",
+    "description": "Tipos de matriz rectangular, polar y de ruta: filas, columnas, ángulo, asociatividad y edición.",
+    "file": "nivel-2-dibujo-2d/matrices.html",
+    "anchor": "",
     "path": "Nivel 2 · Dibujo 2D"
   },
   {
     "type": "topic",
     "title": "Precisión: referencias, rastreo y cuadrícula",
     "description": "AutoCAD ofrece ayudas de precisión que se activan/desactivan desde la barra de estado o con teclas de función, para hacer clic exactamente donde se necesita, si",
-    "file": "nivel-2-dibujo-2d.html",
-    "anchor": "precision",
+    "file": "nivel-2-dibujo-2d/precision.html",
+    "anchor": "",
     "path": "Nivel 2 · Dibujo 2D"
   },
   {
     "type": "topic",
     "title": "Capas (Layers)",
     "description": "Una capa es un \"acetato\" transparente donde se agrupan objetos con propiedades comunes. Se administran desde el Administrador de propiedades de capas (comando L",
-    "file": "nivel-2-dibujo-2d.html",
-    "anchor": "capas",
+    "file": "nivel-2-dibujo-2d/capas.html",
+    "anchor": "",
+    "path": "Nivel 2 · Dibujo 2D"
+  },
+  {
+    "type": "topic",
+    "title": "Crear, renombrar y eliminar capas",
+    "description": "Crear, renombrar, reordenar y eliminar capas de forma segura, con trucos de productividad.",
+    "file": "nivel-2-dibujo-2d/crear-capas.html",
+    "anchor": "",
+    "path": "Nivel 2 · Dibujo 2D"
+  },
+  {
+    "type": "topic",
+    "title": "Configurar capas: color, tipo de línea y estados",
+    "description": "Configurar color, tipo de línea, grosor, transparencia y estados (On/Off, Freeze, Lock) de cada capa.",
+    "file": "nivel-2-dibujo-2d/configurar-capas.html",
+    "anchor": "",
     "path": "Nivel 2 · Dibujo 2D"
   },
   {
     "type": "topic",
     "title": "Bloques y atributos",
     "description": "Un bloque es un conjunto de objetos agrupados bajo un solo nombre, reutilizable en el mismo dibujo o en otros (una puerta, una silla, un símbolo eléctrico).",
-    "file": "nivel-2-dibujo-2d.html",
-    "anchor": "bloques",
+    "file": "nivel-2-dibujo-2d/bloques.html",
+    "anchor": "",
+    "path": "Nivel 2 · Dibujo 2D"
+  },
+  {
+    "type": "topic",
+    "title": "Escalar bloques",
+    "description": "Escalar bloques con SCALE, escala por referencia y escala no uniforme al insertar.",
+    "file": "nivel-2-dibujo-2d/escalar-bloques.html",
+    "anchor": "",
+    "path": "Nivel 2 · Dibujo 2D"
+  },
+  {
+    "type": "topic",
+    "title": "Agrupar objetos: GROUP y grupos con nombre",
+    "description": "Agrupar objetos y bloques con nombre mediante GROUP, y solucionar los problemas típicos al agrupar.",
+    "file": "nivel-2-dibujo-2d/agrupar-objetos.html",
+    "anchor": "",
+    "path": "Nivel 2 · Dibujo 2D"
+  },
+  {
+    "type": "topic",
+    "title": "Texturas de imagen en bloques",
+    "description": "Añadir texturas de imagen a bloques con IMAGEATTACH y materiales para que se vean realistas.",
+    "file": "nivel-2-dibujo-2d/texturas-bloques.html",
+    "anchor": "",
     "path": "Nivel 2 · Dibujo 2D"
   },
   {
     "type": "topic",
     "title": "Acotación (dimensiones)",
     "description": "Acotar es indicar medidas reales sobre el dibujo. AutoCAD calcula automáticamente la distancia entre los puntos que selecciones, siempre que el dibujo esté hech",
-    "file": "nivel-2-dibujo-2d.html",
-    "anchor": "acotacion",
+    "file": "nivel-2-dibujo-2d/acotacion.html",
+    "anchor": "",
+    "path": "Nivel 2 · Dibujo 2D"
+  },
+  {
+    "type": "topic",
+    "title": "Configurar estilos de cota",
+    "description": "Crear y ajustar estilos de cota: DIMSTYLE, escala, precisión, flechas, texto y unidades.",
+    "file": "nivel-2-dibujo-2d/configurar-cotas.html",
+    "anchor": "",
     "path": "Nivel 2 · Dibujo 2D"
   },
   {
     "type": "topic",
     "title": "Texto, estilos de texto y tablas",
     "description": "",
-    "file": "nivel-2-dibujo-2d.html",
-    "anchor": "texto",
+    "file": "nivel-2-dibujo-2d/texto.html",
+    "anchor": "",
+    "path": "Nivel 2 · Dibujo 2D"
+  },
+  {
+    "type": "topic",
+    "title": "Crear leyendas de plano",
+    "description": "Crear leyendas y simbología de plano con bloques, MTEXT y tablas profesionales.",
+    "file": "nivel-2-dibujo-2d/leyendas.html",
+    "anchor": "",
     "path": "Nivel 2 · Dibujo 2D"
   },
   {
     "type": "topic",
     "title": "Sombreado y rellenos (Hatch)",
     "description": "El comando HATCH ( H ) rellena un área cerrada con un patrón: rayado de concreto, ladrillo, tierra, agua, etc. Requiere que el contorno esté completamente cerra",
-    "file": "nivel-2-dibujo-2d.html",
-    "anchor": "hatch",
+    "file": "nivel-2-dibujo-2d/hatch.html",
+    "anchor": "",
+    "path": "Nivel 2 · Dibujo 2D"
+  },
+  {
+    "type": "topic",
+    "title": "Añadir sombreados (Hatch) personalizados",
+    "description": "Añadir patrones de sombreado nuevos a AutoCAD desde archivos .pat y aplicarlos en tus planos.",
+    "file": "nivel-2-dibujo-2d/anadir-hatch.html",
+    "anchor": "",
     "path": "Nivel 2 · Dibujo 2D"
   },
   {
     "type": "topic",
     "title": "Selección de objetos",
     "description": "Antes de mover, copiar, borrar o modificar cualquier cosa, necesitas seleccionar los objetos correctos. AutoCAD ofrece varios métodos de selección que conviene ",
-    "file": "nivel-2-dibujo-2d.html",
-    "anchor": "seleccion",
+    "file": "nivel-2-dibujo-2d/seleccion.html",
+    "anchor": "",
+    "path": "Nivel 2 · Dibujo 2D"
+  },
+  {
+    "type": "topic",
+    "title": "Pinzamientos (GRIPS): edición rápida sin comandos",
+    "description": "Editar objetos con los grips: estirar, mover, rotar, escalar y multiplicar sin teclear comandos.",
+    "file": "nivel-2-dibujo-2d/grips.html",
+    "anchor": "",
     "path": "Nivel 2 · Dibujo 2D"
   },
   {
     "type": "topic",
     "title": "Tipos de línea",
     "description": "Un tipo de línea controla cómo se ve un objeto: continua, discontinua, de eje, punteada, etc. Se asigna por capa o directamente al objeto.",
-    "file": "nivel-2-dibujo-2d.html",
-    "anchor": "lineas",
+    "file": "nivel-2-dibujo-2d/lineas.html",
+    "anchor": "",
+    "path": "Nivel 2 · Dibujo 2D"
+  },
+  {
+    "type": "topic",
+    "title": "Cambiar el tipo de línea de un objeto",
+    "description": "Cambiar el tipo de línea de varias formas: Propiedades, MATCHPROP, LINETYPE y propiedades de capa.",
+    "file": "nivel-2-dibujo-2d/cambiar-tipo-linea.html",
+    "anchor": "",
     "path": "Nivel 2 · Dibujo 2D"
   },
   {
     "type": "topic",
     "title": "Puntos y división",
     "description": "Los comandos DIVIDE y MEASURE colocan puntos o bloques a lo largo de un objeto, algo que se usa mucho para distribuir elementos de forma regular (como pilares, ",
-    "file": "nivel-2-dibujo-2d.html",
-    "anchor": "puntos",
+    "file": "nivel-2-dibujo-2d/puntos.html",
+    "anchor": "",
     "path": "Nivel 2 · Dibujo 2D"
   },
   {
     "type": "topic",
     "title": "Geometría auxiliar",
     "description": "Las líneas de construcción son objetos temporales que ayudan a ubicar puntos y alinear elementos, pero que no se imprimen ni forman parte del plano final.",
-    "file": "nivel-2-dibujo-2d.html",
-    "anchor": "auxiliares",
+    "file": "nivel-2-dibujo-2d/auxiliares.html",
+    "anchor": "",
+    "path": "Nivel 2 · Dibujo 2D"
+  },
+  {
+    "type": "topic",
+    "title": "Medición y verificación del dibujo",
+    "description": "DIST, AREA, MEASUREGEOM, LIST e ID para medir y verificar el dibujo antes de entregar.",
+    "file": "nivel-2-dibujo-2d/consulta.html",
+    "anchor": "",
     "path": "Nivel 2 · Dibujo 2D"
   },
   {
     "type": "topic",
     "title": "Propiedades de objeto",
     "description": "Todo objeto de AutoCAD guarda propiedades: capa, color, tipo de línea, grosor de línea y escala de tipo de línea. Aprender a controlarlas es lo que separa un pl",
-    "file": "nivel-2-dibujo-2d.html",
-    "anchor": "propiedades",
+    "file": "nivel-2-dibujo-2d/propiedades.html",
+    "anchor": "",
     "path": "Nivel 2 · Dibujo 2D"
   },
   {
     "type": "topic",
     "title": "Edición de polilíneas (PEDIT)",
     "description": "Una polilínea es una serie de segmentos y arcos conectados que forman un solo objeto . PEDIT ( PE ) permite editarla: unir segmentos, cerrarla, mover vértices, ",
-    "file": "nivel-2-dibujo-2d.html",
-    "anchor": "pedit",
+    "file": "nivel-2-dibujo-2d/pedit.html",
+    "anchor": "",
     "path": "Nivel 2 · Dibujo 2D"
   },
   {
     "type": "topic",
     "title": "Splines y curvas",
     "description": "Una spline es una curva suave que se define a partir de puntos de control. A diferencia del arco, no tiene un radio constante: se adapta libremente a la forma q",
-    "file": "nivel-2-dibujo-2d.html",
-    "anchor": "splines",
+    "file": "nivel-2-dibujo-2d/splines.html",
+    "anchor": "",
     "path": "Nivel 2 · Dibujo 2D"
   },
   {
     "type": "topic",
     "title": "Espacio modelo vs. espacio papel (Layouts)",
     "description": "AutoCAD trabaja con dos entornos distintos, visibles como pestañas en la parte inferior de la pantalla:",
-    "file": "nivel-3-organizacion.html",
-    "anchor": "espacios",
+    "file": "nivel-3-organizacion/espacios.html",
+    "anchor": "",
     "path": "Nivel 3 · Organización"
   },
   {
     "type": "topic",
     "title": "Ventanas gráficas (Viewports) y escalas",
     "description": "Dentro de una presentación, una ventana gráfica es como una \"cámara\" que muestra una porción del espacio modelo a una escala determinada. Se crea y edita con el",
-    "file": "nivel-3-organizacion.html",
-    "anchor": "viewports",
+    "file": "nivel-3-organizacion/viewports.html",
+    "anchor": "",
     "path": "Nivel 3 · Organización"
   },
   {
     "type": "topic",
     "title": "Plantillas (.DWT) y estándares de dibujo",
     "description": "Una plantilla es un archivo base ( .DWT ) que guarda de antemano capas, estilos de cota, de texto, formatos de layout y cajetines, para no reconfigurar cada pro",
-    "file": "nivel-3-organizacion.html",
-    "anchor": "plantillas",
+    "file": "nivel-3-organizacion/plantillas.html",
+    "anchor": "",
+    "path": "Nivel 3 · Organización"
+  },
+  {
+    "type": "topic",
+    "title": "DesignCenter y paletas de herramientas",
+    "description": "Reutilizar bloques, capas y estilos de otros dibujos con DesignCenter y las paletas de herramientas.",
+    "file": "nivel-3-organizacion/designcenter.html",
+    "anchor": "",
     "path": "Nivel 3 · Organización"
   },
   {
     "type": "topic",
     "title": "Impresión y exportación",
     "description": "",
-    "file": "nivel-3-organizacion.html",
-    "anchor": "impresion",
+    "file": "nivel-3-organizacion/impresion.html",
+    "anchor": "",
+    "path": "Nivel 3 · Organización"
+  },
+  {
+    "type": "topic",
+    "title": "Publicación por lotes (PUBLISH)",
+    "description": "Imprimir o exportar varios layouts y archivos a la vez con una sola orden.",
+    "file": "nivel-3-organizacion/publish.html",
+    "anchor": "",
     "path": "Nivel 3 · Organización"
   },
   {
     "type": "topic",
     "title": "Gestión de archivos externos (Xref)",
     "description": "Una referencia externa (Xref) vincula otro archivo .DWG dentro del dibujo actual sin fusionarlo permanentemente: si el archivo original cambia, el vínculo se ac",
-    "file": "nivel-3-organizacion.html",
-    "anchor": "xref",
+    "file": "nivel-3-organizacion/xref.html",
+    "anchor": "",
     "path": "Nivel 3 · Organización"
   },
   {
     "type": "topic",
     "title": "Atajos de teclado y comandos rápidos",
     "description": "Memorizar estos atajos es lo que más acelera el trabajo diario en AutoCAD:",
-    "file": "nivel-3-organizacion.html",
-    "anchor": "atajos",
+    "file": "nivel-3-organizacion/atajos.html",
+    "anchor": "",
     "path": "Nivel 3 · Organización"
   },
   {
     "type": "topic",
     "title": "Estilos de trazado (Plot Styles)",
     "description": "Un estilo de trazado controla cómo se traducen los colores de pantalla a grosores de línea, tonos de gris o negro puro al imprimir. Sin esto, tu plano puede sal",
-    "file": "nivel-3-organizacion.html",
-    "anchor": "plotstyles",
+    "file": "nivel-3-organizacion/plotstyles.html",
+    "anchor": "",
     "path": "Nivel 3 · Organización"
   },
   {
     "type": "topic",
     "title": "Campos (Fields)",
     "description": "Un campo es un texto que se actualiza automáticamente con información del dibujo: fecha de modificación, nombre de archivo, área de un polígono, autor, etc. Son",
-    "file": "nivel-3-organizacion.html",
-    "anchor": "campos",
+    "file": "nivel-3-organizacion/campos.html",
+    "anchor": "",
     "path": "Nivel 3 · Organización"
   },
   {
     "type": "topic",
     "title": "Gestión avanzada de referencias externas (Xref)",
     "description": "Ya viste en el tema 5 qué es una Xref. Aquí profundizamos en las opciones más avanzadas que necesitas en proyectos colaborativos reales.",
-    "file": "nivel-3-organizacion.html",
-    "anchor": "xref-avanzado",
+    "file": "nivel-3-organizacion/xref-avanzado.html",
+    "anchor": "",
     "path": "Nivel 3 · Organización"
   },
   {
     "type": "topic",
     "title": "Cajetines y bloques de título",
     "description": "El cajetín (o title block ) es el recuadro que se dibuja en la esquina de la lámina y que identifica el plano: nombre del proyecto, autor, fecha, escala, revisi",
-    "file": "nivel-3-organizacion.html",
-    "anchor": "cajetines",
+    "file": "nivel-3-organizacion/cajetines.html",
+    "anchor": "",
+    "path": "Nivel 3 · Organización"
+  },
+  {
+    "type": "topic",
+    "title": "Zapatas, machones y cimentaciones",
+    "description": "Qué son las zapatas y los machones (columnas de amarre) y sus medidas típicas en construcción.",
+    "file": "nivel-3-organizacion/zapatas-machones.html",
+    "anchor": "",
+    "path": "Nivel 3 · Organización"
+  },
+  {
+    "type": "topic",
+    "title": "Muros y detalles constructivos",
+    "description": "Tipos de muro, espesores habituales y cómo dibujar detalles constructivos a escala.",
+    "file": "nivel-3-organizacion/muros-detalle.html",
+    "anchor": "",
+    "path": "Nivel 3 · Organización"
+  },
+  {
+    "type": "topic",
+    "title": "Planos estructurales",
+    "description": "Qué incluye un juego de planos estructurales: plantas, cimentación, rejillas, armado y simbología.",
+    "file": "nivel-3-organizacion/planos-estructurales.html",
+    "anchor": "",
     "path": "Nivel 3 · Organización"
   },
   {
     "type": "topic",
     "title": "Escala anotativa (Annotative)",
     "description": "La propiedad Annotative hace que un texto, una cota, un sombreado o un bloque se muestren a su tamaño de papel correcto en cada escala, automáticamente. Sin ell",
-    "file": "nivel-3-organizacion.html",
-    "anchor": "escala-anotativa",
+    "file": "nivel-3-organizacion/escala-anotativa.html",
+    "anchor": "",
     "path": "Nivel 3 · Organización"
   },
   {
     "type": "topic",
     "title": "Estándares de capas (ISO/AIA)",
     "description": "Un nombre de capa como A-Muros o 0-Ejes no es casualidad: sigue una convención que cualquiera del equipo puede interpretar al instante. Nombrar capas de forma c",
-    "file": "nivel-3-organizacion.html",
-    "anchor": "estandares-capas",
+    "file": "nivel-3-organizacion/estandares-capas.html",
+    "anchor": "",
     "path": "Nivel 3 · Organización"
   },
   {
     "type": "topic",
     "title": "Conjuntos de planos (Sheet Sets)",
     "description": "Un Sheet Set (conjunto de planos) organiza todas las láminas de un proyecto en un solo panel. En lugar de abrir archivo por archivo, tienes una vista con la lis",
-    "file": "nivel-3-organizacion.html",
-    "anchor": "sheet-sets",
+    "file": "nivel-3-organizacion/sheet-sets.html",
+    "anchor": "",
+    "path": "Nivel 3 · Organización"
+  },
+  {
+    "type": "topic",
+    "title": "Transmitir y empaquetar (ETRANSMIT)",
+    "description": "Empaquetar el dibujo con sus Xrefs, fuentes y estilos en un solo archivo para entregar.",
+    "file": "nivel-3-organizacion/etransmit.html",
+    "anchor": "",
+    "path": "Nivel 3 · Organización"
+  },
+  {
+    "type": "topic",
+    "title": "Importar y exportar planos",
+    "description": "Importar y exportar planos entre formatos: DWG, DXF, PDF y referencias externas.",
+    "file": "nivel-3-organizacion/importar-exportar.html",
+    "anchor": "",
     "path": "Nivel 3 · Organización"
   },
   {
     "type": "topic",
     "title": "Espacio de trabajo 3D y navegación",
     "description": "El espacio de trabajo \"Modelado 3D\" reorganiza la cinta de opciones con las herramientas de sólidos, superficies y malla. Moverse en tres dimensiones requiere n",
-    "file": "nivel-4-modelado-3d.html",
-    "anchor": "navegacion",
+    "file": "nivel-4-modelado-3d/navegacion.html",
+    "anchor": "",
+    "path": "Nivel 4 · Modelado 3D"
+  },
+  {
+    "type": "topic",
+    "title": "Sistema de coordenadas (UCS) en 3D",
+    "description": "El UCS dinámico 3D: reorientar el plano de trabajo para dibujar y acotar en cualquier cara.",
+    "file": "nivel-4-modelado-3d/ucs.html",
+    "anchor": "",
     "path": "Nivel 4 · Modelado 3D"
   },
   {
     "type": "topic",
     "title": "Sólidos básicos (primitivas)",
     "description": "Son formas 3D predefinidas que se crean indicando dimensiones, sin necesidad de dibujar un perfil 2D previo.",
-    "file": "nivel-4-modelado-3d.html",
-    "anchor": "solidos",
+    "file": "nivel-4-modelado-3d/solidos.html",
+    "anchor": "",
     "path": "Nivel 4 · Modelado 3D"
   },
   {
     "type": "topic",
     "title": "Operaciones booleanas",
     "description": "Combinan dos o más sólidos para crear formas complejas a partir de piezas simples.",
-    "file": "nivel-4-modelado-3d.html",
-    "anchor": "booleanas",
+    "file": "nivel-4-modelado-3d/booleanas.html",
+    "anchor": "",
     "path": "Nivel 4 · Modelado 3D"
   },
   {
     "type": "topic",
     "title": "Extrusión, revolución, barrido y solevación",
     "description": "Estas herramientas convierten un perfil 2D cerrado (o abierto, para superficies) en un sólido tridimensional, y permiten formas que las primitivas básicas no pu",
-    "file": "nivel-4-modelado-3d.html",
-    "anchor": "creacion",
+    "file": "nivel-4-modelado-3d/creacion.html",
+    "anchor": "",
     "path": "Nivel 4 · Modelado 3D"
   },
   {
     "type": "topic",
     "title": "Edición de sólidos y superficies",
     "description": "Estas herramientas permiten pasar de una forma booleana básica a un modelo con detalles realistas: bordes redondeados, paredes de espesor definido y cortes de s",
-    "file": "nivel-4-modelado-3d.html",
-    "anchor": "edicion",
+    "file": "nivel-4-modelado-3d/edicion.html",
+    "anchor": "",
     "path": "Nivel 4 · Modelado 3D"
   },
   {
     "type": "topic",
     "title": "Renderizado básico",
     "description": "El render convierte el modelo 3D en una imagen realista aplicando materiales, iluminación y una cámara.",
-    "file": "nivel-4-modelado-3d.html",
-    "anchor": "render",
+    "file": "nivel-4-modelado-3d/render.html",
+    "anchor": "",
+    "path": "Nivel 4 · Modelado 3D"
+  },
+  {
+    "type": "topic",
+    "title": "Cámaras, recorridos y animaciones",
+    "description": "Cámaras, recorridos a pie/vuelo y animaciones sobre trayectoria con ANIPATH.",
+    "file": "nivel-4-modelado-3d/recorridos.html",
+    "anchor": "",
     "path": "Nivel 4 · Modelado 3D"
   },
   {
     "type": "topic",
     "title": "Navegación 3D avanzada",
     "description": "Más allá del 3DORBIT básico, AutoCAD ofrece herramientas para orientarte y presentar el modelo desde cualquier ángulo.",
-    "file": "nivel-4-modelado-3d.html",
-    "anchor": "nav-3d-detalle",
+    "file": "nivel-4-modelado-3d/nav-3d-detalle.html",
+    "anchor": "",
     "path": "Nivel 4 · Modelado 3D"
   },
   {
     "type": "topic",
     "title": "Mallas (Mesh)",
     "description": "Las mallas son un tipo de geometría 3D diferente a los sólidos: representan superficies como una red de caras triangulares o cuadrangulares. Son ideales para fo",
-    "file": "nivel-4-modelado-3d.html",
-    "anchor": "mallas",
+    "file": "nivel-4-modelado-3d/mallas.html",
+    "anchor": "",
     "path": "Nivel 4 · Modelado 3D"
   },
   {
     "type": "topic",
     "title": "Superficies y NURBS",
     "description": "Las superficies 3D representan caras sin volumen. Son necesarias para formas libres que no se pueden modelar con sólidos (carrocerías, mobiliario curvo, carcasa",
-    "file": "nivel-4-modelado-3d.html",
-    "anchor": "superficies",
+    "file": "nivel-4-modelado-3d/superficies.html",
+    "anchor": "",
     "path": "Nivel 4 · Modelado 3D"
   },
   {
     "type": "topic",
     "title": "Secciones sólidas",
     "description": "El plano de sección permite generar cortes 2D a partir de un modelo 3D. Es la forma de producir planos de corte sin duplicar geometría.",
-    "file": "nivel-4-modelado-3d.html",
-    "anchor": "seccion",
+    "file": "nivel-4-modelado-3d/seccion.html",
+    "anchor": "",
     "path": "Nivel 4 · Modelado 3D"
   },
   {
     "type": "topic",
     "title": "Interferencia y análisis",
     "description": "En proyectos con múltiples componentes, es fundamental detectar choques entre piezas antes de fabricar o construir.",
-    "file": "nivel-4-modelado-3d.html",
-    "anchor": "interferencia",
+    "file": "nivel-4-modelado-3d/interferencia.html",
+    "anchor": "",
     "path": "Nivel 4 · Modelado 3D"
   },
   {
     "type": "topic",
     "title": "Cotado 3D y anotaciones",
     "description": "AutoCAD permite colocar cotas directamente en el espacio 3D, aunque lo más habitual es generar vistas 2D (con SECTION o FLATSHOT) y acotarlas después.",
-    "file": "nivel-4-modelado-3d.html",
-    "anchor": "cotado3d",
+    "file": "nivel-4-modelado-3d/cotado3d.html",
+    "anchor": "",
     "path": "Nivel 4 · Modelado 3D"
   },
   {
     "type": "topic",
     "title": "Materiales, texturas y mapeado",
     "description": "Un material define cómo se ve la superficie de un objeto en el render: su color, brillo, transparencia y textura. Se gestionan desde el Editor de materiales (co",
-    "file": "nivel-4-modelado-3d.html",
-    "anchor": "materiales",
+    "file": "nivel-4-modelado-3d/materiales.html",
+    "anchor": "",
     "path": "Nivel 4 · Modelado 3D"
   },
   {
     "type": "topic",
     "title": "Iluminación y escenas",
     "description": "La luz es lo que hace que un modelo 3D se vea realista. AutoCAD ofrece varios tipos de luz, cada uno con un propósito distinto:",
-    "file": "nivel-4-modelado-3d.html",
-    "anchor": "iluminacion",
+    "file": "nivel-4-modelado-3d/iluminacion.html",
+    "anchor": "",
     "path": "Nivel 4 · Modelado 3D"
   },
   {
     "type": "topic",
     "title": "Extracción de vistas 2D desde el modelo 3D",
     "description": "La documentación de entrega (planos constructivos, planos de fabricación) suele requerir vistas 2D acotadas aunque el modelo exista en 3D. Convertir el 3D en 2D",
-    "file": "nivel-4-modelado-3d.html",
-    "anchor": "vistas-2d",
+    "file": "nivel-4-modelado-3d/vistas-2d.html",
+    "anchor": "",
     "path": "Nivel 4 · Modelado 3D"
   },
   {
     "type": "topic",
     "title": "Análisis de masa y volumen (MASSPROP)",
     "description": "El comando MASSPROP calcula propiedades físicas de un sólido 3D: volumen , área superficial , centro de masa y momentos de inercia . Se usa para verificar pieza",
-    "file": "nivel-4-modelado-3d.html",
-    "anchor": "massprop",
+    "file": "nivel-4-modelado-3d/massprop.html",
+    "anchor": "",
+    "path": "Nivel 4 · Modelado 3D"
+  },
+  {
+    "type": "topic",
+    "title": "Impresión 3D: exportar a STL",
+    "description": "Preparar el modelo y exportarlo a STL para imprimirlo en 3D.",
+    "file": "nivel-4-modelado-3d/impresion3d.html",
+    "anchor": "",
     "path": "Nivel 4 · Modelado 3D"
   },
   {
     "type": "topic",
     "title": "Personalización de la interfaz (CUI)",
     "description": "El comando CUI (Customize User Interface) abre un diálogo donde puedes modificar casi todo el entorno visual de AutoCAD: barras de herramientas, menús, teclas d",
-    "file": "nivel-5-avanzado.html",
-    "anchor": "personalizacion",
+    "file": "nivel-5-avanzado/personalizacion.html",
+    "anchor": "",
     "path": "Nivel 5 · Avanzado"
   },
   {
     "type": "topic",
     "title": "AutoLISP y scripts básicos",
     "description": "AutoLISP es un lenguaje de programación integrado en AutoCAD que permite automatizar tareas repetitivas, crear comandos personalizados y extender las capacidade",
-    "file": "nivel-5-avanzado.html",
-    "anchor": "autolisp",
+    "file": "nivel-5-avanzado/autolisp.html",
+    "anchor": "",
     "path": "Nivel 5 · Avanzado"
   },
   {
     "type": "topic",
     "title": "Estándares CAD profesionales",
     "description": "En equipos de trabajo profesional, todos los dibujantes deben seguir las mismas reglas para que los archivos sean consistentes y interoperables. Los más conocid",
-    "file": "nivel-5-avanzado.html",
-    "anchor": "estandares",
+    "file": "nivel-5-avanzado/estandares.html",
+    "anchor": "",
     "path": "Nivel 5 · Avanzado"
   },
   {
     "type": "topic",
     "title": "Buenas prácticas de dibujo profesional",
     "description": "",
-    "file": "nivel-5-avanzado.html",
-    "anchor": "buenas-practicas",
+    "file": "nivel-5-avanzado/buenas-practicas.html",
+    "anchor": "",
+    "path": "Nivel 5 · Avanzado"
+  },
+  {
+    "type": "topic",
+    "title": "Campos y tablas de datos",
+    "description": "Campos dinámicos, tablas de AutoCAD y extracción de datos a Excel (DATAEXTRACTION).",
+    "file": "nivel-5-avanzado/campos-tablas.html",
+    "anchor": "",
     "path": "Nivel 5 · Avanzado"
   },
   {
     "type": "topic",
     "title": "Integración con otros programas",
     "description": "Los formatos de intercambio más usados son .DWG (nativo), .DXF (intercambio entre CADs), .IFC (BIM) y .SAT (ACIS sólidos).",
-    "file": "nivel-5-avanzado.html",
-    "anchor": "integracion",
+    "file": "nivel-5-avanzado/integracion.html",
+    "anchor": "",
     "path": "Nivel 5 · Avanzado"
   },
   {
     "type": "topic",
     "title": "Optimización de archivos y solución de errores",
     "description": "",
-    "file": "nivel-5-avanzado.html",
-    "anchor": "optimizacion",
+    "file": "nivel-5-avanzado/optimizacion.html",
+    "anchor": "",
     "path": "Nivel 5 · Avanzado"
   },
   {
     "type": "topic",
     "title": "Dynamo para AutoCAD",
     "description": "Dynamo es un entorno de programación visual que se ejecuta dentro de AutoCAD. Permite crear flujos de trabajo repetitivos arrastrando nodos en un lienzo gráfico",
-    "file": "nivel-5-avanzado.html",
-    "anchor": "dynamo",
+    "file": "nivel-5-avanzado/dynamo.html",
+    "anchor": "",
     "path": "Nivel 5 · Avanzado"
   },
   {
     "type": "topic",
     "title": "Automatización con Python (pyautocad)",
     "description": "Si prefieres código textual en lugar de nodos visuales, Python es una alternativa moderna a AutoLISP para automatizar AutoCAD.",
-    "file": "nivel-5-avanzado.html",
-    "anchor": "python",
+    "file": "nivel-5-avanzado/python.html",
+    "anchor": "",
     "path": "Nivel 5 · Avanzado"
   },
   {
     "type": "topic",
     "title": "AutoCAD y BIM",
     "description": "BIM (Building Information Modeling) es el flujo de trabajo que conecta arquitectura, ingeniería y construcción en un modelo digital compartido. AutoCAD no es un",
-    "file": "nivel-5-avanzado.html",
-    "anchor": "bim",
+    "file": "nivel-5-avanzado/bim.html",
+    "anchor": "",
     "path": "Nivel 5 · Avanzado"
   },
   {
     "type": "topic",
     "title": "Interoperabilidad CAD-BIM",
     "description": "En un proyecto real, no todo el mundo usa el mismo programa. AutoCAD debe comunicarse con Revit, SketchUp, Civil 3D, softwares de cálculo y más.",
-    "file": "nivel-5-avanzado.html",
-    "anchor": "interoperabilidad",
+    "file": "nivel-5-avanzado/interoperabilidad.html",
+    "anchor": "",
+    "path": "Nivel 5 · Avanzado"
+  },
+  {
+    "type": "topic",
+    "title": "Georreferenciación y mapas",
+    "description": "Ubicar el dibujo en coordenadas reales y conectarlo con cartografía GIS.",
+    "file": "nivel-5-avanzado/georreferenciacion.html",
+    "anchor": "",
     "path": "Nivel 5 · Avanzado"
   },
   {
     "type": "topic",
     "title": "Bloques dinámicos (Dynamic Blocks)",
     "description": "Un bloque dinámico es un bloque normal al que se le añaden parámetros y acciones para que pueda cambiar de forma, tamaño o visibilidad mediante grips (pinzamien",
-    "file": "nivel-5-avanzado.html",
-    "anchor": "dynamic-blocks",
+    "file": "nivel-5-avanzado/dynamic-blocks.html",
+    "anchor": "",
     "path": "Nivel 5 · Avanzado"
   },
   {
     "type": "topic",
     "title": "Diseño paramétrico y restricciones",
     "description": "El diseño paramétrico permite que la geometría se adapte automáticamente cuando cambian sus dimensiones o sus relaciones. Se apoya en restricciones : reglas geo",
-    "file": "nivel-5-avanzado.html",
-    "anchor": "diseno-parametrico",
+    "file": "nivel-5-avanzado/diseno-parametrico.html",
+    "anchor": "",
     "path": "Nivel 5 · Avanzado"
   },
   {
     "type": "topic",
     "title": "Verificador de estándares CAD",
     "description": "Los estándares CAD son reglas que una oficina define para que todos los dibujos compartan la misma nomenclatura de capas , estilos de texto y estilos de cota . ",
-    "file": "nivel-5-avanzado.html",
-    "anchor": "cad-standards",
+    "file": "nivel-5-avanzado/cad-standards.html",
+    "anchor": "",
     "path": "Nivel 5 · Avanzado"
   },
   {
     "type": "topic",
     "title": "Publicación y lotes de impresión (PUBLISH)",
     "description": "PUBLISH (Publicar) imprime o exporta varios planos a la vez , en una sola operación, hacia una plotter o a un archivo PDF . Es el comando que usas cuando tienes",
-    "file": "nivel-5-avanzado.html",
-    "anchor": "publish",
+    "file": "nivel-5-avanzado/publish.html",
+    "anchor": "",
+    "path": "Nivel 5 · Avanzado"
+  },
+  {
+    "type": "topic",
+    "title": "Colaboración en la nube y AutoCAD Web",
+    "description": "Compartir, editar y coordinar proyectos en la nube desde cualquier dispositivo.",
+    "file": "nivel-5-avanzado/colaboracion.html",
+    "anchor": "",
     "path": "Nivel 5 · Avanzado"
   },
   {

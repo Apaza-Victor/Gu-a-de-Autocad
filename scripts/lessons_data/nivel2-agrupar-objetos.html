@@ -1,0 +1,94 @@
+<p>Un <strong>grupo</strong> es un conjunto de objetos que se comportan como una unidad temporal: los seleccionas de un solo clic, los mueves, copias y escalas juntos, pero no se definen como bloque (no se puede insertar ni es un "archivo"). Es la herramienta ideal para agrupaciones rápidas de trabajo.</p>
+
+<div class="callout">
+  <span class="callout-title">Grupo vs Bloque</span>
+  El <strong>bloque</strong> es la solución definitiva para elementos reutilizables (una puerta, una ventana). El <strong>grupo</strong> es para agrupar objetos temporalmente en el archivo actual, sin crear una definición. Primero agrupar, luego convertir en bloque si va a repetirse.
+</div>
+
+<h3>1. Crear un grupo rápido (paso a paso)</h3>
+
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Selecciona los objetos</h4>
+    <p>Con una ventana o haciendo clic a varios objetos. Sostén <span class="key-inline">Shift</span> para quitar alguno de la selección.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Ejecuta GROUP</h4>
+    <p>Escribe <span class="cmd-inline">GROUP</span> o <span class="key-inline">G</span> en la línea de comandos y pulsa Enter.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Confirma la creación</h4>
+    <p>AutoCAD crea el grupo (en versiones recientes abre el cuadro de diálogo; pulsa <strong>Aceptar</strong>). A partir de ahora, un clic sobre cualquier miembro selecciona el grupo completo.</p>
+  </div>
+</div>
+
+<h3>2. Crear grupos con nombre</h3>
+<p>Para gestionar varios grupos, usa la versión en cuadro de diálogo: escribe <span class="cmd-inline">CLASSICGROUP</span> o <span class="cmd-inline">GROUP</span> y pulsa Enter (en AutoCAD 2020+ usa <span class="cmd-inline">GROUP</span> y luego la opción "Con nombre" desde la barra de grupos de la cinta, en Inicio → Grupo).</p>
+
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Abre el cuadro de diálogo</h4>
+    <p>Escribe <span class="cmd-inline">CLASSICGROUP</span> y pulsa Enter, o en la cinta: Inicio → Grupo → menú → y pulsa la pequeña flecha del panel.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Ponle nombre y descripción</h4>
+    <p>En "Nuevo grupo", escribe un nombre lógico (ej.: <code>Conjunto-Cocina</code>) y una descripción. El nombre permite buscar el grupo después.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Añade los objetos</h4>
+    <p>Pulsa "Seleccionar objetos", selecciona en el dibujo y pulsa Enter. El grupo queda registrado con su nombre.</p>
+  </div>
+</div>
+
+<h3>3. Editar, desagrupar y borrar grupos</h3>
+<ul>
+  <li><strong>Desagrupar uno:</strong> escribe <span class="cmd-inline">UNGROUP</span> y pulsa Enter (selecciona el grupo). Los objetos quedan sueltos.</li>
+  <li><strong>Desagrupar todos:</strong> escribe <span class="cmd-inline">UNGROUP</span> y elige la opción <span class="key-inline">Todos</span> (o <span class="key-inline">N</span> en algunos idiomas).</li>
+  <li><strong>Añadir o quitar miembros:</strong> con <span class="cmd-inline">GROUPEDIT</span> (o doble clic sobre un grupo) eliges <strong>Añadir objetos</strong> o <strong>Quitar objetos</strong>.</li>
+  <li><strong>Renombrar:</strong> en el cuadro de diálogo, selecciona el grupo, pulsa "Renombrar" y escribe el nombre nuevo.</li>
+</ul>
+
+<h3>4. Por qué a veces "no agrupa" (solución de problemas)</h3>
+<div class="table-scroll">
+<table class="table-cad">
+  <thead><tr><th>Síntoma</th><th>Causa probable</th><th>Solución</th></tr></thead>
+  <tbody>
+    <tr><td>Al pulsar un objeto se selecciona solo él, no el grupo</td><td>La variable <span class="cmd-inline">PICKSTYLE</span> tiene valor 0 (los grupos desactivados)</td><td>Escribe <span class="cmd-inline">PICKSTYLE</span> y ponlo en <strong>1</strong> (o 3 para combinar grupos + asociatividad)</td></tr>
+    <tr><td>El grupo aparece pero "no se mueve como uno"</td><td>La variable <span class="cmd-inline">PICKSTYLE</span> = 1 pero seleccionas con ventana que corta el grupo</td><td>Revisa que marques objetos dentro completos; o activa <span class="cmd-inline">GROUPSON</span></td></tr>
+    <tr><td>GROUP no hace nada visible</td><td>Se creó un grupo sin nombre y se perdió entre otros</td><td>Abre <span class="cmd-inline">CLASSICGROUP</span> y revisa la lista; renómbralo ahí</td></tr>
+    <tr><td>Al copiar/pegar el grupo se desarma</td><td>El portapapeles de Windows no conserva grupos</td><td>Usa <span class="cmd-inline">COPYBASE</span> (<span class="key-inline">Ctrl+Shift+C</span>) o guarda/inserta como bloque <span class="cmd-inline">WBLOCK</span></td></tr>
+    <tr><td>No encuentro el grupo para editarlo</td><td>No tiene nombre o está anidado</td><td>En <span class="cmd-inline">-GROUP</span> (línea de comandos) usa la opción <span class="key-inline">?</span> para listar todos los grupos del dibujo</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout warn">
+  <span class="callout-title">Atención</span>
+  Un bloque y un grupo no se mezclan. Si dentro de un grupo metes un bloque, el grupo agrupa la <em>inserción</em>. Para editar el bloque en sí, entra en el editor de bloques (<span class="cmd-inline">BEDIT</span>).
+</div>
+
+<h3>5. Agrupar correctamente y con nombre (flujo recomendado)</h3>
+<ol class="pasos-block">
+  <li>Selecciona los objetos de la unidad funcional (ej.: la mesa con sus sillas).</li>
+  <li>Ejecuta <span class="cmd-inline">GROUP</span> y guárdalo <strong>siempre con nombre</strong> (ej.: <code>Comedor-01</code>).</li>
+  <li>Mientras definas el dibujo, muévelo como grupo; no lo rompas.</li>
+  <li>Si el elemento se repetirá en el proyecto, convierte el grupo en <strong>bloque</strong> con <span class="cmd-inline">BLOCK</span> (<span class="key-inline">B</span>) y reutilízalo.</li>
+</ol>

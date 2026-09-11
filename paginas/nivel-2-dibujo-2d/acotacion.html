@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acotación (dimensiones) · Nivel 2 — AutoCAD Guía</title>
+<link rel="canonical" href="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-2-dibujo-2d/acotacion.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-2-dibujo-2d/acotacion.html">
+<meta property="og:site_name" content="AutoCAD Guía">
+<meta property="og:title" content="Acotación (dimensiones) · Nivel 2 — AutoCAD Guía">
+<meta property="og:description" content="Tipos de cota, estilos de cota, DIMSCALE y cómo acotar un plano con precisión.">
+<meta property="og:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Acotación (dimensiones) · Nivel 2 — AutoCAD Guía">
+<meta name="twitter:description" content="Tipos de cota, estilos de cota, DIMSCALE y cómo acotar un plano con precisión.">
+<meta name="twitter:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="description" content="Tipos de cota, estilos de cota, DIMSCALE y cómo acotar un plano con precisión.">
+
+<link rel="icon" type="image/svg+xml" href="../../assets/img/autocad-2.svg">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../../assets/css/responsive.css">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Nivel · Dibujo 2D en AutoCAD",
+  "description": "Geometría, edición, precisión, capas, bloques, cotas, texto, hatch y splines.",
+  "provider": {
+    "@type": "Organization",
+    "name": "AutoCAD Guía",
+    "sameAs": "https://apaza-victor.github.io/Gu-a-de-Autocad/"
+  },
+  "inLanguage": "es",
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "online",
+    "learningResourceType": "tutorial",
+    "inLanguage": "es"
+  }
+}
+  </script>
+</head>
+
+<body>
+
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+<nav class="navbar navbar-cad navbar-expand-lg">
+  <div class="container container-xl">
+    <a class="navbar-brand brand-cad" href="../../index.html">
+      <img class="brand-logo" src="../../assets/img/autocad-2.svg" alt="AutoCAD">
+      <span>AutoCAD<small class="d-block" data-i18n-html="brand.sub">Guía · Teoría &amp; Práctica</small></span>
+    </a>
+    <div class="d-flex align-items-center gap-2 nav-actions order-lg-last">
+      <button class="icon-btn" id="searchToggle" title="Buscar" data-i18n-title="ui.search"><i class="bi bi-search"></i></button>
+      <button class="icon-btn" id="themeToggle" title="Cambiar tema" data-i18n-title="ui.theme"><i class="bi bi-moon-stars"></i></button>
+      <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
+        <i class="bi bi-list fs-4"></i>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navCad">
+      <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../../index.html" data-i18n="nav.home">Inicio</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-cad dropdown-toggle active" href="#" data-bs-toggle="dropdown" data-i18n="nav.levels">Niveles</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="../nivel-1-fundamentos/index.html">Nivel 1 · Fundamentos</a></li>
+            <li><a class="dropdown-item active" href="../nivel-2-dibujo-2d/index.html">Nivel 2 · Dibujo 2D</a></li>
+            <li><a class="dropdown-item" href="../nivel-3-organizacion/index.html">Nivel 3 · Organización</a></li>
+            <li><a class="dropdown-item" href="../nivel-4-modelado-3d/index.html">Nivel 4 · Modelado 3D</a></li>
+            <li><a class="dropdown-item" href="../nivel-5-avanzado/index.html">Nivel 5 · Experto</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../comandos.html" data-i18n="nav.commands">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../ejemplos-visuales.html" data-i18n="nav.visual">Visuales</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../trucos.html" data-i18n="nav.tips">Trucos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../recursos.html" data-i18n="nav.resources">Recursos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../faq.html" data-i18n="nav.faq">FAQ</a></li>
+      </ul>
+
+      <div class="d-flex align-items-center gap-2 nav-actions-menu ms-lg-auto">
+        <span class="coord-readout d-none d-lg-inline-flex">X: <span id="coordX">000.00</span>&nbsp; Y: <span id="coordY">000.00</span></span>
+        <button class="lang-toggle" id="langToggle" title="Cambiar idioma" data-i18n-title="ui.lang">
+          <i class="bi bi-translate lang-toggle-flag"></i>
+          <span class="lang-toggle-text">EN</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header" id="main-content">
+  <div class="container container-xl">
+    <p class="crumb"><a href="../../index.html">Inicio</a> / <a href="../../index.html#niveles">Niveles</a> / <a href="index.html">Dibujo 2D</a> / Tema 7</p>
+    <span class="eyebrow" data-i18n="lvl2.eyebrow">Nivel 02 · Básico–Intermedio</span>
+    <h1>Acotación (dimensiones)</h1>
+    <div class="level-progress-bar" data-level-prefix="nivel2" data-level-total="27"><div class="fill"></div></div>
+    <p class="level-progress-label">0 de 27 temas completados · 0%</p>
+  </div>
+</header>
+
+<div class="content-layout">
+  <div class="container container-xl">
+    <div class="row">
+
+      <aside class="col-lg-3 mb-5 mb-lg-0">
+        <div class="toc-sidebar">
+          <h6 data-i18n="ui.inThisLevel">En este nivel</h6>
+          <ul class="toc-list">
+            <li><a href="dibujo.html" data-toc="nivel2-dibujo"><span class="toc-check"></span> Herramientas de dibujo</a></li>
+            <li><a href="modificacion.html" data-toc="nivel2-modificacion"><span class="toc-check"></span> Herramientas de modificación</a></li>
+            <li><a href="matrices.html" data-toc="nivel2-matrices"><span class="toc-check"></span> Matrices (ARRAY)</a></li>
+            <li><a href="precision.html" data-toc="nivel2-precision"><span class="toc-check"></span> Precisión: referencias y rastreo</a></li>
+            <li><a href="capas.html" data-toc="nivel2-capas"><span class="toc-check"></span> Capas (Layers)</a></li>
+            <li><a href="bloques.html" data-toc="nivel2-bloques"><span class="toc-check"></span> Bloques y atributos</a></li>
+            <li><a href="acotacion.html" data-toc="nivel2-acotacion"><span class="toc-check"></span> Acotación</a></li>
+            <li><a href="texto.html" data-toc="nivel2-texto"><span class="toc-check"></span> Texto y tablas</a></li>
+            <li><a href="hatch.html" data-toc="nivel2-hatch"><span class="toc-check"></span> Sombreado (Hatch)</a></li>
+            <li><a href="seleccion.html" data-toc="nivel2-seleccion"><span class="toc-check"></span> Selección de objetos</a></li>
+            <li><a href="grips.html" data-toc="nivel2-grips"><span class="toc-check"></span> Pinzamientos (GRIPS)</a></li>
+            <li><a href="lineas.html" data-toc="nivel2-lineas"><span class="toc-check"></span> Tipos de línea</a></li>
+            <li><a href="puntos.html" data-toc="nivel2-puntos"><span class="toc-check"></span> Puntos y división</a></li>
+            <li><a href="auxiliares.html" data-toc="nivel2-auxiliares"><span class="toc-check"></span> Geometría auxiliar</a></li>
+            <li><a href="consulta.html" data-toc="nivel2-consulta"><span class="toc-check"></span> Medición y verificación</a></li>
+            <li><a href="propiedades.html" data-toc="nivel2-propiedades"><span class="toc-check"></span> Propiedades de objeto</a></li>
+            <li><a href="pedit.html" data-toc="nivel2-pedit"><span class="toc-check"></span> Edición de polilíneas</a></li>
+            <li><a href="splines.html" data-toc="nivel2-splines"><span class="toc-check"></span> Splines y curvas</a></li>
+            <li><a href="index.html#autoevaluacion"><span class="toc-check"></span> Autoevaluación</a></li>
+          </ul>
+          <hr style="border-color:var(--border-soft)" class="my-4">
+          <a href="index.html" class="btn-cad-outline w-100 text-center d-block"><i class="bi bi-arrow-left"></i> Volver al índice</a>
+        </div>
+      </aside>
+
+      <div class="col-lg-9">
+        <article class="content-article">
+
+          <section id="acotacion" data-topic="nivel2-acotacion">
+                                <h2><span class="sec-num">7</span><span data-i18n="lvl2.s6.title">Acotación (dimensiones)</span></h2>
+                                <p>Acotar es indicar medidas reales sobre el dibujo. AutoCAD calcula automáticamente la distancia entre los puntos que selecciones, siempre que el dibujo esté hecho a escala 1:1. El problema más común es que <strong>las cotas salen enormes o diminutas</strong> porque no se configuró el estilo correctamente.</p>
+
+                                <!-- ====== TIPOS DE COTA ====== -->
+                                <h3>Tipos de cota</h3>
+                                <table class="table-cad">
+                                  <thead><tr><th>Tipo de cota</th><th>Comando</th><th>Uso</th></tr></thead>
+                                  <tbody>
+                                    <tr><td>Lineal</td><td class="cmd-inline">DIMLINEAR</td><td>Distancia horizontal o vertical entre dos puntos.</td></tr>
+                                    <tr><td>Alineada</td><td class="cmd-inline">DIMALIGNED</td><td>Distancia paralela a una línea inclinada.</td></tr>
+                                    <tr><td>Angular</td><td class="cmd-inline">DIMANGULAR</td><td>Mide el ángulo entre dos líneas.</td></tr>
+                                    <tr><td>Radio / Diámetro</td><td class="cmd-inline">DIMRADIUS</td><td>Mide arcos y círculos.</td></tr>
+                                    <tr><td>Cota rápida</td><td class="cmd-inline">DIM</td><td>Detecta automáticamente el tipo de cota según el objeto.</td></tr>
+                                  </tbody>
+                                </table>
+
+                                <!-- ====== ¿POR QUÉ LAS COTAS SALEN GRANDES? ====== -->
+                                <h3>¿Por qué las cotas salen enormes? — la variable DIMSCALE</h3>
+                                <p>AutoCAD dibuja las cotas con un tamaño por defecto de <strong>0.18 unidades</strong> para el texto y <strong>0.18</strong> para las flechas. Si dibujas en milímetros (un muro mide 150 unidades), esas cotas son perfectas. Pero si dibujas en metros (un muro mide 0.15 unidades), las cotas aparecen 1000 veces más grandes que el muro.</p>
+
+                                <p>La solución es la variable <span class="cmd-inline">DIMSCALE</span>: un <strong>factor de escala general</strong> que multiplica TODO el tamaño de la cota (texto + flechas + líneas de extensión + espacio). Es la variable más importante de la acotación.</p>
+
+                                <div class="callout warn">
+                                  <span class="callout-title">Error más común</span>
+                                  Si dibujas en metros y la cota muestra "3.0000" con un texto gigante que no cabe en la pantalla, el problema NO es la cota en sí — es que <span class="cmd-inline">DIMSCALE</span> está en 1 (por defecto) cuando debería ser <strong>100</strong> o <strong>1000</strong>. Cambia DIMSCALE y todo se arregla de golpe.
+                                </div>
+
+                                <!-- ====== TABLA DIMSCALE SEGÚN UNIDAD ====== -->
+                                <h3>Tabla: valor de DIMSCALE según unidad de dibujo</h3>
+                                <p>El valor de DIMSCALE depende de <strong>en qué unidad dibujas</strong> y <strong>a qué escala piensas imprimir</strong>. Usa esta tabla como referencia:</p>
+
+                                <table class="table-cad">
+                                  <thead><tr><th>Unidad de dibujo</th><th>Escala de impresión</th><th>DIMSCALE recomendado</th><th>Texto resultante (en plano)</th><th>Flechas resultantes</th></tr></thead>
+                                  <tbody>
+                                    <tr><td rowspan="3"><strong>Milímetros (mm)</strong></td><td>1:1</td><td><code>1</code></td><td>0.18 mm</td><td>0.18 mm</td></tr>
+                                    <tr><td>1:50</td><td><code>50</code></td><td>9 mm</td><td>9 mm</td></tr>
+                                    <tr><td>1:100</td><td><code>100</code></td><td>18 mm</td><td>18 mm</td></tr>
+                                    <tr><td rowspan="3"><strong>Metros (m)</strong></td><td>1:1</td><td><code>100</code></td><td>18 mm</td><td>18 mm</td></tr>
+                                    <tr><td>1:50</td><td><code>50</code></td><td>9 mm</td><td>9 mm</td></tr>
+                                    <tr><td>1:100</td><td><code>25</code></td><td>4.5 mm</td><td>4.5 mm</td></tr>
+                                    <tr><td rowspan="2"><strong>Pies (ft)</strong></td><td>1/4" = 1'</td><td><code>48</code></td><td>~2.3 mm</td><td>~2.3 mm</td></tr>
+                                    <tr><td>1/8" = 1'</td><td><code>96</code></td><td>~4.6 mm</td><td>~4.6 mm</td></tr>
+                                  </tbody>
+                                </table>
+
+                                <div class="callout">
+                                  <span class="callout-title">Regla práctica</span>
+                                  <p>El tamaño ideal de una cota impresa es de <strong>2.5 mm a 3.5 mm</strong> de alto (texto y flechas). Para saber qué DIMSCALE usar, multiplica el denominador de la escala de impresión por la unidad base:</p>
+                                  <p><strong>En milímetros:</strong> DIMSCALE = denominador de la escala (ej. para 1:50 → DIMSCALE = 50)</p>
+                                  <p><strong>En metros:</strong> DIMSCALE = denominador ÷ 1000 × factor de ajuste (ej. para 1:100 → DIMSCALE = 25 a 100)</p>
+                                </div>
+
+                                <!-- ====== TUTORIAL DIMSTYLE PASO A PASO ====== -->
+                                <h3>Tutorial: crear un estilo de cota paso a paso</h3>
+
+                                <div class="lesson-step">
+                                  <span class="lesson-num">1</span>
+                                  <div class="lesson-body">
+                                    <h4>Abre el Administrador de estilos de cota</h4>
+                                    <p>Escribe <span class="cmd-inline">DIMSTYLE</span> o <span class="cmd-inline">D</span> + Enter en la línea de comandos. Se abre el cuadro "Dimension Style Manager". También puedes acceder desde <strong>Anotar → Cota → el ícono pequeño de la esquina</strong> en la cinta.</p>
+                                  </div>
+                                </div>
+
+                                <div class="lesson-step">
+                                  <span class="lesson-num">2</span>
+                                  <div class="lesson-body">
+                                    <h4>Crea un estilo nuevo</h4>
+                                    <p>Haz clic en <strong>"New"</strong> (Nueva). Ponle un nombre descriptivo como <code>MI-ESTILO-50</code> (para escala 1:50 en mm) o <code>METROS-100</code> (para metros a 1:100). Selecciona el estilo base "Standard" y haz clic en Continue.</p>
+                                  </div>
+                                </div>
+
+                                <div class="lesson-step">
+                                  <span class="lesson-num">3</span>
+                                  <div class="lesson-body">
+                                    <h4>Pestaña "Lines" (Líneas)</h4>
+                                    <p>Configura las líneas de extensión y la línea de cota:</p>
+                                    <ul>
+                                      <li><strong>Extend beyond dim lines:</strong> cuánto sobresale la línea de extensión más allá de la cota. Valor típico: <code>1.25</code> a <code>2.5</code> mm (en el plano impreso).</li>
+                                      <li><strong>Offset from origin:</strong> distancia entre el objeto y el inicio de la línea de extensión. Valor típico: <code>0.625</code> a <code>1.5</code> mm.</li>
+                                      <li><strong>Baseline spacing:</strong> distancia entre cotas apiladas con DIMBASELINE. Valor típico: <code>3.75</code> a <code>5</code> mm.</li>
+                                    </ul>
+                                  </div>
+                                </div>
+
+                                <div class="lesson-step">
+                                  <span class="lesson-num">4</span>
+                                  <div class="lesson-body">
+                                    <h4>Pestaña "Symbols and Arrows" (Símbolos y flechas)</h4>
+                                    <ul>
+                                      <li><strong>Arrowheads → First / Second / Leader:</strong> elige el tipo de punta (Closed filled, Architectural tick, Dot, etc.). Para arquitectura, el <strong>Architectural tick</strong> es el más común.</li>
+                                      <li><strong>Arrow size:</strong> tamaño de la punta. Valor típico: <code>1.5</code> a <code>2.5</code> mm en el plano impreso.</li>
+                                      <li><strong>Center marks → Type:</strong> marca de centro para radios y diámetros. "Mark" o "Line".</li>
+                                    </ul>
+                                  </div>
+                                </div>
+
+                                <div class="lesson-step">
+                                  <span class="lesson-num">5</span>
+                                  <div class="lesson-body">
+                                    <h4>Pestaña "Text" (Texto)</h4>
+                                    <ul>
+                                      <li><strong>Text style:</strong> elige el estilo de texto que creaste (ver sección de Texto más abajo).</li>
+                                      <li><strong>Text color / Fill color:</strong> color del texto y fondo (usualmente "ByLayer" y "None").</li>
+                                      <li><strong>Text height:</strong> altura del texto de cota. Valor típico: <code>2.5</code> a <code>3.5</code> mm en el plano impreso.</li>
+                                      <li><strong>Text placement → Offset from dim line:</strong> espacio entre el texto y la línea de cota. Valor típico: <code>0.625</code> a <code>1</code> mm.</li>
+                                    </ul>
+                                  </div>
+                                </div>
+
+                                <div class="lesson-step">
+                                  <span class="lesson-num">6</span>
+                                  <div class="lesson-body">
+                                    <h4>Pestaña "Primary Units" (Unidades primarias)</h4>
+                                    <ul>
+                                      <li><strong>Unit format:</strong> Decimal, Architectural, Engineering, Fractional. Para métrico, usa <strong>Decimal</strong>.</li>
+                                      <li><strong>Precision:</strong> cuántos decimales. Para mm usa <code>0</code>, para metros usa <code>0.00</code>.</li>
+                                      <li><strong>Decimal separator:</strong> punto (.) o coma (,) según tu país. En Latinoamérica, punto es el estándar técnico.</li>
+                                      <li><strong>Prefix / Suffix:</strong> texto antes o después del valor (ej. Sufijo: <code> mm</code> o <code> m</code>).</li>
+                                    </ul>
+                                  </div>
+                                </div>
+
+                                <div class="lesson-step">
+                                  <span class="lesson-num">7</span>
+                                  <div class="lesson-body">
+                                    <h4>Pestaña "Fit" (Ajuste) — DIMSCALE está aquí</h4>
+                                    <ul>
+                                      <li><strong>Use overall scale of (Escala general):</strong> este es <span class="cmd-inline">DIMSCALE</span>. Ingresa el valor de la tabla anterior según tu unidad y escala de impresión.</li>
+                                      <li><strong>Fit options:</strong> qué hacer cuando el texto no cabe entre las líneas de extensión. "Either text or arrows (best fit)" es la opción más versátil.</li>
+                                      <li><strong>Text placement:</strong> si el texto no cabe, colócalo sobre la línea de cota o dentro de las líneas de extensión.</li>
+                                    </ul>
+                                  </div>
+                                </div>
+
+                                <div class="lesson-step">
+                                  <span class="lesson-num">8</span>
+                                  <div class="lesson-body">
+                                    <h4>Establece como estilo actual</h4>
+                                    <p>Selecciona tu nuevo estilo en la lista y haz clic en <strong>"Set Current"</strong> (Establecer actual). Cierra el administrador. Todas las cotas que coloques ahora usarán tu estilo configurado.</p>
+                                  </div>
+                                </div>
+
+                                <!-- ====== TABLA RESUMEN DE VALORES TÍPICOS ====== -->
+                                <h3>Tabla resumen: valores típicos de una cota arquitectónica</h3>
+                                <p>Valores recomendados para que la cota se vea proporcional y limpia en el plano impreso:</p>
+
+                                <table class="table-cad">
+                                  <thead><tr><th>Parámetro</th><th>Valor típico (mm en plano)</th><th>Variable DIMSTYLE</th></tr></thead>
+                                  <tbody>
+                                    <tr><td>Altura del texto de cota</td><td>2.5 – 3.5 mm</td><td><code>dimtxt</code></td></tr>
+                                    <tr><td>Tamaño de flechas</td><td>1.5 – 2.5 mm</td><td><code>dimasz</code></td></tr>
+                                    <tr><td>Sobresalido de línea de extensión</td><td>1.25 – 2.5 mm</td><td><code>dimexe</code></td></tr>
+                                    <tr><td>Distancia al objeto (offset)</td><td>0.625 – 1.5 mm</td><td><code>dimexo</code></td></tr>
+                                    <tr><td>Espacio entre cotas apiladas</td><td>3.75 – 5 mm</td><td><code>dimdli</code></td></tr>
+                                    <tr><td>Separación texto-línea de cota</td><td>0.625 – 1 mm</td><td><code>dimgap</code></td></tr>
+                                  </tbody>
+                                </table>
+
+                                <div class="callout">
+                                  <span class="callout-title">¿Cómo sé si mis cotas están bien?</span>
+                                  <p>Imprime una prueba o exporta a PDF a la escala final. Mide con una regla física: el texto de la cota debe tener entre <strong>2.5 mm y 3.5 mm</strong> de alto. Si mide menos de 2 mm, aumenta DIMSCALE. Si mide más de 5 mm, disminúyelo.</p>
+                                </div>
+
+                                <!-- ====== EJEMPLO PRÁCTICO ====== -->
+                                <h3>Ejemplo práctico: configurar cotas para un plano en metros a 1:100</h3>
+                                <ol>
+                                  <li>Escribe <span class="cmd-inline">UNITS</span> y configura en <strong>Meters, Decimal, precisión 0.00</strong>.</li>
+                                  <li>Escribe <span class="cmd-inline">DIMSTYLE</span> → <strong>New</strong> → nombre: <code>METROS-100</code>.</li>
+                                  <li>En <strong>Lines</strong>: Extend beyond = <code>2.5</code>, Offset from origin = <code>1.25</code>.</li>
+                                  <li>En <strong>Symbols and Arrows</strong>: Architectural tick, Arrow size = <code>2.5</code>.</li>
+                                  <li>En <strong>Text</strong>: Text height = <code>3.5</code>, Offset = <code>1</code>.</li>
+                                  <li>En <strong>Primary Units</strong>: Decimal, Precision = <code>0.00</code>, Decimal separator = <code>.</code>.</li>
+                                  <li>En <strong>Fit</strong>: Overall scale = <code>25</code> (prueba con este valor primero).</li>
+                                  <li><strong>Set Current</strong> → Close.</li>
+                                  <li>Dibuja un rectángulo de 10 × 8 unidades (representa 10 m × 8 m).</li>
+                                  <li>Coloca una cota con <span class="cmd-inline">DIM</span>. Si el texto mide ~3 mm en pantalla y se ve legible, el valor es correcto. Si es gigante, baja DIMSCALE a <code>10</code>. Si es diminuto, súbelo a <code>50</code>.</li>
+                                </ol>
+
+                                <div class="callout">
+                                  <span class="callout-title">Consejo profesional</span>
+                                  Crea <strong>un estilo de cota por cada escala de impresión</strong> que uses (MI-50, MI-100, MI-200). Así solo cambias de estilo con el desplegable de la barra de propiedades y no tienes que reconfigurar cada vez.
+                                </div>
+
+                                <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+        </article>
+
+        <nav class="level-nav">
+          <a href="bloques.html">
+            <span class="nav-label">Anterior</span>
+            <span class="nav-title"><i class="bi bi-arrow-left"></i> Bloques y atributos</span>
+          </a>
+          <a href="texto.html" class="nav-next">
+            <span class="nav-label">Siguiente</span>
+            <span class="nav-title">Texto y tablas <i class="bi bi-arrow-right"></i></span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container container-xl">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <div class="brand-cad mb-2"><img class="brand-logo" src="../../assets/img/autocad-2.svg" alt="AutoCAD"><span>AutoCAD Guía</span></div>
+        <p data-i18n="footer.disclaimer">Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.levels">Niveles</h6>
+        <ul class="list-unstyled">
+          <li><a href="../nivel-1-fundamentos/index.html">Fundamentos</a></li>
+          <li><a href="../nivel-2-dibujo-2d/index.html">Dibujo 2D</a></li>
+          <li><a href="../nivel-3-organizacion/index.html">Organización</a></li>
+          <li><a href="../nivel-4-modelado-3d/index.html">Modelado 3D</a></li>
+          <li><a href="../nivel-5-avanzado/index.html">Experto</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.guide">Guía</h6>
+        <ul class="list-unstyled">
+          <li><a href="../comandos.html">Comandos</a></li>
+          <li><a href="../ejemplos-visuales.html">Ejemplos</a></li>
+          <li><a href="../trucos.html">Trucos</a></li>
+          <li><a href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
+          <li><a href="../recursos.html">Recursos</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.follow">Síguenos</h6>
+        <div class="d-flex gap-2">
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-5 mb-4" style="border-color:var(--border-soft)">
+    <p class="mb-0 small" data-i18n="footer.copyright">© 2026 Victor Apaza. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<div class="command-line-bar" id="cmdBar">
+  <div class="command-line-inner">
+    <span class="prompt-sign" data-i18n="ui.command">Comando:</span>
+    <span id="cmd-typed"></span><span class="cursor-blink"></span>
+    <button class="cl-close" id="cmdClose" title="Ocultar" data-i18n-title="ui.hide"><i class="bi bi-x-lg"></i></button>
+  </div>
+</div>
+
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Buscar en la guía" data-i18n-aria="ui.search">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="bi bi-search"></i>
+      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar" data-i18n-placeholder="ui.searchPlaceholder">
+      <kbd class="search-kbd">ESC</kbd>
+    </div>
+    <div class="search-results" id="globalSearchResults">
+      <div class="search-empty" data-i18n="ui.typeToSearch">Escribe al menos 2 caracteres para buscar...</div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+<script src="../../assets/js/i18n.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/animations.js"></script>
+<script src="../../assets/js/main.js"></script>
+
+</body>
+</html>

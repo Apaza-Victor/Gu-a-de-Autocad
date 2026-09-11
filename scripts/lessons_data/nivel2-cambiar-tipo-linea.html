@@ -1,0 +1,91 @@
+<p>Cambiar el <strong>tipo de línea</strong> de un objeto o de una capa es clave para diferenciar ejes auxiliares, líneas ocultas, contornos cortados y muros. Los tipos de línea de AutoCAD se cargan de los archivos <code>acad.lin</code>, <code>acadiso.lin</code> y <code>ltscale.lin</code>.</p>
+
+<h3>1. Cargar un tipo de línea nuevo</h3>
+
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Abre el Administrador de tipos de línea</h4>
+    <p>Escribe <span class="cmd-inline">LINETYPE</span> o <span class="key-inline">LT</span>, o ve a Inicio → Propiedades → el desplegable de "Tipo de línea" → Otros.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Carga el tipo deseado</h4>
+    <p>Pulsa <strong>Cargar…</strong>, elige el archivo <code>acadiso.lin</code> y marca los tipos que uses: <code>DASHED</code> (ocultas), <code>CENTER</code> (ejes), <code>PHANTOM</code> (contornos auxiliares), <code>DOT</code>, <code>HIDDEN</code>. Pulsa Aceptar.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Asigna a una capa</h4>
+    <p>En el Administrador de capas (<span class="cmd-inline">LA</span>) haz clic en "Linetype" de la capa y elige el tipo cargado. Todos los objetos ByLayer de esa capa lo heredan.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">4</span>
+  <div class="lesson-body">
+    <h4>Asigna a un objeto concreto</h4>
+    <p>Selecciona el/los objeto(s), abre <span class="cmd-inline">PROPERTIES</span> (<span class="key-inline">Ctrl+1</span>) y en "Tipo de línea" elige el tipo (mejor ByLayer si es posible).</p>
+  </div>
+</div>
+
+<h3>2. Hacer que el tipo de línea se vea correcto (escala de línea)</h3>
+<p>El "no se me ve la línea punteada" es el problema número uno. La causa casi siempre es la <strong>escala del tipo de línea</strong> (variable <span class="cmd-inline">LTSCALE</span>): si es muy pequeña o muy grande, las líneas parecen continuas o colapsadas.</p>
+
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Ajusta la escala global</h4>
+    <p>Escribe <span class="cmd-inline">LTSCALE</span> y prueba un valor. En dibujos 2D a escala (metros con mm), un 0.1–1 suele funcionar. Si ves líneas continuas, baja; si las ve todo tronchado de puntos, súbela.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Escala por objeto (papel)</h4>
+    <p>Cuando trabajas en el espacio papel con vistas escaladas, activa <span class="cmd-inline">PSLTSCALE</span> = 1: así el tamaño de los guiones se ajusta según el factor de escala de la vista y se ven igual en pantalla y papel.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Escala individual</h4>
+    <p>Si un solo objeto necesita otra escala, selecciónalo y en <span class="cmd-inline">PROPERTIES</span> → "Escala del tipo de línea" escribe un factor propio (es una clave <strong>CELTSCALE</strong> por objeto).</p>
+  </div>
+</div>
+
+<h3>3. Crear un tipo de línea personalizado</h3>
+<p>Puedes crear tu propia línea con texto (útiles para ejes tipo "A" repetida): guarda un <code>.lin</code> con este formato en una carpeta de tu empresa:</p>
+
+<div class="callout">
+  <span class="callout-title">Formato .lin</span>
+  <p><code>*NOMBRE, Descripción de la línea</code><br>
+  <code>A, 5, -2, ["TEXTO", STANDARD, S=1, X=-0.5, Y=-0.5], -2</code></p>
+  <p><code>A</code> es alineación; <code>5</code> = 5 unidades firmes; <code>-2</code> = 2 unidades en blanco; el bloque <code>["TEXTO",…]</code> inserta texto cada tramo.</p>
+</div>
+
+<p>Luego cárgalo con <span class="cmd-inline">LINETYPE</span> → Cargar → Archivo → busca tu <code>.lin</code> personal.</p>
+
+<div class="table-scroll">
+<table class="table-cad">
+  <thead><tr><th>Comando</th><th>Qué hace</th><th>Atajo</th></tr></thead>
+  <tbody>
+    <tr><td><span class="cmd-inline">LINETYPE</span></td><td>Abre el Administrador de tipos de línea</td><td><span class="key-inline">LT</span></td></tr>
+    <tr><td><span class="cmd-inline">LTSCALE</span></td><td>Escala global de todos los tipos de línea</td><td><span class="key-inline">LTS</span></td></tr>
+    <tr><td><span class="cmd-inline">PSLTSCALE</span></td><td>Ajusta la escala de los tipos de línea al papel</td><td>—</td></tr>
+    <tr><td><span class="cmd-inline">-LINETYPE</span></td><td>Versión de línea de comandos (cargar, set, ?)</td><td>—</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout warn">
+  <span class="callout-title">Atención</span>
+  Los tipos de línea <strong>no se ven en la impresión física por defecto</strong> si el estilo de trazado los sobreescribe. Revisa que el color correspondiente en tu tabla de trazo no fuerce "Continua". El tipo de línea se respeta siempre que la pluma del color no lo anule.
+</div>

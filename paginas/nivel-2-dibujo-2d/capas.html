@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capas (Layers) · Nivel 2 — AutoCAD Guía</title>
+<link rel="canonical" href="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-2-dibujo-2d/capas.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-2-dibujo-2d/capas.html">
+<meta property="og:site_name" content="AutoCAD Guía">
+<meta property="og:title" content="Capas (Layers) · Nivel 2 — AutoCAD Guía">
+<meta property="og:description" content="Organizar el dibujo en capas: crear, nombrar, controlar visibilidad y trabajar con ByLayer.">
+<meta property="og:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Capas (Layers) · Nivel 2 — AutoCAD Guía">
+<meta name="twitter:description" content="Organizar el dibujo en capas: crear, nombrar, controlar visibilidad y trabajar con ByLayer.">
+<meta name="twitter:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="description" content="Organizar el dibujo en capas: crear, nombrar, controlar visibilidad y trabajar con ByLayer.">
+
+<link rel="icon" type="image/svg+xml" href="../../assets/img/autocad-2.svg">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../../assets/css/responsive.css">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Nivel · Dibujo 2D en AutoCAD",
+  "description": "Geometría, edición, precisión, capas, bloques, cotas, texto, hatch y splines.",
+  "provider": {
+    "@type": "Organization",
+    "name": "AutoCAD Guía",
+    "sameAs": "https://apaza-victor.github.io/Gu-a-de-Autocad/"
+  },
+  "inLanguage": "es",
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "online",
+    "learningResourceType": "tutorial",
+    "inLanguage": "es"
+  }
+}
+  </script>
+</head>
+
+<body>
+
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+<nav class="navbar navbar-cad navbar-expand-lg">
+  <div class="container container-xl">
+    <a class="navbar-brand brand-cad" href="../../index.html">
+      <img class="brand-logo" src="../../assets/img/autocad-2.svg" alt="AutoCAD">
+      <span>AutoCAD<small class="d-block" data-i18n-html="brand.sub">Guía · Teoría &amp; Práctica</small></span>
+    </a>
+    <div class="d-flex align-items-center gap-2 nav-actions order-lg-last">
+      <button class="icon-btn" id="searchToggle" title="Buscar" data-i18n-title="ui.search"><i class="bi bi-search"></i></button>
+      <button class="icon-btn" id="themeToggle" title="Cambiar tema" data-i18n-title="ui.theme"><i class="bi bi-moon-stars"></i></button>
+      <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
+        <i class="bi bi-list fs-4"></i>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navCad">
+      <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../../index.html" data-i18n="nav.home">Inicio</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-cad dropdown-toggle active" href="#" data-bs-toggle="dropdown" data-i18n="nav.levels">Niveles</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="../nivel-1-fundamentos/index.html">Nivel 1 · Fundamentos</a></li>
+            <li><a class="dropdown-item active" href="../nivel-2-dibujo-2d/index.html">Nivel 2 · Dibujo 2D</a></li>
+            <li><a class="dropdown-item" href="../nivel-3-organizacion/index.html">Nivel 3 · Organización</a></li>
+            <li><a class="dropdown-item" href="../nivel-4-modelado-3d/index.html">Nivel 4 · Modelado 3D</a></li>
+            <li><a class="dropdown-item" href="../nivel-5-avanzado/index.html">Nivel 5 · Experto</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../comandos.html" data-i18n="nav.commands">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../ejemplos-visuales.html" data-i18n="nav.visual">Visuales</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../trucos.html" data-i18n="nav.tips">Trucos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../recursos.html" data-i18n="nav.resources">Recursos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../faq.html" data-i18n="nav.faq">FAQ</a></li>
+      </ul>
+
+      <div class="d-flex align-items-center gap-2 nav-actions-menu ms-lg-auto">
+        <span class="coord-readout d-none d-lg-inline-flex">X: <span id="coordX">000.00</span>&nbsp; Y: <span id="coordY">000.00</span></span>
+        <button class="lang-toggle" id="langToggle" title="Cambiar idioma" data-i18n-title="ui.lang">
+          <i class="bi bi-translate lang-toggle-flag"></i>
+          <span class="lang-toggle-text">EN</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header" id="main-content">
+  <div class="container container-xl">
+    <p class="crumb"><a href="../../index.html">Inicio</a> / <a href="../../index.html#niveles">Niveles</a> / <a href="index.html">Dibujo 2D</a> / Tema 5</p>
+    <span class="eyebrow" data-i18n="lvl2.eyebrow">Nivel 02 · Básico–Intermedio</span>
+    <h1>Capas (Layers)</h1>
+    <div class="level-progress-bar" data-level-prefix="nivel2" data-level-total="27"><div class="fill"></div></div>
+    <p class="level-progress-label">0 de 27 temas completados · 0%</p>
+  </div>
+</header>
+
+<div class="content-layout">
+  <div class="container container-xl">
+    <div class="row">
+
+      <aside class="col-lg-3 mb-5 mb-lg-0">
+        <div class="toc-sidebar">
+          <h6 data-i18n="ui.inThisLevel">En este nivel</h6>
+          <ul class="toc-list">
+            <li><a href="dibujo.html" data-toc="nivel2-dibujo"><span class="toc-check"></span> Herramientas de dibujo</a></li>
+            <li><a href="modificacion.html" data-toc="nivel2-modificacion"><span class="toc-check"></span> Herramientas de modificación</a></li>
+            <li><a href="matrices.html" data-toc="nivel2-matrices"><span class="toc-check"></span> Matrices (ARRAY)</a></li>
+            <li><a href="precision.html" data-toc="nivel2-precision"><span class="toc-check"></span> Precisión: referencias y rastreo</a></li>
+            <li><a href="capas.html" data-toc="nivel2-capas"><span class="toc-check"></span> Capas (Layers)</a></li>
+            <li><a href="bloques.html" data-toc="nivel2-bloques"><span class="toc-check"></span> Bloques y atributos</a></li>
+            <li><a href="acotacion.html" data-toc="nivel2-acotacion"><span class="toc-check"></span> Acotación</a></li>
+            <li><a href="texto.html" data-toc="nivel2-texto"><span class="toc-check"></span> Texto y tablas</a></li>
+            <li><a href="hatch.html" data-toc="nivel2-hatch"><span class="toc-check"></span> Sombreado (Hatch)</a></li>
+            <li><a href="seleccion.html" data-toc="nivel2-seleccion"><span class="toc-check"></span> Selección de objetos</a></li>
+            <li><a href="grips.html" data-toc="nivel2-grips"><span class="toc-check"></span> Pinzamientos (GRIPS)</a></li>
+            <li><a href="lineas.html" data-toc="nivel2-lineas"><span class="toc-check"></span> Tipos de línea</a></li>
+            <li><a href="puntos.html" data-toc="nivel2-puntos"><span class="toc-check"></span> Puntos y división</a></li>
+            <li><a href="auxiliares.html" data-toc="nivel2-auxiliares"><span class="toc-check"></span> Geometría auxiliar</a></li>
+            <li><a href="consulta.html" data-toc="nivel2-consulta"><span class="toc-check"></span> Medición y verificación</a></li>
+            <li><a href="propiedades.html" data-toc="nivel2-propiedades"><span class="toc-check"></span> Propiedades de objeto</a></li>
+            <li><a href="pedit.html" data-toc="nivel2-pedit"><span class="toc-check"></span> Edición de polilíneas</a></li>
+            <li><a href="splines.html" data-toc="nivel2-splines"><span class="toc-check"></span> Splines y curvas</a></li>
+            <li><a href="index.html#autoevaluacion"><span class="toc-check"></span> Autoevaluación</a></li>
+          </ul>
+          <hr style="border-color:var(--border-soft)" class="my-4">
+          <a href="index.html" class="btn-cad-outline w-100 text-center d-block"><i class="bi bi-arrow-left"></i> Volver al índice</a>
+        </div>
+      </aside>
+
+      <div class="col-lg-9">
+        <article class="content-article">
+
+          <section id="capas" data-topic="nivel2-capas">
+                                <h2><span class="sec-num">5</span><span data-i18n="lvl2.s4.title">Capas (Layers)</span></h2>
+                                <p>Una capa es un "acetato" transparente donde se agrupan objetos con propiedades comunes: mismo color, mismo tipo de línea, mismo grosor. Se administran desde el <strong>Administrador de propiedades de capas</strong> (comando <span class="cmd-inline">LAYER</span> / <span class="key-inline">LA</span>).</p>
+
+                                <div class="callout">
+                                  <span class="callout-title">Regla de oro</span>
+                                  Dibuja <strong>siempre</strong> en la capa correspondiente al elemento (muros en "Muros", cotas en "Cotas") y nunca cambies el color manualmente objeto por objeto. Así, si necesitas ocultar todas las cotas, basta con apagar una sola capa.
+                                </div>
+
+                                <!-- ====== PROPIEDADES DE CADA CAPA ====== -->
+                                <h3>Propiedades que puede tener cada capa</h3>
+                                <table class="table-cad">
+                                  <thead><tr><th>Propiedad</th><th>Qué controla</th><th>Valores típicos</th></tr></thead>
+                                  <tbody>
+                                    <tr><td><strong>Color</strong></td><td>Identifica visualmente la capa. En impresión por color, también controla el grosor de línea.</td><td>Rojo (1), Amarillo (2), Verde (3), Cian (4), Azul (5), Magenta (6)</td></tr>
+                                    <tr><td><strong>Tipo de línea</strong></td><td>Cómo se ve la línea: continua, discontinua, de eje, punteada.</td><td>Continuous, DASHED, CENTER, DOTTED, PHANTOM</td></tr>
+                                    <tr><td><strong>Grosor de línea</strong></td><td>Espesor con que se imprime esa capa.</td><td>0.15 mm (cotas), 0.25 mm (texto), 0.50 mm (muros)</td></tr>
+                                    <tr><td><strong>Transparency</strong></td><td>Opacidad de los objetos de esa capa (0 = opaco, 90 = casi invisible).</td><td>0 (por defecto), 50–70 para rellenos de referencia</td></tr>
+                                    <tr><td><strong>Estado</strong></td><td>Si la capa está visible, congelada, inmovilizada o no se imprime.</td><td>On/Off, Frozen, Locked, No Plot</td></tr>
+                                  </tbody>
+                                </table>
+
+                                <!-- ====== TUTORIAL LAYER PASO A PASO ====== -->
+                                <h3>Tutorial: crear capas paso a paso</h3>
+
+                                <div class="lesson-step">
+                                  <span class="lesson-num">1</span>
+                                  <div class="lesson-body">
+                                    <h4>Abre el Administrador de capas</h4>
+                                    <p>Escribe <span class="cmd-inline">LAYER</span> o <span class="key-inline">LA</span> en la línea de comandos y presiona Enter. Se abre el cuadro "Layer Properties Manager". También puedes acceder desde <strong>Inicio → Capas → Capa</strong> en la cinta de opciones.</p>
+                                  </div>
+                                </div>
+
+                                <div class="lesson-step">
+                                  <span class="lesson-num">2</span>
+                                  <div class="lesson-body">
+                                    <h4>Crea una capa nueva</h4>
+                                    <p>Haz clic en el ícono de "Nueva capa" (hoja con estrella, o presiona <span class="key-inline">Alt+N</span>). Aparece una capa llamada "Layer1" con propiedades por defecto.</p>
+                                  </div>
+                                </div>
+
+                                <div class="lesson-step">
+                                  <span class="lesson-num">3</span>
+                                  <div class="lesson-body">
+                                    <h4>Nombra la capa</h4>
+                                    <p>Escribe directamente el nombre. Usa la nomenclatura correcta (ver tabla más abajo). Ejemplo: <code>A-Muros</code>, <code>A-Cotas</code>, <code>S-Ejes</code>.</p>
+                                  </div>
+                                </div>
+
+                                <div class="lesson-step">
+                                  <span class="lesson-num">4</span>
+                                  <div class="lesson-body">
+                                    <h4>Asigna el color</h4>
+                                    <p>Haz clic en el cuadrado de color de esa capa. Se abre el selector de colores. Elige uno de los 7 colores estándar de AutoCAD o un color índice. Los colores 1–7 se imprimen con grosores predefinidos en muchos estándares.</p>
+                                  </div>
+                                </div>
+
+                                <div class="lesson-step">
+                                  <span class="lesson-num">5</span>
+                                  <div class="lesson-body">
+                                    <h4>Asigna el tipo de línea</h4>
+                                    <p>Haz clic en la columna "Linetype". Si el tipo que necesitas no aparece, haz clic en "Load" para cargarlo desde el archivo <strong>acad.lin</strong>. Los más usados:</p>
+                                    <ul>
+                                      <li><strong>Continuous:</strong> muros, contornos, cotas</li>
+                                      <li><strong>CENTER:</strong> ejes de simetría</li>
+                                      <li><strong>DASHED:</strong> líneas ocultas, bordes no visibles</li>
+                                      <li><strong>DOTTED:</strong> líneas de referencia</li>
+                                    </ul>
+                                  </div>
+                                </div>
+
+                                <div class="lesson-step">
+                                  <span class="lesson-num">6</span>
+                                  <div class="lesson-body">
+                                    <h4>Asigna el grosor de línea</h4>
+                                    <p>Haz clic en la columna "Lineweight". Se abre un cuadro con los grosores disponibles. Elige el grosor adecuado según la función de la capa (ver tabla de recomendaciones más abajo).</p>
+                                  </div>
+                                </div>
+
+                                <div class="lesson-step">
+                                  <span class="lesson-num">7</span>
+                                  <div class="lesson-body">
+                                    <h4>Repite para todas las capas necesarias</h4>
+                                    <p>Crea todas las capas de tu proyecto antes de empezar a dibujar. Repite los pasos 2–6 para cada una.</p>
+                                  </div>
+                                </div>
+
+                                <!-- ====== NOMENCLATURA DE CAPAS ====== -->
+                                <h3>Nomenclatura de capas — sistema organizado</h3>
+                                <p>Un buen sistema de nombres te permite encontrar y administrar capas rápidamente. La convención más usada en arquitectura e ingeniería civil es un <strong>prefijo de disciplina</strong> seguido de un guion y el nombre del elemento:</p>
+
+                                <table class="table-cad">
+                                  <thead><tr><th>Prefijo</th><th>Disciplina</th><th>Ejemplo</th></tr></thead>
+                                  <tbody>
+                                    <tr><td><code>A-</code></td><td>Arquitectura</td><td>A-Muros, A-Puertas, A-Ventanas</td></tr>
+                                    <tr><td><code>S-</code></td><td>Estructura</td><td>S-Vigas, S-Pilares, S-Hormigón</td></tr>
+                                    <tr><td><code>E-</code></td><td>Eléctrico</td><td>E-Iluminación, E-Tomas</td></tr>
+                                    <tr><td><code>I-</code></td><td>Instalaciones sanitarias</td><td>I-Agua, I-Drenaje, I-Gas</td></tr>
+                                    <tr><td><code>M-</code></td><td>Mecánica / HVAC</td><td>M-Ductos, M-Equipos</td></tr>
+                                    <tr><td><code>C-</code></td><td>Civil / Topografía</td><td>C-Terreno, C-Vial, C-Drenaje</td></tr>
+                                  </tbody>
+                                </table>
+
+                                <!-- ====== CAPAS RECOMENDADAS POR DISCIPLINA ====== -->
+                                <h3>Capas recomendadas — arquitectura en milímetros</h3>
+                                <table class="table-cad">
+                                  <thead><tr><th>Capa</th><th>Color</th><th>Tipo de línea</th><th>Grosor</th><th>Uso</th></tr></thead>
+                                  <tbody>
+                                    <tr><td><code>A-Ejes</code></td><td><span style="color:var(--layer-red)">■</span> Rojo (1)</td><td>CENTER</td><td>0.15 mm</td><td>Ejes de muros, ejes de ventanas</td></tr>
+                                    <tr><td><code>A-Muros</code></td><td><span style="color:var(--layer-yellow)">■</span> Amarillo (2)</td><td>Continuous</td><td>0.50 mm</td><td>Muros y elementos constructivos</td></tr>
+                                    <tr><td><code>A-Muros-Relleno</code></td><td><span style="color:var(--layer-yellow)">■</span> Amarillo (2)</td><td>Continuous</td><td>0.15 mm</td><td>Relleno de muros en corte</td></tr>
+                                    <tr><td><code>A-Puertas</code></td><td><span style="color:var(--layer-cyan)">■</span> Cian (4)</td><td>Continuous</td><td>0.25 mm</td><td>Hojas de puertas y marcos</td></tr>
+                                    <tr><td><code>A-Ventanas</code></td><td><span style="color:var(--layer-cyan)">■</span> Cian (4)</td><td>Continuous</td><td>0.25 mm</td><td>Ventanas y marcos</td></tr>
+                                    <tr><td><code>A-Cotas</code></td><td><span style="color:var(--layer-green)">■</span> Verde (3)</td><td>Continuous</td><td>0.15 mm</td><td>Acotaciones y cotas</td></tr>
+                                    <tr><td><code>A-Textos</code></td><td><span style="color:var(--layer-cyan)">■</span> Cian (4)</td><td>Continuous</td><td>0.25 mm</td><td>Textos, etiquetas, nombres de ambientes</td></tr>
+                                    <tr><td><code>A-Mobiliario</code></td><td><span style="color:var(--layer-magenta)">■</span> Magenta (6)</td><td>Continuous</td><td>0.15 mm</td><td>Muebles, equipamiento</td></tr>
+                                    <tr><td><code>A-Auxiliar</code></td><td><span style="color:var(--layer-magenta)">■</span> Magenta (6)</td><td>DASHED</td><td>0.15 mm</td><td>Líneas de construcción temporales</td></tr>
+                                    <tr><td><code>A-Hatch</code></td><td><span style="color:var(--layer-green)">■</span> Verde (3)</td><td>Continuous</td><td>0.05 mm</td><td>Sombreados y rellenos</td></tr>
+                                  </tbody>
+                                </table>
+
+                                <div class="callout">
+                                  <span class="callout-title">Capa 0: nunca dibujes en ella</span>
+                                  La capa <strong>0</strong> es especial: se usa exclusivamente para crear <strong>bloques</strong>. Si dibujas en la capa 0, los objetos heredarán las propiedades de la capa donde se inserte el bloque, lo cual puede causar confusión. <strong>Regla simple: crea tus propias capas y no toques la 0.</strong>
+                                </div>
+
+                                <!-- ====== BYLAYER ====== -->
+                                <h3>Propiedad ByLayer — la clave del orden</h3>
+                                <p>Cuando dibujas, el color, tipo de línea y grosor deben estar en <strong>"ByLayer"</strong> (Por Capa). Esto significa que el objeto hereda automáticamente las propiedades de la capa a la que pertenece.</p>
+
+                                <table class="table-cad">
+                                  <thead><tr><th>Valor</th><th>Qué significa</th><th>Cuándo usarlo</th></tr></thead>
+                                  <tbody>
+                                    <tr><td><strong>ByLayer</strong></td><td>El objeto toma el color/tipo/grosor de su capa padre.</td><td><strong>Siempre</strong> — esta es la práctica correcta.</td></tr>
+                                    <tr><td><strong>ByBlock</strong></td><td>El objeto hereda las propiedades del bloque donde está contenido.</td><td>Solo al crear bloques que deben cambiar de color al insertarse.</td></tr>
+                                    <tr><td><strong>Color/Type específico</strong></td><td>El objeto tiene una propiedad fija que ignora la capa.</td><td><strong>Nunca</strong> en dibujo normal — dificulta la edición y organización.</td></tr>
+                                  </tbody>
+                                </table>
+
+                                <div class="callout warn">
+                                  <span class="callout-title">Error común</span>
+                                  Si dibujas una línea roja directamente (color fijo 1) en la capa "A-Muros" (amarilla), la línea aparecerá roja aunque la capa sea amarilla. Esto rompe la organización: al cambiar el color de la capa, esa línea no cambiará. <strong>Siempre usa ByLayer.</strong>
+                                </div>
+
+                                <!-- ====== ESTADOS DE CAPA ====== -->
+                                <h3>Estados de capa — control de visibilidad</h3>
+                                <table class="table-cad">
+                                  <thead><tr><th>Estado</th><th>Icono en el administrador</th><th>Qué hace</th><th>Atajo rápido</th></tr></thead>
+                                  <tbody>
+                                    <tr><td><strong>On / Off</strong></td><td>💡 bombilla</td><td>Apaga la capa: los objetos no se ven ni se seleccionan. Al encenderla, todo vuelve.</td><td><span class="cmd-inline">LAYOFF</span> / <span class="cmd-inline">LAYON</span></td></tr>
+                                    <tr><td><strong>Freeze / Thaw</strong></td><td>❄️ copo de nieve</td><td>Congela: como Off pero AutoCAD no calcula los objetos al regenerar. Mejor rendimiento en archivos grandes.</td><td><span class="cmd-inline">LAYFRZ</span> / <span class="cmd-inline">LAYTHW</span></td></tr>
+                                    <tr><td><strong>Lock / Unlock</strong></td><td>🔒 candado</td><td>Inmoviliza: los objetos se ven pero no se pueden editar (seleccionar, mover, borrar).</td><td><span class="cmd-inline">LAYLCK</span> / <span class="cmd-inline">LAYULK</span></td></tr>
+                                    <tr><td><strong>No Plot</strong></td><td>🖨️ impresora con X</td><td>La capa se ve en pantalla pero no se imprime. Ideal para capas auxiliares y de referencia.</td><td>Desde el administrador de capas</td></tr>
+                                  </tbody>
+                                </table>
+
+                                <h3>Comandos rápidos de capa</h3>
+                                <table class="table-cad">
+                                  <thead><tr><th>Comando</th><th>Atajo</th><th>Qué hace</th></tr></thead>
+                                  <tbody>
+                                    <tr><td><span class="cmd-inline">LAYISO</span></td><td>—</td><td>Aísla: apaga todas las capas excepto la del objeto que selecciones. Ideal para trabajar sin distracciones.</td></tr>
+                                    <tr><td><span class="cmd-inline">LAYUNISO</span></td><td>—</td><td>Restaura el estado anterior de capas (después de LAYISO).</td></tr>
+                                    <tr><td><span class="cmd-inline">LAYMCH</span></td><td>—</td><td>Mueve objetos seleccionados a la capa que elijas después.</td></tr>
+                                    <tr><td><span class="cmd-inline">LAYCUR</span></td><td>—</td><td>Mueve objetos seleccionados a la capa actual (la activa).</td></tr>
+                                    <tr><td><span class="cmd-inline">LAYDEL</span></td><td>—</td><td>Elimina una capa y todos sus objetos. <strong>Usar con cuidado.</strong></td></tr>
+                                    <tr><td><span class="cmd-inline">MATCHPROP</span></td><td><span class="key-inline">MA</span></td><td>Copia propiedades (incluida la capa) de un objeto a otros.</td></tr>
+                                  </tbody>
+                                </table>
+
+                                <!-- ====== EJEMPLO PRÁCTICO ====== -->
+                                <h3>Ejemplo práctico: crear el set de capas de un proyecto arquitectónico</h3>
+                                <ol>
+                                  <li>Escribe <span class="cmd-inline">LAYER</span> y presiona Enter.</li>
+                                  <li>Haz clic en "Nueva capa" 10 veces para crear 10 capas.</li>
+                                  <li>Renombra cada una con los nombres de la tabla anterior (A-Ejes, A-Muros, A-Cotas, etc.).</li>
+                                  <li>Para cada capa, haz clic en su casilla de color y asigna el color correspondiente.</li>
+                                  <li>Para A-Ejes, haz clic en "Linetype" → "Load" → selecciona <strong>CENTER</strong> → acepta → asigna CENTER a la capa.</li>
+                                  <li>Para A-Auxiliar, carga el tipo <strong>DASHED</strong> y asígnalo.</li>
+                                  <li>Para cada capa, haz clic en "Lineweight" y asigna el grosor de la tabla.</li>
+                                  <li>Cierra el administrador. Activa la capa "A-Muros" como capa actual (haz doble clic en ella).</li>
+                                  <li>Dibuja tu primer muro: verás que hereda el color amarillo, línea continua y grosor 0.50 mm automáticamente.</li>
+                                </ol>
+
+                                <div class="callout">
+                                  <span class="callout-title">Consejo profesional</span>
+                                  Guarda tu set de capas en una <strong>plantilla (.DWT)</strong> (ver Nivel 1, Sección 5). Así cada proyecto nuevo ya viene con todas las capas configuradas y no tienes que repetir este proceso.
+                                </div>
+
+                                <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+        </article>
+
+        <nav class="level-nav">
+          <a href="precision.html">
+            <span class="nav-label">Anterior</span>
+            <span class="nav-title"><i class="bi bi-arrow-left"></i> Precisión: referencias y rastreo</span>
+          </a>
+          <a href="bloques.html" class="nav-next">
+            <span class="nav-label">Siguiente</span>
+            <span class="nav-title">Bloques y atributos <i class="bi bi-arrow-right"></i></span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container container-xl">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <div class="brand-cad mb-2"><img class="brand-logo" src="../../assets/img/autocad-2.svg" alt="AutoCAD"><span>AutoCAD Guía</span></div>
+        <p data-i18n="footer.disclaimer">Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.levels">Niveles</h6>
+        <ul class="list-unstyled">
+          <li><a href="../nivel-1-fundamentos/index.html">Fundamentos</a></li>
+          <li><a href="../nivel-2-dibujo-2d/index.html">Dibujo 2D</a></li>
+          <li><a href="../nivel-3-organizacion/index.html">Organización</a></li>
+          <li><a href="../nivel-4-modelado-3d/index.html">Modelado 3D</a></li>
+          <li><a href="../nivel-5-avanzado/index.html">Experto</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.guide">Guía</h6>
+        <ul class="list-unstyled">
+          <li><a href="../comandos.html">Comandos</a></li>
+          <li><a href="../ejemplos-visuales.html">Ejemplos</a></li>
+          <li><a href="../trucos.html">Trucos</a></li>
+          <li><a href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
+          <li><a href="../recursos.html">Recursos</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.follow">Síguenos</h6>
+        <div class="d-flex gap-2">
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-5 mb-4" style="border-color:var(--border-soft)">
+    <p class="mb-0 small" data-i18n="footer.copyright">© 2026 Victor Apaza. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<div class="command-line-bar" id="cmdBar">
+  <div class="command-line-inner">
+    <span class="prompt-sign" data-i18n="ui.command">Comando:</span>
+    <span id="cmd-typed"></span><span class="cursor-blink"></span>
+    <button class="cl-close" id="cmdClose" title="Ocultar" data-i18n-title="ui.hide"><i class="bi bi-x-lg"></i></button>
+  </div>
+</div>
+
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Buscar en la guía" data-i18n-aria="ui.search">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="bi bi-search"></i>
+      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar" data-i18n-placeholder="ui.searchPlaceholder">
+      <kbd class="search-kbd">ESC</kbd>
+    </div>
+    <div class="search-results" id="globalSearchResults">
+      <div class="search-empty" data-i18n="ui.typeToSearch">Escribe al menos 2 caracteres para buscar...</div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+<script src="../../assets/js/i18n.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/animations.js"></script>
+<script src="../../assets/js/main.js"></script>
+
+</body>
+</html>

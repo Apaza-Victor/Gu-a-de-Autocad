@@ -858,27 +858,29 @@ kbd{
 .level-nav{
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
-  margin-top: 2rem;
-  padding-top: 2rem;
+  align-items: center;
+  gap: .6rem;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
   border-top: 1px solid var(--border-soft);
 }
 .level-nav a{
   display: flex;
   flex-direction: column;
-  gap: .2rem;
-  padding: 1rem 1.2rem;
+  gap: .1rem;
+  padding: .45rem .75rem;
   background: var(--bg-panel);
   border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  flex: 1;
+  border-radius: var(--radius-sm);
+  flex: 0 0 auto;
+  max-width: 58%;
   transition: all .2s ease;
 }
 .level-nav a:hover{
   border-color: var(--cyan);
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
-.level-nav .nav-next{ text-align: right; }
+.level-nav .nav-next{ text-align: right; margin-left: auto; }
 .nav-label{
   font-family: var(--font-display);
   font-size: .65rem;
@@ -888,7 +890,7 @@ kbd{
 }
 .nav-title{
   font-family: var(--font-display);
-  font-size: .88rem;
+  font-size: .8rem;
   font-weight: 700;
   color: var(--text);
 }
@@ -1927,6 +1929,56 @@ code[class*="language-"]{
   color: var(--cyan);
 }
 .quiz-opt:focus-visible{ outline: 2px solid var(--cyan); outline-offset: 2px; }
+
+/* ---------- Quiz colapsable (accordion, contraído por defecto) ---------- */
+.quiz-section{
+  padding: 0;
+  overflow: hidden;
+}
+.quiz-toggle{
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  padding: 1.1rem 1.4rem;
+  cursor: pointer;
+  color: var(--text);
+  font-family: var(--font-display);
+  transition: background .15s ease;
+}
+.quiz-toggle:hover{ background: var(--bg-panel-2); }
+.quiz-toggle:focus-visible{ outline: 2px solid var(--cyan); outline-offset: -2px; border-radius: var(--radius-lg); }
+.quiz-toggle-icon{
+  flex-shrink: 0;
+  width: 32px; height: 32px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: var(--cyan-dim);
+  color: var(--cyan);
+  font-size: .9rem;
+  transition: transform .3s ease;
+}
+.quiz-section.open .quiz-toggle-icon{ transform: rotate(180deg); }
+.quiz-toggle-title-main{
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+.quiz-toggle-title-sub{
+  display: block;
+  font-size: .76rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-top: .15rem;
+}
+.quiz-collapse{
+  display: none;
+  padding: .2rem 1.4rem 1.6rem;
+}
+.quiz-section.open .quiz-collapse{ display: block; }
 
 /* ---------- Mapa interactivo de la interfaz ---------- */
 .interface-map{

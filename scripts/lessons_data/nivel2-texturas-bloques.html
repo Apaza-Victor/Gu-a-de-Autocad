@@ -1,0 +1,85 @@
+<p>Añadir una textura de imagen a un bloque combina dos mundos: la precisión vectorial del dibujo y la riqueza visual de una foto. Sirve para hacer ver "madera", "hormigón" o "césped" a mópedir muebles y fachadas, tanto en 2D como en render.</p>
+
+<h3>1. Insertar una imagen de textura en el dibujo</h3>
+<p>La textura se adjunta como <strong>imagen externa</strong> y luego se recorta y orienta sobre el bloque:</p>
+
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Adjunta la imagen</h4>
+    <p>Escribe <span class="cmd-inline">IMAGEATTACH</span> (<span class="key-inline">IM</span>) para adjuntar la textura. Elige el archivo de imagen (JPG o PNG). AutoCAD la coloca con un punto de inserción y una escala.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Colócala sobre el bloque</h4>
+    <p>Usa <span class="cmd-inline">MOVE</span> y <span class="cmd-inline">SCALE</span> para superponer la imagen sobre la silueta del bloque. La imagen se recorta con <span class="cmd-inline">IMAGECLIP</span>.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">3</span>
+  <div class="lesson-body">
+    <h4>Recorta el exceso</h4>
+    <p>Con la imagen seleccionada, escribe <span class="cmd-inline">IMAGECLIP</span> y dibuja un rectángulo que deje solo la parte útil (por ejemplo el tablero de la mesa).</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">4</span>
+  <div class="lesson-body">
+    <h4>Transparencia para fondos</h4>
+    <p>Si la imagen tiene fondo, usa <span class="cmd-inline">IMAGEFRAME</span> = 2 (o 0) para ocultar el marco al trazar, y <span class="cmd-inline">TRANSPARENCY</span> para imágenes PNG con canal alfa.</p>
+  </div>
+</div>
+
+<h3>2. Hacer que la textura forme parte del bloque</h3>
+<p>Para que la imagen viaje con el bloque (por ejemplo, al insertar el bloque en otro archivo):</p>
+
+<div class="lesson-step">
+  <span class="lesson-num">1</span>
+  <div class="lesson-body">
+    <h4>Crea el bloque con todo</h4>
+    <p>Ejecuta <span class="cmd-inline">BLOCK</span> (<span class="key-inline">B</span>), nómbralo y selecciona <strong>los vectores más la imagen</strong>. Así la textura queda dentro de la definición.</p>
+  </div>
+</div>
+
+<div class="lesson-step">
+  <span class="lesson-num">2</span>
+  <div class="lesson-body">
+    <h4>Aviso de dependencias</h4>
+    <p>Si la imagen se borra o se mueve de carpeta, el bloque mostrará "imagen no encontrada". Para viajar seguro, guarda la imagen junto al archivo o usa el asistente <span class="cmd-inline">ETRANSMIT</span>.</p>
+  </div>
+</div>
+
+<h3>3. Texturas de material para render (nivel 4)</h3>
+<p>Para que el bloque se vea con material realista en vistas 3D y render:</p>
+<ul>
+  <li>Usa la pestaña <strong>Render → Materiales</strong> (o <span class="cmd-inline">MATERIALS</span>) y crea un material nuevo.</li>
+  <li>En "Imagen de textura" adjunta el mismo archivo de imagen.</li>
+  <li>Arrastra el material sobre la cara del objeto o asígnalo por capa.</li>
+  <li>Aplica <span class="cmd-inline">SOLIDEDIT</span> → "Cara" → "Material" para pegarlo a una cara concreta.</li>
+</ul>
+
+<h3>4. Texturas desde bloques dinámicos personalizados</h3>
+<p>También puedes usar <strong>bloques 2D con relleno</strong>: dentro del Editor de bloques (<span class="cmd-inline">BEDIT</span>), crea un sombreado solido (<span class="cmd-inline">HATCH</span> → tipo Sólido) con color claro y encima superpone la imagen recortada. El resultado se comporta como una lámina: se mueve, rota y escala con el bloque.</p>
+
+<div class="table-scroll">
+<table class="table-cad">
+  <thead><tr><th>Comando</th><th>Qué hace</th></tr></thead>
+  <tbody>
+    <tr><td><span class="cmd-inline">IMAGEATTACH</span></td><td>Adjunta una imagen como objeto del dibujo (atajo <span class="key-inline">IM</span>)</td></tr>
+    <tr><td><span class="cmd-inline">IMAGECLIP</span></td><td>Recorta la imagen a un contorno (rectángulo o polilínea)</td></tr>
+    <tr><td><span class="cmd-inline">IMAGEFRAME</span></td><td>Muestra/oculta el marco de la imagen (0 = oculto al trazar)</td></tr>
+    <tr><td><span class="cmd-inline">MATERIALS</span></td><td>Abre el editor de materiales con texturas</td></tr>
+    <tr><td><span class="cmd-inline">MATERIALMAP</span></td><td>Orientamos la escala y rotación de la textura en el objeto</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout">
+  <span class="callout-title">Tip</span>
+  En fachadas, en vez de dibujar cada ladrillo, adjunta una textura de ladrillo <strong>proporcionada</strong> (que se repita sin costuras) con <span class="cmd-inline">MATERIALMAP</span> → casilla "Ajustar". Ganarás horas y el render se verá mucho más real.
+</div>

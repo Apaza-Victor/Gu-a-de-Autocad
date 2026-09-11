@@ -74,15 +74,24 @@ Guia de Autocad/
 │   │   └── responsive.css      # Breakpoints, print y reduced-motion
 │   ├── js/
 │   │   ├── main.js             # Funcionalidad JS compartida
-│   │   └── i18n.js             # Sistema de traduccion ES/EN
+│   │   ├── i18n.js             # Sistema de traduccion ES/EN
+│   │   ├── search-index.js     # Indice generado para el buscador global
+│   │   ├── quiz.js             # Autoevaluaciones de cada nivel
+│   │   ├── animations.js       # Animaciones y micro-interacciones
+│   │   └── babylon-lab.js      # Laboratorio 3D interactivo (nivel 4)
 │   └── img/
 │       └── autocad-2.svg       # Logo AutoCAD (navbar, footer, favicon)
 ├── paginas/
-│   ├── nivel-1-fundamentos.html
-│   ├── nivel-2-dibujo-2d.html
-│   ├── nivel-3-organizacion.html
-│   ├── nivel-4-modelado-3d.html
-│   ├── nivel-5-avanzado.html
+│   ├── nivel-1-fundamentos/    # Nivel 1 (index.html portada + 12 lecciones)
+│   ├── nivel-2-dibujo-2d/      # Nivel 2 (index.html portada + 18 lecciones)
+│   ├── nivel-3-organizacion/   # Nivel 3 (index.html portada + 16 lecciones)
+│   ├── nivel-4-modelado-3d/    # Nivel 4 (index.html portada + 19 lecciones)
+│   ├── nivel-5-avanzado/       # Nivel 5 (index.html portada + 17 lecciones)
+│   ├── nivel-1-fundamentos.html  # Redireccion a la carpeta (compatibilidad)
+│   ├── nivel-2-dibujo-2d.html    # Redireccion a la carpeta (compatibilidad)
+│   ├── nivel-3-organizacion.html # Redireccion a la carpeta (compatibilidad)
+│   ├── nivel-4-modelado-3d.html  # Redireccion a la carpeta (compatibilidad)
+│   ├── nivel-5-avanzado.html     # Redireccion a la carpeta (compatibilidad)
 │   ├── comandos.html           # Diccionario de 979 comandos
 │   ├── ejemplos-visuales.html  # Diagramas paso a paso
 │   ├── trucos.html             # Atajos y tips

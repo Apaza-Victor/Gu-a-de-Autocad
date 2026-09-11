@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Configurar el espacio de trabajo · Fundamentos de AutoCAD — AutoCAD Guía</title>
+<link rel="canonical" href="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/configurar-espacio-trabajo.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-1-fundamentos/configurar-espacio-trabajo.html">
+<meta property="og:site_name" content="AutoCAD Guía">
+<meta property="og:title" content="Configurar el espacio de trabajo · Fundamentos de AutoCAD — AutoCAD Guía">
+<meta property="og:description" content="Personalizar la cinta, los espacios de trabajo y el entorno para dibujar como un profesional.">
+<meta property="og:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Configurar el espacio de trabajo · Fundamentos de AutoCAD — AutoCAD Guía">
+<meta name="twitter:description" content="Personalizar la cinta, los espacios de trabajo y el entorno para dibujar como un profesional.">
+<meta name="twitter:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="description" content="Personalizar la cinta, los espacios de trabajo y el entorno para dibujar como un profesional.">
+
+<link rel="icon" type="image/svg+xml" href="../../assets/img/autocad-2.svg">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../../assets/css/responsive.css">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Nivel · Fundamentos de AutoCAD",
+  "description": "Qué es AutoCAD, instalación y licencias, interfaz, sistema de coordenadas y configuración inicial.",
+  "provider": {
+    "@type": "Organization",
+    "name": "AutoCAD Guía",
+    "sameAs": "https://apaza-victor.github.io/Gu-a-de-Autocad/"
+  },
+  "inLanguage": "es",
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "online",
+    "learningResourceType": "tutorial",
+    "inLanguage": "es"
+  }
+}
+  </script>
+</head>
+
+<body>
+
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+<nav class="navbar navbar-cad navbar-expand-lg">
+  <div class="container container-xl">
+    <a class="navbar-brand brand-cad" href="../../index.html">
+      <img class="brand-logo" src="../../assets/img/autocad-2.svg" alt="AutoCAD">
+      <span>AutoCAD<small class="d-block" data-i18n-html="brand.sub">Guía · Teoría &amp; Práctica</small></span>
+    </a>
+    <div class="d-flex align-items-center gap-2 nav-actions order-lg-last">
+      <button class="icon-btn" id="searchToggle" title="Buscar" data-i18n-title="ui.search"><i class="bi bi-search"></i></button>
+      <button class="icon-btn" id="themeToggle" title="Cambiar tema" data-i18n-title="ui.theme"><i class="bi bi-moon-stars"></i></button>
+      <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
+        <i class="bi bi-list fs-4"></i>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navCad">
+      <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../../index.html" data-i18n="nav.home">Inicio</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-cad dropdown-toggle active" href="#" data-bs-toggle="dropdown" data-i18n="nav.levels">Niveles</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item active" href="../nivel-1-fundamentos/index.html">Nivel 1 · Fundamentos</a></li>
+            <li><a class="dropdown-item" href="../nivel-2-dibujo-2d/index.html">Nivel 2 · Dibujo 2D</a></li>
+            <li><a class="dropdown-item" href="../nivel-3-organizacion/index.html">Nivel 3 · Organización</a></li>
+            <li><a class="dropdown-item" href="../nivel-4-modelado-3d/index.html">Nivel 4 · Modelado 3D</a></li>
+            <li><a class="dropdown-item" href="../nivel-5-avanzado/index.html">Nivel 5 · Experto</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../comandos.html" data-i18n="nav.commands">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../ejemplos-visuales.html" data-i18n="nav.visual">Visuales</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../trucos.html" data-i18n="nav.tips">Trucos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../recursos.html" data-i18n="nav.resources">Recursos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../faq.html" data-i18n="nav.faq">FAQ</a></li>
+      </ul>
+
+      <div class="d-flex align-items-center gap-2 nav-actions-menu ms-lg-auto">
+        <span class="coord-readout d-none d-lg-inline-flex">X: <span id="coordX">000.00</span>&nbsp; Y: <span id="coordY">000.00</span></span>
+        <button class="lang-toggle" id="langToggle" title="Cambiar idioma" data-i18n-title="ui.lang">
+          <i class="bi bi-translate lang-toggle-flag"></i>
+          <span class="lang-toggle-text">EN</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header" id="main-content">
+  <div class="container container-xl">
+    <p class="crumb"><a href="../../index.html">Inicio</a> / <a href="../../index.html#niveles">Niveles</a> / <a href="index.html">Fundamentos</a> / Tema 7</p>
+    <span class="eyebrow" data-i18n="lvl1.eyebrow">Nivel 01 · Básico</span>
+    <h1>Configurar el espacio de trabajo</h1>
+    <div class="level-progress-bar" data-level-prefix="nivel1" data-level-total="13"><div class="fill"></div></div>
+    <p class="level-progress-label">0 de 13 temas completados · 0%</p>
+  </div>
+</header>
+
+<div class="content-layout">
+  <div class="container container-xl">
+    <div class="row">
+
+      <aside class="col-lg-3 mb-5 mb-lg-0">
+        <div class="toc-sidebar">
+          <h6 data-i18n="ui.inThisLevel">En este nivel</h6>
+          <ul class="toc-list">
+            <li><a href="que-es.html"><span class="toc-check"></span> Qué es AutoCAD</a></li>
+            <li><a href="instalacion.html"><span class="toc-check"></span> Instalación y licencias</a></li>
+            <li><a href="interfaz.html"><span class="toc-check"></span> Interfaz de usuario</a></li>
+            <li><a href="coordenadas.html"><span class="toc-check"></span> Sistema de coordenadas</a></li>
+            <li><a href="osnap-basico.html"><span class="toc-check"></span> Referencia a objetos (OSNAP)</a></li>
+            <li><a href="configuracion.html"><span class="toc-check"></span> Configuración inicial</a></li>
+            <li><a href="configurar-espacio-trabajo.html" data-toc="nivel1-espacio-trabajo"><span class="toc-check"></span> Configurar el espacio de trabajo</a></li>
+            <li><a href="archivos.html"><span class="toc-check"></span> Gestión de archivos</a></li>
+            <li><a href="tipos-archivo.html"><span class="toc-check"></span> Tipos de archivo</a></li>
+            <li><a href="gestion-dibujo.html"><span class="toc-check"></span> Mantener el dibujo sano</a></li>
+            <li><a href="zoom.html"><span class="toc-check"></span> Zoom y navegación</a></li>
+            <li><a href="atajos-esenciales.html"><span class="toc-check"></span> Comandos y atajos esenciales</a></li>
+            <li><a href="primer-dibujo.html"><span class="toc-check"></span> Primer dibujo guiado</a></li>
+            <li><a href="index.html#autoevaluacion"><span class="toc-check"></span> Autoevaluación</a></li>
+          </ul>
+          <hr style="border-color:var(--border-soft)" class="my-4">
+          <a href="index.html" class="btn-cad-outline w-100 text-center d-block"><i class="bi bi-arrow-left"></i> Volver al índice</a>
+        </div>
+      </aside>
+
+      <div class="col-lg-9">
+        <article class="content-article">
+
+          <section id="configurar-espacio-trabajo" data-topic="nivel1-espacio-trabajo">
+            <h2><span class="sec-num">7</span>Configurar el espacio de trabajo</h2>
+            <p>Un <strong>espacio de trabajo</strong> es un conjunto de paneles, cintas, menús y barras de herramientas agrupados según la tarea. AutoCAD trae varios predefinidos (Dibujo y anotación, Modelado 3D, etc.) y te permite crear los tuyos propios para trabajar más rápido.</p>
+
+            <div class="callout">
+              <span class="callout-title">Regla de oro</span>
+              No dibujes con el espacio de trabajo por defecto de todos. Crea uno propio con solo lo que usas: menos clics, menos errores y una pantalla limpia.
+            </div>
+
+            <h3>1. Cambiar de espacio de trabajo</h3>
+            <p>En la parte inferior derecha de la ventana, junto a la barra de estado, hay un conmutador de espacios de trabajo (el ícono de engranaje o el nombre actual, por ejemplo "Dibujo y anotación"). Pulsa ahí y elige uno de la lista.</p>
+
+            <div class="table-scroll">
+            <table class="table-cad">
+              <thead><tr><th>Espacio de trabajo</th><th>Para qué sirve</th><th>Cuándo usarlo</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Dibujo y anotación</strong></td><td>Cinta con Inicio, Insertar, Anotar, Capas, etc.</td><td>Trabajo 2D cotidiano (planta, cortes, detalles)</td></tr>
+                <tr><td><strong>Modelado 3D</strong></td><td>Cintas de Sólido, Superficies, Render</td><td>Modelado y renderizado 3D</td></tr>
+                <tr><td><strong>3D básicos</strong></td><td>Subconjunto reducido para empezar en 3D</td><td>Primeros pasos en 3D</td></tr>
+                <tr><td><strong>AutoCAD clásico</strong></td><td>Menús + barras de herramientas (sin cinta)</td><td>Si vienes de versiones antiguas o prefieres menús</td></tr>
+              </tbody>
+            </table>
+            </div>
+
+            <h3>2. Personalizar la cinta de opciones</h3>
+            <p>La cinta se organiza en <strong>pestañas</strong> (Inicio, Insertar, Anotar…) y cada pestaña contiene <strong>paneles</strong> (Dibujo, Modificar, Capas…). Puedes mover y ocultar paneles:</p>
+
+            <div class="lesson-step">
+              <span class="lesson-num">1</span>
+              <div class="lesson-body">
+                <h4>Muestra u oculta una pestaña</h4>
+                <p>Haz clic con el botón derecho sobre cualquier pestaña de la cinta y marca o desmarca las pestañas que quieras ver.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">2</span>
+              <div class="lesson-body">
+                <h4>Mueve un panel</h4>
+                <p>Arrastra el título de un panel (por ejemplo "Modificar") hacia otra pestaña para reorganizarlo. Una flecha gris te indica la nueva posición.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">3</span>
+              <div class="lesson-body">
+                <h4>Maximiza el espacio de dibujo</h4>
+                <p>Con la tecla <span class="key-inline">Ctrl+0</span> (cero) limpias toda la interfaz y dejas solo el área de dibujo. Púlsala de nuevo para restaurarla.</p>
+              </div>
+            </div>
+
+            <h3>3. Crear tu propio espacio de trabajo</h3>
+            <p>Una vez que tengas la cinta como a ti te gusta, guarda el conjunto como un espacio de trabajo nuevo:</p>
+
+            <div class="lesson-step">
+              <span class="lesson-num">1</span>
+              <div class="lesson-body">
+                <h4>Abre el Administrador de espacios de trabajo</h4>
+                <p>Escribe <span class="cmd-inline">WSSETTINGS</span> o <span class="cmd-inline">WORKSPACE</span> en la línea de comandos y pulsa Enter.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">2</span>
+              <div class="lesson-body">
+                <h4>Guarda el espacio actual con tu propio nombre</h4>
+                <p>En el cuadro de diálogo elige <strong>Guardar como espacio de trabajo</strong> (o en la barra inferior: flecha desplegable junto al conmutador → "Guardar espacio actual como…"). Ponle un nombre, por ejemplo "Mi 2D profesional".</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">3</span>
+              <div class="lesson-body">
+                <h4>Restablece si lo estropeas</h4>
+                <p>Si algo se desordena, usa <span class="cmd-inline">RESET</span> (Restablecer configuración) o, mejor aún, <span class="cmd-inline">CUI</span> → pestaña "Espacios de trabajo" y haz clic en <strong>Restablecer</strong> sobre el tuyo.</p>
+              </div>
+            </div>
+
+            <h3>4. La línea de comandos y la barra de estado</h3>
+            <p>El espacio de trabajo no es solo la cinta. También conviene decidir qué ves abajo:</p>
+            <ul>
+              <li><strong>Línea de comandos</strong>: muéstrala siempre (tecla <span class="key-inline">Ctrl+9</span>). Es la vía más rápida para ejecutar comandos.</li>
+              <li><strong>Barra de estado</strong>: activa/desactiva ORTO, OSNAP, rastreo polar, rejilla… con un solo clic (habilitadas suelen ir en azul).</li>
+              <li><strong>Pestañas de archivos</strong>: con <span class="key-inline">Ctrl+Tab</span> alternas entre dibujos abiertos.</li>
+            </ul>
+
+            <div class="callout warn">
+              <span class="callout-title">Atención</span>
+              Los espacios de trabajo se guardan en tu perfil de usuario, no en el archivo DWG. Si cambias de equipo, deberás recrear tu espacio o migrar tu perfil con el comando <span class="cmd-inline">OPTIONS</span> → pestaña "Perfiles".
+            </div>
+
+            <h3>Práctica recomendada</h3>
+            <p>Configura una sola vez: pestañas y paneles esenciales, barra de estado con ORTO + OSNAP + rastreo polar, y línea de comandos siempre visible. Luego guarda el espacio con nombre y no vuelvas a tocarlo. Ese ahorro de tiempo se nota todos los días.</p>
+          <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+        </article>
+
+        <nav class="level-nav">
+          <a href="configuracion.html">
+            <span class="nav-label">Anterior</span>
+            <span class="nav-title"><i class="bi bi-arrow-left"></i> Configuración inicial</span>
+          </a>
+          <a href="archivos.html" class="nav-next">
+            <span class="nav-label">Siguiente</span>
+            <span class="nav-title">Gestión de archivos <i class="bi bi-arrow-right"></i></span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container container-xl">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <div class="brand-cad mb-2"><img class="brand-logo" src="../../assets/img/autocad-2.svg" alt="AutoCAD"><span>AutoCAD Guía</span></div>
+        <p data-i18n="footer.disclaimer">Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.levels">Niveles</h6>
+        <ul class="list-unstyled">
+          <li><a href="../nivel-1-fundamentos/index.html">Fundamentos</a></li>
+          <li><a href="../nivel-2-dibujo-2d/index.html">Dibujo 2D</a></li>
+          <li><a href="../nivel-3-organizacion/index.html">Organización</a></li>
+          <li><a href="../nivel-4-modelado-3d/index.html">Modelado 3D</a></li>
+          <li><a href="../nivel-5-avanzado/index.html">Experto</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.guide">Guía</h6>
+        <ul class="list-unstyled">
+          <li><a href="../comandos.html">Comandos</a></li>
+          <li><a href="../ejemplos-visuales.html">Ejemplos</a></li>
+          <li><a href="../trucos.html">Trucos</a></li>
+          <li><a href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
+          <li><a href="../recursos.html">Recursos</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.follow">Síguenos</h6>
+        <div class="d-flex gap-2">
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-5 mb-4" style="border-color:var(--border-soft)">
+    <p class="mb-0 small" data-i18n="footer.copyright">© 2026 Victor Apaza. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<div class="command-line-bar" id="cmdBar">
+  <div class="command-line-inner">
+    <span class="prompt-sign" data-i18n="ui.command">Comando:</span>
+    <span id="cmd-typed"></span><span class="cursor-blink"></span>
+    <button class="cl-close" id="cmdClose" title="Ocultar" data-i18n-title="ui.hide"><i class="bi bi-x-lg"></i></button>
+  </div>
+</div>
+
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Buscar en la guía" data-i18n-aria="ui.search">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="bi bi-search"></i>
+      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar" data-i18n-placeholder="ui.searchPlaceholder">
+      <kbd class="search-kbd">ESC</kbd>
+    </div>
+    <div class="search-results" id="globalSearchResults">
+      <div class="search-empty" data-i18n="ui.typeToSearch">Escribe al menos 2 caracteres para buscar...</div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+<script src="../../assets/js/i18n.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/animations.js"></script>
+<script src="../../assets/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Texturas de imagen en bloques · Dibujo 2D — AutoCAD Guía</title>
+<link rel="canonical" href="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-2-dibujo-2d/texturas-bloques.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-2-dibujo-2d/texturas-bloques.html">
+<meta property="og:site_name" content="AutoCAD Guía">
+<meta property="og:title" content="Texturas de imagen en bloques · Dibujo 2D — AutoCAD Guía">
+<meta property="og:description" content="Añadir texturas de imagen a bloques con IMAGEATTACH y materiales para que se vean realistas.">
+<meta property="og:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Texturas de imagen en bloques · Dibujo 2D — AutoCAD Guía">
+<meta name="twitter:description" content="Añadir texturas de imagen a bloques con IMAGEATTACH y materiales para que se vean realistas.">
+<meta name="twitter:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="description" content="Añadir texturas de imagen a bloques con IMAGEATTACH y materiales para que se vean realistas.">
+
+<link rel="icon" type="image/svg+xml" href="../../assets/img/autocad-2.svg">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../../assets/css/responsive.css">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Nivel · Dibujo 2D en AutoCAD",
+  "description": "Geometría, edición, precisión, capas, bloques, cotas, texto, hatch y splines.",
+  "provider": {
+    "@type": "Organization",
+    "name": "AutoCAD Guía",
+    "sameAs": "https://apaza-victor.github.io/Gu-a-de-Autocad/"
+  },
+  "inLanguage": "es",
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "online",
+    "learningResourceType": "tutorial",
+    "inLanguage": "es"
+  }
+}
+  </script>
+</head>
+
+<body>
+
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+<nav class="navbar navbar-cad navbar-expand-lg">
+  <div class="container container-xl">
+    <a class="navbar-brand brand-cad" href="../../index.html">
+      <img class="brand-logo" src="../../assets/img/autocad-2.svg" alt="AutoCAD">
+      <span>AutoCAD<small class="d-block" data-i18n-html="brand.sub">Guía · Teoría &amp; Práctica</small></span>
+    </a>
+    <div class="d-flex align-items-center gap-2 nav-actions order-lg-last">
+      <button class="icon-btn" id="searchToggle" title="Buscar" data-i18n-title="ui.search"><i class="bi bi-search"></i></button>
+      <button class="icon-btn" id="themeToggle" title="Cambiar tema" data-i18n-title="ui.theme"><i class="bi bi-moon-stars"></i></button>
+      <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
+        <i class="bi bi-list fs-4"></i>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navCad">
+      <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../../index.html" data-i18n="nav.home">Inicio</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-cad dropdown-toggle active" href="#" data-bs-toggle="dropdown" data-i18n="nav.levels">Niveles</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="../nivel-1-fundamentos/index.html">Nivel 1 · Fundamentos</a></li>
+            <li><a class="dropdown-item active" href="../nivel-2-dibujo-2d/index.html">Nivel 2 · Dibujo 2D</a></li>
+            <li><a class="dropdown-item" href="../nivel-3-organizacion/index.html">Nivel 3 · Organización</a></li>
+            <li><a class="dropdown-item" href="../nivel-4-modelado-3d/index.html">Nivel 4 · Modelado 3D</a></li>
+            <li><a class="dropdown-item" href="../nivel-5-avanzado/index.html">Nivel 5 · Experto</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../comandos.html" data-i18n="nav.commands">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../ejemplos-visuales.html" data-i18n="nav.visual">Visuales</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../trucos.html" data-i18n="nav.tips">Trucos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../recursos.html" data-i18n="nav.resources">Recursos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../faq.html" data-i18n="nav.faq">FAQ</a></li>
+      </ul>
+
+      <div class="d-flex align-items-center gap-2 nav-actions-menu ms-lg-auto">
+        <span class="coord-readout d-none d-lg-inline-flex">X: <span id="coordX">000.00</span>&nbsp; Y: <span id="coordY">000.00</span></span>
+        <button class="lang-toggle" id="langToggle" title="Cambiar idioma" data-i18n-title="ui.lang">
+          <i class="bi bi-translate lang-toggle-flag"></i>
+          <span class="lang-toggle-text">EN</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header" id="main-content">
+  <div class="container container-xl">
+    <p class="crumb"><a href="../../index.html">Inicio</a> / <a href="../../index.html#niveles">Niveles</a> / <a href="index.html">Dibujo 2D</a> / Tema 11</p>
+    <span class="eyebrow" data-i18n="lvl2.eyebrow">Nivel 02 · Básico–Intermedio</span>
+    <h1>Texturas de imagen en bloques</h1>
+    <div class="level-progress-bar" data-level-prefix="nivel2" data-level-total="27"><div class="fill"></div></div>
+    <p class="level-progress-label">0 de 27 temas completados · 0%</p>
+  </div>
+</header>
+
+<div class="content-layout">
+  <div class="container container-xl">
+    <div class="row">
+
+      <aside class="col-lg-3 mb-5 mb-lg-0">
+        <div class="toc-sidebar">
+          <h6 data-i18n="ui.inThisLevel">En este nivel</h6>
+          <ul class="toc-list">
+            <li><a href="dibujo.html"><span class="toc-check"></span> Herramientas de dibujo</a></li>
+            <li><a href="modificacion.html"><span class="toc-check"></span> Herramientas de modificación</a></li>
+            <li><a href="matrices.html"><span class="toc-check"></span> Matrices (ARRAY)</a></li>
+            <li><a href="precision.html"><span class="toc-check"></span> Precisión: referencias y rastreo</a></li>
+            <li><a href="capas.html"><span class="toc-check"></span> Capas (Layers)</a></li>
+            <li><a href="crear-capas.html" data-toc="nivel2-crear-capas"><span class="toc-check"></span> Crear y eliminar capas</a></li>
+            <li><a href="configurar-capas.html" data-toc="nivel2-configurar-capas"><span class="toc-check"></span> Configurar capas</a></li>
+            <li><a href="bloques.html"><span class="toc-check"></span> Bloques y atributos</a></li>
+            <li><a href="escalar-bloques.html" data-toc="nivel2-escalar-bloques"><span class="toc-check"></span> Escalar bloques</a></li>
+            <li><a href="agrupar-objetos.html" data-toc="nivel2-agrupar-objetos"><span class="toc-check"></span> Agrupar objetos (GROUP)</a></li>
+            <li><a href="texturas-bloques.html" data-toc="nivel2-texturas-bloques"><span class="toc-check"></span> Texturas en bloques</a></li>
+            <li><a href="acotacion.html"><span class="toc-check"></span> Acotación</a></li>
+            <li><a href="configurar-cotas.html" data-toc="nivel2-configurar-cotas"><span class="toc-check"></span> Configurar cotas</a></li>
+            <li><a href="texto.html"><span class="toc-check"></span> Texto y tablas</a></li>
+            <li><a href="leyendas.html" data-toc="nivel2-leyendas"><span class="toc-check"></span> Leyendas de plano</a></li>
+            <li><a href="hatch.html"><span class="toc-check"></span> Sombreado (Hatch)</a></li>
+            <li><a href="anadir-hatch.html" data-toc="nivel2-anadir-hatch"><span class="toc-check"></span> Añadir Hatch</a></li>
+            <li><a href="seleccion.html"><span class="toc-check"></span> Selección de objetos</a></li>
+            <li><a href="grips.html"><span class="toc-check"></span> Pinzamientos (GRIPS)</a></li>
+            <li><a href="lineas.html"><span class="toc-check"></span> Tipos de línea</a></li>
+            <li><a href="cambiar-tipo-linea.html" data-toc="nivel2-cambiar-tipo-linea"><span class="toc-check"></span> Cambiar el tipo de línea</a></li>
+            <li><a href="puntos.html"><span class="toc-check"></span> Puntos y división</a></li>
+            <li><a href="auxiliares.html"><span class="toc-check"></span> Geometría auxiliar</a></li>
+            <li><a href="consulta.html"><span class="toc-check"></span> Medición y verificación</a></li>
+            <li><a href="propiedades.html"><span class="toc-check"></span> Propiedades de objeto</a></li>
+            <li><a href="pedit.html"><span class="toc-check"></span> Edición de polilíneas</a></li>
+            <li><a href="splines.html"><span class="toc-check"></span> Splines y curvas</a></li>
+            <li><a href="index.html#autoevaluacion"><span class="toc-check"></span> Autoevaluación</a></li>
+          </ul>
+          <hr style="border-color:var(--border-soft)" class="my-4">
+          <a href="index.html" class="btn-cad-outline w-100 text-center d-block"><i class="bi bi-arrow-left"></i> Volver al índice</a>
+        </div>
+      </aside>
+
+      <div class="col-lg-9">
+        <article class="content-article">
+
+          <section id="texturas-bloques" data-topic="nivel2-texturas-bloques">
+            <h2><span class="sec-num">11</span>Texturas de imagen en bloques</h2>
+            <p>Añadir una textura de imagen a un bloque combina dos mundos: la precisión vectorial del dibujo y la riqueza visual de una foto. Sirve para hacer ver "madera", "hormigón" o "césped" a mópedir muebles y fachadas, tanto en 2D como en render.</p>
+
+            <h3>1. Insertar una imagen de textura en el dibujo</h3>
+            <p>La textura se adjunta como <strong>imagen externa</strong> y luego se recorta y orienta sobre el bloque:</p>
+
+            <div class="lesson-step">
+              <span class="lesson-num">1</span>
+              <div class="lesson-body">
+                <h4>Adjunta la imagen</h4>
+                <p>Escribe <span class="cmd-inline">IMAGEATTACH</span> (<span class="key-inline">IM</span>) para adjuntar la textura. Elige el archivo de imagen (JPG o PNG). AutoCAD la coloca con un punto de inserción y una escala.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">2</span>
+              <div class="lesson-body">
+                <h4>Colócala sobre el bloque</h4>
+                <p>Usa <span class="cmd-inline">MOVE</span> y <span class="cmd-inline">SCALE</span> para superponer la imagen sobre la silueta del bloque. La imagen se recorta con <span class="cmd-inline">IMAGECLIP</span>.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">3</span>
+              <div class="lesson-body">
+                <h4>Recorta el exceso</h4>
+                <p>Con la imagen seleccionada, escribe <span class="cmd-inline">IMAGECLIP</span> y dibuja un rectángulo que deje solo la parte útil (por ejemplo el tablero de la mesa).</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">4</span>
+              <div class="lesson-body">
+                <h4>Transparencia para fondos</h4>
+                <p>Si la imagen tiene fondo, usa <span class="cmd-inline">IMAGEFRAME</span> = 2 (o 0) para ocultar el marco al trazar, y <span class="cmd-inline">TRANSPARENCY</span> para imágenes PNG con canal alfa.</p>
+              </div>
+            </div>
+
+            <h3>2. Hacer que la textura forme parte del bloque</h3>
+            <p>Para que la imagen viaje con el bloque (por ejemplo, al insertar el bloque en otro archivo):</p>
+
+            <div class="lesson-step">
+              <span class="lesson-num">1</span>
+              <div class="lesson-body">
+                <h4>Crea el bloque con todo</h4>
+                <p>Ejecuta <span class="cmd-inline">BLOCK</span> (<span class="key-inline">B</span>), nómbralo y selecciona <strong>los vectores más la imagen</strong>. Así la textura queda dentro de la definición.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">2</span>
+              <div class="lesson-body">
+                <h4>Aviso de dependencias</h4>
+                <p>Si la imagen se borra o se mueve de carpeta, el bloque mostrará "imagen no encontrada". Para viajar seguro, guarda la imagen junto al archivo o usa el asistente <span class="cmd-inline">ETRANSMIT</span>.</p>
+              </div>
+            </div>
+
+            <h3>3. Texturas de material para render (nivel 4)</h3>
+            <p>Para que el bloque se vea con material realista en vistas 3D y render:</p>
+            <ul>
+              <li>Usa la pestaña <strong>Render → Materiales</strong> (o <span class="cmd-inline">MATERIALS</span>) y crea un material nuevo.</li>
+              <li>En "Imagen de textura" adjunta el mismo archivo de imagen.</li>
+              <li>Arrastra el material sobre la cara del objeto o asígnalo por capa.</li>
+              <li>Aplica <span class="cmd-inline">SOLIDEDIT</span> → "Cara" → "Material" para pegarlo a una cara concreta.</li>
+            </ul>
+
+            <h3>4. Texturas desde bloques dinámicos personalizados</h3>
+            <p>También puedes usar <strong>bloques 2D con relleno</strong>: dentro del Editor de bloques (<span class="cmd-inline">BEDIT</span>), crea un sombreado solido (<span class="cmd-inline">HATCH</span> → tipo Sólido) con color claro y encima superpone la imagen recortada. El resultado se comporta como una lámina: se mueve, rota y escala con el bloque.</p>
+
+            <div class="table-scroll">
+            <table class="table-cad">
+              <thead><tr><th>Comando</th><th>Qué hace</th></tr></thead>
+              <tbody>
+                <tr><td><span class="cmd-inline">IMAGEATTACH</span></td><td>Adjunta una imagen como objeto del dibujo (atajo <span class="key-inline">IM</span>)</td></tr>
+                <tr><td><span class="cmd-inline">IMAGECLIP</span></td><td>Recorta la imagen a un contorno (rectángulo o polilínea)</td></tr>
+                <tr><td><span class="cmd-inline">IMAGEFRAME</span></td><td>Muestra/oculta el marco de la imagen (0 = oculto al trazar)</td></tr>
+                <tr><td><span class="cmd-inline">MATERIALS</span></td><td>Abre el editor de materiales con texturas</td></tr>
+                <tr><td><span class="cmd-inline">MATERIALMAP</span></td><td>Orientamos la escala y rotación de la textura en el objeto</td></tr>
+              </tbody>
+            </table>
+            </div>
+
+            <div class="callout">
+              <span class="callout-title">Tip</span>
+              En fachadas, en vez de dibujar cada ladrillo, adjunta una textura de ladrillo <strong>proporcionada</strong> (que se repita sin costuras) con <span class="cmd-inline">MATERIALMAP</span> → casilla "Ajustar". Ganarás horas y el render se verá mucho más real.
+            </div>
+          <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+        </article>
+
+        <nav class="level-nav">
+          <a href="agrupar-objetos.html">
+            <span class="nav-label">Anterior</span>
+            <span class="nav-title"><i class="bi bi-arrow-left"></i> Agrupar objetos (GROUP)</span>
+          </a>
+          <a href="acotacion.html" class="nav-next">
+            <span class="nav-label">Siguiente</span>
+            <span class="nav-title">Acotación <i class="bi bi-arrow-right"></i></span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container container-xl">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <div class="brand-cad mb-2"><img class="brand-logo" src="../../assets/img/autocad-2.svg" alt="AutoCAD"><span>AutoCAD Guía</span></div>
+        <p data-i18n="footer.disclaimer">Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.levels">Niveles</h6>
+        <ul class="list-unstyled">
+          <li><a href="../nivel-1-fundamentos/index.html">Fundamentos</a></li>
+          <li><a href="../nivel-2-dibujo-2d/index.html">Dibujo 2D</a></li>
+          <li><a href="../nivel-3-organizacion/index.html">Organización</a></li>
+          <li><a href="../nivel-4-modelado-3d/index.html">Modelado 3D</a></li>
+          <li><a href="../nivel-5-avanzado/index.html">Experto</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.guide">Guía</h6>
+        <ul class="list-unstyled">
+          <li><a href="../comandos.html">Comandos</a></li>
+          <li><a href="../ejemplos-visuales.html">Ejemplos</a></li>
+          <li><a href="../trucos.html">Trucos</a></li>
+          <li><a href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
+          <li><a href="../recursos.html">Recursos</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.follow">Síguenos</h6>
+        <div class="d-flex gap-2">
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-5 mb-4" style="border-color:var(--border-soft)">
+    <p class="mb-0 small" data-i18n="footer.copyright">© 2026 Victor Apaza. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<div class="command-line-bar" id="cmdBar">
+  <div class="command-line-inner">
+    <span class="prompt-sign" data-i18n="ui.command">Comando:</span>
+    <span id="cmd-typed"></span><span class="cursor-blink"></span>
+    <button class="cl-close" id="cmdClose" title="Ocultar" data-i18n-title="ui.hide"><i class="bi bi-x-lg"></i></button>
+  </div>
+</div>
+
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Buscar en la guía" data-i18n-aria="ui.search">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="bi bi-search"></i>
+      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar" data-i18n-placeholder="ui.searchPlaceholder">
+      <kbd class="search-kbd">ESC</kbd>
+    </div>
+    <div class="search-results" id="globalSearchResults">
+      <div class="search-empty" data-i18n="ui.typeToSearch">Escribe al menos 2 caracteres para buscar...</div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+<script src="../../assets/js/i18n.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/animations.js"></script>
+<script src="../../assets/js/main.js"></script>
+
+</body>
+</html>

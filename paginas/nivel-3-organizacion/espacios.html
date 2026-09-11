@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Espacio modelo vs. espacio papel (Layouts) · Nivel 3 — AutoCAD Guía</title>
+<link rel="canonical" href="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-3-organizacion/espacios.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-3-organizacion/espacios.html">
+<meta property="og:site_name" content="AutoCAD Guía">
+<meta property="og:title" content="Espacio modelo vs. espacio papel (Layouts) · Nivel 3 — AutoCAD Guía">
+<meta property="og:description" content="Los dos entornos de AutoCAD: el modelo a escala real y las presentaciones que preparan la hoja impresa.">
+<meta property="og:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Espacio modelo vs. espacio papel (Layouts) · Nivel 3 — AutoCAD Guía">
+<meta name="twitter:description" content="Los dos entornos de AutoCAD: el modelo a escala real y las presentaciones que preparan la hoja impresa.">
+<meta name="twitter:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="description" content="Los dos entornos de AutoCAD: el modelo a escala real y las presentaciones que preparan la hoja impresa.">
+
+<link rel="icon" type="image/svg+xml" href="../../assets/img/autocad-2.svg">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../../assets/css/responsive.css">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Nivel · Organización y productividad en AutoCAD",
+  "description": "Espacio modelo vs papel, viewports, plantillas, impresión, Xref, estilos de trazado y campos.",
+  "provider": {
+    "@type": "Organization",
+    "name": "AutoCAD Guía",
+    "sameAs": "https://apaza-victor.github.io/Gu-a-de-Autocad/"
+  },
+  "inLanguage": "es",
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "online",
+    "learningResourceType": "tutorial",
+    "inLanguage": "es"
+  }
+}
+  </script>
+</head>
+
+<body>
+
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+<nav class="navbar navbar-cad navbar-expand-lg">
+  <div class="container container-xl">
+    <a class="navbar-brand brand-cad" href="../../index.html">
+      <img class="brand-logo" src="../../assets/img/autocad-2.svg" alt="AutoCAD">
+      <span>AutoCAD<small class="d-block" data-i18n-html="brand.sub">Guía · Teoría &amp; Práctica</small></span>
+    </a>
+    <div class="d-flex align-items-center gap-2 nav-actions order-lg-last">
+      <button class="icon-btn" id="searchToggle" title="Buscar" data-i18n-title="ui.search"><i class="bi bi-search"></i></button>
+      <button class="icon-btn" id="themeToggle" title="Cambiar tema" data-i18n-title="ui.theme"><i class="bi bi-moon-stars"></i></button>
+      <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
+        <i class="bi bi-list fs-4"></i>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navCad">
+      <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../../index.html" data-i18n="nav.home">Inicio</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-cad dropdown-toggle active" href="#" data-bs-toggle="dropdown" data-i18n="nav.levels">Niveles</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="../nivel-1-fundamentos/index.html">Nivel 1 · Fundamentos</a></li>
+            <li><a class="dropdown-item" href="../nivel-2-dibujo-2d/index.html">Nivel 2 · Dibujo 2D</a></li>
+            <li><a class="dropdown-item active" href="../nivel-3-organizacion/index.html">Nivel 3 · Organización</a></li>
+            <li><a class="dropdown-item" href="../nivel-4-modelado-3d/index.html">Nivel 4 · Modelado 3D</a></li>
+            <li><a class="dropdown-item" href="../nivel-5-avanzado/index.html">Nivel 5 · Experto</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../comandos.html" data-i18n="nav.commands">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../ejemplos-visuales.html" data-i18n="nav.visual">Visuales</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../trucos.html" data-i18n="nav.tips">Trucos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../recursos.html" data-i18n="nav.resources">Recursos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../faq.html" data-i18n="nav.faq">FAQ</a></li>
+      </ul>
+
+      <div class="d-flex align-items-center gap-2 nav-actions-menu ms-lg-auto">
+        <span class="coord-readout d-none d-lg-inline-flex">X: <span id="coordX">000.00</span>&nbsp; Y: <span id="coordY">000.00</span></span>
+        <button class="lang-toggle" id="langToggle" title="Cambiar idioma" data-i18n-title="ui.lang">
+          <i class="bi bi-translate lang-toggle-flag"></i>
+          <span class="lang-toggle-text">EN</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header" id="main-content">
+  <div class="container container-xl">
+    <p class="crumb"><a href="../../index.html">Inicio</a> / <a href="../../index.html#niveles">Niveles</a> / <a href="index.html">Organización y productividad</a> / Tema 1</p>
+    <span class="eyebrow" data-i18n="lvl3.eyebrow">Nivel 03 · Intermedio</span>
+    <h1>Espacio modelo vs. espacio papel (Layouts)</h1>
+    <div class="level-progress-bar" data-level-prefix="nivel3" data-level-total="20"><div class="fill"></div></div>
+    <p class="level-progress-label">0 de 20 temas completados · 0%</p>
+  </div>
+</header>
+
+<div class="content-layout">
+  <div class="container container-xl">
+    <div class="row">
+
+      <aside class="col-lg-3 mb-5 mb-lg-0">
+        <div class="toc-sidebar">
+          <h6 data-i18n="ui.inThisLevel">En este nivel</h6>
+          <ul class="toc-list">
+            <li><a href="espacios.html" data-toc="nivel3-espacios"><span class="toc-check"></span> Espacio modelo vs. papel</a></li>
+            <li><a href="viewports.html" data-toc="nivel3-viewports"><span class="toc-check"></span> Ventanas gráficas y escalas</a></li>
+            <li><a href="plantillas.html" data-toc="nivel3-plantillas"><span class="toc-check"></span> Plantillas (.DWT)</a></li>
+            <li><a href="designcenter.html" data-toc="nivel3-designcenter"><span class="toc-check"></span> DesignCenter y paletas</a></li>
+            <li><a href="impresion.html" data-toc="nivel3-impresion"><span class="toc-check"></span> Impresión y exportación</a></li>
+            <li><a href="publish.html" data-toc="nivel3-publish"><span class="toc-check"></span> Publicación por lotes (PUBLISH)</a></li>
+            <li><a href="xref.html" data-toc="nivel3-xref"><span class="toc-check"></span> Referencias externas (Xref)</a></li>
+            <li><a href="atajos.html" data-toc="nivel3-atajos"><span class="toc-check"></span> Atajos de teclado</a></li>
+            <li><a href="plotstyles.html" data-toc="nivel3-plotstyles"><span class="toc-check"></span> Estilos de trazado</a></li>
+            <li><a href="campos.html" data-toc="nivel3-campos"><span class="toc-check"></span> Campos (Fields)</a></li>
+            <li><a href="xref-avanzado.html" data-toc="nivel3-xref-avanzado"><span class="toc-check"></span> Xref avanzado</a></li>
+            <li><a href="cajetines.html" data-toc="nivel3-cajetines"><span class="toc-check"></span> Cajetines y bloques de título</a></li>
+            <li><a href="escala-anotativa.html" data-toc="nivel3-escala-anotativa"><span class="toc-check"></span> Escala anotativa</a></li>
+            <li><a href="estandares-capas.html" data-toc="nivel3-estandares-capas"><span class="toc-check"></span> Estándares de capas</a></li>
+            <li><a href="sheet-sets.html" data-toc="nivel3-sheet-sets"><span class="toc-check"></span> Conjuntos de planos</a></li>
+            <li><a href="etransmit.html" data-toc="nivel3-etransmit"><span class="toc-check"></span> Transmitir y empaquetar</a></li>
+            <li><a href="index.html#autoevaluacion"><span class="toc-check"></span> Autoevaluación</a></li>
+          </ul>
+          <hr style="border-color:var(--border-soft)" class="my-4">
+          <a href="index.html" class="btn-cad-outline w-100 text-center d-block"><i class="bi bi-arrow-left"></i> Volver al índice</a>
+        </div>
+      </aside>
+
+      <div class="col-lg-9">
+        <article class="content-article">
+
+          <section id="espacios" data-topic="nivel3-espacios">
+                                <h2><span class="sec-num">1</span><span data-i18n="lvl3.s1.title">Espacio modelo vs. espacio papel (Layouts)</span></h2>
+                                <p>AutoCAD trabaja con dos entornos distintos, visibles como pestañas en la parte inferior de la pantalla:</p>
+
+                                <table class="table-cad">
+                                  <thead><tr><th>Espacio</th><th>Qué es</th><th>Para qué se usa</th></tr></thead>
+                                  <tbody>
+                                    <tr><td>Modelo</td><td>El área donde se dibuja todo a escala real 1:1.</td><td>Diseñar y construir la geometría del proyecto.</td></tr>
+                                    <tr><td>Presentación (Layout)</td><td>Una "hoja de papel" virtual con el tamaño real de impresión (A4, A3, A1…).</td><td>Componer planos: agregar cajetín, escalas, notas y preparar la impresión final.</td></tr>
+                                  </tbody>
+                                </table>
+
+                                <div class="callout">
+                                  <span class="callout-title">Idea clave</span>
+                                  Dibuja siempre en <strong>Modelo</strong> a tamaño real. La reducción a escala para que quepa en una hoja se resuelve en <strong>Presentación</strong>, nunca dibujando el modelo más pequeño.
+                                </div>
+
+          <!-- ENRIQ START -->
+          <h3>Comandos para moverse entre modelo y presentación</h3>
+          <table class="table-cad">
+            <thead><tr><th>Comando</th><th>Qué hace</th></tr></thead>
+            <tbody>
+              <tr><td class="cmd-inline">MSPACE</td><td>Entra a trabajar dentro de una ventana gráfica del layout (estás editando el modelo a través de ella).</td></tr>
+              <tr><td class="cmd-inline">PSPACE</td><td>Sale de la ventana gráfica y vuelve a trabajar con la hoja (papel).</td></tr>
+              <tr><td class="cmd-inline">PAGESETUP</td><td>Configura la hoja de cada layout: tamaño, margen, escala de impresión y estilo de trazado.</td></tr>
+              <tr><td class="cmd-inline">LAYOUT</td><td>Crea, nombra, copia o elimina pestañas de presentación.</td></tr>
+              <tr><td class="cmd-inline">-PLOT</td><td>Imprime SOLO el layout activo con una configuración definida, sin abrir el diálogo completo.</td></tr>
+            </tbody>
+          </table>
+          <div class="callout">
+            <span class="callout-title">Idea clave</span>
+            <span>El modelo se dibuja <strong>una sola vez</strong> y cada layout es una "cámara" distinta sobre el mismo proyecto. Por eso un cambio en el modelo se refleja en todos los layouts automáticamente.</span>
+          </div>
+          <h3>Mini ejercicio: prepara el layout de tu plano</h3>
+          <div class="lesson-step">
+            <span class="lesson-num">1</span>
+            <div class="lesson-body">
+              <h4>Nombra la presentación</h4>
+              <p>Clic derecho sobre la pestaña <strong>Presentación 1</strong> → <em>Cambiar nombre de página</em> y llámala "PLANTA A-1".</p>
+            </div>
+          </div>
+          <div class="lesson-step">
+            <span class="lesson-num">2</span>
+            <div class="lesson-body">
+              <h4>Configura la hoja</h4>
+              <p>Con <span class="cmd-inline">PAGESETUP</span> elige papel A3 horizontal y, en la sección <em>Escala de impresión</em>, activa "Ajustar a la ventana" de momento (luego fijas la escala real del viewport).</p>
+            </div>
+          </div>
+          <div class="lesson-step">
+            <span class="lesson-num">3</span>
+            <div class="lesson-body">
+              <h4>Comprueba el flujo</h4>
+              <p>Doble clic dentro del marco de la ventana gráfica (entras con <span class="cmd-inline">MSPACE</span>), haz zoom para encuadrar y vuelve al papel con doble clic fuera (sale con <span class="cmd-inline">PSPACE</span>).</p>
+            </div>
+          </div>
+          <!-- ENRIQ END -->
+          <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+        </article>
+
+        <nav class="level-nav">
+          <span></span>
+          <a href="viewports.html" class="nav-next">
+            <span class="nav-label">Siguiente</span>
+            <span class="nav-title">Ventanas gráficas y escalas <i class="bi bi-arrow-right"></i></span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container container-xl">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <div class="brand-cad mb-2"><img class="brand-logo" src="../../assets/img/autocad-2.svg" alt="AutoCAD"><span>AutoCAD Guía</span></div>
+        <p data-i18n="footer.disclaimer">Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.levels">Niveles</h6>
+        <ul class="list-unstyled">
+          <li><a href="../nivel-1-fundamentos/index.html">Fundamentos</a></li>
+          <li><a href="../nivel-2-dibujo-2d/index.html">Dibujo 2D</a></li>
+          <li><a href="../nivel-3-organizacion/index.html">Organización</a></li>
+          <li><a href="../nivel-4-modelado-3d/index.html">Modelado 3D</a></li>
+          <li><a href="../nivel-5-avanzado/index.html">Experto</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.guide">Guía</h6>
+        <ul class="list-unstyled">
+          <li><a href="../comandos.html">Comandos</a></li>
+          <li><a href="../ejemplos-visuales.html">Ejemplos</a></li>
+          <li><a href="../trucos.html">Trucos</a></li>
+          <li><a href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
+          <li><a href="../recursos.html">Recursos</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.follow">Síguenos</h6>
+        <div class="d-flex gap-2">
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-5 mb-4" style="border-color:var(--border-soft)">
+    <p class="mb-0 small" data-i18n="footer.copyright">© 2026 Victor Apaza. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<div class="command-line-bar" id="cmdBar">
+  <div class="command-line-inner">
+    <span class="prompt-sign" data-i18n="ui.command">Comando:</span>
+    <span id="cmd-typed"></span><span class="cursor-blink"></span>
+    <button class="cl-close" id="cmdClose" title="Ocultar" data-i18n-title="ui.hide"><i class="bi bi-x-lg"></i></button>
+  </div>
+</div>
+
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Buscar en la guía" data-i18n-aria="ui.search">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="bi bi-search"></i>
+      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar" data-i18n-placeholder="ui.searchPlaceholder">
+      <kbd class="search-kbd">ESC</kbd>
+    </div>
+    <div class="search-results" id="globalSearchResults">
+      <div class="search-empty" data-i18n="ui.typeToSearch">Escribe al menos 2 caracteres para buscar...</div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+<script src="../../assets/js/i18n.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/animations.js"></script>
+<script src="../../assets/js/main.js"></script>
+
+</body>
+</html>

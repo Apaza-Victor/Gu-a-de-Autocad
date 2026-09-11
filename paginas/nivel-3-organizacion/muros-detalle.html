@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muros y detalles constructivos · Organización y productividad — AutoCAD Guía</title>
+<link rel="canonical" href="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-3-organizacion/muros-detalle.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-3-organizacion/muros-detalle.html">
+<meta property="og:site_name" content="AutoCAD Guía">
+<meta property="og:title" content="Muros y detalles constructivos · Organización y productividad — AutoCAD Guía">
+<meta property="og:description" content="Tipos de muro, espesores habituales y cómo dibujar detalles constructivos a escala.">
+<meta property="og:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Muros y detalles constructivos · Organización y productividad — AutoCAD Guía">
+<meta name="twitter:description" content="Tipos de muro, espesores habituales y cómo dibujar detalles constructivos a escala.">
+<meta name="twitter:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="description" content="Tipos de muro, espesores habituales y cómo dibujar detalles constructivos a escala.">
+
+<link rel="icon" type="image/svg+xml" href="../../assets/img/autocad-2.svg">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../../assets/css/responsive.css">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Nivel · Organización y productividad en AutoCAD",
+  "description": "Espacio modelo vs papel, viewports, plantillas, impresión, Xref, estilos de trazado y campos.",
+  "provider": {
+    "@type": "Organization",
+    "name": "AutoCAD Guía",
+    "sameAs": "https://apaza-victor.github.io/Gu-a-de-Autocad/"
+  },
+  "inLanguage": "es",
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "online",
+    "learningResourceType": "tutorial",
+    "inLanguage": "es"
+  }
+}
+  </script>
+</head>
+
+<body>
+
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+<nav class="navbar navbar-cad navbar-expand-lg">
+  <div class="container container-xl">
+    <a class="navbar-brand brand-cad" href="../../index.html">
+      <img class="brand-logo" src="../../assets/img/autocad-2.svg" alt="AutoCAD">
+      <span>AutoCAD<small class="d-block" data-i18n-html="brand.sub">Guía · Teoría &amp; Práctica</small></span>
+    </a>
+    <div class="d-flex align-items-center gap-2 nav-actions order-lg-last">
+      <button class="icon-btn" id="searchToggle" title="Buscar" data-i18n-title="ui.search"><i class="bi bi-search"></i></button>
+      <button class="icon-btn" id="themeToggle" title="Cambiar tema" data-i18n-title="ui.theme"><i class="bi bi-moon-stars"></i></button>
+      <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
+        <i class="bi bi-list fs-4"></i>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navCad">
+      <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../../index.html" data-i18n="nav.home">Inicio</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-cad dropdown-toggle active" href="#" data-bs-toggle="dropdown" data-i18n="nav.levels">Niveles</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="../nivel-1-fundamentos/index.html">Nivel 1 · Fundamentos</a></li>
+            <li><a class="dropdown-item" href="../nivel-2-dibujo-2d/index.html">Nivel 2 · Dibujo 2D</a></li>
+            <li><a class="dropdown-item active" href="../nivel-3-organizacion/index.html">Nivel 3 · Organización</a></li>
+            <li><a class="dropdown-item" href="../nivel-4-modelado-3d/index.html">Nivel 4 · Modelado 3D</a></li>
+            <li><a class="dropdown-item" href="../nivel-5-avanzado/index.html">Nivel 5 · Experto</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../comandos.html" data-i18n="nav.commands">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../ejemplos-visuales.html" data-i18n="nav.visual">Visuales</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../trucos.html" data-i18n="nav.tips">Trucos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../recursos.html" data-i18n="nav.resources">Recursos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../faq.html" data-i18n="nav.faq">FAQ</a></li>
+      </ul>
+
+      <div class="d-flex align-items-center gap-2 nav-actions-menu ms-lg-auto">
+        <span class="coord-readout d-none d-lg-inline-flex">X: <span id="coordX">000.00</span>&nbsp; Y: <span id="coordY">000.00</span></span>
+        <button class="lang-toggle" id="langToggle" title="Cambiar idioma" data-i18n-title="ui.lang">
+          <i class="bi bi-translate lang-toggle-flag"></i>
+          <span class="lang-toggle-text">EN</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header" id="main-content">
+  <div class="container container-xl">
+    <p class="crumb"><a href="../../index.html">Inicio</a> / <a href="../../index.html#niveles">Niveles</a> / <a href="index.html">Organización</a> / Tema 14</p>
+    <span class="eyebrow" data-i18n="lvl3.eyebrow">Nivel 03 · Intermedio</span>
+    <h1>Muros y detalles constructivos</h1>
+    <div class="level-progress-bar" data-level-prefix="nivel3" data-level-total="20"><div class="fill"></div></div>
+    <p class="level-progress-label">0 de 20 temas completados · 0%</p>
+  </div>
+</header>
+
+<div class="content-layout">
+  <div class="container container-xl">
+    <div class="row">
+
+      <aside class="col-lg-3 mb-5 mb-lg-0">
+        <div class="toc-sidebar">
+          <h6 data-i18n="ui.inThisLevel">En este nivel</h6>
+          <ul class="toc-list">
+            <li><a href="espacios.html"><span class="toc-check"></span> Espacio modelo vs. papel</a></li>
+            <li><a href="viewports.html"><span class="toc-check"></span> Ventanas gráficas y escalas</a></li>
+            <li><a href="plantillas.html"><span class="toc-check"></span> Plantillas (.DWT)</a></li>
+            <li><a href="designcenter.html"><span class="toc-check"></span> DesignCenter y paletas</a></li>
+            <li><a href="impresion.html"><span class="toc-check"></span> Impresión y exportación</a></li>
+            <li><a href="publish.html"><span class="toc-check"></span> Publicación por lotes (PUBLISH)</a></li>
+            <li><a href="xref.html"><span class="toc-check"></span> Referencias externas (Xref)</a></li>
+            <li><a href="atajos.html"><span class="toc-check"></span> Atajos de teclado</a></li>
+            <li><a href="plotstyles.html"><span class="toc-check"></span> Estilos de trazado</a></li>
+            <li><a href="campos.html"><span class="toc-check"></span> Campos (Fields)</a></li>
+            <li><a href="xref-avanzado.html"><span class="toc-check"></span> Xref avanzado</a></li>
+            <li><a href="cajetines.html"><span class="toc-check"></span> Cajetines y bloques de título</a></li>
+            <li><a href="zapatas-machones.html" data-toc="nivel3-zapatas-machones"><span class="toc-check"></span> Zapatas y machones</a></li>
+            <li><a href="muros-detalle.html" data-toc="nivel3-muros-detalle"><span class="toc-check"></span> Muros y detalles constructivos</a></li>
+            <li><a href="planos-estructurales.html" data-toc="nivel3-planos-estructurales"><span class="toc-check"></span> Planos estructurales</a></li>
+            <li><a href="escala-anotativa.html"><span class="toc-check"></span> Escala anotativa</a></li>
+            <li><a href="estandares-capas.html"><span class="toc-check"></span> Estándares de capas</a></li>
+            <li><a href="sheet-sets.html"><span class="toc-check"></span> Conjuntos de planos</a></li>
+            <li><a href="etransmit.html"><span class="toc-check"></span> Transmitir y empaquetar</a></li>
+            <li><a href="importar-exportar.html" data-toc="nivel3-importar-exportar"><span class="toc-check"></span> Importar y exportar</a></li>
+            <li><a href="index.html#autoevaluacion"><span class="toc-check"></span> Autoevaluación</a></li>
+          </ul>
+          <hr style="border-color:var(--border-soft)" class="my-4">
+          <a href="index.html" class="btn-cad-outline w-100 text-center d-block"><i class="bi bi-arrow-left"></i> Volver al índice</a>
+        </div>
+      </aside>
+
+      <div class="col-lg-9">
+        <article class="content-article">
+
+          <section id="muros-detalle" data-topic="nivel3-muros-detalle">
+            <h2><span class="sec-num">14</span>Muros y detalles constructivos</h2>
+            <p>Los <strong>muros</strong> son el armazón de la construcción. Los <strong>detalles constructivos</strong> explican la unión de muro con cubierta, forjado, cimentación o carpintería. Dibujarlos con la simbología correcta (muro de carga, tabique, aislamiento) es lo que distingue un plano profesional.</p>
+
+            <h3>1. Representar los distintos muros en planta</h3>
+            <div class="table-scroll">
+            <table class="table-cad">
+              <thead><tr><th>Tipo de muro</th><th>Representación habitual</th><th>Línea / hatch típico</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Muro de carga</strong> (fábrica o H.A.)</td><td>Líneas dobles; en sección hatch sólido o de hormigón</td><td>Continua gruesa (0.5) + relleno</td></tr>
+                <tr><td><strong>Tabique</strong></td><td>Líneas dobles más finas, sin hatch</td><td>Continua fina (0.15)</td></tr>
+                <tr><td><strong>Aislamiento</strong></td><td>Línea punteada o zigzag dentro del muro</td><td><code>DASHED</code> o <code>HIDDEN</code> delgada</td></tr>
+                <tr><td><strong>Muro cortina</strong> (fachada acristalada)</td><td>Retícula de líneas y vidrio</td><td>Continua fina en cuadrícula</td></tr>
+              </tbody>
+            </table>
+            </div>
+
+            <h3>2. Muros de carga en planta (paso a paso)</h3>
+
+            <div class="lesson-step">
+              <span class="lesson-num">1</span>
+              <div class="lesson-body">
+                <h4>Dibuja la polilínea del eje</h4>
+                <p>Con <span class="cmd-inline">PLINE</span> dibuja el eje del muro siguiendo la trama de ejes. Crea la capa <code>A-Muros</code>.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">2</span>
+              <div class="lesson-body">
+                <h4>Dale espesor al muro</h4>
+                <p>Selecciona la polilínea y en <span class="cmd-inline">PROPERTIES</span> pon un "Grosor" (o mejor: usa <span class="cmd-inline">MLINE</span> con dos líneas paralelas). El espesor típico: 0.20–0.30 m en fábrica, 0.15–0.25 en H.A.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">3</span>
+              <div class="lesson-body">
+                <h4>Añade el relleno si es sección</h4>
+                <p>En vistas de corte, rellena la masa del muro con <span class="cmd-inline">HATCH</span> (sólido o <code>AR-CONC</code>) sobre una capa <code>A-Hatch</code> con transparencia.</p>
+              </div>
+            </div>
+
+            <h3>3. El detalle constructivo (croquis a escala 1:1)</h3>
+            <p>Un detalle muéstra la unión entre materiales a <strong>gran escala</strong> (ej.: 1:5, 1:10). La clave es la superposición limpia de capas:</p>
+            <div class="lesson-step">
+              <span class="lesson-num">1</span>
+              <div class="lesson-body">
+                <h4>Define las capas del detalle</h4>
+                <p>Capas recomendadas: <code>D-Muros</code> (contornos), <code>D-Aislamiento</code>, <code>D-Acero</code>, <code>D-Madera</code>, <code>D-Hatch</code>, <code>D-CotasDetalle</code>.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">2</span>
+              <div class="lesson-body">
+                <h4>Dibuja la silueta del detalle</h4>
+                <p>Usa <span class="cmd-inline">LINE</span>/<span class="cmd-inline">PLINE</span>. Pinta siempre los contornos "cortados" en <strong>negro o ByLayer grueso</strong> y los ocultos en <code>DASHED</code>.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">3</span>
+              <div class="lesson-body">
+                <h4>Rellena cada material con su hatch</h4>
+                <p>Hormigón: <code>AR-CONC</code>. Fábrica: <code>AR-BRSTD</code> (ladrillo) o <code>ANSI31</code>. Aislamiento: <code>EARTH</code> o <code>HIDDEN</code>. Madera: <code>BONE</code> o líneas paralelas.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">4</span>
+              <div class="lesson-body">
+                <h4>Añade acotación y alienación</h4>
+                <p>Acota el detalle con un estilo "detalles" (texto más pequeño) y añade <strong>tornillos, foila, juntas</strong> si existen. Incluye la "nota del detalle" con número de referencia al corte.</p>
+              </div>
+            </div>
+
+            <h3>4. Sectores, uniones y cabezales</h3>
+            <ul>
+              <li><strong>Cabeza de muro a cubierta:</strong> en sección muestra la albardilla o el alero, con el aislamiento enrollado contra la cara interior.</li>
+              <li><strong>Unión muro-cimentación:</strong> el muro apoya en la zapata: el contorno del muro, la viga de atado y el hormigón de limpieza.</li>
+              <li><strong>Juntas de dilatación:</strong> dibuja dos planos separados con un hueco y la "bellota" / sellado flexible; casi siempre se marca con un pequeño círculo en planta.</li>
+            </ul>
+
+            <div class="table-scroll">
+            <table class="table-cad">
+              <thead><tr><th>Comando</th><th>Qué hace</th></tr></thead>
+              <tbody>
+                <tr><td><span class="cmd-inline">MLINE</span></td><td>Línea múltiple para muros de dos hojas</td></tr>
+                <tr><td><span class="cmd-inline">PLINE</span></td><td>Eje del muro con grosor uniforme</td></tr>
+                <tr><td><span class="cmd-inline">HATCH</span></td><td>Rellena materiales en sección</td></tr>
+                <tr><td><span class="cmd-inline">DIMLINEAR</span></td><td>Acota espesores y alturas del detalle</td></tr>
+                <tr><td><span class="cmd-inline">SNAP</span></td><td>Encaja piezas del detalle sin errores</td></tr>
+              </tbody>
+            </table>
+            </div>
+
+            <div class="callout warn">
+              <span class="callout-title">Estándar de oficina</span>
+              Define una <strong>plantilla de detalle</strong> (DWT) con las capas y los hatches de materiales ya montados. Así todos los detalles del estudio se ven iguales y nadie re-dibuja el mismo muro dos veces.
+            </div>
+          <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+        </article>
+
+        <nav class="level-nav">
+          <a href="zapatas-machones.html">
+            <span class="nav-label">Anterior</span>
+            <span class="nav-title"><i class="bi bi-arrow-left"></i> Zapatas y machones</span>
+          </a>
+          <a href="planos-estructurales.html" class="nav-next">
+            <span class="nav-label">Siguiente</span>
+            <span class="nav-title">Planos estructurales <i class="bi bi-arrow-right"></i></span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container container-xl">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <div class="brand-cad mb-2"><img class="brand-logo" src="../../assets/img/autocad-2.svg" alt="AutoCAD"><span>AutoCAD Guía</span></div>
+        <p data-i18n="footer.disclaimer">Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.levels">Niveles</h6>
+        <ul class="list-unstyled">
+          <li><a href="../nivel-1-fundamentos/index.html">Fundamentos</a></li>
+          <li><a href="../nivel-2-dibujo-2d/index.html">Dibujo 2D</a></li>
+          <li><a href="../nivel-3-organizacion/index.html">Organización</a></li>
+          <li><a href="../nivel-4-modelado-3d/index.html">Modelado 3D</a></li>
+          <li><a href="../nivel-5-avanzado/index.html">Experto</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.guide">Guía</h6>
+        <ul class="list-unstyled">
+          <li><a href="../comandos.html">Comandos</a></li>
+          <li><a href="../ejemplos-visuales.html">Ejemplos</a></li>
+          <li><a href="../trucos.html">Trucos</a></li>
+          <li><a href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
+          <li><a href="../recursos.html">Recursos</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.follow">Síguenos</h6>
+        <div class="d-flex gap-2">
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-5 mb-4" style="border-color:var(--border-soft)">
+    <p class="mb-0 small" data-i18n="footer.copyright">© 2026 Victor Apaza. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<div class="command-line-bar" id="cmdBar">
+  <div class="command-line-inner">
+    <span class="prompt-sign" data-i18n="ui.command">Comando:</span>
+    <span id="cmd-typed"></span><span class="cursor-blink"></span>
+    <button class="cl-close" id="cmdClose" title="Ocultar" data-i18n-title="ui.hide"><i class="bi bi-x-lg"></i></button>
+  </div>
+</div>
+
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Buscar en la guía" data-i18n-aria="ui.search">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="bi bi-search"></i>
+      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar" data-i18n-placeholder="ui.searchPlaceholder">
+      <kbd class="search-kbd">ESC</kbd>
+    </div>
+    <div class="search-results" id="globalSearchResults">
+      <div class="search-empty" data-i18n="ui.typeToSearch">Escribe al menos 2 caracteres para buscar...</div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+<script src="../../assets/js/i18n.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/animations.js"></script>
+<script src="../../assets/js/main.js"></script>
+
+</body>
+</html>
