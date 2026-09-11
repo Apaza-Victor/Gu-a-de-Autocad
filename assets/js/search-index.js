@@ -11421,6 +11421,14 @@ window.SEARCH_INDEX = [
   },
   {
     "type": "topic",
+    "title": "Dimensiones y medidas en arquitectura",
+    "description": "Conceptos de arquitectura y medidas de referencia de puertas, ventanas, escaleras, balcones y ambientes para dibujar planos.",
+    "file": "nivel-3-organizacion/dimensiones-arquitectura.html",
+    "anchor": "",
+    "path": "Nivel 3 · Organización"
+  },
+  {
+    "type": "topic",
     "title": "Zapatas, machones y cimentaciones",
     "description": "Qué son las zapatas y los machones (columnas de amarre) y sus medidas típicas en construcción.",
     "file": "nivel-3-organizacion/zapatas-machones.html",
@@ -12818,5 +12826,13 @@ window.SEARCH_INDEX = [
     "file": "ejemplos-visuales.html",
     "anchor": "",
     "path": "Visuales"
+  },
+  {
+    "type": "topic",
+    "title": "Glosario de arquitectura y de AutoCAD",
+    "description": "Diccionario con los términos usados en la guía: estructura y elementos resistentes, muros y huecos, cerramientos y acabados, escaleras, terreno y cimentación, distribución, planos y documentación, términos de AutoCAD/CAD y unidades de medida.",
+    "file": "glosario.html",
+    "anchor": "",
+    "path": "Glosario"
   }
 ];

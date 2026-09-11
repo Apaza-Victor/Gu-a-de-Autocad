@@ -86,7 +86,7 @@
         <li class="nav-item"><a class="nav-link nav-link-cad" href="../trucos.html" data-i18n="nav.tips">Trucos</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="../recursos.html" data-i18n="nav.resources">Recursos</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-cad" href="../faq.html" data-i18n="nav.faq">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../glosario.html" data-i18n="nav.glosario">Glosario</a></li>
       </ul>
 
       <div class="d-flex align-items-center gap-2 nav-actions-menu ms-lg-auto">
@@ -246,7 +246,34 @@
               Un bloque y un grupo no se mezclan. Si dentro de un grupo metes un bloque, el grupo agrupa la <em>inserción</em>. Para editar el bloque en sí, entra en el editor de bloques (<span class="cmd-inline">BEDIT</span>).
             </div>
 
-            <h3>5. Agrupar correctamente y con nombre (flujo recomendado)</h3>
+            <h3>5. Grupo vs Bloque vs Xref: ¿cuándo usar cada uno?</h3>
+            <div class="table-scroll">
+            <table class="table-cad">
+              <thead><tr><th>Característica</th><th>Grupo</th><th>Bloque</th><th>Xref</th></tr></thead>
+              <tbody>
+                <tr><td>Reutilizable en otros archivos</td><td>No</td><td>Sí</td><td>Sí (referenciado)</td></tr>
+                <tr><td>Se puede insertar con INSERT</td><td>No</td><td>Sí</td><td>No</td></tr>
+                <tr><td>Se edita desde el dibujo actual</td><td>Sí (GROUPEDIT)</td><td>Sí (BEDIT)</td><td>Solo en su archivo original</td></tr>
+                <tr><td>SeActualiza automáticamente al cambiar</td><td>No</td><td>Sí (con sync)</td><td>Sí (al recargar)</td></tr>
+                <tr><td>Cuándo usarlo</td><td>Agrupar temporalmente para mover/copiar</td><td>Elemento reutilizado (puerta, silla, cajetín)</td><td>Plano de base compartido (arquitectura, instalaciones)</td></tr>
+              </tbody>
+            </table>
+            </div>
+
+            <div class="table-scroll">
+            <table class="table-cad">
+              <thead><tr><th>Comando</th><th>Qué hace</th><th>Atajo</th></tr></thead>
+              <tbody>
+                <tr><td><span class="cmd-inline">GRUPO</span> (en inglés: <span class="cmd-inline">GROUP</span>)</td><td>Crea un grupo con los objetos seleccionados</td><td><span class="key-inline">G</span></td></tr>
+                <tr><td><span class="cmd-inline">UNGROUP</span></td><td>Disuelve un grupo (los objetos quedan sueltos)</td><td>—</td></tr>
+                <tr><td><span class="cmd-inline">GROUPEDIT</span></td><td>Añade o quita objetos de un grupo existente</td><td>—</td></tr>
+                <tr><td><span class="cmd-inline">CLASSICGROUP</span></td><td>Abrir el cuadro de diálogo de grupos (versión clásica)</td><td>—</td></tr>
+                <tr><td><span class="cmd-inline">PICKSTYLE</span></td><td>Variable que activa/desactiva la selección de grupos (0=off, 1=on)</td><td>—</td></tr>
+              </tbody>
+            </table>
+            </div>
+
+            <h3>6. Agrupar correctamente y con nombre (flujo recomendado)</h3>
             <ol class="pasos-block">
               <li>Selecciona los objetos de la unidad funcional (ej.: la mesa con sus sillas).</li>
               <li>Ejecuta <span class="cmd-inline">GRUPO</span> (en inglés: <span class="cmd-inline">GROUP</span>) y guárdalo <strong>siempre con nombre</strong> (ej.: <code>Comedor-01</code>).</li>
@@ -298,6 +325,7 @@
           <li><a href="../trucos.html">Trucos</a></li>
           <li><a href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
           <li><a href="../recursos.html">Recursos</a></li>
+          <li><a href="../glosario.html">Glosario</a></li>
           <li><a href="../faq.html">FAQ</a></li>
         </ul>
       </div>

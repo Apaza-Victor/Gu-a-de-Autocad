@@ -86,7 +86,7 @@
         <li class="nav-item"><a class="nav-link nav-link-cad" href="../trucos.html" data-i18n="nav.tips">Trucos</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="../recursos.html" data-i18n="nav.resources">Recursos</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-cad" href="../faq.html" data-i18n="nav.faq">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../glosario.html" data-i18n="nav.glosario">Glosario</a></li>
       </ul>
 
       <div class="d-flex align-items-center gap-2 nav-actions-menu ms-lg-auto">
@@ -209,6 +209,26 @@
             <h3>3. Ajustar el factor de escala global</h3>
             <p>El espesor de líneas de cota, flechas y texto se calculan con un factor global en <strong>Adaptar → Escala general</strong>, que multiplica todos los valores nominales. Para trabajo en metros con mm de papel puedes dejarlo en 1 y configurar bien la presentación; en espacio modelo conviene ajustarlo para que se vea proporcionado al imprimir. La forma más segura: <strong>usar el espacio papel</strong> (<span class="cmd-inline">PSPACE</span>) con cotas asociadas a la vista.</p>
 
+            <h4>Valores recomendados según la escala del plano</h4>
+            <p>Refieren a las medidas típicas en <strong>papel</strong> (se multiplican por el factor global según la escala de la ventana):</p>
+
+            <div class="table-scroll">
+            <table class="table-cad">
+              <thead><tr><th>Escala del plano</th><th>Altura de texto</th><th>Tamaño de flecha</th><th>Tamaño de punto</th><th>Extensión (offset)</th></tr></thead>
+              <tbody>
+                <tr><td>1:20 / 1:25 (detalles)</td><td>2.0–2.5 mm</td><td>1.5–2.0 mm</td><td>1.0 mm</td><td>1.0–1.5 mm</td></tr>
+                <tr><td>1:50 (plantas/cortes)</td><td>2.5–3.0 mm</td><td>2.0–2.5 mm</td><td>1.5 mm</td><td>1.5–2.0 mm</td></tr>
+                <tr><td>1:100 (plantas generales)</td><td>3.0–3.5 mm</td><td>2.5 mm</td><td>1.5–2.0 mm</td><td>2.0–2.5 mm</td></tr>
+                <tr><td>1:200 (urbanismo/implantación)</td><td>3.5–4.0 mm</td><td>2.5–3.0 mm</td><td>2.0 mm</td><td>2.5–3.0 mm</td></tr>
+              </tbody>
+            </table>
+            </div>
+
+            <div class="callout">
+              <span class="callout-title">Cómo aplicar la tabla</span>
+              Trabajando en el <strong>espacio papel</strong> con ventanas a escala, estas medidas se escriben tal cual (en mm de papel) y AutoCAD las escala automáticamente. En el <strong>espacio modelo</strong>, multiplica cada valor por el factor de la escala: p. ej. texto 3 mm a 1:100 = 300 unidades → usa la escala anotativa o el factor global.
+            </div>
+
             <h3>4. Definir el estilo actual y cotejar objetos</h3>
             <p>Cuando tengas tu estilo perfecto:</p>
             <ul>
@@ -322,6 +342,7 @@
           <li><a href="../trucos.html">Trucos</a></li>
           <li><a href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
           <li><a href="../recursos.html">Recursos</a></li>
+          <li><a href="../glosario.html">Glosario</a></li>
           <li><a href="../faq.html">FAQ</a></li>
         </ul>
       </div>

@@ -86,7 +86,7 @@
         <li class="nav-item"><a class="nav-link nav-link-cad" href="../trucos.html" data-i18n="nav.tips">Trucos</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="../recursos.html" data-i18n="nav.resources">Recursos</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-cad" href="../faq.html" data-i18n="nav.faq">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../glosario.html" data-i18n="nav.glosario">Glosario</a></li>
       </ul>
 
       <div class="d-flex align-items-center gap-2 nav-actions-menu ms-lg-auto">
@@ -227,6 +227,19 @@
             <h3>4. Texturas desde bloques dinámicos personalizados</h3>
             <p>También puedes usar <strong>bloques 2D con relleno</strong>: dentro del Editor de bloques (<span class="cmd-inline">BEDIT</span>), crea un sombreado solido (<span class="cmd-inline">HATCH</span> → tipo Sólido) con color claro y encima superpone la imagen recortada. El resultado se comporta como una lámina: se mueve, rota y escala con el bloque.</p>
 
+            <h3>5. Formatos de imagen recomendados y organización</h3>
+            <ul>
+              <li><strong>JPG:</strong> ligero y universal; ideal para texturas sin transparencia (maderas, piedras).</li>
+              <li><strong>PNG:</strong> admite canal alfa (transparencia), imprescindible para recortes sobre video o planos.</li>
+              <li><strong>TIFF:</strong> calidad máxima, pero pesado; úsalo solo en renders grandes donde no importe el peso.</li>
+              <li><strong>Resolución:</strong> para un mueble en 2D basta 800–1600 px; para render, 2K mínimo.</li>
+            </ul>
+
+            <div class="callout">
+              <span class="callout-title">Tip: organiza tus texturas</span>
+              Crea en tu equipo una carpeta única <code>Texturas</code> (o <code>Assets</code>) con subcarpetas (Madera, Piedra, Hormigón, Césped, Genérico). Todos los DWG hacen referencia a esa misma ruta o a archivos <span class="cmd-inline">XREF</span> con rutas relativas: así al pasarte de PC no pierdes ninguna imagen.
+            </div>
+
             <div class="table-scroll">
             <table class="table-cad">
               <thead><tr><th>Comando</th><th>Qué hace</th></tr></thead>
@@ -289,6 +302,7 @@
           <li><a href="../trucos.html">Trucos</a></li>
           <li><a href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
           <li><a href="../recursos.html">Recursos</a></li>
+          <li><a href="../glosario.html">Glosario</a></li>
           <li><a href="../faq.html">FAQ</a></li>
         </ul>
       </div>

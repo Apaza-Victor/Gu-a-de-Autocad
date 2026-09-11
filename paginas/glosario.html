@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glosario — AutoCAD Guía</title>
+<link rel="canonical" href="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/glosario.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/glosario.html">
+<meta property="og:site_name" content="AutoCAD Guía">
+<meta property="og:title" content="Glosario de arquitectura y de AutoCAD">
+<meta property="og:description" content="Diccionario con todos los términos usados en la guía: arquitectura, construcción, dibujo técnico, AutoCAD y unidades de medida.">
+<meta property="og:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Glosario de arquitectura y de AutoCAD">
+<meta name="twitter:description" content="Diccionario con todos los términos usados en la guía: arquitectura, construcción, dibujo técnico, AutoCAD y unidades de medida.">
+<meta name="twitter:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="description" content="Glosario de términos de arquitectura, construcción, dibujo técnico y AutoCAD usados en esta guía.">
+
+<link rel="icon" type="image/svg+xml" href="../assets/img/autocad-2.svg">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<!-- Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<!-- Prism.js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar navbar-cad navbar-expand-lg">
+  <div class="container container-xl">
+    <a class="navbar-brand brand-cad" href="../index.html">
+      <img class="brand-logo" src="../assets/img/autocad-2.svg" alt="AutoCAD">
+      <span>AutoCAD<small class="d-block" data-i18n-html="brand.sub">Guía · Teoría &amp; Práctica</small></span>
+    </a>
+    <div class="d-flex align-items-center gap-2 nav-actions order-lg-last">
+      <button class="icon-btn" id="searchToggle" title="Buscar" data-i18n-title="ui.search"><i class="bi bi-search"></i></button>
+      <button class="icon-btn" id="themeToggle" title="Cambiar tema" data-i18n-title="ui.theme"><i class="bi bi-moon-stars"></i></button>
+      <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
+        <i class="bi bi-list fs-4"></i>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navCad">
+      <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../index.html" data-i18n="nav.home">Inicio</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-cad dropdown-toggle" href="#" data-bs-toggle="dropdown" data-i18n="nav.levels">Niveles</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="nivel-1-fundamentos/index.html">Nivel 1 · Fundamentos</a></li>
+            <li><a class="dropdown-item" href="nivel-2-dibujo-2d/index.html">Nivel 2 · Dibujo 2D</a></li>
+            <li><a class="dropdown-item" href="nivel-3-organizacion/index.html">Nivel 3 · Organización</a></li>
+            <li><a class="dropdown-item" href="nivel-4-modelado-3d/index.html">Nivel 4 · Modelado 3D</a></li>
+            <li><a class="dropdown-item" href="nivel-5-avanzado/index.html">Nivel 5 · Avanzado</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="comandos.html" data-i18n="nav.commands">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="ejemplos-visuales.html" data-i18n="nav.visual">Visuales</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="trucos.html" data-i18n="nav.tips">Trucos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="tips.html" data-i18n="nav.tutorials">Tips</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="recursos.html" data-i18n="nav.resources">Recursos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad active" href="glosario.html" data-i18n="nav.glosario">Glosario</a></li>
+      </ul>
+
+      <div class="d-flex align-items-center gap-2 nav-actions-menu ms-lg-auto">
+        <span class="coord-readout d-none d-lg-inline-flex">X: <span id="coordX">000.00</span>&nbsp; Y: <span id="coordY">000.00</span></span>
+        <button class="lang-toggle" id="langToggle" title="Cambiar idioma" data-i18n-title="ui.lang">
+          <i class="bi bi-translate lang-toggle-flag"></i>
+          <span class="lang-toggle-text">EN</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== CABECERA ===================== -->
+<header class="faq-hero" id="main-content">
+  <div class="container container-xl position-relative" style="text-align:center">
+    <p class="eyebrow justify-content-center" data-i18n="glosario.eyebrow">Glosario</p>
+    <h1 style="font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.1;margin-bottom:.8rem" data-i18n="glosario.hero.title">Términos de arquitectura y de AutoCAD</h1>
+    <p style="color:var(--text-muted);font-size:1.05rem;max-width:620px;margin:0 auto" data-i18n="glosario.hero.desc">Diccionario con los términos usados en esta guía: arquitectura, construcción, dibujo técnico y AutoCAD, ordenados por categorías.</p>
+  </div>
+</header>
+
+<!-- ===================== GLOSARIO ===================== -->
+<main>
+  <div class="container container-xl py-4">
+    <div class="content-article">
+
+      <p>A lo largo de la guía aparecen términos de arquitectura y construcción que también se usan en los planos y en el día a día de la obra. Aquí tienes su significado, ordenado por categorías. Si buscas un comando concreto, revisa el <a href="comandos.html">diccionario de comandos</a>.</p>
+
+      <div class="mono small text-uppercase" style="color:var(--cyan);letter-spacing:.14em">Índice del glosario</div>
+      <p class="mb-5">
+        <a href="#estructura" class="me-3" style="color:var(--cyan)">1 · Estructura</a>
+        <a href="#huecos" class="me-3" style="color:var(--cyan)">2 · Muros y huecos</a>
+        <a href="#acabados" class="me-3" style="color:var(--cyan)">3 · Cerramientos y acabados</a>
+        <a href="#escaleras" class="me-3" style="color:var(--cyan)">4 · Escaleras</a>
+        <a href="#terreno" class="me-3" style="color:var(--cyan)">5 · Terreno y cimentación</a>
+        <a href="#distribucion" class="me-3" style="color:var(--cyan)">6 · Distribución y ambientes</a>
+        <a href="#planos" class="me-3" style="color:var(--cyan)">7 · Planos y documentación</a>
+        <a href="#autocad" class="me-3" style="color:var(--cyan)">8 · AutoCAD y CAD</a>
+        <a href="#unidades" style="color:var(--cyan)">9 · Medidas y unidades</a>
+      </p>
+
+      <section id="estructura">
+        <h2><span class="sec-num">1</span> Estructura y elementos resistentes</h2>
+        <div class="table-scroll">
+          <table class="table-cad">
+            <thead><tr><th>Término</th><th>Qué significa</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Muro portante</strong> (o muro de carga)</td><td>Muro que soporta el peso de los forjados y la cubierta y lo transmite a la cimentación. No debe picarse ni abrirse sin cálculo previo.</td></tr>
+              <tr><td><strong>Tabique</strong></td><td>Muro delgado sin función estructural: solo divide espacios y se apoya sobre los forjados.</td></tr>
+              <tr><td><strong>Pilar</strong></td><td>Elemento vertical (hormigón, acero o madera) que transmite las cargas de las vigas y los forjados hasta la cimentación.</td></tr>
+              <tr><td><strong>Machón</strong></td><td>Elemento vertical corto o pilar de menor sección que recibe cargas puntuales (cabezas de vigas, pasos de tejado). Muy usado en cimentación y estructuras de madera. Ver <a href="nivel-3-organizacion/zapatas-machones.html">zapatas y machones</a>.</td></tr>
+              <tr><td><strong>Viga</strong></td><td>Elemento horizontal que recoge las cargas del forjado y las lleva a pilares o muros.</td></tr>
+              <tr><td><strong>Jácena</strong></td><td>Viga principal de gran tamaño sobre la que se apoyan otras vigas secundarias.</td></tr>
+              <tr><td><strong>Forjado</strong></td><td>Elemento horizontal (hormigón, madera o metálico) que forma el piso de cada planta y reparte las cargas hacia los apoyos.</td></tr>
+              <tr><td><strong>Losa</strong></td><td>Forjado de hormigón armado de espesor continuo, hecho en obra. Cuando cubre toda la planta se llama losa maciza.</td></tr>
+              <tr><td><strong>Cercha</strong></td><td>Estructura triangular y ligera para cubiertas y grandes luces. En tejados pequeños se llama tijera o cercha par y nudillo.</td></tr>
+              <tr><td><strong>Dintel</strong></td><td>Elemento horizontal que salva la parte superior de un vano (sobre puertas y ventanas) y reparte la carga a las jambas.</td></tr>
+              <tr><td><strong>Zapata</strong></td><td>Elemento de cimentación que reparte la carga de un pilar o muro al terreno. Tipos habituales: aislada, corrida, combinada y arriostrada. Ver <a href="nivel-3-organizacion/zapatas-machones.html">zapatas y machones</a>.</td></tr>
+              <tr><td><strong>Losa de cimentación</strong></td><td>Losa única bajo toda la huella del edificio. Se usa con cargas altas o terrenos con poca resistencia.</td></tr>
+              <tr><td><strong>Encepado</strong></td><td>Elemento que une la cabeza de varios pilotes y sobre el que apoya el pilar.</td></tr>
+              <tr><td><strong>Pilote</strong></td><td>Columna larga de hormigón o acero hundida en el terreno hasta alcanzar una capa firme.</td></tr>
+              <tr><td><strong>Cadena de atado</strong> (viga centradora)</td><td>Viga de cimentación que une zapatas para repartir las cargas y evitar asientos diferenciales.</td></tr>
+              <tr><td><strong>Armadura</strong></td><td>Conjunto de barras y estribos de acero que refuerza el hormigón (parrilla de las zapatas, mallas de los forjados).</td></tr>
+              <tr><td><strong>Recubrimiento</strong></td><td>Capa de hormigón que protege las armaduras del óxido y del fuego (debe respetarse durante el montaje).</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="huecos">
+        <h2><span class="sec-num">2</span> Muros y huecos</h2>
+        <div class="table-scroll">
+          <table class="table-cad">
+            <thead><tr><th>Término</th><th>Qué significa</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Vano</strong></td><td>Hueco practicado en un muro para alojar una puerta, una ventana o un paso.</td></tr>
+              <tr><td><strong>Luz</strong></td><td>Ancho libre del vano o la distancia libre entre dos apoyos de una viga.</td></tr>
+              <tr><td><strong>Hoja</strong></td><td>Parte móvil que se abre de una puerta o ventana. También se llama hoja a la banda de un ventanal.</td></tr>
+              <tr><td><strong>Marco</strong> (cerco)</td><td>Bastidor fijo encajado en el vano que recibe la hoja y la sujeta.</td></tr>
+              <tr><td><strong>Jamba</strong></td><td>Cada uno de los dos elementos verticales laterales del marco de un vano.</td></tr>
+              <tr><td><strong>Alféizar</strong></td><td>Plano inferior del hueco de una ventana, normalmente a la altura de la repisa interior.</td></tr>
+              <tr><td><strong>Antepecho</strong></td><td>Murete o barandilla de protección que llega hasta la cintura, bajo una ventana o en terrazas y azoteas.</td></tr>
+              <tr><td><strong>Altura libre</strong></td><td>Distancia vertical mínima entre el pavimento y el techo. En zonas de paso se exige un mínimo habitual de 2,20 m.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="acabados">
+        <h2><span class="sec-num">3</span> Cerramientos y acabados</h2>
+        <div class="table-scroll">
+          <table class="table-cad">
+            <thead><tr><th>Término</th><th>Qué significa</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Cerramiento</strong></td><td>Elemento que cierra la envolvente del edificio (fachadas y cubierta) y separa el interior del exterior.</td></tr>
+              <tr><td><strong>Fachada</strong></td><td>Cada una de las caras exteriores del edificio; el alzado visto desde fuera.</td></tr>
+              <tr><td><strong>Cubierta</strong></td><td>Elemento que cubre y cierra el edificio por arriba. Puede ser inclinada o plana, y transitable o no.</td></tr>
+              <tr><td><strong>Pavimento</strong></td><td>Acabado del suelo sobre el que se pisa: cerámica, madera, microcemento, porcelanato...</td></tr>
+              <tr><td><strong>Revestimiento</strong></td><td>Capa de acabado de los muros: pintura, yeso, alicatado, piedra...</td></tr>
+              <tr><td><strong>Aislamiento</strong></td><td>Material que reduce el paso de calor, ruido o humedad entre el interior y el exterior (lana de roca, poliestireno, corcho).</td></tr>
+              <tr><td><strong>Impermeabilización</strong></td><td>Capa que impide el paso del agua: cubiertas planas, sótanos, baños y terrazas.</td></tr>
+              <tr><td><strong>Zócalo</strong></td><td>Faja de remate en la base del muro junto al pavimento, que protege y decora.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="escaleras">
+        <h2><span class="sec-num">4</span> Escaleras y circulación vertical</h2>
+        <div class="table-scroll">
+          <table class="table-cad">
+            <thead><tr><th>Término</th><th>Qué significa</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Escalera</strong></td><td>Elemento de circulación vertical formado por una sucesión de peldaños. Ver <a href="nivel-3-organizacion/dimensiones-arquitectura.html">escaleras en la lección de medidas</a>.</td></tr>
+              <tr><td><strong>Huella</strong></td><td>Superficie horizontal del peldaño donde se apoya el pie.</td></tr>
+              <tr><td><strong>Contrahuella</strong></td><td>Parte vertical del peldaño. Una escalera cómoda cumple la fórmula 2·contrahuella + huella ≈ 60-64 cm.</td></tr>
+              <tr><td><strong>Tramo</strong></td><td>Serie continua de peldaños sin interrupción entre dos mesetas.</td></tr>
+              <tr><td><strong>Meseta</strong> (descansillo)</td><td>Plataforma entre dos tramos de la escalera que permite descansar y girar.</td></tr>
+              <tr><td><strong>Pasamanos</strong></td><td>Barra de apoyo continua a lo largo de la escalera, a una altura de 90-100 cm sobre el borde de la huella.</td></tr>
+              <tr><td><strong>Barandilla</strong></td><td>Protección lateral de escaleras, terrazas y balcones. En desniveles de más de un metro debe superar los 100 cm de altura.</td></tr>
+              <tr><td><strong>Rampa</strong></td><td>Superficie inclinada de circulación, usada para accesibilidad. Se mide por su pendiente en %.</td></tr>
+              <tr><td><strong>Pendiente</strong></td><td>Inclinación de una rampa, escalera o cubierta, expresada en porcentaje o grados.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="terreno">
+        <h2><span class="sec-num">5</span> Terreno y cimentación de obra</h2>
+        <div class="table-scroll">
+          <table class="table-cad">
+            <thead><tr><th>Término</th><th>Qué significa</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Replanteo</strong></td><td>Marcar sobre el terreno (con cuerdas, estacas y pintura) la posición y dimensiones exactas de la obra según los planos, antes de excavar.</td></tr>
+              <tr><td><strong>Excavación</strong></td><td>Movimiento de tierras para alojar la cimentación, los sótanos o las instalaciones.</td></tr>
+              <tr><td><strong>Desplante</strong></td><td>Profundidad a la que se apoya la cimentación sobre el terreno firme.</td></tr>
+              <tr><td><strong>Terreno firme</strong></td><td>Capa del terreno capaz de soportar las cargas del edificio sin asientos.</td></tr>
+              <tr><td><strong>Nivel freático</strong></td><td>Profundidad a la que se encuentra el agua del terreno. Condiciona sótanos y tablas de cimentación.</td></tr>
+              <tr><td><strong>Hormigón de limpieza</strong></td><td>Capa de hormigón pobre que regulariza el fondo de la excavación antes de armar las zapatas.</td></tr>
+              <tr><td><strong>Asiento</strong></td><td>Hundimiento del terreno bajo la cimentación. Si es desigual entre zapatas, hablamos de asiento diferencial y puede fisurar la obra.</td></tr>
+              <tr><td><strong>Solera</strong></td><td>Losa de hormigón que forma el pavimento de la planta baja, apoyada directamente sobre el terreno.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="distribucion">
+        <h2><span class="sec-num">6</span> Distribución y ambientes</h2>
+        <div class="table-scroll">
+          <table class="table-cad">
+            <thead><tr><th>Término</th><th>Qué significa</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Superficie útil</strong></td><td>Superficie interior realmente pisable de un local, sin contar muros ni tabiques.</td></tr>
+              <tr><td><strong>Superficie construida</strong></td><td>Superficie útil más la ocupada por muros, tabiques, escaleras y zonas comunes. Sobre esta se suele facturar.</td></tr>
+              <tr><td><strong>Segregación / ambientes</strong></td><td>Forma de agrupar los espacios en un plano: zona de día (salón, cocina) y zona de noche (dormitorios), separadas por un distribuidor.</td></tr>
+              <tr><td><strong>Espacio diáfano</strong></td><td>Planta o local sin divisiones internas (cocinas abiertas, oficinas en planta libre).</td></tr>
+              <tr><td><strong>Baño</strong> y <strong>aseo</strong></td><td>Aseo es el local con lavabo e inodoro; baño añade uno o más aparatos (ducha, bañera, bidé).</td></tr>
+              <tr><td><strong>Lavandería</strong></td><td>Espacio destinado a la colada: lavadora, secadora y tendedero. A menudo va junto a la cocina.</td></tr>
+              <tr><td><strong>Terraza</strong> / <strong>balcón</strong></td><td>Espacio exterior sobre el forjado. La terraza es más amplia y puede ser cubierta o descubierta; el balcón es una plataforma volada protegida.</td></tr>
+              <tr><td><strong>Porche</strong></td><td>Espacio semicubierto pegado a la fachada o al patio, de transición entre interior y exterior.</td></tr>
+              <tr><td><strong>Trastero</strong></td><td>Local de almacenamiento auxiliar, normalmente con acceso desde el distribuidor o el garaje.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="planos">
+        <h2><span class="sec-num">7</span> Planos y documentación técnica</h2>
+        <div class="table-scroll">
+          <table class="table-cad">
+            <thead><tr><th>Término</th><th>Qué significa</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Plano</strong></td><td>Representación gráfica a escala de un proyecto, con todas sus medidas.</td></tr>
+              <tr><td><strong>Croquis</strong></td><td>Dibujo esquemático a mano alzada, sin escala, para tomar datos o transmitir una idea.</td></tr>
+              <tr><td><strong>Planta</strong></td><td>Vista del edificio cortado por un plano horizontal (a unos 1,20 m del suelo): planta baja, planta tipo, planta de cubierta.</td></tr>
+              <tr><td><strong>Alzado</strong></td><td>Vista vertical exterior del edificio (cada fachada se dibuja como un alzado).</td></tr>
+              <tr><td><strong>Sección</strong> (corte)</td><td>Vista del edificio cortado por un plano vertical, para ver alturas, grosor de forjados y escaleras por dentro.</td></tr>
+              <tr><td><strong>Detalle constructivo</strong></td><td>Dibujo a gran escala (1:10 a 1:20) de un punto concreto: encuentro de cubierta, zapata, esquina de fachada...</td></tr>
+              <tr><td><strong>Escala</strong></td><td>Relación entre la medida dibujada y la real. 1:100 significa que el dibujo es 100 veces más pequeño que la realidad.</td></tr>
+              <tr><td><strong>Cota</strong> (acotación)</td><td>Medida indicada sobre el dibujo con líneas de cota y texto. Ver <a href="nivel-3-organizacion/dimensiones-arquitectura.html">lección de medidas arquitectónicas</a>.</td></tr>
+              <tr><td><strong>Ejes</strong></td><td>Líneas guía que organizan la cuadrícula del plano y sitúan pilares y muros.</td></tr>
+              <tr><td><strong>Cajetín</strong> (rótulo)</td><td>Cuadro del plano que recoge título, autor, escala, fecha y número de la lámina.</td></tr>
+              <tr><td><strong>Lámina</strong></td><td>Hoja de plano normalizada (A0, A1, A2, A3, A4).</td></tr>
+              <tr><td><strong>Levantamiento</strong></td><td>Toma de medidas del estado real de una construcción existente para poder dibujarla.</td></tr>
+              <tr><td><strong>Anteproyecto</strong></td><td>Fase inicial del proyecto: idea, superficies y distribución general, sin detalles de obra.</td></tr>
+              <tr><td><strong>Memoria</strong></td><td>Documento técnico que describe y justifica el proyecto.</td></tr>
+              <tr><td><strong>Presupuesto</strong></td><td>Valoración económica de la obra: mediciones por partidas multiplicadas por sus precios.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="autocad">
+        <h2><span class="sec-num">8</span> AutoCAD y CAD</h2>
+        <div class="table-scroll">
+          <table class="table-cad">
+            <thead><tr><th>Término</th><th>Qué significa</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Capa</strong> (layer)</td><td>Nivel organizativo que agrupa objetos con el mismo color, tipo de línea y grosor. Ver <a href="nivel-1-fundamentos/capas.html">lección de capas</a>.</td></tr>
+              <tr><td><strong>Bloque</strong></td><td>Conjunto de objetos agrupados bajo un nombre y reutilizable en el mismo dibujo o en otros. Ver <a href="nivel-2-dibujo-2d/wblock-biblioteca.html">biblioteca de bloques</a>.</td></tr>
+              <tr><td><strong>Bloque dinámico</strong></td><td>Bloque con parámetros (rotación, escala, estirado) que se cambian al insertarlo sin volver a dibujarlo.</td></tr>
+              <tr><td><strong>Atributo</strong></td><td>Texto variable dentro de un bloque: número de puerta, material, texto del cajetín.</td></tr>
+              <tr><td><strong>Referencia externa</strong> (XREF)</td><td>Dibujo DWG enlazado como fondo, no insertado: si cambia el original, el enlazado se actualiza.</td></tr>
+              <tr><td><strong>Espacio modelo</strong></td><td>Zona infinita donde se dibuja todo a escala real 1:1.</td></tr>
+              <tr><td><strong>Espacio papel</strong> (layout)</td><td>Hoja de impresión donde se organiza el plano: cajetín, escalas y ventanas gráficas.</td></tr>
+              <tr><td><strong>Ventana gráfica</strong> (viewport)</td><td>Recorte dibujado en el layout que muestra una vista del modelo a una escala determinada.</td></tr>
+              <tr><td><strong>Sombreado</strong> (hatch)</td><td>Relleno de un área con un patrón: tierra, ladrillo, aislante... Ver <a href="nivel-1-fundamentos/hatch.html">lección de sombreados</a>.</td></tr>
+              <tr><td><strong>Polilínea</strong></td><td>Elemento formado por varios segmentos unidos en un único objeto. Ver <a href="nivel-1-fundamentos/polilinea.html">lección de polilínea</a>.</td></tr>
+              <tr><td><strong>Matriz</strong> (ARRAY)</td><td>Repetición de objetos en filas y columnas, en círculo o a lo largo de una ruta.</td></tr>
+              <tr><td><strong>Estilo de cota</strong></td><td>Normas que definen la apariencia de las cotas: flechas, texto, unidades, precisión.</td></tr>
+              <tr><td><strong>Tipo de línea</strong></td><td>Patrón visual de la línea: continua, discontinua, trazo y punto.</td></tr>
+              <tr><td><strong>Grosor de línea</strong></td><td>Espesor de trazado de los objetos al imprimir. Conviene asignarlo por capa, no objeto a objeto.</td></tr>
+              <tr><td><strong>Estilo de trazado</strong></td><td>Configuración de impresión que convierte colores en grosores y negro (archivos .ctb o .stb).</td></tr>
+              <tr><td><strong>Plantilla</strong> (.DWT)</td><td>Archivo de partida con capas, estilos y cajetín ya configurados, para no empezar de cero cada proyecto.</td></tr>
+              <tr><td><strong>SCP</strong> (UCS)</td><td>Sistema de coordenadas del dibujo: define el origen y la orientación de los ejes X, Y y Z.</td></tr>
+              <tr><td><strong>ORTO</strong></td><td>Modo que limita el cursor a direcciones horizontales y verticales (tecla F8).</td></tr>
+              <tr><td><strong>OSNAP</strong> (REFENT)</td><td>Referencia a objetos: engancha el cursor a extremos, medios, centros e intersecciones (tecla F3).</td></tr>
+              <tr><td><strong>PURGE</strong></td><td>Comando que elimina capas, bloques y estilos no utilizados. Ayuda a reducir el peso del archivo.</td></tr>
+              <tr><td><strong>AUDIT</strong></td><td>Comando que revisa y corrige errores internos del dibujo.</td></tr>
+              <tr><td><strong>Escala anotativa</strong></td><td>Sistema que ajusta automáticamente el tamaño de texto y cotas al cambiar la escala de las ventanas gráficas.</td></tr>
+              <tr><td><strong>DWG / DXF / DWT</strong></td><td>Formatos de AutoCAD: DWG es el nativo, DXF el de intercambio y DWT el de plantillas.</td></tr>
+              <tr><td><strong>Render</strong></td><td>Generación de una imagen realista (luces, materiales y sombras) a partir del modelo 3D.</td></tr>
+              <tr><td><strong>BIM</strong></td><td>Metodología de modelado de la información del edificio (software como Revit): cada elemento es un objeto con datos, más allá del dibujo 2D.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="unidades">
+        <h2><span class="sec-num">9</span> Medidas y unidades</h2>
+        <div class="table-scroll">
+          <table class="table-cad">
+            <thead><tr><th>Término</th><th>Qué significa</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Milímetro</strong> (mm)</td><td>Unidad base de trabajo en los planos de construcción. AutoCAD se dibuja normalmente en mm.</td></tr>
+              <tr><td><strong>Centímetro</strong> (cm)</td><td>10 milímetros. Muy cómodo para medidas de muebles y ambientes.</td></tr>
+              <tr><td><strong>Metro</strong> (m)</td><td>100 centímetros o 1000 milímetros. La unidad habitual de ambientes completos.</td></tr>
+              <tr><td><strong>Regla rápida</strong></td><td>1 m = 100 cm = 1000 mm. Para pasar de m a cm se multiplica por 100; de cm a mm por 10, y al revés se divide. Ver <a href="nivel-3-organizacion/dimensiones-arquitectura.html">tabla de equivalencias</a>.</td></tr>
+              <tr><td><strong>Área</strong></td><td>Superficie encerrada por un recinto, en m². El comando AREA la calcula y AutoCAD la muestra en la unidad actual.</td></tr>
+              <tr><td><strong>Perímetro</strong></td><td>Longitud del contorno de una figura, en metros lineales.</td></tr>
+              <tr><td><strong>Ancho de paso</strong> de puerta</td><td>Anchura libre por la que se camina: lo habitual es de 0,80 a 0,90 m (hojas de 62,5 / 72,5 / 82,5 cm).</td></tr>
+              <tr><td><strong>Encimera</strong></td><td>Plano de trabajo de la cocina, a una altura cómoda de 0,85-0,90 m.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<!-- ===================== CTA FINAL ===================== -->
+<section class="cta-final" data-aos="fade-up">
+  <div class="container container-xl">
+    <p class="eyebrow justify-content-center" data-i18n="glosario.cta.eyebrow">¿No encuentras un término?</p>
+    <h2 style="font-size:clamp(1.4rem,2.5vw,2rem)" data-i18n="glosario.cta.title">Consulta las FAQ o el diccionario de comandos</h2>
+    <p class="text-muted-custom mb-4" data-i18n="glosario.cta.desc">Si buscas una duda concreta o un comando específico, revisa estas dos páginas complementarias.</p>
+    <div class="d-flex flex-wrap gap-3 justify-content-center">
+      <a href="faq.html" class="btn-cad-primary"><i class="bi bi-question-circle me-1"></i> <span data-i18n="glosario.cta.faq">Ver preguntas frecuentes</span></a>
+      <a href="comandos.html" class="btn-cad-outline"><i class="bi bi-terminal me-1"></i> <span data-i18n="glosario.cta.cmds">Ver comandos</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="container container-xl">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <div class="brand-cad mb-2"><img class="brand-logo" src="../assets/img/autocad-2.svg" alt="AutoCAD"><span>AutoCAD Guía</span></div>
+        <p data-i18n="footer.disclaimer">Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.levels">Niveles</h6>
+        <ul class="list-unstyled">
+          <li><a href="nivel-1-fundamentos/index.html">Fundamentos</a></li>
+          <li><a href="nivel-2-dibujo-2d/index.html">Dibujo 2D</a></li>
+          <li><a href="nivel-3-organizacion/index.html">Organización</a></li>
+          <li><a href="nivel-4-modelado-3d/index.html">Modelado 3D</a></li>
+          <li><a href="nivel-5-avanzado/index.html">Nivel experto</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.guide">Guía</h6>
+        <ul class="list-unstyled">
+          <li><a href="comandos.html">Comandos</a></li>
+          <li><a href="ejemplos-visuales.html">Ejemplos</a></li>
+          <li><a href="trucos.html">Trucos</a></li>
+          <li><a href="tips.html" data-i18n="nav.tutorials">Tips</a></li>
+          <li><a href="recursos.html">Recursos</a></li>
+          <li><a href="glosario.html">Glosario</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.follow">Síguenos</h6>
+        <div class="d-flex gap-2">
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-5 mb-4" style="border-color:var(--border-soft)">
+    <p class="mb-0 small" data-i18n="footer.copyright">© 2026 Victor Apaza. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<div class="command-line-bar" id="cmdBar">
+  <div class="command-line-inner">
+    <span class="prompt-sign" data-i18n="ui.command">Comando:</span>
+    <span id="cmd-typed"></span><span class="cursor-blink"></span>
+    <button class="cl-close" id="cmdClose" title="Ocultar" data-i18n-title="ui.hide"><i class="bi bi-x-lg"></i></button>
+  </div>
+</div>
+
+<!-- ===================== BUSCADOR GLOBAL ===================== -->
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Buscar en la guía">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="bi bi-search"></i>
+      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar" data-i18n-placeholder="ui.searchPlaceholder">
+      <kbd class="search-kbd">ESC</kbd>
+    </div>
+    <div class="search-results" id="globalSearchResults">
+      <div class="search-empty" data-i18n="ui.typeToSearch">Escribe al menos 2 caracteres para buscar...</div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+<script src="../assets/js/i18n.js"></script>
+<script src="../assets/js/search-index.js"></script>
+<script src="../assets/js/animations.js"></script>
+<script src="../assets/js/main.js"></script>
+
+</body>
+</html>

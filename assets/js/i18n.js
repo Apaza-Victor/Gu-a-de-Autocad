@@ -20,6 +20,7 @@
       'nav.tutorials': 'Tips',
       'nav.resources': 'Recursos',
       'nav.faq': 'FAQ',
+      'nav.glosario': 'Glosario',
       'nav.lang': 'EN',
 
       /* ---- Common UI ---- */
@@ -766,6 +767,15 @@
       'faq.cta.desc': 'Si tu pregunta no está aquí, probablemente encuentres la respuesta en nuestro contenido o buscando el comando específico.',
       'faq.cta.cmds': 'Ver comandos',
       'faq.cta.start': 'Empezar desde cero',
+
+      'glosario.eyebrow': 'Glosario',
+      'glosario.hero.title': 'Términos de arquitectura y de AutoCAD',
+      'glosario.hero.desc': 'Diccionario con los términos usados en esta guía: arquitectura, construcción, dibujo técnico y AutoCAD, ordenados por categorías.',
+      'glosario.cta.eyebrow': '¿No encuentras un término?',
+      'glosario.cta.title': 'Consulta las FAQ o el diccionario de comandos',
+      'glosario.cta.desc': 'Si buscas una duda concreta o un comando específico, revisa estas dos páginas complementarias.',
+      'glosario.cta.faq': 'Ver preguntas frecuentes',
+      'glosario.cta.cmds': 'Ver comandos',
 
       /* ---- Tips page ---- */
       'tips.eyebrow': 'Aprende más rápido',
@@ -2021,6 +2031,7 @@
       'nav.tutorials': 'Tutorials',
       'nav.resources': 'Resources',
       'nav.faq': 'FAQ',
+      'nav.glosario': 'Glossary',
       'nav.lang': 'ES',
 
       /* ---- Common UI ---- */
@@ -2575,6 +2586,15 @@
       'faq.cta.desc': 'If your question isn\'t here, you\'ll probably find the answer in our content or by searching for the specific command.',
       'faq.cta.cmds': 'View commands',
       'faq.cta.start': 'Start from scratch',
+
+      'glosario.eyebrow': 'Glossary',
+      'glosario.hero.title': 'Architecture and AutoCAD terms',
+      'glosario.hero.desc': 'Dictionary with the terms used in this guide: architecture, construction, technical drawing and AutoCAD, organized by category.',
+      'glosario.cta.eyebrow': 'Can\'t find a term?',
+      'glosario.cta.title': 'Check the FAQ or the command dictionary',
+      'glosario.cta.desc': 'If you need a specific answer or command, check these two complementary pages.',
+      'glosario.cta.faq': 'View FAQs',
+      'glosario.cta.cmds': 'View commands',
 
       /* ---- Tips page ---- */
       'tips.eyebrow': 'Learn faster',

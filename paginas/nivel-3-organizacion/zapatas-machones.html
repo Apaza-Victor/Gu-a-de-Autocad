@@ -86,7 +86,7 @@
         <li class="nav-item"><a class="nav-link nav-link-cad" href="../trucos.html" data-i18n="nav.tips">Trucos</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="../recursos.html" data-i18n="nav.resources">Recursos</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-cad" href="../faq.html" data-i18n="nav.faq">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../glosario.html" data-i18n="nav.glosario">Glosario</a></li>
       </ul>
 
       <div class="d-flex align-items-center gap-2 nav-actions-menu ms-lg-auto">
@@ -105,8 +105,8 @@
     <p class="crumb"><a href="../../index.html">Inicio</a> / <a href="../../index.html#niveles">Niveles</a> / <a href="index.html">Organización</a> / Tema 13</p>
     <span class="eyebrow" data-i18n="lvl3.eyebrow">Nivel 03 · Intermedio</span>
     <h1>Zapatas, machones y cimentaciones</h1>
-    <div class="level-progress-bar" data-level-prefix="nivel3" data-level-total="20"><div class="fill"></div></div>
-    <p class="level-progress-label">0 de 20 temas completados · 0%</p>
+    <div class="level-progress-bar" data-level-prefix="nivel3" data-level-total="21"><div class="fill"></div></div>
+    <p class="level-progress-label">0 de 21 temas completados · 0%</p>
   </div>
 </header>
 
@@ -138,6 +138,7 @@
             <li><a href="sheet-sets.html"><span class="toc-check"></span> Conjuntos de planos</a></li>
             <li><a href="etransmit.html"><span class="toc-check"></span> Transmitir y empaquetar</a></li>
             <li><a href="importar-exportar.html" data-toc="nivel3-importar-exportar"><span class="toc-check"></span> Importar y exportar</a></li>
+            <li><a href="dimensiones-arquitectura.html" data-toc="nivel3-dimensiones-arquitectura"><span class="toc-check"></span> Dimensiones y medidas de arquitectura</a></li>
             <li><a href="index.html#autoevaluacion"><span class="toc-check"></span> Autoevaluación</a></li>
           </ul>
           <hr style="border-color:var(--border-soft)" class="my-4">
@@ -260,6 +261,82 @@
             </table>
             </div>
 
+            <h3>5. Tipos de zapatas y cimentaciones: cuál usar según la construcción</h3>
+            <p>No existe "la" zapata: el tipo de cimentación depende de la estructura que se construye (casa de muros portantes, edificio con pórticos, nave…) y del terreno. La tabla inferior resume la clasificación habitual de los cimientos directos (basada en el CTE DB-SE, tabla 4.1).</p>
+
+            <div class="table-scroll">
+            <table class="table-cad">
+              <thead><tr><th>Tipo de cimentación</th><th>Qué soporta</th><th>Cuándo se usa</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Zapata aislada</strong></td><td>Un solo pilar (interior, medianero o de esquina)</td><td>Estructuras de pórticos con terreno firme y homogéneo: casas, edificios bajos y naves ligeras. Se unen con vigas de atado</td></tr>
+                <tr><td><strong>Zapata combinada</strong></td><td>Dos o más pilares contiguos</td><td>Pilares muy próximos, cargas altas o cuando las zapatas aisladas se solaparían; también para reducir asientos diferenciales</td></tr>
+                <tr><td><strong>Zapata corrida</strong></td><td>Alineación de 3+ pilares o un muro de carga</td><td>Muros portantes de vivienda unifamiliar, cerramientos y naves; la más habitual y económica en casas de 1–2 plantas</td></tr>
+                <tr><td><strong>Pozo de cimentación</strong></td><td>Un pilar aislado</td><td>Refuerzos puntuales o terrenos con huecos; menos frecuente en obra nueva</td></tr>
+                <tr><td><strong>Emparrillado</strong></td><td>Retícula de pilares y muros</td><td>Terreno deformable o heterogéneo con previsión de asientos; zapatas corridas entrecruzadas que rigidizan la cimentación</td></tr>
+                <tr><td><strong>Losa de cimentación</strong></td><td>Todos los pilares y muros de la planta</td><td>Suelo blando o heterogéneo, cuando las zapatas ocuparían más del 50% de la planta o hay sótanos con nivel freático</td></tr>
+                <tr><td><strong>Pilotes + encepado</strong> (profunda)</td><td>Cargas puntuales muy altas</td><td>Cuando el suelo firme está muy profundo y ninguna cimentación directa sirve (terrenos malos o cargas de gran magnitud)</td></tr>
+              </tbody>
+            </table>
+            </div>
+
+            <ul>
+              <li><strong>Vivienda unifamiliar con muros portantes:</strong> zapata corrida bajo los muros (la solución por defecto y más barata).</li>
+              <li><strong>Casa o edificio con estructura de columnas y pórticos:</strong> zapata aislada bajo cada columna, unidas con vigas de atado.</li>
+              <li><strong>Edificio grande o terreno dudoso:</strong> zapata combinada o corrida, losa de cimentación, e incluso pilotes según el estudio de suelos.</li>
+            </ul>
+
+            <div class="callout warn">
+              <span class="callout-title">Criterio rápido</span>
+              Cargas puntuales + terreno firme = aislada. Cargas de muro = corrida. Pilares demasiado juntos = combinada. A partir de ahí, si el suelo es blando o las zapatas cubren más de la mitad de la planta, pasa a losa. La decisión final la toma siempre el ingeniero con el estudio geotécnico y el cálculo estructural.
+            </div>
+
+            <h3>6. Medidas habituales de referencia (orientativas)</h3>
+            <p>Estos valores sirven para <strong>predimensionar</strong> y dar contexto a tu dibujo. Son medidas típicas de la práctica constructiva; la medida final siempre la confirma el ingeniero con el cálculo estructural.</p>
+
+            <div class="table-scroll">
+            <table class="table-cad">
+              <thead><tr><th>Elemento</th><th>Dimensión típica</th><th>Cuándo se usa</th></tr></thead>
+              <tbody>
+                <tr><td>Zapata aislada de vivienda</td><td>1.00 × 1.00 m · canto 0.40 m</td><td>Casas de 1–2 plantas sobre terreno firme</td></tr>
+                <tr><td>Zapata aislada ligera</td><td>0.80 × 0.80 m · canto 0.30 m</td><td>Garajes, anejos y estructuras muy ligeras</td></tr>
+                <tr><td>Zapata aislada de nave o edificio grande</td><td>1.50–2.50 m de lado · canto 0.50–0.80 m</td><td>Naves industriales y edificios de varios niveles</td></tr>
+                <tr><td>Zapata corrida (bajo muro)</td><td>Ancho: doble del espesor del muro (min. 0.60 m) · canto 0.30–0.50 m</td><td>Muros de carga y cerramientos continuos</td></tr>
+                <tr><td>Machón de fábrica (ladrillo/piedra)</td><td>0.30 × 0.30 m a 0.45 × 0.45 m</td><td>Refuerzo de esquinas y contrafuertes</td></tr>
+                <tr><td>Columna de hormigón en vivienda</td><td>0.30 × 0.30 m (mín. 0.25 × 0.25 m)</td><td>Pilares de estructuras aporticadas</td></tr>
+                <tr><td>Columna en edificación mayor</td><td>0.40 × 0.40 a 0.60 × 0.60 m</td><td>Edificios de varios niveles</td></tr>
+              </tbody>
+            </table>
+            </div>
+
+            <p>Equivalencias rápidas de esas medidas, en las tres unidades con las que se trabaja en cimentación (<strong>milímetros, centímetros y metros</strong>):</p>
+
+            <div class="table-scroll">
+            <table class="table-cad">
+              <thead><tr><th>Medida (mm)</th><th>Medida (cm)</th><th>Medida (m)</th><th>Dónde aparece</th></tr></thead>
+              <tbody>
+                <tr><td>250 mm</td><td>25 cm</td><td>0,25 m</td><td>Lado mínimo de columna en vivienda</td></tr>
+                <tr><td>300 mm</td><td>30 cm</td><td>0,30 m</td><td>Machón y columna 0,30 × 0,30 m</td></tr>
+                <tr><td>400 mm</td><td>40 cm</td><td>0,40 m</td><td>Canto típico de zapata aislada de vivienda</td></tr>
+                <tr><td>450 mm</td><td>45 cm</td><td>0,45 m</td><td>Machón de fábrica 0,45 × 0,45 m</td></tr>
+                <tr><td>500–800 mm</td><td>50–80 cm</td><td>0,50–0,80 m</td><td>Canto de zapata de nave o edificio</td></tr>
+                <tr><td>600 mm</td><td>60 cm</td><td>0,60 m</td><td>Ancho mínimo típico de zapata corrida</td></tr>
+                <tr><td>800 mm</td><td>80 cm</td><td>0,80 m</td><td>Zapata ligera 0,80 × 0,80 m</td></tr>
+                <tr><td>1000 mm</td><td>100 cm</td><td>1,00 m</td><td>Zapata de vivienda 1,00 × 1,00 m</td></tr>
+                <tr><td>1500–2500 mm</td><td>150–250 cm</td><td>1,50–2,50 m</td><td>Lado de zapata en naves y edificios grandes</td></tr>
+              </tbody>
+            </table>
+            </div>
+
+            <div class="callout">
+              <span class="callout-title">Pasar de m a cm (o al revés)</span>
+              Una zapata de <strong>1,00 × 1,00 m</strong> es exactamente <strong>100 × 100 cm</strong> = <strong>1000 × 1000 mm</strong>. Regla rápida: cm ÷ 100 = m, m × 100 = cm y cm × 10 = mm. En AutoCAD decide <strong>una sola unidad de dibujo</strong> (mm, cm o m) en <span class="cmd-inline">UNIDADES</span> (en inglés: <span class="cmd-inline">UNITS</span>) y respétala en todo el proyecto: si dibujas en mm, una zapata de 1,00 m se teclea como <code>1000</code>.
+            </div>
+
+            <ul>
+              <li><strong>Desplante:</strong> la base de la zapata se coloca por debajo de la profundidad de helada y del terreno blando. En la práctica va a 1.00–1.50 m desde el nivel de acabado del piso.</li>
+              <li><strong>Armaduras (orientativo):</strong> parrilla inferior de Ø12 mm con separación 15–20 cm, recubrimiento mínimo 5 cm y capa de hormigón de limpieza de 10 cm bajo la zapata.</li>
+            </ul>
+
             <div class="callout warn">
               <span class="callout-title">Importante</span>
               Las dimensiones definitivas de zapatas y armados las da el <strong>cálculo estructural</strong>. En el dibujo refleja SIEMPRE lo que indique el ingeniero: nunca inventes cantos ni diámetros de barra.
@@ -309,6 +386,7 @@
           <li><a href="../trucos.html">Trucos</a></li>
           <li><a href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
           <li><a href="../recursos.html">Recursos</a></li>
+          <li><a href="../glosario.html">Glosario</a></li>
           <li><a href="../faq.html">FAQ</a></li>
         </ul>
       </div>

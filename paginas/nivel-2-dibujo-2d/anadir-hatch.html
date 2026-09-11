@@ -86,7 +86,7 @@
         <li class="nav-item"><a class="nav-link nav-link-cad" href="../trucos.html" data-i18n="nav.tips">Trucos</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="../recursos.html" data-i18n="nav.resources">Recursos</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-cad" href="../faq.html" data-i18n="nav.faq">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../glosario.html" data-i18n="nav.glosario">Glosario</a></li>
       </ul>
 
       <div class="d-flex align-items-center gap-2 nav-actions-menu ms-lg-auto">
@@ -209,6 +209,27 @@
             </table>
             </div>
 
+            <h4>Escala recomendada por patrón y escala del plano</h4>
+            <p>La <strong>escala del hatch</strong> se expresa en unidades de dibujo. Si el patrón sale lleno o vacío, ajusta este valor. Orientación para trabajar en metros (dibujo en metros):</p>
+
+            <div class="table-scroll">
+            <table class="table-cad">
+              <thead><tr><th>Patrón</th><th>Escala 1:50</th><th>Escala 1:100</th><th>Nota</th></tr></thead>
+              <tbody>
+                <tr><td><code>ANSI31</code> / <code>ANSI32</code></td><td>0.5–1.0</td><td>1.0–2.0</td><td>Líneas inclinadas de corte</td></tr>
+                <tr><td><code>AR-CONC</code></td><td>0.05–0.10</td><td>0.10–0.20</td><td>Textura de áridos (escala menor)</td></tr>
+                <tr><td><code>GRASS</code> / <code>EARTH</code></td><td>0.5–1.0</td><td>1.0–2.0</td><td>Terreno y césped</td></tr>
+                <tr><td><code>Sólido</code></td><td>Sin escala</td><td>Sin escala</td><td>Rellena sin parámetro de escala</td></tr>
+                <tr><td><code>NET</code></td><td>1.0–2.0</td><td>2.0–4.0</td><td>Texturas de retícula</td></tr>
+              </tbody>
+            </table>
+            </div>
+
+            <div class="callout">
+              <span class="callout-title">Ayuda rápida</span>
+              Si el patrón "no se ve", primero sube la escala (x10) y luego bájala hasta que se aprecie; si se ve saturado o tapado, bájala (÷10). Con una <strong>escala anotativa</strong> activa, AutoCAD ajusta el hatch automáticamente a la escala de la ventana.
+            </div>
+
             <h3>3. Editar, cambiar y limpiar hatches</h3>
             <ul>
               <li><strong>Editar:</strong> doble clic sobre el hatch abre <span class="cmd-inline">HATCHEDIT</span>: cambia patrón, escala o color sin borrar.</li>
@@ -255,6 +276,78 @@
               </tbody>
             </table>
             </div>
+
+            <h3>6. Añadir y cargar sombreados personalizados desde tus archivos (.pat)</h3>
+            <p>AutoCAD solo "ve" los patrones que están en sus <strong>rutas de búsqueda</strong>. "Instalar" un hatch propio es simplemente: guardar tu archivo <code>.pat</code> en una carpeta y decirle a AutoCAD dónde está. Cada <code>.pat</code> puede traer uno o varios patrones, pero el nombre del primer patrón debe coincidir con el nombre del archivo (ej.: <code>*MI_TEXTURA</code> dentro de <code>MI_TEXTURA.pat</code>) y no debe llevar espacios.</p>
+
+            <h4>Método A · Instalar un .pat para siempre (recomendado)</h4>
+
+            <div class="lesson-step">
+              <span class="lesson-num">1</span>
+              <div class="lesson-body">
+                <h4>Consigue el archivo .pat</h4>
+                <p>Descárgalo de una biblioteca confiable (o crea el tuyo con el Bloc de notas; los comentarios van precedidos de <code>;;</code>). Guárdalo en una carpeta tuya, por ejemplo <code>C:\HATCH\</code> — así no tocas los archivos de instalación de AutoCAD.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">2</span>
+              <div class="lesson-body">
+                <h4>Registra esa carpeta en Opciones</h4>
+                <p>Escribe <span class="cmd-inline">OP</span> (<span class="cmd-inline">OPCIONES</span>, en inglés <span class="cmd-inline">OPTIONS</span>) → pestaña <strong>Archivos</strong> → nodo <strong>Rutas de búsqueda de archivos de apoyo</strong> (Support File Search Path) → <strong>Agregar</strong> → <strong>Examinar...</strong> → selecciona <code>C:\HATCH\</code> (o tu carpeta) → <strong>Aceptar</strong>.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">3</span>
+              <div class="lesson-body">
+                <h4>Cárgalo en SOMBREADO</h4>
+                <p>Escribe <span class="cmd-inline">SOMBREADO</span> (en inglés: <span class="cmd-inline">HATCH</span>). En Tipo elige <strong>Personalizado</strong> (Custom) y pulsa el botón de puntos suspensivos "..." para abrir la paleta de patrones: verás tu <code>.pat</code> y sus patrones. También pueden aparecer directamente en el desplegable de la cinta bajo <strong>Personalizado</strong>.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">4</span>
+              <div class="lesson-body">
+                <h4>Si no aparece: REINIT o reinicia</h4>
+                <p>Si el patrón no se ve, escribe <span class="cmd-inline">REINIT</span> (reinicia los archivos de apoyo) o cierra y vuelve a abrir AutoCAD. Verifica que el <code>.pat</code> esté en una carpeta registrada y que el nombre interior no lleve espacios ni tildes.</p>
+              </div>
+            </div>
+
+            <h4>Método B · Cargarlo al vuelo con DesignCenter (sin reiniciar)</h4>
+            <div class="lesson-step">
+              <span class="lesson-num">1</span>
+              <div class="lesson-body">
+                <h4>Abre DesignCenter y busca</h4>
+                <p>Menú <strong>Vista → Paletas → DesignCenter</strong> (en inglés: <span class="cmd-inline">ADCENTER</span>). En la barra superior pulsa <strong>Buscar</strong> y en el desplegable "Buscar:" selecciona <strong>Archivos de patrones de sombreado</strong> (Hatch Pattern Files).</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">2</span>
+              <div class="lesson-body">
+                <h4>Carga tu archivo .pat</h4>
+                <p>En el nombre escribe <code>*</code> (ver todos) y pulsa <strong>Buscar ahora</strong>. Haz <strong>doble clic</strong> en tu archivo <code>.pat</code> para cargarlo en DesignCenter.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">3</span>
+              <div class="lesson-body">
+                <h4>Déjalo en el dibujo o en una paleta</h4>
+                <p>Arrastra el patrón desde DesignCenter hasta dentro de un área cerrada del dibujo (lo aplica al instante) o hasta una <strong>paleta de herramientas</strong> para tenerlo siempre a mano.</p>
+              </div>
+            </div>
+
+            <div class="callout warn">
+              <span class="callout-title">El hatch "no se instala"</span>
+              <ul class="mb-0">
+                <li>AutoCAD <strong>no instala .pat</strong> como un programa: solo los guarda en una carpeta y la añades a la ruta de búsqueda.</li>
+                <li>Los archivos <code>acad.pat</code> (pulgadas) y <code>acadiso.pat</code> (métrico) son los patrones de fábrica: puedes añadir el tuyo al final con el Bloc de notas, dejando una <strong>línea en blanco después del último patrón</strong>.</li>
+                <li>Si descargaste el archivo de internet y no aparece, comprueba en Propiedades que esté <strong>Desbloqueado</strong> y que la carpeta no sea una nube sin sincronizar.</li>
+                <li>Con <strong>SUPERHATCH</strong> (Express Tools, no disponible en AutoCAD LT) puedes crear un relleno a partir de una imagen o un bloque.</li>
+              </ul>
+            </div>
           <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
           </section>
 
@@ -300,6 +393,7 @@
           <li><a href="../trucos.html">Trucos</a></li>
           <li><a href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
           <li><a href="../recursos.html">Recursos</a></li>
+          <li><a href="../glosario.html">Glosario</a></li>
           <li><a href="../faq.html">FAQ</a></li>
         </ul>
       </div>

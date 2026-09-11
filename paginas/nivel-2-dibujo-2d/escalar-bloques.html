@@ -86,7 +86,7 @@
         <li class="nav-item"><a class="nav-link nav-link-cad" href="../trucos.html" data-i18n="nav.tips">Trucos</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="../recursos.html" data-i18n="nav.resources">Recursos</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-cad" href="../faq.html" data-i18n="nav.faq">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../glosario.html" data-i18n="nav.glosario">Glosario</a></li>
       </ul>
 
       <div class="d-flex align-items-center gap-2 nav-actions-menu ms-lg-auto">
@@ -228,6 +228,28 @@
             <h3>4. Escalar desde un clic: los grips</h3>
             <p>Selecciona el bloque y pulsa <span class="key-inline">Esc</span> una vez para dejar solo el punto base activo. Escribe <span class="key-inline">SC</span> y teclear el factor: así escalas sin ejecutar el comando completo. También puedes hacer clic en el grip azul y escribir <span class="key-inline">ES</span> en el menú contextual para escala rápida múltiple.</p>
 
+            <h3>5. Factores de escala comunes</h3>
+            <p>Si el bloque está en la unidad correcta, el factor suele ser un valor "redondo". Esta tabla te ahorra mentalmente la conversión:</p>
+
+            <div class="table-scroll">
+            <table class="table-cad">
+              <thead><tr><th>Resultado deseado</th><th>Factor</th><th>Ejemplo de uso</th></tr></thead>
+              <tbody>
+                <tr><td>Reducir a la mitad</td><td><code>0.5</code></td><td>Detalle de 1:1 a 1:2</td></tr>
+                <tr><td>Reducir a un cuarto</td><td><code>0.25</code></td><td>Planta de 1:50 a 1:200</td></tr>
+                <tr><td>Doblar</td><td><code>2</code></td><td>Mobiliario para render</td></tr>
+                <tr><td>Triplicar</td><td><code>3</code></td><td>Ajuste rápido de elementos</td></tr>
+                <tr><td>De centimetros a metros</td><td><code>0.01</code></td><td>Bloque dibujado en cm</td></tr>
+                <tr><td>De milímetros a metros</td><td><code>0.001</code></td><td>Bloque dibujado en mm, plano en m</td></tr>
+              </tbody>
+            </table>
+            </div>
+
+            <div class="callout warn">
+              <span class="callout-title">¿Cuándo escalar y cuándo crear un bloque nuevo?</span>
+              Escala con <span class="cmd-inline">ESCALAR</span> (en inglés: <span class="cmd-inline">SCALE</span>) cuando la pieza <strong>sigue siendo la misma</strong> (misma geometría, otra talla). Crea un <strong>bloque nuevo</strong> (o un <em>bloque dinámico</em>) cuando la pieza cambia de forma o de proporción: escalar un sofá 2× alarga respaldo, brazos y cojines igual, y el resultado ya no representa la pieza real.
+            </div>
+
             <div class="table-scroll">
             <table class="table-cad">
               <thead><tr><th>Comando</th><th>Qué hace</th><th>Nota</th></tr></thead>
@@ -289,6 +311,7 @@
           <li><a href="../trucos.html">Trucos</a></li>
           <li><a href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
           <li><a href="../recursos.html">Recursos</a></li>
+          <li><a href="../glosario.html">Glosario</a></li>
           <li><a href="../faq.html">FAQ</a></li>
         </ul>
       </div>

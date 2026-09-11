@@ -86,7 +86,7 @@
         <li class="nav-item"><a class="nav-link nav-link-cad" href="../trucos.html" data-i18n="nav.tips">Trucos</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="../recursos.html" data-i18n="nav.resources">Recursos</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-cad" href="../faq.html" data-i18n="nav.faq">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../glosario.html" data-i18n="nav.glosario">Glosario</a></li>
       </ul>
 
       <div class="d-flex align-items-center gap-2 nav-actions-menu ms-lg-auto">
@@ -195,7 +195,23 @@
               </div>
             </div>
 
-            <h3>2. Hacer que el tipo de línea se vea correcto (escala de línea)</h3>
+            <h3>2. Tipos de línea por uso (referencia rápida)</h3>
+            <p>La tabla más socorrida en la oficina: qué tipo de línea corresponde a cada elemento del plano.</p>
+
+            <div class="table-scroll">
+            <table class="table-cad">
+              <thead><tr><th>Tipo de línea</th><th>Se usa para</th><th>Nota visual</th></tr></thead>
+              <tbody>
+                <tr><td><code>CENTER</code></td><td>Ejes de replanteo y simetrías</td><td>Raya + punto</td></tr>
+                <tr><td><code>DASHED</code> / <code>HIDDEN</code></td><td>Elementos ocultos o por debajo</td><td>Tramo discontinuo corto</td></tr>
+                <tr><td><code>PHANTOM</code></td><td>Piezas auxiliares, contornos de referencia</td><td>Raya + dos puntos</td></tr>
+                <tr><td><code>DOT</code></td><td>Ejes muy largos, líneas guía</td><td>Puntos redondos</td></tr>
+                <tr><td><code>Continua</code></td><td>Todo lo visible</td><td>Línea llena</td></tr>
+              </tbody>
+            </table>
+            </div>
+
+            <h3>3. Hacer que el tipo de línea se vea correcto (escala de línea)</h3>
             <p>El "no se me ve la línea punteada" es el problema número uno. La causa casi siempre es la <strong>escala del tipo de línea</strong> (variable <span class="cmd-inline">ESCALATIPO</span> (en inglés: <span class="cmd-inline">LTSCALE</span>)): si es muy pequeña o muy grande, las líneas parecen continuas o colapsadas.</p>
 
             <div class="lesson-step">
@@ -222,7 +238,67 @@
               </div>
             </div>
 
-            <h3>3. Crear un tipo de línea personalizado</h3>
+            <h4>Guía rápida de LTSCALE</h4>
+            <div class="table-scroll">
+            <table class="table-cad">
+              <thead><tr><th>Unidades del dibujo</th><th>LTSCALE inicial</th><th>Si se ve todo sólido, prueba</th></tr></thead>
+              <tbody>
+                <tr><td>Milímetros (mm)</td><td>1</td><td>5–20</td></tr>
+                <tr><td>Centímetros (cm)</td><td>10</td><td>100</td></tr>
+                <tr><td>Metros (m)</td><td>100</td><td>1000</td></tr>
+                <tr><td>Pulgadas</td><td>1</td><td>6</td></tr>
+              </tbody>
+            </table>
+            </div>
+            <div class="callout">
+              <span class="callout-title">Comprobación rápida</span>
+              Escribe <span class="cmd-inline">LTS</span>, pulsa Enter y luego <span class="key-inline">R</span> (reiniciar) cuando dudes. Si la línea sigue sólida, revisa el <code>CELTSCALE</code> del objeto y el <code>PSLTSCALE</code> para el papel.
+            </div>
+
+            <h3>4. Refrescar la pantalla: REGEN y REGENTODO</h3>
+            <p>El comando <span class="cmd-inline">REGEN</span> (en inglés: <span class="cmd-inline">REGEN</span>) <strong>regenera el dibujo completo en la vista actual</strong>: AutoCAD recalcula todas las coordenadas de pantalla y redibuja cada objeto. No cambia la geometría, pero es la solución cuando el tipo de línea, el sombreado o los círculos "se ven mal" en pantalla.</p>
+
+            <div class="lesson-step">
+              <span class="lesson-num">1</span>
+              <div class="lesson-body">
+                <h4>Para qué sirve</h4>
+                <p>Durante el encuadre, AutoCAD dibuja una versión ligera para ir rápido: los tipos de línea se simplifican y los círculos se aproximan a polígonos. Al regenerar, todo se recalcula con precisión. Úsalo tras cambiar <span class="cmd-inline">ESCALATIPO</span> (en inglés: <span class="cmd-inline">LTSCALE</span>), <span class="cmd-inline">CELTSCALE</span> o <span class="cmd-inline">PSLTSCALE</span> y no notar el cambio, o para suavizar arcos y círculos con apariencia poligonal.</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">2</span>
+              <div class="lesson-body">
+                <h4>Cómo funciona</h4>
+                <p>Escribe <span class="cmd-inline">REGEN</span> y pulsa Enter: se regenera la ventana gráfica actual. Con <span class="cmd-inline">REGENTODO</span> (en inglés: <span class="cmd-inline">REGENALL</span>) se regeneran todas las ventanas gráficas del modelo o de la presentación. Después puedes reencuadrar con <span class="cmd-inline">ENCUADRE</span> (en inglés: <span class="cmd-inline">ZOOM</span>) <span class="key-inline">E</span> (extensión).</p>
+              </div>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">3</span>
+              <div class="lesson-body">
+                <h4>Regeneración automática (REGENAUTO)</h4>
+                <p>La variable <span class="cmd-inline">REGENAUTO</span> controla si AutoCAD regenera solo al encuadrar. Con valor 1 (por defecto) se regenera automáticamente; si el dibujo es muy pesado y va lento, ponla a 0 (OFF) y regenera a mano con <span class="cmd-inline">REGEN</span> solo cuando lo necesites.</p>
+              </div>
+            </div>
+
+            <div class="callout">
+              <span class="callout-title">Dato</span>
+              También puedes forzar la actualización con <span class="cmd-inline">ENCUADRE</span> (en inglés: <span class="cmd-inline">ZOOM</span>) <span class="key-inline">R</span> (regenerar) o con el icono de regeneración de la barra de navegación, sin escribir el comando.
+            </div>
+
+            <div class="table-scroll">
+            <table class="table-cad">
+              <thead><tr><th>Comando / variable</th><th>Qué hace</th></tr></thead>
+              <tbody>
+                <tr><td><span class="cmd-inline">REGEN</span> (en inglés: <span class="cmd-inline">REGEN</span>)</td><td>Regenera el dibujo en la ventana actual: refresca tipos de línea, sombreados y suaviza arcos y círculos</td></tr>
+                <tr><td><span class="cmd-inline">REGENTODO</span> (en inglés: <span class="cmd-inline">REGENALL</span>)</td><td>Regenera todas las ventanas gráficas del dibujo o de la presentación</td></tr>
+                <tr><td><span class="cmd-inline">REGENAUTO</span></td><td>Variable del sistema: 1 = regeneración automática al encuadrar; 0 = solo manual (recomendado en dibujos pesados)</td></tr>
+              </tbody>
+            </table>
+            </div>
+
+            <h3>5. Crear un tipo de línea personalizado</h3>
             <p>Puedes crear tu propia línea con texto (útiles para ejes tipo "A" repetida): guarda un <code>.lin</code> con este formato en una carpeta de tu empresa:</p>
 
             <div class="callout">
@@ -295,6 +371,7 @@
           <li><a href="../trucos.html">Trucos</a></li>
           <li><a href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
           <li><a href="../recursos.html">Recursos</a></li>
+          <li><a href="../glosario.html">Glosario</a></li>
           <li><a href="../faq.html">FAQ</a></li>
         </ul>
       </div>

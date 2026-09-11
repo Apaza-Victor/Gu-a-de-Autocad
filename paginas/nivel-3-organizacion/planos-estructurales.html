@@ -86,7 +86,7 @@
         <li class="nav-item"><a class="nav-link nav-link-cad" href="../trucos.html" data-i18n="nav.tips">Trucos</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="../recursos.html" data-i18n="nav.resources">Recursos</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-cad" href="../faq.html" data-i18n="nav.faq">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../glosario.html" data-i18n="nav.glosario">Glosario</a></li>
       </ul>
 
       <div class="d-flex align-items-center gap-2 nav-actions-menu ms-lg-auto">
@@ -105,8 +105,8 @@
     <p class="crumb"><a href="../../index.html">Inicio</a> / <a href="../../index.html#niveles">Niveles</a> / <a href="index.html">Organización</a> / Tema 15</p>
     <span class="eyebrow" data-i18n="lvl3.eyebrow">Nivel 03 · Intermedio</span>
     <h1>Planos estructurales</h1>
-    <div class="level-progress-bar" data-level-prefix="nivel3" data-level-total="20"><div class="fill"></div></div>
-    <p class="level-progress-label">0 de 20 temas completados · 0%</p>
+    <div class="level-progress-bar" data-level-prefix="nivel3" data-level-total="21"><div class="fill"></div></div>
+    <p class="level-progress-label">0 de 21 temas completados · 0%</p>
   </div>
 </header>
 
@@ -138,6 +138,7 @@
             <li><a href="sheet-sets.html"><span class="toc-check"></span> Conjuntos de planos</a></li>
             <li><a href="etransmit.html"><span class="toc-check"></span> Transmitir y empaquetar</a></li>
             <li><a href="importar-exportar.html" data-toc="nivel3-importar-exportar"><span class="toc-check"></span> Importar y exportar</a></li>
+            <li><a href="dimensiones-arquitectura.html" data-toc="nivel3-dimensiones-arquitectura"><span class="toc-check"></span> Dimensiones y medidas de arquitectura</a></li>
             <li><a href="index.html#autoevaluacion"><span class="toc-check"></span> Autoevaluación</a></li>
           </ul>
           <hr style="border-color:var(--border-soft)" class="my-4">
@@ -162,6 +163,35 @@
               <li><strong>Cuadro de plantas y listado de elementos</strong> o referencia a los detalles.</li>
               <li><strong>Niveles y cotas</strong> de cada cara superior/inferior de los elementos.</li>
             </ul>
+
+            <div class="callout">
+              <span class="callout-title">Checklist mínimo antes de imprimir</span>
+              <ul>
+                <li>Ejes de replanteo acotados y con letras/números (A…, 1…).</li>
+                <li>Pilares, muros y zapatas con su nombre (P-1, Z-1) y referencia al detalle.</li>
+                <li>Vigas con canto y vano acotados (o listado de vigas).</li>
+                <li>Dirección de losas indicada con flechas y espesor.</li>
+                <li>Cuadro de armado o referencia a los planos de detalle.</li>
+                <li>Niveles de cada cara (superior/inferior) marcados.</li>
+                <li>Escalas, norte y cajetín completos.</li>
+              </ul>
+            </div>
+
+            <h3>Convención de capas estructurales</h3>
+            <div class="table-scroll">
+            <table class="table-cad">
+              <thead><tr><th>Capa</th><th>Contenido</th><th>Color / línea típica</th></tr></thead>
+              <tbody>
+                <tr><td><code>E-Ejes</code></td><td>Malla de ejes de replanteo</td><td>Cian (4) · <code>CENTER</code></td></tr>
+                <tr><td><code>E-Portantes</code></td><td>Pilares, muros de carga (secciones rellenas)</td><td>Rojo (1) · Continua gruesa</td></tr>
+                <tr><td><code>E-Vigas</code></td><td>Vigas en planta (ocultas o discontinuas)</td><td>Magenta (6) · <code>DASHED</code></td></tr>
+                <tr><td><code>E-Zapatas</code></td><td>Zapatas y cimentación</td><td>Rojo (1) · Continua</td></tr>
+                <tr><td><code>E-Armado</code></td><td>Barras y armaduras</td><td>Magenta (6) · Continua fina</td></tr>
+                <tr><td><code>E-Losas</code></td><td>Contorno de losas y forjados</td><td>Amarillo (2) · Continua</td></tr>
+                <tr><td><code>E-Cotas</code></td><td>Acotaciones y niveles</td><td>Verde (3) · Continua fina</td></tr>
+              </tbody>
+            </table>
+            </div>
 
             <h3>2. Montar el plano en AutoCAD (paso a paso)</h3>
 
@@ -301,6 +331,7 @@
           <li><a href="../trucos.html">Trucos</a></li>
           <li><a href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
           <li><a href="../recursos.html">Recursos</a></li>
+          <li><a href="../glosario.html">Glosario</a></li>
           <li><a href="../faq.html">FAQ</a></li>
         </ul>
       </div>

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dimensiones y medidas en arquitectura · Organización y productividad — AutoCAD Guía</title>
+<link rel="canonical" href="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-3-organizacion/dimensiones-arquitectura.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://apaza-victor.github.io/Gu-a-de-Autocad/paginas/nivel-3-organizacion/dimensiones-arquitectura.html">
+<meta property="og:site_name" content="AutoCAD Guía">
+<meta property="og:title" content="Dimensiones y medidas en arquitectura · Organización y productividad — AutoCAD Guía">
+<meta property="og:description" content="Conceptos de arquitectura y medidas de referencia de puertas, ventanas, escaleras, balcones y ambientes para dibujar planos.">
+<meta property="og:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dimensiones y medidas en arquitectura · Organización y productividad — AutoCAD Guía">
+<meta name="twitter:description" content="Conceptos de arquitectura y medidas de referencia de puertas, ventanas, escaleras, balcones y ambientes para dibujar planos.">
+<meta name="twitter:image" content="https://apaza-victor.github.io/Gu-a-de-Autocad/assets/img/social-preview.svg">
+<meta name="description" content="Conceptos de arquitectura y medidas de referencia de puertas, ventanas, escaleras, balcones y ambientes para dibujar planos.">
+
+<link rel="icon" type="image/svg+xml" href="../../assets/img/autocad-2.svg">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../../assets/css/responsive.css">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Nivel · Organización y productividad en AutoCAD",
+  "description": "Espacio modelo vs papel, viewports, plantillas, impresión, Xref, estilos de trazado, campos y medidas de arquitectura.",
+  "provider": {
+    "@type": "Organization",
+    "name": "AutoCAD Guía",
+    "sameAs": "https://apaza-victor.github.io/Gu-a-de-Autocad/"
+  },
+  "inLanguage": "es",
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "online",
+    "learningResourceType": "tutorial",
+    "inLanguage": "es"
+  }
+}
+  </script>
+</head>
+
+<body>
+
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+<nav class="navbar navbar-cad navbar-expand-lg">
+  <div class="container container-xl">
+    <a class="navbar-brand brand-cad" href="../../index.html">
+      <img class="brand-logo" src="../../assets/img/autocad-2.svg" alt="AutoCAD">
+      <span>AutoCAD<small class="d-block" data-i18n-html="brand.sub">Guía · Teoría &amp; Práctica</small></span>
+    </a>
+    <div class="d-flex align-items-center gap-2 nav-actions order-lg-last">
+      <button class="icon-btn" id="searchToggle" title="Buscar" data-i18n-title="ui.search"><i class="bi bi-search"></i></button>
+      <button class="icon-btn" id="themeToggle" title="Cambiar tema" data-i18n-title="ui.theme"><i class="bi bi-moon-stars"></i></button>
+      <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navCad">
+        <i class="bi bi-list fs-4"></i>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navCad">
+      <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../../index.html" data-i18n="nav.home">Inicio</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-cad dropdown-toggle active" href="#" data-bs-toggle="dropdown" data-i18n="nav.levels">Niveles</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="../nivel-1-fundamentos/index.html">Nivel 1 · Fundamentos</a></li>
+            <li><a class="dropdown-item" href="../nivel-2-dibujo-2d/index.html">Nivel 2 · Dibujo 2D</a></li>
+            <li><a class="dropdown-item active" href="../nivel-3-organizacion/index.html">Nivel 3 · Organización</a></li>
+            <li><a class="dropdown-item" href="../nivel-4-modelado-3d/index.html">Nivel 4 · Modelado 3D</a></li>
+            <li><a class="dropdown-item" href="../nivel-5-avanzado/index.html">Nivel 5 · Experto</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../comandos.html" data-i18n="nav.commands">Comandos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../ejemplos-visuales.html" data-i18n="nav.visual">Visuales</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../trucos.html" data-i18n="nav.tips">Trucos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../recursos.html" data-i18n="nav.resources">Recursos</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../glosario.html" data-i18n="nav.glosario">Glosario</a></li>
+      </ul>
+
+      <div class="d-flex align-items-center gap-2 nav-actions-menu ms-lg-auto">
+        <span class="coord-readout d-none d-lg-inline-flex">X: <span id="coordX">000.00</span>&nbsp; Y: <span id="coordY">000.00</span></span>
+        <button class="lang-toggle" id="langToggle" title="Cambiar idioma" data-i18n-title="ui.lang">
+          <i class="bi bi-translate lang-toggle-flag"></i>
+          <span class="lang-toggle-text">EN</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header" id="main-content">
+  <div class="container container-xl">
+    <p class="crumb"><a href="../../index.html">Inicio</a> / <a href="../../index.html#niveles">Niveles</a> / <a href="index.html">Organización</a> / Tema 21</p>
+    <span class="eyebrow" data-i18n="lvl3.eyebrow">Nivel 03 · Intermedio</span>
+    <h1>Dimensiones y medidas en arquitectura</h1>
+    <div class="level-progress-bar" data-level-prefix="nivel3" data-level-total="21"><div class="fill"></div></div>
+    <p class="level-progress-label">0 de 21 temas completados · 0%</p>
+  </div>
+</header>
+
+<div class="content-layout">
+  <div class="container container-xl">
+    <div class="row">
+
+      <aside class="col-lg-3 mb-5 mb-lg-0">
+        <div class="toc-sidebar">
+          <h6 data-i18n="ui.inThisLevel">En este nivel</h6>
+          <ul class="toc-list">
+            <li><a href="espacios.html"><span class="toc-check"></span> Espacio modelo vs. papel</a></li>
+            <li><a href="viewports.html"><span class="toc-check"></span> Ventanas gráficas y escalas</a></li>
+            <li><a href="plantillas.html"><span class="toc-check"></span> Plantillas (.DWT)</a></li>
+            <li><a href="designcenter.html"><span class="toc-check"></span> DesignCenter y paletas</a></li>
+            <li><a href="impresion.html"><span class="toc-check"></span> Impresión y exportación</a></li>
+            <li><a href="publish.html"><span class="toc-check"></span> Publicación por lotes (PUBLISH)</a></li>
+            <li><a href="xref.html"><span class="toc-check"></span> Referencias externas (Xref)</a></li>
+            <li><a href="atajos.html"><span class="toc-check"></span> Atajos de teclado</a></li>
+            <li><a href="plotstyles.html"><span class="toc-check"></span> Estilos de trazado</a></li>
+            <li><a href="campos.html"><span class="toc-check"></span> Campos (Fields)</a></li>
+            <li><a href="xref-avanzado.html"><span class="toc-check"></span> Xref avanzado</a></li>
+            <li><a href="cajetines.html"><span class="toc-check"></span> Cajetines y bloques de título</a></li>
+            <li><a href="zapatas-machones.html" data-toc="nivel3-zapatas-machones"><span class="toc-check"></span> Zapatas y machones</a></li>
+            <li><a href="muros-detalle.html" data-toc="nivel3-muros-detalle"><span class="toc-check"></span> Muros y detalles constructivos</a></li>
+            <li><a href="planos-estructurales.html" data-toc="nivel3-planos-estructurales"><span class="toc-check"></span> Planos estructurales</a></li>
+            <li><a href="escala-anotativa.html"><span class="toc-check"></span> Escala anotativa</a></li>
+            <li><a href="estandares-capas.html"><span class="toc-check"></span> Estándares de capas</a></li>
+            <li><a href="sheet-sets.html"><span class="toc-check"></span> Conjuntos de planos</a></li>
+            <li><a href="etransmit.html"><span class="toc-check"></span> Transmitir y empaquetar</a></li>
+            <li><a href="importar-exportar.html" data-toc="nivel3-importar-exportar"><span class="toc-check"></span> Importar y exportar</a></li>
+            <li><a href="dimensiones-arquitectura.html" data-toc="nivel3-dimensiones-arquitectura"><span class="toc-check"></span> Dimensiones y medidas de arquitectura</a></li>
+            <li><a href="index.html#autoevaluacion"><span class="toc-check"></span> Autoevaluación</a></li>
+          </ul>
+          <hr style="border-color:var(--border-soft)" class="my-4">
+          <a href="index.html" class="btn-cad-outline w-100 text-center d-block"><i class="bi bi-arrow-left"></i> Volver al índice</a>
+        </div>
+      </aside>
+
+      <div class="col-lg-9">
+        <article class="content-article">
+
+          <section id="dimensiones-arquitectura" data-topic="nivel3-dimensiones-arquitectura">
+            <h2><span class="sec-num">21</span>Dimensiones y medidas en arquitectura</h2>
+            <p>Antes de dibujar una planta hay que saber <strong>qué medidas usa la arquitectura</strong>: el ancho de una puerta, la altura de un alféizar, la huella de una escalera o las dimensiones mínimas de una cocina. Esta lección reúne los valores de referencia más usados en proyecto (basados en normativa y en la práctica constructiva habitual) y los conceptos básicos que necesitas para interpretarlos. Son <strong>orientativos</strong>: todo plano debe cumplir la normativa local aplicable y el criterio del proyectista.</p>
+
+            <div class="callout">
+              <span class="callout-title">Unidades en obra</span>
+              En los planos de arquitectura se dibuja habitualmente en <strong>milímetros</strong> (1 unidad = 1 mm). Así, una puerta de 72,5 cm se dibuja a 725 y una altura libre de 2,50 m a 2500. Configura <span class="cmd-inline">UNIDADES</span> (en inglés: <span class="cmd-inline">UNITS</span>) con precisión 0 (sin decimales) para construcción.
+            </div>
+
+            <h3>1. Conceptos de arquitectura (teoría)</h3>
+            <p>Estos términos aparecen continuamente en las direcciones de obra y en las notas de los planos. Dominarlos te permite dibujar lo que el plano realmente representa.</p>
+
+            <div class="table-scroll">
+            <table class="table-cad">
+              <thead><tr><th>Concepto</th><th>Qué significa</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Vano</strong></td><td>Hueco practicado en un muro o forjado (puerta, ventana, paso). En planta se dibuja como una interrupción del muro.</td></tr>
+                <tr><td><strong>Luz</strong></td><td>Distancia libre entre dos apoyos (entre ejes de muros o columnas) que salva una viga o forjado.</td></tr>
+                <tr><td><strong>Dintel</strong></td><td>Elemento horizontal que salva el vano por su parte superior y soporta el peso del muro sobre la puerta o ventana.</td></tr>
+                <tr><td><strong>Alféizar</strong></td><td>Parte inferior del hueco de una ventana (la repisa que queda a la altura del pavimento). Se acota con su altura sobre el piso.</td></tr>
+                <tr><td><strong>Antepecho</strong></td><td>Muro o cerramiento bajo la ventana que hace de protección; normalmente coincide con el alféizar.</td></tr>
+                <tr><td><strong>Tabique</strong></td><td>Muro interior no portante, de poco espesor (0,10–0,15 m), que solo divide ambientes.</td></tr>
+                <tr><td><strong>Muro de carga / portante</strong></td><td>Muro que transmite pesos de forjados y cubiertas al suelo; no se puede tocar ni abrir libremente.</td></tr>
+                <tr><td><strong>Pilar / columna</strong></td><td>Elemento vertical estructural (hormigón, acero o fábrica) que recibe las vigas y lleva las cargas a la cimentación.</td></tr>
+                <tr><td><strong>Viga</strong></td><td>Elemento horizontal estructural que reparte las cargas del forjado hacia pilares o muros.</td></tr>
+                <tr><td><strong>Forjado</strong></td><td>Estructura horizontal que sirve de suelo o techo; puede ser de viguetas y bovedillas, losa maciza o losa nervada.</td></tr>
+                <tr><td><strong>Altura libre</strong></td><td>Distancia medida en vertical entre el suelo terminado y el techo. Mínimo habitual 2,50 m en viviendas.</td></tr>
+                <tr><td><strong>Cota de nivel</strong></td><td>Medida de altura (cota topográfica) sobre una referencia 0,00 (= piso terminado de planta baja), positiva o negativa.</td></tr>
+                <tr><td><strong>Fachada / alzado</strong></td><td>Vista exterior vertical de una construcción; el dibujo "de frente" del edificio.</td></tr>
+                <tr><td><strong>Cerramiento</strong></td><td>Elemento que cierra el edificio al exterior (muro, fachada ligera, acristalamiento), sin función portante en muchos casos.</td></tr>
+              </tbody>
+            </table>
+            </div>
+
+            <h3>2. Puertas: medidas normalizadas</h3>
+            <p>En España las hojas de puerta se fabrican según la norma <strong>UNE 56801</strong> en cuatro anchos estándar (62,5 / 72,5 / 82,5 / 92,5 cm) y dos alturas habituales (203 cm tradicional y 211 cm en obra nueva). El <strong>hueco de obra</strong> (el vano que dejas en el muro) vale lo mismo que la hoja más la holgura del marco.</p>
+
+            <div class="table-scroll">
+            <table class="table-cad">
+              <thead><tr><th>Hoja</th><th>Hueco de obra aprox.</th><th>Paso libre aprox.</th><th>Uso típico</th></tr></thead>
+              <tbody>
+                <tr><td>62,5 × 203 cm</td><td>70 × 210 cm</td><td>~60 cm</td><td>Baños, aseos, despensas (cada vez menos usada)</td></tr>
+                <tr><td>72,5 × 203 cm</td><td>80 × 210 cm</td><td>~70 cm</td><td>Dormitorios, cocinas y salones (la más habitual)</td></tr>
+                <tr><td>82,5 × 203 cm</td><td>90 × 210 cm</td><td>~78–80 cm</td><td>Puerta principal de vivienda y accesos adaptados</td></tr>
+                <tr><td>92,5 × 203 cm</td><td>100 × 210 cm</td><td>~88–90 cm</td><td>Accesos amplios y paso de silla de ruedas (PMR)</td></tr>
+                <tr><td>Dobles 125 o 145 cm</td><td>135 / 155 cm</td><td>~120 / 140 cm</td><td>Salones grandes y locales comerciales</td></tr>
+              </tbody>
+            </table>
+            </div>
+
+            <ul>
+              <li><strong>Paso libre:</strong> es la medida útil real por la que se pasa; queda entre 2 y 4 cm menor que la hoja.</li>
+              <li><strong>Accesibilidad:</strong> las normativas de accesibilidad suelen exigir un paso libre mínimo de 0,80 m en, al menos, la puerta de entrada, de un dormitorio y de un baño → hoja de 82,5 cm.</li>
+              <li><strong>En el dibujo:</strong> la puerta se representa con la hoja abierta a 90°, un arco de giro y el canto de la hoja; los marcos suelen tener 0,07–0,10 m de ancho.</li>
+            </ul>
+
+            <h3>3. Ventanas: medidas y alféizar</h3>
+            <p>No existe una medida única: la ventana depende de la dimensión de la estancia, la luz deseada y la fachada. Sí hay pautas de diseño y medidas comercialmente habituales.</p>
+
+            <div class="table-scroll">
+            <table class="table-cad">
+              <thead><tr><th>Medida (cm)</th><th>Uso habitual</th><th>Nota</th></tr></thead>
+              <tbody>
+                <tr><td>60 × 60</td><td>Baños secundarios, trasteros</td><td>Ventilación mínima</td></tr>
+                <tr><td>80 × 100</td><td>Baños y cocinas compactas</td><td>Ancho estándar 80 cm</td></tr>
+                <tr><td>100 × 120 / 100 × 115</td><td>Baños, cocinas y dormitorios pequeños</td><td>Muy habitual en vivienda</td></tr>
+                <tr><td>120 × 120</td><td>Dormitorios medianos y despachos</td><td>La "ventana típica" de dormitorio</td></tr>
+                <tr><td>120 × 150</td><td>Dormitorios amplios, salones y comedores</td><td>Más luz sin llegar a ventanal</td></tr>
+                <tr><td>120 × 200</td><td>Puerta-ventana y acceso a terraza</td><td>Altura de puerta + vidrio</td></tr>
+                <tr><td>180 × 120, 200 × 200+</td><td>Ventanales y fachadas acristaladas</td><td>Requiere dintel reforzado si >2 m</td></tr>
+              </tbody>
+            </table>
+            </div>
+
+            <ul>
+              <li><strong>Alféizar:</strong> la ventana se dibuja con su cara inferior (alféizar) a una altura de ~0,90–1,10 m sobre el pavimento. Un alféizar a menos de 1,00 m de un desnivel exterior exige antepecho o barandilla.</li>
+              <li><strong>Altura «cómoda»:</strong> la altura de ventana habitual queda entre 1,20 y 1,50 m (dintel arriba, hacia los 2,20–2,50 m).</li>
+              <li><strong>Iluminación:</strong> como regla general, la superficie de vidrio de la estancia debe ser al menos ~1/10 de la superficie en planta (normativas de habitabilidad; algunas exigen 1/12 o 1/8 por comunidad).</li>
+            </ul>
+
+            <div class="callout warn">
+              <span class="callout-title">Ojo con la protección</span>
+              Cuando hay un desnivel al exterior mayor de 0,55 m (CTE SUA), el hueco de ventana necesita barrera de protección: barandilla o antepecho de <strong>1,00 m</strong> si la caída es ≤ 6 m y de <strong>1,10 m</strong> si supera los 6 m. Por eso en ventanas bajas se dibuja un "fijo inferior" hasta 0,90–1,10 m.
+            </div>
+
+            <h3>4. Escaleras: huella, contrahuella y anchos</h3>
+            <p>La escalera es el elemento más reglamentado. El <strong>CTE DB-SUA</strong> (seguridad de utilización y accesibilidad) fija los límites; la <strong>fórmula de Blondel</strong> ayuda a elegir huella y contrahuella cómodas.</p>
+
+            <div class="table-scroll">
+            <table class="table-cad">
+              <thead><tr><th>Parámetro</th><th>Uso restringido (vivienda)</th><th>Uso general (edificios)</th><th>Uso público / sin ascensor</th></tr></thead>
+              <tbody>
+                <tr><td>Huella mínima</td><td>22 cm</td><td>28 cm</td><td>28 cm</td></tr>
+                <tr><td>Contrahuella máx.</td><td>20 cm</td><td>18,5 cm</td><td>17,5 cm</td></tr>
+                <tr><td>Fórmula ergonómica</td><td colspan="3">2 × contrahuella + huella entre 54 y 70 cm (ideal ~63 cm)</td></tr>
+                <tr><td>Ancho de tramo mín.</td><td>0,80 m</td><td>1,00 m</td><td>1,20 m</td></tr>
+                <tr><td>Peldaños antes de meseta</td><td colspan="3">15–16 máximo; la meseta mide igual que el ancho del tramo</td></tr>
+                <tr><td>Pasamanos</td><td colspan="3">A 0,90–1,10 m; en ambos lados si el ancho supera 1,20 m</td></tr>
+              </tbody>
+            </table>
+            </div>
+
+            <div class="lesson-step">
+              <span class="lesson-num">1</span>
+              <div class="lesson-body">
+                <h4>Dimensiona una escalera en 4 pasos</h4>
+                <p>Con un desnivel entre plantas de 2,80 m: contrahuella objetivo 17 cm → nº de peldaños = 280 ÷ 17 = 16,5 → usa 16. Contrahuella real = 280 ÷ 16 = <strong>17,5 cm</strong>. Huella por Blondel = 63 − (2 × 17,5) = <strong>28 cm</strong>. Comprueba: 2 × 17,5 + 28 = 63 ✓ (dentro de 54–70). Desarrollo en planta = 16 × 28 = <strong>4,48 m</strong>.</p>
+              </div>
+            </div>
+
+            <ul>
+              <li><strong>Uniformidad:</strong> todos los peldaños de un tramo deben tener exactamente la misma huella y contrahuella; variar solo ±1 cm entre tramos de plantas distintas.</li>
+              <li><strong>En el dibujo:</strong> dibuja el primer peldaño real y repítelo con <span class="cmd-inline">MATRIZ</span> (en inglés: <span class="cmd-inline">ARRAY</span>) rectangular: distancia entre filas = contrahuella, entre columnas = huella. Recuerda la flecha de subida y el símbolo de corte.</li>
+            </ul>
+
+            <h3>5. Balcones, terrazas y barandillas</h3>
+            <div class="table-scroll">
+            <table class="table-cad">
+              <thead><tr><th>Elemento</th><th>Valor de referencia</th></tr></thead>
+              <tbody>
+                <tr><td>Barrera de protección obligatoria</td><td>Desde desniveles mayores de 0,55 m</td></tr>
+                <tr><td>Altura de barandilla / antepecho</td><td>0,90–1,00 m si la caída es ≤ 6 m; 1,10 m si supera los 6 m</td></tr>
+                <tr><td>Ancho útil de balcón</td><td>1,00–1,50 m</td></tr>
+                <tr><td>Ancho de terraza aprovechable</td><td>a partir de ~2,50–3,00 m</td></tr>
+                <tr><td>Barandilla en escaleras y rampas</td><td>altura 0,90–1,10 m; sin aberturas que dejen pasar una esfera de 10 cm</td></tr>
+              </tbody>
+            </table>
+            </div>
+
+            <p>En los planos, dibuja siempre la barandilla en <strong>planta</strong> (con su antepecho hueco/opaco según el material) y en <strong>alzado o sección</strong> (con su altura y la cota de nivel). Si el hueco de una ventana queda por debajo de esas alturas, el vidrio debe ser de seguridad o llevar barandilla delante.</p>
+
+            <h3>6. Ambientes: medidas mínimas de referencia</h3>
+            <p>Las viviendas deben cumplir mínimos de superficie útil y de forma (círculos o rectángulos inscribibles) según las normativas de habitabilidad autonómicas y municipales. Los siguientes son valores de referencia prácticos (criterio general; comprueba siempre tu normativa local):</p>
+
+            <div class="table-scroll">
+            <table class="table-cad">
+              <thead><tr><th>Ambiente</th><th>Superficie útil mínima orientativa</th><th>Observaciones de dibujo</th></tr></thead>
+              <tbody>
+                <tr><td>Dormitorio individual</td><td>~6 m²</td><td>Debe poder inscribirse un cuadrado de 2 m; cama de 0,90 × 1,90–2,00 m</td></tr>
+                <tr><td>Dormitorio doble</td><td>~10 m²</td><td>Cama de 1,35–1,50 × 1,90–2,00 m + armario 0,60 de fondo</td></tr>
+                <tr><td>Sala / estar</td><td>~10 m²</td><td>Círculo inscribible de 3 m de diámetro; sofá a ~0,90–1,00 m del televisor</td></tr>
+                <tr><td>Comedor</td><td>~6–8 m²</td><td>Mesa de 4 plazas ~0,90 × 1,20 m con 0,90 m de paso</td></tr>
+                <tr><td>Cocina</td><td>≥ 5 m²</td><td>Rectángulo inscribible 1,60 × 2,00 m; encimera de 0,60 de fondo; pasillo útil ≥ 0,90 m</td></tr>
+                <tr><td>Estar–comedor–cocina (diáfano)</td><td>≥ 15 m²</td><td>Solución habitual en vivienda tipo loft</td></tr>
+                <tr><td>Baño</td><td>≥ 1,50–2,50 m²</td><td>Inodoro, lavabo y ducha/bañera; inodoro compartimentado 1,40 × 0,80 m</td></tr>
+                <tr><td>Aseo</td><td>≥ 1,50 m²</td><td>Inodoro + lavabo (aseo de cortesía)</td></tr>
+                <tr><td>Lavandería</td><td>≥ 1,20–1,80 m²</td><td>Ancho ≥ 0,90 m; lavadora/secadora de 0,60 × 0,60 m</td></tr>
+                <tr><td>Pasillos y distribuidores</td><td>Ancho ≥ 0,80 m</td><td>0,90 m si se quiere paso accesible; 1,00–1,20 m en zonas principales</td></tr>
+                <tr><td>Altura libre de pisos</td><td>≥ 2,50 m</td><td>2,20 m en baños y cocinas; ≥ 2,00 m bajo puertas y vigas</td></tr>
+              </tbody>
+            </table>
+            </div>
+
+            <ul>
+              <li><strong>Dimensión de muebles (para calibrar tus dibujos):</strong> cama 1,90–2,00 de largo; puerta de armario 0,50–0,60; lavabo 0,50–0,60; inodoro 0,36–0,40 de ancho; ducha 0,80 × 0,80 o 0,90 × 0,90; encimera de cocina 0,60 de fondo.</li>
+              <li><strong>Ventilación:</strong> cocina y baño requieren ventilación al exterior o forzada; los planos deben dejar el hueco de ventana (o el conducto) previsto.</li>
+            </ul>
+
+            <h3>7. Equivalencias: las mismas medidas en centímetros y en metros</h3>
+            <p>Como normalmente trabajas con <strong>metros</strong> y a veces con <strong>centímetros</strong> (y los planos se dibujan en <strong>milímetros</strong>), aquí tienes las medidas de la lección en las tres unidades. Regla rápida: <strong>mm ÷ 100 = cm</strong> y <strong>cm ÷ 100 = m</strong>; al revés: <strong>m × 100 = cm</strong>, <strong>cm × 10 = mm</strong> (y <strong>m × 1000 = mm</strong>).</p>
+
+            <div class="table-scroll">
+            <table class="table-cad">
+              <thead><tr><th>Medida (mm)</th><th>Medida (cm)</th><th>Medida (m)</th><th>Referencia</th></tr></thead>
+              <tbody>
+                <tr><td colspan="4"><strong>Puertas (UNE 56801)</strong></td></tr>
+                <tr><td>625 mm</td><td>62,5 cm</td><td>0,625 m</td><td>Hoja de puerta (aseos, despensas)</td></tr>
+                <tr><td>725 mm</td><td>72,5 cm</td><td>0,725 m</td><td>Hoja de puerta (dormitorios, cocinas, salones)</td></tr>
+                <tr><td>825 mm</td><td>82,5 cm</td><td>0,825 m</td><td>Hoja de puerta principal y accesible</td></tr>
+                <tr><td>925 mm</td><td>92,5 cm</td><td>0,925 m</td><td>Hoja de puerta amplia (PMR)</td></tr>
+                <tr><td>700 / 800 / 900 / 1000 mm</td><td>Hueco 70 / 80 / 90 / 100 cm</td><td>0,70 / 0,80 / 0,90 / 1,00 m</td><td>Hueco de obra de cada hoja</td></tr>
+                <tr><td>70–100 mm</td><td>7–10 cm</td><td>0,07–0,10 m</td><td>Ancho habitual del marco de la puerta</td></tr>
+                <tr><td>2030 mm</td><td>203 cm</td><td>2,03 m</td><td>Altura de hoja tradicional; 2110 mm (211 cm = 2,11 m) en obra nueva</td></tr>
+                <tr><td colspan="4"><strong>Ventanas</strong></td></tr>
+                <tr><td>600 / 800 / 1000 / 1200 mm</td><td>60 / 80 / 100 / 120 cm</td><td>0,60 / 0,80 / 1,00 / 1,20 m</td><td>Anchos habituales de ventana</td></tr>
+                <tr><td>900–1100 mm</td><td>90–110 cm</td><td>0,90–1,10 m</td><td>Alféizar sobre el pavimento</td></tr>
+                <tr><td>1200–1500 mm</td><td>120–150 cm</td><td>1,20–1,50 m</td><td>Altura "cómoda" de la ventana</td></tr>
+                <tr><td>550 mm</td><td>55 cm</td><td>0,55 m</td><td>Desnivel desde el que es obligatoria la barrera de protección</td></tr>
+                <tr><td colspan="4"><strong>Escaleras (CTE DB-SUA)</strong></td></tr>
+                <tr><td>175–200 mm</td><td>17,5–20 cm</td><td>0,175–0,20 m</td><td>Contrahuella máxima según el uso</td></tr>
+                <tr><td>220 / 280 mm</td><td>22 / 28 cm</td><td>0,22 / 0,28 m</td><td>Huella mínima (uso restringido / general)</td></tr>
+                <tr><td>900–1100 mm</td><td>90–110 cm</td><td>0,90–1,10 m</td><td>Altura del pasamanos</td></tr>
+                <tr><td>800 / 1000 / 1200 mm</td><td>80 / 100 / 120 cm</td><td>0,80 / 1,00 / 1,20 m</td><td>Ancho mínimo del tramo según el uso</td></tr>
+                <tr><td colspan="4"><strong>Balcones y barandillas</strong></td></tr>
+                <tr><td>550 mm</td><td>55 cm</td><td>0,55 m</td><td>Desnivel > 0,55 m exige barrera de protección</td></tr>
+                <tr><td>900–1000 mm</td><td>90–100 cm</td><td>0,90–1,00 m</td><td>Barandilla cuando la caída es ≤ 6 m</td></tr>
+                <tr><td>1100 mm</td><td>110 cm</td><td>1,10 m</td><td>Barandilla cuando la caída supera los 6 m</td></tr>
+                <tr><td>1000–1500 mm</td><td>100–150 cm</td><td>1,00–1,50 m</td><td>Ancho útil de balcón</td></tr>
+                <tr><td colspan="4"><strong>Ambientes</strong></td></tr>
+                <tr><td>800 mm</td><td>80 cm</td><td>0,80 m</td><td>Ancho mínimo de pasillos y distribución</td></tr>
+                <tr><td>900 mm</td><td>90 cm</td><td>0,90 m</td><td>Pasillo accesible (+ 1,00–1,20 m en zonas principales)</td></tr>
+                <tr><td>2000 mm</td><td>200 cm</td><td>2,00 m</td><td>Paso libre mínimo bajo puertas y vigas</td></tr>
+                <tr><td>2200 mm</td><td>220 cm</td><td>2,20 m</td><td>Altura libre en baños y cocinas</td></tr>
+                <tr><td>2500 mm</td><td>250 cm</td><td>2,50 m</td><td>Altura libre mínima de piso</td></tr>
+              </tbody>
+            </table>
+            </div>
+
+            <div class="callout">
+              <span class="callout-title">Convertir sin calculadora</span>
+              Para pasar de centímetros a metros corre la coma dos lugares a la izquierda: 72,5 cm → <strong>0,725 m</strong>. Para pasar de metros a centímetros, dos a la derecha: 2,50 m → <strong>250 cm</strong>. Y para pasar a milímetros multiplica por 10 (cm × 10 = mm): 82,5 cm son <strong>825 mm</strong>. En AutoCAD, si dibujas a escala real en mm, teclea todo en milímetros: 0,725 m son <strong>725</strong> unidades y 250 cm son <strong>2500</strong>.
+            </div>
+
+            <h3>8. Tips para dibujar estos elementos en AutoCAD</h3>
+            <div class="callout">
+              <span class="callout-title">Tip 1 · Trabaja en mm</span>
+              Una puerta de 82,5 × 203 cm se dibuja como un rectángulo de 825 × 2030. Nada de "dibujar en centímetros y multiplicar": dibuja a escala real y deja que papel/ventana hagan la escala.
+            </div>
+            <div class="callout">
+              <span class="callout-title">Tip 2 · Bloques dinámicos para puertas y ventanas</span>
+              Crea bloques dinámicos con parámetros de distancia (véase la lección de bloques dinámicos) para la hoja de puerta (62,5 / 72,5 / 82,5) y para las ventanas: así estiras un vano sin redibujar.
+            </div>
+            <div class="callout">
+              <span class="callout-title">Tip 3 · Capas por familias</span>
+              Usa las capas del estándar: <code>A-Muros</code>, <code>A-Puertas</code>, <code>A-Ventanas</code>, <code>A-Ejes</code>, <code>A-Cotas</code>. Los ejes de los vanos se dibujan con línea <code>CENTER</code> para alinearlos entre fachadas.
+            </div>
+            <div class="callout">
+              <span class="callout-title">Tip 4 · Acota el alféizar, no solo la ventana</span>
+              En el alzado, indica la cota de alféizar (p. ej. <code>+0,90</code>) y la altura del hueco (p. ej. <code>1,20</code>). En planta acota los ejes del vano y la luz libre del hueco.
+            </div>
+
+            <h3>9. Fuentes y normativa de referencia</h3>
+            <ul>
+              <li><strong>CTE, Documento Básico SUA</strong> (Seguridad de utilización y accesibilidad): barreras de protección, escaleras y accesibilidad. <em>Ministerio de Vivienda, España.</em></li>
+              <li><strong>CTE, Documento Básico SE</strong> (Seguridad estructural): tipos de cimientos directos (tabla 4.1) y zapatas.</li>
+              <li><strong>UNE 56801</strong>: medidas normalizadas de hojas de puerta.</li>
+              <li><strong>Normas autonómicas y locales de habitabilidad</strong>: superficies y condiciones mínimas de los ambientes de vivienda.</li>
+              <li><strong>Ernst Neufert, "Arte de proyectar en arquitectura"</strong>: referencia clásica de dimensiones del ser humano y de los recintos.</li>
+              <li><strong>Regla de Blondel</strong> (2 × contrahuella + huella ≈ 63 cm): dimensiamiento ergonómico de escaleras.</li>
+            </ul>
+
+            <div class="callout warn">
+              <span class="callout-title">Importante</span>
+              Todos los valores de esta lección son <strong>orientativos</strong> y de ayuda al prediseño. Antes de entregar un proyecto verifica la normativa vigente de tu país/región y las exigencias particulares del encargo y del municipio.
+            </div>
+          <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
+          </section>
+
+        </article>
+
+        <nav class="level-nav">
+          <a href="importar-exportar.html">
+            <span class="nav-label">Anterior</span>
+            <span class="nav-title"><i class="bi bi-arrow-left"></i> Importar y exportar</span>
+          </a>
+          <a href="index.html#autoevaluacion" class="nav-next">
+            <span class="nav-label">Siguiente</span>
+            <span class="nav-title">Autoevaluación <i class="bi bi-arrow-right"></i></span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container container-xl">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <div class="brand-cad mb-2"><img class="brand-logo" src="../../assets/img/autocad-2.svg" alt="AutoCAD"><span>AutoCAD Guía</span></div>
+        <p data-i18n="footer.disclaimer">Contenido educativo independiente. No es un sitio oficial de Autodesk®; AutoCAD® es una marca registrada de Autodesk, Inc.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.levels">Niveles</h6>
+        <ul class="list-unstyled">
+          <li><a href="../nivel-1-fundamentos/index.html">Fundamentos</a></li>
+          <li><a href="../nivel-2-dibujo-2d/index.html">Dibujo 2D</a></li>
+          <li><a href="../nivel-3-organizacion/index.html">Organización</a></li>
+          <li><a href="../nivel-4-modelado-3d/index.html">Modelado 3D</a></li>
+          <li><a href="../nivel-5-avanzado/index.html">Experto</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.guide">Guía</h6>
+        <ul class="list-unstyled">
+          <li><a href="../comandos.html">Comandos</a></li>
+          <li><a href="../ejemplos-visuales.html">Ejemplos</a></li>
+          <li><a href="../trucos.html">Trucos</a></li>
+          <li><a href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
+          <li><a href="../recursos.html">Recursos</a></li>
+          <li><a href="../glosario.html">Glosario</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="mono text-uppercase small text-muted-custom mb-3" data-i18n="footer.follow">Síguenos</h6>
+        <div class="d-flex gap-2">
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+          <a href="https://github.com/Apaza-Victor/Gu-a-de-Autocad" class="icon-btn" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="mt-5 mb-4" style="border-color:var(--border-soft)">
+    <p class="mb-0 small" data-i18n="footer.copyright">© 2026 Victor Apaza. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<div class="command-line-bar" id="cmdBar">
+  <div class="command-line-inner">
+    <span class="prompt-sign" data-i18n="ui.command">Comando:</span>
+    <span id="cmd-typed"></span><span class="cursor-blink"></span>
+    <button class="cl-close" id="cmdClose" title="Ocultar" data-i18n-title="ui.hide"><i class="bi bi-x-lg"></i></button>
+  </div>
+</div>
+
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Buscar en la guía" data-i18n-aria="ui.search">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="bi bi-search"></i>
+      <input type="text" id="globalSearchInput" placeholder="Buscar comandos, temas, conceptos..." autocomplete="off" aria-label="Buscar" data-i18n-placeholder="ui.searchPlaceholder">
+      <kbd class="search-kbd">ESC</kbd>
+    </div>
+    <div class="search-results" id="globalSearchResults">
+      <div class="search-empty" data-i18n="ui.typeToSearch">Escribe al menos 2 caracteres para buscar...</div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+<script src="../../assets/js/i18n.js"></script>
+<script src="../../assets/js/search-index.js"></script>
+<script src="../../assets/js/animations.js"></script>
+<script src="../../assets/js/main.js"></script>
+
+</body>
+</html>

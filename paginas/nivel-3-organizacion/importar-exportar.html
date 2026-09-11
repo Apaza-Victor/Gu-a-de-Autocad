@@ -86,7 +86,7 @@
         <li class="nav-item"><a class="nav-link nav-link-cad" href="../trucos.html" data-i18n="nav.tips">Trucos</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="../recursos.html" data-i18n="nav.resources">Recursos</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-cad" href="../faq.html" data-i18n="nav.faq">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../glosario.html" data-i18n="nav.glosario">Glosario</a></li>
       </ul>
 
       <div class="d-flex align-items-center gap-2 nav-actions-menu ms-lg-auto">
@@ -105,8 +105,8 @@
     <p class="crumb"><a href="../../index.html">Inicio</a> / <a href="../../index.html#niveles">Niveles</a> / <a href="index.html">Organización</a> / Tema 20</p>
     <span class="eyebrow" data-i18n="lvl3.eyebrow">Nivel 03 · Intermedio</span>
     <h1>Importar y exportar planos</h1>
-    <div class="level-progress-bar" data-level-prefix="nivel3" data-level-total="20"><div class="fill"></div></div>
-    <p class="level-progress-label">0 de 20 temas completados · 0%</p>
+    <div class="level-progress-bar" data-level-prefix="nivel3" data-level-total="21"><div class="fill"></div></div>
+    <p class="level-progress-label">0 de 21 temas completados · 0%</p>
   </div>
 </header>
 
@@ -138,6 +138,7 @@
             <li><a href="sheet-sets.html"><span class="toc-check"></span> Conjuntos de planos</a></li>
             <li><a href="etransmit.html"><span class="toc-check"></span> Transmitir y empaquetar</a></li>
             <li><a href="importar-exportar.html" data-toc="nivel3-importar-exportar"><span class="toc-check"></span> Importar y exportar</a></li>
+            <li><a href="dimensiones-arquitectura.html" data-toc="nivel3-dimensiones-arquitectura"><span class="toc-check"></span> Dimensiones y medidas de arquitectura</a></li>
             <li><a href="index.html#autoevaluacion"><span class="toc-check"></span> Autoevaluación</a></li>
           </ul>
           <hr style="border-color:var(--border-soft)" class="my-4">
@@ -240,6 +241,27 @@
               </div>
             </div>
 
+            <h3>5. Compatibilidad de versiones DWG/DXF</h3>
+            <p>Guarda siempre "hacia atrás": quien recibe el archivo debe poder abrirlo con su versión. Regla: <strong>guarda un formato más antiguo que el que usa tu cliente si no conoces su versión</strong> (ej.: AutoCAD 2013 es compatible con casi todo el sector).</p>
+
+            <div class="table-scroll">
+            <table class="table-cad">
+              <thead><tr><th>Guardar como</th><th>Abre en</th><th>Comentario</th></tr></thead>
+              <tbody>
+                <tr><td>DWG 2018 / 2024</td><td>AutoCAD 2018+ / 2024+</td><td>Versiones actuales, mantiene todas las funciones</td></tr>
+                <tr><td>DWG 2013</td><td>AutoCAD 2013 en adelante</td><td>El "<strong>formato puente</strong>" más seguro para colaborar</td></tr>
+                <tr><td>DWG 2007 / 2004</td><td>AutoCAD 2004+</td><td>Solo si el cliente usa software muy antiguo</td></tr>
+                <tr><td>DXF</td><td>Casi cualquier CAD (y GIS)</td><td>Universal, ideal para intercambiar con otros programas</td></tr>
+                <tr><td>DWT</td><td>AutoCAD (plantilla)</td><td>Para compartir normativa interna de capas/estilos</td></tr>
+              </tbody>
+            </table>
+            </div>
+
+            <div class="callout warn">
+              <span class="callout-title">Ojo con los formatos nuevos</span>
+              Si importas un DWG de una versión <strong>más nueva</strong> que la tuya, AutoCAD te avisará. No conviertas el archivo a tu versión sin revisar: las cotas anotativas, los bloques dinámicos o las nubes de puntos pueden sufrir al degradarse. Mejor pide a quien te lo manda que lo guarde en tu versión.
+            </div>
+
             <div class="table-scroll">
             <table class="table-cad">
               <thead><tr><th>Comando</th><th>Qué hace</th></tr></thead>
@@ -268,9 +290,9 @@
             <span class="nav-label">Anterior</span>
             <span class="nav-title"><i class="bi bi-arrow-left"></i> Transmitir y empaquetar</span>
           </a>
-          <a href="index.html#autoevaluacion" class="nav-next">
+          <a href="dimensiones-arquitectura.html" class="nav-next">
             <span class="nav-label">Siguiente</span>
-            <span class="nav-title">Autoevaluación <i class="bi bi-arrow-right"></i></span>
+            <span class="nav-title">Dimensiones y medidas de arquitectura <i class="bi bi-arrow-right"></i></span>
           </a>
         </nav>
       </div>
@@ -303,6 +325,7 @@
           <li><a href="../trucos.html">Trucos</a></li>
           <li><a href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
           <li><a href="../recursos.html">Recursos</a></li>
+          <li><a href="../glosario.html">Glosario</a></li>
           <li><a href="../faq.html">FAQ</a></li>
         </ul>
       </div>

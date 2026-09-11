@@ -86,7 +86,7 @@
         <li class="nav-item"><a class="nav-link nav-link-cad" href="../trucos.html" data-i18n="nav.tips">Trucos</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="../recursos.html" data-i18n="nav.resources">Recursos</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-cad" href="../faq.html" data-i18n="nav.faq">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../glosario.html" data-i18n="nav.glosario">Glosario</a></li>
       </ul>
 
       <div class="d-flex align-items-center gap-2 nav-actions-menu ms-lg-auto">
@@ -233,6 +233,28 @@
               </div>
             </div>
 
+            <h3>4. Nomenclatura recomendada de capas</h3>
+            <p>La convención de nombres más usada en arquitectura e ingeniería sigue el formato <strong>prefijo-descripción</strong>. Aplicar una nomenclatura consistente desde el primer día evita caos en la impresión y en la colaboración.</p>
+
+            <div class="table-scroll">
+            <table class="table-cad">
+              <thead><tr><th>Prefijo</th><th>Disciplina</th><th>Ejemplos</th></tr></thead>
+              <tbody>
+                <tr><td><code>A-</code></td><td>Arquitectura</td><td>A-Muros, A-Carpintería, A-Puertas, A-Cotas</td></tr>
+                <tr><td><code>S-</code></td><td>Constructivo / Secundario</td><td>S-Ejes, S-Replantéo, S-Niveles</td></tr>
+                <tr><td><code>E-</code></td><td>Estructura</td><td>E-Pilares, E-Vigas, E-Zapatas, E-Armado</td></tr>
+                <tr><td><code>I-</code></td><td>Instalaciones</td><td>I-Fontanería, I-Eléctrico, I-ACS</td></tr>
+                <tr><td><code>D-</code></td><td>Detalles</td><td>D-Muros, D-CotasDetalle, D-Hatch</td></tr>
+                <tr><td><code>R-</code></td><td>Representación / Render</td><td>R-Hatch, R-Texturas, R-Mobiliario</td></tr>
+              </tbody>
+            </table>
+            </div>
+
+            <div class="callout">
+              <span class="callout-title">Regla práctica</span>
+              Cada capa lleva su color, tipo de línea y grosor definidos. Usa siempre <strong>ByLayer</strong> en los objetos: así al cambiar la capa, todo se actualiza de golpe.
+            </div>
+
             <div class="table-scroll">
             <table class="table-cad">
               <thead><tr><th>Comando</th><th>Qué hace</th><th>Atajo</th></tr></thead>
@@ -295,6 +317,7 @@
           <li><a href="../trucos.html">Trucos</a></li>
           <li><a href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
           <li><a href="../recursos.html">Recursos</a></li>
+          <li><a href="../glosario.html">Glosario</a></li>
           <li><a href="../faq.html">FAQ</a></li>
         </ul>
       </div>

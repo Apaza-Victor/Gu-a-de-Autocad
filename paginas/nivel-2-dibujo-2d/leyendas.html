@@ -86,7 +86,7 @@
         <li class="nav-item"><a class="nav-link nav-link-cad" href="../trucos.html" data-i18n="nav.tips">Trucos</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
         <li class="nav-item"><a class="nav-link nav-link-cad" href="../recursos.html" data-i18n="nav.resources">Recursos</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-cad" href="../faq.html" data-i18n="nav.faq">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cad" href="../glosario.html" data-i18n="nav.glosario">Glosario</a></li>
       </ul>
 
       <div class="d-flex align-items-center gap-2 nav-actions-menu ms-lg-auto">
@@ -213,6 +213,29 @@
             <h3>5. Leyenda para cotas y niveles de altura</h3>
             <p>Para el símbolo de nivel de altura (la flecha con cota), crea un bloque paramétrico o simplemente un conjunto de líneas + texto. En arquitectura el formato habitual es una flecha blanca con el valor encima, acompañada de su unidad (m o cm).</p>
 
+            <h3>6. Ejemplo de leyenda-tipo para un plano de vivienda</h3>
+            <p>Referencia rápida de las descripciones más habituales que deberías incluir (símbolo obtenido copiando un fragmento del propio dibujo):</p>
+
+            <div class="table-scroll">
+            <table class="table-cad">
+              <thead><tr><th>Símbolo</th><th>Descripción</th><th>Fuente del símbolo</th></tr></thead>
+              <tbody>
+                <tr><td>Muro doble líneay relleno</td><td>Muro de carga</td><td>Rectángulo con hatch sólido o <code>ANSI31</code></td></tr>
+                <tr><td>Línea doble fina</td><td>Tabique (no portante)</td><td>Dos polilíneas paralelas finas</td></tr>
+                <tr><td>Línea punteada <code>DASHED</code></td><td>Línea oculta / elemento por debajo</td><td>Línea con tipo <code>HIDDEN</code></td></tr>
+                <tr><td>Ejes con círculo letra/número</td><td>Eje de replanteo</td><td>Círculo pequeño + letra/número</td></tr>
+                <tr><td>Flecha con nivel</td><td>Nivel de altura (p. ej. +3.00)</td><td>Línea + flecha + texto</td></tr>
+                <tr><td>Rectángulo con <code>AR-CONC</code></td><td>Hormigón en sección</td><td>Copia del hatch del plano</td></tr>
+                <tr><td>Rectángulo con <code>AR-BRSTD</code></td><td>Fábrica de ladrillo</td><td>Copia del hatch del plano</td></tr>
+              </tbody>
+            </table>
+            </div>
+
+            <div class="callout">
+              <span class="callout-title">Regla de oro</span>
+              La leyenda solo incluye la simbología que de verdad aparece en el plano. Un símbolo que no se usa confunde al lector; una descripción que no está en la leyenda genera dudas en obra.
+            </div>
+
             <div class="table-scroll">
             <table class="table-cad">
               <thead><tr><th>Comando</th><th>Qué hace</th></tr></thead>
@@ -275,6 +298,7 @@
           <li><a href="../trucos.html">Trucos</a></li>
           <li><a href="../tips.html" data-i18n="nav.tutorials">Tips</a></li>
           <li><a href="../recursos.html">Recursos</a></li>
+          <li><a href="../glosario.html">Glosario</a></li>
           <li><a href="../faq.html">FAQ</a></li>
         </ul>
       </div>

@@ -397,6 +397,7 @@ function initResourceFilters(){
 
   const buttons = filtersContainer.querySelectorAll('.res-filter-btn');
   const cards = grid.querySelectorAll('.res-full-card');
+  const sections = grid.querySelectorAll('.res-section');
 
   buttons.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -407,6 +408,11 @@ function initResourceFilters(){
       cards.forEach(card => {
         const cat = card.getAttribute('data-cat');
         card.style.display = (filter === 'todos' || cat === filter) ? '' : 'none';
+      });
+
+      sections.forEach(sec => {
+        const catSec = sec.getAttribute('data-cat-section');
+        sec.style.display = (filter === 'todos' || catSec === filter) ? '' : 'none';
       });
     });
   });
@@ -642,6 +648,7 @@ function buildSearchData(){
       { name: 'Nivel 5 · Avanzado', url: 'paginas/nivel-5-avanzado/index.html' },
       { name: 'Comandos', url: 'paginas/comandos.html' },
       { name: 'Recursos', url: 'paginas/recursos.html' },
+      { name: 'Glosario', url: 'paginas/glosario.html' },
       { name: 'FAQ', url: 'paginas/faq.html' }
     ];
     levels.forEach(l => {
