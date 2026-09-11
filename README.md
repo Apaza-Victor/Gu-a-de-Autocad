@@ -11,6 +11,9 @@
     <a href="#"><img alt="Idiomas" src="https://img.shields.io/badge/idiomas-ES%20%2F%20EN-1E90FF?style=for-the-badge"></a>
     <a href="#"><img alt="Tema" src="https://img.shields.io/badge/tema-oscuro%20%2F%20claro-FF6A00?style=for-the-badge"></a>
   </p>
+  <p align="center">
+    <strong>🌐 Ver en vivo:</strong> <a href="https://apaza-victor.github.io/Gu-a-de-Autocad/" target="_blank"><code>apaza-victor.github.io/Gu-a-de-Autocad</code></a>
+  </p>
 </p>
 
 ---
