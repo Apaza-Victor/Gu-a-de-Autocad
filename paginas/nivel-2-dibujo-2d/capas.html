@@ -148,7 +148,7 @@
 
           <section id="capas" data-topic="nivel2-capas">
                                 <h2><span class="sec-num">5</span><span data-i18n="lvl2.s4.title">Capas (Layers)</span></h2>
-                                <p>Una capa es un "acetato" transparente donde se agrupan objetos con propiedades comunes: mismo color, mismo tipo de línea, mismo grosor. Se administran desde el <strong>Administrador de propiedades de capas</strong> (comando <span class="cmd-inline">LAYER</span> / <span class="key-inline">LA</span>).</p>
+                                <p>Una capa es un "acetato" transparente donde se agrupan objetos con propiedades comunes: mismo color, mismo tipo de línea, mismo grosor. Se administran desde el <strong>Administrador de propiedades de capas</strong> (comando <span class="cmd-inline">CAPA</span> (en inglés: <span class="cmd-inline">LAYER</span>) / <span class="key-inline">LA</span>).</p>
 
                                 <div class="callout">
                                   <span class="callout-title">Regla de oro</span>
@@ -175,7 +175,7 @@
                                   <span class="lesson-num">1</span>
                                   <div class="lesson-body">
                                     <h4>Abre el Administrador de capas</h4>
-                                    <p>Escribe <span class="cmd-inline">LAYER</span> o <span class="key-inline">LA</span> en la línea de comandos y presiona Enter. Se abre el cuadro "Layer Properties Manager". También puedes acceder desde <strong>Inicio → Capas → Capa</strong> en la cinta de opciones.</p>
+                                    <p>Escribe <span class="cmd-inline">CAPA</span> (en inglés: <span class="cmd-inline">LAYER</span>) o <span class="key-inline">LA</span> en la línea de comandos y presiona Enter. Se abre el cuadro "Layer Properties Manager". También puedes acceder desde <strong>Inicio → Capas → Capa</strong> en la cinta de opciones.</p>
                                   </div>
                                 </div>
 
@@ -295,8 +295,8 @@
                                 <table class="table-cad">
                                   <thead><tr><th>Estado</th><th>Icono en el administrador</th><th>Qué hace</th><th>Atajo rápido</th></tr></thead>
                                   <tbody>
-                                    <tr><td><strong>On / Off</strong></td><td>💡 bombilla</td><td>Apaga la capa: los objetos no se ven ni se seleccionan. Al encenderla, todo vuelve.</td><td><span class="cmd-inline">LAYOFF</span> / <span class="cmd-inline">LAYON</span></td></tr>
-                                    <tr><td><strong>Freeze / Thaw</strong></td><td>❄️ copo de nieve</td><td>Congela: como Off pero AutoCAD no calcula los objetos al regenerar. Mejor rendimiento en archivos grandes.</td><td><span class="cmd-inline">LAYFRZ</span> / <span class="cmd-inline">LAYTHW</span></td></tr>
+                                    <tr><td><strong>On / Off</strong></td><td>💡 bombilla</td><td>Apaga la capa: los objetos no se ven ni se seleccionan. Al encenderla, todo vuelve.</td><td><span class="cmd-inline">APAGARCAPA</span> (en inglés: <span class="cmd-inline">LAYOFF</span>) / <span class="cmd-inline">TODASCAPASENCENDIDAS</span> (en inglés: <span class="cmd-inline">LAYON</span>)</td></tr>
+                                    <tr><td><strong>Freeze / Thaw</strong></td><td>❄️ copo de nieve</td><td>Congela: como Off pero AutoCAD no calcula los objetos al regenerar. Mejor rendimiento en archivos grandes.</td><td><span class="cmd-inline">LAYFRZ</span> / <span class="cmd-inline">TODASCAPAS</span> (en inglés: <span class="cmd-inline">LAYTHW</span>)</td></tr>
                                     <tr><td><strong>Lock / Unlock</strong></td><td>🔒 candado</td><td>Inmoviliza: los objetos se ven pero no se pueden editar (seleccionar, mover, borrar).</td><td><span class="cmd-inline">LAYLCK</span> / <span class="cmd-inline">LAYULK</span></td></tr>
                                     <tr><td><strong>No Plot</strong></td><td>🖨️ impresora con X</td><td>La capa se ve en pantalla pero no se imprime. Ideal para capas auxiliares y de referencia.</td><td>Desde el administrador de capas</td></tr>
                                   </tbody>
@@ -306,19 +306,19 @@
                                 <table class="table-cad">
                                   <thead><tr><th>Comando</th><th>Atajo</th><th>Qué hace</th></tr></thead>
                                   <tbody>
-                                    <tr><td><span class="cmd-inline">LAYISO</span></td><td>—</td><td>Aísla: apaga todas las capas excepto la del objeto que selecciones. Ideal para trabajar sin distracciones.</td></tr>
+                                    <tr><td><span class="cmd-inline">AISLARCAPA</span> (en inglés: <span class="cmd-inline">LAYISO</span>)</td><td>—</td><td>Aísla: apaga todas las capas excepto la del objeto que selecciones. Ideal para trabajar sin distracciones.</td></tr>
                                     <tr><td><span class="cmd-inline">LAYUNISO</span></td><td>—</td><td>Restaura el estado anterior de capas (después de LAYISO).</td></tr>
                                     <tr><td><span class="cmd-inline">LAYMCH</span></td><td>—</td><td>Mueve objetos seleccionados a la capa que elijas después.</td></tr>
                                     <tr><td><span class="cmd-inline">LAYCUR</span></td><td>—</td><td>Mueve objetos seleccionados a la capa actual (la activa).</td></tr>
-                                    <tr><td><span class="cmd-inline">LAYDEL</span></td><td>—</td><td>Elimina una capa y todos sus objetos. <strong>Usar con cuidado.</strong></td></tr>
-                                    <tr><td><span class="cmd-inline">MATCHPROP</span></td><td><span class="key-inline">MA</span></td><td>Copia propiedades (incluida la capa) de un objeto a otros.</td></tr>
+                                    <tr><td><span class="cmd-inline">ELIMINARCAPA</span> (en inglés: <span class="cmd-inline">LAYDEL</span>)</td><td>—</td><td>Elimina una capa y todos sus objetos. <strong>Usar con cuidado.</strong></td></tr>
+                                    <tr><td><span class="cmd-inline">IGUALARPROP</span> (en inglés: <span class="cmd-inline">MATCHPROP</span>)</td><td><span class="key-inline">MA</span></td><td>Copia propiedades (incluida la capa) de un objeto a otros.</td></tr>
                                   </tbody>
                                 </table>
 
                                 <!-- ====== EJEMPLO PRÁCTICO ====== -->
                                 <h3>Ejemplo práctico: crear el set de capas de un proyecto arquitectónico</h3>
                                 <ol>
-                                  <li>Escribe <span class="cmd-inline">LAYER</span> y presiona Enter.</li>
+                                  <li>Escribe <span class="cmd-inline">CAPA</span> (en inglés: <span class="cmd-inline">LAYER</span>) y presiona Enter.</li>
                                   <li>Haz clic en "Nueva capa" 10 veces para crear 10 capas.</li>
                                   <li>Renombra cada una con los nombres de la tabla anterior (A-Ejes, A-Muros, A-Cotas, etc.).</li>
                                   <li>Para cada capa, haz clic en su casilla de color y asigna el color correspondiente.</li>

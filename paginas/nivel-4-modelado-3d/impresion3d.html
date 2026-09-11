@@ -159,7 +159,7 @@
 
                         <h3>Requisitos para una impresión limpia</h3>
                         <ul>
-                          <li><strong>Sólidos cerrados:</strong> el modelo debe ser un volumen sin huecos. Revisa con <span class="cmd-inline">MASSPROP</span> que exista y con <span class="cmd-inline">UNION</span> une las partes tocantes.</li>
+                          <li><strong>Sólidos cerrados:</strong> el modelo debe ser un volumen sin huecos. Revisa con <span class="cmd-inline">PROPFÍS</span> (en inglés: <span class="cmd-inline">MASSPROP</span>) que exista y con <span class="cmd-inline">UNIÓN</span> (en inglés: <span class="cmd-inline">UNION</span>) une las partes tocantes.</li>
                           <li><strong>Normales bien orientadas:</strong> la superficie debe verse desde el exterior; corrige orientaciones con los comandos de malla si está invertida.</li>
                           <li><strong>Unidades coherentes:</strong> decide si el modelo está en milímetros o centímetros Y configúralo en el diálogo de exportación; es la causa más común de piezas 10x o 100x más pequeñas.</li>
                           <li><strong>Resolución suficiente:</strong> para caras curvas usa resolución alta; para cajas, media basta.</li>
@@ -170,7 +170,7 @@
                           <span class="lesson-num">1</span>
                           <div class="lesson-body">
                             <h4>Prepara el modelo</h4>
-                            <p>Une las partes con <span class="cmd-inline">UNION</span> y verifica el volumen con <span class="cmd-inline">MASSPROP</span>.</p>
+                            <p>Une las partes con <span class="cmd-inline">UNIÓN</span> (en inglés: <span class="cmd-inline">UNION</span>) y verifica el volumen con <span class="cmd-inline">PROPFÍS</span> (en inglés: <span class="cmd-inline">MASSPROP</span>).</p>
                           </div>
                         </div>
                         <div class="lesson-step">
@@ -203,7 +203,7 @@
                           <span class="lesson-num">1</span>
                           <div class="lesson-body">
                             <h4>Modela la arandela</h4>
-                            <p>Con <span class="cmd-inline">CYLINDER</span> (radio 50, altura 10) menos <span class="cmd-inline">CYLINDER</span> interior (radio 25) vía <span class="cmd-inline">SUBTRACT</span>.</p>
+                            <p>Con <span class="cmd-inline">CILINDRO</span> (en inglés: <span class="cmd-inline">CYLINDER</span>) (radio 50, altura 10) menos <span class="cmd-inline">CILINDRO</span> (en inglés: <span class="cmd-inline">CYLINDER</span>) interior (radio 25) vía <span class="cmd-inline">RESTAR</span> (en inglés: <span class="cmd-inline">SUBTRACT</span>).</p>
                           </div>
                         </div>
                         <div class="lesson-step">

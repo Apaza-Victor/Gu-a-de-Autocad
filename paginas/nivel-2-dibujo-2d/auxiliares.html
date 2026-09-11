@@ -153,17 +153,17 @@
                                 <table class="table-cad">
                                   <thead><tr><th>Comando</th><th>Atajo</th><th>Qué hace</th></tr></thead>
                                   <tbody>
-                                    <tr><td><span class="cmd-inline">XLINE</span></td><td><span class="key-inline">XL</span></td><td>Línea infinita en una dirección (horizontal, vertical o angular). Ideal para trazar ejes de referencia.</td></tr>
-                                    <tr><td><span class="cmd-inline">RAY</span></td><td>—</td><td>Semitrayectoria que nace de un punto y se extiende indefinidamente en una dirección.</td></tr>
-                                    <tr><td><span class="cmd-inline">LINE</span></td><td><span class="key-inline">L</span></td><td>Línea finita; dibuja segmentos hasta que pulses Enter o Esc para terminar el comando.</td></tr>
+                                    <tr><td><span class="cmd-inline">LINEAX</span> (en inglés: <span class="cmd-inline">XLINE</span>)</td><td><span class="key-inline">XL</span></td><td>Línea infinita en una dirección (horizontal, vertical o angular). Ideal para trazar ejes de referencia.</td></tr>
+                                    <tr><td><span class="cmd-inline">RAYO</span> (en inglés: <span class="cmd-inline">RAY</span>)</td><td>—</td><td>Semitrayectoria que nace de un punto y se extiende indefinidamente en una dirección.</td></tr>
+                                    <tr><td><span class="cmd-inline">LÍNEA</span> (en inglés: <span class="cmd-inline">LINE</span>)</td><td><span class="key-inline">L</span></td><td>Línea finita; dibuja segmentos hasta que pulses Enter o Esc para terminar el comando.</td></tr>
                                   </tbody>
                                 </table>
 
                                 <h3>Buenas prácticas con geometría auxiliar</h3>
                                 <ul>
                                   <li>Dibuja toda la geometría auxiliar en una capa dedicada (por ejemplo, "Auxiliar") con un color visible pero que no se imprima.</li>
-                                  <li>Usa <span class="cmd-inline">XLINE</span> para establecer los ejes principales de un plano antes de dibujar muros.</li>
-                                  <li>Cuando el plano esté terminado, congela o apaga la capa auxiliar con <span class="cmd-inline">LAYISO</span> para ver el resultado limpio.</li>
+                                  <li>Usa <span class="cmd-inline">LINEAX</span> (en inglés: <span class="cmd-inline">XLINE</span>) para establecer los ejes principales de un plano antes de dibujar muros.</li>
+                                  <li>Cuando el plano esté terminado, congela o apaga la capa auxiliar con <span class="cmd-inline">AISLARCAPA</span> (en inglés: <span class="cmd-inline">LAYISO</span>) para ver el resultado limpio.</li>
                                 </ul>
 
                                 <div class="callout">
@@ -173,7 +173,7 @@
 
           <!-- ENRIQ START -->
           <h3>Opciones del comando XLINE</h3>
-          <p><span class="cmd-inline">XLINE</span> (<span class="key-inline">XL</span>) crea líneas infinitas con varias opciones:</p>
+          <p><span class="cmd-inline">LINEAX</span> (en inglés: <span class="cmd-inline">XLINE</span>) (<span class="key-inline">XL</span>) crea líneas infinitas con varias opciones:</p>
           <ul>
             <li><strong>Horizontal (H) / Vertical (V):</strong> ejes rectos a 0° o 90°.</li>
             <li><strong>Ángulo (A):</strong> línea infinita con un ángulo dado; útil para piezas giradas.</li>
@@ -190,14 +190,14 @@
             <span class="lesson-num">1</span>
             <div class="lesson-body">
               <h4>Traza los ejes</h4>
-              <p>Crea la capa "Aux" (color 8, no imprimible) y traza tres <span class="cmd-inline">XLINE</span> verticales a 0, 3000 y 6000, y dos horizontales a 0 y 4000.</p>
+              <p>Crea la capa "Aux" (color 8, no imprimible) y traza tres <span class="cmd-inline">LINEAX</span> (en inglés: <span class="cmd-inline">XLINE</span>) verticales a 0, 3000 y 6000, y dos horizontales a 0 y 4000.</p>
             </div>
           </div>
           <div class="lesson-step">
             <span class="lesson-num">2</span>
             <div class="lesson-body">
               <h4>Dibuja sobre ellas</h4>
-              <p>Con <span class="cmd-inline">PLINE</span> en la capa de muros, usa las intersecciones (OSNAP <span class="cmd-inline">INT</span>) como guía y traza el cerco.</p>
+              <p>Con <span class="cmd-inline">POLILÍNEA</span> (en inglés: <span class="cmd-inline">PLINE</span>) en la capa de muros, usa las intersecciones (OSNAP <span class="cmd-inline">INT</span>) como guía y traza el cerco.</p>
             </div>
           </div>
           <div class="lesson-step">

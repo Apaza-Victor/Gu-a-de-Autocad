@@ -163,14 +163,14 @@
                                 </table>
 
                                 <h3>Cargar y asignar tipos de línea</h3>
-                                <p>Los tipos de línea no están cargados por defecto. Se cargan con el comando <span class="cmd-inline">LINETYPE</span> (o <span class="cmd-inline">LT</span>):</p>
+                                <p>Los tipos de línea no están cargados por defecto. Se cargan con el comando <span class="cmd-inline">TIPOLÍNEA</span> (en inglés: <span class="cmd-inline">LINETYPE</span>) (o <span class="cmd-inline">LT</span>):</p>
                                 <ol>
-                                  <li>Escribe <span class="cmd-inline">LINETYPE</span> y presiona Enter.</li>
+                                  <li>Escribe <span class="cmd-inline">TIPOLÍNEA</span> (en inglés: <span class="cmd-inline">LINETYPE</span>) y presiona Enter.</li>
                                   <li>Haz clic en "Cargar" (Load) y busca el tipo que necesitas en el archivo <strong>acad.lin</strong>.</li>
                                   <li>Selecciona y acepta. Ahora el tipo aparecerá en la lista de la capa correspondiente.</li>
                                 </ol>
 
-                                <p>La escala del tipo de línea se controla con la variable <span class="cmd-inline">LTSCALE</span>. Si las líneas discontinuas se ven continuas, probablemente necesitas ajustar esta escala.</p>
+                                <p>La escala del tipo de línea se controla con la variable <span class="cmd-inline">ESCALATIPO</span> (en inglés: <span class="cmd-inline">LTSCALE</span>). Si las líneas discontinuas se ven continuas, probablemente necesitas ajustar esta escala.</p>
 
           <!-- ENRIQ START -->
           <h3>Escala del tipo de línea: de dónde vienen los "fallos"</h3>
@@ -178,7 +178,7 @@
           <table class="table-cad">
             <thead><tr><th>Variable</th><th>Alcance</th><th>Uso</th></tr></thead>
             <tbody>
-              <tr><td><span class="cmd-inline">LTSCALE</span> (<span class="key-inline">LTS</span>)</td><td>Todo el dibujo</td><td>Multiplica la escala global de todos los tipos de línea.</td></tr>
+              <tr><td><span class="cmd-inline">ESCALATIPO</span> (en inglés: <span class="cmd-inline">LTSCALE</span>) (<span class="key-inline">LTS</span>)</td><td>Todo el dibujo</td><td>Multiplica la escala global de todos los tipos de línea.</td></tr>
               <tr><td><span class="cmd-inline">CELTSCALE</span></td><td>Objetos nuevos</td><td>Escala adicional para lo que dibujas a partir de ahora.</td></tr>
               <tr><td>Escala por objeto</td><td>Objeto seleccionado</td><td>En PROPIEDADES (<span class="key-inline">Ctrl+1</span>), campo "Escala de tipo de línea".</td></tr>
             </tbody>
@@ -194,7 +194,7 @@
             <span class="lesson-num">1</span>
             <div class="lesson-body">
               <h4>Carga CENTER</h4>
-              <p>Con <span class="cmd-inline">LINETYPE</span>, carga <strong>CENTER</strong> y asígnalo a la capa de ejes.</p>
+              <p>Con <span class="cmd-inline">TIPOLÍNEA</span> (en inglés: <span class="cmd-inline">LINETYPE</span>), carga <strong>CENTER</strong> y asígnalo a la capa de ejes.</p>
             </div>
           </div>
           <div class="lesson-step">

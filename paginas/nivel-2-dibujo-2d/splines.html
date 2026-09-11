@@ -148,24 +148,24 @@
 
           <section id="splines" data-topic="nivel2-splines">
                                 <h2><span class="sec-num">18</span>Splines y curvas</h2>
-                                <p>Una <strong>spline</strong> es una curva suave que se define a partir de puntos de control. A diferencia del arco, no tiene un radio constante: se adapta libremente a la forma que quieras trazar. Se dibuja con <span class="cmd-inline">SPLINE</span> (<span class="key-inline">SPL</span>).</p>
+                                <p>Una <strong>spline</strong> es una curva suave que se define a partir de puntos de control. A diferencia del arco, no tiene un radio constante: se adapta libremente a la forma que quieras trazar. Se dibuja con <span class="cmd-inline">CURVA</span> (en inglés: <span class="cmd-inline">SPLINE</span>) (<span class="key-inline">SPL</span>).</p>
 
                                 <h3>¿Spline, arco o polilínea?</h3>
                                 <table class="table-cad">
                                   <thead><tr><th>Tipo</th><th>Comando</th><th>Úsalo cuando</th></tr></thead>
                                   <tbody>
-                                    <tr><td>Arco</td><td><span class="cmd-inline">ARC</span></td><td>La curva tiene un radio constante (esquinas redondeadas, arcos de círculo).</td></tr>
-                                    <tr><td>Polilínea</td><td><span class="cmd-inline">PLINE</span></td><td>Necesitas segmentos rectos y arcos combinados, o editar con PEDIT.</td></tr>
-                                    <tr><td>Spline</td><td><span class="cmd-inline">SPLINE</span></td><td>La curva es libre y orgánica: topografía, viales, piezas de diseño.</td></tr>
+                                    <tr><td>Arco</td><td><span class="cmd-inline">ARCO</span> (en inglés: <span class="cmd-inline">ARC</span>)</td><td>La curva tiene un radio constante (esquinas redondeadas, arcos de círculo).</td></tr>
+                                    <tr><td>Polilínea</td><td><span class="cmd-inline">POLILÍNEA</span> (en inglés: <span class="cmd-inline">PLINE</span>)</td><td>Necesitas segmentos rectos y arcos combinados, o editar con PEDIT.</td></tr>
+                                    <tr><td>Spline</td><td><span class="cmd-inline">CURVA</span> (en inglés: <span class="cmd-inline">SPLINE</span>)</td><td>La curva es libre y orgánica: topografía, viales, piezas de diseño.</td></tr>
                                   </tbody>
                                 </table>
 
                                 <h3>Control de la curva</h3>
                                 <p>Con la spline dibujada puedes editar sus <strong>puntos de control</strong> (o puntos de ajuste) para modelar la forma. La <strong>tolerancia</strong> define cuán cerca debe pasar la curva de los puntos: tolerancia 0 pasa exactamente por ellos; tolerancias mayores la suavizan más.</p>
                                 <ul>
-                                  <li><span class="cmd-inline">SPLINEDIT</span>: edita la spline (mueve puntos de control, ajusta tolerancia, cierra o invierte la curva).</li>
-                                  <li><span class="cmd-inline">PEDIT</span> → <strong>Spline</strong>: convierte una polilínea en una curva spline suave.</li>
-                                  <li><strong>Flatten</strong> o <span class="cmd-inline">SPLINEDIT</span> → Decurve: convierte la spline de vuelta a segmentos rectos.</li>
+                                  <li><span class="cmd-inline">EDITARSPLINE</span> (en inglés: <span class="cmd-inline">SPLINEDIT</span>): edita la spline (mueve puntos de control, ajusta tolerancia, cierra o invierte la curva).</li>
+                                  <li><span class="cmd-inline">EDITARP</span> (en inglés: <span class="cmd-inline">PEDIT</span>) → <strong>Spline</strong>: convierte una polilínea en una curva spline suave.</li>
+                                  <li><strong>Flatten</strong> o <span class="cmd-inline">EDITARSPLINE</span> (en inglés: <span class="cmd-inline">SPLINEDIT</span>) → Decurve: convierte la spline de vuelta a segmentos rectos.</li>
                                 </ul>
 
                                 <h3>Uso real</h3>
@@ -177,7 +177,7 @@
 
                                 <div class="callout">
                                   <span class="callout-title">No abuses</span>
-                                  Para curvas de <strong>radio constante</strong> (una esquina redondeada de 50 mm) usa <span class="cmd-inline">ARC</span> o <span class="cmd-inline">FILLET</span>. La spline está pensada para curvas libres; abusar de ella hace los planos difíciles de acotar y de reproducir.
+                                  Para curvas de <strong>radio constante</strong> (una esquina redondeada de 50 mm) usa <span class="cmd-inline">ARCO</span> (en inglés: <span class="cmd-inline">ARC</span>) o <span class="cmd-inline">REDONDEAR</span> (en inglés: <span class="cmd-inline">FILLET</span>). La spline está pensada para curvas libres; abusar de ella hace los planos difíciles de acotar y de reproducir.
                                 </div>
 
                                 <div class="diagram-canvas">
@@ -198,11 +198,11 @@
 
           <!-- ENRIQ START -->
           <h3>Puntos de ajuste frente a puntos de control</h3>
-          <p>Al dibujar con <span class="cmd-inline">SPLINE</span>, AutoCAD pregunta por el método: <em>Control</em> arrastra la curva por puntos tensores (más matemática) y <em>Fit</em> hace que pase por los puntos que tocas (más intuitiva, preferida en topografía).</p>
+          <p>Al dibujar con <span class="cmd-inline">CURVA</span> (en inglés: <span class="cmd-inline">SPLINE</span>), AutoCAD pregunta por el método: <em>Control</em> arrastra la curva por puntos tensores (más matemática) y <em>Fit</em> hace que pase por los puntos que tocas (más intuitiva, preferida en topografía).</p>
           <ul>
             <li><strong>Cerrada:</strong> la opción <span class="cmd-inline">Close</span> une el final con el inicio formando un lazo continuo.</li>
             <li><strong>Tolerancia:</strong> 0 pasa por los puntos exactos; subirla suaviza y aleja la curva del punteo (útil con curvas muy ruidosas).</li>
-            <li><strong>De polilínea a spline:</strong> <span class="cmd-inline">PEDIT</span> → Spline; y al revés con <span class="cmd-inline">SPLINEDIT</span> → Decurve.</li>
+            <li><strong>De polilínea a spline:</strong> <span class="cmd-inline">EDITARP</span> (en inglés: <span class="cmd-inline">PEDIT</span>) → Spline; y al revés con <span class="cmd-inline">EDITARSPLINE</span> (en inglés: <span class="cmd-inline">SPLINEDIT</span>) → Decurve.</li>
           </ul>
           <div class="callout">
             <span class="callout-title">Idea clave</span>
@@ -214,14 +214,14 @@
             <span class="lesson-num">1</span>
             <div class="lesson-body">
               <h4>Traza</h4>
-              <p>Con <span class="cmd-inline">SPLINE</span>, método Fit, toca 6 puntos formando un bucle irregular.</p>
+              <p>Con <span class="cmd-inline">CURVA</span> (en inglés: <span class="cmd-inline">SPLINE</span>), método Fit, toca 6 puntos formando un bucle irregular.</p>
             </div>
           </div>
           <div class="lesson-step">
             <span class="lesson-num">2</span>
             <div class="lesson-body">
               <h4>Cierra y suaviza</h4>
-              <p>Elige <span class="cmd-inline">Close</span> y luego edita con <span class="cmd-inline">SPLINEDIT</span> subiendo la tolerancia hasta 5; compara el resultado.</p>
+              <p>Elige <span class="cmd-inline">Close</span> y luego edita con <span class="cmd-inline">EDITARSPLINE</span> (en inglés: <span class="cmd-inline">SPLINEDIT</span>) subiendo la tolerancia hasta 5; compara el resultado.</p>
             </div>
           </div>
           <!-- ENRIQ END -->

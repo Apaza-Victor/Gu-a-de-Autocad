@@ -150,9 +150,9 @@
                           <thead><tr><th>Comando / Atajo</th><th>Qué hace</th></tr></thead>
                           <tbody>
                             <tr><td><span class="cmd-inline">U</span> / <span class="key-inline">Ctrl+Z</span></td><td>Deshace el último paso. Puedes repetirlo muchas veces.</td></tr>
-                            <tr><td><span class="cmd-inline">REDO</span> / <span class="key-inline">Ctrl+Y</span></td><td>Rehace lo que acabas de deshacer (si no hiciste nada intermedio).</td></tr>
+                            <tr><td><span class="cmd-inline">REHACER</span> (en inglés: <span class="cmd-inline">REDO</span>) / <span class="key-inline">Ctrl+Y</span></td><td>Rehace lo que acabas de deshacer (si no hiciste nada intermedio).</td></tr>
                             <tr><td><span class="cmd-inline">MREDO</span></td><td>Deshace/rehace varios pasos a la vez (pide un número o lista).</td></tr>
-                            <tr><td><span class="cmd-inline">UNDO</span></td><td>Versión extendida con opciones: marcar, pausa, inicio/fin, número de pasos.</td></tr>
+                            <tr><td><span class="cmd-inline">DESHACER</span> (en inglés: <span class="cmd-inline">UNDO</span>)</td><td>Versión extendida con opciones: marcar, pausa, inicio/fin, número de pasos.</td></tr>
                           </tbody>
                         </table>
                         <p>Si acabas de cometer un error, no busques el comando que lo causó: <strong>deshaz y sigue</strong>. Abusar de deshacer es raro que ocurra; no temer usarlo te hace más rápido.</p>
@@ -163,14 +163,14 @@
                           <span class="lesson-num">1</span>
                           <div class="lesson-body">
                             <h4>Ejecuta PURGE</h4>
-                            <p>Teclea <span class="cmd-inline">PURGE</span> (<span class="key-inline">PU</span>). Marca <em>Purgar todo</em> y confirma con Sí a la pregunta de confirmar cada elemento.</p>
+                            <p>Teclea <span class="cmd-inline">PURGAR</span> (en inglés: <span class="cmd-inline">PURGE</span>) (<span class="key-inline">PU</span>). Marca <em>Purgar todo</em> y confirma con Sí a la pregunta de confirmar cada elemento.</p>
                           </div>
                         </div>
                         <div class="lesson-step">
                           <span class="lesson-num">2</span>
                           <div class="lesson-body">
                             <h4>Repite una vez</h4>
-                            <p>Algunos objetos dependen de otros; ejecuta <span class="cmd-inline">PURGE</span> una segunda vez para eliminar lo que quedó huerfano tras la primera pasada.</p>
+                            <p>Algunos objetos dependen de otros; ejecuta <span class="cmd-inline">PURGAR</span> (en inglés: <span class="cmd-inline">PURGE</span>) una segunda vez para eliminar lo que quedó huerfano tras la primera pasada.</p>
                           </div>
                         </div>
                         <div class="callout">
@@ -182,24 +182,24 @@
                         <table class="table-cad">
                           <thead><tr><th>Comando</th><th>Qué hace</th><th>Cuándo usarlo</th></tr></thead>
                           <tbody>
-                            <tr><td><span class="cmd-inline">AUDIT</span></td><td>Revisa el archivo y corrige errores internos de datos.</td><td>Si notas lentitud, geometría rara o mensajes de error.</td></tr>
-                            <tr><td><span class="cmd-inline">RECOVER</span></td><td>Abre un archivo dañado o que no quiere abrir, intentando repararlo.</td><td>Cuando un DWG no abre o AutoCAD avisa que está dañado.</td></tr>
+                            <tr><td><span class="cmd-inline">AUDITAR</span> (en inglés: <span class="cmd-inline">AUDIT</span>)</td><td>Revisa el archivo y corrige errores internos de datos.</td><td>Si notas lentitud, geometría rara o mensajes de error.</td></tr>
+                            <tr><td><span class="cmd-inline">RECUPERAR</span> (en inglés: <span class="cmd-inline">RECOVER</span>)</td><td>Abre un archivo dañado o que no quiere abrir, intentando repararlo.</td><td>Cuando un DWG no abre o AutoCAD avisa que está dañado.</td></tr>
                             <tr><td><span class="cmd-inline">DWGPROPS</span></td><td>Muestra los metadatos del archivo (autor, título, comentarios).</td><td>Para documentar cada dibujo de tu proyecto.</td></tr>
-                            <tr><td><span class="cmd-inline">REGEN</span> / <span class="cmd-inline">REGENALL</span></td><td>Reconstruye la vista desde los datos del dibujo.</td><td>Cuando aparecen círculos "poligonales" o la vista se ve corrupta.</td></tr>
+                            <tr><td><span class="cmd-inline">REGENERAR</span> (en inglés: <span class="cmd-inline">REGEN</span>) / <span class="cmd-inline">REGENT</span> (en inglés: <span class="cmd-inline">REGENALL</span>)</td><td>Reconstruye la vista desde los datos del dibujo.</td><td>Cuando aparecen círculos "poligonales" o la vista se ve corrupta.</td></tr>
                           </tbody>
                         </table>
                         <div class="lesson-step">
                           <span class="lesson-num">1</span>
                           <div class="lesson-body">
                             <h4>Audita un archivo</h4>
-                            <p>Cierra el dibujo, teclea <span class="cmd-inline">AUDIT</span> y pulsa <span class="key-inline">Enter</span> ante la pregunta de corregir errores. Revisa el resumen que AutoCAD te devuelve en la línea de comandos.</p>
+                            <p>Cierra el dibujo, teclea <span class="cmd-inline">AUDITAR</span> (en inglés: <span class="cmd-inline">AUDIT</span>) y pulsa <span class="key-inline">Enter</span> ante la pregunta de corregir errores. Revisa el resumen que AutoCAD te devuelve en la línea de comandos.</p>
                           </div>
                         </div>
                         <div class="lesson-step">
                           <span class="lesson-num">2</span>
                           <div class="lesson-body">
                             <h4>Recupera un archivo que no abre</h4>
-                            <p>Con el programa sin el archivo cargado, escribe <span class="cmd-inline">RECOVER</span>, localiza el DWG y deja que AutoCAD lo repare. Guarda después con “Guardar como” un nuevo nombre.</p>
+                            <p>Con el programa sin el archivo cargado, escribe <span class="cmd-inline">RECUPERAR</span> (en inglés: <span class="cmd-inline">RECOVER</span>), localiza el DWG y deja que AutoCAD lo repare. Guarda después con “Guardar como” un nuevo nombre.</p>
                           </div>
                         </div>
                         <div class="callout warn">
@@ -209,7 +209,7 @@
 
                         <h3>Reglas de oro del mantenimiento</h3>
                         <ul>
-                          <li>Ejecuta <span class="cmd-inline">PURGE</span> + <span class="cmd-inline">AUDIT</span> antes de cerrar un entregable.</li>
+                          <li>Ejecuta <span class="cmd-inline">PURGAR</span> (en inglés: <span class="cmd-inline">PURGE</span>) + <span class="cmd-inline">AUDITAR</span> (en inglés: <span class="cmd-inline">AUDIT</span>) antes de cerrar un entregable.</li>
                           <li>Guarda con <span class="cmd-inline">QSAVE</span> (<span class="key-inline">Ctrl+S</span>) cada pocos minutos.</li>
                           <li>Mantén el autoguardado activo y copia tus .BAK a una carpeta de respaldo.</li>
                           <li>Usa <strong>capas</strong> y nombres descriptivos desde el inicio: un archivo ordenado es un archivo reparable.</li>
@@ -227,7 +227,7 @@
                           <span class="lesson-num">2</span>
                           <div class="lesson-body">
                             <h4>Purgalos y compara el peso</h4>
-                            <p>Guarda el archivo, anota su tamaño; ejecuta <span class="cmd-inline">PURGE</span> + <span class="cmd-inline">AUDIT</span>, vuelve a guardar y mira el nuevo tamaño. Después localiza el archivo <span class="cmd-inline">.BAK</span> que se generó al lado de tu DWG.</p>
+                            <p>Guarda el archivo, anota su tamaño; ejecuta <span class="cmd-inline">PURGAR</span> (en inglés: <span class="cmd-inline">PURGE</span>) + <span class="cmd-inline">AUDITAR</span> (en inglés: <span class="cmd-inline">AUDIT</span>), vuelve a guardar y mira el nuevo tamaño. Después localiza el archivo <span class="cmd-inline">.BAK</span> que se generó al lado de tu DWG.</p>
                           </div>
                         </div>
 

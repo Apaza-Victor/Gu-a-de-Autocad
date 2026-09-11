@@ -162,18 +162,18 @@
                                 </table>
 
                                 <h3>Crear el cajetín como bloque</h3>
-                                <p>No dibujes el cajetín cada vez: conviértelo en un <strong>bloque</strong> con <span class="cmd-inline">BLOCK</span> y dibújalo en su propio layout. Así lo insertas en cualquier lámina con <span class="cmd-inline">INSERT</span> y, si editas la definición con <span class="cmd-inline">BEDIT</span>, todas las láminas se actualizan a la vez.</p>
+                                <p>No dibujes el cajetín cada vez: conviértelo en un <strong>bloque</strong> con <span class="cmd-inline">BLOQUE</span> (en inglés: <span class="cmd-inline">BLOCK</span>) y dibújalo en su propio layout. Así lo insertas en cualquier lámina con <span class="cmd-inline">INSERTAR</span> (en inglés: <span class="cmd-inline">INSERT</span>) y, si editas la definición con <span class="cmd-inline">EDITBLOQUE</span> (en inglés: <span class="cmd-inline">BEDIT</span>), todas las láminas se actualizan a la vez.</p>
 
                                 <h3>Atributos y campos</h3>
-                                <p>Para que el cajetín sea editable sin explotar el bloque, añade <strong>atributos</strong> con <span class="cmd-inline">ATTDEF</span>: cada atributo se convierte en una casilla cuyo texto puedes cambiar en cada inserción. Después edítalo con <span class="cmd-inline">ATTEDIT</span> (atributos de una inserción) o <span class="cmd-inline">EATTEDIT</span> (gestor de atributos, más completo).</p>
+                                <p>Para que el cajetín sea editable sin explotar el bloque, añade <strong>atributos</strong> con <span class="cmd-inline">DEFATTRIB</span> (en inglés: <span class="cmd-inline">ATTDEF</span>): cada atributo se convierte en una casilla cuyo texto puedes cambiar en cada inserción. Después edítalo con <span class="cmd-inline">EDITATRIB</span> (en inglés: <span class="cmd-inline">ATTEDIT</span>) (atributos de una inserción) o <span class="cmd-inline">EATTEDIT</span> (gestor de atributos, más completo).</p>
                                 <p>Los <strong>campos</strong> (<span class="cmd-inline">FIELDS</span>) llevan el cajetín un paso más lejos: en vez de escribir la fecha a mano, insertas un campo que se actualiza solo. Lo mismo para el nombre de archivo o la escala.</p>
 
                                 <table class="table-cad">
                                   <thead><tr><th>Comando</th><th>Función</th></tr></thead>
                                   <tbody>
-                                    <tr><td class="cmd-inline">BLOCK</td><td>Crea el bloque del cajetín a partir de líneas y textos.</td></tr>
-                                    <tr><td class="cmd-inline">ATTDEF</td><td>Define atributos (casillas de texto) dentro del bloque.</td></tr>
-                                    <tr><td class="cmd-inline">ATTEDIT</td><td>Edita los valores de atributos de una inserción.</td></tr>
+                                    <tr><td class="cmd-inline"><span class="cmd-inline">BLOQUE</span> (en inglés: <span class="cmd-inline">BLOCK</span>)</td><td>Crea el bloque del cajetín a partir de líneas y textos.</td></tr>
+                                    <tr><td class="cmd-inline"><span class="cmd-inline">DEFATTRIB</span> (en inglés: <span class="cmd-inline">ATTDEF</span>)</td><td>Define atributos (casillas de texto) dentro del bloque.</td></tr>
+                                    <tr><td class="cmd-inline"><span class="cmd-inline">EDITATRIB</span> (en inglés: <span class="cmd-inline">ATTEDIT</span>)</td><td>Edita los valores de atributos de una inserción.</td></tr>
                                     <tr><td class="cmd-inline">EATTEDIT</td><td>Editor de atributos completo de un bloque insertado.</td></tr>
                                     <tr><td class="cmd-inline">FIELDS</td><td>Texto automático (fecha, archivo, escala) dentro del cajetín.</td></tr>
                                   </tbody>
@@ -193,28 +193,28 @@
             <span class="lesson-num">1</span>
             <div class="lesson-body">
               <h4>Dibuja el marco</h4>
-              <p>En el layout, dibuja con <span class="cmd-inline">RECTANG</span> o <span class="cmd-inline">POLYLINE</span> el rectángulo del cajetín según tu norma (por ejemplo ISO 7200 o el formato de tu país).</p>
+              <p>En el layout, dibuja con <span class="cmd-inline">RECTÁNGULO</span> (en inglés: <span class="cmd-inline">RECTANG</span>) o <span class="cmd-inline">POLILÍNEA</span> (en inglés: <span class="cmd-inline">POLYLINE</span>) el rectángulo del cajetín según tu norma (por ejemplo ISO 7200 o el formato de tu país).</p>
             </div>
           </div>
           <div class="lesson-step">
             <span class="lesson-num">2</span>
             <div class="lesson-body">
               <h4>Define los atributos</h4>
-              <p>Escribe <span class="cmd-inline">ATTDEF</span> y crea los campos variables: ESCALA, NUMERO-LAMINA, REVISION. Deja "PROYECTO" y "AUTOR" como texto fijo o campo.</p>
+              <p>Escribe <span class="cmd-inline">DEFATTRIB</span> (en inglés: <span class="cmd-inline">ATTDEF</span>) y crea los campos variables: ESCALA, NUMERO-LAMINA, REVISION. Deja "PROYECTO" y "AUTOR" como texto fijo o campo.</p>
             </div>
           </div>
           <div class="lesson-step">
             <span class="lesson-num">3</span>
             <div class="lesson-body">
               <h4>Forma el bloque</h4>
-              <p>Con <span class="cmd-inline">BLOCK</span> selecciona marco + líneas + atributos y define el punto base en la esquina inferior derecha (o la que marque tu norma).</p>
+              <p>Con <span class="cmd-inline">BLOQUE</span> (en inglés: <span class="cmd-inline">BLOCK</span>) selecciona marco + líneas + atributos y define el punto base en la esquina inferior derecha (o la que marque tu norma).</p>
             </div>
           </div>
           <div class="lesson-step">
             <span class="lesson-num">4</span>
             <div class="lesson-body">
               <h4>Insértalo</h4>
-              <p>Con <span class="cmd-inline">INSERT</span> colócalo en cada lámina; AutoCAD te pedirá los valores de atributo al insertar (escala, número de lámina...).</p>
+              <p>Con <span class="cmd-inline">INSERTAR</span> (en inglés: <span class="cmd-inline">INSERT</span>) colócalo en cada lámina; AutoCAD te pedirá los valores de atributo al insertar (escala, número de lámina...).</p>
             </div>
           </div>
           <div class="lesson-step">

@@ -149,17 +149,17 @@
           <section id="consulta" data-topic="nivel2-consulta">
 
                         <h2><span class="sec-num">15</span>Medición y verificación del dibujo</h2>
-                        <p>Antes de imprimir o entregar un plano hay que <strong>verificar</strong>: distancias, áreas, coordenadas y datos de los objetos. Estas herramientas son de las más usadas del día a día (<span class="cmd-inline">DIST</span>, <span class="cmd-inline">AREA</span>, <span class="cmd-inline">MEASUREGEOM</span>, <span class="cmd-inline">LIST</span>, <span class="cmd-inline">ID</span>).</p>
+                        <p>Antes de imprimir o entregar un plano hay que <strong>verificar</strong>: distancias, áreas, coordenadas y datos de los objetos. Estas herramientas son de las más usadas del día a día (<span class="cmd-inline">DIST</span>, <span class="cmd-inline">ÁREA</span> (en inglés: <span class="cmd-inline">AREA</span>), <span class="cmd-inline">MEASUREGEOM</span>, <span class="cmd-inline">LISTA</span> (en inglés: <span class="cmd-inline">LIST</span>), <span class="cmd-inline">ID</span>).</p>
 
                         <h3>Comandos de consulta</h3>
                         <table class="table-cad">
                           <thead><tr><th>Comando</th><th>Atajo</th><th>Qué devuelve</th></tr></thead>
                           <tbody>
-                            <tr><td><span class="cmd-inline">DIST</span></td><td><span class="key-inline">DI</span></td><td>Distancia entre dos puntos, ángulo y deltas X/Y.</td></tr>
-                            <tr><td><span class="cmd-inline">AREA</span></td><td><span class="key-inline">AREA</span></td><td>Área y perímetro de un contorno (por puntos u objeto).</td></tr>
+                            <tr><td><span class="cmd-inline">DISTANCIA</span> (en inglés: <span class="cmd-inline">DIST</span>)</td><td><span class="key-inline">DI</span></td><td>Distancia entre dos puntos, ángulo y deltas X/Y.</td></tr>
+                            <tr><td><span class="cmd-inline">ÁREA</span> (en inglés: <span class="cmd-inline">AREA</span>)</td><td><span class="key-inline">AREA</span></td><td>Área y perímetro de un contorno (por puntos u objeto).</td></tr>
                             <tr><td><span class="cmd-inline">MEASUREGEOM</span></td><td><span class="key-inline">MEA</span></td><td>Todo en uno: distancia, radio, ángulo, área y volumen.</td></tr>
-                            <tr><td><span class="cmd-inline">AREA</span> → <span class="cmd-inline">O</span></td><td>—</td><td>Área de una polilínea o región cerrada.</td></tr>
-                            <tr><td><span class="cmd-inline">LIST</span></td><td><span class="key-inline">LI</span></td><td>Informe completo del objeto: capa, coordenadas, longitud, área, identidad.</td></tr>
+                            <tr><td><span class="cmd-inline">ÁREA</span> (en inglés: <span class="cmd-inline">AREA</span>) → <span class="cmd-inline">O</span></td><td>—</td><td>Área de una polilínea o región cerrada.</td></tr>
+                            <tr><td><span class="cmd-inline">LISTA</span> (en inglés: <span class="cmd-inline">LIST</span>)</td><td><span class="key-inline">LI</span></td><td>Informe completo del objeto: capa, coordenadas, longitud, área, identidad.</td></tr>
                             <tr><td><span class="cmd-inline">ID</span></td><td><span class="key-inline">ID</span></td><td>Coordenadas X, Y, Z del punto elegido.</td></tr>
                           </tbody>
                         </table>
@@ -194,14 +194,14 @@
                           <span class="lesson-num">2</span>
                           <div class="lesson-body">
                             <h4>Mide el módulo</h4>
-                            <p>Con <span class="cmd-inline">AREA</span> → <span class="cmd-inline">O</span> selecciona la polilínea: debe devolver 120000 (400 x 300).</p>
+                            <p>Con <span class="cmd-inline">ÁREA</span> (en inglés: <span class="cmd-inline">AREA</span>) → <span class="cmd-inline">O</span> selecciona la polilínea: debe devolver 120000 (400 x 300).</p>
                           </div>
                         </div>
                         <div class="lesson-step">
                           <span class="lesson-num">3</span>
                           <div class="lesson-body">
                             <h4>Cruza datos</h4>
-                            <p>Mide el lado con <span class="cmd-inline">DIST</span>, el centro del círculo con <span class="cmd-inline">ID</span> y usa <span class="cmd-inline">LIST</span> para comprobar que el área del anillo (módulo − círculo) coincide con el dato del plano.</p>
+                            <p>Mide el lado con <span class="cmd-inline">DISTANCIA</span> (en inglés: <span class="cmd-inline">DIST</span>), el centro del círculo con <span class="cmd-inline">ID</span> y usa <span class="cmd-inline">LISTA</span> (en inglés: <span class="cmd-inline">LIST</span>) para comprobar que el área del anillo (módulo − círculo) coincide con el dato del plano.</p>
                           </div>
                         </div>
 

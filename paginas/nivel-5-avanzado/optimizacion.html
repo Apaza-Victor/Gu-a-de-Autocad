@@ -150,8 +150,8 @@
 
                                 <h3>Reducir el tamaño del archivo</h3>
                                 <ul>
-                                  <li><span class="cmd-inline">PURGE</span>: elimina capas, bloques, estilos y tipos de línea no utilizados.</li>
-                                  <li><span class="cmd-inline">AUDIT</span>: detecta y corrige errores internos del archivo.</li>
+                                  <li><span class="cmd-inline">PURGAR</span> (en inglés: <span class="cmd-inline">PURGE</span>): elimina capas, bloques, estilos y tipos de línea no utilizados.</li>
+                                  <li><span class="cmd-inline">AUDITAR</span> (en inglés: <span class="cmd-inline">AUDIT</span>): detecta y corrige errores internos del archivo.</li>
                                   <li><span class="cmd-inline">SCALELISTEDIT</span>: elimina escalas de lista no usadas (causa común de aumento de tamaño).</li>
                                   <li><span class="cmd-inline">DELTA</span>: elimina datos de versiones anteriores guardadas en el archivo.</li>
                                 </ul>
@@ -160,11 +160,11 @@
                                 <table class="table-cad">
                                   <thead><tr><th>Problema</th><th>Solución</th></tr></thead>
                                   <tbody>
-                                    <tr><td>El archivo pesa demasiado</td><td><span class="cmd-inline">PURGE</span> + <span class="cmd-inline">AUDIT</span> + <span class="cmd-inline">WBLOCK</span> (exportar todo a un archivo limpio)</td></tr>
+                                    <tr><td>El archivo pesa demasiado</td><td><span class="cmd-inline">PURGAR</span> (en inglés: <span class="cmd-inline">PURGE</span>) + <span class="cmd-inline">AUDITAR</span> (en inglés: <span class="cmd-inline">AUDIT</span>) + <span class="cmd-inline">BLOQUEDISC</span> (en inglés: <span class="cmd-inline">WBLOCK</span>) (exportar todo a un archivo limpio)</td></tr>
                                     <tr><td>Las cotas se ven desproporcionadas</td><td>Verificar que la escala de la ventana gráfica coincida con la escala de anotación</td></tr>
-                                    <tr><td>El hatch no se aplica</td><td>El contorno no está cerrado; usar <span class="cmd-inline">BOUNDARY</span> para detectar fugas</td></tr>
+                                    <tr><td>El hatch no se aplica</td><td>El contorno no está cerrado; usar <span class="cmd-inline">CONTORNO</span> (en inglés: <span class="cmd-inline">BOUNDARY</span>) para detectar fugas</td></tr>
                                     <tr><td>Los textos no se imprimen</td><td>Verificar que la capa de textos no esté en "No imprimir"</td></tr>
-                                    <tr><td>La Xref no se actualiza</td><td>Usar <span class="cmd-inline">XREF</span> → pestaña "Lista" → clic derecho → "Recargar"</td></tr>
+                                    <tr><td>La Xref no se actualiza</td><td>Usar <span class="cmd-inline">REFX</span> (en inglés: <span class="cmd-inline">XREF</span>) → pestaña "Lista" → clic derecho → "Recargar"</td></tr>
                                   </tbody>
                                 </table>
 
@@ -179,14 +179,14 @@
             <span class="lesson-num">1</span>
             <div class="lesson-body">
               <h4>Audita el archivo</h4>
-              <p>Con <span class="cmd-inline">AUDIT</span> corrige errores de estructura del DWG al abrirlo.</p>
+              <p>Con <span class="cmd-inline">AUDITAR</span> (en inglés: <span class="cmd-inline">AUDIT</span>) corrige errores de estructura del DWG al abrirlo.</p>
             </div>
           </div>
           <div class="lesson-step">
             <span class="lesson-num">2</span>
             <div class="lesson-body">
               <h4>Purgar hasta la raíz</h4>
-              <p>Con <span class="cmd-inline">PURGE</span> marca todo, y repite el comando hasta que diga "nada que purgar".</p>
+              <p>Con <span class="cmd-inline">PURGAR</span> (en inglés: <span class="cmd-inline">PURGE</span>) marca todo, y repite el comando hasta que diga "nada que purgar".</p>
             </div>
           </div>
           <div class="lesson-step">
@@ -200,7 +200,7 @@
             <span class="lesson-num">4</span>
             <div class="lesson-body">
               <h4>Guarda en la versión actual</h4>
-              <p>Con <span class="cmd-inline">SAVEAS</span> guarda el DWG 2018 o superior; evita versiones viejas que inflan el archivo.</p>
+              <p>Con <span class="cmd-inline">GUARDARCOMO</span> (en inglés: <span class="cmd-inline">SAVEAS</span>) guarda el DWG 2018 o superior; evita versiones viejas que inflan el archivo.</p>
             </div>
           </div>
           <div class="lesson-step">

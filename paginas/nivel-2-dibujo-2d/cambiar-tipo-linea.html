@@ -165,7 +165,7 @@
               <span class="lesson-num">1</span>
               <div class="lesson-body">
                 <h4>Abre el Administrador de tipos de línea</h4>
-                <p>Escribe <span class="cmd-inline">LINETYPE</span> o <span class="key-inline">LT</span>, o ve a Inicio → Propiedades → el desplegable de "Tipo de línea" → Otros.</p>
+                <p>Escribe <span class="cmd-inline">TIPOLÍNEA</span> (en inglés: <span class="cmd-inline">LINETYPE</span>) o <span class="key-inline">LT</span>, o ve a Inicio → Propiedades → el desplegable de "Tipo de línea" → Otros.</p>
               </div>
             </div>
 
@@ -189,18 +189,18 @@
               <span class="lesson-num">4</span>
               <div class="lesson-body">
                 <h4>Asigna a un objeto concreto</h4>
-                <p>Selecciona el/los objeto(s), abre <span class="cmd-inline">PROPERTIES</span> (<span class="key-inline">Ctrl+1</span>) y en "Tipo de línea" elige el tipo (mejor ByLayer si es posible).</p>
+                <p>Selecciona el/los objeto(s), abre <span class="cmd-inline">PROPIEDADES</span> (en inglés: <span class="cmd-inline">PROPERTIES</span>) (<span class="key-inline">Ctrl+1</span>) y en "Tipo de línea" elige el tipo (mejor ByLayer si es posible).</p>
               </div>
             </div>
 
             <h3>2. Hacer que el tipo de línea se vea correcto (escala de línea)</h3>
-            <p>El "no se me ve la línea punteada" es el problema número uno. La causa casi siempre es la <strong>escala del tipo de línea</strong> (variable <span class="cmd-inline">LTSCALE</span>): si es muy pequeña o muy grande, las líneas parecen continuas o colapsadas.</p>
+            <p>El "no se me ve la línea punteada" es el problema número uno. La causa casi siempre es la <strong>escala del tipo de línea</strong> (variable <span class="cmd-inline">ESCALATIPO</span> (en inglés: <span class="cmd-inline">LTSCALE</span>)): si es muy pequeña o muy grande, las líneas parecen continuas o colapsadas.</p>
 
             <div class="lesson-step">
               <span class="lesson-num">1</span>
               <div class="lesson-body">
                 <h4>Ajusta la escala global</h4>
-                <p>Escribe <span class="cmd-inline">LTSCALE</span> y prueba un valor. En dibujos 2D a escala (metros con mm), un 0.1–1 suele funcionar. Si ves líneas continuas, baja; si las ve todo tronchado de puntos, súbela.</p>
+                <p>Escribe <span class="cmd-inline">ESCALATIPO</span> (en inglés: <span class="cmd-inline">LTSCALE</span>) y prueba un valor. En dibujos 2D a escala (metros con mm), un 0.1–1 suele funcionar. Si ves líneas continuas, baja; si las ve todo tronchado de puntos, súbela.</p>
               </div>
             </div>
 
@@ -216,7 +216,7 @@
               <span class="lesson-num">3</span>
               <div class="lesson-body">
                 <h4>Escala individual</h4>
-                <p>Si un solo objeto necesita otra escala, selecciónalo y en <span class="cmd-inline">PROPERTIES</span> → "Escala del tipo de línea" escribe un factor propio (es una clave <strong>CELTSCALE</strong> por objeto).</p>
+                <p>Si un solo objeto necesita otra escala, selecciónalo y en <span class="cmd-inline">PROPIEDADES</span> (en inglés: <span class="cmd-inline">PROPERTIES</span>) → "Escala del tipo de línea" escribe un factor propio (es una clave <strong>CELTSCALE</strong> por objeto).</p>
               </div>
             </div>
 
@@ -230,16 +230,16 @@
               <p><code>A</code> es alineación; <code>5</code> = 5 unidades firmes; <code>-2</code> = 2 unidades en blanco; el bloque <code>["TEXTO",…]</code> inserta texto cada tramo.</p>
             </div>
 
-            <p>Luego cárgalo con <span class="cmd-inline">LINETYPE</span> → Cargar → Archivo → busca tu <code>.lin</code> personal.</p>
+            <p>Luego cárgalo con <span class="cmd-inline">TIPOLÍNEA</span> (en inglés: <span class="cmd-inline">LINETYPE</span>) → Cargar → Archivo → busca tu <code>.lin</code> personal.</p>
 
             <div class="table-scroll">
             <table class="table-cad">
               <thead><tr><th>Comando</th><th>Qué hace</th><th>Atajo</th></tr></thead>
               <tbody>
-                <tr><td><span class="cmd-inline">LINETYPE</span></td><td>Abre el Administrador de tipos de línea</td><td><span class="key-inline">LT</span></td></tr>
-                <tr><td><span class="cmd-inline">LTSCALE</span></td><td>Escala global de todos los tipos de línea</td><td><span class="key-inline">LTS</span></td></tr>
+                <tr><td><span class="cmd-inline">TIPOLÍNEA</span> (en inglés: <span class="cmd-inline">LINETYPE</span>)</td><td>Abre el Administrador de tipos de línea</td><td><span class="key-inline">LT</span></td></tr>
+                <tr><td><span class="cmd-inline">ESCALATIPO</span> (en inglés: <span class="cmd-inline">LTSCALE</span>)</td><td>Escala global de todos los tipos de línea</td><td><span class="key-inline">LTS</span></td></tr>
                 <tr><td><span class="cmd-inline">PSLTSCALE</span></td><td>Ajusta la escala de los tipos de línea al papel</td><td>—</td></tr>
-                <tr><td><span class="cmd-inline">-LINETYPE</span></td><td>Versión de línea de comandos (cargar, set, ?)</td><td>—</td></tr>
+                <tr><td><span class="cmd-inline">-TIPOLÍNEA</span> (en inglés: <span class="cmd-inline">-LINETYPE</span>)</td><td>Versión de línea de comandos (cargar, set, ?)</td><td>—</td></tr>
               </tbody>
             </table>
             </div>

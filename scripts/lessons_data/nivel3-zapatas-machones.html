@@ -11,7 +11,7 @@
   <span class="lesson-num">1</span>
   <div class="lesson-body">
     <h4>Dibuja el contorno de la zapata</h4>
-    <p>Con <span class="cmd-inline">RECTANG</span> (<span class="key-inline">REC</span>) dibuja el cuadro de la zapata según medida del cálculo (ej.: 1.00 × 1.00 m). Ponlo en una capa <code>E-Zapatas</code> con línea Continua de grosor 0.35.</p>
+    <p>Con <span class="cmd-inline">RECTÁNGULO</span> (en inglés: <span class="cmd-inline">RECTANG</span>) (<span class="key-inline">REC</span>) dibuja el cuadro de la zapata según medida del cálculo (ej.: 1.00 × 1.00 m). Ponlo en una capa <code>E-Zapatas</code> con línea Continua de grosor 0.35.</p>
   </div>
 </div>
 
@@ -19,7 +19,7 @@
   <span class="lesson-num">2</span>
   <div class="lesson-body">
     <h4>Marca las armaduras</h4>
-    <p>Dibuja las barras con <span class="cmd-inline">LINE</span> o <span class="cmd-inline">CIRCLE</span> (secciones de barra redonda) en una capa <code>E-Acero</code>. Sobre la vista en planta dibuja la parrilla de acero inferior (retícula).</p>
+    <p>Dibuja las barras con <span class="cmd-inline">LÍNEA</span> (en inglés: <span class="cmd-inline">LINE</span>) o <span class="cmd-inline">CÍRCULO</span> (en inglés: <span class="cmd-inline">CIRCLE</span>) (secciones de barra redonda) en una capa <code>E-Acero</code>. Sobre la vista en planta dibuja la parrilla de acero inferior (retícula).</p>
   </div>
 </div>
 
@@ -35,7 +35,7 @@
   <span class="lesson-num">4</span>
   <div class="lesson-body">
     <h4>Añade el material y el nivel</h4>
-    <p>Con <span class="cmd-inline">HATCH</span> rellena el hormigón con un patrón (por ejemplo hormigón alzado en sección) y escribe el nivel (<span class="cmd-inline">TEXT</span>): "Nivel -1.50" para la cara superior de la zapata.</p>
+    <p>Con <span class="cmd-inline">SOMBREADO</span> (en inglés: <span class="cmd-inline">HATCH</span>) rellena el hormigón con un patrón (por ejemplo hormigón alzado en sección) y escribe el nivel (<span class="cmd-inline">TEXT</span>): "Nivel -1.50" para la cara superior de la zapata.</p>
   </div>
 </div>
 
@@ -46,7 +46,7 @@
   <span class="lesson-num">1</span>
   <div class="lesson-body">
     <h4>Dibuja el perfil</h4>
-    <p>Con <span class="cmd-inline">RECTANG</span> o <span class="cmd-inline">LINE</span> dibuja la zapata en alzado (ej.: base de 1.00 m y altura de 0.40 m de canto).</p>
+    <p>Con <span class="cmd-inline">RECTÁNGULO</span> (en inglés: <span class="cmd-inline">RECTANG</span>) o <span class="cmd-inline">LÍNEA</span> (en inglés: <span class="cmd-inline">LINE</span>) dibuja la zapata en alzado (ej.: base de 1.00 m y altura de 0.40 m de canto).</p>
   </div>
 </div>
 
@@ -72,7 +72,7 @@
   <span class="lesson-num">1</span>
   <div class="lesson-body">
     <h4>Planta del machón</h4>
-    <p>Dibuja un <strong>rectángulo macizo</strong> en la esquina con <span class="cmd-inline">RECTANG</span>, del tamaño definido (ej.: 0.30 × 0.30 m). El machón es masa de fábrica: no lleva "vacio interior".</p>
+    <p>Dibuja un <strong>rectángulo macizo</strong> en la esquina con <span class="cmd-inline">RECTÁNGULO</span> (en inglés: <span class="cmd-inline">RECTANG</span>), del tamaño definido (ej.: 0.30 × 0.30 m). El machón es masa de fábrica: no lleva "vacio interior".</p>
   </div>
 </div>
 
@@ -80,7 +80,7 @@
   <span class="lesson-num">2</span>
   <div class="lesson-body">
     <h4>Marca su posición en el muro</h4>
-    <p>Colócalo coincidiendo con el eje del muro de la esquina (con <span class="cmd-inline">SNAP</span> o referencias a objeto). Pónlo en una capa propia <code>A-Machones</code>.</p>
+    <p>Colócalo coincidiendo con el eje del muro de la esquina (con <span class="cmd-inline">ADHERENCIA</span> (en inglés: <span class="cmd-inline">SNAP</span>) o referencias a objeto). Pónlo en una capa propia <code>A-Machones</code>.</p>
   </div>
 </div>
 
@@ -88,22 +88,22 @@
   <span class="lesson-num">3</span>
   <div class="lesson-body">
     <h4>Nombra el machón</h4>
-    <p>Añade el texto "M-1" o "P-1" con <span class="cmd-inline">TEXT</span> y cota sus dimensiones. En sección, muéstralo con un sombreado de fábrica (ladrillo) u hormigón según el caso.</p>
+    <p>Añade el texto "M-1" o "P-1" con <span class="cmd-inline">TEXTO</span> (en inglés: <span class="cmd-inline">TEXT</span>) y cota sus dimensiones. En sección, muéstralo con un sombreado de fábrica (ladrillo) u hormigón según el caso.</p>
   </div>
 </div>
 
 <h3>4. Cajetín de datos del elemento</h3>
-<p>Junto a cada elemento coloca un pequeño cajetín (bloque con atributos) que resuma: descripción, material, dimensiones, armado y nota estructural. Usa <span class="cmd-inline">ATTDEF</span> para crearlo con atributos editables (D: diámetro, N: número de barras).</p>
+<p>Junto a cada elemento coloca un pequeño cajetín (bloque con atributos) que resuma: descripción, material, dimensiones, armado y nota estructural. Usa <span class="cmd-inline">DEFATTRIB</span> (en inglés: <span class="cmd-inline">ATTDEF</span>) para crearlo con atributos editables (D: diámetro, N: número de barras).</p>
 
 <div class="table-scroll">
 <table class="table-cad">
   <thead><tr><th>Comando</th><th>Qué hace</th></tr></thead>
   <tbody>
-    <tr><td><span class="cmd-inline">RECTANG</span></td><td>Dibuja el cuadro base de la zapata / machón</td></tr>
-    <tr><td><span class="cmd-inline">HATCH</span></td><td>Sombreado de hormigón o fábrica en planta/sección</td></tr>
-    <tr><td><span class="cmd-inline">CIRCLE</span></td><td>Sección de barra en planta</td></tr>
-    <tr><td><span class="cmd-inline">ATTDEF</span></td><td>Crea atributos para el cajetín del elemento</td></tr>
-    <tr><td><span class="cmd-inline">DIMLINEAR</span></td><td>Acota la zapata / machón</td></tr>
+    <tr><td><span class="cmd-inline">RECTÁNGULO</span> (en inglés: <span class="cmd-inline">RECTANG</span>)</td><td>Dibuja el cuadro base de la zapata / machón</td></tr>
+    <tr><td><span class="cmd-inline">SOMBREADO</span> (en inglés: <span class="cmd-inline">HATCH</span>)</td><td>Sombreado de hormigón o fábrica en planta/sección</td></tr>
+    <tr><td><span class="cmd-inline">CÍRCULO</span> (en inglés: <span class="cmd-inline">CIRCLE</span>)</td><td>Sección de barra en planta</td></tr>
+    <tr><td><span class="cmd-inline">DEFATTRIB</span> (en inglés: <span class="cmd-inline">ATTDEF</span>)</td><td>Crea atributos para el cajetín del elemento</td></tr>
+    <tr><td><span class="cmd-inline">ACOTLINEAL</span> (en inglés: <span class="cmd-inline">DIMLINEAR</span>)</td><td>Acota la zapata / machón</td></tr>
   </tbody>
 </table>
 </div>

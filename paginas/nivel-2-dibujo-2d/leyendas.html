@@ -168,13 +168,13 @@
             </ul>
 
             <h3>2. Construir la leyenda con TABLAS (paso a paso)</h3>
-            <p>La forma más limpia y editable es usar el comando <span class="cmd-inline">TABLE</span>:</p>
+            <p>La forma más limpia y editable es usar el comando <span class="cmd-inline">TABLA</span> (en inglés: <span class="cmd-inline">TABLE</span>):</p>
 
             <div class="lesson-step">
               <span class="lesson-num">1</span>
               <div class="lesson-body">
                 <h4>Ejecuta TABLE y define la tabla</h4>
-                <p>Escribe <span class="cmd-inline">TABLE</span>. En "Insertar tabla" elige <strong>Nueva tabla</strong>, número de columnas (2: símbolo y descripción) y filas iniciales.</p>
+                <p>Escribe <span class="cmd-inline">TABLA</span> (en inglés: <span class="cmd-inline">TABLE</span>). En "Insertar tabla" elige <strong>Nueva tabla</strong>, número de columnas (2: símbolo y descripción) y filas iniciales.</p>
               </div>
             </div>
 
@@ -198,12 +198,12 @@
               <span class="lesson-num">4</span>
               <div class="lesson-body">
                 <h4>Ajusta el ancho y alto de filas</h4>
-                <p>Selecciona la tabla y con los grips arrastra columnas y filas para dejar la leyenda proporcionada. Desde <span class="cmd-inline">TABLE</span> → propiedades puedes fijar alturas de fila exactas.</p>
+                <p>Selecciona la tabla y con los grips arrastra columnas y filas para dejar la leyenda proporcionada. Desde <span class="cmd-inline">TABLA</span> (en inglés: <span class="cmd-inline">TABLE</span>) → propiedades puedes fijar alturas de fila exactas.</p>
               </div>
             </div>
 
             <h3>3. Leyenda con bloques (símbolos reutilizables)</h3>
-            <p>Si vas a repetir la leyenda en varios planos, convierte cada símbolo en un <strong>bloque</strong> (<span class="cmd-inline">B</span>) con nombres como <code>SIM-Muro</code>, <code>SIM-Ventana</code>. Al insertar la leyenda en otro plano (<span class="cmd-inline">INSERT</span> → desde el archivo original con <span class="cmd-inline">WBLOCK</span> o <span class="cmd-inline">DESIGNCENTER</span>), los símbolos llegan con sus bloques y se actualizan fácilmente.</p>
+            <p>Si vas a repetir la leyenda en varios planos, convierte cada símbolo en un <strong>bloque</strong> (<span class="cmd-inline">B</span>) con nombres como <code>SIM-Muro</code>, <code>SIM-Ventana</code>. Al insertar la leyenda en otro plano (<span class="cmd-inline">INSERT</span> → desde el archivo original con <span class="cmd-inline">BLOQUEDISC</span> (en inglés: <span class="cmd-inline">WBLOCK</span>) o <span class="cmd-inline">CENTRODC</span> (en inglés: <span class="cmd-inline">DESIGNCENTER</span>)), los símbolos llegan con sus bloques y se actualizan fácilmente.</p>
 
             <h3>4. Leyenda para hatching: usar muestras PATTERNS</h3>
             <p>Para las muestras de hatch, inserta un pequeño rectángulo con el mismo hatch del plano (<span class="cmd-inline">HATCH</span>, mismo patrón y escala) y acompaña con el texto del material. Consejo: dibuja el rectángulo en una capa <code>A-Leyenda</code>, así es fácil ocultarla al imprimir si sobra.</p>
@@ -215,11 +215,11 @@
             <table class="table-cad">
               <thead><tr><th>Comando</th><th>Qué hace</th></tr></thead>
               <tbody>
-                <tr><td><span class="cmd-inline">TABLE</span></td><td>Inserta una tabla editable en el dibujo</td></tr>
-                <tr><td><span class="cmd-inline">HATCH</span></td><td>Añade el hatch de muestra del material</td></tr>
-                <tr><td><span class="cmd-inline">BLOCK</span></td><td>Guarda cada símbolo como bloque reutilizable</td></tr>
-                <tr><td><span class="cmd-inline">WBLOCK</span></td><td>Exporta la leyenda (y su simbología) como archivo DWG</td></tr>
-                <tr><td><span class="cmd-inline">DESIGNCENTER</span></td><td>Arrastra bloques de otro archivo a la leyenda</td></tr>
+                <tr><td><span class="cmd-inline">TABLA</span> (en inglés: <span class="cmd-inline">TABLE</span>)</td><td>Inserta una tabla editable en el dibujo</td></tr>
+                <tr><td><span class="cmd-inline">SOMBREADO</span> (en inglés: <span class="cmd-inline">HATCH</span>)</td><td>Añade el hatch de muestra del material</td></tr>
+                <tr><td><span class="cmd-inline">BLOQUE</span> (en inglés: <span class="cmd-inline">BLOCK</span>)</td><td>Guarda cada símbolo como bloque reutilizable</td></tr>
+                <tr><td><span class="cmd-inline">BLOQUEDISC</span> (en inglés: <span class="cmd-inline">WBLOCK</span>)</td><td>Exporta la leyenda (y su simbología) como archivo DWG</td></tr>
+                <tr><td><span class="cmd-inline">CENTRODC</span> (en inglés: <span class="cmd-inline">DESIGNCENTER</span>)</td><td>Arrastra bloques de otro archivo a la leyenda</td></tr>
               </tbody>
             </table>
             </div>

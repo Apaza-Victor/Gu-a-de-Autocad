@@ -153,10 +153,10 @@
                                 <table class="table-cad">
                                   <thead><tr><th>Acción</th><th>Comando</th></tr></thead>
                                   <tbody>
-                                    <tr><td>Crear un bloque a partir de objetos seleccionados</td><td class="cmd-inline">BLOCK</td></tr>
-                                    <tr><td>Insertar un bloque existente</td><td class="cmd-inline">INSERT</td></tr>
-                                    <tr><td>Editar el contenido de un bloque</td><td class="cmd-inline">BEDIT</td></tr>
-                                    <tr><td>Descomponer un bloque en objetos sueltos</td><td class="cmd-inline">EXPLODE</td></tr>
+                                    <tr><td>Crear un bloque a partir de objetos seleccionados</td><td class="cmd-inline"><span class="cmd-inline">BLOQUE</span> (en inglés: <span class="cmd-inline">BLOCK</span>)</td></tr>
+                                    <tr><td>Insertar un bloque existente</td><td class="cmd-inline"><span class="cmd-inline">INSERTAR</span> (en inglés: <span class="cmd-inline">INSERT</span>)</td></tr>
+                                    <tr><td>Editar el contenido de un bloque</td><td class="cmd-inline"><span class="cmd-inline">EDITBLOQUE</span> (en inglés: <span class="cmd-inline">BEDIT</span>)</td></tr>
+                                    <tr><td>Descomponer un bloque en objetos sueltos</td><td class="cmd-inline"><span class="cmd-inline">EXPLOTAR</span> (en inglés: <span class="cmd-inline">EXPLODE</span>)</td></tr>
                                   </tbody>
                                 </table>
 
@@ -168,20 +168,20 @@
           <table class="table-cad">
             <thead><tr><th>Comando</th><th>Qué hace</th><th>Cuándo usarlo</th></tr></thead>
             <tbody>
-              <tr><td><span class="cmd-inline">BLOCK</span></td><td>Crea un bloque dentro del dibujo actual.</td><td>Elemento que solo usará este archivo.</td></tr>
-              <tr><td><span class="cmd-inline">WBLOCK</span></td><td>Guarda el bloque como un .DWG independiente.</td><td>Una librería reutilizable entre proyectos (puertas, mobiliario, símbolos).</td></tr>
-              <tr><td><span class="cmd-inline">INSERT</span></td><td>Inserta un bloque (o archivo) con escala, rotación y repetición.</td><td>Colocar la definición en el plano.</td></tr>
+              <tr><td><span class="cmd-inline">BLOQUE</span> (en inglés: <span class="cmd-inline">BLOCK</span>)</td><td>Crea un bloque dentro del dibujo actual.</td><td>Elemento que solo usará este archivo.</td></tr>
+              <tr><td><span class="cmd-inline">BLOQUEDISC</span> (en inglés: <span class="cmd-inline">WBLOCK</span>)</td><td>Guarda el bloque como un .DWG independiente.</td><td>Una librería reutilizable entre proyectos (puertas, mobiliario, símbolos).</td></tr>
+              <tr><td><span class="cmd-inline">INSERTAR</span> (en inglés: <span class="cmd-inline">INSERT</span>)</td><td>Inserta un bloque (o archivo) con escala, rotación y repetición.</td><td>Colocar la definición en el plano.</td></tr>
               <tr><td><span class="cmd-inline">DCENTER</span></td><td>Centro de diseño: biblioteca de bloques del dibujo y de carpetas.</td><td>Arrastrar bloques de una librería sin escribir comandos.</td></tr>
             </tbody>
           </table>
           <ul>
-            <li><strong>Editar:</strong> haz <strong>doble clic</strong> en un bloque y se abre <span class="cmd-inline">BEDIT</span>. Los cambios se propagan a todas las inserciones.</li>
-            <li><strong>Atributos:</strong> define campos editables con <span class="cmd-inline">ATTDEF</span>; al insertar, AutoCAD te pide los valores. Se editan con <span class="cmd-inline">EATTEDIT</span> y se re-sincronizan con <span class="cmd-inline">ATTSYNC</span>.</li>
-            <li><strong>Limpiar:</strong> los bloques no usados engordan el archivo; elimínalos con <span class="cmd-inline">PURGE</span>.</li>
+            <li><strong>Editar:</strong> haz <strong>doble clic</strong> en un bloque y se abre <span class="cmd-inline">EDITBLOQUE</span> (en inglés: <span class="cmd-inline">BEDIT</span>). Los cambios se propagan a todas las inserciones.</li>
+            <li><strong>Atributos:</strong> define campos editables con <span class="cmd-inline">DEFATTRIB</span> (en inglés: <span class="cmd-inline">ATTDEF</span>); al insertar, AutoCAD te pide los valores. Se editan con <span class="cmd-inline">EATTEDIT</span> y se re-sincronizan con <span class="cmd-inline">SINCATRIB</span> (en inglés: <span class="cmd-inline">ATTSYNC</span>).</li>
+            <li><strong>Limpiar:</strong> los bloques no usados engordan el archivo; elimínalos con <span class="cmd-inline">PURGAR</span> (en inglés: <span class="cmd-inline">PURGE</span>).</li>
           </ul>
           <div class="callout">
             <span class="callout-title">Idea clave</span>
-            <span>El bloque es una <strong>definición</strong>: al cambiar la definición, cambian todas sus inserciones a la vez. Por eso NUNCA rompas un bloque con <span class="cmd-inline">EXPLODE</span> salvo que sea imprescindible: pierdes esa inteligencia.</span>
+            <span>El bloque es una <strong>definición</strong>: al cambiar la definición, cambian todas sus inserciones a la vez. Por eso NUNCA rompas un bloque con <span class="cmd-inline">EXPLOTAR</span> (en inglés: <span class="cmd-inline">EXPLODE</span>) salvo que sea imprescindible: pierdes esa inteligencia.</span>
           </div>
 
           <h3>Mini ejercicio: bloque de puerta con atributo de numeración</h3>
@@ -189,14 +189,14 @@
             <span class="lesson-num">1</span>
             <div class="lesson-body">
               <h4>Dibuja y define</h4>
-              <p>Dibuja una puerta simple (hoja + arco de giro) y crea el bloque con <span class="cmd-inline">BLOCK</span>, nombre "PUERTA" y punto base en la bisagra.</p>
+              <p>Dibuja una puerta simple (hoja + arco de giro) y crea el bloque con <span class="cmd-inline">BLOQUE</span> (en inglés: <span class="cmd-inline">BLOCK</span>), nombre "PUERTA" y punto base en la bisagra.</p>
             </div>
           </div>
           <div class="lesson-step">
             <span class="lesson-num">2</span>
             <div class="lesson-body">
               <h4>Añade el atributo</h4>
-              <p>Descompón (<span class="cmd-inline">EXPLODE</span>), escribe <span class="cmd-inline">ATTDEF</span>, etiqueta <strong>NUMERO</strong>, y redefine el bloque. Insertar te pedirá el número.</p>
+              <p>Descompón (<span class="cmd-inline">EXPLODE</span>), escribe <span class="cmd-inline">DEFATTRIB</span> (en inglés: <span class="cmd-inline">ATTDEF</span>), etiqueta <strong>NUMERO</strong>, y redefine el bloque. Insertar te pedirá el número.</p>
             </div>
           </div>
           <div class="lesson-step">

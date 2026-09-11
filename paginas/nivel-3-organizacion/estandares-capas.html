@@ -152,7 +152,7 @@
                                 <p>El prefijo de letras indica la disciplina y la palabra que sigue indica el contenido. Los estándares más usados son el <strong>AIA</strong> (American Institute of Architects), muy común en arquitectura, y la guía <strong>ISO 13567</strong>, que separa el nombre por campos: disciplina, capa y contenido. Con la convención AIA, "A-Muros" significa <em>Arquitectura → Muros</em> y "S-Estuco" <em>Estructura → Estuco</em>.</p>
 
                                 <h3>Dónde configurarlo</h3>
-                                <p>El cuadro de <span class="cmd-inline">LAYER</span> (o <span class="cmd-inline">LA</span>) administra las capas. Puedes cargar listas de capas ya hechas desde un <strong>.DWT</strong> que las traiga configuradas, o guardar y restaurar esquemas completos con <span class="cmd-inline">LAYERSTATES</span> (colores, congeladas, visibilidad) en un clic.</p>
+                                <p>El cuadro de <span class="cmd-inline">CAPA</span> (en inglés: <span class="cmd-inline">LAYER</span>) (o <span class="cmd-inline">LA</span>) administra las capas. Puedes cargar listas de capas ya hechas desde un <strong>.DWT</strong> que las traiga configuradas, o guardar y restaurar esquemas completos con <span class="cmd-inline">LAYERSTATES</span> (colores, congeladas, visibilidad) en un clic.</p>
 
                                 <table class="table-cad">
                                   <thead><tr><th>Capa</th><th>Contenido típico</th><th>Color sugerido</th></tr></thead>
@@ -203,10 +203,10 @@
           <table class="table-cad">
             <thead><tr><th>Comando</th><th>Qué hace</th></tr></thead>
             <tbody>
-              <tr><td class="cmd-inline">LAYISO</td><td>Aísla la capa del objeto seleccionado (oculta las demás).</td></tr>
+              <tr><td class="cmd-inline"><span class="cmd-inline">AISLARCAPA</span> (en inglés: <span class="cmd-inline">LAYISO</span>)</td><td>Aísla la capa del objeto seleccionado (oculta las demás).</td></tr>
               <tr><td class="cmd-inline">LAYUNISO</td><td>Restaura las capas que habías aislado.</td></tr>
-              <tr><td class="cmd-inline">LAYOFF</td><td>Apaga la capa (no se muestra ni se imprime).</td></tr>
-              <tr><td class="cmd-inline">LAYON</td><td>Enciende todas las capas apagadas.</td></tr>
+              <tr><td class="cmd-inline"><span class="cmd-inline">APAGARCAPA</span> (en inglés: <span class="cmd-inline">LAYOFF</span>)</td><td>Apaga la capa (no se muestra ni se imprime).</td></tr>
+              <tr><td class="cmd-inline"><span class="cmd-inline">TODASCAPASENCENDIDAS</span> (en inglés: <span class="cmd-inline">LAYON</span>)</td><td>Enciende todas las capas apagadas.</td></tr>
               <tr><td class="cmd-inline">LAYMC</td><td>Cambia el objeto seleccionado a la capa actual.</td></tr>
             </tbody>
           </table>

@@ -153,16 +153,16 @@
                                 <table class="table-cad">
                                   <thead><tr><th>Herramienta</th><th>Comando</th><th>Atajo</th><th>Uso</th></tr></thead>
                                   <tbody>
-                                    <tr><td>Mover</td><td class="cmd-inline">MOVE</td><td class="key-inline">M</td><td>Traslada objetos de un punto base a un punto destino.</td></tr>
-                                    <tr><td>Copiar</td><td class="cmd-inline">COPY</td><td class="key-inline">CO</td><td>Igual que mover, pero conserva el original.</td></tr>
-                                    <tr><td>Rotar</td><td class="cmd-inline">ROTATE</td><td class="key-inline">RO</td><td>Gira objetos un ángulo respecto a un punto base.</td></tr>
-                                    <tr><td>Escalar</td><td class="cmd-inline">SCALE</td><td class="key-inline">SC</td><td>Aumenta o reduce el tamaño respecto a un punto base.</td></tr>
-                                    <tr><td>Recortar</td><td class="cmd-inline">TRIM</td><td class="key-inline">TR</td><td>Elimina la parte de un objeto que sobrepasa un límite.</td></tr>
-                                    <tr><td>Alargar</td><td class="cmd-inline">EXTEND</td><td class="key-inline">EX</td><td>Extiende un objeto hasta tocar un límite de referencia.</td></tr>
-                                    <tr><td>Desfase</td><td class="cmd-inline">OFFSET</td><td class="key-inline">O</td><td>Copia paralela a una distancia exacta (ideal para muros).</td></tr>
-                                    <tr><td>Simetría</td><td class="cmd-inline">MIRROR</td><td class="key-inline">MI</td><td>Refleja objetos respecto a un eje.</td></tr>
-                                    <tr><td>Matriz</td><td class="cmd-inline">ARRAY</td><td class="key-inline">AR</td><td>Repite objetos en filas/columnas, en círculo o a lo largo de una ruta.</td></tr>
-                                    <tr><td>Empalme</td><td class="cmd-inline">FILLET</td><td class="key-inline">F</td><td>Une dos líneas con un arco de radio definido.</td></tr>
+                                    <tr><td>Mover</td><td class="cmd-inline"><span class="cmd-inline">MOVER</span> (en inglés: <span class="cmd-inline">MOVE</span>)</td><td class="key-inline">M</td><td>Traslada objetos de un punto base a un punto destino.</td></tr>
+                                    <tr><td>Copiar</td><td class="cmd-inline"><span class="cmd-inline">COPIAR</span> (en inglés: <span class="cmd-inline">COPY</span>)</td><td class="key-inline">CO</td><td>Igual que mover, pero conserva el original.</td></tr>
+                                    <tr><td>Rotar</td><td class="cmd-inline"><span class="cmd-inline">GIRAR</span> (en inglés: <span class="cmd-inline">ROTATE</span>)</td><td class="key-inline">RO</td><td>Gira objetos un ángulo respecto a un punto base.</td></tr>
+                                    <tr><td>Escalar</td><td class="cmd-inline"><span class="cmd-inline">ESCALAR</span> (en inglés: <span class="cmd-inline">SCALE</span>)</td><td class="key-inline">SC</td><td>Aumenta o reduce el tamaño respecto a un punto base.</td></tr>
+                                    <tr><td>Recortar</td><td class="cmd-inline"><span class="cmd-inline">RECORTAR</span> (en inglés: <span class="cmd-inline">TRIM</span>)</td><td class="key-inline">TR</td><td>Elimina la parte de un objeto que sobrepasa un límite.</td></tr>
+                                    <tr><td>Alargar</td><td class="cmd-inline"><span class="cmd-inline">EXTENDER</span> (en inglés: <span class="cmd-inline">EXTEND</span>)</td><td class="key-inline">EX</td><td>Extiende un objeto hasta tocar un límite de referencia.</td></tr>
+                                    <tr><td>Desfase</td><td class="cmd-inline"><span class="cmd-inline">DESFASE</span> (en inglés: <span class="cmd-inline">OFFSET</span>)</td><td class="key-inline">O</td><td>Copia paralela a una distancia exacta (ideal para muros).</td></tr>
+                                    <tr><td>Simetría</td><td class="cmd-inline"><span class="cmd-inline">REFLEJAR</span> (en inglés: <span class="cmd-inline">MIRROR</span>)</td><td class="key-inline">MI</td><td>Refleja objetos respecto a un eje.</td></tr>
+                                    <tr><td>Matriz</td><td class="cmd-inline"><span class="cmd-inline">MATRIZ</span> (en inglés: <span class="cmd-inline">ARRAY</span>)</td><td class="key-inline">AR</td><td>Repite objetos en filas/columnas, en círculo o a lo largo de una ruta.</td></tr>
+                                    <tr><td>Empalme</td><td class="cmd-inline"><span class="cmd-inline">REDONDEAR</span> (en inglés: <span class="cmd-inline">FILLET</span>)</td><td class="key-inline">F</td><td>Une dos líneas con un arco de radio definido.</td></tr>
                                     <tr><td>Chaflán</td><td class="cmd-inline">CHAMFER</td><td class="key-inline">CHA</td><td>Une dos líneas con un corte recto en la esquina.</td></tr>
                                   </tbody>
                                 </table>
@@ -184,9 +184,9 @@
           <table class="table-cad">
             <thead><tr><th>Comando</th><th>Opción práctica</th><th>Uso típico</th></tr></thead>
             <tbody>
-              <tr><td><span class="cmd-inline">ARRAY</span></td><td>Rectangular / Polar / Path</td><td>Repetir pilares en retícula, luminares en círculo o muros a lo largo de un eje curvo.</td></tr>
-              <tr><td><span class="cmd-inline">TRIM</span> / <span class="cmd-inline">EXTEND</span></td><td>Pulsa <span class="key-inline">Enter</span> tras seleccionar</td><td>Recorta/extiende contra todos los objetos como límite.</td></tr>
-              <tr><td><span class="cmd-inline">COPY</span></td><td>Modo múltiple + desplazamiento</td><td>Copiar una pieza a varias posiciones sin repetir el comando.</td></tr>
+              <tr><td><span class="cmd-inline">MATRIZ</span> (en inglés: <span class="cmd-inline">ARRAY</span>)</td><td>Rectangular / Polar / Path</td><td>Repetir pilares en retícula, luminares en círculo o muros a lo largo de un eje curvo.</td></tr>
+              <tr><td><span class="cmd-inline">RECORTAR</span> (en inglés: <span class="cmd-inline">TRIM</span>) / <span class="cmd-inline">EXTENDER</span> (en inglés: <span class="cmd-inline">EXTEND</span>)</td><td>Pulsa <span class="key-inline">Enter</span> tras seleccionar</td><td>Recorta/extiende contra todos los objetos como límite.</td></tr>
+              <tr><td><span class="cmd-inline">COPIAR</span> (en inglés: <span class="cmd-inline">COPY</span>)</td><td>Modo múltiple + desplazamiento</td><td>Copiar una pieza a varias posiciones sin repetir el comando.</td></tr>
             </tbody>
           </table>
           <div class="callout warn">
@@ -199,21 +199,21 @@
             <span class="lesson-num">1</span>
             <div class="lesson-body">
               <h4>Prepara el conjunto</h4>
-              <p>Dibuja una puerta con <span class="cmd-inline">RECTANG</span> más un texto <span class="cmd-inline">TEXT</span> "Puerta 01" junto a ella.</p>
+              <p>Dibuja una puerta con <span class="cmd-inline">RECTÁNGULO</span> (en inglés: <span class="cmd-inline">RECTANG</span>) más un texto <span class="cmd-inline">TEXTO</span> (en inglés: <span class="cmd-inline">TEXT</span>) "Puerta 01" junto a ella.</p>
             </div>
           </div>
           <div class="lesson-step">
             <span class="lesson-num">2</span>
             <div class="lesson-body">
               <h4>Refleja correctamente</h4>
-              <p>Pon <span class="cmd-inline">MIRRTEXT</span> en <strong>0</strong>, selecciona puerta y texto, haz <span class="cmd-inline">MIRROR</span> con eje vertical y comprueba que el texto queda legible.</p>
+              <p>Pon <span class="cmd-inline">MIRRTEXT</span> en <strong>0</strong>, selecciona puerta y texto, haz <span class="cmd-inline">REFLEJAR</span> (en inglés: <span class="cmd-inline">MIRROR</span>) con eje vertical y comprueba que el texto queda legible.</p>
             </div>
           </div>
           <div class="lesson-step">
             <span class="lesson-num">3</span>
             <div class="lesson-body">
               <h4>Limpia con radio 0</h4>
-              <p>Haz <span class="cmd-inline">FILLET</span> → <span class="cmd-inline">R</span> → <span class="cmd-inline">0</span> entre las dos líneas de cada esquina para cerrar el contorno sin arcos sobrantes.</p>
+              <p>Haz <span class="cmd-inline">REDONDEAR</span> (en inglés: <span class="cmd-inline">FILLET</span>) → <span class="cmd-inline">R</span> → <span class="cmd-inline">0</span> entre las dos líneas de cada esquina para cerrar el contorno sin arcos sobrantes.</p>
             </div>
           </div>
           <!-- ENRIQ END -->

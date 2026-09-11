@@ -149,7 +149,7 @@
 
           <section id="massprop" data-topic="nivel4-massprop">
                                 <h2><span class="sec-num">18</span>Análisis de masa y volumen (MASSPROP)</h2>
-                                <p>El comando <span class="cmd-inline">MASSPROP</span> calcula propiedades físicas de un sólido 3D: <strong>volumen</strong>, <strong>área superficial</strong>, <strong>centro de masa</strong> y <strong>momentos de inercia</strong>. Se usa para verificar piezas y para estimar cantidades de material.</p>
+                                <p>El comando <span class="cmd-inline">PROPFÍS</span> (en inglés: <span class="cmd-inline">MASSPROP</span>) calcula propiedades físicas de un sólido 3D: <strong>volumen</strong>, <strong>área superficial</strong>, <strong>centro de masa</strong> y <strong>momentos de inercia</strong>. Se usa para verificar piezas y para estimar cantidades de material.</p>
 
                                 <h3>Cuándo sirve</h3>
                                 <ul>
@@ -159,7 +159,7 @@
                                 </ul>
 
                                 <h3>Cómo leer el resultado y exportarlo</h3>
-                                <p>Al ejecutar <span class="cmd-inline">MASSPROP</span> y seleccionar el sólido, AutoCAD muestra una ventana con los valores calculados. Las unidades dependen del dibujo (por ejemplo, cm³ si trabajas en centímetros). Para guardar el informe, responde <span class="cmd-inline">Y</span> a la pregunta "Escribir análisis en un archivo" y exporta los datos a un archivo de texto, o copia los valores desde el historial con <span class="key-inline">F2</span>.</p>
+                                <p>Al ejecutar <span class="cmd-inline">PROPFÍS</span> (en inglés: <span class="cmd-inline">MASSPROP</span>) y seleccionar el sólido, AutoCAD muestra una ventana con los valores calculados. Las unidades dependen del dibujo (por ejemplo, cm³ si trabajas en centímetros). Para guardar el informe, responde <span class="cmd-inline">Y</span> a la pregunta "Escribir análisis en un archivo" y exporta los datos a un archivo de texto, o copia los valores desde el historial con <span class="key-inline">F2</span>.</p>
 
                                 <div class="diagram-canvas">
                                   <svg viewBox="0 0 280 170">
@@ -179,11 +179,11 @@
                                 </div>
 
                                 <h3>Relación con REGION</h3>
-                                <p>El mismo comando <span class="cmd-inline">MASSPROP</span> también trabaja con <strong>regiones 2D</strong> (creadas con <span class="cmd-inline">REGION</span>): en ese caso informa <strong>área</strong>, <strong>perímetro</strong> y <strong>centroide</strong>, útil para calcular áreas y ubicar el centro de gravedad de figuras planas.</p>
+                                <p>El mismo comando <span class="cmd-inline">PROPFÍS</span> (en inglés: <span class="cmd-inline">MASSPROP</span>) también trabaja con <strong>regiones 2D</strong> (creadas con <span class="cmd-inline">REGION</span>): en ese caso informa <strong>área</strong>, <strong>perímetro</strong> y <strong>centroide</strong>, útil para calcular áreas y ubicar el centro de gravedad de figuras planas.</p>
 
                                 <div class="callout">
                                   <span class="callout-title">En la práctica</span>
-                                  Modela el objeto, conviértelo en un único sólido con <strong>UNION</strong> si tiene varias partes, ejecuta <strong>MASSPROP</strong> y anota volumen y centro de masa. Si el resultado sale en unidades raras, revisa las unidades del dibujo con <span class="cmd-inline">UNITS</span> antes de confiar en los números.
+                                  Modela el objeto, conviértelo en un único sólido con <strong>UNION</strong> si tiene varias partes, ejecuta <strong>MASSPROP</strong> y anota volumen y centro de masa. Si el resultado sale en unidades raras, revisa las unidades del dibujo con <span class="cmd-inline">UNIDADES</span> (en inglés: <span class="cmd-inline">UNITS</span>) antes de confiar en los números.
                                 </div>
 
           <!-- ENRIQ START -->
@@ -192,14 +192,14 @@
             <span class="lesson-num">1</span>
             <div class="lesson-body">
               <h4>Unifica la pieza</h4>
-              <p>Si la pieza tiene varias partes, únelas con <span class="cmd-inline">UNION</span> para que cuente como un único sólido.</p>
+              <p>Si la pieza tiene varias partes, únelas con <span class="cmd-inline">UNIÓN</span> (en inglés: <span class="cmd-inline">UNION</span>) para que cuente como un único sólido.</p>
             </div>
           </div>
           <div class="lesson-step">
             <span class="lesson-num">2</span>
             <div class="lesson-body">
               <h4>Consulta las propiedades</h4>
-              <p>Con <span class="cmd-inline">MASSPROP</span> selecciona el sólido: volumen, área, centro de masa y momentos de inercia.</p>
+              <p>Con <span class="cmd-inline">PROPFÍS</span> (en inglés: <span class="cmd-inline">MASSPROP</span>) selecciona el sólido: volumen, área, centro de masa y momentos de inercia.</p>
             </div>
           </div>
           <div class="lesson-step">
@@ -213,7 +213,7 @@
             <span class="lesson-num">4</span>
             <div class="lesson-body">
               <h4>Verifica las unidades</h4>
-              <p>Comprueba con <span class="cmd-inline">UNITS</span> que el dibujo está en la unidad que crees (mm, cm, m): 0.0024 m³ y 2400 cm³ son lo mismo, pero el número cambia.</p>
+              <p>Comprueba con <span class="cmd-inline">UNIDADES</span> (en inglés: <span class="cmd-inline">UNITS</span>) que el dibujo está en la unidad que crees (mm, cm, m): 0.0024 m³ y 2400 cm³ son lo mismo, pero el número cambia.</p>
             </div>
           </div>
           <div class="callout warn">

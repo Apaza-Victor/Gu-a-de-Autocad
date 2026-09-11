@@ -154,10 +154,10 @@
                                 <table class="table-cad">
                                   <thead><tr><th>Herramienta</th><th>Comando</th><th>Cómo funciona</th></tr></thead>
                                   <tbody>
-                                    <tr><td>Extrusión</td><td class="cmd-inline">EXTRUDE</td><td>"Empuja" un perfil 2D en línea recta a lo largo de una altura o una trayectoria.</td></tr>
-                                    <tr><td>Revolución</td><td class="cmd-inline">REVOLVE</td><td>Gira un perfil 2D alrededor de un eje, generando una forma simétrica (florero, tornillo).</td></tr>
-                                    <tr><td>Barrido</td><td class="cmd-inline">SWEEP</td><td>Desplaza un perfil a lo largo de una trayectoria curva (tubería, moldura).</td></tr>
-                                    <tr><td>Solevación (Loft)</td><td class="cmd-inline">LOFT</td><td>Genera una forma suave que conecta dos o más perfiles distintos entre sí.</td></tr>
+                                    <tr><td>Extrusión</td><td class="cmd-inline"><span class="cmd-inline">EXTRUIR</span> (en inglés: <span class="cmd-inline">EXTRUDE</span>)</td><td>"Empuja" un perfil 2D en línea recta a lo largo de una altura o una trayectoria.</td></tr>
+                                    <tr><td>Revolución</td><td class="cmd-inline"><span class="cmd-inline">REVOLVER</span> (en inglés: <span class="cmd-inline">REVOLVE</span>)</td><td>Gira un perfil 2D alrededor de un eje, generando una forma simétrica (florero, tornillo).</td></tr>
+                                    <tr><td>Barrido</td><td class="cmd-inline"><span class="cmd-inline">BARRIDO</span> (en inglés: <span class="cmd-inline">SWEEP</span>)</td><td>Desplaza un perfil a lo largo de una trayectoria curva (tubería, moldura).</td></tr>
+                                    <tr><td>Solevación (Loft)</td><td class="cmd-inline"><span class="cmd-inline">SOLEVACIÓN</span> (en inglés: <span class="cmd-inline">LOFT</span>)</td><td>Genera una forma suave que conecta dos o más perfiles distintos entre sí.</td></tr>
                                   </tbody>
                                 </table>
 
@@ -166,19 +166,19 @@
           <table class="table-cad">
             <thead><tr><th>Herramienta</th><th>Opción práctica</th><th>Cuándo usarla</th></tr></thead>
             <tbody>
-              <tr><td><span class="cmd-inline">EXTRUDE</span></td><td>Trayectoria (<span class="cmd-inline">T</span>) y ángulo de conicidad (<span class="cmd-inline">A</span>)</td><td>Extruir un perfil a lo largo de una polilínea o darle una ligera inclinación a un muro.</td></tr>
-              <tr><td><span class="cmd-inline">REVOLVE</span></td><td>Ángulo de revolución (grados) y dirección del eje</td><td>Revolucionar solo 180° para crear un objeto asimétrico, o 360° para piezas simétricas.</td></tr>
-              <tr><td><span class="cmd-inline">SWEEP</span></td><td>Alineación (<span class="cmd-inline">A</span>) para mantener la sección perpendicular a la curva</td><td>Tuberías, molduras y rieles: la sección no se deforma al recorrer la ruta.</td></tr>
-              <tr><td><span class="cmd-inline">LOFT</span></td><td>Perfiles múltiples + guías (<span class="cmd-inline">G</span>)</td><td>Transiciones suaves entre plantas de distinta forma (chimeneas, carenados).</td></tr>
+              <tr><td><span class="cmd-inline">EXTRUIR</span> (en inglés: <span class="cmd-inline">EXTRUDE</span>)</td><td>Trayectoria (<span class="cmd-inline">T</span>) y ángulo de conicidad (<span class="cmd-inline">A</span>)</td><td>Extruir un perfil a lo largo de una polilínea o darle una ligera inclinación a un muro.</td></tr>
+              <tr><td><span class="cmd-inline">REVOLVER</span> (en inglés: <span class="cmd-inline">REVOLVE</span>)</td><td>Ángulo de revolución (grados) y dirección del eje</td><td>Revolucionar solo 180° para crear un objeto asimétrico, o 360° para piezas simétricas.</td></tr>
+              <tr><td><span class="cmd-inline">BARRIDO</span> (en inglés: <span class="cmd-inline">SWEEP</span>)</td><td>Alineación (<span class="cmd-inline">A</span>) para mantener la sección perpendicular a la curva</td><td>Tuberías, molduras y rieles: la sección no se deforma al recorrer la ruta.</td></tr>
+              <tr><td><span class="cmd-inline">SOLEVACIÓN</span> (en inglés: <span class="cmd-inline">LOFT</span>)</td><td>Perfiles múltiples + guías (<span class="cmd-inline">G</span>)</td><td>Transiciones suaves entre plantas de distinta forma (chimeneas, carenados).</td></tr>
             </tbody>
           </table>
           <div class="callout">
             <span class="callout-title">Idea clave</span>
-            <span>El perfil 2D debe estar <strong>cerrado</strong> para generar un sólido; si está abierto, la misma herramienta crea una superficie. Compruébalo con <span class="cmd-inline">BOUNDARY</span> si tienes dudas.</span>
+            <span>El perfil 2D debe estar <strong>cerrado</strong> para generar un sólido; si está abierto, la misma herramienta crea una superficie. Compruébalo con <span class="cmd-inline">CONTORNO</span> (en inglés: <span class="cmd-inline">BOUNDARY</span>) si tienes dudas.</span>
           </div>
           <div class="callout warn">
             <span class="callout-title">Error común</span>
-            <span>Dibujar el perfil y la trayectoria en capas distintas sin comprobar que ambos estén en el mismo plano o que la trayectoria toque el perfil. Con <span class="cmd-inline">SWEEP</span> y <span class="cmd-inline">EXTRUDE</span> la referencia de inicio importa.</span>
+            <span>Dibujar el perfil y la trayectoria en capas distintas sin comprobar que ambos estén en el mismo plano o que la trayectoria toque el perfil. Con <span class="cmd-inline">BARRIDO</span> (en inglés: <span class="cmd-inline">SWEEP</span>) y <span class="cmd-inline">EXTRUIR</span> (en inglés: <span class="cmd-inline">EXTRUDE</span>) la referencia de inicio importa.</span>
           </div>
           <!-- ENRIQ END -->
           <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>

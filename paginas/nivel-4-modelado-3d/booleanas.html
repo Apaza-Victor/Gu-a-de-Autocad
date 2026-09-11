@@ -154,9 +154,9 @@
                                 <table class="table-cad">
                                   <thead><tr><th>Operación</th><th>Comando</th><th>Resultado</th></tr></thead>
                                   <tbody>
-                                    <tr><td>Unión</td><td class="cmd-inline">UNION</td><td>Fusiona varios sólidos en uno solo.</td></tr>
-                                    <tr><td>Resta</td><td class="cmd-inline">SUBTRACT</td><td>Elimina el volumen de un sólido que se superpone a otro (por ejemplo, perforar un agujero).</td></tr>
-                                    <tr><td>Intersección</td><td class="cmd-inline">INTERSECT</td><td>Conserva únicamente el volumen común entre los sólidos seleccionados.</td></tr>
+                                    <tr><td>Unión</td><td class="cmd-inline"><span class="cmd-inline">UNIÓN</span> (en inglés: <span class="cmd-inline">UNION</span>)</td><td>Fusiona varios sólidos en uno solo.</td></tr>
+                                    <tr><td>Resta</td><td class="cmd-inline"><span class="cmd-inline">RESTAR</span> (en inglés: <span class="cmd-inline">SUBTRACT</span>)</td><td>Elimina el volumen de un sólido que se superpone a otro (por ejemplo, perforar un agujero).</td></tr>
+                                    <tr><td>Intersección</td><td class="cmd-inline"><span class="cmd-inline">INTERSECCIÓN</span> (en inglés: <span class="cmd-inline">INTERSECT</span>)</td><td>Conserva únicamente el volumen común entre los sólidos seleccionados.</td></tr>
                                   </tbody>
                                 </table>
 
@@ -176,7 +176,7 @@
             <span class="lesson-num">1</span>
             <div class="lesson-body">
               <h4>Cilindro exterior</h4>
-              <p>Con <span class="cmd-inline">CYLINDER</span> crea un cilindro de radio 50 y altura 10.</p>
+              <p>Con <span class="cmd-inline">CILINDRO</span> (en inglés: <span class="cmd-inline">CYLINDER</span>) crea un cilindro de radio 50 y altura 10.</p>
             </div>
           </div>
           <div class="lesson-step">
@@ -190,16 +190,16 @@
             <span class="lesson-num">3</span>
             <div class="lesson-body">
               <h4>Resta</h4>
-              <p>Con <span class="cmd-inline">SUBTRACT</span> selecciona el cilindro grande, <span class="key-inline">Enter</span>, y luego el pequeño: queda la arandela hueca.</p>
+              <p>Con <span class="cmd-inline">RESTAR</span> (en inglés: <span class="cmd-inline">SUBTRACT</span>) selecciona el cilindro grande, <span class="key-inline">Enter</span>, y luego el pequeño: queda la arandela hueca.</p>
             </div>
           </div>
           <div class="callout">
             <span class="callout-title">Idea clave</span>
-            <span>El orden importa: en <span class="cmd-inline">SUBTRACT</span>, primero se elige lo que <strong>queda</strong> y después lo que se <strong>quita</strong>. En <span class="cmd-inline">INTERSECT</span> y <span class="cmd-inline">UNION</span> el orden no afecta el resultado.</span>
+            <span>El orden importa: en <span class="cmd-inline">RESTAR</span> (en inglés: <span class="cmd-inline">SUBTRACT</span>), primero se elige lo que <strong>queda</strong> y después lo que se <strong>quita</strong>. En <span class="cmd-inline">INTERSECCIÓN</span> (en inglés: <span class="cmd-inline">INTERSECT</span>) y <span class="cmd-inline">UNIÓN</span> (en inglés: <span class="cmd-inline">UNION</span>) el orden no afecta el resultado.</span>
           </div>
           <div class="callout warn">
             <span class="callout-title">Error común</span>
-            <span>Intentar <span class="cmd-inline">UNION</span> de dos sólidos que no se tocan: se unen igual, pero el resultado tiene dos volúmenes sin conexión. Comprueba el contacto con un render o estilo oculto antes de asumir que son una sola pieza.</span>
+            <span>Intentar <span class="cmd-inline">UNIÓN</span> (en inglés: <span class="cmd-inline">UNION</span>) de dos sólidos que no se tocan: se unen igual, pero el resultado tiene dos volúmenes sin conexión. Comprueba el contacto con un render o estilo oculto antes de asumir que son una sola pieza.</span>
           </div>
           <!-- ENRIQ END -->
           <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>

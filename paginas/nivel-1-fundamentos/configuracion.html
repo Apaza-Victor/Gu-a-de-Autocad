@@ -146,7 +146,7 @@
 
                                           <!-- ====== UNIDADES DE MEDIDA ====== -->
                                           <h3>Unidades de dibujo — el comando UNITS</h3>
-                                          <p>Escribe <span class="cmd-inline">UNITS</span> (o <span class="cmd-inline">UNIDADES</span>) y se abre el cuadro de diálogo. Allí defines:</p>
+                                          <p>Escribe <span class="cmd-inline">UNIDADES</span> (en inglés: <span class="cmd-inline">UNITS</span>) (o <span class="cmd-inline">UNIDADES</span> (en inglés: <span class="cmd-inline">UNITS</span>)) y se abre el cuadro de diálogo. Allí defines:</p>
                                           <ul>
                                             <li><strong>Type (Tipo):</strong> Decimal, Architectural, Engineering, Fractional o Scientific. Para métrico, usa <strong>Decimal</strong>.</li>
                                             <li><strong>Precision (Precisión):</strong> cuántos decimales muestra. Para mm usa <code>0</code>, para metros usa <code>0.00</code> o <code>0.000</code>.</li>
@@ -241,7 +241,7 @@
                                             <span class="lesson-num">1</span>
                                             <div class="lesson-body">
                                               <h4>Abre el cuadro de unidades</h4>
-                                              <p>Escribe <span class="cmd-inline">UNITS</span> o <span class="cmd-inline">UNIDADES</span> en la línea de comandos y presiona Enter. Se abre el diálogo "Drawing Units".</p>
+                                              <p>Escribe <span class="cmd-inline">UNIDADES</span> (en inglés: <span class="cmd-inline">UNITS</span>) o <span class="cmd-inline">UNIDADES</span> (en inglés: <span class="cmd-inline">UNITS</span>) en la línea de comandos y presiona Enter. Se abre el diálogo "Drawing Units".</p>
                                             </div>
                                           </div>
 
@@ -278,7 +278,7 @@
                                             <span class="lesson-num">5</span>
                                             <div class="lesson-body">
                                               <h4>Guarda como plantilla</h4>
-                                              <p>Una vez configurado, guarda el archivo como plantilla con <span class="cmd-inline">SAVEAS</span> → formato <strong>.DWT</strong> (Drawing Template). Así no tendrás que repetir esta configuración cada vez que crees un dibujo nuevo.</p>
+                                              <p>Una vez configurado, guarda el archivo como plantilla con <span class="cmd-inline">GUARDARCOMO</span> (en inglés: <span class="cmd-inline">SAVEAS</span>) → formato <strong>.DWT</strong> (Drawing Template). Así no tendrás que repetir esta configuración cada vez que crees un dibujo nuevo.</p>
                                             </div>
                                           </div>
 
@@ -329,8 +329,8 @@
                                             <thead><tr><th>Variable</th><th>Qué controla</th><th>Valor típico (mm)</th><th>Valor típico (m)</th></tr></thead>
                                             <tbody>
                                               <tr><td><span class="cmd-inline">GRIDDISPLAY</span></td><td>Visibilidad de la cuadrícula (<span class="key-inline">F7</span>)</td><td>Activo</td><td>Activo</td></tr>
-                                              <tr><td><span class="cmd-inline">GRID</span></td><td>Espaciado de la cuadrícula visual</td><td>100 o 50</td><td>1 o 0.5</td></tr>
-                                              <tr><td><span class="cmd-inline">SNAP</span></td><td>Espaciado del cursor magnético (<span class="key-inline">F9</span>)</td><td>100 o 50</td><td>1 o 0.5</td></tr>
+                                              <tr><td><span class="cmd-inline">CUADRÍCULA</span> (en inglés: <span class="cmd-inline">GRID</span>)</td><td>Espaciado de la cuadrícula visual</td><td>100 o 50</td><td>1 o 0.5</td></tr>
+                                              <tr><td><span class="cmd-inline">ADHERENCIA</span> (en inglés: <span class="cmd-inline">SNAP</span>)</td><td>Espaciado del cursor magnético (<span class="key-inline">F9</span>)</td><td>100 o 50</td><td>1 o 0.5</td></tr>
                                               <tr><td><span class="cmd-inline">SNAPSTYL</span></td><td>Tipo de snap (0 = cartesiano, 1 = polar)</td><td>0</td><td>0</td></tr>
                                             </tbody>
                                           </table>
@@ -345,13 +345,13 @@
                                           <table class="table-cad">
                                             <thead><tr><th>¿Qué necesitas?</th><th>Comando</th><th>Ubicación en la cinta</th></tr></thead>
                                             <tbody>
-                                              <tr><td>Unidad de medida</td><td><span class="cmd-inline">UNITS</span></td><td>Inicio → Utilidades → Unidades</td></tr>
+                                              <tr><td>Unidad de medida</td><td><span class="cmd-inline">UNIDADES</span> (en inglés: <span class="cmd-inline">UNITS</span>)</td><td>Inicio → Utilidades → Unidades</td></tr>
                                               <tr><td>Límites del área de dibujo</td><td><span class="cmd-inline">LIMITS</span></td><td>Línea de comandos directamente</td></tr>
                                               <tr><td>Espaciado de cuadrícula</td><td><span class="cmd-inline">DSETTINGS</span></td><td>Barra de estado → clic derecho en GRID</td></tr>
                                               <tr><td>Snap del cursor</td><td><span class="cmd-inline">DSETTINGS</span></td><td>Barra de estado → clic derecho en SNAP</td></tr>
-                                              <tr><td>Tipos de línea disponibles</td><td><span class="cmd-inline">LINETYPE</span></td><td>Inicio → Propiedades → Otro</td></tr>
-                                              <tr><td>Crear / editar capas</td><td><span class="cmd-inline">LAYER</span></td><td>Inicio → Capas → Capa</td></tr>
-                                              <tr><td>Guardar como plantilla</td><td><span class="cmd-inline">SAVEAS</span> → .DWT</td><td>Menú → Guardar como</td></tr>
+                                              <tr><td>Tipos de línea disponibles</td><td><span class="cmd-inline">TIPOLÍNEA</span> (en inglés: <span class="cmd-inline">LINETYPE</span>)</td><td>Inicio → Propiedades → Otro</td></tr>
+                                              <tr><td>Crear / editar capas</td><td><span class="cmd-inline">CAPA</span> (en inglés: <span class="cmd-inline">LAYER</span>)</td><td>Inicio → Capas → Capa</td></tr>
+                                              <tr><td>Guardar como plantilla</td><td><span class="cmd-inline">GUARDARCOMO</span> (en inglés: <span class="cmd-inline">SAVEAS</span>) → .DWT</td><td>Menú → Guardar como</td></tr>
                                             </tbody>
                                           </table>
 
@@ -360,7 +360,7 @@
                                           <p>Una plantilla (archivo <strong>.DWT</strong>) guarda de antemano las capas, estilos de texto, de cota y de tabla que usarás en todos tus proyectos, para no configurarlos cada vez desde cero. Crea tu plantilla:</p>
                                           <ol>
                                             <li>Abre un dibujo nuevo y configura unidades, capas, estilos y cotas como necesites.</li>
-                                            <li>Escribe <span class="cmd-inline">SAVEAS</span> y en "Tipo de archivo" selecciona <strong>AutoCAD Drawing Template (*.dwt)</strong>.</li>
+                                            <li>Escribe <span class="cmd-inline">GUARDARCOMO</span> (en inglés: <span class="cmd-inline">SAVEAS</span>) y en "Tipo de archivo" selecciona <strong>AutoCAD Drawing Template (*.dwt)</strong>.</li>
                                             <li>Nombra la plantilla (ej. <code>PLANTILLA-ARQ-MM.dwt</code>) y guárdala.</li>
                                             <li>La próxima vez que crees un dibujo, selecciona esa plantilla en lugar de "acad.dwt".</li>
                                           </ol>

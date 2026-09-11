@@ -148,7 +148,7 @@
 
           <section id="pedit" data-topic="nivel2-pedit">
                                 <h2><span class="sec-num">17</span>Edición de polilíneas (PEDIT)</h2>
-                                <p>Una polilínea es una serie de segmentos y arcos conectados que forman <strong>un solo objeto</strong>. <span class="cmd-inline">PEDIT</span> (<span class="key-inline">PE</span>) permite editarla: unir segmentos, cerrarla, mover vértices, darle grosor o convertirla en curva suave.</p>
+                                <p>Una polilínea es una serie de segmentos y arcos conectados que forman <strong>un solo objeto</strong>. <span class="cmd-inline">EDITARP</span> (en inglés: <span class="cmd-inline">PEDIT</span>) (<span class="key-inline">PE</span>) permite editarla: unir segmentos, cerrarla, mover vértices, darle grosor o convertirla en curva suave.</p>
 
                                 <h3>Opciones principales de PEDIT</h3>
                                 <ul>
@@ -162,32 +162,32 @@
                                 <table class="table-cad">
                                   <thead><tr><th>Comando</th><th>Atajo</th><th>Qué hace</th></tr></thead>
                                   <tbody>
-                                    <tr><td><span class="cmd-inline">PEDIT</span></td><td><span class="key-inline">PE</span></td><td>Edita una polilínea: unir, cerrar, vértices, grosor, curva.</td></tr>
-                                    <tr><td><span class="cmd-inline">JOIN</span></td><td><span class="key-inline">J</span></td><td>Une segmentos sueltos en una sola polilínea sin entrar en el modo PEDIT.</td></tr>
-                                    <tr><td><span class="cmd-inline">EXPLODE</span></td><td><span class="key-inline">X</span></td><td>Descompone la polilínea en líneas y arcos independientes.</td></tr>
+                                    <tr><td><span class="cmd-inline">EDITARP</span> (en inglés: <span class="cmd-inline">PEDIT</span>)</td><td><span class="key-inline">PE</span></td><td>Edita una polilínea: unir, cerrar, vértices, grosor, curva.</td></tr>
+                                    <tr><td><span class="cmd-inline">UNIR</span> (en inglés: <span class="cmd-inline">JOIN</span>)</td><td><span class="key-inline">J</span></td><td>Une segmentos sueltos en una sola polilínea sin entrar en el modo PEDIT.</td></tr>
+                                    <tr><td><span class="cmd-inline">EXPLOTAR</span> (en inglés: <span class="cmd-inline">EXPLODE</span>)</td><td><span class="key-inline">X</span></td><td>Descompone la polilínea en líneas y arcos independientes.</td></tr>
                                   </tbody>
                                 </table>
 
                                 <div class="callout">
                                   <span class="callout-title">Diferencia PEDIT vs JOIN</span>
-                                  <span class="cmd-inline">JOIN</span> es más directo para unir: seleccionas las entidades y quedan como una sola polilínea. <span class="cmd-inline">PEDIT</span> además permite editar la polilínea resultante. Para unir un solo trazo, usa <span class="cmd-inline">JOIN</span>; para contornos que luego vas a desfasar o rellenar, asegúrate de que queden cerrados.
+                                  <span class="cmd-inline">UNIR</span> (en inglés: <span class="cmd-inline">JOIN</span>) es más directo para unir: seleccionas las entidades y quedan como una sola polilínea. <span class="cmd-inline">EDITARP</span> (en inglés: <span class="cmd-inline">PEDIT</span>) además permite editar la polilínea resultante. Para unir un solo trazo, usa <span class="cmd-inline">UNIR</span> (en inglés: <span class="cmd-inline">JOIN</span>); para contornos que luego vas a desfasar o rellenar, asegúrate de que queden cerrados.
                                 </div>
 
                                 <h3>Por qué importan las polilíneas</h3>
-                                <p>Comandos como <span class="cmd-inline">OFFSET</span> y <span class="cmd-inline">HATCH</span> funcionan mejor sobre polilíneas: <strong>OFFSET</strong> desplaza la polilínea completa como una pieza (ideal para muros) y <strong>HATCH</strong> reconoce el contorno cerrado sin huecos. Con líneas sueltas, ambos comandos fallan o requieren seleccionar cada segmento.</p>
+                                <p>Comandos como <span class="cmd-inline">DESFASE</span> (en inglés: <span class="cmd-inline">OFFSET</span>) y <span class="cmd-inline">SOMBREADO</span> (en inglés: <span class="cmd-inline">HATCH</span>) funcionan mejor sobre polilíneas: <strong>OFFSET</strong> desplaza la polilínea completa como una pieza (ideal para muros) y <strong>HATCH</strong> reconoce el contorno cerrado sin huecos. Con líneas sueltas, ambos comandos fallan o requieren seleccionar cada segmento.</p>
 
                                 <h3>Ejemplo práctico paso a paso</h3>
                                 <ol>
-                                  <li>Dibuja el contorno de un muro con <span class="cmd-inline">LINE</span>: tres o cuatro segmentos sueltos.</li>
-                                  <li>Escribe <span class="cmd-inline">PEDIT</span>, selecciona el primer segmento y responde <span class="key-inline">S</span> (Sí) cuando pregunte si convertirlo en polilínea.</li>
+                                  <li>Dibuja el contorno de un muro con <span class="cmd-inline">LÍNEA</span> (en inglés: <span class="cmd-inline">LINE</span>): tres o cuatro segmentos sueltos.</li>
+                                  <li>Escribe <span class="cmd-inline">EDITARP</span> (en inglés: <span class="cmd-inline">PEDIT</span>), selecciona el primer segmento y responde <span class="key-inline">S</span> (Sí) cuando pregunte si convertirlo en polilínea.</li>
                                   <li>Usa la opción <strong>Join (J)</strong> y selecciona los demás segmentos.</li>
                                   <li>Pulsa <strong>Enter</strong> dos veces para terminar. Ahora tienes una sola polilínea.</li>
-                                  <li>Aplícale <span class="cmd-inline">OFFSET</span> para dar espesor o <span class="cmd-inline">HATCH</span> para rellenar.</li>
+                                  <li>Aplícale <span class="cmd-inline">DESFASE</span> (en inglés: <span class="cmd-inline">OFFSET</span>) para dar espesor o <span class="cmd-inline">SOMBREADO</span> (en inglés: <span class="cmd-inline">HATCH</span>) para rellenar.</li>
                                 </ol>
 
                                 <div class="callout">
                                   <span class="callout-title">Truco</span>
-                                  Haz <strong>doble clic</strong> sobre una polilínea y se abrirá directamente <span class="cmd-inline">PEDIT</span> con las opciones de edición.
+                                  Haz <strong>doble clic</strong> sobre una polilínea y se abrirá directamente <span class="cmd-inline">EDITARP</span> (en inglés: <span class="cmd-inline">PEDIT</span>) con las opciones de edición.
                                 </div>
 
                                 <div class="diagram-steps">
@@ -210,10 +210,10 @@
 
           <!-- ENRIQ START -->
           <h3>Unir varias polilíneas a la vez</h3>
-          <p>Si terminas una sesión con decenas de segmentos sueltos, <span class="cmd-inline">JOIN</span> (<span class="key-inline">J</span>) une <strong>todos</strong> los objetos seleccionados en una sola polilínea cuando están conectados por los extremos.</p>
+          <p>Si terminas una sesión con decenas de segmentos sueltos, <span class="cmd-inline">UNIR</span> (en inglés: <span class="cmd-inline">JOIN</span>) (<span class="key-inline">J</span>) une <strong>todos</strong> los objetos seleccionados en una sola polilínea cuando están conectados por los extremos.</p>
           <div class="callout warn">
             <span class="callout-title">Error común</span>
-            <span>JOIN falla en silencio cuando los extremos no coinciden exactamente: líneas que "parecen" tocarse pero no comparten punto. Acércate con zoom, usa OSNAP <span class="cmd-inline">END</span>, une el hueco con un trazo corto o aplica <span class="cmd-inline">FILLET</span> con radio 0.</span>
+            <span>JOIN falla en silencio cuando los extremos no coinciden exactamente: líneas que "parecen" tocarse pero no comparten punto. Acércate con zoom, usa OSNAP <span class="cmd-inline">END</span>, une el hueco con un trazo corto o aplica <span class="cmd-inline">REDONDEAR</span> (en inglés: <span class="cmd-inline">FILLET</span>) con radio 0.</span>
           </div>
 
           <h3>Mini ejercicio: contorno de muro rellenable en 3 pasos</h3>
@@ -221,21 +221,21 @@
             <span class="lesson-num">1</span>
             <div class="lesson-body">
               <h4>Segmentos sueltos</h4>
-              <p>Dibuja un cuadrado de 400 con <span class="cmd-inline">LINE</span> (4 trazos) y déjalo abierto en una esquina.</p>
+              <p>Dibuja un cuadrado de 400 con <span class="cmd-inline">LÍNEA</span> (en inglés: <span class="cmd-inline">LINE</span>) (4 trazos) y déjalo abierto en una esquina.</p>
             </div>
           </div>
           <div class="lesson-step">
             <span class="lesson-num">2</span>
             <div class="lesson-body">
               <h4>Une y cierra</h4>
-              <p>Con <span class="cmd-inline">PEDIT</span>: selecciona el primer trazo → <span class="cmd-inline">S</span> (convertir) → <span class="cmd-inline">J</span> (join) → <span class="cmd-inline">C</span> (cerrar).</p>
+              <p>Con <span class="cmd-inline">EDITARP</span> (en inglés: <span class="cmd-inline">PEDIT</span>): selecciona el primer trazo → <span class="cmd-inline">S</span> (convertir) → <span class="cmd-inline">J</span> (join) → <span class="cmd-inline">C</span> (cerrar).</p>
             </div>
           </div>
           <div class="lesson-step">
             <span class="lesson-num">3</span>
             <div class="lesson-body">
               <h4>Rellena</h4>
-              <p>Aplica <span class="cmd-inline">HATCH</span> con punto interior: ahora sí reconoce el contorno cerrado.</p>
+              <p>Aplica <span class="cmd-inline">SOMBREADO</span> (en inglés: <span class="cmd-inline">HATCH</span>) con punto interior: ahora sí reconoce el contorno cerrado.</p>
             </div>
           </div>
           <!-- ENRIQ END -->

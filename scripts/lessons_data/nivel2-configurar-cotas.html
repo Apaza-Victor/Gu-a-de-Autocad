@@ -1,7 +1,7 @@
 <p>Las cotas comunican las medidas reales del proyecto. Configurarlas bien en el <strong>Administrador de estilos de cota</strong> (<span class="cmd-inline">DIMSTYLE</span>/<span class="key-inline">D</span>) evita redibujar y garantiza que el plano se entienda sin dudas.</p>
 
 <h3>1. Abrir el Administrador de estilos de cota</h3>
-<p>Escribe <span class="cmd-inline">DIMSTYLE</span> (en español <span class="cmd-inline">ACOESTILO</span>) o <span class="key-inline">D</span> y pulsa Enter. Se abre el cuadro <strong>"Dimension Style Manager"</strong>. También puedes abrirlo desde <strong>Anotar → Cota → el ícono pequeño de la esquina</strong> de la cinta. AutoCAD incluye por defecto <strong>ISO-25</strong>; conviene crear uno propio a partir de él.</p>
+<p>Escribe <span class="cmd-inline">ACOESTILO</span> (en inglés: <span class="cmd-inline">DIMSTYLE</span>) o <span class="key-inline">D</span> y pulsa Enter. Se abre el cuadro <strong>"Dimension Style Manager"</strong>. También puedes abrirlo desde <strong>Anotar → Cota → el ícono pequeño de la esquina</strong> de la cinta. AutoCAD incluye por defecto <strong>ISO-25</strong>; conviene crear uno propio a partir de él.</p>
 
 <h3>2. Crear un estilo nuevo desde un estilo base</h3>
 
@@ -33,7 +33,7 @@
   <span class="lesson-num">4</span>
   <div class="lesson-body">
     <h4>Configura el texto</h4>
-    <p>En <strong>Texto</strong> elige el estilo de texto (crea uno de cotas con <span class="cmd-inline">STYLE</span>), la altura (ej.: 3.5 mm), color ByLayer y la posición de las cotas lineales (centro, encima de la línea).</p>
+    <p>En <strong>Texto</strong> elige el estilo de texto (crea uno de cotas con <span class="cmd-inline">ESTILO</span> (en inglés: <span class="cmd-inline">STYLE</span>)), la altura (ej.: 3.5 mm), color ByLayer y la posición de las cotas lineales (centro, encima de la línea).</p>
   </div>
 </div>
 
@@ -53,7 +53,7 @@
 <ul>
   <li>Hazlo <strong>actual</strong> (barril) y coteja con <span class="cmd-inline">DIMLIN</span> (<span class="key-inline">DLI</span>), <span class="cmd-inline">DIMANG</span> o <span class="cmd-inline">DIMRAD</span>.</li>
   <li>Las cotas nuevas heredan las propiedades de <strong>la capa actual</strong>: crea una capa <code>A-Cotas</code> y ponla actual antes de acotar.</li>
-  <li>Si una cota sale con flechas raras o texto torcido, selecciónala y en <span class="cmd-inline">PROPERTIES</span> (<span class="key-inline">Ctrl+1</span>) reasigna el estilo.</li>
+  <li>Si una cota sale con flechas raras o texto torcido, selecciónala y en <span class="cmd-inline">PROPIEDADES</span> (en inglés: <span class="cmd-inline">PROPERTIES</span>) (<span class="key-inline">Ctrl+1</span>) reasigna el estilo.</li>
 </ul>
 
 <h3>5. Estilos "hijos" para radios y ángulos</h3>
@@ -66,7 +66,7 @@
   <span class="lesson-num">1</span>
   <div class="lesson-body">
     <h4>Ajusta las unidades del dibujo</h4>
-    <p>Ejecuta <span class="cmd-inline">UNITS</span> y elige formato <strong>Decimal</strong>, precisión <code>0.00</code> o <code>0.000</code> y, en "Escala de inserción", <strong>Metros</strong>. Si el archivo está dibujado en milímetros y quieres trabajar en metros, escala todo el dibujo con <span class="cmd-inline">SCALE</span> por factor <code>0.001</code>.</p>
+    <p>Ejecuta <span class="cmd-inline">UNIDADES</span> (en inglés: <span class="cmd-inline">UNITS</span>) y elige formato <strong>Decimal</strong>, precisión <code>0.00</code> o <code>0.000</code> y, en "Escala de inserción", <strong>Metros</strong>. Si el archivo está dibujado en milímetros y quieres trabajar en metros, escala todo el dibujo con <span class="cmd-inline">ESCALAR</span> (en inglés: <span class="cmd-inline">SCALE</span>) por factor <code>0.001</code>.</p>
   </div>
 </div>
 
@@ -82,7 +82,7 @@
   <span class="lesson-num">3</span>
   <div class="lesson-body">
     <h4>Escala el tipo de línea para metros</h4>
-    <p>Carga los patrones con <span class="cmd-inline">LINETYPE</span> (ej.: <code>CENTER</code> para ejes, <code>DASHED</code> para elementos ocultos). Los patrones se definieron para milímetros, así que en un dibujo en metros se ven <strong>sólidos</strong>: sube el <strong>factor de escala global</strong> (<span class="cmd-inline">LTSCALE</span>) hasta que se aprecie el patrón (empieza con <code>10</code>). Activa <span class="cmd-inline">PSLTSCALE</span> = 1 para que el patrón se vea igual en todas las vistas del papel.</p>
+    <p>Carga los patrones con <span class="cmd-inline">TIPOLÍNEA</span> (en inglés: <span class="cmd-inline">LINETYPE</span>) (ej.: <code>CENTER</code> para ejes, <code>DASHED</code> para elementos ocultos). Los patrones se definieron para milímetros, así que en un dibujo en metros se ven <strong>sólidos</strong>: sube el <strong>factor de escala global</strong> (<span class="cmd-inline">LTSCALE</span>) hasta que se aprecie el patrón (empieza con <code>10</code>). Activa <span class="cmd-inline">PSLTSCALE</span> = 1 para que el patrón se vea igual en todas las vistas del papel.</p>
   </div>
 </div>
 
@@ -103,11 +103,10 @@
 <table class="table-cad">
   <thead><tr><th>Comando</th><th>Qué hace</th><th>Atajo</th></tr></thead>
   <tbody>
-    <tr><td><span class="cmd-inline">DIMSTYLE</span></td><td>Abre el Administrador de estilos de cota</td><td><span class="key-inline">D</span></td></tr>
-    <tr><td><span class="cmd-inline">ACOESTILO</span></td><td>DIMSTYLE en español: abre el Administrador de estilos de cota</td><td><span class="key-inline">D</span></td></tr>
-    <tr><td><span class="cmd-inline">DIMLINEAR</span></td><td>Acota distancias horizontales/verticales</td><td><span class="key-inline">DLI</span></td></tr>
-    <tr><td><span class="cmd-inline">DIMALIGNED</span></td><td>Acota distancias inclinadas</td><td><span class="key-inline">DAL</span></td></tr>
-    <tr><td><span class="cmd-inline">DIMRADIUS</span>/<span class="cmd-inline">DIMDIAMETER</span></td><td>Acota radios y diámetros</td><td><span class="key-inline">DRA</span>/<span class="key-inline">DDI</span></td></tr>
+    <tr><td><span class="cmd-inline">ACOESTILO</span> (en inglés: <span class="cmd-inline">DIMSTYLE</span>)</td><td>Abre el Administrador de estilos de cota</td><td><span class="key-inline">D</span></td></tr>
+    <tr><td><span class="cmd-inline">ACOTLINEAL</span> (en inglés: <span class="cmd-inline">DIMLINEAR</span>)</td><td>Acota distancias horizontales/verticales</td><td><span class="key-inline">DLI</span></td></tr>
+    <tr><td><span class="cmd-inline">ACOALINEADA</span> (en inglés: <span class="cmd-inline">DIMALIGNED</span>)</td><td>Acota distancias inclinadas</td><td><span class="key-inline">DAL</span></td></tr>
+    <tr><td><span class="cmd-inline">DIMRADIO</span> (en inglés: <span class="cmd-inline">DIMRADIUS</span>)/<span class="cmd-inline">ACOTDIÁMETRO</span> (en inglés: <span class="cmd-inline">DIMDIAMETER</span>)</td><td>Acota radios y diámetros</td><td><span class="key-inline">DRA</span>/<span class="key-inline">DDI</span></td></tr>
     <tr><td><span class="cmd-inline">DIMANGULAR</span></td><td>Acota ángulos</td><td><span class="key-inline">DAN</span></td></tr>
   </tbody>
 </table>

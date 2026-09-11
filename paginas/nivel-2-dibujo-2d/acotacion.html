@@ -155,11 +155,11 @@
                                 <table class="table-cad">
                                   <thead><tr><th>Tipo de cota</th><th>Comando</th><th>Uso</th></tr></thead>
                                   <tbody>
-                                    <tr><td>Lineal</td><td class="cmd-inline">DIMLINEAR</td><td>Distancia horizontal o vertical entre dos puntos.</td></tr>
-                                    <tr><td>Alineada</td><td class="cmd-inline">DIMALIGNED</td><td>Distancia paralela a una línea inclinada.</td></tr>
+                                    <tr><td>Lineal</td><td class="cmd-inline"><span class="cmd-inline">ACOTLINEAL</span> (en inglés: <span class="cmd-inline">DIMLINEAR</span>)</td><td>Distancia horizontal o vertical entre dos puntos.</td></tr>
+                                    <tr><td>Alineada</td><td class="cmd-inline"><span class="cmd-inline">ACOALINEADA</span> (en inglés: <span class="cmd-inline">DIMALIGNED</span>)</td><td>Distancia paralela a una línea inclinada.</td></tr>
                                     <tr><td>Angular</td><td class="cmd-inline">DIMANGULAR</td><td>Mide el ángulo entre dos líneas.</td></tr>
-                                    <tr><td>Radio / Diámetro</td><td class="cmd-inline">DIMRADIUS</td><td>Mide arcos y círculos.</td></tr>
-                                    <tr><td>Cota rápida</td><td class="cmd-inline">DIM</td><td>Detecta automáticamente el tipo de cota según el objeto.</td></tr>
+                                    <tr><td>Radio / Diámetro</td><td class="cmd-inline"><span class="cmd-inline">DIMRADIO</span> (en inglés: <span class="cmd-inline">DIMRADIUS</span>)</td><td>Mide arcos y círculos.</td></tr>
+                                    <tr><td>Cota rápida</td><td class="cmd-inline"><span class="cmd-inline">DIMENSIÓN</span> (en inglés: <span class="cmd-inline">DIM</span>)</td><td>Detecta automáticamente el tipo de cota según el objeto.</td></tr>
                                   </tbody>
                                 </table>
 
@@ -206,7 +206,7 @@
                                   <span class="lesson-num">1</span>
                                   <div class="lesson-body">
                                     <h4>Abre el Administrador de estilos de cota</h4>
-                                    <p>Escribe <span class="cmd-inline">DIMSTYLE</span> (en español <span class="cmd-inline">ACOESTILO</span>) o <span class="cmd-inline">D</span> + Enter en la línea de comandos. Se abre el cuadro "Dimension Style Manager". También puedes acceder desde <strong>Anotar → Cota → el ícono pequeño de la esquina</strong> en la cinta.</p>
+                                    <p>Escribe <span class="cmd-inline">ACOESTILO</span> (en inglés: <span class="cmd-inline">DIMSTYLE</span>) o <span class="cmd-inline">D</span> + Enter en la línea de comandos. Se abre el cuadro "Dimension Style Manager". También puedes acceder desde <strong>Anotar → Cota → el ícono pequeño de la esquina</strong> en la cinta.</p>
                                   </div>
                                 </div>
 
@@ -313,8 +313,8 @@
                                 <!-- ====== EJEMPLO PRÁCTICO ====== -->
                                 <h3>Ejemplo práctico: configurar cotas para un plano en metros a 1:100</h3>
                                 <ol>
-                                  <li>Escribe <span class="cmd-inline">UNITS</span> y configura en <strong>Meters, Decimal, precisión 0.00</strong>.</li>
-                                  <li>Escribe <span class="cmd-inline">DIMSTYLE</span> (o <span class="cmd-inline">ACOESTILO</span>) → <strong>New</strong> → nombre: <code>METROS-100</code>.</li>
+                                  <li>Escribe <span class="cmd-inline">UNIDADES</span> (en inglés: <span class="cmd-inline">UNITS</span>) y configura en <strong>Meters, Decimal, precisión 0.00</strong>.</li>
+                                  <li>Escribe <span class="cmd-inline">ACOESTILO</span> (en inglés: <span class="cmd-inline">DIMSTYLE</span>) (o <span class="cmd-inline">ACOESTILO</span> (en inglés: <span class="cmd-inline">DIMSTYLE</span>)) → <strong>New</strong> → nombre: <code>METROS-100</code>.</li>
                                   <li>En <strong>Lines</strong>: Extend beyond = <code>2.5</code>, Offset from origin = <code>1.25</code>.</li>
                                   <li>En <strong>Symbols and Arrows</strong>: Architectural tick, Arrow size = <code>2.5</code>.</li>
                                   <li>En <strong>Text</strong>: Text height = <code>3.5</code>, Offset = <code>1</code>.</li>
@@ -322,7 +322,7 @@
                                   <li>En <strong>Fit</strong>: Overall scale = <code>25</code> (prueba con este valor primero).</li>
                                   <li><strong>Set Current</strong> → Close.</li>
                                   <li>Dibuja un rectángulo de 10 × 8 unidades (representa 10 m × 8 m).</li>
-                                  <li>Coloca una cota con <span class="cmd-inline">DIM</span>. Si el texto mide ~3 mm en pantalla y se ve legible, el valor es correcto. Si es gigante, baja DIMSCALE a <code>10</code>. Si es diminuto, súbelo a <code>50</code>.</li>
+                                  <li>Coloca una cota con <span class="cmd-inline">DIMENSIÓN</span> (en inglés: <span class="cmd-inline">DIM</span>). Si el texto mide ~3 mm en pantalla y se ve legible, el valor es correcto. Si es gigante, baja DIMSCALE a <code>10</code>. Si es diminuto, súbelo a <code>50</code>.</li>
                                 </ol>
 
                                 <div class="callout">

@@ -178,7 +178,7 @@
               <span class="lesson-num">2</span>
               <div class="lesson-body">
                 <h4>Ejecuta GROUP</h4>
-                <p>Escribe <span class="cmd-inline">GROUP</span> o <span class="key-inline">G</span> en la línea de comandos y pulsa Enter.</p>
+                <p>Escribe <span class="cmd-inline">GRUPO</span> (en inglés: <span class="cmd-inline">GROUP</span>) o <span class="key-inline">G</span> en la línea de comandos y pulsa Enter.</p>
               </div>
             </div>
 
@@ -191,7 +191,7 @@
             </div>
 
             <h3>2. Crear grupos con nombre</h3>
-            <p>Para gestionar varios grupos, usa la versión en cuadro de diálogo: escribe <span class="cmd-inline">CLASSICGROUP</span> o <span class="cmd-inline">GROUP</span> y pulsa Enter (en AutoCAD 2020+ usa <span class="cmd-inline">GROUP</span> y luego la opción "Con nombre" desde la barra de grupos de la cinta, en Inicio → Grupo).</p>
+            <p>Para gestionar varios grupos, usa la versión en cuadro de diálogo: escribe <span class="cmd-inline">CLASSICGROUP</span> o <span class="cmd-inline">GRUPO</span> (en inglés: <span class="cmd-inline">GROUP</span>) y pulsa Enter (en AutoCAD 2020+ usa <span class="cmd-inline">GRUPO</span> (en inglés: <span class="cmd-inline">GROUP</span>) y luego la opción "Con nombre" desde la barra de grupos de la cinta, en Inicio → Grupo).</p>
 
             <div class="lesson-step">
               <span class="lesson-num">1</span>
@@ -233,8 +233,8 @@
                 <tr><td>Al pulsar un objeto se selecciona solo él, no el grupo</td><td>La variable <span class="cmd-inline">PICKSTYLE</span> tiene valor 0 (los grupos desactivados)</td><td>Escribe <span class="cmd-inline">PICKSTYLE</span> y ponlo en <strong>1</strong> (o 3 para combinar grupos + asociatividad)</td></tr>
                 <tr><td>El grupo aparece pero "no se mueve como uno"</td><td>La variable <span class="cmd-inline">PICKSTYLE</span> = 1 pero seleccionas con ventana que corta el grupo</td><td>Revisa que marques objetos dentro completos; o activa <span class="cmd-inline">GROUPSON</span></td></tr>
                 <tr><td>GROUP no hace nada visible</td><td>Se creó un grupo sin nombre y se perdió entre otros</td><td>Abre <span class="cmd-inline">CLASSICGROUP</span> y revisa la lista; renómbralo ahí</td></tr>
-                <tr><td>Al copiar/pegar el grupo se desarma</td><td>El portapapeles de Windows no conserva grupos</td><td>Usa <span class="cmd-inline">COPYBASE</span> (<span class="key-inline">Ctrl+Shift+C</span>) o guarda/inserta como bloque <span class="cmd-inline">WBLOCK</span></td></tr>
-                <tr><td>No encuentro el grupo para editarlo</td><td>No tiene nombre o está anidado</td><td>En <span class="cmd-inline">-GROUP</span> (línea de comandos) usa la opción <span class="key-inline">?</span> para listar todos los grupos del dibujo</td></tr>
+                <tr><td>Al copiar/pegar el grupo se desarma</td><td>El portapapeles de Windows no conserva grupos</td><td>Usa <span class="cmd-inline">COPYBASE</span> (<span class="key-inline">Ctrl+Shift+C</span>) o guarda/inserta como bloque <span class="cmd-inline">BLOQUEDISC</span> (en inglés: <span class="cmd-inline">WBLOCK</span>)</td></tr>
+                <tr><td>No encuentro el grupo para editarlo</td><td>No tiene nombre o está anidado</td><td>En <span class="cmd-inline">-GRUPO</span> (en inglés: <span class="cmd-inline">-GROUP</span>) (línea de comandos) usa la opción <span class="key-inline">?</span> para listar todos los grupos del dibujo</td></tr>
               </tbody>
             </table>
             </div>
@@ -247,9 +247,9 @@
             <h3>5. Agrupar correctamente y con nombre (flujo recomendado)</h3>
             <ol class="pasos-block">
               <li>Selecciona los objetos de la unidad funcional (ej.: la mesa con sus sillas).</li>
-              <li>Ejecuta <span class="cmd-inline">GROUP</span> y guárdalo <strong>siempre con nombre</strong> (ej.: <code>Comedor-01</code>).</li>
+              <li>Ejecuta <span class="cmd-inline">GRUPO</span> (en inglés: <span class="cmd-inline">GROUP</span>) y guárdalo <strong>siempre con nombre</strong> (ej.: <code>Comedor-01</code>).</li>
               <li>Mientras definas el dibujo, muévelo como grupo; no lo rompas.</li>
-              <li>Si el elemento se repetirá en el proyecto, convierte el grupo en <strong>bloque</strong> con <span class="cmd-inline">BLOCK</span> (<span class="key-inline">B</span>) y reutilízalo.</li>
+              <li>Si el elemento se repetirá en el proyecto, convierte el grupo en <strong>bloque</strong> con <span class="cmd-inline">BLOQUE</span> (en inglés: <span class="cmd-inline">BLOCK</span>) (<span class="key-inline">B</span>) y reutilízalo.</li>
             </ol>
           <button class="mark-done-btn"><i class="bi bi-check-circle"></i> Marcar tema como visto</button>
           </section>
