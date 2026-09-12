@@ -201,6 +201,15 @@
 @media (min-width: 992px){
   .navbar-cad .nav-actions{ margin-left: .75rem; }
 
+  /* El hero ocupa toda la pantalla (alto menos la navbar fija) */
+  .hero{
+    min-height: calc(100vh - 64px);
+    display: flex;
+    align-items: center;
+  }
+  .hero > .container,
+  .hero > .container-xl{ width: 100%; }
+
   /* Hover y estado activo del menú en escritorio */
   .navbar-cad .nav-link-cad{
     border-radius: var(--radius-sm);
@@ -229,6 +238,19 @@
   }
   .navbar-cad .dropdown-item:hover,
   .navbar-cad .dropdown-item:focus{ background: var(--cyan-dim); color: var(--cyan); }
+}
+
+/* ---------- Pantallas grandes (min 1500px): aprovechar el ancho ---------- */
+@media (min-width: 1500px){
+  /* El contenido se expande con la pantalla y solo deja un margen fino */
+  .container-xl{ max-width: min(calc(100vw - 3rem), 2000px); }
+
+  /* El diccionario de comandos suma columnas para no estirar las tarjetas */
+  .cmd-grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .res-grid{ grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); }
+}
+@media (min-width: 1800px){
+  .cmd-grid{ grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 
 /* ---------- Accesibilidad: reduce motion ---------- */

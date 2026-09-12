@@ -241,8 +241,10 @@ footer .brand-cad .brand-logo{
   pointer-events: none;
 }
 .hero h1{
-  font-size: clamp(2.1rem, 4.5vw, 3.4rem);
-  line-height: 1.08;
+  font-family: var(--font-body);
+  letter-spacing: -0.025em;
+  font-size: clamp(2.25rem, 5vw, 3.9rem);
+  line-height: 1.05;
   margin-bottom: 1.2rem;
 }
 .hero h1 em{
@@ -687,7 +689,7 @@ footer.site-footer a:hover{ color: var(--cyan); }
 }
 
 /* ---------- Data-cmd spans & kbd in tutorial tips ---------- */
-[data-cmd]{
+[data-cmd]:not(.cmd-full-card){
   font-family: var(--font-display);
   font-size: .82rem;
   font-weight: 700;
@@ -962,7 +964,7 @@ kbd{
   flex-shrink: 0;
   font-size: .9rem;
 }
-.cmd-full-card .cmd-info{ flex: 1; }
+.cmd-full-card .cmd-info{ flex: 1; min-width: 0; overflow-wrap: break-word; }
 .cmd-full-card .cmd-head{
   display: flex;
   align-items: center;
@@ -985,12 +987,14 @@ kbd{
   color: var(--text-muted);
   font-size: .85rem;
   margin: 0;
+  overflow-wrap: anywhere;
 }
 .cmd-full-card .cmd-name{
   font-family: var(--font-display);
   font-weight: 800;
   color: var(--text);
   font-size: .92rem;
+  overflow-wrap: anywhere;
 }
 .cmd-full-card .cmd-name-es{
   display: none;

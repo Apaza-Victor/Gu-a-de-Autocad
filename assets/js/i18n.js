@@ -96,7 +96,7 @@
       /* ---- Home page ---- */
       'home.brand.sub': 'Guía · Teoría & Práctica',
       'home.hero.eyebrow': 'Guía completa · Nivel 1 a Nivel 5',
-      'home.hero.title': 'Domina AutoCAD desde <em>la primera línea</em> hasta el plano maestro.',
+      'home.hero.title': 'Domina AutoCAD, <em>de cero a experto</em>.',
       'home.hero.desc': 'Teoría clara, comandos explicados y una ruta de aprendizaje ordenada para dibujar en 2D, modelar en 3D y trabajar como un profesional del CAD. Ideal para aprender desde cero o repasar un tema puntual.',
       'home.hero.start': 'Empezar desde cero',
       'home.hero.goCmds': 'Ir a comandos',
@@ -2107,7 +2107,7 @@
       /* ---- Home page ---- */
       'home.brand.sub': 'Guide · Theory & Practice',
       'home.hero.eyebrow': 'Complete guide · Level 1 to Level 5',
-      'home.hero.title': 'Master AutoCAD from <em>the first line</em> to the master plan.',
+      'home.hero.title': 'Master AutoCAD, <em>from zero to expert</em>.',
       'home.hero.desc': 'Clear theory, explained commands, and an organized learning path for 2D drafting, 3D modeling, and professional CAD work. Perfect for learning from scratch or reviewing a specific topic.',
       'home.hero.start': 'Start from scratch',
       'home.hero.goCmds': 'Go to commands',
